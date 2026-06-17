@@ -25,6 +25,7 @@ const INITIAL_PROGRESS: PlayerProgress = {
     'kr_1_1',
   ],
   achievements: [],
+  stageRecords: {},
 };
 
 export function createInitialProgress(): PlayerProgress {

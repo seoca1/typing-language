@@ -79,6 +79,7 @@ export const initialState: GameState = {
       'es_easy_2',
     ],
     achievements: [],
+    stageRecords: {},
   },
   missions: [],
   missionResults: [],

@@ -110,6 +110,7 @@ export interface PlayerProgress {
   stats: PlayerStats;
   unlockedStages: string[];
   achievements: string[];
+  stageRecords: Record<string, StageRecord>; // 스테이지별 클리어 기록
 }
 
 export interface PlayerStats {
@@ -118,6 +119,33 @@ export interface PlayerStats {
   totalPlayTimeMs: number;
   bestWpm: Record<Language, number>;
   avgAccuracy: Record<Language, number>;
+}
+
+/**
+ * 스테이지별 클리어 기록
+ */
+export interface StageRecord {
+  stageId: string;
+  cleared: boolean;
+  bestScore: number;
+  bestWpm: number;
+  bestAccuracy: number;
+  stars: number; // 0~3 별점
+  playCount: number;
+  firstClearedAt?: number;
+  lastPlayedAt: number;
+}
+
+/**
+ * 사용자 프로필 (다중 프로필 지원)
+ */
+export interface UserProfile {
+  id: string;
+  name: string;
+  avatar?: string; // 아바타 이미지 또는 이모지
+  createdAt: number;
+  lastPlayedAt: number;
+  progress: PlayerProgress;
 }
 
 // ===== AI / Ollama 관련 타입 =====
