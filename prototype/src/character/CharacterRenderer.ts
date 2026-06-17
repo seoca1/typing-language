@@ -15,6 +15,12 @@ import type { CulturalAppearance } from './CharacterData.js';
 import { SpriteLoader } from '../sprites/SpriteLoader.js';
 import { SpriteRenderer } from '../sprites/SpriteRenderer.js';
 import { GraphicsConfig } from '../config/graphics.js';
+import { ImageLoader } from '../sprites/ImageLoader.js';
+import { 
+  CHARACTER_IMAGES, 
+  DEFAULT_CHARACTER_IMAGE, 
+  USE_EXTERNAL_IMAGES 
+} from '../config/characterImages.js';
 
 const spriteRenderer = new SpriteRenderer();
 
@@ -30,6 +36,12 @@ export function renderCharacter(
   groundY: number,
   now: number,
 ): void {
+  // Use external image rendering if enabled
+  if (USE_EXTERNAL_IMAGES) {
+    renderCharacterImage(ctx, state, cx, groundY, now);
+    return;
+  }
+
   // Use sprite rendering if enabled
   if (GraphicsConfig.USE_SPRITES) {
     renderCharacterSprite(ctx, state, cx, groundY, now);
@@ -1183,4 +1195,167 @@ function drawCat(
   ctx.moveTo(x - 12, groundY - 6);
   ctx.quadraticCurveTo(x - 20, groundY - 16 + tailWag * 5, x - 18, groundY - 22);
   ctx.stroke();
+}
+
+// ===== External Image Rendering =====
+
+/**
+ * Render character using external images (anime, photos, etc.)
+ */
+function renderCharacterImage(
+  ctx: CanvasRenderingContext2D,
+  state: CharacterState,
+  cx: number,
+  groundY: number,
+  now: number,
+): void {
+  const characterSet = CHARACTER_IMAGES[DEFAULT_CHARACTER_IMAGE];
+  if (!characterSet) {
+    console.warn(`[CharacterRenderer] Character set not found: ${DEFAULT_CHARACTER_IMAGE}`);
+    // Fallback to primitive rendering
+    renderCharacterPrimitive(ctx, state, cx, groundY, now);
+    return;
+  }
+
+  // Get image config for current pose
+  const imageConfig = characterSet[state.pose] || characterSet.idle;
+  const loadedImage = ImageLoader.get(imageConfig.src);
+
+  if (!loadedImage || !loadedImage.loaded) {
+    // Image not loaded yet, show placeholder or fallback
+    renderCharacterPlaceholder(ctx, cx, groundY);
+    return;
+  }
+
+  // Calculate position with pose animations
+  let offsetY = 0;
+  let offsetX = 0;
+  let rotation = 0;
+  let scale = imageConfig.scale || 1.0;
+
+  switch (state.pose) {
+    case 'idle':
+      // Gentle breathing animation
+      offsetY = Math.sin(now / 600) * 3;
+      break;
+    case 'wave':
+      // Slight bounce while waving
+      const waveT = (now - state.poseStart) / 900;
+      offsetY = Math.sin(waveT * Math.PI) * -5;
+      break;
+    case 'jump':
+      // Jump arc
+      const jumpT = (now - state.poseStart) / 700;
+      const arc = Math.sin(jumpT * Math.PI);
+      offsetY = -arc * 40;
+      break;
+    case 'clap':
+      // Small bounce
+      const clapT = (now - state.poseStart) / 600;
+      offsetY = Math.sin(clapT * Math.PI * 2) * -5;
+      break;
+    case 'spin':
+      // Rotate while spinning
+      const spinT = (now - state.poseStart) / 800;
+      rotation = spinT * Math.PI * 2;
+      offsetY = Math.sin(spinT * Math.PI) * -10;
+      break;
+    case 'dance':
+      // Dancing motion
+      const danceT = (now - state.poseStart) / 1200;
+      offsetY = Math.sin(danceT * Math.PI * 4) * -8;
+      offsetX = Math.cos(danceT * Math.PI * 2) * 5;
+      break;
+    case 'pose':
+      // Triumphant pose with slight scale up
+      scale *= 1.05;
+      break;
+  }
+
+  // Apply config offsets
+  offsetX += imageConfig.offsetX || 0;
+  offsetY += imageConfig.offsetY || 0;
+
+  // Draw the image
+  ctx.save();
+  ctx.translate(cx + offsetX, groundY + offsetY);
+  ctx.rotate(rotation);
+
+  const drawWidth = imageConfig.width * scale;
+  const drawHeight = imageConfig.height * scale;
+
+  // Handle sprite sheets (multiple frames)
+  if (imageConfig.frames && imageConfig.frames > 1) {
+    const frameDuration = imageConfig.frameDuration || 200;
+    const currentFrame = Math.floor((now / frameDuration) % imageConfig.frames);
+    const frameWidth = loadedImage.element.width / imageConfig.frames;
+    const frameHeight = loadedImage.element.height;
+
+    ctx.drawImage(
+      loadedImage.element,
+      currentFrame * frameWidth, // source x
+      0, // source y
+      frameWidth, // source width
+      frameHeight, // source height
+      -drawWidth / 2, // dest x (centered)
+      -drawHeight, // dest y (bottom aligned)
+      drawWidth, // dest width
+      drawHeight // dest height
+    );
+  } else {
+    // Single image
+    ctx.drawImage(
+      loadedImage.element,
+      -drawWidth / 2, // centered x
+      -drawHeight, // bottom aligned y
+      drawWidth,
+      drawHeight
+    );
+  }
+
+  ctx.restore();
+}
+
+/**
+ * Fallback placeholder when image is loading
+ */
+function renderCharacterPlaceholder(
+  ctx: CanvasRenderingContext2D,
+  cx: number,
+  groundY: number,
+): void {
+  ctx.save();
+  
+  // Draw simple loading indicator
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+  ctx.fillRect(cx - 50, groundY - 150, 100, 150);
+  
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(cx - 50, groundY - 150, 100, 150);
+  
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '14px -apple-system, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('Loading...', cx, groundY - 75);
+  
+  ctx.restore();
+}
+
+/**
+ * Original primitive rendering (extracted for fallback)
+ */
+function renderCharacterPrimitive(
+  ctx: CanvasRenderingContext2D,
+  _state: CharacterState,
+  cx: number,
+  groundY: number,
+  _now: number,
+): void {
+  // This function is called as fallback when image is not found
+  // The actual primitive rendering is in the main renderCharacter function
+  console.warn('[CharacterRenderer] Falling back to primitive rendering');
+  
+  // Draw a simple placeholder for now
+  renderCharacterPlaceholder(ctx, cx, groundY);
 }

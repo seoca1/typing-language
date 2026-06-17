@@ -66,7 +66,7 @@ export function App() {
     return !localStorage.getItem(TUTORIAL_KEY);
   });
 
-  // Log device info and preload sprites on mount
+  // Log device info and preload sprites/images on mount
   useEffect(() => {
     logDeviceInfo();
     
@@ -76,6 +76,21 @@ export function App() {
         import('./sprites/SpriteLoader.js').then(({ SpriteLoader }) => {
           SpriteLoader.preload([...GraphicsConfig.SPRITE_PRELOAD])
             .catch(err => console.warn('Sprite preload failed:', err));
+        });
+      }
+    });
+
+    // Preload external character images
+    import('./config/characterImages.js').then(({ USE_EXTERNAL_IMAGES, CHARACTER_IMAGES, DEFAULT_CHARACTER_IMAGE }) => {
+      if (USE_EXTERNAL_IMAGES) {
+        import('./sprites/ImageLoader.js').then(({ ImageLoader }) => {
+          const characterSet = CHARACTER_IMAGES[DEFAULT_CHARACTER_IMAGE];
+          if (characterSet) {
+            const imagesToLoad = Object.values(characterSet);
+            ImageLoader.preload(imagesToLoad)
+              .then(() => console.log('[App] Character images preloaded'))
+              .catch(err => console.warn('Character image preload failed:', err));
+          }
         });
       }
     });
