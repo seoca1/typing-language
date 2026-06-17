@@ -8,15 +8,17 @@
 
 ```
 characters/
-├── README.md                      # 이 파일
-├── docs/                          # 문서
-│   ├── AI_CHARACTER_PROMPTS.md   # AI 이미지 생성 프롬프트 (600+ 줄)
-│   └── CHARACTER_IMAGE_GUIDE.md  # 캐릭터 이미지 사용 가이드
-└── scripts/                       # 자동화 스크립트
-    ├── README.md                  # 스크립트 사용법
-    ├── generate_characters.py     # 이미지 자동 생성
-    ├── test_api.py               # API 연결 테스트
-    └── requirements.txt           # Python 의존성
+├── README.md                         # 이 파일
+├── QUICKSTART.md                     # 30분 빠른 시작 가이드 (NEW!)
+├── docs/                             # 문서
+│   ├── AI_CHARACTER_PROMPTS.md      # AI 프롬프트 (600+ 줄)
+│   ├── CHARACTER_IMAGE_GUIDE.md     # 이미지 사용 가이드
+│   └── STABLE_DIFFUSION_SETUP.md    # SD WebUI 설치 가이드 (NEW!)
+└── scripts/                          # 자동화 스크립트
+    ├── README.md                     # 스크립트 사용법
+    ├── generate_characters.py        # 이미지 자동 생성
+    ├── test_api.py                  # API 연결 테스트
+    └── requirements.txt              # Python 의존성
 ```
 
 ---
@@ -49,54 +51,122 @@ characters/
 
 ## 🚀 빠른 시작
 
-### 1. 문서 읽기
+### ⚡ 초급: 30분 안에 끝내기
 
-**이미지 사용 방법:**
 ```bash
-cat docs/CHARACTER_IMAGE_GUIDE.md
+# 1. 빠른 시작 가이드 읽기
+cat QUICKSTART.md
+
+# 2. Stable Diffusion WebUI 설치 (10-15분)
+# Windows: 가이드 참조
+# macOS/Linux: 가이드 참조
+
+# 3. 이미지 생성 (15-30분)
+cd scripts
+python3 generate_characters.py --backend webui --all
+
+# 4. 게임 활성화
+# prototype/src/config/characterImages.ts
+# USE_EXTERNAL_IMAGES = true
 ```
 
-**AI 생성 프롬프트:**
+**→ `QUICKSTART.md` 참조!**
+
+---
+
+### 📖 중급: 상세 설정
+
+**1. Stable Diffusion WebUI 설치:**
 ```bash
-cat docs/AI_CHARACTER_PROMPTS.md
+# 전체 설치 가이드
+cat docs/STABLE_DIFFUSION_SETUP.md
 ```
 
-### 2. 이미지 자동 생성
+- Windows/macOS/Linux 전용 가이드
+- GPU 설정
+- 모델 다운로드
+- API 활성화
+- 트러블슈팅
 
-**설치:**
+**2. 이미지 생성:**
 ```bash
 cd scripts
-pip3 install -r requirements.txt
-```
 
-**생성:**
-```bash
-# Stable Diffusion WebUI 사용 (로컬, 무료)
-python3 generate_characters.py --backend webui --character en-emily
+# 연결 테스트
+python3 test_api.py --backend webui
 
 # 모든 캐릭터 생성
 python3 generate_characters.py --backend webui --all
 ```
 
-자세한 사용법은 `scripts/README.md` 참조
-
-### 3. 게임에 적용
-
-**설정 파일 수정:**
+**3. 게임 적용:**
 ```typescript
 // prototype/src/config/characterImages.ts
 export const USE_EXTERNAL_IMAGES = true;
 ```
 
-**이미지 배치:**
-- 생성된 이미지는 `prototype/public/characters/` 에 저장됨
-- 자동으로 게임에 로드됨
+**4. 빌드 & 배포:**
+```bash
+cd ../prototype
+npm run build
+# Deploy to GitHub Pages
+```
 
 ---
 
-## 📚 문서
+### 🎨 고급: 커스터마이징
 
-### docs/AI_CHARACTER_PROMPTS.md (600+ 줄)
+**프롬프트 수정:**
+```bash
+# AI 프롬프트 편집
+nano docs/AI_CHARACTER_PROMPTS.md
+
+# 특정 캐릭터 재생성
+python3 scripts/generate_characters.py --character en-emily
+```
+
+**이미지 수동 추가:**
+```bash
+# 외부 이미지 사용
+cp my_character.png prototype/public/characters/en/emily/idle.png
+```
+
+자세한 내용: `docs/CHARACTER_IMAGE_GUIDE.md`
+
+---
+
+## 📚 문서 목록
+
+### 🚀 QUICKSTART.md (NEW!)
+**30분 빠른 시작 가이드**
+
+- 5분 Stable Diffusion 설정
+- 이미지 생성 3가지 옵션
+- 게임 활성화 단계
+- 즉시 사용 가능한 명령어
+- 트러블슈팅 요약
+
+**대상:** 빠르게 시작하고 싶은 사용자
+
+---
+
+### 📖 docs/STABLE_DIFFUSION_SETUP.md (NEW!)
+**완전한 Stable Diffusion WebUI 설치 가이드**
+
+포함 내용:
+- Windows/macOS/Linux 설치 가이드
+- NVIDIA GPU / Apple Silicon / CPU 설정
+- API 활성화 방법
+- 모델 다운로드 및 관리
+- 성능 최적화 팁
+- 상세한 트러블슈팅
+- 고급 설정 (ControlNet, LoRA 등)
+
+**대상:** 처음 설치하는 사용자
+
+---
+
+### 🎨 docs/AI_CHARACTER_PROMPTS.md (600+ 줄)
 
 **내용:**
 - 12개 캐릭터 × 7개 포즈 프롬프트
