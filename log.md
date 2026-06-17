@@ -963,3 +963,41 @@ git push -u origin main
 
 4개 언어, 197개 단어, 66개 문장, 30+ 스테이지, 106개 테스트를 갖춘 완전한 외국어 타자 연습 게임이 완성되었습니다. 이제 세상에 공개할 준비가 되었습니다! 🚀
 
+
+### [2026-06-18] deploy | 🎉 프로덕션 배포 완료!
+
+**배포 성공!** Typing Language가 GitHub Pages에 라이브 배포되었습니다!
+
+#### 배포 정보
+- **URL**: https://seoca1.github.io/typing-language/
+- **저장소**: https://github.com/seoca1/typing-language
+- **배포 방식**: GitHub Actions 자동 배포
+- **배포 시간**: ~3분 (빌드 + 테스트 + 배포)
+
+#### 진행 과정
+1. ✅ GitHub 계정 확인 (seoca1)
+2. ✅ GitHub 저장소 생성 (`seoca1/typing-language`)
+3. ✅ 코드 푸시 (전체 프로젝트)
+4. ✅ 워크플로우 파일 수정 (`prototype/` 폴더 지원)
+5. ✅ GitHub Actions 자동 실행
+6. ✅ 106 테스트 통과
+7. ✅ 프로덕션 빌드 (253KB, gzip 77KB)
+8. ✅ GitHub Pages 배포 완료
+9. ✅ README 실제 URL 업데이트
+
+#### 기술 상세
+- **Node 버전**: 18
+- **빌드 도구**: Vite 5.4.21
+- **테스트**: Vitest (106 passed)
+- **번들 크기**: 253.51 KB (gzip: 77.46 KB)
+- **CDN**: GitHub Pages (Fastly)
+
+#### 배포 URL 접근 확인
+```bash
+curl -I https://seoca1.github.io/typing-language/
+# HTTP/2 200 ✅
+```
+
+**🎉 Typing Language는 이제 전 세계에 공개되었습니다!**
+
+누구나 브라우저에서 접속하여 4개 언어 타이핑 연습을 즐길 수 있습니다! 🌍⌨️
