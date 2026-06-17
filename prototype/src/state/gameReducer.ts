@@ -13,7 +13,7 @@ import type {
   StageConfig,
 } from '../types.js';
 
-export type GamePhase = 'menu' | 'stage' | 'result' | 'chartest';
+export type GamePhase = 'menu' | 'charselect' | 'stage' | 'result' | 'chartest';
 
 export interface GameState {
   phase: GamePhase;
@@ -46,6 +46,8 @@ export type GameAction =
   | { type: 'END_STAGE'; missions: MissionConfig[]; results: { missionId: string; cleared: boolean }[] }
   | { type: 'BACK_TO_MENU' }
   | { type: 'START_CHARTEST' }
+  | { type: 'SHOW_CHARACTER_SELECT'; language: string }
+  | { type: 'SELECT_CHARACTER'; characterId: string }
   | { type: 'UPDATE_STATS'; accuracy: number; wpm: number }
   | { type: 'UPDATE_STAGE_RECORD'; stageId: string; score: number; wpm: number; accuracy: number };
 
@@ -216,6 +218,21 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       return {
         ...state,
         phase: 'chartest',
+      };
+    }
+
+    case 'SHOW_CHARACTER_SELECT': {
+      return {
+        ...state,
+        phase: 'charselect',
+      };
+    }
+
+    case 'SELECT_CHARACTER': {
+      // Character selection logic handled by CharacterSelector
+      return {
+        ...state,
+        phase: 'menu',
       };
     }
 

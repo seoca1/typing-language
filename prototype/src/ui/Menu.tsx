@@ -6,6 +6,7 @@ interface MenuProps {
   onStartStage: (stage: StageConfig) => void;
   onShowTutorial?: () => void;
   onStartCharTest?: () => void;
+  onShowCharacterSelect?: (language: string) => void;
   stageRecords?: Record<string, StageRecord>;
 }
 
@@ -62,6 +63,7 @@ function LanguageSection({
   supportsTier0,
   stages,
   onStart,
+  onShowCharacterSelect,
   stageRecords,
 }: {
   code: string;
@@ -69,15 +71,26 @@ function LanguageSection({
   supportsTier0: boolean;
   stages: StageConfig[];
   onStart: (s: StageConfig) => void;
+  onShowCharacterSelect?: (language: string) => void;
   stageRecords?: Record<string, StageRecord>;
 }) {
   const byTier = stagesByTier(code);
   return (
     <section className="language-section">
-      <h2>
-        {label}
-        <small> · {stages.length}개 스테이지</small>
-      </h2>
+      <div className="language-section-header">
+        <h2>
+          {label}
+          <small> · {stages.length}개 스테이지</small>
+        </h2>
+        {onShowCharacterSelect && (
+          <button 
+            className="character-select-btn" 
+            onClick={() => onShowCharacterSelect(code)}
+          >
+            👤 캐릭터 선택
+          </button>
+        )}
+      </div>
       {supportsTier0 && (
         <div className="tier-group">
           <h3 className="tier-title">{TIER_LABELS[0]}</h3>
@@ -116,7 +129,7 @@ function LanguageSection({
   );
 }
 
-export function Menu({ onStartStage, onShowTutorial, onStartCharTest, stageRecords }: MenuProps) {
+export function Menu({ onStartStage, onShowTutorial, onStartCharTest, onShowCharacterSelect, stageRecords }: MenuProps) {
   const allLanguages = getAllLanguages();
   
   return (
@@ -146,6 +159,7 @@ export function Menu({ onStartStage, onShowTutorial, onStartCharTest, stageRecor
           supportsTier0={lang.supportsTier0}
           stages={SAMPLE_STAGES}
           onStart={onStartStage}
+          onShowCharacterSelect={onShowCharacterSelect}
           stageRecords={stageRecords}
         />
       ))}

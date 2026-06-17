@@ -20,6 +20,7 @@ import { StageScreen } from './ui/StageScreen.js';
 import { ResultScreen } from './ui/ResultScreen.js';
 import { Tutorial } from './ui/Tutorial.js';
 import { CharacterTest } from './ui/CharacterTest.js';
+import { CharacterSelect } from './ui/CharacterSelect.js';
 import {
   createEffectsState,
   getLanguageAccent,
@@ -498,6 +499,22 @@ export function App() {
     dispatch({ type: 'BACK_TO_MENU' });
   };
 
+  const handleShowCharacterSelect = (language: string) => {
+    // Create a temporary stage config to pass language info
+    const tempStage: StageConfig = {
+      id: 'temp',
+      name: 'Character Select',
+      description: '',
+      language,
+      difficulty: 1,
+      wordCount: 0,
+      corpusFilter: {},
+      missions: [],
+    };
+    dispatch({ type: 'START_STAGE', stage: tempStage, enemy: null as any });
+    dispatch({ type: 'SHOW_CHARACTER_SELECT', language });
+  };
+
   const handleTutorialComplete = () => {
     localStorage.setItem(TUTORIAL_KEY, 'true');
     setShowTutorial(false);
@@ -531,6 +548,7 @@ export function App() {
         onStartStage={handleStartStage}
         onShowTutorial={() => setShowTutorial(true)}
         onStartCharTest={() => dispatch({ type: 'START_CHARTEST' })}
+        onShowCharacterSelect={handleShowCharacterSelect}
         stageRecords={state.player.stageRecords}
       />
     );
@@ -539,6 +557,15 @@ export function App() {
   if (state.phase === 'chartest') {
     return (
       <CharacterTest onBack={handleBackToMenu} />
+    );
+  }
+
+  if (state.phase === 'charselect') {
+    return (
+      <CharacterSelect 
+        language={state.currentStage?.language || 'en'} 
+        dispatch={dispatch}
+      />
     );
   }
 

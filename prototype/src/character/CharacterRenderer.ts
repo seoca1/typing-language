@@ -1348,17 +1348,104 @@ function renderCharacterPlaceholder(
 /**
  * Original primitive rendering (extracted for fallback)
  */
-function renderCharacterPrimitive(
+/**
+ * Export primitive rendering for external use (e.g., CharacterSelect preview)
+ */
+export function renderCharacterPrimitive(
   ctx: CanvasRenderingContext2D,
-  _state: CharacterState,
+  state: CharacterState,
   cx: number,
   groundY: number,
-  _now: number,
+  now: number,
 ): void {
-  // This function is called as fallback when image is not found
-  // The actual primitive rendering is in the main renderCharacter function
-  console.warn('[CharacterRenderer] Falling back to primitive rendering');
-  
-  // Draw a simple placeholder for now
-  renderCharacterPlaceholder(ctx, cx, groundY);
+  // Original primitive rendering
+  const draw: DrawContext = { ctx, now };
+
+  const breathing = state.pose === 'idle' ? Math.sin(now / 600) * 1.5 : 0;
+
+  let bodyOffsetY = breathing;
+  let bodyScaleY = 1;
+  let bodyRotation = 0;
+  let armLeftAngle = 0;
+  let armRightAngle = 0;
+  let armLeftLength = 1;
+  let armRightLength = 1;
+  let legSpread = 0;
+
+  switch (state.pose) {
+    case 'idle':
+      armLeftAngle = Math.sin(now / 1100) * 0.05;
+      armRightAngle = Math.sin(now / 1100 + Math.PI) * 0.05;
+      break;
+    case 'wave': {
+      const t = (now - state.poseStart) / 900;
+      const phase = Math.sin(t * Math.PI * 4);
+      armRightAngle = -1.2 + phase * 0.3;
+      armLeftAngle = 0.1;
+      bodyOffsetY += Math.sin(t * Math.PI) * -3;
+      break;
+    }
+    case 'jump': {
+      const t = (now - state.poseStart) / 700;
+      const arc = Math.sin(t * Math.PI);
+      bodyOffsetY -= arc * 30;
+      armLeftAngle = -1.8;
+      armRightAngle = -1.8;
+      legSpread = 0.3;
+      break;
+    }
+    case 'clap': {
+      const t = (now - state.poseStart) / 800;
+      const phase = Math.sin(t * Math.PI * 6);
+      armLeftAngle = -1.0 + phase * 0.15;
+      armRightAngle = -1.0 - phase * 0.15;
+      bodyOffsetY += Math.sin(t * Math.PI) * -2;
+      break;
+    }
+    case 'spin': {
+      const t = (now - state.poseStart) / 1400;
+      bodyRotation = t * Math.PI * 2;
+      armLeftAngle = -Math.PI / 2;
+      armRightAngle = -Math.PI / 2;
+      bodyScaleY = 1 + Math.sin(t * Math.PI * 2) * 0.05;
+      break;
+    }
+    case 'dance': {
+      const t = (now - state.poseStart) / 3000;
+      const beat = Math.sin(t * Math.PI * 4);
+      bodyOffsetY += Math.abs(beat) * -10;
+      armLeftAngle = -1.4 + beat * 0.4;
+      armRightAngle = -1.4 - beat * 0.4;
+      legSpread = beat * 0.2;
+      bodyRotation = Math.sin(t * Math.PI * 2) * 0.1;
+      break;
+    }
+    case 'pose': {
+      const t = (now - state.poseStart) / 1800;
+      armRightAngle = -1.4;
+      armLeftAngle = -0.3;
+      bodyRotation = Math.sin(t * Math.PI) * 0.05;
+      break;
+    }
+  }
+
+  if (state.mood === 'triumphant' || state.pose === 'dance') {
+    drawAura(draw, cx, groundY - 130, now);
+  }
+  if (state.mood === 'excited') {
+    drawSparkles(draw, cx, groundY - 120, now);
+  }
+
+  ctx.save();
+  ctx.translate(cx, groundY);
+  ctx.rotate(bodyRotation);
+  ctx.translate(0, bodyOffsetY);
+  ctx.scale(1, bodyScaleY);
+
+  drawLegs(draw, state.appearance, legSpread);
+  drawOutfit(draw, state.appearance);
+  drawArms(draw, state.appearance, armLeftAngle, armRightAngle, armLeftLength, armRightLength);
+  drawHeadAndHair(draw, state, now);
+
+  ctx.restore();
 }

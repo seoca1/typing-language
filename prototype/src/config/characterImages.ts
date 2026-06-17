@@ -388,26 +388,93 @@ export const LANGUAGE_CHARACTERS: Record<string, string[]> = {
 /**
  * 캐릭터 정보 (이름, 설명)
  */
-export const CHARACTER_INFO: Record<string, { name: string; description: string }> = {
+export interface CharacterInfo {
+  id: string;
+  name: string;
+  description: string;
+  style: string;
+}
+
+export const CHARACTER_INFO: Record<string, CharacterInfo> = {
   // 영어
-  'en-emily': { name: 'Emily', description: 'Modern American Girl - 활발하고 친근한 미국 소녀' },
-  'en-oliver': { name: 'Oliver', description: 'British Gentleman - 우아한 영국 신사' },
-  'en-sophia': { name: 'Sophia', description: 'Tech Expert - 기술에 능한 현대 소녀' },
+  'en-emily': { 
+    id: 'en-emily',
+    name: 'Emily', 
+    description: 'Modern American Girl', 
+    style: '활발하고 친근한 미국 소녀' 
+  },
+  'en-oliver': { 
+    id: 'en-oliver',
+    name: 'Oliver', 
+    description: 'British Gentleman', 
+    style: '우아한 영국 신사' 
+  },
+  'en-sophia': { 
+    id: 'en-sophia',
+    name: 'Sophia', 
+    description: 'Tech Expert', 
+    style: '기술에 능한 현대 소녀' 
+  },
   
   // 일본어
-  'jp-sakura': { name: 'Sakura (さくら)', description: 'Traditional Japanese Girl - 전통 기모노 소녀' },
-  'jp-yuki': { name: 'Yuki (ゆき)', description: 'School Girl - 밝고 활발한 여학생' },
-  'jp-kaito': { name: 'Kaito (かいと)', description: 'Cool Boy - 쿨한 일본 남학생' },
+  'jp-sakura': { 
+    id: 'jp-sakura',
+    name: 'Sakura (さくら)', 
+    description: 'Traditional Japanese Girl', 
+    style: '전통 기모노 소녀' 
+  },
+  'jp-yuki': { 
+    id: 'jp-yuki',
+    name: 'Yuki (ゆき)', 
+    description: 'School Girl', 
+    style: '밝고 활발한 여학생' 
+  },
+  'jp-kaito': { 
+    id: 'jp-kaito',
+    name: 'Kaito (かいと)', 
+    description: 'Cool Boy', 
+    style: '쿨한 일본 남학생' 
+  },
   
   // 스페인어
-  'es-isabella': { name: 'Isabella', description: 'Flamenco Dancer - 정열적인 플라멩코 댄서' },
-  'es-carlos': { name: 'Carlos', description: 'Spanish Youth - 스포티한 스페인 청년' },
-  'es-luna': { name: 'Luna', description: 'Barcelona Artist - 자유로운 예술가' },
+  'es-isabella': { 
+    id: 'es-isabella',
+    name: 'Isabella', 
+    description: 'Flamenco Dancer', 
+    style: '정열적인 플라멩코 댄서' 
+  },
+  'es-carlos': { 
+    id: 'es-carlos',
+    name: 'Carlos', 
+    description: 'Spanish Youth', 
+    style: '스포티한 스페인 청년' 
+  },
+  'es-luna': { 
+    id: 'es-luna',
+    name: 'Luna', 
+    description: 'Barcelona Artist', 
+    style: '자유로운 예술가' 
+  },
   
   // 한국어
-  'kr-hana': { name: 'Hana (하나)', description: 'Traditional Hanbok Girl - 우아한 한복 소녀' },
-  'kr-minho': { name: 'Minho (민호)', description: 'K-pop Idol - 세련된 아이돌 스타' },
-  'kr-jiwoo': { name: 'Jiwoo (지우)', description: 'Gamer Girl - 귀여운 게이머 소녀' },
+  'kr-hana': { 
+    id: 'kr-hana',
+    name: 'Hana (하나)', 
+    description: 'Traditional Hanbok Girl', 
+    style: '우아한 한복 소녀' 
+  },
+  'kr-minho': { 
+    id: 'kr-minho',
+    name: 'Minho (민호)', 
+    description: 'K-pop Idol', 
+    style: '세련된 아이돌 스타' 
+  },
+  'kr-jiwoo': { 
+    id: 'kr-jiwoo',
+    name: 'Jiwoo (지우)', 
+    description: 'Gamer Girl', 
+    style: '귀여운 게이머 소녀' 
+  },
 };
 
 /**
@@ -439,6 +506,6 @@ export function getCharactersForLanguage(language: string): string[] {
 /**
  * 캐릭터 정보 가져오기
  */
-export function getCharacterInfo(characterId: string): { name: string; description: string } | null {
+export function getCharacterInfo(characterId: string): CharacterInfo | null {
   return CHARACTER_INFO[characterId] || null;
 }
