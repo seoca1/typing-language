@@ -26,49 +26,49 @@ Emily is a 16-18 year old modern American teenage girl with a friendly and appro
 - Relaxed stance
 - Friendly expression
 - Arms at sides or one hand in pocket
-- **Save as:** `idle.png`
+- **Save as:** `1-idle.png`
 
 ### 2. 2-wave.txt
 **Waving cheerfully**
 - One arm raised waving
 - Big friendly smile
 - Energetic greeting
-- **Save as:** `wave.png`
+- **Save as:** `2-wave.png`
 
 ### 3. 3-jump.txt
 **Jumping with excitement**
 - Both feet off ground
 - Arms raised enthusiastically
 - Joyful expression
-- **Save as:** `jump.png`
+- **Save as:** `3-jump.png`
 
 ### 4. 4-clap.txt
 **Clapping hands happily**
 - Hands together clapping
 - Happy, appreciative expression
 - Slight lean forward
-- **Save as:** `clap.png`
+- **Save as:** `4-clap.png`
 
 ### 5. 5-spin.txt
 **Spinning/twirling motion**
 - Body mid-spin
 - Arms extended for balance
 - Playful, joyful expression
-- **Save as:** `spin.png`
+- **Save as:** `5-spin.png`
 
 ### 6. 6-dance.txt
 **Dancing energetically**
 - One arm raised, one at hip
 - Body swaying to music
 - Energetic, happy expression
-- **Save as:** `dance.png`
+- **Save as:** `6-dance.png`
 
 ### 7. 7-pose.txt
 **Victory/confident pose**
 - One arm raised in victory
 - Confident smile
 - Proud stance
-- **Save as:** `pose.png`
+- **Save as:** `7-pose.png`
 
 ---
 
@@ -84,20 +84,20 @@ Example:
 cat 1-idle.txt | pbcopy
 # Paste into ChatGPT/Grok
 # Download generated image
-# Save as: prototype/public/characters/en/emily/idle.png
+# Save as: prototype/public/characters/en/emily/1-idle.png
 ```
 
 ---
 
 ## Generation Order (Follow Numbers)
 
-1. **1-idle.txt** → idle.png (✓ Already done!)
-2. **2-wave.txt** → wave.png (Next!)
-3. **3-jump.txt** → jump.png
-4. **4-clap.txt** → clap.png
-5. **5-spin.txt** → spin.png
-6. **6-dance.txt** → dance.png
-7. **7-pose.txt** → pose.png
+1. **1-idle.txt** → 1-idle.png (✓ Already done!)
+2. **2-wave.txt** → 2-wave.png (✓ Already done!)
+3. **3-jump.txt** → 3-jump.png (Next!)
+4. **4-clap.txt** → 4-clap.png
+5. **5-spin.txt** → 5-spin.png
+6. **6-dance.txt** → 6-dance.png
+7. **7-pose.txt** → 7-pose.png
 
 **Tip:** Follow the numbers in order for best workflow!
 
@@ -106,16 +106,16 @@ cat 1-idle.txt | pbcopy
 ## Save Locations
 
 ```
-prototype/public/characters/en/emily/idle.png
-prototype/public/characters/en/emily/wave.png
-prototype/public/characters/en/emily/jump.png
-prototype/public/characters/en/emily/clap.png
-prototype/public/characters/en/emily/spin.png
-prototype/public/characters/en/emily/dance.png
-prototype/public/characters/en/emily/pose.png
+prototype/public/characters/en/emily/1-idle.png
+prototype/public/characters/en/emily/2-wave.png
+prototype/public/characters/en/emily/3-jump.png
+prototype/public/characters/en/emily/4-clap.png
+prototype/public/characters/en/emily/5-spin.png
+prototype/public/characters/en/emily/6-dance.png
+prototype/public/characters/en/emily/7-pose.png
 ```
 
 ---
 
 **Total:** 7 poses  
-**Progress:** ___ / 7 completed
+**Progress:** 2 / 7 completed (29%)

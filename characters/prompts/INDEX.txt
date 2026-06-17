@@ -8,7 +8,7 @@ READY TO USE (Complete Prompts):
 ✅ en/emily/     - 1-idle.txt, 2-wave.txt, 3-jump.txt, 4-clap.txt, 
                    5-spin.txt, 6-dance.txt, 7-pose.txt
                    README.md with full guide
-                   ✓ idle.png already generated!
+                   ✓ 1-idle.png, 2-wave.png already generated! (2/7)
 
 IN PROGRESS (Use AI_CHARACTER_PROMPTS.md):
 ------------------------------------------
@@ -29,14 +29,17 @@ QUICK COMMANDS:
 # Emily idle prompt (already done!)
 cat en/emily/1-idle.txt
 
-# Emily wave prompt (do this next!)
+# Emily wave prompt (already done!)
 cat en/emily/2-wave.txt
+
+# Emily jump prompt (do this next!)
+cat en/emily/3-jump.txt
 
 # All Emily prompts (numbered 1-7)
 ls en/emily/*.txt
 
-# Copy wave prompt to clipboard
-cat en/emily/2-wave.txt | pbcopy
+# Copy jump prompt to clipboard
+cat en/emily/3-jump.txt | pbcopy
 
 # All character prompts (comprehensive)
 cat ../docs/AI_CHARACTER_PROMPTS.md
@@ -47,10 +50,12 @@ cat ../QUICKSTART.md
 SAVE LOCATIONS:
 ---------------
 All images save to:
-../../prototype/public/characters/[lang]/[character]/[pose].png
+../../prototype/public/characters/[lang]/[character]/[number-pose].png
 
-Example:
-../../prototype/public/characters/en/emily/idle.png
+Examples:
+../../prototype/public/characters/en/emily/1-idle.png
+../../prototype/public/characters/en/emily/2-wave.png
+../../prototype/public/characters/en/emily/3-jump.png
 
 TOTAL IMAGES:
 -------------
@@ -58,8 +63,8 @@ TOTAL IMAGES:
 
 PROGRESS:
 ---------
-Emily:  [✓] 1-idle [→] 2-wave [ ] 3-jump [ ] 4-clap [ ] 5-spin [ ] 6-dance [ ] 7-pose
-        (idle.png exists! Start with wave.png next!)
+Emily:  [✓] 1-idle [✓] 2-wave [→] 3-jump [ ] 4-clap [ ] 5-spin [ ] 6-dance [ ] 7-pose
+        (1-idle.png, 2-wave.png exist! Start with 3-jump.png next!)
 Oliver: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
 Sophia: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
 Sakura: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
@@ -78,13 +83,12 @@ START HERE:
 -----------
 cd en/emily
 
-# idle.png already exists! Start with wave:
-cat 2-wave.txt
-# Copy prompt → ChatGPT/Grok → Generate → Save as wave.png
+# 1-idle.png, 2-wave.png already exist! Start with jump:
+cat 3-jump.txt
+# Copy prompt → ChatGPT/Grok → Generate → Save as 3-jump.png
 
 # Then continue in order:
-# 3-jump.txt → jump.png
-# 4-clap.txt → clap.png
-# 5-spin.txt → spin.png
-# 6-dance.txt → dance.png
-# 7-pose.txt → pose.png
+# 4-clap.txt → 4-clap.png
+# 5-spin.txt → 5-spin.png
+# 6-dance.txt → 6-dance.png
+# 7-pose.txt → 7-pose.png

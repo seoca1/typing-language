@@ -3,7 +3,7 @@ EMILY - IDLE POSE
 
 Character: Emily (Modern American Girl)
 Pose: Standing idle/neutral
-Save to: prototype/public/characters/en/emily/idle.png
+Save to: prototype/public/characters/en/emily/1-idle.png
 
 PROMPT:
 -------

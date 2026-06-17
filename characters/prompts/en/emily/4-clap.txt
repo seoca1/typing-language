@@ -3,7 +3,7 @@ EMILY - CLAP POSE
 
 Character: Emily (Modern American Girl)
 Pose: Clapping hands happily
-Save to: prototype/public/characters/en/emily/clap.png
+Save to: prototype/public/characters/en/emily/4-clap.png
 
 PROMPT:
 -------

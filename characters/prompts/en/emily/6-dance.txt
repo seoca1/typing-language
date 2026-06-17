@@ -3,7 +3,7 @@ EMILY - DANCE POSE
 
 Character: Emily (Modern American Girl)
 Pose: Dancing energetically
-Save to: prototype/public/characters/en/emily/dance.png
+Save to: prototype/public/characters/en/emily/6-dance.png
 
 PROMPT:
 -------

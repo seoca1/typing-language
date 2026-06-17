@@ -3,7 +3,7 @@ EMILY - JUMP POSE
 
 Character: Emily (Modern American Girl)
 Pose: Jumping with excitement
-Save to: prototype/public/characters/en/emily/jump.png
+Save to: prototype/public/characters/en/emily/3-jump.png
 
 PROMPT:
 -------

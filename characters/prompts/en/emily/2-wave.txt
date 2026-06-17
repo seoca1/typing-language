@@ -3,7 +3,7 @@ EMILY - WAVE POSE
 
 Character: Emily (Modern American Girl)
 Pose: Waving cheerfully
-Save to: prototype/public/characters/en/emily/wave.png
+Save to: prototype/public/characters/en/emily/2-wave.png
 
 PROMPT:
 -------

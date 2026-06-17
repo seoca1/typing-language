@@ -3,7 +3,7 @@ EMILY - SPIN POSE
 
 Character: Emily (Modern American Girl)
 Pose: Spinning/twirling motion
-Save to: prototype/public/characters/en/emily/spin.png
+Save to: prototype/public/characters/en/emily/5-spin.png
 
 PROMPT:
 -------

@@ -3,7 +3,7 @@ EMILY - POSE (VICTORY)
 
 Character: Emily (Modern American Girl)
 Pose: Victory/confident pose
-Save to: prototype/public/characters/en/emily/pose.png
+Save to: prototype/public/characters/en/emily/7-pose.png
 
 PROMPT:
 -------

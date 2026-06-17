@@ -36,9 +36,9 @@ Emily has complete individual prompt files:
 
 ```bash
 cd en/emily
-cat idle.txt    # Copy this prompt
+cat 1-idle.txt    # Copy this prompt
 # Paste into ChatGPT/Grok
-# Save image to: prototype/public/characters/en/emily/idle.png
+# Save image to: prototype/public/characters/en/emily/1-idle.png
 ```
 
 ### Method 2: Reference Main Prompts Document
@@ -105,30 +105,36 @@ Each character needs 7 poses:
 
 ### English
 ```
-prototype/public/characters/en/emily/[pose].png
-prototype/public/characters/en/oliver/[pose].png
-prototype/public/characters/en/sophia/[pose].png
+prototype/public/characters/en/emily/[number-pose].png
+prototype/public/characters/en/oliver/[number-pose].png
+prototype/public/characters/en/sophia/[number-pose].png
+```
+
+Examples:
+```
+prototype/public/characters/en/emily/1-idle.png
+prototype/public/characters/en/emily/2-wave.png
 ```
 
 ### Japanese
 ```
-prototype/public/characters/jp/sakura/[pose].png
-prototype/public/characters/jp/yuki/[pose].png
-prototype/public/characters/jp/kaito/[pose].png
+prototype/public/characters/jp/sakura/[number-pose].png
+prototype/public/characters/jp/yuki/[number-pose].png
+prototype/public/characters/jp/kaito/[number-pose].png
 ```
 
 ### Spanish
 ```
-prototype/public/characters/es/isabella/[pose].png
-prototype/public/characters/es/carlos/[pose].png
-prototype/public/characters/es/luna/[pose].png
+prototype/public/characters/es/isabella/[number-pose].png
+prototype/public/characters/es/carlos/[number-pose].png
+prototype/public/characters/es/luna/[number-pose].png
 ```
 
 ### Korean
 ```
-prototype/public/characters/kr/hana/[pose].png
-prototype/public/characters/kr/minho/[pose].png
-prototype/public/characters/kr/jiwoo/[pose].png
+prototype/public/characters/kr/hana/[number-pose].png
+prototype/public/characters/kr/minho/[number-pose].png
+prototype/public/characters/kr/jiwoo/[number-pose].png
 ```
 
 ---
