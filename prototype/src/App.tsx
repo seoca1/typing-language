@@ -19,6 +19,7 @@ import { Menu } from './ui/Menu.js';
 import { StageScreen } from './ui/StageScreen.js';
 import { ResultScreen } from './ui/ResultScreen.js';
 import { Tutorial } from './ui/Tutorial.js';
+import { CharacterTest } from './ui/CharacterTest.js';
 import {
   createEffectsState,
   getLanguageAccent,
@@ -502,8 +503,15 @@ export function App() {
       <Menu
         onStartStage={handleStartStage}
         onShowTutorial={() => setShowTutorial(true)}
+        onStartCharTest={() => dispatch({ type: 'START_CHARTEST' })}
         stageRecords={state.player.stageRecords}
       />
+    );
+  }
+
+  if (state.phase === 'chartest') {
+    return (
+      <CharacterTest onBack={handleBackToMenu} />
     );
   }
 

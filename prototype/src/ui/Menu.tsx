@@ -5,6 +5,7 @@ import { getAllLanguages } from '../language/index.js';
 interface MenuProps {
   onStartStage: (stage: StageConfig) => void;
   onShowTutorial?: () => void;
+  onStartCharTest?: () => void;
   stageRecords?: Record<string, StageRecord>;
 }
 
@@ -115,7 +116,7 @@ function LanguageSection({
   );
 }
 
-export function Menu({ onStartStage, onShowTutorial, stageRecords }: MenuProps) {
+export function Menu({ onStartStage, onShowTutorial, onStartCharTest, stageRecords }: MenuProps) {
   const allLanguages = getAllLanguages();
   
   return (
@@ -123,11 +124,18 @@ export function Menu({ onStartStage, onShowTutorial, stageRecords }: MenuProps) 
       <header className="menu-header">
         <h1>Typing Language</h1>
         <p>외국어를 실제 입력하듯 타자하며 적을 격파하라</p>
-        {onShowTutorial && (
-          <button className="tutorial-btn" onClick={onShowTutorial}>
-            📚 튜토리얼 다시 보기
-          </button>
-        )}
+        <div className="menu-header-buttons">
+          {onShowTutorial && (
+            <button className="tutorial-btn" onClick={onShowTutorial}>
+              📚 튜토리얼 다시 보기
+            </button>
+          )}
+          {onStartCharTest && (
+            <button className="chartest-btn" onClick={onStartCharTest}>
+              🎨 캐릭터 애니메이션 테스트
+            </button>
+          )}
+        </div>
       </header>
 
       {allLanguages.map((lang) => (
