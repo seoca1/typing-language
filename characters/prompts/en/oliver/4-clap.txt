@@ -1,0 +1,78 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Oliver (British Gentleman Style)
+- Gender: Male (1boy)
+- Age: Young adult
+- Hair: Brown, short neat hair
+- Eyes: Green
+- Expression: Appreciative smile, pleased expression
+- Style: Elegant, refined, gentlemanly
+
+OUTFIT:
+- Formal British gentleman attire
+- Vest (waistcoat)
+- Dress shirt
+- Tie
+- Slacks (dress pants)
+- Dress shoes
+- Classic, well-tailored appearance
+
+POSE:
+- Standing upright
+- Clapping hands together
+- Refined applause gesture
+- Full body visible
+- Hands positioned at chest level
+- Elegant, dignified clapping
+- Gentleman's appreciation
+
+ACTION:
+- Polite clapping
+- Sophisticated applause
+- Showing appreciation gracefully
+- British gentleman courtesy
+- Refined hand gesture
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Sophisticated color palette (browns, greens, neutrals)
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+- Elegant gesture pose
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, sophisticated colors, 1boy, solo, full body, clapping hands, appreciative smile, refined gesture, gentleman pose
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+- Overly enthusiastic clapping
+- Loss of refined demeanor
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/en/oliver/4-clap.png
+
+This is pose 4/7 (clap) for Oliver.

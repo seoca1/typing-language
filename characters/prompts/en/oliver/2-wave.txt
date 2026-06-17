@@ -1,0 +1,77 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Oliver (British Gentleman Style)
+- Gender: Male (1boy)
+- Age: Young adult
+- Hair: Brown, short neat hair
+- Eyes: Green
+- Expression: Polite smile, friendly expression
+- Style: Elegant, refined, courteous
+
+OUTFIT:
+- Formal British gentleman attire
+- Vest (waistcoat)
+- Dress shirt
+- Tie
+- Slacks (dress pants)
+- Dress shoes
+- Classic, well-tailored appearance
+
+POSE:
+- Standing upright
+- Waving hand (polite, courteous wave)
+- Gentleman gesture
+- Full body visible
+- One hand raised in friendly greeting
+- Other hand relaxed
+- Refined, elegant movement
+
+ACTION:
+- Polite waving gesture
+- Friendly but sophisticated greeting
+- British gentleman courtesy
+- Warm but formal demeanor
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Sophisticated color palette (browns, greens, neutrals)
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+- Dynamic but elegant pose
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, sophisticated colors, 1boy, solo, full body, polite wave, friendly smile, courteous gesture, gentleman pose
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+- Overly casual gestures
+- Exaggerated movements
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/en/oliver/2-wave.png
+
+This is pose 2/7 (wave) for Oliver.

@@ -1,0 +1,79 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Oliver (British Gentleman Style)
+- Gender: Male (1boy)
+- Age: Young adult
+- Hair: Brown, short neat hair (slightly moving from jump)
+- Eyes: Green
+- Expression: Excited but refined smile, joyful expression
+- Style: Elegant even while jumping
+
+OUTFIT:
+- Formal British gentleman attire
+- Vest (waistcoat)
+- Dress shirt
+- Tie
+- Slacks (dress pants)
+- Dress shoes
+- Clothes slightly flowing from movement
+- Classic, well-tailored appearance
+
+POSE:
+- Jumping in mid-air
+- Both feet off the ground
+- Arms raised or spread for balance
+- Refined jumping pose (not wild)
+- Full body visible
+- Elegant even in dynamic motion
+- Dignified but joyful
+
+ACTION:
+- Mid-air jump
+- Excited celebration
+- Gentleman maintaining composure while expressing joy
+- Balanced, controlled movement
+- Vest and tie slightly affected by motion
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered, suspended in air
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Sophisticated color palette (browns, greens, neutrals)
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+- Dynamic action pose with elegance
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, sophisticated colors, 1boy, solo, full body, jumping in air, excited expression, elegant jump, refined movement, dynamic pose
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+- Overly wild or messy jumping
+- Loss of refined character
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/en/oliver/3-jump.png
+
+This is pose 3/7 (jump) for Oliver.
