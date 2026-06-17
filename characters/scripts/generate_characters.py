@@ -493,8 +493,8 @@ def main():
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("../prototype/public/characters"),
-        help="출력 디렉토리 (기본: ../prototype/public/characters)",
+        default=Path("../../prototype/public/characters"),
+        help="출력 디렉토리 (기본: ../../prototype/public/characters)",
     )
     
     parser.add_argument(

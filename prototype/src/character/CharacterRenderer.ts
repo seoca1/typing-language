@@ -18,8 +18,8 @@ import { GraphicsConfig } from '../config/graphics.js';
 import { ImageLoader } from '../sprites/ImageLoader.js';
 import { 
   CHARACTER_IMAGES, 
-  DEFAULT_CHARACTER_IMAGE, 
-  USE_EXTERNAL_IMAGES 
+  USE_EXTERNAL_IMAGES,
+  getCharacterForLanguage,
 } from '../config/characterImages.js';
 
 const spriteRenderer = new SpriteRenderer();
@@ -1209,9 +1209,12 @@ function renderCharacterImage(
   groundY: number,
   now: number,
 ): void {
-  const characterSet = CHARACTER_IMAGES[DEFAULT_CHARACTER_IMAGE];
+  // 언어에 맞는 캐릭터 자동 선택
+  const characterId = getCharacterForLanguage(state.language);
+  const characterSet = CHARACTER_IMAGES[characterId];
+  
   if (!characterSet) {
-    console.warn(`[CharacterRenderer] Character set not found: ${DEFAULT_CHARACTER_IMAGE}`);
+    console.warn(`[CharacterRenderer] Character set not found: ${characterId}`);
     // Fallback to primitive rendering
     renderCharacterPrimitive(ctx, state, cx, groundY, now);
     return;

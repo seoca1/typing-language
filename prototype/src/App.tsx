@@ -80,15 +80,23 @@ export function App() {
       }
     });
 
-    // Preload external character images
-    import('./config/characterImages.js').then(({ USE_EXTERNAL_IMAGES, CHARACTER_IMAGES, DEFAULT_CHARACTER_IMAGE }) => {
+    // Preload external character images for all languages
+    import('./config/characterImages.js').then(({ USE_EXTERNAL_IMAGES, CHARACTER_IMAGES, LANGUAGE_DEFAULT_CHARACTERS }) => {
       if (USE_EXTERNAL_IMAGES) {
         import('./sprites/ImageLoader.js').then(({ ImageLoader }) => {
-          const characterSet = CHARACTER_IMAGES[DEFAULT_CHARACTER_IMAGE];
-          if (characterSet) {
-            const imagesToLoad = Object.values(characterSet);
+          // 모든 언어의 기본 캐릭터 프리로드
+          const imagesToLoad: any[] = [];
+          
+          Object.values(LANGUAGE_DEFAULT_CHARACTERS).forEach((characterId: any) => {
+            const characterSet = CHARACTER_IMAGES[characterId];
+            if (characterSet) {
+              imagesToLoad.push(...Object.values(characterSet));
+            }
+          });
+          
+          if (imagesToLoad.length > 0) {
             ImageLoader.preload(imagesToLoad)
-              .then(() => console.log('[App] Character images preloaded'))
+              .then(() => console.log(`[App] Preloaded ${imagesToLoad.length} character images`))
               .catch(err => console.warn('Character image preload failed:', err));
           }
         });
