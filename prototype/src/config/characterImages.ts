@@ -47,32 +47,53 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   // Emily - Modern American Girl (현대 미국 소녀)
   'en-emily': {
     idle: {
-      src: '/characters/en/emily/idle.png',
+      src: '/characters/en/emily/1-idle.png',
       width: 300,
-      height: 420,
+      height: 450,
       scale: 0.85,
       offsetY: -60,
     },
     wave: {
-      src: '/characters/en/emily/wave.png',
+      src: '/characters/en/emily/2-wave.png',
       width: 300,
-      height: 420,
+      height: 450,
       scale: 0.85,
       offsetY: -60,
     },
     jump: {
-      src: '/characters/en/emily/jump.png',
+      src: '/characters/en/emily/3-jump.png',
       width: 300,
-      height: 440,
+      height: 450,
       scale: 0.85,
       offsetY: -70,
     },
+    clap: {
+      src: '/characters/en/emily/4-clap.png',
+      width: 300,
+      height: 450,
+      scale: 0.85,
+      offsetY: -60,
+    },
+    spin: {
+      src: '/characters/en/emily/5-spin.png',
+      width: 300,
+      height: 450,
+      scale: 0.85,
+      offsetY: -60,
+    },
     dance: {
-      src: '/characters/en/emily/dance.png',
-      width: 320,
-      height: 440,
+      src: '/characters/en/emily/6-dance.png',
+      width: 300,
+      height: 450,
       scale: 0.85,
       offsetY: -70,
+    },
+    pose: {
+      src: '/characters/en/emily/7-pose.png',
+      width: 300,
+      height: 450,
+      scale: 0.85,
+      offsetY: -60,
     },
   },
 
@@ -487,7 +508,7 @@ export const DEFAULT_CHARACTER_IMAGE = 'en-emily';
  * Enable/disable external image rendering
  * Set to false to use procedural rendering (original)
  */
-export const USE_EXTERNAL_IMAGES = false; // Set to true when you have images ready
+export const USE_EXTERNAL_IMAGES = true; // Emily images are ready!
 
 /**
  * 언어에 맞는 기본 캐릭터 가져오기
