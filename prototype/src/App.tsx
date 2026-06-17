@@ -42,6 +42,8 @@ import {
   type CharacterState,
 } from './character/CharacterController.js';
 import type { Language, StageConfig } from './types.js';
+import { getResponsiveCanvasSize, needsVirtualKeyboard, logDeviceInfo } from './utils/device.js';
+import { VirtualKeyboard } from './ui/VirtualKeyboard.js';
 
 const LANGUAGE_LABEL: Record<Language, string> = {
   en: 'EN',
@@ -55,10 +57,18 @@ const CANVAS_W = 1024;
 const TUTORIAL_KEY = 'typing-language-tutorial-completed';
 
 export function App() {
+  const [canvasSize] = useState(() => getResponsiveCanvasSize());
+  const [showVirtualKeyboard] = useState(() => needsVirtualKeyboard());
+  
   const [showTutorial, setShowTutorial] = useState(() => {
     // 튜토리얼을 이미 완료했는지 확인
     return !localStorage.getItem(TUTORIAL_KEY);
   });
+
+  // Log device info on mount
+  useEffect(() => {
+    logDeviceInfo();
+  }, []);
 
   // 저장된 진행도 로드
   const [state, dispatch] = useReducer(gameReducer, initialState, (initial) => {
@@ -504,12 +514,32 @@ export function App() {
     );
   }
 
+  const stage = state.currentStage;
+  const handler = handlerRef.current;
+  const expectedChar = handler?.getExpectedChar() || null;
+
+  const handleVirtualKeyPress = (key: string) => {
+    // Dispatch keyboard event that will be caught by the existing handler
+    window.dispatchEvent(new KeyboardEvent('keydown', { key }));
+  };
+
   return (
-    <StageScreen
-      canvasRef={canvasRef}
-      state={state}
-      stage={state.currentStage}
-      languageLabel={LANGUAGE_LABEL[state.currentStage.language]}
-    />
+    <>
+      <StageScreen
+        canvasRef={canvasRef}
+        state={state}
+        stage={stage}
+        languageLabel={LANGUAGE_LABEL[stage.language]}
+        canvasWidth={canvasSize.width}
+        canvasHeight={canvasSize.height}
+      />
+      {showVirtualKeyboard && stage && (
+        <VirtualKeyboard
+          language={stage.language}
+          onKeyPress={handleVirtualKeyPress}
+          expectedChar={expectedChar}
+        />
+      )}
+    </>
   );
 }

@@ -9,9 +9,18 @@ interface StageScreenProps {
   state: GameState;
   stage: StageConfig | null;
   languageLabel: string;
+  canvasWidth?: number;
+  canvasHeight?: number;
 }
 
-export function StageScreen({ canvasRef, state, stage, languageLabel }: StageScreenProps) {
+export function StageScreen({ 
+  canvasRef, 
+  state, 
+  stage, 
+  languageLabel,
+  canvasWidth = 1024,
+  canvasHeight = 880,
+}: StageScreenProps) {
   const audio = getAudioManager();
   const [volume, setVolume] = useState(audio.getVolume());
   const [soundEnabled, setSoundEnabled] = useState(audio.isEnabled());
@@ -32,8 +41,8 @@ export function StageScreen({ canvasRef, state, stage, languageLabel }: StageScr
     <div className="stage-screen">
       <canvas
         ref={canvasRef}
-        width={1024}
-        height={880}
+        width={canvasWidth}
+        height={canvasHeight}
         className="game-canvas"
       />
       <aside className="stage-info">

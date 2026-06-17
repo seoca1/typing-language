@@ -22,6 +22,7 @@ export class AudioManager {
   constructor() {
     // AudioContext는 사용자 인터랙션 후 생성 (브라우저 정책)
     this.initContext();
+    this.setupMobileAudioUnlock();
   }
 
   private initContext() {
@@ -36,6 +37,38 @@ export class AudioManager {
         this.enabled = false;
       }
     }
+  }
+
+  /**
+   * 모바일 오디오 언락 (iOS/Android autoplay 정책 우회)
+   */
+  private setupMobileAudioUnlock() {
+    const unlock = () => {
+      if (!this.context) return;
+      
+      if (this.context.state === 'suspended') {
+        this.context.resume().then(() => {
+          console.log('[Audio] Context resumed on user interaction');
+        });
+      }
+
+      // 무음 재생으로 오디오 잠금 해제 (iOS)
+      const buffer = this.context.createBuffer(1, 1, 22050);
+      const source = this.context.createBufferSource();
+      source.buffer = buffer;
+      source.connect(this.context.destination);
+      source.start(0);
+
+      // 이벤트 리스너 제거 (한 번만 실행)
+      document.removeEventListener('touchstart', unlock);
+      document.removeEventListener('touchend', unlock);
+      document.removeEventListener('click', unlock);
+    };
+
+    // 여러 이벤트에 리스너 추가
+    document.addEventListener('touchstart', unlock, { once: true });
+    document.addEventListener('touchend', unlock, { once: true });
+    document.addEventListener('click', unlock, { once: true });
   }
 
   /**
