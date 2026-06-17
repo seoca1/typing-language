@@ -1,0 +1,111 @@
+SOPHIA IMAGE GENERATION ORDER
+=============================
+
+Character: Sophia (Tech-savvy Modern Girl)
+Language: English (EN)
+Total Poses: 7
+
+GENERATION CHECKLIST:
+---------------------
+
+[ ] 1. Idle (1-idle.png)
+    Prompt: 1-idle.txt
+    Status: Not started
+    Notes: Standing neutral, professional posture
+
+[ ] 2. Wave (2-wave.png)
+    Prompt: 2-wave.txt
+    Status: Not started
+    Notes: Casual friendly wave, cool greeting
+
+[ ] 3. Jump (3-jump.png)
+    Prompt: 3-jump.txt
+    Status: Not started
+    Notes: Mid-air jump, victorious excitement
+
+[ ] 4. Clap (4-clap.png)
+    Prompt: 4-clap.txt
+    Status: Not started
+    Notes: Appreciative applause, professional
+
+[ ] 5. Spin (5-spin.png)
+    Prompt: 5-spin.txt
+    Status: Not started
+    Notes: Playful spinning, jacket flowing
+
+[ ] 6. Dance (6-dance.png)
+    Prompt: 6-dance.txt
+    Status: Not started
+    Notes: Modern dance style, energetic
+
+[ ] 7. Pose (7-pose.png)
+    Prompt: 7-pose.txt
+    Status: Not started
+    Notes: Victory pose, tech-savvy confident
+
+PROGRESS: 0 / 7 (0%)
+
+FILE MAPPING:
+-------------
+Prompt File      →  Image File
+1-idle.txt       →  1-idle.png
+2-wave.txt       →  2-wave.png
+3-jump.txt       →  3-jump.png
+4-clap.txt       →  4-clap.png
+5-spin.txt       →  5-spin.png
+6-dance.txt      →  6-dance.png
+7-pose.txt       →  7-pose.png
+
+QUICK START:
+------------
+cd characters/prompts/en/sophia
+
+# Start with idle:
+cat 1-idle.txt
+# Copy → ChatGPT/Grok → Generate → Save as 1-idle.png
+
+# Then wave:
+cat 2-wave.txt
+# Generate → Save as 2-wave.png
+
+# Continue in order through 7-pose.txt
+
+SAVE LOCATION:
+--------------
+All images save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/en/sophia/
+
+Example full path:
+~/projects/Projects/Game/typing_language/prototype/public/characters/en/sophia/1-idle.png
+
+CONSISTENCY CHECKLIST:
+----------------------
+When generating, verify:
+[ ] Purple hair, short bob cut (consistent across all)
+[ ] Gray eyes with glasses (same in all images)
+[ ] Same facial features
+[ ] Same outfit (tech jacket, t-shirt, cargo pants, boots)
+[ ] 1024×1536 PNG format
+[ ] White or transparent background
+[ ] High quality, detailed
+[ ] Cool, professional aesthetic maintained
+
+RECOMMENDED WORKFLOW:
+---------------------
+1. Generate 1-idle first (establishes character design)
+2. Review idle image for consistency baseline
+3. Generate 2-wave through 7-pose in sequence
+4. Check each image against idle for consistency
+5. Regenerate if character design varies too much
+
+ESTIMATED TIME:
+---------------
+Per image: 2-5 minutes
+Total: 15-35 minutes for all 7
+
+NEXT CHARACTER:
+---------------
+After Sophia complete:
+- Japanese characters (Sakura, Yuki, Kaito)
+- Spanish characters (Isabella, Carlos, Luna)
+- Korean characters (Hana, Minho, Jiwoo)

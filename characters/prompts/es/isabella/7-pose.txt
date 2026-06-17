@@ -1,0 +1,62 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Isabella (Elegant Spanish Girl)
+- Gender: Female (1girl)
+- Age: 16-18 years old
+- Hair: Long wavy brown hair
+- Eyes: Hazel eyes
+- Expression: Confident smile, victorious
+- Style: Elegant, passionate, traditional Spanish
+
+OUTFIT:
+- Flamenco-inspired dress (red or deep colors), heels
+
+POSE:
+- Victory pose, peace sign or thumbs up, confident stance
+- Full body visible
+ACTION:
+- Victory gesture
+- Confident celebration
+- Triumphant expression
+- Showing success
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Color palette: red, brown, warm vibrant tones
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, Female (1girl), solo, full body, pose pose, Elegant, passionate, traditional Spanish
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/es/isabella/7-pose.png
+
+This is pose 7/7 (pose) for Isabella.

@@ -1,0 +1,62 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Carlos (Passionate Spanish Boy)
+- Gender: Male (1boy)
+- Age: 16-18 years old
+- Hair: Black curly hair
+- Eyes: Brown eyes
+- Expression: Joyful expression, playful smile
+- Style: Passionate, energetic, casual elegant
+
+OUTFIT:
+- Casual elegant: shirt, vest, jeans, shoes
+
+POSE:
+- Body spinning/rotating, arms extended, mid-spin
+- Full body visible
+ACTION:
+- Spinning motion
+- Clothes and hair swirling
+- Playful celebration
+- Motion blur effect
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Color palette: brown, warm tones, earth colors
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, Male (1boy), solo, full body, spin pose, Passionate, energetic, casual elegant
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/es/carlos/5-spin.png
+
+This is pose 5/7 (spin) for Carlos.

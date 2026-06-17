@@ -1,0 +1,90 @@
+MINHO IMAGE GENERATION ORDER
+================================
+
+Character: Minho (Modern Korean Boy)
+Language: Korean (KR)
+Total Poses: 7
+
+GENERATION CHECKLIST:
+---------------------
+
+[ ] 1. Idle (1-idle.png)
+    Prompt: 1-idle.txt
+    Status: Not started
+    Notes: Standing idle/neutral
+
+[ ] 2. Wave (2-wave.png)
+    Prompt: 2-wave.txt
+    Status: Not started
+    Notes: Waving cheerfully
+
+[ ] 3. Jump (3-jump.png)
+    Prompt: 3-jump.txt
+    Status: Not started
+    Notes: Jumping with excitement
+
+[ ] 4. Clap (4-clap.png)
+    Prompt: 4-clap.txt
+    Status: Not started
+    Notes: Clapping hands happily
+
+[ ] 5. Spin (5-spin.png)
+    Prompt: 5-spin.txt
+    Status: Not started
+    Notes: Spinning/twirling motion
+
+[ ] 6. Dance (6-dance.png)
+    Prompt: 6-dance.txt
+    Status: Not started
+    Notes: Dancing energetically
+
+[ ] 7. Pose (7-pose.png)
+    Prompt: 7-pose.txt
+    Status: Not started
+    Notes: Victory/confident pose
+
+
+PROGRESS: 0 / 7 (0%)
+
+FILE MAPPING:
+-------------
+Prompt File      →  Image File
+1-idle.txt       →  1-idle.png
+2-wave.txt       →  2-wave.png
+3-jump.txt       →  3-jump.png
+4-clap.txt       →  4-clap.png
+5-spin.txt       →  5-spin.png
+6-dance.txt       →  6-dance.png
+7-pose.txt       →  7-pose.png
+
+
+QUICK START:
+------------
+cd characters/prompts/kr/minho
+
+# Start with idle:
+cat 1-idle.txt
+# Copy → ChatGPT/Grok → Generate → Save as 1-idle.png
+
+# Continue in order through 7-pose.txt
+
+SAVE LOCATION:
+--------------
+All images save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/kr/minho/
+
+CONSISTENCY CHECKLIST:
+----------------------
+When generating, verify:
+[ ] Black hair, modern style (consistent across all)
+[ ] Dark brown eyes (same in all images)
+[ ] Same facial features
+[ ] Same outfit: Modern Korean fashion: blazer, shirt, slacks, sneakers
+[ ] 1024×1536 PNG format
+[ ] White or transparent background
+[ ] High quality, detailed
+
+ESTIMATED TIME:
+---------------
+Per image: 2-5 minutes
+Total: 15-35 minutes for all 7

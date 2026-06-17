@@ -1,0 +1,78 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Sakura (Traditional Japanese Girl)
+- Gender: Female (1girl)
+- Age: 16-18 years old
+- Hair: Black hair, long straight flowing with hair ornament (kanzashi)
+- Eyes: Brown eyes
+- Expression: Serene smile, graceful expression
+- Style: Traditional Japanese dance
+
+OUTFIT:
+- Pink kimono with floral pattern (cherry blossom motif)
+- Traditional Japanese clothing (kimono)
+- Obi (sash) properly tied
+- Traditional Japanese footwear (zōri or geta)
+- Hair ornament (kanzashi)
+- Kimono sleeves flowing gracefully
+
+POSE:
+- Traditional Japanese dance pose
+- Arms positioned in traditional choreography
+- One arm raised elegantly
+- Full body visible
+- Graceful dance movement
+- Traditional fan dance (optional fan)
+- Refined, elegant stance
+
+ACTION:
+- Traditional Japanese dance movement
+- Kimono sleeves flowing beautifully
+- Graceful arm positions
+- Cherry blossom petals falling
+- Serene dance expression
+- Traditional choreography
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Soft pastel color palette (pink, white, gentle tones)
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+- Traditional Japanese dance aesthetic
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, soft pastel colors, 1girl, solo, full body, traditional Japanese dance, serene smile, graceful movement, kimono flowing, cherry blossom motif, elegant choreography
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+- Modern dance styles
+- Inappropriate poses
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/jp/sakura/6-dance.png
+
+This is pose 6/7 (dance) for Sakura.

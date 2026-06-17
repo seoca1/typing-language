@@ -1,0 +1,79 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Sophia (Tech-savvy Modern Girl)
+- Gender: Female (1girl)
+- Age: 16-18 years old
+- Hair: Purple hair, short bob cut (spinning/flowing)
+- Eyes: Gray eyes, glasses
+- Expression: Joyful smile, playful
+- Style: Modern, tech-savvy, energetic
+
+OUTFIT:
+- Modern tech jacket (gray or dark blue, flowing)
+- T-shirt underneath
+- Cargo pants (practical style, affected by spin)
+- Boots (comfortable, modern)
+- Glasses (rectangular or round frames)
+- Jacket and hair swirling from spin
+- Tech-inspired aesthetic
+
+POSE:
+- Body spinning/rotating
+- One arm extended outward
+- Other arm at side or raised
+- Full body visible
+- Playful spinning motion
+- Cool even while playful
+- Dynamic rotation
+
+ACTION:
+- Spinning motion
+- Jacket and bob cut swirling
+- Joyful celebration
+- Tech-savvy playfulness
+- Motion blur effect on clothes
+- Maintaining cool demeanor while having fun
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered, mid-spin
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Tech-inspired color palette (purple, gray, blue tones)
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+- Dynamic spinning pose with modern aesthetic
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, tech-inspired colors, 1girl, solo, full body, spinning pose, joyful expression, dynamic movement, clothes flowing, glasses, modern aesthetic
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+- Losing glasses during spin
+- Traditional clothing
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/en/sophia/5-spin.png
+
+This is pose 5/7 (spin) for Sophia.

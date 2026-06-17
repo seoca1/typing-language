@@ -1,0 +1,111 @@
+SAKURA IMAGE GENERATION ORDER
+=============================
+
+Character: Sakura (Traditional Japanese Girl)
+Language: Japanese (JP)
+Total Poses: 7
+
+GENERATION CHECKLIST:
+---------------------
+
+[ ] 1. Idle (1-idle.png)
+    Prompt: 1-idle.txt
+    Status: Not started
+    Notes: Standing neutral, graceful posture
+
+[ ] 2. Wave (2-wave.png)
+    Prompt: 2-wave.txt
+    Status: Not started
+    Notes: Gentle wave, shy smile, traditional greeting
+
+[ ] 3. Jump (3-jump.png)
+    Prompt: 3-jump.txt
+    Status: Not started
+    Notes: Graceful jump, kimono flowing
+
+[ ] 4. Clap (4-clap.png)
+    Prompt: 4-clap.txt
+    Status: Not started
+    Notes: Traditional applause, gentle clapping
+
+[ ] 5. Spin (5-spin.png)
+    Prompt: 5-spin.txt
+    Status: Not started
+    Notes: Elegant spinning, kimono swirling
+
+[ ] 6. Dance (6-dance.png)
+    Prompt: 6-dance.txt
+    Status: Not started
+    Notes: Traditional Japanese dance
+
+[ ] 7. Pose (7-pose.png)
+    Prompt: 7-pose.txt
+    Status: Not started
+    Notes: Victory pose, modest celebration
+
+PROGRESS: 0 / 7 (0%)
+
+FILE MAPPING:
+-------------
+Prompt File      →  Image File
+1-idle.txt       →  1-idle.png
+2-wave.txt       →  2-wave.png
+3-jump.txt       →  3-jump.png
+4-clap.txt       →  4-clap.png
+5-spin.txt       →  5-spin.png
+6-dance.txt      →  6-dance.png
+7-pose.txt       →  7-pose.png
+
+QUICK START:
+------------
+cd characters/prompts/jp/sakura
+
+# Start with idle:
+cat 1-idle.txt
+# Copy → ChatGPT/Grok → Generate → Save as 1-idle.png
+
+# Then wave:
+cat 2-wave.txt
+# Generate → Save as 2-wave.png
+
+# Continue in order through 7-pose.txt
+
+SAVE LOCATION:
+--------------
+All images save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/jp/sakura/
+
+Example full path:
+~/projects/Projects/Game/typing_language/prototype/public/characters/jp/sakura/1-idle.png
+
+CONSISTENCY CHECKLIST:
+----------------------
+When generating, verify:
+[ ] Black hair, long straight (consistent across all)
+[ ] Brown eyes (same in all images)
+[ ] Same facial features
+[ ] Pink kimono with cherry blossom pattern
+[ ] Hair ornament (kanzashi) present
+[ ] 1024×1536 PNG format
+[ ] White or transparent background
+[ ] High quality, detailed
+[ ] Traditional, graceful aesthetic maintained
+
+RECOMMENDED WORKFLOW:
+---------------------
+1. Generate 1-idle first (establishes character design)
+2. Review idle image for consistency baseline
+3. Generate 2-wave through 7-pose in sequence
+4. Check each image against idle for consistency
+5. Regenerate if character design varies too much
+
+ESTIMATED TIME:
+---------------
+Per image: 2-5 minutes
+Total: 15-35 minutes for all 7
+
+NEXT CHARACTER:
+---------------
+After Sakura complete:
+- Yuki (jp/yuki/) - Modern Japanese Boy
+- Kaito (jp/kaito/) - Cool Japanese Boy

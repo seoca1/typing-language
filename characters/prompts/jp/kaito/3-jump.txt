@@ -1,0 +1,62 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Kaito (Cool Japanese Boy)
+- Gender: Male (1boy)
+- Age: 16-18 years old
+- Hair: Dark blue hair, spiky style
+- Eyes: Dark gray eyes
+- Expression: Excited expression, joyful smile
+- Style: Cool, confident, edgy
+
+OUTFIT:
+- Leather jacket, shirt underneath, jeans, boots
+
+POSE:
+- Jumping in mid-air, both feet off ground, arms raised
+- Full body visible
+ACTION:
+- Mid-air jump
+- Excited celebration
+- Hair and clothes affected by motion
+- Dynamic movement
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Color palette: dark blue, gray, black tones
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, Male (1boy), solo, full body, jump pose, Cool, confident, edgy
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/jp/kaito/3-jump.png
+
+This is pose 3/7 (jump) for Kaito.

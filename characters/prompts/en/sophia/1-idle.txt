@@ -1,0 +1,71 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Sophia (Tech-savvy Modern Girl)
+- Gender: Female (1girl)
+- Age: 16-18 years old
+- Hair: Purple hair, short bob cut
+- Eyes: Gray eyes, glasses
+- Expression: Neutral expression, cool and calm
+- Style: Modern, tech-savvy, professional
+
+OUTFIT:
+- Modern tech jacket (gray or dark blue)
+- T-shirt underneath
+- Cargo pants (practical style)
+- Boots (comfortable, modern)
+- Glasses (rectangular or round frames)
+- Tech-inspired aesthetic
+- Cool, practical appearance
+
+POSE:
+- Standing idle/neutral
+- Professional posture
+- Arms at sides or crossed casually
+- Full body visible
+- Confident, calm stance
+- Cool and collected demeanor
+- Modern aesthetic
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Tech-inspired color palette (purple, gray, blue tones)
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+- Modern, sleek aesthetic
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, tech-inspired colors, 1girl, solo, full body, standing, neutral expression, cool and calm, modern aesthetic, glasses
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+- Overly cute or childish style
+- Traditional clothing
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/en/sophia/1-idle.png
+
+This is pose 1/7 (idle) for Sophia.

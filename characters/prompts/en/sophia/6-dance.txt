@@ -1,0 +1,79 @@
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: Sophia (Tech-savvy Modern Girl)
+- Gender: Female (1girl)
+- Age: 16-18 years old
+- Hair: Purple hair, short bob cut (moving with dance)
+- Eyes: Gray eyes, glasses
+- Expression: Happy smile, energetic
+- Style: Modern, tech-savvy, dancing
+
+OUTFIT:
+- Modern tech jacket (gray or dark blue, flowing)
+- T-shirt underneath
+- Cargo pants (practical style)
+- Boots (comfortable, modern)
+- Glasses (rectangular or round frames)
+- Clothes flowing with movement
+- Tech-inspired aesthetic
+
+POSE:
+- Dancing pose
+- One arm raised, one at hip
+- Body swaying to music
+- Full body visible
+- Modern dance style
+- Cool but energetic
+- Rhythmic movement
+
+ACTION:
+- Dancing motion
+- Modern/hip-hop style movement
+- Energetic but controlled
+- Tech-savvy confidence
+- Hair and jacket affected by motion
+- Cool demeanor maintained
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered
+- White or transparent background
+- Simple, clean background
+- No additional objects or scenery
+- Solo character (no other people)
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- Tech-inspired color palette (purple, gray, blue tones)
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+- Dynamic dance pose with modern aesthetic
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, tech-inspired colors, 1girl, solo, full body, dancing pose, happy expression, energetic movement, modern dance, glasses, tech aesthetic
+
+TECHNICAL:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG
+- Color mode: RGB or RGBA (transparency preferred)
+- High detail level
+- Professional quality
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+- Traditional dance styles
+- Overly cute poses
+
+Save to:
+~/projects/Projects/Game/typing_language/prototype/public/characters/en/sophia/6-dance.png
+
+This is pose 6/7 (dance) for Sophia.
