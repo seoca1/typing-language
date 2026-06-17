@@ -156,6 +156,12 @@ export function App() {
     if (state.phase !== 'stage' || !state.currentStage) return;
     const stage = state.currentStage;
     const handler = createInputHandler(stage.language);
+    
+    // Spanish: accentMode 설정
+    if (stage.language === 'es' && 'setMode' in handler && stage.accentMode) {
+      (handler as any).setMode(stage.accentMode);
+    }
+    
     handlerRef.current = handler;
 
     if (state.currentEnemy) {

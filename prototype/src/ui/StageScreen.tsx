@@ -48,8 +48,22 @@ export function StageScreen({
       <aside className="stage-info">
         <h2>
           <span className="lang-badge">{languageLabel}</span> {stage?.name}
+          {stage?.language === 'es' && stage.accentMode && (
+            <span className={`mode-badge mode-${stage.accentMode}`}>
+              {stage.accentMode === 'strict' ? '⌨️ Strict' : '⌨️ Loose'}
+            </span>
+          )}
         </h2>
         <p>{stage?.description}</p>
+        {stage?.language === 'es' && stage.accentMode && (
+          <div className="keyboard-mode-info">
+            {stage.accentMode === 'strict' ? (
+              <small>⚠️ 스페인어 키보드 필요: á, é, í, ó, ú, ñ 직접 입력</small>
+            ) : (
+              <small>✓ 영어 키보드 가능: a→á, e→é 자동 인식</small>
+            )}
+          </div>
+        )}
         <div className="missions">
           <h3>Missions</h3>
           {stage?.missions.map((m) => (
