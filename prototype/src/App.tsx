@@ -155,8 +155,13 @@ export function App() {
         const currentBuffer = handler.getBuffer();
         const currentAccuracy = handler.getAccuracy();
         
+        console.log('[Enter] buffer:', currentBuffer);
+        console.log('[Enter] acceptedInputs:', enemy.target.acceptedInputs);
+        console.log('[Enter] match:', enemy.target.acceptedInputs.includes(currentBuffer));
+        
         // 입력한 내용이 정답과 일치하는지 확인
         if (isDefeated(enemy, currentBuffer, enemy.target.acceptedInputs)) {
+          console.log('[Enter] SUCCESS! Moving to next word.');
           kb?.pressByEvent(event.key);
 
           const timeMs = Date.now() - stateRef.current.startTime;
