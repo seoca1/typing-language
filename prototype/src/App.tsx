@@ -1,6 +1,7 @@
 import { useEffect, useReducer, useRef, useState } from 'react';
 import type { GameState } from './state/gameReducer.js';
 import { gameReducer, initialState } from './state/gameReducer.js';
+import { saveProgress, loadProgress } from './state/localStorage.js';
 import { createInputHandler } from './input/index.js';
 import type { InputHandler } from './input/index.js';
 import { calculateScore, isDefeated, calculateWpm } from './combat/CombatSystem.js';
@@ -58,7 +59,14 @@ export function App() {
     return !localStorage.getItem(TUTORIAL_KEY);
   });
 
-  const [state, dispatch] = useReducer(gameReducer, initialState);
+  // 저장된 진행도 로드
+  const [state, dispatch] = useReducer(gameReducer, initialState, (initial) => {
+    const savedProgress = loadProgress();
+    if (savedProgress) {
+      return { ...initial, player: savedProgress };
+    }
+    return initial;
+  });
   const handlerRef = useRef<InputHandler | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rendererRef = useRef<Renderer | null>(null);
@@ -69,6 +77,11 @@ export function App() {
   const lastTickRef = useRef<number>(0);
   const keyboardRef = useRef<Keyboard | null>(null);
   const characterRef = useRef<CharacterState>(createInitialCharacterState());
+
+  // 진행도 자동 저장
+  useEffect(() => {
+    saveProgress(state.player);
+  }, [state.player]);
 
   useEffect(() => {
     if (state.phase !== 'stage' || !state.currentStage) return;
