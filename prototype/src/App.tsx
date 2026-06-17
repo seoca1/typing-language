@@ -4,6 +4,7 @@ import { gameReducer, initialState } from './state/gameReducer.js';
 import { saveProgress, loadProgress } from './state/localStorage.js';
 import { createInputHandler } from './input/index.js';
 import type { InputHandler } from './input/index.js';
+import { getAudioManager } from './audio/AudioManager.js';
 import { calculateScore, calculateWpm } from './combat/CombatSystem.js';
 import {
   advanceStage,
@@ -203,10 +204,16 @@ export function App() {
           const newCombo = stateRef.current.combo + 1;
           applyEnemyDefeated(characterRef.current, newCombo, isPerfect, performance.now());
 
+          // Play sound effects
+          const audio = getAudioManager();
           if (isPerfect) {
+            audio.play('perfect');
             setTimeout(() => spawnPopup(fx, cx, cy + 20, 'PERFECT!', '#00ff88', 38), 80);
           } else if (newCombo >= 5) {
+            audio.play('combo');
             setTimeout(() => spawnPopup(fx, cx, cy + 20, 'COMBO!', '#ff6b9d', 32), 80);
+          } else {
+            audio.play('enemy-defeat');
           }
 
           dispatch({
@@ -263,6 +270,9 @@ export function App() {
               accuracy: currentAccuracy,
             });
 
+            // Play stage clear sound
+            getAudioManager().play('stage-clear');
+
             spawnPopup(fx, cx, cy + 60, `STAGE CLEAR!`, '#00d9ff', 56);
             spawnColorShower(fx, cx, cy + 60, accents, 80);
 
@@ -278,6 +288,15 @@ export function App() {
       const romajiHint =
         stage.language === 'jp' && handler.getHint ? handler.getHint() : undefined;
       dispatch({ type: 'KEY_INPUT', result, romajiHint });
+
+      // Play sound effect
+      const audio = getAudioManager();
+      if (result.buffer.length > 0) {
+        audio.play('key-correct');
+      } else if (event.key.length === 1) {
+        // Only play error sound for actual character keys (not Shift, Ctrl, etc)
+        audio.play('key-incorrect');
+      }
 
       const nextKey = handler.getExpectedChar();
       kb?.setHint(nextKey || null);
