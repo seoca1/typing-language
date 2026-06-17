@@ -14,7 +14,18 @@ export type SpriteName =
   | 'enemy-hit'
   | 'effect-hit'
   | 'effect-sparkle'
-  | 'effect-star';
+  | 'effect-star'
+  | 'ui-button-normal'
+  | 'ui-button-hover'
+  | 'ui-button-active'
+  | 'ui-progress-bar'
+  | 'ui-hp-bar'
+  | 'ui-combo-badge'
+  | 'ui-star-empty'
+  | 'ui-star-filled'
+  | 'ui-panel'
+  | 'ui-icon-sound'
+  | 'ui-icon-mute';
 
 export interface Sprite {
   image: HTMLImageElement;
@@ -133,6 +144,28 @@ class SpriteLoaderClass {
         return this.generateSparkleEffectSprite(canvas, ctx);
       case 'effect-star':
         return this.generateStarEffectSprite(canvas, ctx);
+      case 'ui-button-normal':
+        return this.generateButtonSprite(canvas, ctx, 'normal');
+      case 'ui-button-hover':
+        return this.generateButtonSprite(canvas, ctx, 'hover');
+      case 'ui-button-active':
+        return this.generateButtonSprite(canvas, ctx, 'active');
+      case 'ui-progress-bar':
+        return this.generateProgressBarSprite(canvas, ctx);
+      case 'ui-hp-bar':
+        return this.generateHPBarSprite(canvas, ctx);
+      case 'ui-combo-badge':
+        return this.generateComboBadgeSprite(canvas, ctx);
+      case 'ui-star-empty':
+        return this.generateStarUISprite(canvas, ctx, false);
+      case 'ui-star-filled':
+        return this.generateStarUISprite(canvas, ctx, true);
+      case 'ui-panel':
+        return this.generatePanelSprite(canvas, ctx);
+      case 'ui-icon-sound':
+        return this.generateSoundIconSprite(canvas, ctx, true);
+      case 'ui-icon-mute':
+        return this.generateSoundIconSprite(canvas, ctx, false);
       default:
         // Fallback: pink square
         canvas.width = 64;
@@ -578,6 +611,320 @@ class SpriteLoaderClass {
     ctx.closePath();
     ctx.fill();
     ctx.shadowBlur = 0;
+
+    return canvas.toDataURL();
+  }
+
+  // ========================================
+  // UI Sprites
+  // ========================================
+
+  private generateButtonSprite(
+    canvas: HTMLCanvasElement,
+    ctx: CanvasRenderingContext2D,
+    state: 'normal' | 'hover' | 'active'
+  ): string {
+    canvas.width = 200;
+    canvas.height = 60;
+
+    // Background
+    const colors = {
+      normal: { bg: '#e94560', border: '#d93d54', shadow: 'rgba(233, 69, 96, 0.3)' },
+      hover: { bg: '#ff5577', border: '#e94560', shadow: 'rgba(255, 85, 119, 0.5)' },
+      active: { bg: '#d93d54', border: '#c53548', shadow: 'rgba(217, 61, 84, 0.7)' },
+    };
+
+    const { bg, border, shadow } = colors[state];
+    const offsetY = state === 'active' ? 2 : 0;
+
+    // Shadow
+    ctx.fillStyle = shadow;
+    ctx.fillRect(2, 2 + offsetY, 196, 56);
+
+    // Border
+    ctx.fillStyle = border;
+    ctx.beginPath();
+    ctx.roundRect(0, offsetY, 200, 60, 8);
+    ctx.fill();
+
+    // Background
+    ctx.fillStyle = bg;
+    ctx.beginPath();
+    ctx.roundRect(2, 2 + offsetY, 196, 56, 6);
+    ctx.fill();
+
+    // Highlight (top)
+    const grad = ctx.createLinearGradient(0, offsetY, 0, 30 + offsetY);
+    grad.addColorStop(0, 'rgba(255, 255, 255, 0.3)');
+    grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.roundRect(2, 2 + offsetY, 196, 28, [6, 6, 0, 0]);
+    ctx.fill();
+
+    return canvas.toDataURL();
+  }
+
+  private generateProgressBarSprite(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D): string {
+    canvas.width = 300;
+    canvas.height = 30;
+
+    // Background (dark)
+    ctx.fillStyle = '#2a2a3e';
+    ctx.beginPath();
+    ctx.roundRect(0, 0, 300, 30, 4);
+    ctx.fill();
+
+    // Border
+    ctx.strokeStyle = '#444';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.roundRect(0, 0, 300, 30, 4);
+    ctx.stroke();
+
+    // Progress fill (will be clipped)
+    const grad = ctx.createLinearGradient(0, 0, 300, 0);
+    grad.addColorStop(0, '#00d9ff');
+    grad.addColorStop(1, '#00a8cc');
+    ctx.fillStyle = grad;
+    ctx.fillRect(2, 2, 296, 26);
+
+    return canvas.toDataURL();
+  }
+
+  private generateHPBarSprite(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D): string {
+    canvas.width = 200;
+    canvas.height = 24;
+
+    // Background
+    ctx.fillStyle = '#1a1a2e';
+    ctx.beginPath();
+    ctx.roundRect(0, 0, 200, 24, 3);
+    ctx.fill();
+
+    // HP fill gradient
+    const grad = ctx.createLinearGradient(0, 0, 200, 0);
+    grad.addColorStop(0, '#00ff88');
+    grad.addColorStop(0.7, '#00cc70');
+    grad.addColorStop(1, '#009955');
+    ctx.fillStyle = grad;
+    ctx.fillRect(2, 2, 196, 20);
+
+    // Shine effect
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+    ctx.fillRect(2, 2, 196, 8);
+
+    // Border
+    ctx.strokeStyle = '#444';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.roundRect(0, 0, 200, 24, 3);
+    ctx.stroke();
+
+    return canvas.toDataURL();
+  }
+
+  private generateComboBadgeSprite(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D): string {
+    canvas.width = 120;
+    canvas.height = 50;
+
+    // Glow
+    ctx.shadowColor = '#ff6b9d';
+    ctx.shadowBlur = 15;
+    
+    // Badge background
+    ctx.fillStyle = '#ff6b9d';
+    ctx.beginPath();
+    ctx.ellipse(60, 25, 55, 20, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+
+    // Inner
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.ellipse(60, 25, 50, 17, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Accent stripes
+    ctx.fillStyle = '#ff6b9d';
+    ctx.globalAlpha = 0.3;
+    for (let i = 0; i < 5; i++) {
+      ctx.beginPath();
+      ctx.ellipse(60, 25 - 15 + i * 8, 45, 2, 0, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    // Border
+    ctx.strokeStyle = '#d93d71';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.ellipse(60, 25, 55, 20, 0, 0, Math.PI * 2);
+    ctx.stroke();
+
+    return canvas.toDataURL();
+  }
+
+  private generateStarUISprite(
+    canvas: HTMLCanvasElement,
+    ctx: CanvasRenderingContext2D,
+    filled: boolean
+  ): string {
+    canvas.width = 48;
+    canvas.height = 48;
+    ctx.translate(24, 24);
+
+    // Star shape
+    const points = 5;
+    const outerRadius = 20;
+    const innerRadius = 8;
+
+    ctx.beginPath();
+    for (let i = 0; i < points * 2; i++) {
+      const radius = i % 2 === 0 ? outerRadius : innerRadius;
+      const angle = (i * Math.PI) / points - Math.PI / 2;
+      const x = Math.cos(angle) * radius;
+      const y = Math.sin(angle) * radius;
+      if (i === 0) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
+    }
+    ctx.closePath();
+
+    if (filled) {
+      // Filled star
+      const grad = ctx.createRadialGradient(0, -5, 0, 0, 0, 20);
+      grad.addColorStop(0, '#fff9c4');
+      grad.addColorStop(0.5, '#ffd700');
+      grad.addColorStop(1, '#ffb300');
+      ctx.fillStyle = grad;
+      ctx.shadowColor = '#ffd700';
+      ctx.shadowBlur = 10;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      
+      // Border
+      ctx.strokeStyle = '#ff8f00';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    } else {
+      // Empty star
+      ctx.fillStyle = '#2a2a3e';
+      ctx.fill();
+      ctx.strokeStyle = '#888';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    return canvas.toDataURL();
+  }
+
+  private generatePanelSprite(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D): string {
+    canvas.width = 400;
+    canvas.height = 300;
+
+    // Shadow
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+    ctx.fillRect(4, 4, 396, 296);
+
+    // Background
+    const grad = ctx.createLinearGradient(0, 0, 0, 300);
+    grad.addColorStop(0, '#2a2a3e');
+    grad.addColorStop(1, '#1a1a2e');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.roundRect(0, 0, 400, 300, 12);
+    ctx.fill();
+
+    // Border
+    ctx.strokeStyle = '#444';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.roundRect(0, 0, 400, 300, 12);
+    ctx.stroke();
+
+    // Inner border (highlight)
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.roundRect(2, 2, 396, 296, 10);
+    ctx.stroke();
+
+    // Corner accents
+    ctx.fillStyle = '#00d9ff';
+    ctx.globalAlpha = 0.3;
+    [
+      [0, 0],
+      [400, 0],
+      [0, 300],
+      [400, 300],
+    ].forEach(([x, y]) => {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.fillRect(-20, -20, 40, 2);
+      ctx.fillRect(-20, -20, 2, 40);
+      ctx.restore();
+    });
+    ctx.globalAlpha = 1;
+
+    return canvas.toDataURL();
+  }
+
+  private generateSoundIconSprite(
+    canvas: HTMLCanvasElement,
+    ctx: CanvasRenderingContext2D,
+    enabled: boolean
+  ): string {
+    canvas.width = 32;
+    canvas.height = 32;
+    ctx.translate(16, 16);
+
+    if (enabled) {
+      // Speaker
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(-8, -6, 8, 12);
+      ctx.beginPath();
+      ctx.moveTo(0, -6);
+      ctx.lineTo(4, -10);
+      ctx.lineTo(4, 10);
+      ctx.lineTo(0, 6);
+      ctx.closePath();
+      ctx.fill();
+
+      // Sound waves
+      for (let i = 1; i <= 3; i++) {
+        ctx.strokeStyle = '#00d9ff';
+        ctx.lineWidth = 2;
+        ctx.globalAlpha = 1 - i * 0.2;
+        ctx.beginPath();
+        ctx.arc(0, 0, 6 + i * 4, -Math.PI / 4, Math.PI / 4);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+    } else {
+      // Speaker
+      ctx.fillStyle = '#888';
+      ctx.fillRect(-8, -6, 8, 12);
+      ctx.beginPath();
+      ctx.moveTo(0, -6);
+      ctx.lineTo(4, -10);
+      ctx.lineTo(4, 10);
+      ctx.lineTo(0, 6);
+      ctx.closePath();
+      ctx.fill();
+
+      // X mark
+      ctx.strokeStyle = '#ff4444';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(6, -8);
+      ctx.lineTo(14, 0);
+      ctx.moveTo(14, -8);
+      ctx.lineTo(6, 0);
+      ctx.stroke();
+    }
 
     return canvas.toDataURL();
   }

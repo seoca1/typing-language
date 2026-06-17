@@ -14,6 +14,8 @@ import {
   renderCharacter,
   renderProps,
 } from '../character/CharacterRenderer.js';
+import { GraphicsConfig } from '../config/graphics.js';
+import { SpriteLoader } from '../sprites/SpriteLoader.js';
 
 export interface RenderState {
   currentEnemy: Enemy | null;
@@ -179,22 +181,49 @@ export class Renderer {
     const x = (this.width - barWidth) / 2;
     const y = cy + 80;
 
-    this.ctx.fillStyle = '#1f1f2e';
-    this.ctx.fillRect(x - 2, y - 2, barWidth + 4, barHeight + 4);
+    if (GraphicsConfig.USE_SPRITES) {
+      // Sprite-based HP bar
+      const hpBarSprite = SpriteLoader.get('ui-hp-bar');
+      if (hpBarSprite) {
+        // Draw full sprite as background
+        this.ctx.save();
+        this.ctx.globalAlpha = 0.5;
+        this.ctx.drawImage(hpBarSprite.image, x, y, barWidth, barHeight);
+        this.ctx.restore();
 
-    this.ctx.fillStyle = '#333333';
-    this.ctx.fillRect(x, y, barWidth, barHeight);
-
-    const hpGrad = this.ctx.createLinearGradient(x, y, x + barWidth, y);
-    hpGrad.addColorStop(0, '#00d9ff');
-    hpGrad.addColorStop(1, '#00ff88');
-    this.ctx.fillStyle = hpGrad;
-    this.ctx.fillRect(x, y, barWidth * progress, barHeight);
+        // Draw clipped progress
+        this.ctx.save();
+        this.ctx.beginPath();
+        this.ctx.rect(x, y, barWidth * progress, barHeight);
+        this.ctx.clip();
+        this.ctx.drawImage(hpBarSprite.image, x, y, barWidth, barHeight);
+        this.ctx.restore();
+      } else {
+        // Fallback to primitive rendering
+        this.drawHPBarPrimitive(x, y, barWidth, barHeight, progress);
+      }
+    } else {
+      this.drawHPBarPrimitive(x, y, barWidth, barHeight, progress);
+    }
 
     this.ctx.fillStyle = '#ffffff';
     this.ctx.font = '12px -apple-system, sans-serif';
     this.ctx.textAlign = 'center';
     this.ctx.fillText(`${state.buffer.length} / ${enemy.maxHp}`, x + barWidth / 2, y - 6);
+  }
+
+  private drawHPBarPrimitive(x: number, y: number, width: number, height: number, progress: number): void {
+    this.ctx.fillStyle = '#1f1f2e';
+    this.ctx.fillRect(x - 2, y - 2, width + 4, height + 4);
+
+    this.ctx.fillStyle = '#333333';
+    this.ctx.fillRect(x, y, width, height);
+
+    const hpGrad = this.ctx.createLinearGradient(x, y, x + width, y);
+    hpGrad.addColorStop(0, '#00d9ff');
+    hpGrad.addColorStop(1, '#00ff88');
+    this.ctx.fillStyle = hpGrad;
+    this.ctx.fillRect(x, y, width * progress, height);
   }
 
   private drawInputBuffer(state: RenderState): void {
@@ -298,6 +327,27 @@ export class Renderer {
     const cy = 110;
     const wobble = Math.sin(performance.now() / 150) * 3;
 
+    if (GraphicsConfig.USE_SPRITES && state.combo >= 5) {
+      // Draw combo badge sprite
+      const badgeSprite = SpriteLoader.get('ui-combo-badge');
+      if (badgeSprite) {
+        this.ctx.save();
+        this.ctx.translate(cx, cy + wobble);
+        const scale = 1 + scaleBoost * 0.5;
+        this.ctx.scale(scale, scale);
+        this.ctx.globalAlpha = 0.9;
+        this.ctx.drawImage(
+          badgeSprite.image,
+          -badgeSprite.width / 2,
+          -badgeSprite.height / 2,
+          badgeSprite.width,
+          badgeSprite.height
+        );
+        this.ctx.restore();
+      }
+    }
+
+    // Draw combo text
     this.ctx.save();
     this.ctx.translate(cx, cy + wobble);
     this.ctx.font = `bold ${size}px -apple-system, sans-serif`;
