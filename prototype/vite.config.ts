@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // Support GitHub Pages deployment
+  base: '/typing-language/', // GitHub Pages repository name
   build: {
     rollupOptions: {
       external: ['ollama'],
