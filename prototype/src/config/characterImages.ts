@@ -18,95 +18,427 @@ export interface CharacterImageSet {
 }
 
 /**
- * Character image collections
+ * Character image collections - 언어별 3명씩
  * 
- * To add your own character images:
- * 1. Place images in public/characters/ folder
- * 2. Add configuration below
- * 3. Images should be transparent PNG (recommended)
- * 4. Size: 200-400px recommended for good quality
+ * 이미지 생성 방법: AI_CHARACTER_PROMPTS.md 참조
+ * 
+ * 파일 구조:
+ * public/characters/
+ *   ├── en/ (영어)
+ *   │   ├── emily/
+ *   │   ├── oliver/
+ *   │   └── sophia/
+ *   ├── jp/ (일본어)
+ *   │   ├── sakura/
+ *   │   ├── yuki/
+ *   │   └── kaito/
+ *   ├── es/ (스페인어)
+ *   │   ├── isabella/
+ *   │   ├── carlos/
+ *   │   └── luna/
+ *   └── kr/ (한국어)
+ *       ├── hana/
+ *       ├── minho/
+ *       └── jiwoo/
  */
 export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
-  // Example: Anime style character
-  'anime-girl-1': {
+  // ===== 영어 캐릭터 (EN) =====
+  
+  // Emily - Modern American Girl (현대 미국 소녀)
+  'en-emily': {
     idle: {
-      src: '/characters/anime-girl-idle.png',
+      src: '/characters/en/emily/idle.png',
       width: 300,
-      height: 400,
-      scale: 0.8,
-      offsetX: 0,
-      offsetY: -50,
+      height: 420,
+      scale: 0.85,
+      offsetY: -60,
     },
     wave: {
-      src: '/characters/anime-girl-wave.png',
+      src: '/characters/en/emily/wave.png',
       width: 300,
-      height: 400,
-      scale: 0.8,
-      offsetX: 0,
-      offsetY: -50,
+      height: 420,
+      scale: 0.85,
+      offsetY: -60,
     },
     jump: {
-      src: '/characters/anime-girl-jump.png',
+      src: '/characters/en/emily/jump.png',
       width: 300,
-      height: 400,
-      scale: 0.8,
-      offsetX: 0,
-      offsetY: -50,
+      height: 440,
+      scale: 0.85,
+      offsetY: -70,
     },
     dance: {
-      src: '/characters/anime-girl-dance.png',
-      width: 300,
-      height: 400,
-      scale: 0.8,
-      offsetX: 0,
-      offsetY: -50,
+      src: '/characters/en/emily/dance.png',
+      width: 320,
+      height: 440,
+      scale: 0.85,
+      offsetY: -70,
     },
   },
 
-  // Example: Photo style character
-  'photo-girl-1': {
+  // Oliver - British Gentleman Style (영국 신사 스타일)
+  'en-oliver': {
     idle: {
-      src: '/characters/photo-girl-idle.jpg',
-      width: 250,
-      height: 350,
+      src: '/characters/en/oliver/idle.png',
+      width: 280,
+      height: 400,
       scale: 0.9,
-      offsetX: 0,
-      offsetY: -40,
+      offsetY: -55,
     },
     wave: {
-      src: '/characters/photo-girl-wave.jpg',
-      width: 250,
-      height: 350,
+      src: '/characters/en/oliver/wave.png',
+      width: 280,
+      height: 400,
       scale: 0.9,
-      offsetX: 0,
-      offsetY: -40,
+      offsetY: -55,
     },
   },
 
-  // Example: Sprite sheet (multiple frames in one image)
-  'anime-sprite-sheet': {
+  // Sophia - Tech-savvy Modern Girl (기술 소녀)
+  'en-sophia': {
     idle: {
-      src: '/characters/sprite-sheet-idle.png',
-      width: 200,
-      height: 300,
-      frames: 4, // 4 frames horizontally
-      frameDuration: 200, // 200ms per frame
-      scale: 1.0,
+      src: '/characters/en/sophia/idle.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+    jump: {
+      src: '/characters/en/sophia/jump.png',
+      width: 290,
+      height: 430,
+      scale: 0.85,
+      offsetY: -68,
     },
   },
 
-  // You can add more character sets here!
-  // Just follow the same pattern and place your images in public/characters/
+  // ===== 일본어 캐릭터 (JP) =====
+  
+  // Sakura - Traditional Japanese Girl (전통 일본 소녀)
+  'jp-sakura': {
+    idle: {
+      src: '/characters/jp/sakura/idle.png',
+      width: 310,
+      height: 430,
+      scale: 0.8,
+      offsetY: -65,
+    },
+    wave: {
+      src: '/characters/jp/sakura/wave.png',
+      width: 310,
+      height: 430,
+      scale: 0.8,
+      offsetY: -65,
+    },
+    clap: {
+      src: '/characters/jp/sakura/clap.png',
+      width: 310,
+      height: 430,
+      scale: 0.8,
+      offsetY: -65,
+    },
+    dance: {
+      src: '/characters/jp/sakura/dance.png',
+      width: 330,
+      height: 450,
+      scale: 0.8,
+      offsetY: -75,
+    },
+  },
+
+  // Yuki - Modern Japanese School Girl (현대 일본 여학생)
+  'jp-yuki': {
+    idle: {
+      src: '/characters/jp/yuki/idle.png',
+      width: 280,
+      height: 400,
+      scale: 0.9,
+      offsetY: -55,
+    },
+    wave: {
+      src: '/characters/jp/yuki/wave.png',
+      width: 280,
+      height: 400,
+      scale: 0.9,
+      offsetY: -55,
+    },
+    jump: {
+      src: '/characters/jp/yuki/jump.png',
+      width: 280,
+      height: 420,
+      scale: 0.9,
+      offsetY: -65,
+    },
+  },
+
+  // Kaito - Cool Japanese Boy (쿨한 일본 남학생)
+  'jp-kaito': {
+    idle: {
+      src: '/characters/jp/kaito/idle.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+    pose: {
+      src: '/characters/jp/kaito/pose.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+  },
+
+  // ===== 스페인어 캐릭터 (ES) =====
+  
+  // Isabella - Flamenco Dancer (플라멩코 댄서)
+  'es-isabella': {
+    idle: {
+      src: '/characters/es/isabella/idle.png',
+      width: 320,
+      height: 440,
+      scale: 0.8,
+      offsetY: -68,
+    },
+    dance: {
+      src: '/characters/es/isabella/dance.png',
+      width: 340,
+      height: 460,
+      scale: 0.8,
+      offsetY: -78,
+    },
+    spin: {
+      src: '/characters/es/isabella/spin.png',
+      width: 340,
+      height: 460,
+      scale: 0.8,
+      offsetY: -78,
+    },
+    clap: {
+      src: '/characters/es/isabella/clap.png',
+      width: 320,
+      height: 440,
+      scale: 0.8,
+      offsetY: -68,
+    },
+  },
+
+  // Carlos - Modern Spanish Youth (현대 스페인 청년)
+  'es-carlos': {
+    idle: {
+      src: '/characters/es/carlos/idle.png',
+      width: 280,
+      height: 400,
+      scale: 0.9,
+      offsetY: -55,
+    },
+    wave: {
+      src: '/characters/es/carlos/wave.png',
+      width: 280,
+      height: 400,
+      scale: 0.9,
+      offsetY: -55,
+    },
+    jump: {
+      src: '/characters/es/carlos/jump.png',
+      width: 280,
+      height: 420,
+      scale: 0.9,
+      offsetY: -65,
+    },
+  },
+
+  // Luna - Barcelona Artist (바르셀로나 예술가)
+  'es-luna': {
+    idle: {
+      src: '/characters/es/luna/idle.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+    pose: {
+      src: '/characters/es/luna/pose.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+  },
+
+  // ===== 한국어 캐릭터 (KR) =====
+  
+  // Hana - Traditional Hanbok Girl (전통 한복 소녀)
+  'kr-hana': {
+    idle: {
+      src: '/characters/kr/hana/idle.png',
+      width: 320,
+      height: 440,
+      scale: 0.8,
+      offsetY: -68,
+    },
+    wave: {
+      src: '/characters/kr/hana/wave.png',
+      width: 320,
+      height: 440,
+      scale: 0.8,
+      offsetY: -68,
+    },
+    dance: {
+      src: '/characters/kr/hana/dance.png',
+      width: 340,
+      height: 460,
+      scale: 0.8,
+      offsetY: -78,
+    },
+    clap: {
+      src: '/characters/kr/hana/clap.png',
+      width: 320,
+      height: 440,
+      scale: 0.8,
+      offsetY: -68,
+    },
+  },
+
+  // Minho - K-pop Idol Style (K-pop 아이돌)
+  'kr-minho': {
+    idle: {
+      src: '/characters/kr/minho/idle.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+    wave: {
+      src: '/characters/kr/minho/wave.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+    dance: {
+      src: '/characters/kr/minho/dance.png',
+      width: 310,
+      height: 430,
+      scale: 0.85,
+      offsetY: -68,
+    },
+    pose: {
+      src: '/characters/kr/minho/pose.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+  },
+
+  // Jiwoo - Modern Korean Gamer Girl (게이머 소녀)
+  'kr-jiwoo': {
+    idle: {
+      src: '/characters/kr/jiwoo/idle.png',
+      width: 280,
+      height: 400,
+      scale: 0.9,
+      offsetY: -55,
+    },
+    wave: {
+      src: '/characters/kr/jiwoo/wave.png',
+      width: 280,
+      height: 400,
+      scale: 0.9,
+      offsetY: -55,
+    },
+    jump: {
+      src: '/characters/kr/jiwoo/jump.png',
+      width: 280,
+      height: 420,
+      scale: 0.9,
+      offsetY: -65,
+    },
+    pose: {
+      src: '/characters/kr/jiwoo/pose.png',
+      width: 280,
+      height: 400,
+      scale: 0.9,
+      offsetY: -55,
+    },
+  },
+};
+
+/**
+ * 언어별 기본 캐릭터 매핑
+ */
+export const LANGUAGE_DEFAULT_CHARACTERS: Record<string, string> = {
+  'en': 'en-emily',      // 영어 → Emily
+  'jp': 'jp-sakura',     // 일본어 → Sakura
+  'es': 'es-isabella',   // 스페인어 → Isabella
+  'kr': 'kr-hana',       // 한국어 → Hana
+};
+
+/**
+ * 언어별 사용 가능한 캐릭터 목록
+ */
+export const LANGUAGE_CHARACTERS: Record<string, string[]> = {
+  'en': ['en-emily', 'en-oliver', 'en-sophia'],
+  'jp': ['jp-sakura', 'jp-yuki', 'jp-kaito'],
+  'es': ['es-isabella', 'es-carlos', 'es-luna'],
+  'kr': ['kr-hana', 'kr-minho', 'kr-jiwoo'],
+};
+
+/**
+ * 캐릭터 정보 (이름, 설명)
+ */
+export const CHARACTER_INFO: Record<string, { name: string; description: string }> = {
+  // 영어
+  'en-emily': { name: 'Emily', description: 'Modern American Girl - 활발하고 친근한 미국 소녀' },
+  'en-oliver': { name: 'Oliver', description: 'British Gentleman - 우아한 영국 신사' },
+  'en-sophia': { name: 'Sophia', description: 'Tech Expert - 기술에 능한 현대 소녀' },
+  
+  // 일본어
+  'jp-sakura': { name: 'Sakura (さくら)', description: 'Traditional Japanese Girl - 전통 기모노 소녀' },
+  'jp-yuki': { name: 'Yuki (ゆき)', description: 'School Girl - 밝고 활발한 여학생' },
+  'jp-kaito': { name: 'Kaito (かいと)', description: 'Cool Boy - 쿨한 일본 남학생' },
+  
+  // 스페인어
+  'es-isabella': { name: 'Isabella', description: 'Flamenco Dancer - 정열적인 플라멩코 댄서' },
+  'es-carlos': { name: 'Carlos', description: 'Spanish Youth - 스포티한 스페인 청년' },
+  'es-luna': { name: 'Luna', description: 'Barcelona Artist - 자유로운 예술가' },
+  
+  // 한국어
+  'kr-hana': { name: 'Hana (하나)', description: 'Traditional Hanbok Girl - 우아한 한복 소녀' },
+  'kr-minho': { name: 'Minho (민호)', description: 'K-pop Idol - 세련된 아이돌 스타' },
+  'kr-jiwoo': { name: 'Jiwoo (지우)', description: 'Gamer Girl - 귀여운 게이머 소녀' },
 };
 
 /**
  * Default character image set to use
- * Change this to switch characters
+ * Change this to switch characters globally
  */
-export const DEFAULT_CHARACTER_IMAGE = 'anime-girl-1';
+export const DEFAULT_CHARACTER_IMAGE = 'en-emily';
 
 /**
  * Enable/disable external image rendering
  * Set to false to use procedural rendering (original)
  */
 export const USE_EXTERNAL_IMAGES = false; // Set to true when you have images ready
+
+/**
+ * 언어에 맞는 기본 캐릭터 가져오기
+ */
+export function getCharacterForLanguage(language: string): string {
+  return LANGUAGE_DEFAULT_CHARACTERS[language] || DEFAULT_CHARACTER_IMAGE;
+}
+
+/**
+ * 언어의 캐릭터 목록 가져오기
+ */
+export function getCharactersForLanguage(language: string): string[] {
+  return LANGUAGE_CHARACTERS[language] || [DEFAULT_CHARACTER_IMAGE];
+}
+
+/**
+ * 캐릭터 정보 가져오기
+ */
+export function getCharacterInfo(characterId: string): { name: string; description: string } | null {
+  return CHARACTER_INFO[characterId] || null;
+}
