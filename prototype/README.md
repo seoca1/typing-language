@@ -7,7 +7,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5.3-646cff)](https://vitejs.dev/)
 [![Tests](https://img.shields.io/badge/Tests-106%20passed-success)](#testing)
 
-**🎮 [Play Live Demo](https://yourusername.github.io/typing-language/)** *(배포 후 링크 업데이트 필요)*
+**🎮 [Play Live Demo](https://seoca1.github.io/typing-language/)**
 
 ---
 

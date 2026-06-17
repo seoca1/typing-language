@@ -7,7 +7,7 @@
 [![Tests](https://img.shields.io/badge/Tests-106%20passed-success)](prototype/README.md#testing)
 [![Phase](https://img.shields.io/badge/Phase-7%20Alpha-orange)](ROADMAP.md)
 
-**🎮 [Play Live Demo](https://yourusername.github.io/typing-language/)** *(배포 후 업데이트 필요)*
+**🎮 [Play Live Demo](https://seoca1.github.io/typing-language/)**
 
 ---
 
