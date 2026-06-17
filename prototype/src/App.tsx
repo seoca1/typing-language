@@ -65,9 +65,19 @@ export function App() {
     return !localStorage.getItem(TUTORIAL_KEY);
   });
 
-  // Log device info on mount
+  // Log device info and preload sprites on mount
   useEffect(() => {
     logDeviceInfo();
+    
+    // Preload sprites asynchronously
+    import('./config/graphics.js').then(({ GraphicsConfig }) => {
+      if (GraphicsConfig.USE_SPRITES) {
+        import('./sprites/SpriteLoader.js').then(({ SpriteLoader }) => {
+          SpriteLoader.preload([...GraphicsConfig.SPRITE_PRELOAD])
+            .catch(err => console.warn('Sprite preload failed:', err));
+        });
+      }
+    });
   }, []);
 
   // 저장된 진행도 로드

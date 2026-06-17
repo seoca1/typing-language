@@ -5,11 +5,18 @@
  * 외부 이미지 없이 원·사각·곡선만으로 SD 인물風 캐릭터를 그린다.
  *
  * 좌표계: 캐릭터 기준점 (cx, groundY)을 발 위치로 잡고 위로 그린다.
+ * 
+ * 스프라이트 모드: USE_SPRITES = true로 설정하면 스프라이트 렌더링 사용
  */
 
 import type { CharacterState } from './CharacterController.js';
 import { hasAccessory, hasProp } from './CharacterController.js';
 import type { CulturalAppearance } from './CharacterData.js';
+import { SpriteLoader } from '../sprites/SpriteLoader.js';
+import { SpriteRenderer } from '../sprites/SpriteRenderer.js';
+import { GraphicsConfig } from '../config/graphics.js';
+
+const spriteRenderer = new SpriteRenderer();
 
 interface DrawContext {
   ctx: CanvasRenderingContext2D;
@@ -23,6 +30,13 @@ export function renderCharacter(
   groundY: number,
   now: number,
 ): void {
+  // Use sprite rendering if enabled
+  if (GraphicsConfig.USE_SPRITES) {
+    renderCharacterSprite(ctx, state, cx, groundY, now);
+    return;
+  }
+
+  // Original primitive rendering
   const draw: DrawContext = { ctx, now };
 
   const breathing = state.pose === 'idle' ? Math.sin(now / 600) * 1.5 : 0;
@@ -112,6 +126,99 @@ export function renderCharacter(
   drawHeadAndHair(draw, state, now);
 
   ctx.restore();
+}
+
+/**
+ * Render character using sprites
+ */
+function renderCharacterSprite(
+  ctx: CanvasRenderingContext2D,
+  state: CharacterState,
+  cx: number,
+  groundY: number,
+  now: number,
+): void {
+  // Get appropriate sprite based on pose
+  let spriteName: any;
+  let frameDuration = 150;
+  let loop = true;
+
+  switch (state.pose) {
+    case 'idle':
+      spriteName = 'character-idle';
+      frameDuration = 200;
+      break;
+    case 'wave':
+    case 'clap':
+    case 'dance':
+      spriteName = 'character-attack';
+      frameDuration = 100;
+      break;
+    case 'jump':
+    case 'spin':
+    case 'pose':
+      spriteName = 'character-victory';
+      loop = false;
+      break;
+    default:
+      spriteName = 'character-idle';
+  }
+
+  const sprite = SpriteLoader.get(spriteName);
+  if (!sprite) {
+    // Sprite not loaded yet, show loading or fallback
+    ctx.fillStyle = '#888';
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('Loading...', cx, groundY - 60);
+    return;
+  }
+
+  // Draw effects based on mood
+  if (state.mood === 'triumphant' || state.pose === 'dance') {
+    drawAura({ ctx, now }, cx, groundY - 130, now);
+  }
+  if (state.mood === 'excited') {
+    drawSparkles({ ctx, now }, cx, groundY - 120, now);
+  }
+
+  // Draw the character sprite
+  const animId = `character-${state.pose}`;
+  spriteRenderer.drawAnimatedSprite(
+    ctx,
+    sprite,
+    animId,
+    cx,
+    groundY - 60, // Center sprite vertically
+    now,
+    {
+      scale: 1.2,
+      frameDuration,
+      loop,
+      alpha: 1,
+    }
+  );
+
+  // Draw additional sprite effects for hits/attacks
+  const speechAge = now - state.speechStart;
+  if (speechAge < 200) {
+    const effectSprite = SpriteLoader.get('effect-sparkle');
+    if (effectSprite) {
+      spriteRenderer.drawAnimatedSprite(
+        ctx,
+        effectSprite,
+        'speech-effect',
+        cx + 30,
+        groundY - 80,
+        now,
+        {
+          scale: 0.8,
+          frameDuration: 50,
+          loop: false,
+        }
+      );
+    }
+  }
 }
 
 // ===== Legs =====
