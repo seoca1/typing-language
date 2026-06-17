@@ -85,6 +85,10 @@ export function App() {
   const [state, dispatch] = useReducer(gameReducer, initialState, (initial) => {
     const savedProgress = loadProgress();
     if (savedProgress) {
+      // stageRecords가 없는 경우 초기화 (하위 호환성)
+      if (!savedProgress.stageRecords) {
+        savedProgress.stageRecords = {};
+      }
       return { ...initial, player: savedProgress };
     }
     return initial;

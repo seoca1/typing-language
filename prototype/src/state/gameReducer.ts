@@ -177,7 +177,9 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       return { ...state, accuracy: action.accuracy, wpm: action.wpm };
 
     case 'UPDATE_STAGE_RECORD': {
-      const existing = state.player.stageRecords[action.stageId];
+      // stageRecords가 없는 경우 초기화 (하위 호환성)
+      const stageRecords = state.player.stageRecords || {};
+      const existing = stageRecords[action.stageId];
       const isNewBest = !existing || action.score > existing.bestScore;
       
       // Calculate stars based on accuracy and WPM
@@ -203,7 +205,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         player: {
           ...state.player,
           stageRecords: {
-            ...state.player.stageRecords,
+            ...stageRecords,
             [action.stageId]: newRecord,
           },
         },

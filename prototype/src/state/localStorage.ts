@@ -51,6 +51,12 @@ export function loadProgress(): PlayerProgress | null {
       return null;
     }
 
+    // stageRecords가 없는 경우 초기화 (하위 호환성)
+    if (!data.player.stageRecords) {
+      console.warn('[Storage] Missing stageRecords, initializing...');
+      data.player.stageRecords = {};
+    }
+
     console.log('[Storage] Progress loaded:', data.player);
     return data.player;
   } catch (error) {
