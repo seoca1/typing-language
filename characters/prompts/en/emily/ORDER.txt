@@ -1,0 +1,60 @@
+EMILY - GENERATION ORDER
+========================
+
+Follow this order for best workflow:
+
+✓ DONE:
+-------
+[✓] 1-idle.txt   → idle.png  ✓ EXISTS!
+
+TODO (Start here):
+------------------
+[→] 2-wave.txt   → wave.png   ← START WITH THIS!
+[ ] 3-jump.txt   → jump.png
+[ ] 4-clap.txt   → clap.png
+[ ] 5-spin.txt   → spin.png
+[ ] 6-dance.txt  → dance.png
+[ ] 7-pose.txt   → pose.png
+
+Progress: 1/7 (14%)
+
+QUICK START:
+------------
+cat 2-wave.txt
+# Copy entire content
+# Paste into ChatGPT or Grok
+# Generate image
+# Download
+# Save to: ../../prototype/public/characters/en/emily/wave.png
+
+FULL PATHS:
+-----------
+Prompts:    ~/projects/Projects/Game/typing_language/characters/prompts/en/emily/
+Save to:    ~/projects/Projects/Game/typing_language/prototype/public/characters/en/emily/
+
+FILE NAMES (Important - exact match):
+-------------------------------------
+Prompt File     → Save As
+1-idle.txt      → idle.png   ✓
+2-wave.txt      → wave.png   ← Next
+3-jump.txt      → jump.png
+4-clap.txt      → clap.png
+5-spin.txt      → spin.png
+6-dance.txt     → dance.png
+7-pose.txt      → pose.png
+
+CHECKLIST:
+----------
+After each generation:
+[ ] Image downloaded
+[ ] Saved to correct folder (en/emily/)
+[ ] Named correctly (wave.png, not Wave.PNG)
+[ ] File size reasonable (1-5 MB)
+[ ] Mark as complete in this list
+
+NEXT STEP:
+----------
+cat 2-wave.txt | pbcopy
+# Paste into ChatGPT/Grok
+# Generate
+# Save as: wave.png in characters/en/emily/

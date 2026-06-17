@@ -5,8 +5,10 @@ Quick reference for all character prompt locations.
 
 READY TO USE (Complete Prompts):
 ---------------------------------
-✅ en/emily/     - idle.txt, wave.txt, jump.txt, clap.txt, spin.txt, dance.txt, pose.txt
+✅ en/emily/     - 1-idle.txt, 2-wave.txt, 3-jump.txt, 4-clap.txt, 
+                   5-spin.txt, 6-dance.txt, 7-pose.txt
                    README.md with full guide
+                   ✓ idle.png already generated!
 
 IN PROGRESS (Use AI_CHARACTER_PROMPTS.md):
 ------------------------------------------
@@ -24,14 +26,17 @@ IN PROGRESS (Use AI_CHARACTER_PROMPTS.md):
 
 QUICK COMMANDS:
 ---------------
-# Emily idle prompt
-cat en/emily/idle.txt
+# Emily idle prompt (already done!)
+cat en/emily/1-idle.txt
 
-# Emily wave prompt
-cat en/emily/wave.txt
+# Emily wave prompt (do this next!)
+cat en/emily/2-wave.txt
 
-# All Emily prompts
+# All Emily prompts (numbered 1-7)
 ls en/emily/*.txt
+
+# Copy wave prompt to clipboard
+cat en/emily/2-wave.txt | pbcopy
 
 # All character prompts (comprehensive)
 cat ../docs/AI_CHARACTER_PROMPTS.md
@@ -53,7 +58,8 @@ TOTAL IMAGES:
 
 PROGRESS:
 ---------
-Emily:  [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Emily:  [✓] 1-idle [→] 2-wave [ ] 3-jump [ ] 4-clap [ ] 5-spin [ ] 6-dance [ ] 7-pose
+        (idle.png exists! Start with wave.png next!)
 Oliver: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
 Sophia: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
 Sakura: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
@@ -71,5 +77,14 @@ Total: ___ / 84
 START HERE:
 -----------
 cd en/emily
-cat idle.txt
-# Copy prompt → ChatGPT/Grok → Generate → Save
+
+# idle.png already exists! Start with wave:
+cat 2-wave.txt
+# Copy prompt → ChatGPT/Grok → Generate → Save as wave.png
+
+# Then continue in order:
+# 3-jump.txt → jump.png
+# 4-clap.txt → clap.png
+# 5-spin.txt → spin.png
+# 6-dance.txt → dance.png
+# 7-pose.txt → pose.png

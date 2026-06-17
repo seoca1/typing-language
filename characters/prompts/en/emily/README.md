@@ -21,60 +21,67 @@ Emily is a 16-18 year old modern American teenage girl with a friendly and appro
 
 ## Poses (7 Total)
 
-### 1. idle.txt
+### 1. 1-idle.txt
 **Standing neutral/relaxed**
 - Relaxed stance
 - Friendly expression
 - Arms at sides or one hand in pocket
+- **Save as:** `idle.png`
 
-### 2. wave.txt
+### 2. 2-wave.txt
 **Waving cheerfully**
 - One arm raised waving
 - Big friendly smile
 - Energetic greeting
+- **Save as:** `wave.png`
 
-### 3. jump.txt
+### 3. 3-jump.txt
 **Jumping with excitement**
 - Both feet off ground
 - Arms raised enthusiastically
 - Joyful expression
+- **Save as:** `jump.png`
 
-### 4. clap.txt
+### 4. 4-clap.txt
 **Clapping hands happily**
 - Hands together clapping
 - Happy, appreciative expression
 - Slight lean forward
+- **Save as:** `clap.png`
 
-### 5. spin.txt
+### 5. 5-spin.txt
 **Spinning/twirling motion**
 - Body mid-spin
 - Arms extended for balance
 - Playful, joyful expression
+- **Save as:** `spin.png`
 
-### 6. dance.txt
+### 6. 6-dance.txt
 **Dancing energetically**
 - One arm raised, one at hip
 - Body swaying to music
 - Energetic, happy expression
+- **Save as:** `dance.png`
 
-### 7. pose.txt
+### 7. 7-pose.txt
 **Victory/confident pose**
 - One arm raised in victory
 - Confident smile
 - Proud stance
+- **Save as:** `pose.png`
 
 ---
 
 ## Usage
 
-1. **Copy prompt** from desired pose file (e.g., `idle.txt`)
+1. **Copy prompt** from desired pose file (e.g., `1-idle.txt`)
 2. **Paste into** ChatGPT or Grok
 3. **Generate image**
 4. **Save to:** `prototype/public/characters/en/emily/[pose].png`
 
 Example:
 ```
-cat idle.txt | pbcopy
+cat 1-idle.txt | pbcopy
 # Paste into ChatGPT/Grok
 # Download generated image
 # Save as: prototype/public/characters/en/emily/idle.png
@@ -82,12 +89,17 @@ cat idle.txt | pbcopy
 
 ---
 
-## Generation Order (Recommended)
+## Generation Order (Follow Numbers)
 
-1. Start with **idle.txt** (base pose)
-2. Then **wave.txt** (simple motion)
-3. Continue with others
-4. Test **idle** in game before continuing with all poses
+1. **1-idle.txt** → idle.png (✓ Already done!)
+2. **2-wave.txt** → wave.png (Next!)
+3. **3-jump.txt** → jump.png
+4. **4-clap.txt** → clap.png
+5. **5-spin.txt** → spin.png
+6. **6-dance.txt** → dance.png
+7. **7-pose.txt** → pose.png
+
+**Tip:** Follow the numbers in order for best workflow!
 
 ---
 
