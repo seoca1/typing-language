@@ -1001,3 +1001,68 @@ curl -I https://seoca1.github.io/typing-language/
 **🎉 Typing Language는 이제 전 세계에 공개되었습니다!**
 
 누구나 브라우저에서 접속하여 4개 언어 타이핑 연습을 즐길 수 있습니다! 🌍⌨️
+
+### [2026-06-18] feat | Enter 키 확정 + LocalStorage 진행도 저장
+
+#### 문제점
+1. 단어 타이핑 완료 시점이 불명확 (자동 판정)
+2. ESC로 메뉴 돌아갔을 때 빈 화면
+3. 진행도가 저장되지 않음 (새로고침 시 초기화)
+
+#### 해결 방법
+
+**1. Enter 키 수동 확정 (UX 개선)**
+- 기존: 마지막 글자 입력 시 자동 판정
+- 변경: 단어 타이핑 후 **Enter 키**로 확정
+- 장점:
+  - 사용자가 명확히 제출 시점 제어
+  - Backspace로 수정 가능
+  - 실수 방지
+
+**사용법:**
+```
+1. 단어 타이핑: h → e → l → l → o
+2. Enter 키로 확정
+3. 다음 단어로 자동 이동
+```
+
+**2. LocalStorage 진행도 저장**
+- `src/state/localStorage.ts` 생성
+- 자동 저장: `player` 상태 변경 시 (`useEffect`)
+- 자동 로드: 앱 시작 시 (`useReducer` initializer)
+- 저장 내용:
+  - 플레이어 레벨
+  - 총 점수
+  - 통계 (enemiesDefeated, stagesCleared, playTime)
+  - 언어별 최고 WPM/정확도
+  - 언락된 스테이지
+  - 업적
+
+**Storage 구조:**
+```typescript
+{
+  version: 1,
+  player: PlayerProgress,
+  lastSaved: timestamp
+}
+```
+
+**3. 디버그 로그 추가**
+- Enter 키 입력 시 콘솔 로그
+- buffer, acceptedInputs, match 결과 출력
+- 문제 진단 용이
+
+#### 테스트 결과
+- ✅ 빌드 성공 (251KB, gzip 76KB)
+- ✅ TypeScript 컴파일 통과
+- 🔄 배포 대기 (2~3분)
+
+#### 다음 개선 필요
+1. Enter 확정이 실제로 작동하는지 확인 (사용자 테스트)
+2. ESC 후 빈 화면 문제 재현 및 수정
+3. 디버그 로그 제거 (프로덕션)
+
+#### 추가 기능 (향후)
+- 진행도 내보내기/가져오기
+- 클라우드 동기화
+- 여러 프로필 지원
