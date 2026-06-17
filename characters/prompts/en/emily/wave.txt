@@ -1,0 +1,46 @@
+EMILY - WAVE POSE
+=================
+
+Character: Emily (Modern American Girl)
+Pose: Waving cheerfully
+Save to: prototype/public/characters/en/emily/wave.png
+
+PROMPT:
+-------
+
+Create an anime-style portrait illustration of Emily, a modern American teenage girl:
+
+Character Design:
+- Age: 16-18 years old
+- Hair: Shoulder-length brown hair with natural waves
+- Eyes: Bright hazel eyes, friendly expression
+- Outfit: Casual hoodie (light gray or pink) with jeans
+- Accessories: Simple backpack straps visible
+
+Pose: Waving cheerfully
+- One arm raised, waving hello
+- Hand open, fingers slightly spread in friendly wave
+- Big friendly smile, genuinely happy
+- Energetic, welcoming expression
+- Other arm relaxed at side or slightly bent
+- Dynamic but balanced pose
+- Leaning slightly forward with enthusiasm
+
+Art Style:
+- Anime/manga aesthetic (semi-realistic style)
+- Clean linework with soft cell shading
+- Warm, inviting color palette
+- White or light transparent background
+- Portrait orientation (vertical, taller than wide)
+- High quality, detailed character rendering
+- Focus on upper body and face
+- Show motion in hair and clothing
+
+Technical:
+- Image size: Portrait orientation, approximately 512×768 pixels
+- Perspective: Straight-on view, eye level
+- Lighting: Soft, natural lighting
+- Mood: Cheerful greeting, energetic and friendly
+- Motion: Slight movement suggested in wave
+
+Please create a clean, high-quality anime portrait with these specifications.

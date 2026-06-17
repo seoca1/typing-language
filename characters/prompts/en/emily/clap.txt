@@ -1,0 +1,45 @@
+EMILY - CLAP POSE
+=================
+
+Character: Emily (Modern American Girl)
+Pose: Clapping hands happily
+Save to: prototype/public/characters/en/emily/clap.png
+
+PROMPT:
+-------
+
+Create an anime-style portrait illustration of Emily, a modern American teenage girl:
+
+Character Design:
+- Age: 16-18 years old
+- Hair: Shoulder-length brown hair with natural waves
+- Eyes: Bright hazel eyes, happy expression
+- Outfit: Casual hoodie (light gray or pink) with jeans
+- Accessories: Simple backpack straps visible
+
+Pose: Clapping hands happily
+- Hands together in clapping motion, palms meeting
+- Happy, appreciative expression with genuine smile
+- Slight lean forward with enthusiasm
+- Eyes bright and cheerful
+- Showing enjoyment and appreciation
+- Arms bent at elbows, hands at chest height
+- Shoulders slightly raised with excitement
+
+Art Style:
+- Anime/manga aesthetic (semi-realistic style)
+- Clean linework with soft cell shading
+- Warm, inviting color palette
+- White or light transparent background
+- Portrait orientation (vertical, taller than wide)
+- High quality, detailed character rendering
+- Focus on upper body, face, and hand position
+
+Technical:
+- Image size: Portrait orientation, approximately 512×768 pixels
+- Perspective: Straight-on view, eye level
+- Lighting: Soft, natural lighting
+- Mood: Appreciative, happy, encouraging
+- Expression: Genuine happiness and support
+
+Please create a clean, high-quality anime portrait with these specifications.

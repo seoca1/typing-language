@@ -1,0 +1,75 @@
+CHARACTER PROMPTS INDEX
+======================
+
+Quick reference for all character prompt locations.
+
+READY TO USE (Complete Prompts):
+---------------------------------
+✅ en/emily/     - idle.txt, wave.txt, jump.txt, clap.txt, spin.txt, dance.txt, pose.txt
+                   README.md with full guide
+
+IN PROGRESS (Use AI_CHARACTER_PROMPTS.md):
+------------------------------------------
+⏳ en/oliver/    - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ en/sophia/    - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ jp/sakura/    - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ jp/yuki/      - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ jp/kaito/     - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ es/isabella/  - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ es/carlos/    - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ es/luna/      - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ kr/hana/      - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ kr/minho/     - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+⏳ kr/jiwoo/     - Prompts in: ../docs/AI_CHARACTER_PROMPTS.md
+
+QUICK COMMANDS:
+---------------
+# Emily idle prompt
+cat en/emily/idle.txt
+
+# Emily wave prompt
+cat en/emily/wave.txt
+
+# All Emily prompts
+ls en/emily/*.txt
+
+# All character prompts (comprehensive)
+cat ../docs/AI_CHARACTER_PROMPTS.md
+
+# Quick start guide
+cat ../QUICKSTART.md
+
+SAVE LOCATIONS:
+---------------
+All images save to:
+../../prototype/public/characters/[lang]/[character]/[pose].png
+
+Example:
+../../prototype/public/characters/en/emily/idle.png
+
+TOTAL IMAGES:
+-------------
+12 characters × 7 poses = 84 images
+
+PROGRESS:
+---------
+Emily:  [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Oliver: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Sophia: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Sakura: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Yuki:   [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Kaito:  [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Isabella:[ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Carlos: [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Luna:   [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Hana:   [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Minho:  [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+Jiwoo:  [ ] idle [ ] wave [ ] jump [ ] clap [ ] spin [ ] dance [ ] pose
+
+Total: ___ / 84
+
+START HERE:
+-----------
+cd en/emily
+cat idle.txt
+# Copy prompt → ChatGPT/Grok → Generate → Save

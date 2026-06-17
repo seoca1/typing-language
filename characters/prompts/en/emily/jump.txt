@@ -1,0 +1,46 @@
+EMILY - JUMP POSE
+=================
+
+Character: Emily (Modern American Girl)
+Pose: Jumping with excitement
+Save to: prototype/public/characters/en/emily/jump.png
+
+PROMPT:
+-------
+
+Create an anime-style portrait illustration of Emily, a modern American teenage girl:
+
+Character Design:
+- Age: 16-18 years old
+- Hair: Shoulder-length brown hair with natural waves
+- Eyes: Bright hazel eyes, excited expression
+- Outfit: Casual hoodie (light gray or pink) with jeans
+- Accessories: Simple backpack straps visible
+
+Pose: Jumping with excitement
+- Both feet off ground (mid-jump, captured in air)
+- Arms raised up enthusiastically above head
+- Hair flowing upward from motion
+- Joyful, excited expression with open smile
+- Dynamic motion captured, sense of upward movement
+- Energy and movement visible in clothing folds
+- Body slightly arched from jump momentum
+
+Art Style:
+- Anime/manga aesthetic (semi-realistic style)
+- Clean linework with soft cell shading
+- Warm, vibrant color palette
+- White or light transparent background
+- Portrait orientation (vertical, taller than wide)
+- High quality, detailed character rendering
+- Motion blur or flow in hair and clothing
+- Dynamic pose, full of energy
+
+Technical:
+- Image size: Portrait orientation, approximately 512×768 pixels
+- Perspective: Straight-on view, eye level
+- Lighting: Soft, natural lighting
+- Mood: Excited, joyful, celebrating
+- Motion: Strong upward movement, dynamic energy
+
+Please create a clean, high-quality anime portrait with these specifications.

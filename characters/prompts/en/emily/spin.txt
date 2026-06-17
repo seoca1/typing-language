@@ -1,0 +1,47 @@
+EMILY - SPIN POSE
+=================
+
+Character: Emily (Modern American Girl)
+Pose: Spinning/twirling motion
+Save to: prototype/public/characters/en/emily/spin.png
+
+PROMPT:
+-------
+
+Create an anime-style portrait illustration of Emily, a modern American teenage girl:
+
+Character Design:
+- Age: 16-18 years old
+- Hair: Shoulder-length brown hair with natural waves
+- Eyes: Bright hazel eyes, playful expression
+- Outfit: Casual hoodie (light gray or pink) with jeans
+- Accessories: Simple backpack straps visible
+
+Pose: Spinning/twirling motion
+- Body in mid-spin, slight rotation visible
+- Arms extended outward for balance
+- Hair flowing and showing circular motion
+- Hoodie and clothing showing rotation movement
+- Playful, joyful expression with eyes sparkling
+- Captured mid-twirl, sense of circular motion
+- One leg slightly lifted or body weight shifted
+- Dynamic rotational energy
+
+Art Style:
+- Anime/manga aesthetic (semi-realistic style)
+- Clean linework with soft cell shading
+- Warm, playful color palette
+- White or light transparent background
+- Portrait orientation (vertical, taller than wide)
+- High quality, detailed character rendering
+- Motion blur or flow effects in hair and clothing
+- Sense of circular movement
+
+Technical:
+- Image size: Portrait orientation, approximately 512×768 pixels
+- Perspective: Slight rotation suggested
+- Lighting: Soft, natural lighting
+- Mood: Playful, carefree, having fun
+- Motion: Rotational, spinning energy
+
+Please create a clean, high-quality anime portrait with these specifications.

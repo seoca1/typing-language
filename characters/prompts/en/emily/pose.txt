@@ -1,0 +1,47 @@
+EMILY - POSE (VICTORY)
+======================
+
+Character: Emily (Modern American Girl)
+Pose: Victory/confident pose
+Save to: prototype/public/characters/en/emily/pose.png
+
+PROMPT:
+-------
+
+Create an anime-style portrait illustration of Emily, a modern American teenage girl:
+
+Character Design:
+- Age: 16-18 years old
+- Hair: Shoulder-length brown hair with natural waves
+- Eyes: Bright hazel eyes, confident expression
+- Outfit: Casual hoodie (light gray or pink) with jeans
+- Accessories: Simple backpack straps visible
+
+Pose: Victory/confident pose
+- One arm raised in victory sign (peace sign or fist pump)
+- Confident smile, showing pride and accomplishment
+- Proud, self-assured expression
+- Strong, confident stance
+- Other hand on hip or giving thumbs up
+- Body language radiating confidence
+- Head slightly tilted with satisfied smile
+- Eyes bright with achievement
+- Positive, winning attitude
+
+Art Style:
+- Anime/manga aesthetic (semi-realistic style)
+- Clean linework with soft cell shading
+- Bright, positive color palette
+- White or light transparent background
+- Portrait orientation (vertical, taller than wide)
+- High quality, detailed character rendering
+- Emphasis on confident expression and victory gesture
+
+Technical:
+- Image size: Portrait orientation, approximately 512×768 pixels
+- Perspective: Straight-on view, eye level
+- Lighting: Soft, natural lighting with slight glow
+- Mood: Confident, victorious, accomplished
+- Expression: Pride and satisfaction
+
+Please create a clean, high-quality anime portrait with these specifications.

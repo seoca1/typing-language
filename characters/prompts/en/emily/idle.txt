@@ -1,0 +1,44 @@
+EMILY - IDLE POSE
+=================
+
+Character: Emily (Modern American Girl)
+Pose: Standing idle/neutral
+Save to: prototype/public/characters/en/emily/idle.png
+
+PROMPT:
+-------
+
+Create an anime-style portrait illustration of Emily, a modern American teenage girl:
+
+Character Design:
+- Age: 16-18 years old
+- Hair: Shoulder-length brown hair with natural waves
+- Eyes: Bright hazel eyes, friendly expression
+- Outfit: Casual hoodie (light gray or pink) with jeans
+- Accessories: Simple backpack straps visible
+- Expression: Warm smile, approachable
+
+Pose: Standing idle/neutral
+- Relaxed standing pose
+- Arms at sides or one hand in pocket casually
+- Friendly, welcoming expression
+- Looking directly at viewer with a gentle smile
+- Natural, comfortable stance
+
+Art Style:
+- Anime/manga aesthetic (semi-realistic style)
+- Clean linework with soft cell shading
+- Warm, inviting color palette
+- White or light transparent background
+- Portrait orientation (vertical, taller than wide)
+- High quality, detailed character rendering
+- Focus on upper body and face
+
+Technical:
+- Image size: Portrait orientation, approximately 512×768 pixels
+- Perspective: Straight-on view, eye level
+- Lighting: Soft, natural lighting
+- Mood: Friendly, casual, modern American teenager
+- Cultural context: Contemporary American youth style
+
+Please create a clean, high-quality anime portrait with these specifications.
