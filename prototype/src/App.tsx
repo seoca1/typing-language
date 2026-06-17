@@ -147,6 +147,100 @@ export function App() {
       }
 
       const kb = keyboardRef.current;
+      const enemy = stateRef.current.currentEnemy;
+      if (!enemy) return;
+
+      // Enter 키로 판정 (수동 확정)
+      if (event.key === 'Enter') {
+        const currentBuffer = handler.getBuffer();
+        const currentAccuracy = handler.getAccuracy();
+        
+        // 입력한 내용이 정답과 일치하는지 확인
+        if (isDefeated(enemy, currentBuffer, enemy.target.acceptedInputs)) {
+          kb?.pressByEvent(event.key);
+
+          const timeMs = Date.now() - stateRef.current.startTime;
+          const scoreBreakdown = calculateScore(enemy, currentAccuracy, timeMs);
+          const stageState = stageStateRef.current;
+          if (!stageState) return;
+          advanceStage(stageState);
+          const nextEnemy = getCurrentEnemy(stageState);
+          const cleared = !nextEnemy;
+          const cx = CANVAS_W / 2;
+          const cy = 290;
+          const accents = getLanguageAccent(stage.language);
+
+          const fx = effectsRef.current;
+          spawnColorShower(fx, cx, cy, accents, 50);
+          spawnHitBurst(fx, cx, cy, '#ffffff', 30);
+          spawnPopup(fx, cx, cy - 60, `+${scoreBreakdown.total}`, '#ffd700', 44);
+          spawnFlash(fx, '#ffffff', 0.25, 120);
+          triggerShake(fx, 8, 180);
+
+          const isPerfect =
+            currentAccuracy === 100 && stateRef.current.totalErrors === 0;
+          const newCombo = stateRef.current.combo + 1;
+          applyEnemyDefeated(characterRef.current, newCombo, isPerfect, performance.now());
+
+          if (isPerfect) {
+            setTimeout(() => spawnPopup(fx, cx, cy + 20, 'PERFECT!', '#00ff88', 38), 80);
+          } else if (newCombo >= 5) {
+            setTimeout(() => spawnPopup(fx, cx, cy + 20, 'COMBO!', '#ff6b9d', 32), 80);
+          }
+
+          dispatch({
+            type: 'ENEMY_DEFEATED',
+            nextEnemy,
+            scoreDelta: scoreBreakdown.total,
+            cleared,
+          });
+
+          if (nextEnemy) {
+            handler.setTarget(nextEnemy.target);
+            keyboardRef.current?.setHint(handler.getExpectedChar() || null);
+          } else {
+            keyboardRef.current?.setHint(null);
+
+            const stageEndTime = Date.now();
+            const stats: StageRunStats = {
+              enemiesDefeated: stateRef.current.enemiesDefeated + 1,
+              totalEnemies: stageState.enemies.length,
+              errors: stateRef.current.totalErrors,
+              comboMax: stateRef.current.comboMax,
+              comboCurrent: 0,
+              totalKeystrokes: 0,
+              correctKeystrokes: 0,
+              startTime: stateRef.current.startTime,
+              clearedTime: stageEndTime,
+              defeatedEnemies: stageState.enemies.map((e) => ({
+                category: e.target.category,
+                level: e.target.level,
+              })),
+              allCompleted: cleared,
+            };
+            const results = evaluateAllMissions(stage.missions, stats).map((m) => ({
+              missionId: m.missionId,
+              cleared: m.status === 'cleared',
+            }));
+            dispatch({
+              type: 'END_STAGE',
+              missions: stage.missions,
+              results,
+            });
+            const elapsed = stageEndTime - stateRef.current.startTime;
+            const completedTexts = stageState.enemies.map((e) => e.target.text);
+            const wpm = calculateWpm(completedTexts, elapsed);
+            dispatch({ type: 'UPDATE_STATS', accuracy: currentAccuracy, wpm });
+
+            spawnPopup(fx, cx, cy + 60, `STAGE CLEAR!`, '#00d9ff', 56);
+            spawnColorShower(fx, cx, cy + 60, accents, 80);
+
+            applyStageCleared(characterRef.current, performance.now());
+          }
+        }
+        return;
+      }
+
       kb?.pressByEvent(event.key);
 
       const result = handler.handleKey(event);
@@ -163,7 +257,6 @@ export function App() {
       }
 
       const fx = effectsRef.current;
-      const enemy = stateRef.current.currentEnemy;
       if (enemy && result.buffer.length > 0) {
         const targetText = enemy.target.text;
         const idx = result.buffer.length - 1;
@@ -181,8 +274,8 @@ export function App() {
         }
       }
 
-      if (!enemy) return;
-
+      // 자동 판정 제거 (Enter로만 판정)
+      /*
       if (isDefeated(enemy, result.buffer, enemy.target.acceptedInputs)) {
         const timeMs = Date.now() - stateRef.current.startTime;
         const scoreBreakdown = calculateScore(enemy, result.accuracy, timeMs);
@@ -262,6 +355,7 @@ export function App() {
           applyStageCleared(characterRef.current, performance.now());
         }
       }
+      */
     };
 
     window.addEventListener('keydown', onKey);
