@@ -463,12 +463,22 @@ export function App() {
     );
   }
 
+  // 스테이지가 없으면 메뉴로 (방어 코드)
+  if (!state.currentStage) {
+    return (
+      <Menu
+        onStartStage={handleStartStage}
+        onShowTutorial={() => setShowTutorial(true)}
+      />
+    );
+  }
+
   return (
     <StageScreen
       canvasRef={canvasRef}
       state={state}
       stage={state.currentStage}
-      languageLabel={state.currentStage ? LANGUAGE_LABEL[state.currentStage.language] : ''}
+      languageLabel={LANGUAGE_LABEL[state.currentStage.language]}
     />
   );
 }

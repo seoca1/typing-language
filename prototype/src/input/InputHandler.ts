@@ -109,7 +109,7 @@ export abstract class BaseInputHandler implements InputHandler {
     return this.currentResult();
   }
 
-  protected currentResult(): MatchResult {
+  currentResult(): MatchResult {
     return {
       completed: false,
       accuracy: this.getAccuracy(),

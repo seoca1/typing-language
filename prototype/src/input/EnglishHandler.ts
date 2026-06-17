@@ -11,6 +11,25 @@ import type { MatchResult } from '../types.js';
 export class EnglishHandler extends BaseInputHandler {
   readonly language = 'en' as const;
 
+  handleKey(event: KeyboardEvent): MatchResult {
+    // IME 입력 무시 (한글 키보드 모드)
+    if (event.isComposing) {
+      return this.currentResult();
+    }
+
+    // 영어 모드에서는 ASCII만 허용 (한글 차단)
+    if (event.key.length === 1) {
+      const code = event.key.charCodeAt(0);
+      // ASCII 범위가 아니면 무시
+      if (code < 32 || code > 126) {
+        console.warn('[English] Non-ASCII key ignored:', event.key, 'code:', code);
+        return this.currentResult();
+      }
+    }
+
+    return super.handleKey(event);
+  }
+
   protected match(): MatchResult {
     if (!this.target) return this.emptyResult();
 
