@@ -14,6 +14,8 @@ import {
 } from '../character/CharacterRenderer.js';
 import { GraphicsConfig } from '../config/graphics.js';
 import type { PoseName } from '../character/CharacterData.js';
+import { setCharacter } from '../character/CharacterSelector.js';
+import { CHARACTER_INFO } from '../config/characterImages.js';
 
 interface CharacterTestProps {
   onBack: () => void;
@@ -26,11 +28,17 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
   const animationFrameRef = useRef<number>(0);
   const lastTickRef = useRef<number>(0);
 
-  const [useSprites, setUseSprites] = useState(GraphicsConfig.USE_SPRITES);
+  const [useSprites, setUseSprites] = useState(true); // Start with sprites enabled
   const [currentPose, setCurrentPose] = useState<PoseName>('idle');
-  const [showKeyboard, setShowKeyboard] = useState(true);
+  const [showKeyboard, setShowKeyboard] = useState(false); // Hide keyboard by default
+  
+  // Emily character info
+  const emilyInfo = CHARACTER_INFO['en-emily'];
 
   useEffect(() => {
+    // Set Emily as the character for testing
+    setCharacter('en-emily');
+    
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -99,22 +107,27 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 24px -apple-system, sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('캐릭터 애니메이션 테스트', width / 2, 40);
+    ctx.fillText('Emily 캐릭터 이미지 테스트', width / 2, 40);
 
-    // Instructions
-    ctx.fillStyle = '#888888';
-    ctx.font = '14px -apple-system, sans-serif';
-    ctx.fillText('아래 버튼으로 포즈를 변경하세요', width / 2, 70);
+    // Character name
+    ctx.fillStyle = '#00d9ff';
+    ctx.font = '16px -apple-system, sans-serif';
+    ctx.fillText(`캐릭터: ${emilyInfo.name} (${emilyInfo.id})`, width / 2, 70);
 
     // Current pose info
-    ctx.fillStyle = '#00d9ff';
-    ctx.font = 'bold 16px -apple-system, sans-serif';
-    ctx.fillText(`현재 포즈: ${getPoseLabel(currentPose)}`, width / 2, height - 40);
+    ctx.fillStyle = '#00ff88';
+    ctx.font = 'bold 18px -apple-system, sans-serif';
+    ctx.fillText(`현재 포즈: ${getPoseLabel(currentPose)}`, width / 2, height - 60);
+
+    // Image status
+    ctx.fillStyle = '#ffaa00';
+    ctx.font = '14px -apple-system, sans-serif';
+    ctx.fillText('AI 생성 이미지 (1024×1536 PNG)', width / 2, height - 40);
 
     // Sprite mode info
     ctx.fillStyle = useSprites ? '#00ff88' : '#ff6b9d';
     ctx.fillText(
-      `렌더링 모드: ${useSprites ? '스프라이트' : '프리미티브'}`,
+      `렌더링: ${useSprites ? 'Emily AI 이미지 (7/7 완성!)' : '프리미티브 (개발용)'}`,
       width / 2,
       height - 15
     );
@@ -179,67 +192,75 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
       
       <div className="character-test-controls">
         <div className="control-group">
-          <h3>포즈 선택</h3>
+          <h3>Emily의 7가지 포즈 (AI 생성 완료!)</h3>
           <div className="button-group">
             <button
               className={currentPose === 'idle' ? 'active' : ''}
               onClick={() => triggerPose('idle')}
+              title="1-idle.png"
             >
-              대기 (Idle)
+              1️⃣ 대기 (Idle)
             </button>
             <button
               className={currentPose === 'wave' ? 'active' : ''}
               onClick={() => triggerPose('wave')}
+              title="2-wave.png"
             >
-              손 흔들기 (Wave)
+              2️⃣ 손 흔들기 (Wave)
             </button>
             <button
               className={currentPose === 'jump' ? 'active' : ''}
               onClick={() => triggerPose('jump')}
+              title="3-jump.png"
             >
-              점프 (Jump)
+              3️⃣ 점프 (Jump)
             </button>
             <button
               className={currentPose === 'clap' ? 'active' : ''}
               onClick={() => triggerPose('clap')}
+              title="4-clap.png"
             >
-              박수 (Clap)
+              4️⃣ 박수 (Clap)
             </button>
             <button
               className={currentPose === 'spin' ? 'active' : ''}
               onClick={() => triggerPose('spin')}
+              title="5-spin.png"
             >
-              회전 (Spin)
+              5️⃣ 회전 (Spin)
             </button>
             <button
               className={currentPose === 'dance' ? 'active' : ''}
               onClick={() => triggerPose('dance')}
+              title="6-dance.png"
             >
-              춤 (Dance)
+              6️⃣ 춤 (Dance)
             </button>
             <button
               className={currentPose === 'pose' ? 'active' : ''}
               onClick={() => triggerPose('pose')}
+              title="7-pose.png"
             >
-              포즈 (Pose)
+              7️⃣ 포즈 (Pose)
             </button>
           </div>
         </div>
 
         <div className="control-group">
-          <h3>렌더링 설정</h3>
+          <h3>렌더링 모드</h3>
           <div className="button-group">
+            <button
+              className={useSprites ? 'active' : ''}
+              onClick={() => setUseSprites(true)}
+              style={{ background: useSprites ? '#00ff88' : undefined }}
+            >
+              ✅ Emily AI 이미지
+            </button>
             <button
               className={!useSprites ? 'active' : ''}
               onClick={() => setUseSprites(false)}
             >
-              프리미티브
-            </button>
-            <button
-              className={useSprites ? 'active' : ''}
-              onClick={() => setUseSprites(true)}
-            >
-              스프라이트
+              🎨 프리미티브 (비교용)
             </button>
           </div>
           <label style={{ display: 'block', marginTop: '10px' }}>
@@ -260,25 +281,38 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
       </div>
 
       <div className="character-test-info">
-        <h3>애니메이션 설명</h3>
+        <h3>Emily AI 생성 이미지 (7/7 완성!)</h3>
         <ul>
-          <li><strong>대기 (Idle):</strong> 기본 대기 상태, 부드러운 호흡 애니메이션</li>
-          <li><strong>손 흔들기 (Wave):</strong> 스테이지 시작 시 인사 동작</li>
-          <li><strong>점프 (Jump):</strong> 작은 점프 - 콤보 5+ 달성 시</li>
-          <li><strong>박수 (Clap):</strong> 완벽한 타이핑 (Perfect) 달성 시</li>
-          <li><strong>회전 (Spin):</strong> 큰 회전 - 콤보 10+ 달성 시</li>
-          <li><strong>춤 (Dance):</strong> 스테이지 클리어 시 승리의 춤</li>
-          <li><strong>포즈 (Pose):</strong> 특별한 승리 포즈</li>
+          <li><strong>1️⃣ 대기 (Idle):</strong> 1-idle.png - 기본 서 있는 자세 (2.6MB)</li>
+          <li><strong>2️⃣ 손 흔들기 (Wave):</strong> 2-wave.png - 반갑게 인사하는 모습 (1.8MB)</li>
+          <li><strong>3️⃣ 점프 (Jump):</strong> 3-jump.png - 신나게 점프하는 모습 (1.6MB)</li>
+          <li><strong>4️⃣ 박수 (Clap):</strong> 4-clap.png - 기쁘게 박수치는 모습 (1.8MB)</li>
+          <li><strong>5️⃣ 회전 (Spin):</strong> 5-spin.png - 빙글빙글 도는 모습 (2.8MB)</li>
+          <li><strong>6️⃣ 춤 (Dance):</strong> 6-dance.png - 춤추는 모습 (2.9MB)</li>
+          <li><strong>7️⃣ 포즈 (Pose):</strong> 7-pose.png - 승리 포즈 (1.7MB)</li>
         </ul>
         
-        <h3>렌더링 모드</h3>
+        <h3>이미지 정보</h3>
         <ul>
-          <li><strong>프리미티브:</strong> Canvas API로 도형 직접 그리기 (경량)</li>
-          <li><strong>스프라이트:</strong> 미리 생성된 이미지 사용 (고품질)</li>
+          <li><strong>생성 도구:</strong> ChatGPT/Grok AI</li>
+          <li><strong>해상도:</strong> 1024×1536 pixels (portrait)</li>
+          <li><strong>형식:</strong> PNG (RGB/RGBA)</li>
+          <li><strong>스타일:</strong> 고품질 아니메 일러스트</li>
+          <li><strong>총 크기:</strong> 15.2MB (7개 이미지)</li>
         </ul>
 
-        <h3>사용 방법</h3>
-        <p>위 버튼을 클릭하여 각 포즈를 확인하고, 렌더링 모드를 전환하여 차이를 비교해보세요.</p>
+        <h3>게임에서 사용될 때</h3>
+        <ul>
+          <li><strong>Wave:</strong> 스테이지 시작 시</li>
+          <li><strong>Jump:</strong> 콤보 5+ 달성 시</li>
+          <li><strong>Clap:</strong> Perfect 타이핑 달성 시</li>
+          <li><strong>Spin:</strong> 콤보 10+ 달성 시</li>
+          <li><strong>Dance/Pose:</strong> 스테이지 클리어 시</li>
+        </ul>
+
+        <h3>테스트 방법</h3>
+        <p>✅ 위 버튼을 클릭하여 Emily의 7가지 AI 생성 이미지를 확인하세요!</p>
+        <p>🎨 "프리미티브" 모드로 전환하면 개발용 도형 렌더링과 비교할 수 있습니다.</p>
       </div>
     </div>
   );
