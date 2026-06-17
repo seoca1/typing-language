@@ -1,10 +1,11 @@
-import type { StageConfig } from '../types.js';
+import type { StageConfig, StageRecord } from '../types.js';
 import { SAMPLE_STAGES, stagesByTier, type StageTier } from '../data/stages.js';
 import { getAllLanguages } from '../language/index.js';
 
 interface MenuProps {
   onStartStage: (stage: StageConfig) => void;
   onShowTutorial?: () => void;
+  stageRecords?: Record<string, StageRecord>;
 }
 
 const TIER_LABELS: Record<StageTier, string> = {
@@ -16,17 +17,40 @@ const TIER_LABELS: Record<StageTier, string> = {
   5: 'Tier 5 · 단락',
 };
 
-function StageCard({ stage, onStart }: { stage: StageConfig; onStart: (s: StageConfig) => void }) {
+function StageCard({
+  stage,
+  onStart,
+  record,
+}: {
+  stage: StageConfig;
+  onStart: (s: StageConfig) => void;
+  record?: StageRecord;
+}) {
+  const stars = record?.stars || 0;
+  const cleared = record?.cleared || false;
+  const bestScore = record?.bestScore || 0;
+
   return (
-    <button className="stage-card" onClick={() => onStart(stage)}>
-      <h3>
-        {stage.name}
-        <span className="tier-badge">T{stage.difficulty}</span>
-      </h3>
+    <button className={`stage-card ${cleared ? 'stage-cleared' : ''}`} onClick={() => onStart(stage)}>
+      <div className="stage-card-header">
+        <h3>
+          {stage.name}
+          <span className="tier-badge">T{stage.difficulty}</span>
+        </h3>
+        {cleared && (
+          <div className="stage-status">
+            <span className="clear-badge">✓</span>
+            <span className="stars">{'⭐'.repeat(stars)}</span>
+          </div>
+        )}
+      </div>
       <p>{stage.description}</p>
-      <small>
-        {stage.wordCount}개 · {stage.id}
-      </small>
+      <div className="stage-footer">
+        <small>{stage.wordCount}개</small>
+        {cleared && bestScore > 0 && (
+          <small className="best-score">최고: {bestScore}점</small>
+        )}
+      </div>
     </button>
   );
 }
@@ -37,12 +61,14 @@ function LanguageSection({
   supportsTier0,
   stages,
   onStart,
+  stageRecords,
 }: {
   code: string;
   label: string;
   supportsTier0: boolean;
   stages: StageConfig[];
   onStart: (s: StageConfig) => void;
+  stageRecords?: Record<string, StageRecord>;
 }) {
   const byTier = stagesByTier(code);
   return (
@@ -56,7 +82,12 @@ function LanguageSection({
           <h3 className="tier-title">{TIER_LABELS[0]}</h3>
           <div className="stage-grid">
             {byTier[0].map((s) => (
-              <StageCard key={s.id} stage={s} onStart={onStart} />
+              <StageCard
+                key={s.id}
+                stage={s}
+                onStart={onStart}
+                record={stageRecords?.[s.id]}
+              />
             ))}
           </div>
         </div>
@@ -69,7 +100,12 @@ function LanguageSection({
             <h3 className="tier-title">{TIER_LABELS[tier]}</h3>
             <div className="stage-grid">
               {tierStages.map((s) => (
-                <StageCard key={s.id} stage={s} onStart={onStart} />
+                <StageCard
+                  key={s.id}
+                  stage={s}
+                  onStart={onStart}
+                  record={stageRecords?.[s.id]}
+                />
               ))}
             </div>
           </div>
@@ -79,7 +115,7 @@ function LanguageSection({
   );
 }
 
-export function Menu({ onStartStage, onShowTutorial }: MenuProps) {
+export function Menu({ onStartStage, onShowTutorial, stageRecords }: MenuProps) {
   const allLanguages = getAllLanguages();
   
   return (
@@ -102,6 +138,7 @@ export function Menu({ onStartStage, onShowTutorial }: MenuProps) {
           supportsTier0={lang.supportsTier0}
           stages={SAMPLE_STAGES}
           onStart={onStartStage}
+          stageRecords={stageRecords}
         />
       ))}
 

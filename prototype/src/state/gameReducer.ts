@@ -45,7 +45,8 @@ export type GameAction =
   | { type: 'ENEMY_DEFEATED'; nextEnemy: Enemy | null; scoreDelta: number; cleared: boolean }
   | { type: 'END_STAGE'; missions: MissionConfig[]; results: { missionId: string; cleared: boolean }[] }
   | { type: 'BACK_TO_MENU' }
-  | { type: 'UPDATE_STATS'; accuracy: number; wpm: number };
+  | { type: 'UPDATE_STATS'; accuracy: number; wpm: number }
+  | { type: 'UPDATE_STAGE_RECORD'; stageId: string; score: number; wpm: number; accuracy: number };
 
 export const initialState: GameState = {
   phase: 'menu',
@@ -173,6 +174,40 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
 
     case 'UPDATE_STATS':
       return { ...state, accuracy: action.accuracy, wpm: action.wpm };
+
+    case 'UPDATE_STAGE_RECORD': {
+      const existing = state.player.stageRecords[action.stageId];
+      const isNewBest = !existing || action.score > existing.bestScore;
+      
+      // Calculate stars based on accuracy and WPM
+      let stars = 0;
+      if (action.accuracy >= 95 && action.wpm >= 60) stars = 3;
+      else if (action.accuracy >= 90 && action.wpm >= 40) stars = 2;
+      else if (action.accuracy >= 80 && action.wpm >= 20) stars = 1;
+      
+      const newRecord = {
+        stageId: action.stageId,
+        cleared: true,
+        stars,
+        bestScore: isNewBest ? action.score : existing.bestScore,
+        bestWpm: Math.max(action.wpm, existing?.bestWpm || 0),
+        bestAccuracy: Math.max(action.accuracy, existing?.bestAccuracy || 0),
+        playCount: (existing?.playCount || 0) + 1,
+        firstClearedAt: existing?.firstClearedAt || Date.now(),
+        lastPlayedAt: Date.now(),
+      };
+      
+      return {
+        ...state,
+        player: {
+          ...state.player,
+          stageRecords: {
+            ...state.player.stageRecords,
+            [action.stageId]: newRecord,
+          },
+        },
+      };
+    }
 
     default:
       return state;

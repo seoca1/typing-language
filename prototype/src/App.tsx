@@ -253,6 +253,16 @@ export function App() {
             const wpm = calculateWpm(completedTexts, elapsed);
             dispatch({ type: 'UPDATE_STATS', accuracy: currentAccuracy, wpm });
 
+            // Update stage record
+            const finalScore = stateRef.current.score;
+            dispatch({
+              type: 'UPDATE_STAGE_RECORD',
+              stageId: stage.id,
+              score: finalScore,
+              wpm: wpm,
+              accuracy: currentAccuracy,
+            });
+
             spawnPopup(fx, cx, cy + 60, `STAGE CLEAR!`, '#00d9ff', 56);
             spawnColorShower(fx, cx, cy + 60, accents, 80);
 
@@ -447,6 +457,7 @@ export function App() {
       <Menu
         onStartStage={handleStartStage}
         onShowTutorial={() => setShowTutorial(true)}
+        stageRecords={state.player.stageRecords}
       />
     );
   }
@@ -469,6 +480,7 @@ export function App() {
       <Menu
         onStartStage={handleStartStage}
         onShowTutorial={() => setShowTutorial(true)}
+        stageRecords={state.player.stageRecords}
       />
     );
   }
