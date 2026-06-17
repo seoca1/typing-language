@@ -31,6 +31,9 @@ export interface InputHandler {
 
   /** 다음 입력해야 할 문자 (가상 키보드 힌트용) */
   getExpectedChar(): string;
+
+  /** 현재 입력이 완료되었는지 확인 (Enter 키 확정용) */
+  checkCompletion(): boolean;
 }
 
 export abstract class BaseInputHandler implements InputHandler {
@@ -122,5 +125,13 @@ export abstract class BaseInputHandler implements InputHandler {
       errors: 0,
       buffer: '',
     };
+  }
+
+  /**
+   * 현재 입력이 완료되었는지 확인 (Enter 키 확정용)
+   */
+  checkCompletion(): boolean {
+    const result = this.match();
+    return result.completed;
   }
 }

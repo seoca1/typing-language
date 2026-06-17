@@ -4,7 +4,7 @@ import { gameReducer, initialState } from './state/gameReducer.js';
 import { saveProgress, loadProgress } from './state/localStorage.js';
 import { createInputHandler } from './input/index.js';
 import type { InputHandler } from './input/index.js';
-import { calculateScore, isDefeated, calculateWpm } from './combat/CombatSystem.js';
+import { calculateScore, calculateWpm } from './combat/CombatSystem.js';
 import {
   advanceStage,
   createStageState,
@@ -169,11 +169,14 @@ export function App() {
         const currentAccuracy = handler.getAccuracy();
         
         console.log('[Enter] buffer:', currentBuffer);
-        console.log('[Enter] acceptedInputs:', enemy.target.acceptedInputs);
-        console.log('[Enter] match:', enemy.target.acceptedInputs.includes(currentBuffer));
+        console.log('[Enter] target:', enemy.target.text);
+        console.log('[Enter] language:', stage.language);
         
-        // 입력한 내용이 정답과 일치하는지 확인
-        if (isDefeated(enemy, currentBuffer, enemy.target.acceptedInputs)) {
+        // InputHandler의 언어별 매칭 로직 사용
+        const isCompleted = handler.checkCompletion();
+        console.log('[Enter] completed:', isCompleted);
+        
+        if (isCompleted) {
           console.log('[Enter] SUCCESS! Moving to next word.');
           kb?.pressByEvent(event.key);
 
