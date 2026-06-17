@@ -16,7 +16,6 @@ import { Renderer } from './engine/Renderer.js';
 import { Menu } from './ui/Menu.js';
 import { StageScreen } from './ui/StageScreen.js';
 import { ResultScreen } from './ui/ResultScreen.js';
-import { OllamaTest } from './ui/OllamaTest.js';
 import { Tutorial } from './ui/Tutorial.js';
 import {
   createEffectsState,
@@ -317,11 +316,6 @@ export function App() {
       handleStartStage(firstStage);
     }
   };
-
-  // Ollama 테스트 모드 (개발용)
-  if (window.location.search.includes('ollama-test')) {
-    return <OllamaTest />;
-  }
 
   // 튜토리얼 표시
   if (showTutorial) {
