@@ -21,6 +21,7 @@ import {
   USE_EXTERNAL_IMAGES,
   getCharacterForLanguage,
 } from '../config/characterImages.js';
+import { getCurrentCharacter } from './CharacterSelector.js';
 
 const spriteRenderer = new SpriteRenderer();
 
@@ -1209,8 +1210,9 @@ function renderCharacterImage(
   groundY: number,
   now: number,
 ): void {
-  // 언어에 맞는 캐릭터 자동 선택
-  const characterId = getCharacterForLanguage(state.language);
+  // 현재 선택된 캐릭터 사용 (수동 선택 우선)
+  // If no manual selection, use language default
+  const characterId = getCurrentCharacter() || getCharacterForLanguage(state.language);
   const characterSet = CHARACTER_IMAGES[characterId];
   
   if (!characterSet) {

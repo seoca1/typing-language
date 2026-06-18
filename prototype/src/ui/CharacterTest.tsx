@@ -43,6 +43,11 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
     // Set current character for testing
     setCharacter(currentCharacter);
     
+    // IMPORTANT: Update characterRef to use the new character
+    // This forces the renderer to use the new character's images
+    characterRef.current = createInitialCharacterState();
+    console.log(`[CharacterTest] Character state reset for: ${currentCharacter}`);
+    
     // Preload character images immediately
     const characterImages = CHARACTER_IMAGES[currentCharacter];
     if (characterImages) {
