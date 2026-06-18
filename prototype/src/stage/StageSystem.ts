@@ -17,10 +17,77 @@ export interface StageState {
 }
 
 export function createStageState(config: StageConfig, corpus: WordEntry[]): StageState {
-  const filtered = filterCorpus(corpus, config);
-  const selected = selectWords(filtered, config.wordCount);
+  const initialFiltered = filterCorpus(corpus, config);
 
-  const enemies = selected.map((word) => createEnemy(word, config.language));
+  // If we don't have enough entries to fill the requested wordCount,
+  // apply a fallback chain so the player can always progress:
+  //   1. Relax level constraints (widen min/max to any level in same lang+category)
+  //   2. Drop category constraint
+  //   3. Use entire language corpus (any category, any level)
+  // Each step is logged so we can see what was needed to fill the stage.
+  let finalCorpus = initialFiltered;
+  let usedFallback: string | null = null;
+
+  if (finalCorpus.length < config.wordCount) {
+    // Step 1: relax level constraints within same category
+    const relaxedLevel = filterCorpus(corpus, {
+      ...config,
+      corpusFilter: {
+        ...config.corpusFilter,
+        minLevel: undefined,
+        maxLevel: undefined,
+      },
+    });
+    if (relaxedLevel.length >= config.wordCount) {
+      finalCorpus = relaxedLevel;
+      usedFallback = 'relaxed-level';
+    } else if (relaxedLevel.length > finalCorpus.length) {
+      finalCorpus = relaxedLevel;
+      usedFallback = 'relaxed-level-partial';
+    }
+  }
+
+  if (finalCorpus.length < config.wordCount) {
+    // Step 2: drop categories entirely, keep level range
+    const noCategory = filterCorpus(corpus, {
+      ...config,
+      corpusFilter: {
+        minLevel: config.corpusFilter.minLevel,
+        maxLevel: config.corpusFilter.maxLevel,
+      },
+    });
+    if (noCategory.length >= config.wordCount) {
+      finalCorpus = noCategory;
+      usedFallback = 'no-category';
+    } else if (noCategory.length > finalCorpus.length) {
+      finalCorpus = noCategory;
+      usedFallback = 'no-category-partial';
+    }
+  }
+
+  if (finalCorpus.length === 0) {
+    // Step 3: full corpus (any level, any category). Last resort.
+    finalCorpus = corpus;
+    usedFallback = 'full-corpus';
+    console.warn(
+      `[StageSystem] Stage '${config.id}' has no matching corpus entries. ` +
+      `Using full language corpus (${finalCorpus.length} entries). ` +
+      `Consider expanding corpus or relaxing corpusFilter.`,
+    );
+  }
+
+  if (usedFallback) {
+    console.warn(
+      `[StageSystem] Stage '${config.id}' used fallback '${usedFallback}': ` +
+      `requested ${config.wordCount} entries, ` +
+      `filter=${JSON.stringify(config.corpusFilter)}, ` +
+      `matched=${initialFiltered.length}, ` +
+      `after-fallback=${finalCorpus.length}`,
+    );
+  }
+
+  const selectedWords = selectWords(finalCorpus, config.wordCount);
+  const enemies = selectedWords.map((word) => createEnemy(word, config.language));
 
   return {
     config,

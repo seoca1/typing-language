@@ -44,7 +44,7 @@ import {
   tickPose,
   type CharacterState,
 } from './character/CharacterController.js';
-import type { Language, StageConfig } from './types.js';
+import type { Language, StageConfig, WordEntry } from './types.js';
 import { getResponsiveCanvasSize, logDeviceInfo } from './utils/device.js';
 import { OSKeyboardInput } from './ui/OSKeyboardInput.js';
 
@@ -244,25 +244,56 @@ export function App() {
 
   const handleStartStage = (stage: StageConfig) => {
     const langConfig = getLanguage(stage.language);
-    let corpus = langConfig.corpus.words;
-    
-    // Tier 0: Character-specific corpus (if supported)
-    if (langConfig.supportsTier0 && stage.corpusFilter.categories && langConfig.corpus.chars) {
-      const charCategory = stage.corpusFilter.categories[0];
-      if (charCategory in langConfig.corpus.chars) {
-        corpus = langConfig.corpus.chars[charCategory];
+
+    // Build the candidate corpus for this stage.
+    // Tier 0: character-specific corpus (JP only) when available.
+    // Tier 1-2: words.
+    // Tier 3+: sentences (primary) + words (secondary, helps when sentences
+    //          corpus doesn't have enough entries for the filter).
+    // createStageState's fallback chain will pick the best matching subset.
+    let corpus: WordEntry[];
+    const isTier0 =
+      langConfig.supportsTier0 &&
+      stage.corpusFilter.categories &&
+      langConfig.corpus.chars;
+    if (isTier0) {
+      const charCategory = stage.corpusFilter.categories![0];
+      if (charCategory in langConfig.corpus.chars!) {
+        corpus = langConfig.corpus.chars![charCategory];
+      } else {
+        corpus = langConfig.corpus.words;
       }
+    } else if (stage.corpusFilter.minLevel && stage.corpusFilter.minLevel >= 3) {
+      // Tier 3+: sentences first, augmented with words so fallback chain
+      // has more options when a sentence filter matches too few entries
+      // (e.g., en_t_3 wants level 3 travel sentences but EN_SENTENCES has
+      // no level 3 travel entries).
+      const combined = new Set<string>();
+      const merged: WordEntry[] = [];
+      for (const e of langConfig.corpus.sentences) {
+        if (!combined.has(e.id)) {
+          combined.add(e.id);
+          merged.push(e);
+        }
+      }
+      for (const e of langConfig.corpus.words) {
+        if (!combined.has(e.id)) {
+          combined.add(e.id);
+          merged.push(e);
+        }
+      }
+      corpus = merged;
+    } else {
+      corpus = langConfig.corpus.words;
     }
-    
-    // Tier 3+: Use sentence corpus
-    if (stage.corpusFilter.minLevel && stage.corpusFilter.minLevel >= 3) {
-      corpus = langConfig.corpus.sentences;
-    }
-    
+
     const stageState = createStageState(stage, [...corpus]);
     stageStateRef.current = stageState;
     const firstEnemy = getCurrentEnemy(stageState);
-    if (!firstEnemy) return;
+    if (!firstEnemy) {
+      console.error(`[App] Stage '${stage.id}' has no enemies after filtering`);
+      return;
+    }
     effectsRef.current = createEffectsState();
     resetForNewStage(characterRef.current);
     applyLanguageChange(characterRef.current, stage.language);
