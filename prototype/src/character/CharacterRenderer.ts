@@ -1279,13 +1279,50 @@ function renderCharacterImage(
   offsetX += imageConfig.offsetX || 0;
   offsetY += imageConfig.offsetY || 0;
 
-  // Draw the image
+  // Draw the image with optional frame
   ctx.save();
   ctx.translate(cx + offsetX, groundY + offsetY);
   ctx.rotate(rotation);
 
   const drawWidth = imageConfig.width * scale;
   const drawHeight = imageConfig.height * scale;
+
+  // Frame styling (optional, can be toggled)
+  const useFrame = true; // Set to false to disable frame
+  const frameRadius = 15;
+  const framePadding = 8;
+  
+  if (useFrame) {
+    // Draw frame background with subtle shadow
+    ctx.save();
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+    ctx.shadowBlur = 20;
+    ctx.shadowOffsetY = 5;
+    
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+    ctx.beginPath();
+    ctx.roundRect(
+      -drawWidth / 2 - framePadding,
+      -drawHeight - framePadding,
+      drawWidth + framePadding * 2,
+      drawHeight + framePadding * 2,
+      frameRadius
+    );
+    ctx.fill();
+    ctx.restore();
+    
+    // Clip to rounded rectangle
+    ctx.save();
+    ctx.beginPath();
+    ctx.roundRect(
+      -drawWidth / 2,
+      -drawHeight,
+      drawWidth,
+      drawHeight,
+      frameRadius - framePadding
+    );
+    ctx.clip();
+  }
 
   // Handle sprite sheets (multiple frames)
   if (imageConfig.frames && imageConfig.frames > 1) {
@@ -1314,6 +1351,28 @@ function renderCharacterImage(
       drawWidth,
       drawHeight
     );
+  }
+
+  if (useFrame) {
+    ctx.restore(); // Restore from clip
+    
+    // Draw frame border with glow effect
+    ctx.save();
+    ctx.strokeStyle = 'rgba(0, 217, 255, 0.4)';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'rgba(0, 217, 255, 0.6)';
+    ctx.shadowBlur = 10;
+    
+    ctx.beginPath();
+    ctx.roundRect(
+      -drawWidth / 2,
+      -drawHeight,
+      drawWidth,
+      drawHeight,
+      frameRadius - framePadding
+    );
+    ctx.stroke();
+    ctx.restore();
   }
 
   ctx.restore();
