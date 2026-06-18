@@ -110,7 +110,9 @@ export class Keyboard {
   }
 
   private getQwertyLayout(): KeyDef[][] {
-    return [
+    const isES = this.lang === 'es';
+
+    const baseLayout: KeyDef[][] = [
       [
         { label: '`', display: '`', width: 1 },
         { label: '1', display: '1', width: 1 },
@@ -139,8 +141,8 @@ export class Keyboard {
         { label: 'i', display: 'i', width: 1 },
         { label: 'o', display: 'o', width: 1 },
         { label: 'p', display: 'p', width: 1 },
-        { label: '[', display: '[' + (this.lang === 'es' ? '`´' : ''), width: 1 },
-        { label: ']', display: ']' + (this.lang === 'es' ? '`+' : ''), width: 1 },
+        { label: '[', display: isES ? '´\n[{' : '[', width: 1 },
+        { label: ']', display: isES ? ']\nç}' : ']', width: 1 },
         { label: '\\', display: '\\', width: 1.5 },
       ],
       [
@@ -154,8 +156,8 @@ export class Keyboard {
         { label: 'j', display: 'j', width: 1 },
         { label: 'k', display: 'k', width: 1 },
         { label: 'l', display: 'l', width: 1 },
-        { label: ';', display: ';' + (this.lang === 'es' ? ' ñ' : ''), width: 1 },
-        { label: "'", display: "'" + (this.lang === 'es' ? ' áéíóú' : ''), width: 1 },
+        { label: ';', display: isES ? 'ñ' : ';', width: 1 },
+        { label: "'", display: isES ? 'áéíóú' : "'", width: 1 },
         { label: 'Enter', display: '⏎', width: 2.25 },
       ],
       [
@@ -169,7 +171,7 @@ export class Keyboard {
         { label: 'm', display: 'm', width: 1 },
         { label: ',', display: ',', width: 1 },
         { label: '.', display: '.', width: 1 },
-        { label: '/', display: '/', width: 1 },
+        { label: '/', display: isES ? '¿\n/' : '/', width: 1 },
         { label: 'Shift', display: 'Shift', width: 2.75 },
       ],
       [
@@ -182,6 +184,22 @@ export class Keyboard {
         { label: 'Ctrl', display: 'Ctrl', width: 1.5 },
       ],
     ];
+
+    // ES-only: Add accent row for direct input of á é í ó ú ¿ ¡
+    if (isES) {
+      baseLayout.push([
+        { label: 'á', display: 'á', width: 1 },
+        { label: 'é', display: 'é', width: 1 },
+        { label: 'í', display: 'í', width: 1 },
+        { label: 'ó', display: 'ó', width: 1 },
+        { label: 'ú', display: 'ú', width: 1 },
+        { label: '¿', display: '¿', width: 1 },
+        { label: '¡', display: '¡', width: 1 },
+        { label: 'ñ', display: 'ñ', width: 1 },
+      ]);
+    }
+
+    return baseLayout;
   }
 
   private getKoreanLayout(): KeyDef[][] {

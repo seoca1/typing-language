@@ -54,6 +54,8 @@ export interface WordEntry {
   display: string;
   /** EN: undefined; JP: romaji; ES: undefined */
   romaji?: string;
+  /** KR: 한글 자모 표기 */
+  jamo?: string;
   meaning?: string;
   level: number;
   category?: string;

@@ -40,9 +40,11 @@ export function VirtualKeyboard({ language, onKeyPress, expectedChar }: VirtualK
   const layout = LAYOUTS[language] || LAYOUTS.en;
 
   const handleKeyClick = (key: string) => {
-    const finalKey = shift ? key.toUpperCase() : key;
+    // Spanish: shift disabled (accent row handles accents directly)
+    // Other languages: apply shift
+    const finalKey = shift && language !== 'es' ? key.toUpperCase() : key;
     onKeyPress(finalKey);
-    if (shift) setShift(false); // Auto-unshift after key press
+    if (shift && language !== 'es') setShift(false); // Auto-unshift after key press
   };
 
   const handleBackspace = () => {
