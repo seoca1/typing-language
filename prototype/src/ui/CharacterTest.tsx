@@ -241,7 +241,7 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
       
       <div className="character-test-controls">
         <div className="control-group">
-          <h3>캐릭터 선택</h3>
+          <h3>English 캐릭터 (EN)</h3>
           <div className="button-group">
             <button
               className={currentCharacter === 'en-emily' ? 'active' : ''}
@@ -265,6 +265,36 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
               👩 Sophia (완료 7/7)
             </button>
           </div>
+        </div>
+
+        <div className="control-group">
+          <h3>Spanish 캐릭터 (ES) - Sophia placeholder</h3>
+          <div className="button-group">
+            <button
+              className={currentCharacter === 'es-isabella' ? 'active' : ''}
+              onClick={() => setCurrentCharacter('es-isabella')}
+              style={{ background: currentCharacter === 'es-isabella' ? '#f59e0b' : undefined }}
+            >
+              💃 Isabella (placeholder)
+            </button>
+            <button
+              className={currentCharacter === 'es-carlos' ? 'active' : ''}
+              onClick={() => setCurrentCharacter('es-carlos')}
+              style={{ background: currentCharacter === 'es-carlos' ? '#f59e0b' : undefined }}
+            >
+              🧑 Carlos (placeholder)
+            </button>
+            <button
+              className={currentCharacter === 'es-luna' ? 'active' : ''}
+              onClick={() => setCurrentCharacter('es-luna')}
+              style={{ background: currentCharacter === 'es-luna' ? '#f59e0b' : undefined }}
+            >
+              🎨 Luna (placeholder)
+            </button>
+          </div>
+          <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '0.5rem' }}>
+            ⚠️ ES 캐릭터는 Sophia 이미지를 placeholder로 사용 중. 실제 이미지 생성 후 교체 예정.
+          </p>
         </div>
 
         <div className="control-group">
