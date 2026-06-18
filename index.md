@@ -36,6 +36,7 @@
 - [Systems: Stage](design/systems/stage.md) - **스테이지 진행 / 난이도 곡선**
 - [Systems: Mission](design/systems/mission.md) - **미션 시스템**
 - [Systems: Progression](design/systems/progression.md) - **플레이어 성장 / 메타 진행**
+- [Keyboard Input Design](KEYBOARD_INPUT_DESIGN.md) - **PC + 모바일 OS 키보드 통합 설계 (단일 입력 경로)**
 
 ## 결정 기록 (Decisions)
 - [Index](decisions/README.md) - 모든 ADR 목록

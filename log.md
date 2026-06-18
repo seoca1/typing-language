@@ -1066,3 +1066,61 @@ curl -I https://seoca1.github.io/typing-language/
 - 진행도 내보내기/가져오기
 - 클라우드 동기화
 - 여러 프로필 지원
+
+### [2026-06-18] bugfix | OSKeyboardInput 이중 입력 버그 수정 — 단일 입력 경로 강제
+
+#### 문제점
+OSKeyboardInput 도입 직후, 한 번의 키 입력이 2~3회 처리되는 현상 발견:
+- 글자가 빠르게 중복 입력됨
+- Backspace 한 번에 여러 글자 삭제
+- 정확도(accuracy)가 비정상적으로 낮음
+
+#### 원인 분석
+세 개의 입력 경로가 동시에 같은 이벤트를 처리:
+
+1. `OSKeyboardInput`의 `useEffect`가 등록한 `window.addEventListener('keydown')` — PC 물리 키보드
+2. `OSKeyboardInput`의 `<input onInput={handleInput}>` — 모바일 OS 가상 키보드
+3. `App.tsx`의 `handleOSChar`가 `window.dispatchEvent(new KeyboardEvent('keydown', ...))` 호출
+   - 합성 이벤트가 #1의 window 리스너를 다시 트리거 → 이중 처리
+
+```
+[사용자 키 입력]
+  ├─→ #1: OSKeyboardInput window 리스너 (처리 1)
+  ├─→ #2: <input> onInput (처리 2)
+  └─→ #3: dispatchEvent → #1 리스너 재트리거 (처리 3)
+```
+
+#### 해결: 단일 입력 경로 (Single Source of Truth)
+
+**OSKeyboardInput.tsx 단순화:**
+- `window.addEventListener('keydown', ...)` 제거 → 별도 PC 경로 폐기
+- `onInput={handleInput}` 제거 → 모바일 경로도 input.onKeyDown로 통합
+- `<input onKeyDown>` + `<input onCompositionEnd>` 만 사용
+  - onKeyDown: PC 물리 키보드와 모바일 OS 가상 키보드 모두 발생 (focused input 기준)
+  - onCompositionEnd: 일본어 IME 한자 변환 최종 확정
+
+**App.tsx 직접 호출:**
+- `handleOSChar`가 `window.dispatchEvent()` 대신 `handlerRef.current.handleKey(mockEvent)` 직접 호출
+- 합성 이벤트 디스패치 완전 제거
+- `handleWordComplete`를 useEffect 내부 inline 함수에서 컴포넌트 스코프 함수로 추출 (OSKeyboardInput의 onEnter에서 호출 가능하도록)
+
+#### 새로운 흐름
+```
+[키 입력] → OS/IME → <input> onKeyDown → OSKeyboardInput 핸들러
+  → onChar(char) prop → App.tsx handleOSChar
+  → handlerRef.current.handleKey(mockEvent) 직접 호출
+  → dispatch + 효과
+```
+
+**한 번의 키 입력 = 핸들러 한 번 호출.**
+
+#### 변경 파일
+- `prototype/src/ui/OSKeyboardInput.tsx` — useEffect window 리스너 제거, onInput 제거, 단일 onKeyDown/onCompositionEnd
+- `prototype/src/App.tsx` — handleOSChar/Backspace/Enter가 dispatchEvent 대신 handler 직접 호출, handleWordComplete 추출
+
+#### 테스트 결과
+- ✅ 빌드 성공 (326.26 KB, gzip 96.33 KB)
+- ✅ TypeScript 컴파일 통과
+- ✅ 111개 단위 테스트 통과 (Korean 33 + English 22 + Spanish 20 + SpanishAccent 6 + Japanese 24 + 기타)
+- 🔄 GitHub Pages 자동 배포 진행 중 (2~3분)
+
