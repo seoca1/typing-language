@@ -11,15 +11,21 @@ interface StageScreenProps {
   languageLabel: string;
   canvasWidth?: number;
   canvasHeight?: number;
+  /** Called when the user clicks on the canvas — receives canvas-relative (x, y) */
+  onCanvasClick?: (x: number, y: number) => void;
+  /** Called when the user clicks the Back to Menu button */
+  onBackToMenu?: () => void;
 }
 
-export function StageScreen({ 
-  canvasRef, 
-  state, 
-  stage, 
+export function StageScreen({
+  canvasRef,
+  state,
+  stage,
   languageLabel,
   canvasWidth = 1024,
   canvasHeight = 880,
+  onCanvasClick,
+  onBackToMenu,
 }: StageScreenProps) {
   const audio = getAudioManager();
   const [volume, setVolume] = useState(audio.getVolume());
@@ -37,6 +43,21 @@ export function StageScreen({
     audio.setEnabled(newEnabled);
   };
 
+  /**
+   * Convert a click event on the canvas to canvas-relative coordinates.
+   * The canvas may be CSS-scaled (e.g., responsive layout), so we need to
+   * scale the clientX/clientY by the actual canvas resolution ratio.
+   */
+  const handleCanvasClick = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    if (!onCanvasClick || !canvasRef.current) return;
+    const rect = canvasRef.current.getBoundingClientRect();
+    const scaleX = canvasRef.current.width / rect.width;
+    const scaleY = canvasRef.current.height / rect.height;
+    const x = (e.clientX - rect.left) * scaleX;
+    const y = (e.clientY - rect.top) * scaleY;
+    onCanvasClick(x, y);
+  };
+
   return (
     <div className="stage-screen">
       <canvas
@@ -44,6 +65,8 @@ export function StageScreen({
         width={canvasWidth}
         height={canvasHeight}
         className="game-canvas"
+        onClick={handleCanvasClick}
+        style={{ cursor: onCanvasClick ? 'pointer' : 'default' }}
       />
       <aside className="stage-info">
         <h2>
@@ -103,7 +126,7 @@ export function StageScreen({
             </div>
           )}
         </div>
-        <button onClick={() => window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }))}>
+        <button onClick={onBackToMenu}>
           Back to Menu (Esc)
         </button>
       </aside>

@@ -40,6 +40,8 @@ export class Keyboard {
   private unitW: number;
   private rowH: number;
   private gap: number;
+  /** Total available vertical space; rows auto-shrink to fit */
+  private maxHeight: number;
 
   constructor(
     lang: Language,
@@ -48,6 +50,7 @@ export class Keyboard {
     unitW = 60,
     rowH = 50,
     gap = 4,
+    maxHeight = 260,
   ) {
     this.lang = lang;
     this.layout = lang === 'kr' ? 'korean2set' : 'qwerty';
@@ -56,6 +59,7 @@ export class Keyboard {
     this.unitW = unitW;
     this.rowH = rowH;
     this.gap = gap;
+    this.maxHeight = maxHeight;
     this.build();
   }
 
@@ -85,9 +89,21 @@ export class Keyboard {
 
   private build(): void {
     const layout = this.layout === 'korean2set' ? this.getKoreanLayout() : this.getQwertyLayout();
+
+    // Adaptive rowH: shrink rows when total height would exceed maxHeight
+    // (e.g., Spanish QWERTY + accent row = 6 rows must fit in available space)
+    const rowCount = layout.length;
+    let effectiveRowH = this.rowH;
+    const totalHeight = rowCount * effectiveRowH;
+    if (totalHeight > this.maxHeight && rowCount > 0) {
+      effectiveRowH = Math.floor(this.maxHeight / rowCount);
+      // Clamp to a sensible minimum so keys remain visible/clickable
+      effectiveRowH = Math.max(effectiveRowH, 28);
+    }
+
     layout.forEach((row, rowIdx) => {
       let x = this.originX;
-      const y = this.originY + rowIdx * this.rowH;
+      const y = this.originY + rowIdx * effectiveRowH;
       row.forEach((def) => {
         const w = def.width * this.unitW - this.gap;
         const state: KeyState = {
@@ -97,7 +113,7 @@ export class Keyboard {
           x,
           y,
           w,
-          h: this.rowH - this.gap,
+          h: effectiveRowH - this.gap,
           pressed: false,
           pressTime: 0,
           hinted: false,
@@ -269,6 +285,52 @@ export class Keyboard {
       key.pressed = true;
       key.pressTime = performance.now();
     }
+  }
+
+  /**
+   * Hit-test the keyboard at canvas-relative coordinates.
+   * Returns the key's `label` (e.g., 'a', 'Backspace', 'á', 'ㄱ') if a key
+   * was hit, or null if the click was outside all keys.
+   *
+   * Callers can convert the click event to the actual character using the
+   * language's input conventions (or use the label as-is).
+   */
+  getKeyAt(x: number, y: number): string | null {
+    for (const key of this.keys) {
+      if (x >= key.x && x <= key.x + key.w && y >= key.y && y <= key.y + key.h) {
+        return key.label;
+      }
+    }
+    return null;
+  }
+
+  /** Test helper: returns the bounding rect { x, y, w, h } of a key by label */
+  getKeyBounds(label: string): { x: number; y: number; w: number; h: number } | null {
+    const key = this.keyByLabel.get(label.toLowerCase());
+    if (!key) return null;
+    return { x: key.x, y: key.y, w: key.w, h: key.h };
+  }
+
+  /** Test helper: total height of the keyboard (rows × effective rowH) */
+  getTotalHeight(): number {
+    if (this.keys.length === 0) return 0;
+    const maxY = Math.max(...this.keys.map((k) => k.y + k.h));
+    return maxY - this.originY;
+  }
+
+  /** Test helper: the effective row height after adaptive shrinking */
+  getRowHeight(): number {
+    if (this.keys.length === 0) return this.rowH;
+    return this.keys[0].h + this.gap;
+  }
+
+  /** Test helper: snapshot of all key states (for tests only) */
+  getDebugState(): Array<{ label: string; pressed: boolean; hinted: boolean }> {
+    return this.keys.map((k) => ({
+      label: k.label,
+      pressed: k.pressed,
+      hinted: k.hinted,
+    }));
   }
 
   setHint(label: string | null): void {

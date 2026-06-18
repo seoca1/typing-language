@@ -150,6 +150,9 @@ export function App() {
 
     // Always create a fresh keyboard to match the fresh renderer
     console.log('[App] Creating new Keyboard for language:', state.currentStage.language);
+    // maxHeight = canvas height (880) - keyboard originY (610) - bottom margin (10)
+    // so the keyboard stays fully inside the canvas regardless of layout size
+    // (e.g., Spanish QWERTY + accent row = 6 rows auto-shrinks to fit)
     keyboardRef.current = new Keyboard(
       state.currentStage.language,
       32,
@@ -157,6 +160,7 @@ export function App() {
       60,
       50,
       4,
+      canvas.height - 610 - 10,
     );
     rendererRef.current.setKeyboard(keyboardRef.current);
 
@@ -557,6 +561,49 @@ export function App() {
     dispatch({ type: 'BACK_TO_MENU' });
   };
 
+  /**
+   * Handle mouse click on the canvas-based virtual keyboard.
+   * The click coords are canvas-relative (1024x880). We hit-test against the
+   * keyboard's key rectangles and route to the same OSKeyboardInput handlers.
+   */
+  const handleCanvasClick = (x: number, y: number) => {
+    if (!enabled) return;
+    const keyboard = keyboardRef.current;
+    if (!keyboard) return;
+    const label = keyboard.getKeyAt(x, y);
+    if (!label) return;
+
+    // Visual highlight on the clicked key
+    keyboard.pressByEvent(label);
+
+    // Route to the appropriate OSKeyboardInput handler
+    switch (label) {
+      case 'Backspace':
+        handleOSBackspace();
+        return;
+      case 'Enter':
+        handleOSEnter();
+        return;
+      case 'Space':
+        handleOSChar(' ');
+        return;
+      case 'Tab':
+        handleOSChar('\t');
+        return;
+      case 'Shift':
+      case 'Caps':
+      case 'Ctrl':
+      case 'Cmd':
+      case 'Alt':
+        // Modifier keys — no character produced
+        return;
+      default:
+        // Regular character key (a-z, digits, ES accents, KR jamo, etc.)
+        handleOSChar(label);
+        return;
+    }
+  };
+
   return (
     <>
       <StageScreen
@@ -566,6 +613,8 @@ export function App() {
         languageLabel={LANGUAGE_LABEL[stage.language]}
         canvasWidth={canvasSize.width}
         canvasHeight={canvasSize.height}
+        onCanvasClick={handleCanvasClick}
+        onBackToMenu={handleOSEscape}
       />
       <OSKeyboardInput
         enabled={state.phase === 'stage'}
