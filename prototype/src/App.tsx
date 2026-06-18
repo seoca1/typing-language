@@ -232,6 +232,15 @@ export function App() {
         const isCompleted = handler.checkCompletion();
         console.log('[Enter] completed:', isCompleted);
         
+        if (!isCompleted) {
+          // Not completed - reset current word for retry
+          // This is especially useful for Korean/Japanese IME where composition can get stuck
+          console.log('[Enter] NOT completed - resetting for retry');
+          handler.reset();
+          handler.setTarget(enemy.target);
+          return;
+        }
+        
         if (isCompleted) {
           console.log('[Enter] SUCCESS! Moving to next word.');
           kb?.pressByEvent(event.key);
