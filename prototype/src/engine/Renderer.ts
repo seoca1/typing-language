@@ -155,6 +155,18 @@ export class Renderer {
     const cx = this.width / 2;
     const cy = 290;
 
+    // Auto-shrink font for long text (sentences)
+    // Short words: 52px, Long sentences: down to 18px
+    const maxWidth = this.width - 80; // 40px padding on each side
+    let fontSize = 52;
+    this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
+    let textWidth = this.ctx.measureText(text).width;
+    while (textWidth > maxWidth && fontSize > 16) {
+      fontSize -= 2;
+      this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
+      textWidth = this.ctx.measureText(text).width;
+    }
+
     this.ctx.save();
     this.ctx.translate(cx, cy);
 
@@ -162,7 +174,6 @@ export class Renderer {
     this.ctx.shadowColor = '#e94560';
     this.ctx.shadowBlur = 20 * glowIntensity;
     this.ctx.fillStyle = '#ffffff';
-    this.ctx.font = 'bold 52px -apple-system, sans-serif';
     this.ctx.textAlign = 'center';
     this.ctx.fillText(text, 0, 0);
     this.ctx.shadowBlur = 0;
@@ -230,13 +241,28 @@ export class Renderer {
     if (!state.currentEnemy) return;
     const targetText = state.currentEnemy.target.text;
     const buffer = state.buffer;
-    const charWidth = 22;
+
+    // Auto-fit character width based on text length
+    // Short: 34px font, 22px charWidth. Long sentences: shrink dynamically.
+    const maxWidth = this.width - 80; // 40px padding on each side
+    let charWidth = 22;
+    const totalWidth = targetText.length * charWidth;
+    if (totalWidth > maxWidth) {
+      charWidth = Math.max(10, Math.floor(maxWidth / targetText.length));
+    }
+
+    // Adjust font size based on charWidth
+    let fontSize = 34;
+    if (charWidth < 22) {
+      fontSize = Math.max(14, Math.floor(34 * (charWidth / 22)));
+    }
+
     const startX = this.width / 2 - (targetText.length * charWidth) / 2;
     const baseY = 500;
     const now = Date.now();
     const recent = now - state.lastHitTime < 220;
 
-    this.ctx.font = 'bold 34px ui-monospace, monospace';
+    this.ctx.font = `bold ${fontSize}px ui-monospace, monospace`;
     this.ctx.textAlign = 'center';
 
     for (let i = 0; i < targetText.length; i++) {
