@@ -238,20 +238,34 @@ export class KoreanHandler extends BaseInputHandler {
         p.lead = c;
         p.vowel = null;
         p.trail = null;
+      } else if (this.tryCompoundVowelInsertion(c)) {
+        // 복모음 자동 삽입 성공 (예: ㅗ+ㄴ → ㅘ+ㄴ for "관")
+        // (tryCompoundVowelInsertion에서 p.vowel을 변경하고 종성 추가함)
       } else {
         p.trail = c;
       }
       return;
     }
 
-    // 종성이 이미 있을 때 → 겹받침 시도
+    // 종성이 이미 있을 때 →
+    // 1. 먼저 타겟 기반으로 새 초성으로 시작해야 하는지 확인
+    //    (예: "박물관"에서 ㄹ 종성 + ㄱ은 종성 ㄺ이 아닌 새 초성 ㄱ)
+    if (this.shouldStartNewSyllable(c)) {
+      this.syllables.push(composeSyllable(p.lead, p.vowel, p.trail));
+      p.lead = c;
+      p.vowel = null;
+      p.trail = null;
+      return;
+    }
+
+    // 2. 겹받침 시도 (예: ㄱ + ㅅ = ㄳ)
     const compoundTrail = COMPOUND_TRAILING[p.trail + c];
     if (compoundTrail) {
       p.trail = compoundTrail;
       return;
     }
 
-    // 현재 음절 완성, 새 음절 시작
+    // 3. 현재 음절 완성, 새 음절 시작
     this.syllables.push(composeSyllable(p.lead, p.vowel, p.trail));
     p.lead = c;
     p.vowel = null;
@@ -260,7 +274,12 @@ export class KoreanHandler extends BaseInputHandler {
 
   /**
    * 다음 자음이 새 음절의 초성으로 시작해야 하는지 판단
-   * 타겟 문자열과 비교하여 적응적으로 결정
+   *
+   * 타겟 문자열의 다음 음절 초성을 분해하여 직접 비교.
+   * 종성 후보 consonant으로 만든 음절이 타겟의 다음 글자와 일치하면 종성으로 추가,
+   * 일치하지 않으면 새 초성으로 시작.
+   *
+   * 박물관 입력에서 "물관" 처리 시, ㄹ 종성 + ㄱ 입력을 ㄺ이 아닌 새 초성으로 분리.
    */
   private shouldStartNewSyllable(consonant: string): boolean {
     if (!this.target) return false;
@@ -268,14 +287,99 @@ export class KoreanHandler extends BaseInputHandler {
     const p = this.pending;
     if (!p.lead || !p.vowel) return false;
 
-    // 현재 음절을 종성 없이 완성한 경우와 종성 있이 완성한 경우를 모두 시뮬레이션
-    const withoutTrailing = this.syllables.join('') + composeSyllable(p.lead, p.vowel, null);
-    const withTrailing = this.syllables.join('') + composeSyllable(p.lead, p.vowel, consonant);
-
+    const syllablesStr = this.syllables.join('');
     const target = this.target.text;
 
-    // 종성 없이 완성한 경우가 타겟의 prefix라면, 새 음절 시작
-    if (target.startsWith(withoutTrailing) && !target.startsWith(withTrailing)) {
+    if (!p.trail) {
+      // 종성이 없는 경우: 새 자음이 종성이 될지 새 초성이 될지 결정
+      const withNewTrail = syllablesStr + composeSyllable(p.lead, p.vowel, consonant);
+      const withoutNewTrail = syllablesStr + composeSyllable(p.lead, p.vowel, null);
+
+      // 종성으로 추가했을 때 target과 일치하면 종성으로 추가
+      if (target.startsWith(withNewTrail)) {
+        return false;
+      }
+
+      // 종성 없이 현재 상태가 target과 일치하면 새 초성으로 분리
+      if (target.startsWith(withoutNewTrail)) {
+        return true;
+      }
+
+      // 둘 다 안 맞으면 (defensive) 종성으로 추가
+      return false;
+    }
+
+    // 종성이 이미 있는 경우: 새 자음이 겹받침이 될지 새 초성이 될지 결정
+    const currentDisplay = syllablesStr + composeSyllable(p.lead, p.vowel, p.trail);
+
+    // 현재 표시가 target의 prefix가 아니면 새 초성으로 분리하지 않음
+    // (예: "넓다"의 ㄹ+ㅂ → ㄼ로 결합해야 하는 경우)
+    if (!target.startsWith(currentDisplay)) {
+      return false;
+    }
+
+    const nextIdx = currentDisplay.length;
+    if (nextIdx >= target.length) {
+      // Target 끝: 종성으로 결합 (겹받침 가능하면)
+      return false;
+    }
+
+    // Target의 다음 글자가 새 자음을 초성으로 가지는지 확인
+    // (예: "박물관"의 "물관" - ㄹ 종성 다음 ㄱ이 관의 초성)
+    const nextChar = target[nextIdx];
+    const nextJamo = decomposeSyllable(nextChar);
+    if (nextJamo.length > 0 && nextJamo[0] === consonant) {
+      return true;
+    }
+
+    // 새 자음이 target의 다음 글자 초성과 다르면 겹받침으로 결합
+    return false;
+  }
+
+  /**
+   * Smart IME-style compound vowel insertion
+   *
+   * 사용자가 ㄱ+ㅗ+ㄴ 처럼 입력했을 때 자동으로 ㄱ+ㅘ+ㄴ (관)으로 변환.
+   * 종성 consonant이 추가됐을 때 target의 다음 글자가 같은 초성+복합모음+같은 종성
+   * 조합을 가지고 있다면, 현재 모음을 복합 모음으로 변환하고 종성을 추가.
+   *
+   * 일반적인 케이스:
+   * - ㅗ + ㄴ → ㅘ + ㄴ (관, 단, 안...)
+   * - ㅜ + ㄴ → ㅝ + ㄴ (권, 둔, 문...)
+   * - ㅡ + ㄴ → ㅢ + ㄴ (슨, 근, 늘...)
+   */
+  private tryCompoundVowelInsertion(c: string): boolean {
+    if (!this.target) return false;
+
+    const p = this.pending;
+    if (!p.lead || !p.vowel) return false;
+
+    const syllablesStr = this.syllables.join('');
+    const target = this.target.text;
+
+    // Common compound vowel pairs: base vowel -> (additional vowel, compound vowel)
+    const compoundPairs: Record<string, [string, string]> = {
+      'ㅗ': ['ㅏ', 'ㅘ'],  // ㄱ+ㅗ+ㄴ → ㄱ+ㅘ+ㄴ (관)
+      'ㅜ': ['ㅓ', 'ㅝ'],  // ㄱ+ㅜ+ㄴ → ㄱ+ㅝ+ㄴ (권)
+      'ㅡ': ['ㅣ', 'ㅢ'],  // ㄱ+ㅡ+ㄴ → ㄱ+ㅢ+ㄴ (슨)
+      'ㅚ': ['ㅣ', 'ㅚ'],  // no change for ㅚ
+      'ㅟ': ['ㅣ', 'ㅟ'],  // no change for ㅟ
+    };
+
+    const pair = compoundPairs[p.vowel];
+    if (!pair) return false;
+
+    const [, compoundVowel] = pair;
+
+    // 현재 모음을 복합 모음으로 변환했을 때의 음절을 계산
+    const compoundSyllable = composeSyllable(p.lead, compoundVowel, c);
+
+    // syllablesStr + compoundSyllable이 target의 다음 위치와 일치하는지 확인
+    const targetPos = syllablesStr.length;
+    if (targetPos < target.length && target[targetPos] === compoundSyllable) {
+      // 변환 적용: 모음을 복합 모음으로, 종성으로 추가
+      p.vowel = compoundVowel;
+      p.trail = c;
       return true;
     }
 

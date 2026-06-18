@@ -538,4 +538,167 @@ describe('KoreanHandler', () => {
       expect(handler.getAccuracy()).toBe(100);
     });
   });
+
+  describe('Multi-syllable words with ㄹ trail', () => {
+    it('should complete "박물관" (박 + 물 + 관)', () => {
+      const target: Target = {
+        text: '박물관',
+        acceptedInputs: ['bangmulgwan'],
+        level: 1,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      // 박 (ㅂ +ㅏ + ㄱ)
+      handler.handleKey(mockEvent('ㅂ'));
+      handler.handleKey(mockEvent('ㅏ'));
+      handler.handleKey(mockEvent('ㄱ'));
+      // 물 (ㅁ +ㅜ + ㄹ)
+      handler.handleKey(mockEvent('ㅁ'));
+      handler.handleKey(mockEvent('ㅜ'));
+      handler.handleKey(mockEvent('ㄹ'));
+      // 관 (ㄱ +ㅗ + ㄴ) — 스마트 변환으로 ㄱ+ㅗ+ㅏ+ㄴ = 관
+      // 종성 ㄹ 다음 ㄱ은 새 초성이어야 함
+      handler.handleKey(mockEvent('ㄱ'));
+      handler.handleKey(mockEvent('ㅗ'));
+      handler.handleKey(mockEvent('ㄴ'));
+
+      expect(handler.getBuffer()).toBe('박물관');
+      expect(handler.checkCompletion()).toBe(true);
+    });
+
+    it('should complete "한국어" (한 + 국 + 어)', () => {
+      const target: Target = {
+        text: '한국어',
+        acceptedInputs: ['hangugeo'],
+        level: 1,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      // 한 (ㅎ +ㅏ + ㄴ)
+      handler.handleKey(mockEvent('ㅎ'));
+      handler.handleKey(mockEvent('ㅏ'));
+      handler.handleKey(mockEvent('ㄴ'));
+      // 국 (ㄱ +ㅜ + ㄱ) — 종성 ㄴ 다음 ㄱ은 새 초성
+      handler.handleKey(mockEvent('ㄱ'));
+      handler.handleKey(mockEvent('ㅜ'));
+      handler.handleKey(mockEvent('ㄱ'));
+      // 어 (ㅇ +ㅓ) — 단독 자음+모음이라 스마트 변환 없음
+      handler.handleKey(mockEvent('ㅇ'));
+      handler.handleKey(mockEvent('ㅓ'));
+
+      expect(handler.getBuffer()).toBe('한국어');
+      expect(handler.checkCompletion()).toBe(true);
+    });
+
+    it('should complete "읽다" with ㄺ (ㄹ+ㄱ) compound trail', () => {
+      // This case SHOULD use ㄺ as trail because "읽" syllable has ㄹ+ㄱ
+      const target: Target = {
+        text: '읽다',
+        acceptedInputs: ['ikda'],
+        level: 2,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      // 읽 (ㅇ+ㅣ+ㄺ = ㄹ+ㄱ) — ㄹ 종성 + ㄱ = ㄺ
+      handler.handleKey(mockEvent('ㅇ'));
+      handler.handleKey(mockEvent('ㅣ'));
+      handler.handleKey(mockEvent('ㄹ'));
+      handler.handleKey(mockEvent('ㄱ'));
+      // 다 (ㄷ +ㅏ)
+      handler.handleKey(mockEvent('ㄷ'));
+      handler.handleKey(mockEvent('ㅏ'));
+
+      expect(handler.getBuffer()).toBe('읽다');
+      expect(handler.checkCompletion()).toBe(true);
+    });
+
+    it('should handle smart compound vowel insertion for 단 (ㄷ+ㅏ+ㄴ)', () => {
+      // 단 = ㄷ+ㅏ+ㄴ, simple input
+      const target: Target = {
+        text: '단',
+        acceptedInputs: ['dan'],
+        level: 1,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      handler.handleKey(mockEvent('ㄷ'));
+      handler.handleKey(mockEvent('ㅏ'));
+      handler.handleKey(mockEvent('ㄴ'));
+
+      expect(handler.getBuffer()).toBe('단');
+      expect(handler.checkCompletion()).toBe(true);
+    });
+
+    it('should handle word with ㄹ batchim after ㅜ (권 via smart)', () => {
+      // 권 = ㄱ+ㅝ+ㄴ (ㅝ = ㅜ+ㅓ), smart conversion needed for ㄱ+ㅜ+ㄴ
+      const target: Target = {
+        text: '권',
+        acceptedInputs: ['gwon'],
+        level: 2,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      // ㄱ +ㅜ + ㄴ → smart insert ㅓ to form ㄱ+ㅝ+ㄴ = 권
+      handler.handleKey(mockEvent('ㄱ'));
+      handler.handleKey(mockEvent('ㅜ'));
+      handler.handleKey(mockEvent('ㄴ'));
+
+      expect(handler.getBuffer()).toBe('권');
+      expect(handler.checkCompletion()).toBe(true);
+    });
+
+    it('should handle word with ㄹ batchim after ㅡ (슨 via smart)', () => {
+      // 슨 = ㅅ+ㅢ+ㄴ (ㅢ = ㅡ+ㅣ), smart conversion needed
+      const target: Target = {
+        text: '슨',
+        acceptedInputs: ['seun'],
+        level: 2,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      // ㅅ +ㅡ + ㄴ → smart insert ㅣ to form ㅅ+ㅢ+ㄴ = 슨
+      handler.handleKey(mockEvent('ㅅ'));
+      handler.handleKey(mockEvent('ㅡ'));
+      handler.handleKey(mockEvent('ㄴ'));
+
+      expect(handler.getBuffer()).toBe('슨');
+      expect(handler.checkCompletion()).toBe(true);
+    });
+  });
 });
