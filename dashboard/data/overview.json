@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-06-18T18:32:00.518376",
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "native": "English",
+      "flag": "🇺🇸",
+      "color": "#3b82f6",
+      "stats": {
+        "stages": 10,
+        "corpus_total": 74,
+        "vocab_wiki": 0,
+        "expressions_wiki": 0,
+        "culture_wiki": 0,
+        "sources_wiki": 0,
+        "study_plan_wiki": 0,
+        "raw_sources": 0,
+        "coverage_percent": 77.1,
+        "gaps": 2
+      }
+    },
+    {
+      "code": "jp",
+      "name": "Japanese",
+      "native": "日本語",
+      "flag": "🇯🇵",
+      "color": "#ec4899",
+      "stats": {
+        "stages": 12,
+        "corpus_total": 125,
+        "vocab_wiki": 0,
+        "expressions_wiki": 0,
+        "culture_wiki": 0,
+        "sources_wiki": 0,
+        "study_plan_wiki": 0,
+        "raw_sources": 0,
+        "coverage_percent": 89.9,
+        "gaps": 3
+      }
+    },
+    {
+      "code": "es",
+      "name": "Spanish",
+      "native": "Español",
+      "flag": "🇪🇸",
+      "color": "#f59e0b",
+      "stats": {
+        "stages": 9,
+        "corpus_total": 79,
+        "vocab_wiki": 36,
+        "expressions_wiki": 22,
+        "culture_wiki": 10,
+        "sources_wiki": 4,
+        "study_plan_wiki": 2,
+        "raw_sources": 4,
+        "coverage_percent": 97.5,
+        "gaps": 3
+      }
+    },
+    {
+      "code": "kr",
+      "name": "Korean",
+      "native": "한국어",
+      "flag": "🇰🇷",
+      "color": "#10b981",
+      "stats": {
+        "stages": 9,
+        "corpus_total": 1,
+        "vocab_wiki": 22,
+        "expressions_wiki": 0,
+        "culture_wiki": 0,
+        "sources_wiki": 0,
+        "study_plan_wiki": 0,
+        "raw_sources": 1,
+        "coverage_percent": 1.2,
+        "gaps": 5
+      }
+    }
+  ],
+  "totals": {
+    "stages": 40,
+    "corpus": 279,
+    "wiki_materials": 96,
+    "raw_sources": 5,
+    "vocab_words": 58,
+    "expressions": 22,
+    "culture": 10
+  },
+  "tiers": {
+    "0": 3,
+    "1": 10,
+    "2": 8,
+    "3": 8,
+    "4": 7,
+    "5": 4
+  }
+}

@@ -1,0 +1,563 @@
+{
+  "code": "jp",
+  "meta": {
+    "name": "Japanese",
+    "native": "日本語",
+    "flag": "🇯🇵",
+    "color": "#ec4899"
+  },
+  "wiki": {
+    "sources": [],
+    "vocabulary": [],
+    "expressions": [],
+    "culture": [],
+    "study_plan": []
+  },
+  "raw_sources": [],
+  "raw_sources_count": 0,
+  "corpus": {
+    "total": 125,
+    "by_level": {
+      "4": 4,
+      "5": 121
+    },
+    "by_category": {
+      "kanji_basic": 42,
+      "number": 20,
+      "greeting": 15,
+      "place": 12,
+      "color": 8,
+      "food": 6,
+      "person": 6,
+      "object": 6,
+      "time": 6,
+      "animal": 4
+    },
+    "by_type": {
+      "words": 0,
+      "sentences": 125,
+      "chars": 2
+    },
+    "words_sample": [],
+    "sentences_sample": [
+      {
+        "id": "jp_001",
+        "display": "こんにちは",
+        "romaji": "konnichiwa",
+        "meaning": "hello",
+        "level": 5,
+        "category": "greeting"
+      },
+      {
+        "id": "jp_001",
+        "display": "こんにちは",
+        "romaji": "konnichiwa",
+        "meaning": "hello",
+        "level": 5,
+        "category": "greeting"
+      },
+      {
+        "id": "jp_002",
+        "display": "おはよう",
+        "romaji": "ohayou",
+        "meaning": "good morning",
+        "level": 5,
+        "category": "greeting"
+      },
+      {
+        "id": "jp_003",
+        "display": "こんばんは",
+        "romaji": "konbanwa",
+        "meaning": "good evening",
+        "level": 5,
+        "category": "greeting"
+      },
+      {
+        "id": "jp_004",
+        "display": "ありがとう",
+        "romaji": "arigatou",
+        "meaning": "thank you",
+        "level": 5,
+        "category": "greeting"
+      },
+      {
+        "id": "jp_005",
+        "display": "さようなら",
+        "romaji": "sayounara",
+        "meaning": "goodbye",
+        "level": 5,
+        "category": "greeting"
+      },
+      {
+        "id": "jp_006",
+        "display": "すみません",
+        "romaji": "sumimasen",
+        "meaning": "excuse me",
+        "level": 5,
+        "category": "greeting"
+      },
+      {
+        "id": "jp_007",
+        "display": "いち",
+        "romaji": "ichi",
+        "meaning": "one",
+        "level": 5,
+        "category": "number"
+      },
+      {
+        "id": "jp_008",
+        "display": "に",
+        "romaji": "ni",
+        "meaning": "two",
+        "level": 5,
+        "category": "number"
+      },
+      {
+        "id": "jp_009",
+        "display": "さん",
+        "romaji": "san",
+        "meaning": "three",
+        "level": 5,
+        "category": "number"
+      }
+    ],
+    "chars_sample": [
+      {
+        "id": "jp_023",
+        "display": "さかな",
+        "romaji": "sakana",
+        "meaning": "fish",
+        "level": 5,
+        "category": "food"
+      },
+      {
+        "id": "jp_023",
+        "display": "さかな",
+        "romaji": "sakana",
+        "meaning": "fish",
+        "level": 5,
+        "category": "food"
+      }
+    ],
+    "categories": [
+      "animal",
+      "color",
+      "food",
+      "greeting",
+      "kanji_basic",
+      "number",
+      "object",
+      "person",
+      "place",
+      "time"
+    ],
+    "levels": [
+      4,
+      5
+    ]
+  },
+  "stages": [
+    {
+      "id": "jp_0_1",
+      "tier": 0,
+      "stage_num": 1,
+      "tier_label": "Tier 0 · 문자",
+      "name": "ひらがな (기본 46자)",
+      "description": "히라가나 기본 문자",
+      "word_count": 20,
+      "difficulty": 1,
+      "corpus_type": "chars",
+      "corpus_filter": {
+        "categories": [
+          "hiragana_basic"
+        ]
+      }
+    },
+    {
+      "id": "jp_0_2",
+      "tier": 0,
+      "stage_num": 2,
+      "tier_label": "Tier 0 · 문자",
+      "name": "カタカナ (기본 46자)",
+      "description": "가타카나 기본 문자",
+      "word_count": 20,
+      "difficulty": 1,
+      "corpus_type": "chars",
+      "corpus_filter": {
+        "categories": [
+          "katakana_basic"
+        ]
+      }
+    },
+    {
+      "id": "jp_0_3",
+      "tier": 0,
+      "stage_num": 3,
+      "tier_label": "Tier 0 · 문자",
+      "name": "濁音・拗音",
+      "description": "탁음·반탁음·요음",
+      "word_count": 18,
+      "difficulty": 2,
+      "corpus_type": "chars",
+      "corpus_filter": {
+        "categories": [
+          "hiragana_dakuten",
+          "hiragana_yoon"
+        ]
+      }
+    },
+    {
+      "id": "jp_1_1",
+      "tier": 1,
+      "stage_num": 1,
+      "tier_label": "Tier 1 · 단어",
+      "name": "ひらがな単語",
+      "description": "히라가나 단어 (N5)",
+      "word_count": 10,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "jp_1_2",
+      "tier": 1,
+      "stage_num": 2,
+      "tier_label": "Tier 1 · 단어",
+      "name": "挨拶",
+      "description": "인사 표현",
+      "word_count": 12,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "greeting"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "jp_2_1",
+      "tier": 2,
+      "stage_num": 1,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "漢字入門",
+      "description": "기초 한자 단어",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_2_2",
+      "tier": 2,
+      "stage_num": 2,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "カタカナ語",
+      "description": "가타카나 외래어",
+      "word_count": 10,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "katakana_words"
+        ],
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_3_1",
+      "tier": 3,
+      "stage_num": 1,
+      "tier_label": "Tier 3 · 짧은 문장",
+      "name": "日常会話",
+      "description": "일상 회화 문장",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_3_2",
+      "tier": 3,
+      "stage_num": 2,
+      "tier_label": "Tier 3 · 짧은 문장",
+      "name": "アニメ・ドラマ",
+      "description": "애니·드라마 명대사",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "quotes",
+      "corpus_filter": {
+        "categories": [
+          "quote"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_4_1",
+      "tier": 4,
+      "stage_num": 1,
+      "tier_label": "Tier 4 · 긴 문장",
+      "name": "ニュース見出し",
+      "description": "뉴스 헤드라인",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "news",
+      "corpus_filter": {
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "id": "jp_4_2",
+      "tier": 4,
+      "stage_num": 2,
+      "tier_label": "Tier 4 · 긴 문장",
+      "name": "ビジネスメール",
+      "description": "비즈니스 이메일",
+      "word_count": 6,
+      "difficulty": 4,
+      "corpus_type": "business",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "id": "jp_5_1",
+      "tier": 5,
+      "stage_num": 1,
+      "tier_label": "Tier 5 · 단락",
+      "name": "文学作品",
+      "description": "문학 단락",
+      "word_count": 5,
+      "difficulty": 5,
+      "corpus_type": "passages",
+      "corpus_filter": {
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    }
+  ],
+  "coverage": {
+    "total_stages": 12,
+    "total_corpus": 125,
+    "wiki_materials": 0,
+    "sources": 0,
+    "raw_sources": 0,
+    "stages_by_tier": {
+      "0": 3,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1
+    },
+    "stage_requirements": [
+      {
+        "stage_id": "jp_0_1",
+        "stage_name": "ひらがな (기본 46자)",
+        "tier": 0,
+        "categories": [
+          "hiragana_basic"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 20,
+        "corpus_type": "chars"
+      },
+      {
+        "stage_id": "jp_0_2",
+        "stage_name": "カタカナ (기본 46자)",
+        "tier": 0,
+        "categories": [
+          "katakana_basic"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 20,
+        "corpus_type": "chars"
+      },
+      {
+        "stage_id": "jp_0_3",
+        "stage_name": "濁音・拗音",
+        "tier": 0,
+        "categories": [
+          "hiragana_dakuten",
+          "hiragana_yoon"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 18,
+        "corpus_type": "chars"
+      },
+      {
+        "stage_id": "jp_1_1",
+        "stage_name": "ひらがな単語",
+        "tier": 1,
+        "categories": [],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_1_2",
+        "stage_name": "挨拶",
+        "tier": 1,
+        "categories": [
+          "greeting"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_2_1",
+        "stage_name": "漢字入門",
+        "tier": 2,
+        "categories": [],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_2_2",
+        "stage_name": "カタカナ語",
+        "tier": 2,
+        "categories": [
+          "katakana_words"
+        ],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_3_1",
+        "stage_name": "日常会話",
+        "tier": 3,
+        "categories": [],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "sentences"
+      },
+      {
+        "stage_id": "jp_3_2",
+        "stage_name": "アニメ・ドラマ",
+        "tier": 3,
+        "categories": [
+          "quote"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "quotes"
+      },
+      {
+        "stage_id": "jp_4_1",
+        "stage_name": "ニュース見出し",
+        "tier": 4,
+        "categories": [],
+        "level_range": [
+          4,
+          4
+        ],
+        "word_count": 8,
+        "corpus_type": "news"
+      },
+      {
+        "stage_id": "jp_4_2",
+        "stage_name": "ビジネスメール",
+        "tier": 4,
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          4,
+          4
+        ],
+        "word_count": 6,
+        "corpus_type": "business"
+      },
+      {
+        "stage_id": "jp_5_1",
+        "stage_name": "文学作品",
+        "tier": 5,
+        "categories": [],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 5,
+        "corpus_type": "passages"
+      }
+    ],
+    "gaps": [
+      {
+        "stage_id": "jp_1_1",
+        "stage_name": "ひらがな単語",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": []
+      },
+      {
+        "stage_id": "jp_2_1",
+        "stage_name": "漢字入門",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": []
+      },
+      {
+        "stage_id": "jp_2_2",
+        "stage_name": "カタカナ語",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "katakana_words"
+        ]
+      }
+    ],
+    "coverage_percent": 89.9
+  },
+  "generated_at": "2026-06-18T18:32:00.483865"
+}

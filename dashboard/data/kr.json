@@ -1,0 +1,585 @@
+{
+  "code": "kr",
+  "meta": {
+    "name": "Korean",
+    "native": "한국어",
+    "flag": "🇰🇷",
+    "color": "#10b981"
+  },
+  "wiki": {
+    "sources": [],
+    "vocabulary": [
+      {
+        "name": "annyeonghaseyo",
+        "filename": "annyeonghaseyo.md",
+        "title": "안녕하세요",
+        "size_kb": 1.1,
+        "modified": "2026-06-18T01:47:21.705772",
+        "path": "wiki/Korean/vocabulary/annyeonghaseyo.md"
+      },
+      {
+        "name": "bap",
+        "filename": "bap.md",
+        "title": "밥",
+        "size_kb": 0.5,
+        "modified": "2026-06-18T01:48:16.860912",
+        "path": "wiki/Korean/vocabulary/bap.md"
+      },
+      {
+        "name": "chaeg",
+        "filename": "chaeg.md",
+        "title": "책",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T01:48:23.363028",
+        "path": "wiki/Korean/vocabulary/chaeg.md"
+      },
+      {
+        "name": "chingu",
+        "filename": "chingu.md",
+        "title": "친구",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T01:48:29.184915",
+        "path": "wiki/Korean/vocabulary/chingu.md"
+      },
+      {
+        "name": "daseot",
+        "filename": "daseot.md",
+        "title": "다섯",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T01:49:34.345133",
+        "path": "wiki/Korean/vocabulary/daseot.md"
+      },
+      {
+        "name": "dul",
+        "filename": "dul.md",
+        "title": "둘",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T01:49:09.969826",
+        "path": "wiki/Korean/vocabulary/dul.md"
+      },
+      {
+        "name": "gajog",
+        "filename": "gajog.md",
+        "title": "가족",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T01:48:33.869352",
+        "path": "wiki/Korean/vocabulary/gajog.md"
+      },
+      {
+        "name": "gamsahamnida",
+        "filename": "gamsahamnida.md",
+        "title": "감사합니다",
+        "size_kb": 0.8,
+        "modified": "2026-06-18T01:47:29.463354",
+        "path": "wiki/Korean/vocabulary/gamsahamnida.md"
+      },
+      {
+        "name": "gongbu",
+        "filename": "gongbu.md",
+        "title": "공부",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T01:49:44.118454",
+        "path": "wiki/Korean/vocabulary/gongbu.md"
+      },
+      {
+        "name": "haggyo",
+        "filename": "haggyo.md",
+        "title": "학교",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T01:48:39.141060",
+        "path": "wiki/Korean/vocabulary/haggyo.md"
+      },
+      {
+        "name": "hana",
+        "filename": "hana.md",
+        "title": "하나",
+        "size_kb": 0.6,
+        "modified": "2026-06-18T01:49:01.966015",
+        "path": "wiki/Korean/vocabulary/hana.md"
+      },
+      {
+        "name": "hangug",
+        "filename": "hangug.md",
+        "title": "한국",
+        "size_kb": 0.7,
+        "modified": "2026-06-18T01:47:48.851999",
+        "path": "wiki/Korean/vocabulary/hangug.md"
+      },
+      {
+        "name": "joesonghamnida",
+        "filename": "joesonghamnida.md",
+        "title": "죄송합니다",
+        "size_kb": 0.7,
+        "modified": "2026-06-18T01:47:40.539398",
+        "path": "wiki/Korean/vocabulary/joesonghamnida.md"
+      },
+      {
+        "name": "mannaseo-bangapseumnida",
+        "filename": "mannaseo-bangapseumnida.md",
+        "title": "만나서 반갑습니다",
+        "size_kb": 0.9,
+        "modified": "2026-06-18T01:49:55.009425",
+        "path": "wiki/Korean/vocabulary/mannaseo-bangapseumnida.md"
+      },
+      {
+        "name": "mul",
+        "filename": "mul.md",
+        "title": "물",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T01:48:04.929300",
+        "path": "wiki/Korean/vocabulary/mul.md"
+      },
+      {
+        "name": "naeil",
+        "filename": "naeil.md",
+        "title": "내일",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T01:48:51.899356",
+        "path": "wiki/Korean/vocabulary/naeil.md"
+      },
+      {
+        "name": "net",
+        "filename": "net.md",
+        "title": "넷",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T01:49:27.976691",
+        "path": "wiki/Korean/vocabulary/net.md"
+      },
+      {
+        "name": "oneul",
+        "filename": "oneul.md",
+        "title": "오늘",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T01:48:46.506748",
+        "path": "wiki/Korean/vocabulary/oneul.md"
+      },
+      {
+        "name": "oneul-nalssiga-joayo",
+        "filename": "oneul-nalssiga-joayo.md",
+        "title": "오늘 날씨가 좋아요",
+        "size_kb": 0.6,
+        "modified": "2026-06-18T01:50:02.484816",
+        "path": "wiki/Korean/vocabulary/oneul-nalssiga-joayo.md"
+      },
+      {
+        "name": "sarang",
+        "filename": "sarang.md",
+        "title": "사랑",
+        "size_kb": 0.5,
+        "modified": "2026-06-18T01:47:57.170162",
+        "path": "wiki/Korean/vocabulary/sarang.md"
+      },
+      {
+        "name": "set",
+        "filename": "set.md",
+        "title": "셋",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T01:49:19.580223",
+        "path": "wiki/Korean/vocabulary/set.md"
+      },
+      {
+        "name": "yeol",
+        "filename": "yeol.md",
+        "title": "열",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T01:49:38.522578",
+        "path": "wiki/Korean/vocabulary/yeol.md"
+      }
+    ],
+    "expressions": [],
+    "culture": [],
+    "study_plan": []
+  },
+  "raw_sources": [
+    {
+      "name": "topik1-starter",
+      "filename": "topik1-starter.md",
+      "title": "TOPIK 1 Starter Vocabulary",
+      "size_kb": 3.2,
+      "modified": "2026-06-18T01:47:11.394837",
+      "path": "raw/Korean/topik1-starter.md"
+    }
+  ],
+  "raw_sources_count": 1,
+  "corpus": {
+    "total": 1,
+    "by_level": {
+      "1": 1
+    },
+    "by_category": {
+      "greeting": 1
+    },
+    "by_type": {
+      "words": 1,
+      "sentences": 0,
+      "chars": 0
+    },
+    "words_sample": [
+      {
+        "id": "kr_001",
+        "display": "안녕하세요",
+        "input": "annyeonghaseyo",
+        "meaning": "hello (polite)",
+        "level": 1,
+        "category": "greeting",
+        "source": "[[annyeonghaseyo]]",
+        "note": ""
+      }
+    ],
+    "sentences_sample": [],
+    "chars_sample": [],
+    "categories": [
+      "greeting"
+    ],
+    "levels": [
+      1
+    ]
+  },
+  "stages": [
+    {
+      "id": "kr_1_1",
+      "tier": 1,
+      "stage_num": 1,
+      "tier_label": "Tier 1 · 단어",
+      "name": "첫 인사",
+      "description": "TOPIK 1 인사 표현",
+      "word_count": 8,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "greeting",
+          "basic"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "kr_1_2",
+      "tier": 1,
+      "stage_num": 2,
+      "tier_label": "Tier 1 · 단어",
+      "name": "숫자",
+      "description": "한국어 숫자 1~10",
+      "word_count": 10,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "number"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "kr_1_3",
+      "tier": 1,
+      "stage_num": 3,
+      "tier_label": "Tier 1 · 단어",
+      "name": "가족·음식",
+      "description": "가족·음식 어휘",
+      "word_count": 10,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "family",
+          "food"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "kr_2_1",
+      "tier": 2,
+      "stage_num": 1,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "일상 단어",
+      "description": "TOPIK 2 일상 어휘",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "kr_2_2",
+      "tier": 2,
+      "stage_num": 2,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "시간·장소",
+      "description": "시간·장소 어휘",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "time",
+          "place"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "kr_3_1",
+      "tier": 3,
+      "stage_num": 1,
+      "tier_label": "Tier 3 · 짧은 문장",
+      "name": "짧은 문장",
+      "description": "짧은 문장",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "kr_3_2",
+      "tier": 3,
+      "stage_num": 2,
+      "tier_label": "Tier 3 · 짧은 문장",
+      "name": "자기소개",
+      "description": "자기소개 표현",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "categories": [
+          "introduction"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "kr_4_1",
+      "tier": 4,
+      "stage_num": 1,
+      "tier_label": "Tier 4 · 긴 문장",
+      "name": "뉴스 헤드라인",
+      "description": "뉴스 헤드라인",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "news",
+      "corpus_filter": {
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "id": "kr_5_1",
+      "tier": 5,
+      "stage_num": 1,
+      "tier_label": "Tier 5 · 단락",
+      "name": "한국 문화 단락",
+      "description": "문화·문학 단락",
+      "word_count": 5,
+      "difficulty": 5,
+      "corpus_type": "passages",
+      "corpus_filter": {
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    }
+  ],
+  "coverage": {
+    "total_stages": 9,
+    "total_corpus": 1,
+    "wiki_materials": 22,
+    "sources": 0,
+    "raw_sources": 1,
+    "stages_by_tier": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1
+    },
+    "stage_requirements": [
+      {
+        "stage_id": "kr_1_1",
+        "stage_name": "첫 인사",
+        "tier": 1,
+        "categories": [
+          "greeting",
+          "basic"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "kr_1_2",
+        "stage_name": "숫자",
+        "tier": 1,
+        "categories": [
+          "number"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "kr_1_3",
+        "stage_name": "가족·음식",
+        "tier": 1,
+        "categories": [
+          "family",
+          "food"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "kr_2_1",
+        "stage_name": "일상 단어",
+        "tier": 2,
+        "categories": [],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "kr_2_2",
+        "stage_name": "시간·장소",
+        "tier": 2,
+        "categories": [
+          "time",
+          "place"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "kr_3_1",
+        "stage_name": "짧은 문장",
+        "tier": 3,
+        "categories": [],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "sentences"
+      },
+      {
+        "stage_id": "kr_3_2",
+        "stage_name": "자기소개",
+        "tier": 3,
+        "categories": [
+          "introduction"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "sentences"
+      },
+      {
+        "stage_id": "kr_4_1",
+        "stage_name": "뉴스 헤드라인",
+        "tier": 4,
+        "categories": [],
+        "level_range": [
+          4,
+          4
+        ],
+        "word_count": 8,
+        "corpus_type": "news"
+      },
+      {
+        "stage_id": "kr_5_1",
+        "stage_name": "한국 문화 단락",
+        "tier": 5,
+        "categories": [],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 5,
+        "corpus_type": "passages"
+      }
+    ],
+    "gaps": [
+      {
+        "stage_id": "kr_1_1",
+        "stage_name": "첫 인사",
+        "needed": 8,
+        "available": 1,
+        "shortfall": 7,
+        "categories": [
+          "greeting",
+          "basic"
+        ]
+      },
+      {
+        "stage_id": "kr_1_2",
+        "stage_name": "숫자",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "number"
+        ]
+      },
+      {
+        "stage_id": "kr_1_3",
+        "stage_name": "가족·음식",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "family",
+          "food"
+        ]
+      },
+      {
+        "stage_id": "kr_2_1",
+        "stage_name": "일상 단어",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": []
+      },
+      {
+        "stage_id": "kr_2_2",
+        "stage_name": "시간·장소",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "time",
+          "place"
+        ]
+      }
+    ],
+    "coverage_percent": 1.2
+  },
+  "generated_at": "2026-06-18T18:32:00.518001"
+}

@@ -1,0 +1,494 @@
+{
+  "code": "en",
+  "meta": {
+    "name": "English",
+    "native": "English",
+    "flag": "🇺🇸",
+    "color": "#3b82f6"
+  },
+  "wiki": {
+    "sources": [],
+    "vocabulary": [],
+    "expressions": [],
+    "culture": [],
+    "study_plan": []
+  },
+  "raw_sources": [],
+  "raw_sources_count": 0,
+  "corpus": {
+    "total": 74,
+    "by_level": {
+      "1": 53,
+      "2": 21
+    },
+    "by_category": {
+      "greeting": 12,
+      "adjective": 10,
+      "basic": 9,
+      "number": 8,
+      "time": 8,
+      "color": 6,
+      "animal": 4,
+      "food": 4,
+      "family": 4,
+      "place": 4,
+      "object": 2,
+      "feeling": 2,
+      "restaurant": 1
+    },
+    "by_type": {
+      "words": 74,
+      "sentences": 0,
+      "chars": 0
+    },
+    "words_sample": [
+      {
+        "id": "en_001",
+        "display": "hello",
+        "meaning": "인사",
+        "level": 1,
+        "category": "greeting"
+      },
+      {
+        "id": "en_001",
+        "display": "hello",
+        "meaning": "안녕",
+        "level": 1,
+        "category": "greeting"
+      },
+      {
+        "id": "en_002",
+        "display": "hi",
+        "meaning": "안녕",
+        "level": 1,
+        "category": "greeting"
+      },
+      {
+        "id": "en_003",
+        "display": "goodbye",
+        "meaning": "안녕히",
+        "level": 1,
+        "category": "greeting"
+      },
+      {
+        "id": "en_004",
+        "display": "thanks",
+        "meaning": "고마워",
+        "level": 1,
+        "category": "greeting"
+      },
+      {
+        "id": "en_005",
+        "display": "please",
+        "meaning": "부디",
+        "level": 1,
+        "category": "greeting"
+      },
+      {
+        "id": "en_006",
+        "display": true,
+        "meaning": "네",
+        "level": 1,
+        "category": "basic"
+      },
+      {
+        "id": "en_007",
+        "display": false,
+        "meaning": "아니오",
+        "level": 1,
+        "category": "basic"
+      },
+      {
+        "id": "en_008",
+        "display": "sorry",
+        "meaning": "미안",
+        "level": 1,
+        "category": "basic"
+      },
+      {
+        "id": "en_009",
+        "display": "one",
+        "meaning": "하나",
+        "level": 1,
+        "category": "number"
+      }
+    ],
+    "sentences_sample": [],
+    "chars_sample": [],
+    "categories": [
+      "adjective",
+      "animal",
+      "basic",
+      "color",
+      "family",
+      "feeling",
+      "food",
+      "greeting",
+      "number",
+      "object",
+      "place",
+      "restaurant",
+      "time"
+    ],
+    "levels": [
+      1,
+      2
+    ]
+  },
+  "stages": [
+    {
+      "id": "en_1_1",
+      "tier": 1,
+      "stage_num": 1,
+      "tier_label": "Tier 1 · 단어",
+      "name": "First Words",
+      "description": "가장 흔한 영어 단어 (인사·기본)",
+      "word_count": 10,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "greeting",
+          "basic"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "en_1_2",
+      "tier": 1,
+      "stage_num": 2,
+      "tier_label": "Tier 1 · 단어",
+      "name": "Numbers & Colors",
+      "description": "숫자·색상 12개",
+      "word_count": 12,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "number",
+          "color"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "en_1_3",
+      "tier": 1,
+      "stage_num": 3,
+      "tier_label": "Tier 1 · 단어",
+      "name": "Everyday Objects",
+      "description": "일상 사물 (음식·물건·동물)",
+      "word_count": 10,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food",
+          "object",
+          "animal"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "en_2_1",
+      "tier": 2,
+      "stage_num": 1,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "Phrases & Verbs",
+      "description": "긴 단어·부사·동사",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_2_2",
+      "tier": 2,
+      "stage_num": 2,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "Daily Life",
+      "description": "일상·가족·장소 어휘",
+      "word_count": 15,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "family",
+          "person",
+          "place"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_3_1",
+      "tier": 3,
+      "stage_num": 1,
+      "tier_label": "Tier 3 · 짧은 문장",
+      "name": "Short Sentences",
+      "description": "짧은 문장 (인사·기본)",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_3_2",
+      "tier": 3,
+      "stage_num": 2,
+      "tier_label": "Tier 3 · 짧은 문장",
+      "name": "Travel Phrases",
+      "description": "여행·식당 표현",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "categories": [
+          "question",
+          "restaurant"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_4_1",
+      "tier": 4,
+      "stage_num": 1,
+      "tier_label": "Tier 4 · 긴 문장",
+      "name": "News Headlines",
+      "description": "뉴스 헤드라인·긴 문장",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "news",
+      "corpus_filter": {
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "id": "en_4_2",
+      "tier": 4,
+      "stage_num": 2,
+      "tier_label": "Tier 4 · 긴 문장",
+      "name": "Movie Quotes",
+      "description": "영화 인용구",
+      "word_count": 6,
+      "difficulty": 4,
+      "corpus_type": "quotes",
+      "corpus_filter": {
+        "categories": [
+          "quote"
+        ],
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "id": "en_5_1",
+      "tier": 5,
+      "stage_num": 1,
+      "tier_label": "Tier 5 · 단락",
+      "name": "Literature Excerpts",
+      "description": "문학 발췌·단락",
+      "word_count": 5,
+      "difficulty": 5,
+      "corpus_type": "passages",
+      "corpus_filter": {
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    }
+  ],
+  "coverage": {
+    "total_stages": 10,
+    "total_corpus": 74,
+    "wiki_materials": 0,
+    "sources": 0,
+    "raw_sources": 0,
+    "stages_by_tier": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1
+    },
+    "stage_requirements": [
+      {
+        "stage_id": "en_1_1",
+        "stage_name": "First Words",
+        "tier": 1,
+        "categories": [
+          "greeting",
+          "basic"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_1_2",
+        "stage_name": "Numbers & Colors",
+        "tier": 1,
+        "categories": [
+          "number",
+          "color"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_1_3",
+        "stage_name": "Everyday Objects",
+        "tier": 1,
+        "categories": [
+          "food",
+          "object",
+          "animal"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_2_1",
+        "stage_name": "Phrases & Verbs",
+        "tier": 2,
+        "categories": [],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_2_2",
+        "stage_name": "Daily Life",
+        "tier": 2,
+        "categories": [
+          "family",
+          "person",
+          "place"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 15,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_3_1",
+        "stage_name": "Short Sentences",
+        "tier": 3,
+        "categories": [],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "sentences"
+      },
+      {
+        "stage_id": "en_3_2",
+        "stage_name": "Travel Phrases",
+        "tier": 3,
+        "categories": [
+          "question",
+          "restaurant"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "sentences"
+      },
+      {
+        "stage_id": "en_4_1",
+        "stage_name": "News Headlines",
+        "tier": 4,
+        "categories": [],
+        "level_range": [
+          4,
+          4
+        ],
+        "word_count": 8,
+        "corpus_type": "news"
+      },
+      {
+        "stage_id": "en_4_2",
+        "stage_name": "Movie Quotes",
+        "tier": 4,
+        "categories": [
+          "quote"
+        ],
+        "level_range": [
+          4,
+          4
+        ],
+        "word_count": 6,
+        "corpus_type": "quotes"
+      },
+      {
+        "stage_id": "en_5_1",
+        "stage_name": "Literature Excerpts",
+        "tier": 5,
+        "categories": [],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 5,
+        "corpus_type": "passages"
+      }
+    ],
+    "gaps": [
+      {
+        "stage_id": "en_2_1",
+        "stage_name": "Phrases & Verbs",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": []
+      },
+      {
+        "stage_id": "en_2_2",
+        "stage_name": "Daily Life",
+        "needed": 15,
+        "available": 8,
+        "shortfall": 7,
+        "categories": [
+          "family",
+          "person",
+          "place"
+        ]
+      }
+    ],
+    "coverage_percent": 77.1
+  },
+  "generated_at": "2026-06-18T18:32:00.465877"
+}

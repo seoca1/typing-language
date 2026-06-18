@@ -1,0 +1,1093 @@
+{
+  "code": "es",
+  "meta": {
+    "name": "Spanish",
+    "native": "Español",
+    "flag": "🇪🇸",
+    "color": "#f59e0b"
+  },
+  "wiki": {
+    "sources": [
+      {
+        "name": "como-agua-para-chocolate-cap1",
+        "filename": "como-agua-para-chocolate-cap1.md",
+        "title": "Como agua para chocolate - Capítulo 1 (Enero)",
+        "size_kb": 2.6,
+        "modified": "2026-06-16T18:20:29.771219",
+        "path": "wiki/Spanish/sources/como-agua-para-chocolate-cap1.md"
+      },
+      {
+        "name": "el-ahogado-mas-hermoso-del-mundo",
+        "filename": "el-ahogado-mas-hermoso-del-mundo.md",
+        "title": "El ahogado más hermoso del mundo",
+        "size_kb": 2.0,
+        "modified": "2026-06-16T15:01:28.190236",
+        "path": "wiki/Spanish/sources/el-ahogado-mas-hermoso-del-mundo.md"
+      },
+      {
+        "name": "notes-in-spanish-listening-log",
+        "filename": "notes-in-spanish-listening-log.md",
+        "title": "Notes in Spanish - Listening Log",
+        "size_kb": 1.8,
+        "modified": "2026-06-16T15:01:38.314573",
+        "path": "wiki/Spanish/sources/notes-in-spanish-listening-log.md"
+      },
+      {
+        "name": "notes-in-spanish-planes-de-verano",
+        "filename": "notes-in-spanish-planes-de-verano.md",
+        "title": "Notes in Spanish Advanced - Planes de verano",
+        "size_kb": 1.9,
+        "modified": "2026-06-16T18:21:03.229955",
+        "path": "wiki/Spanish/sources/notes-in-spanish-planes-de-verano.md"
+      }
+    ],
+    "vocabulary": [
+      {
+        "name": "acantilado",
+        "filename": "acantilado.md",
+        "title": "acantilado",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:01:58.394590",
+        "path": "wiki/Spanish/vocabulary/acantilado.md"
+      },
+      {
+        "name": "altivez",
+        "filename": "altivez.md",
+        "title": "altivez",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T15:02:03.933400",
+        "path": "wiki/Spanish/vocabulary/altivez.md"
+      },
+      {
+        "name": "angarillas",
+        "filename": "angarillas.md",
+        "title": "angarillas",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:02:14.485206",
+        "path": "wiki/Spanish/vocabulary/angarillas.md"
+      },
+      {
+        "name": "anhelar",
+        "filename": "anhelar.md",
+        "title": "anhelar",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:21:11.858254",
+        "path": "wiki/Spanish/vocabulary/anhelar.md"
+      },
+      {
+        "name": "animarse",
+        "filename": "animarse.md",
+        "title": "animarse",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T18:22:46.370056",
+        "path": "wiki/Spanish/vocabulary/animarse.md"
+      },
+      {
+        "name": "apuntarse",
+        "filename": "apuntarse.md",
+        "title": "apuntarse",
+        "size_kb": 0.8,
+        "modified": "2026-06-16T18:22:40.577873",
+        "path": "wiki/Spanish/vocabulary/apuntarse.md"
+      },
+      {
+        "name": "bobo",
+        "filename": "bobo.md",
+        "title": "bobo",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T15:02:26.447042",
+        "path": "wiki/Spanish/vocabulary/bobo.md"
+      },
+      {
+        "name": "bochorno",
+        "filename": "bochorno.md",
+        "title": "bochorno",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:22:06.649889",
+        "path": "wiki/Spanish/vocabulary/bochorno.md"
+      },
+      {
+        "name": "botellon",
+        "filename": "botellon.md",
+        "title": "botellón",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T15:03:09.696604",
+        "path": "wiki/Spanish/vocabulary/botellon.md"
+      },
+      {
+        "name": "calor-pegajoso",
+        "filename": "calor-pegajoso.md",
+        "title": "calor pegajoso",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T15:03:16.325119",
+        "path": "wiki/Spanish/vocabulary/calor-pegajoso.md"
+      },
+      {
+        "name": "cebolla",
+        "filename": "cebolla.md",
+        "title": "cebolla",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:21:03.263859",
+        "path": "wiki/Spanish/vocabulary/cebolla.md"
+      },
+      {
+        "name": "chapparon",
+        "filename": "chapparon.md",
+        "title": "chaparrón",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:22:13.818225",
+        "path": "wiki/Spanish/vocabulary/chapparon.md"
+      },
+      {
+        "name": "currar",
+        "filename": "currar.md",
+        "title": "currar",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T15:02:47.549612",
+        "path": "wiki/Spanish/vocabulary/currar.md"
+      },
+      {
+        "name": "desafiar",
+        "filename": "desafiar.md",
+        "title": "desafiar",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:21:18.517318",
+        "path": "wiki/Spanish/vocabulary/desafiar.md"
+      },
+      {
+        "name": "desvalido",
+        "filename": "desvalido.md",
+        "title": "desvalido",
+        "size_kb": 0.8,
+        "modified": "2026-06-16T15:02:08.946910",
+        "path": "wiki/Spanish/vocabulary/desvalido.md"
+      },
+      {
+        "name": "escapada",
+        "filename": "escapada.md",
+        "title": "escapada",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:22:28.035602",
+        "path": "wiki/Spanish/vocabulary/escapada.md"
+      },
+      {
+        "name": "guapo",
+        "filename": "guapo.md",
+        "title": "guapo",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:02:54.923567",
+        "path": "wiki/Spanish/vocabulary/guapo.md"
+      },
+      {
+        "name": "heredar",
+        "filename": "heredar.md",
+        "title": "heredar",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T18:21:03.263876",
+        "path": "wiki/Spanish/vocabulary/heredar.md"
+      },
+      {
+        "name": "mandato",
+        "filename": "mandato.md",
+        "title": "mandato",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:21:58.919999",
+        "path": "wiki/Spanish/vocabulary/mandato.md"
+      },
+      {
+        "name": "masa",
+        "filename": "masa.md",
+        "title": "masa",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:21:41.975939",
+        "path": "wiki/Spanish/vocabulary/masa.md"
+      },
+      {
+        "name": "matriarca",
+        "filename": "matriarca.md",
+        "title": "matriarca",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T18:21:03.263868",
+        "path": "wiki/Spanish/vocabulary/matriarca.md"
+      },
+      {
+        "name": "minucioso",
+        "filename": "minucioso.md",
+        "title": "minucioso",
+        "size_kb": 0.8,
+        "modified": "2026-06-16T15:02:18.834616",
+        "path": "wiki/Spanish/vocabulary/minucioso.md"
+      },
+      {
+        "name": "mola",
+        "filename": "mola.md",
+        "title": "mola",
+        "size_kb": 0.8,
+        "modified": "2026-06-16T15:03:01.341283",
+        "path": "wiki/Spanish/vocabulary/mola.md"
+      },
+      {
+        "name": "molcajete",
+        "filename": "molcajete.md",
+        "title": "molcajete",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T18:21:35.671927",
+        "path": "wiki/Spanish/vocabulary/molcajete.md"
+      },
+      {
+        "name": "pillar",
+        "filename": "pillar.md",
+        "title": "pillar",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:22:33.733047",
+        "path": "wiki/Spanish/vocabulary/pillar.md"
+      },
+      {
+        "name": "ponerse-morado",
+        "filename": "ponerse-morado.md",
+        "title": "ponerse morado",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T15:03:23.226493",
+        "path": "wiki/Spanish/vocabulary/ponerse-morado.md"
+      },
+      {
+        "name": "promontorio",
+        "filename": "promontorio.md",
+        "title": "promontorio",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T15:01:45.090415",
+        "path": "wiki/Spanish/vocabulary/promontorio.md"
+      },
+      {
+        "name": "receta",
+        "filename": "receta.md",
+        "title": "receta",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:21:48.312267",
+        "path": "wiki/Spanish/vocabulary/receta.md"
+      },
+      {
+        "name": "sargazo",
+        "filename": "sargazo.md",
+        "title": "sargazo",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T15:01:52.357645",
+        "path": "wiki/Spanish/vocabulary/sargazo.md"
+      },
+      {
+        "name": "siesta",
+        "filename": "siesta.md",
+        "title": "siesta",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:02:32.598915",
+        "path": "wiki/Spanish/vocabulary/siesta.md"
+      },
+      {
+        "name": "solanera",
+        "filename": "solanera.md",
+        "title": "solanera",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:22:20.890341",
+        "path": "wiki/Spanish/vocabulary/solanera.md"
+      },
+      {
+        "name": "sollozar",
+        "filename": "sollozar.md",
+        "title": "sollozar",
+        "size_kb": 0.9,
+        "modified": "2026-06-16T18:21:04.616789",
+        "path": "wiki/Spanish/vocabulary/sollozar.md"
+      },
+      {
+        "name": "someterse",
+        "filename": "someterse.md",
+        "title": "someterse",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:21:26.808371",
+        "path": "wiki/Spanish/vocabulary/someterse.md"
+      },
+      {
+        "name": "tapas",
+        "filename": "tapas.md",
+        "title": "tapas",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T15:02:40.279833",
+        "path": "wiki/Spanish/vocabulary/tapas.md"
+      },
+      {
+        "name": "tradicion",
+        "filename": "tradicion.md",
+        "title": "tradición",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T18:21:53.431055",
+        "path": "wiki/Spanish/vocabulary/tradicion.md"
+      },
+      {
+        "name": "veranear",
+        "filename": "veranear.md",
+        "title": "veranear",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:22:53.543371",
+        "path": "wiki/Spanish/vocabulary/veranear.md"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "a-fuego-lento",
+        "filename": "a-fuego-lento.md",
+        "title": "a fuego lento",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T18:23:23.342491",
+        "path": "wiki/Spanish/expressions/a-fuego-lento.md"
+      },
+      {
+        "name": "a-ver-si",
+        "filename": "a-ver-si.md",
+        "title": "a ver si (+ indicativo)",
+        "size_kb": 1.4,
+        "modified": "2026-06-16T18:24:23.260053",
+        "path": "wiki/Spanish/expressions/a-ver-si.md"
+      },
+      {
+        "name": "antes-de-que-subjuntivo",
+        "filename": "antes-de-que-subjuntivo.md",
+        "title": "antes de que + subjuntivo",
+        "size_kb": 1.2,
+        "modified": "2026-06-16T18:24:00.868759",
+        "path": "wiki/Spanish/expressions/antes-de-que-subjuntivo.md"
+      },
+      {
+        "name": "cuando-subjuntivo",
+        "filename": "cuando-subjuntivo.md",
+        "title": "cuando + subjuntivo (cláusula temporal)",
+        "size_kb": 2.3,
+        "modified": "2026-06-16T18:23:55.756821",
+        "path": "wiki/Spanish/expressions/cuando-subjuntivo.md"
+      },
+      {
+        "name": "dar-la-voz-de-alarma",
+        "filename": "dar-la-voz-de-alarma.md",
+        "title": "dar la voz de alarma",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:03:39.672902",
+        "path": "wiki/Spanish/expressions/dar-la-voz-de-alarma.md"
+      },
+      {
+        "name": "devolverlo-huerfano-a-las-aguas",
+        "filename": "devolverlo-huerfano-a-las-aguas.md",
+        "title": "devolverlo huérfano a las aguas",
+        "size_kb": 1.2,
+        "modified": "2026-06-16T15:04:04.045217",
+        "path": "wiki/Spanish/expressions/devolverlo-huerfano-a-las-aguas.md"
+      },
+      {
+        "name": "estar-hecho-pedazos",
+        "filename": "estar-hecho-pedazos.md",
+        "title": "estar hecho pedazos",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:23:43.409732",
+        "path": "wiki/Spanish/expressions/estar-hecho-pedazos.md"
+      },
+      {
+        "name": "hombre-pues",
+        "filename": "hombre-pues.md",
+        "title": "hombre pues",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:04:17.358239",
+        "path": "wiki/Spanish/expressions/hombre-pues.md"
+      },
+      {
+        "name": "llorar-como-una-magdalena",
+        "filename": "llorar-como-una-magdalena.md",
+        "title": "llorar como una Magdalena",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T18:23:15.864167",
+        "path": "wiki/Spanish/expressions/llorar-como-una-magdalena.md"
+      },
+      {
+        "name": "no-poder-venir-a-mas",
+        "filename": "no-poder-venir-a-mas.md",
+        "title": "no poder venir a más",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T18:23:36.521430",
+        "path": "wiki/Spanish/expressions/no-poder-venir-a-mas.md"
+      },
+      {
+        "name": "ojala",
+        "filename": "ojala.md",
+        "title": "ojalá (+ subjuntivo)",
+        "size_kb": 1.3,
+        "modified": "2026-06-16T18:24:16.045118",
+        "path": "wiki/Spanish/expressions/ojala.md"
+      },
+      {
+        "name": "para-que-subjuntivo",
+        "filename": "para-que-subjuntivo.md",
+        "title": "para que + subjuntivo",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T18:24:06.634039",
+        "path": "wiki/Spanish/expressions/para-que-subjuntivo.md"
+      },
+      {
+        "name": "pedir-la-mano",
+        "filename": "pedir-la-mano.md",
+        "title": "pedir la mano (de alguien)",
+        "size_kb": 1.2,
+        "modified": "2026-06-16T18:23:06.078685",
+        "path": "wiki/Spanish/expressions/pedir-la-mano.md"
+      },
+      {
+        "name": "que-fuerte",
+        "filename": "que-fuerte.md",
+        "title": "¡qué fuerte!",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:04:30.361144",
+        "path": "wiki/Spanish/expressions/que-fuerte.md"
+      },
+      {
+        "name": "que-pasada",
+        "filename": "que-pasada.md",
+        "title": "¡qué pasada!",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:04:37.323765",
+        "path": "wiki/Spanish/expressions/que-pasada.md"
+      },
+      {
+        "name": "que-va",
+        "filename": "que-va.md",
+        "title": "¡qué va!",
+        "size_kb": 1.3,
+        "modified": "2026-06-16T18:24:31.746238",
+        "path": "wiki/Spanish/expressions/que-va.md"
+      },
+      {
+        "name": "quedar-varado",
+        "filename": "quedar-varado.md",
+        "title": "quedar varado",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:03:33.323963",
+        "path": "wiki/Spanish/expressions/quedar-varado.md"
+      },
+      {
+        "name": "subirse-al-higado",
+        "filename": "subirse-al-higado.md",
+        "title": "subirse al hígado",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T15:03:49.431545",
+        "path": "wiki/Spanish/expressions/subirse-al-higado.md"
+      },
+      {
+        "name": "tener-cara-de-llamarse",
+        "filename": "tener-cara-de-llamarse.md",
+        "title": "tener cara de llamarse",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T15:03:56.874541",
+        "path": "wiki/Spanish/expressions/tener-cara-de-llamarse.md"
+      },
+      {
+        "name": "tener-el-corazon-en-un-puno",
+        "filename": "tener-el-corazon-en-un-puno.md",
+        "title": "tener el corazón en un puño",
+        "size_kb": 1.2,
+        "modified": "2026-06-16T18:23:30.615035",
+        "path": "wiki/Spanish/expressions/tener-el-corazon-en-un-puno.md"
+      },
+      {
+        "name": "vamos-que",
+        "filename": "vamos-que.md",
+        "title": "vamos que",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:04:10.294992",
+        "path": "wiki/Spanish/expressions/vamos-que.md"
+      },
+      {
+        "name": "yo-que-tu",
+        "filename": "yo-que-tu.md",
+        "title": "yo que tú",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:04:23.882769",
+        "path": "wiki/Spanish/expressions/yo-que-tu.md"
+      }
+    ],
+    "culture": [
+      {
+        "name": "cocina-espacio-femenino",
+        "filename": "cocina-espacio-femenino.md",
+        "title": "la cocina como espacio femenino",
+        "size_kb": 1.5,
+        "modified": "2026-06-16T18:24:51.814914",
+        "path": "wiki/Spanish/culture/cocina-espacio-femenino.md"
+      },
+      {
+        "name": "espana-vs-latinoamerica-registro",
+        "filename": "espana-vs-latinoamerica-registro.md",
+        "title": "España vs. Latinoamérica - registro coloquial",
+        "size_kb": 2.0,
+        "modified": "2026-06-16T15:05:03.977725",
+        "path": "wiki/Spanish/culture/espana-vs-latinoamerica-registro.md"
+      },
+      {
+        "name": "mexico-patriarcado-tradicion",
+        "filename": "mexico-patriarcado-tradicion.md",
+        "title": "México - patriarcado y tradición",
+        "size_kb": 1.5,
+        "modified": "2026-06-16T18:25:01.850746",
+        "path": "wiki/Spanish/culture/mexico-patriarcado-tradicion.md"
+      },
+      {
+        "name": "pueblo-costero-funeral",
+        "filename": "pueblo-costero-funeral.md",
+        "title": "pueblo costero y funeral",
+        "size_kb": 1.3,
+        "modified": "2026-06-16T15:04:52.726166",
+        "path": "wiki/Spanish/culture/pueblo-costero-funeral.md"
+      },
+      {
+        "name": "realismo-magico-esquivel",
+        "filename": "realismo-magico-esquivel.md",
+        "title": "realismo mágico (Esquivel)",
+        "size_kb": 1.8,
+        "modified": "2026-06-16T18:24:41.882850",
+        "path": "wiki/Spanish/culture/realismo-magico-esquivel.md"
+      },
+      {
+        "name": "realismo-magico-marquez",
+        "filename": "realismo-magico-marquez.md",
+        "title": "realismo mágico (García Márquez)",
+        "size_kb": 1.1,
+        "modified": "2026-06-16T15:04:45.513801",
+        "path": "wiki/Spanish/culture/realismo-magico-marquez.md"
+      },
+      {
+        "name": "recetario-como-estructura",
+        "filename": "recetario-como-estructura.md",
+        "title": "estructura de recetario (Esquivel)",
+        "size_kb": 1.4,
+        "modified": "2026-06-16T18:25:10.247500",
+        "path": "wiki/Spanish/culture/recetario-como-estructura.md"
+      },
+      {
+        "name": "siesta-tradicion-verano",
+        "filename": "siesta-tradicion-verano.md",
+        "title": "siesta - tradición veraniega",
+        "size_kb": 1.0,
+        "modified": "2026-06-16T15:05:10.063936",
+        "path": "wiki/Spanish/culture/siesta-tradicion-verano.md"
+      },
+      {
+        "name": "subjuntivo-conversacional",
+        "filename": "subjuntivo-conversacional.md",
+        "title": "subjuntivo conversacional",
+        "size_kb": 1.6,
+        "modified": "2026-06-16T18:25:30.230705",
+        "path": "wiki/Spanish/culture/subjuntivo-conversacional.md"
+      },
+      {
+        "name": "verano-espana-tradiciones",
+        "filename": "verano-espana-tradiciones.md",
+        "title": "verano y vacaciones en España",
+        "size_kb": 1.3,
+        "modified": "2026-06-16T18:25:20.484406",
+        "path": "wiki/Spanish/culture/verano-espana-tradiciones.md"
+      }
+    ],
+    "study_plan": [
+      {
+        "name": "blog-output",
+        "filename": "blog-output.md",
+        "title": "Salida a Blog y Homepage - 블로그/홈페이지 출력 가이드",
+        "size_kb": 8.5,
+        "modified": "2026-06-16T15:08:01.306545",
+        "path": "wiki/Spanish/study-plan/blog-output.md"
+      },
+      {
+        "name": "weekly-plan",
+        "filename": "weekly-plan.md",
+        "title": "Plan Semanal de Español - 스페인어 주간 학습 계획",
+        "size_kb": 5.8,
+        "modified": "2026-06-16T14:55:54.096167",
+        "path": "wiki/Spanish/study-plan/weekly-plan.md"
+      }
+    ]
+  },
+  "raw_sources": [
+    {
+      "name": "como-agua-para-chocolate-cap1",
+      "filename": "como-agua-para-chocolate-cap1.md",
+      "title": "Como agua para chocolate - Capítulo 1 (Enero)",
+      "size_kb": 7.9,
+      "modified": "2026-06-16T18:19:23.620154",
+      "path": "raw/Spanish/como-agua-para-chocolate-cap1.md"
+    },
+    {
+      "name": "el-ahogado-mas-hermoso-del-mundo",
+      "filename": "el-ahogado-mas-hermoso-del-mundo.md",
+      "title": "El ahogado más hermoso del mundo",
+      "size_kb": 15.0,
+      "modified": "2026-06-16T15:00:22.556818",
+      "path": "raw/Spanish/el-ahogado-mas-hermoso-del-mundo.md"
+    },
+    {
+      "name": "notes-in-spanish-listening-log",
+      "filename": "notes-in-spanish-listening-log.md",
+      "title": "Notes in Spanish - Advanced · Episodio de muestra",
+      "size_kb": 5.3,
+      "modified": "2026-06-16T15:00:58.730208",
+      "path": "raw/Spanish/notes-in-spanish-listening-log.md"
+    },
+    {
+      "name": "notes-in-spanish-planes-de-verano",
+      "filename": "notes-in-spanish-planes-de-verano.md",
+      "title": "Notes in Spanish Advanced - Planes de verano",
+      "size_kb": 5.6,
+      "modified": "2026-06-16T18:20:01.277291",
+      "path": "raw/Spanish/notes-in-spanish-planes-de-verano.md"
+    }
+  ],
+  "raw_sources_count": 4,
+  "corpus": {
+    "total": 79,
+    "by_level": {
+      "1": 60,
+      "2": 19
+    },
+    "by_category": {
+      "number": 12,
+      "greeting": 10,
+      "time": 10,
+      "adjective": 8,
+      "basic": 6,
+      "color": 6,
+      "family": 6,
+      "place": 6,
+      "animal": 4,
+      "object": 4,
+      "food": 4,
+      "person": 2,
+      "restaurant": 1
+    },
+    "by_type": {
+      "words": 79,
+      "sentences": 0,
+      "chars": 0
+    },
+    "words_sample": [
+      {
+        "id": "es_001",
+        "display": "hola",
+        "meaning": "안녕",
+        "level": 1,
+        "category": "greeting",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_001",
+        "display": "hola",
+        "meaning": "안녕",
+        "level": 1,
+        "category": "greeting",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_002",
+        "display": "adios",
+        "meaning": "안녕히",
+        "level": 1,
+        "category": "greeting",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_003",
+        "display": "gracias",
+        "meaning": "고마워",
+        "level": 1,
+        "category": "greeting",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_004",
+        "display": "por_favor",
+        "meaning": "부디",
+        "level": 1,
+        "category": "greeting",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_005",
+        "display": "si",
+        "meaning": "네",
+        "level": 1,
+        "category": "basic",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_006",
+        "display": false,
+        "meaning": "아니오",
+        "level": 1,
+        "category": "basic",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_007",
+        "display": "uno",
+        "meaning": "하나",
+        "level": 1,
+        "category": "number",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_008",
+        "display": "dos",
+        "meaning": "둘",
+        "level": 1,
+        "category": "number",
+        "accentMode": "any"
+      },
+      {
+        "id": "es_009",
+        "display": "tres",
+        "meaning": "셋",
+        "level": 1,
+        "category": "number",
+        "accentMode": "any"
+      }
+    ],
+    "sentences_sample": [],
+    "chars_sample": [],
+    "categories": [
+      "adjective",
+      "animal",
+      "basic",
+      "color",
+      "family",
+      "food",
+      "greeting",
+      "number",
+      "object",
+      "person",
+      "place",
+      "restaurant",
+      "time"
+    ],
+    "levels": [
+      1,
+      2
+    ]
+  },
+  "stages": [
+    {
+      "id": "es_1_1",
+      "tier": 1,
+      "stage_num": 1,
+      "tier_label": "Tier 1 · 단어",
+      "name": "Primeras Palabras",
+      "description": "기본 어휘 (인사·기본·숫자·색)",
+      "word_count": 10,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "es_1_2",
+      "tier": 1,
+      "stage_num": 2,
+      "tier_label": "Tier 1 · 단어",
+      "name": "Saludos",
+      "description": "인사 표현",
+      "word_count": 12,
+      "difficulty": 1,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "greeting"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "es_2_1",
+      "tier": 2,
+      "stage_num": 1,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "Acentos (Strict)",
+      "description": "액센트 단어 (Strict 모드 시작)",
+      "word_count": 10,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_2_2",
+      "tier": 2,
+      "stage_num": 2,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "Cotidiano",
+      "description": "일상 어휘 (Strict)",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food",
+          "family",
+          "place"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_3_1",
+      "tier": 3,
+      "stage_num": 1,
+      "tier_label": "Tier 3 · 짧은 문장",
+      "name": "Frases Cortas",
+      "description": "짧은 문장",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_3_2",
+      "tier": 3,
+      "stage_num": 2,
+      "tier_label": "Tier 3 · 짧은 문장",
+      "name": "Conversación",
+      "description": "회화 문장",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "categories": [
+          "conversation"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_4_1",
+      "tier": 4,
+      "stage_num": 1,
+      "tier_label": "Tier 4 · 긴 문장",
+      "name": "Noticias",
+      "description": "뉴스 문장",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "news",
+      "corpus_filter": {
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "id": "es_4_2",
+      "tier": 4,
+      "stage_num": 2,
+      "tier_label": "Tier 4 · 긴 문장",
+      "name": "Refranes",
+      "description": "속담·격언",
+      "word_count": 6,
+      "difficulty": 4,
+      "corpus_type": "proverbs",
+      "corpus_filter": {
+        "categories": [
+          "proverb"
+        ],
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "id": "es_5_1",
+      "tier": 5,
+      "stage_num": 1,
+      "tier_label": "Tier 5 · 단락",
+      "name": "Literatura",
+      "description": "문학 단락",
+      "word_count": 5,
+      "difficulty": 5,
+      "corpus_type": "passages",
+      "corpus_filter": {
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    }
+  ],
+  "coverage": {
+    "total_stages": 9,
+    "total_corpus": 79,
+    "wiki_materials": 74,
+    "sources": 4,
+    "raw_sources": 4,
+    "stages_by_tier": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1
+    },
+    "stage_requirements": [
+      {
+        "stage_id": "es_1_1",
+        "stage_name": "Primeras Palabras",
+        "tier": 1,
+        "categories": [],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_1_2",
+        "stage_name": "Saludos",
+        "tier": 1,
+        "categories": [
+          "greeting"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_2_1",
+        "stage_name": "Acentos (Strict)",
+        "tier": 2,
+        "categories": [],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_2_2",
+        "stage_name": "Cotidiano",
+        "tier": 2,
+        "categories": [
+          "food",
+          "family",
+          "place"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_3_1",
+        "stage_name": "Frases Cortas",
+        "tier": 3,
+        "categories": [],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "sentences"
+      },
+      {
+        "stage_id": "es_3_2",
+        "stage_name": "Conversación",
+        "tier": 3,
+        "categories": [
+          "conversation"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "sentences"
+      },
+      {
+        "stage_id": "es_4_1",
+        "stage_name": "Noticias",
+        "tier": 4,
+        "categories": [],
+        "level_range": [
+          4,
+          4
+        ],
+        "word_count": 8,
+        "corpus_type": "news"
+      },
+      {
+        "stage_id": "es_4_2",
+        "stage_name": "Refranes",
+        "tier": 4,
+        "categories": [
+          "proverb"
+        ],
+        "level_range": [
+          4,
+          4
+        ],
+        "word_count": 6,
+        "corpus_type": "proverbs"
+      },
+      {
+        "stage_id": "es_5_1",
+        "stage_name": "Literatura",
+        "tier": 5,
+        "categories": [],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 5,
+        "corpus_type": "passages"
+      }
+    ],
+    "gaps": [
+      {
+        "stage_id": "es_1_1",
+        "stage_name": "Primeras Palabras",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": []
+      },
+      {
+        "stage_id": "es_1_2",
+        "stage_name": "Saludos",
+        "needed": 12,
+        "available": 10,
+        "shortfall": 2,
+        "categories": [
+          "greeting"
+        ]
+      },
+      {
+        "stage_id": "es_2_1",
+        "stage_name": "Acentos (Strict)",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": []
+      }
+    ],
+    "coverage_percent": 97.5
+  },
+  "generated_at": "2026-06-18T18:32:00.511182"
+}
