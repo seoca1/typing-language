@@ -7,6 +7,10 @@
 
 import type { Enemy, Language } from '../types.js';
 import type { EffectsState } from '../effects/EffectsSystem.js';
+import {
+  spawnFloatingWords,
+  showSentencePreview,
+} from '../effects/EffectsSystem.js';
 import { Keyboard } from './Keyboard.js';
 import type { CharacterState } from '../character/CharacterController.js';
 import {
@@ -16,6 +20,11 @@ import {
 } from '../character/CharacterRenderer.js';
 import { GraphicsConfig } from '../config/graphics.js';
 import { SpriteLoader } from '../sprites/SpriteLoader.js';
+import {
+  findCrossLangTranslations,
+  getSentenceEnglishTranslation,
+  isSentence,
+} from '../data/translations.js';
 
 export interface RenderState {
   currentEnemy: Enemy | null;
@@ -31,6 +40,8 @@ export interface RenderState {
   lastHitCharIndex: number;
   lastHitTime: number;
   character: CharacterState;
+  /** Word entry for the current enemy (for translation lookup) */
+  currentEntry?: { id: string; display: string; meaning?: string; category?: string };
 }
 
 export class Renderer {
@@ -70,6 +81,8 @@ export class Renderer {
     this.drawKeyboardSection(state);
     this.drawParticles(state.effects);
     this.drawFloatingTexts(state.effects);
+    this.drawSentencePreview(state.effects);
+    this.drawFloatingWords(state.effects);
     this.drawFlash(state.effects);
 
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -259,6 +272,10 @@ export class Renderer {
     const buffer = state.buffer;
 
     const cx = this.width / 2;
+
+    // ===== Trigger cross-language translation effects =====
+    // Detect: first character typed (sentence preview) OR mid-typing (word floating)
+    this.maybeTriggerTranslationEffects(state, targetText, buffer);
 
     // Match the same font size and wrapping as drawEnemy
     const maxWidth = this.width - 80;
@@ -562,6 +579,141 @@ export class Renderer {
   }
 
   /**
+   * 떠다니는 단어 렌더링 (다른 언어 번역 효과)
+   */
+  private drawFloatingWords(effects: EffectsState): void {
+    for (const w of effects.floatingWords) {
+      const lifeRatio = Math.max(0, w.life / w.maxLife);
+
+      // Fade in (first 15%) then fade out (last 50%)
+      let alpha = 1;
+      if (lifeRatio < 0.15) {
+        alpha = lifeRatio / 0.15;
+      } else if (lifeRatio < 0.5) {
+        alpha = 1;
+      } else {
+        alpha = (lifeRatio - 0.5) / 0.5;
+      }
+
+      this.ctx.save();
+      this.ctx.globalAlpha = alpha;
+      this.ctx.translate(w.x, w.y);
+      this.ctx.rotate((w.rotation * Math.PI) / 180);
+
+      // Background pill for readability
+      this.ctx.font = `bold ${w.fontSize}px -apple-system, sans-serif`;
+      const textWidth = this.ctx.measureText(w.text).width;
+      const padX = 10;
+      const padY = 5;
+      const pillW = textWidth + padX * 2;
+      const pillH = w.fontSize + padY * 2;
+
+      this.ctx.fillStyle = 'rgba(15, 20, 35, 0.85)';
+      this.ctx.shadowColor = w.color;
+      this.ctx.shadowBlur = 14;
+      this.drawRoundRect(-pillW / 2, -pillH / 2, pillW, pillH, 8);
+      this.ctx.fill();
+      this.ctx.shadowBlur = 0;
+
+      // Language label (small flag-like)
+      const langLabel = this.getLangFlag(w.lang);
+      this.ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+      this.ctx.font = '9px -apple-system, sans-serif';
+      this.ctx.textAlign = 'left';
+      this.ctx.fillText(langLabel, -pillW / 2 + padX - 2, -pillH / 2 + 10);
+
+      // Word text
+      this.ctx.fillStyle = w.color;
+      this.ctx.font = `bold ${w.fontSize}px -apple-system, sans-serif`;
+      this.ctx.textAlign = 'center';
+      this.ctx.fillText(w.text, 0, padY - 1);
+
+      this.ctx.restore();
+    }
+  }
+
+  /**
+   * 문장 영어 번역 미리보기 렌더링
+   */
+  private drawSentencePreview(effects: EffectsState): void {
+    if (!effects.sentencePreview) return;
+    const p = effects.sentencePreview;
+    const lifeRatio = Math.max(0, p.life / p.maxLife);
+
+    let alpha = 1;
+    if (lifeRatio < 0.15) {
+      alpha = lifeRatio / 0.15;
+    } else if (lifeRatio > 0.7) {
+      alpha = (1 - lifeRatio) / 0.3;
+    }
+
+    this.ctx.save();
+    this.ctx.globalAlpha = alpha;
+
+    this.ctx.font = 'italic 16px -apple-system, sans-serif';
+    const textWidth = this.ctx.measureText(p.text).width;
+    const padX = 14;
+    const boxW = textWidth + padX * 2;
+    const boxH = 32;
+    const boxX = p.x - boxW / 2;
+    const boxY = p.y - boxH / 2;
+
+    // Subtle background
+    this.ctx.fillStyle = 'rgba(15, 20, 35, 0.92)';
+    this.ctx.strokeStyle = p.color;
+    this.ctx.lineWidth = 1.5;
+    this.ctx.shadowColor = p.color;
+    this.ctx.shadowBlur = 10;
+    this.drawRoundRect(boxX, boxY, boxW, boxH, 10);
+    this.ctx.fill();
+    this.ctx.stroke();
+    this.ctx.shadowBlur = 0;
+
+    // EN flag label
+    this.ctx.fillStyle = 'rgba(180, 220, 255, 0.7)';
+    this.ctx.font = 'bold 9px -apple-system, sans-serif';
+    this.ctx.textAlign = 'left';
+    this.ctx.fillText('🇺🇸 EN', boxX + 8, boxY + 12);
+
+    // Translation text
+    this.ctx.fillStyle = p.color;
+    this.ctx.font = 'italic 16px -apple-system, sans-serif';
+    this.ctx.textAlign = 'center';
+    this.ctx.fillText(p.text, p.x, p.y + 6);
+
+    this.ctx.restore();
+  }
+
+  private getLangFlag(lang: 'en' | 'jp' | 'es' | 'kr'): string {
+    switch (lang) {
+      case 'en':
+        return '🇺🇸 EN';
+      case 'jp':
+        return '🇯🇵 JP';
+      case 'es':
+        return '🇪🇸 ES';
+      case 'kr':
+        return '🇰🇷 KR';
+      default:
+        return '';
+    }
+  }
+
+  private drawRoundRect(x: number, y: number, w: number, h: number, r: number): void {
+    this.ctx.beginPath();
+    this.ctx.moveTo(x + r, y);
+    this.ctx.lineTo(x + w - r, y);
+    this.ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+    this.ctx.lineTo(x + w, y + h - r);
+    this.ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    this.ctx.lineTo(x + r, y + h);
+    this.ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+    this.ctx.lineTo(x, y + r);
+    this.ctx.quadraticCurveTo(x, y, x + r, y);
+    this.ctx.closePath();
+  }
+
+  /**
    * Wrap text into multiple lines based on max width.
    * - English/Spanish: word-based wrapping (breaks at spaces)
    * - Japanese/Korean: character-based wrapping (breaks between any chars)
@@ -607,5 +759,87 @@ export class Renderer {
     }
     if (currentLine.trim()) lines.push(currentLine.trimEnd());
     return lines;
+  }
+
+  // ===== Translation Effect Triggers =====
+
+  private lastBufferLen = 0;
+  private wordEffectsShownFor = new Set<string>();
+
+  /**
+   * Detect input events and trigger appropriate translation effects:
+   * - Sentence: show English translation preview (briefly)
+   * - Word: show 2 floating translations in other languages
+   */
+  private maybeTriggerTranslationEffects(
+    state: RenderState,
+    targetText: string,
+    buffer: string,
+  ): void {
+    const effects = state.effects;
+
+    // Reset tracking if target changed (new enemy)
+    if (buffer.length === 0) {
+      this.wordEffectsShownFor.clear();
+      this.lastBufferLen = 0;
+      return;
+    }
+
+    // Only trigger when buffer length increases (user typed a char)
+    const isNewChar = buffer.length > this.lastBufferLen;
+    if (!isNewChar) {
+      this.lastBufferLen = buffer.length;
+      return;
+    }
+
+    const justTypedChar = buffer[buffer.length - 1];
+    if (!justTypedChar) return;
+
+    const sentenceMode = isSentence(targetText);
+
+    if (sentenceMode) {
+      // For sentences: show English preview once at the start of typing
+      if (buffer.length === 1 && state.language !== 'en') {
+        const englishTranslation = getSentenceEnglishTranslation(state.language, targetText);
+        if (englishTranslation) {
+          showSentencePreview(
+            effects,
+            englishTranslation,
+            this.width / 2,
+            420, // Above the target text
+            3500, // Show for 3.5 seconds
+          );
+        }
+      }
+    } else {
+      // For words: show floating translations on each keystroke
+      // But throttle to avoid spam (max every 2 chars)
+      if (buffer.length === 1 || buffer.length % 2 === 0) {
+        // Use the typed character's meaning for lookup
+        // For single chars, look up the word itself
+        const lookupDisplay = targetText;
+        const lookupMeaning = state.currentEntry?.meaning;
+
+        const translations = findCrossLangTranslations(
+          state.language,
+          lookupDisplay,
+          lookupMeaning,
+          2, // Show 2 words
+        );
+
+        if (translations.length > 0) {
+          // Position above the target text
+          const centerY = 380;
+          spawnFloatingWords(
+            effects,
+            this.width / 2,
+            centerY,
+            translations.map((t) => ({ text: t.display, lang: t.lang as 'en' | 'jp' | 'es' | 'kr' })),
+          );
+        }
+      }
+    }
+
+    this.lastBufferLen = buffer.length;
   }
 }

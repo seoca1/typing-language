@@ -173,6 +173,22 @@ export function App() {
       const enemy = s.currentEnemy;
       const ch = characterRef.current;
       tickPose(ch, now);
+
+      // Resolve current word/sentence entry for translation lookup
+      let currentEntry: { id: string; display: string; meaning?: string; category?: string } | undefined;
+      if (enemy && stageStateRef.current) {
+        const stageState = stageStateRef.current;
+        const enemyObj = stageState.enemies.find((e) => e.id === enemy.id);
+        if (enemyObj) {
+          currentEntry = {
+            id: enemyObj.id,
+            display: enemyObj.target.text,
+            meaning: enemyObj.target.meaning,
+            category: enemyObj.target.category,
+          };
+        }
+      }
+
       renderer.render({
         currentEnemy: enemy,
         buffer: s.buffer,
@@ -187,6 +203,7 @@ export function App() {
         lastHitCharIndex: s.lastHitCharIndex,
         lastHitTime: s.lastHitTime,
         character: ch,
+        currentEntry,
       });
       rafId = requestAnimationFrame(tick);
     };
