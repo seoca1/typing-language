@@ -1235,6 +1235,7 @@ function renderCharacterImage(
   let offsetX = 0;
   let rotation = 0;
   let scale = imageConfig.scale || 1.0;
+  let scaleX = 1.0; // Horizontal scale for flip effects
 
   switch (state.pose) {
     case 'idle':
@@ -1258,10 +1259,13 @@ function renderCharacterImage(
       offsetY = Math.sin(clapT * Math.PI * 2) * -5;
       break;
     case 'spin':
-      // Rotate while spinning
+      // Horizontal flip animation (left-right spin effect)
+      // Instead of rotating the image, we scale X from 1 → -1 → 1
+      // This creates a natural "character spinning" effect
       const spinT = (now - state.poseStart) / 800;
-      rotation = spinT * Math.PI * 2;
-      offsetY = Math.sin(spinT * Math.PI) * -10;
+      const spinCycle = Math.sin(spinT * Math.PI * 2); // -1 to 1
+      scaleX = spinCycle; // Flip horizontally as we go
+      offsetY = Math.sin(spinT * Math.PI) * -10; // Keep bounce
       break;
     case 'dance':
       // Dancing motion
@@ -1283,6 +1287,7 @@ function renderCharacterImage(
   ctx.save();
   ctx.translate(cx + offsetX, groundY + offsetY);
   ctx.rotate(rotation);
+  ctx.scale(scaleX, 1); // Apply horizontal flip for spin effect
 
   const drawWidth = imageConfig.width * scale;
   const drawHeight = imageConfig.height * scale;

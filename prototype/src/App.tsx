@@ -137,25 +137,25 @@ export function App() {
     if (state.phase !== 'stage' || !state.currentStage) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
-    if (!rendererRef.current) {
-      rendererRef.current = new Renderer(canvas);
-    }
+    
+    // Always create a fresh renderer when entering stage phase
+    // This prevents state corruption from multiple menu ↔ game transitions
+    console.log('[App] Creating new Renderer for stage phase');
+    rendererRef.current = new Renderer(canvas);
     const renderer = rendererRef.current;
     renderer.resize(canvas.width, canvas.height);
 
-    if (!keyboardRef.current) {
-      keyboardRef.current = new Keyboard(
-        state.currentStage.language,
-        32,
-        610,
-        60,
-        50,
-        4,
-      );
-      rendererRef.current.setKeyboard(keyboardRef.current);
-    } else {
-      keyboardRef.current.setLanguage(state.currentStage.language);
-    }
+    // Always create a fresh keyboard to match the fresh renderer
+    console.log('[App] Creating new Keyboard for language:', state.currentStage.language);
+    keyboardRef.current = new Keyboard(
+      state.currentStage.language,
+      32,
+      610,
+      60,
+      50,
+      4,
+    );
+    rendererRef.current.setKeyboard(keyboardRef.current);
 
     let rafId: number;
     const tick = () => {
