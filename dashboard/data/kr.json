@@ -9,6 +9,14 @@
   "wiki": {
     "sources": [
       {
+        "name": "dating-romance-kr",
+        "filename": "dating-romance-kr.md",
+        "title": "dating-romance-kr",
+        "size_kb": 2.6,
+        "modified": "2026-06-19T02:51:20.196940",
+        "path": "wiki/Korean/sources/dating-romance-kr.md"
+      },
+      {
         "name": "first-travel-japan",
         "filename": "first-travel-japan.md",
         "title": "first-travel-japan",
@@ -545,6 +553,150 @@
         "size_kb": 0.4,
         "modified": "2026-06-18T18:55:33.777798",
         "path": "wiki/Korean/vocabulary/zeikan.md"
+      },
+      {
+        "name": "고백",
+        "filename": "고백.md",
+        "title": "고백",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:03:44.280441",
+        "path": "wiki/Korean/vocabulary/고백.md"
+      },
+      {
+        "name": "귀엽다",
+        "filename": "귀엽다.md",
+        "title": "귀엽다",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T03:02:21.507586",
+        "path": "wiki/Korean/vocabulary/귀엽다.md"
+      },
+      {
+        "name": "그리다",
+        "filename": "그리다.md",
+        "title": "그리다",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T03:03:21.675189",
+        "path": "wiki/Korean/vocabulary/그리다.md"
+      },
+      {
+        "name": "멋있다",
+        "filename": "멋있다.md",
+        "title": "멋있다",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T03:02:14.250380",
+        "path": "wiki/Korean/vocabulary/멋있다.md"
+      },
+      {
+        "name": "사귀다",
+        "filename": "사귀다.md",
+        "title": "사귀다",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T03:03:53.080245",
+        "path": "wiki/Korean/vocabulary/사귀다.md"
+      },
+      {
+        "name": "사랑하다",
+        "filename": "사랑하다.md",
+        "title": "사랑하다",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T03:03:13.195618",
+        "path": "wiki/Korean/vocabulary/사랑하다.md"
+      },
+      {
+        "name": "썸",
+        "filename": "썸.md",
+        "title": "썸",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T03:03:30.583718",
+        "path": "wiki/Korean/vocabulary/썸.md"
+      },
+      {
+        "name": "연인",
+        "filename": "연인.md",
+        "title": "연인",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T03:04:00.479624",
+        "path": "wiki/Korean/vocabulary/연인.md"
+      },
+      {
+        "name": "영화",
+        "filename": "영화.md",
+        "title": "영화",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T03:02:55.974039",
+        "path": "wiki/Korean/vocabulary/영화.md"
+      },
+      {
+        "name": "예쁘다",
+        "filename": "예쁘다.md",
+        "title": "예쁘다",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T03:01:50.867282",
+        "path": "wiki/Korean/vocabulary/예쁘다.md"
+      },
+      {
+        "name": "이름",
+        "filename": "이름.md",
+        "title": "이름",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T03:01:38.750606",
+        "path": "wiki/Korean/vocabulary/이름.md"
+      },
+      {
+        "name": "이쁘다",
+        "filename": "이쁘다.md",
+        "title": "이쁘다",
+        "size_kb": 0.6,
+        "modified": "2026-06-19T03:01:58.275313",
+        "path": "wiki/Korean/vocabulary/이쁘다.md"
+      },
+      {
+        "name": "잘생겼다",
+        "filename": "잘생겼다.md",
+        "title": "잘생겼다",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T03:02:05.804573",
+        "path": "wiki/Korean/vocabulary/잘생겼다.md"
+      },
+      {
+        "name": "재미있다",
+        "filename": "재미있다.md",
+        "title": "재미있다",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T03:02:34.470091",
+        "path": "wiki/Korean/vocabulary/재미있다.md"
+      },
+      {
+        "name": "좋아하다",
+        "filename": "좋아하다.md",
+        "title": "좋아하다",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T03:03:05.246233",
+        "path": "wiki/Korean/vocabulary/좋아하다.md"
+      },
+      {
+        "name": "착하다",
+        "filename": "착하다.md",
+        "title": "착하다",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T03:02:28.087393",
+        "path": "wiki/Korean/vocabulary/착하다.md"
+      },
+      {
+        "name": "취미",
+        "filename": "취미.md",
+        "title": "취미",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T03:02:42.237695",
+        "path": "wiki/Korean/vocabulary/취미.md"
+      },
+      {
+        "name": "카페",
+        "filename": "카페.md",
+        "title": "카페",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T03:02:49.974725",
+        "path": "wiki/Korean/vocabulary/카페.md"
       }
     ],
     "expressions": [
@@ -571,12 +723,93 @@
         "size_kb": 1.6,
         "modified": "2026-06-18T18:55:42.653992",
         "path": "wiki/Korean/expressions/sumimasen-wa-doko-desuka.md"
+      },
+      {
+        "name": "같이-밥-먹을래",
+        "filename": "같이-밥-먹을래.md",
+        "title": "같이-밥-먹을래",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T03:04:18.410539",
+        "path": "wiki/Korean/expressions/같이-밥-먹을래.md"
+      },
+      {
+        "name": "나-너-좋아해",
+        "filename": "나-너-좋아해.md",
+        "title": "나-너-좋아해",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:04:34.480916",
+        "path": "wiki/Korean/expressions/나-너-좋아해.md"
+      },
+      {
+        "name": "나중에-또-보자",
+        "filename": "나중에-또-보자.md",
+        "title": "나중에-또-보자",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:04:50.045995",
+        "path": "wiki/Korean/expressions/나중에-또-보자.md"
+      },
+      {
+        "name": "너-자꾸-생각나",
+        "filename": "너-자꾸-생각나.md",
+        "title": "너-자꾸-생각나",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:04:26.039563",
+        "path": "wiki/Korean/expressions/너-자꾸-생각나.md"
+      },
+      {
+        "name": "만나서-반가워요",
+        "filename": "만나서-반가워요.md",
+        "title": "만나서-반가워요",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T03:04:09.698180",
+        "path": "wiki/Korean/expressions/만나서-반가워요.md"
+      },
+      {
+        "name": "보고-싶다",
+        "filename": "보고-싶다.md",
+        "title": "보고-싶다",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:05:06.228826",
+        "path": "wiki/Korean/expressions/보고-싶다.md"
+      },
+      {
+        "name": "손-잡아도-돼",
+        "filename": "손-잡아도-돼.md",
+        "title": "손-잡아도-돼",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T03:04:42.080068",
+        "path": "wiki/Korean/expressions/손-잡아도-돼.md"
+      },
+      {
+        "name": "친구로-지내자",
+        "filename": "친구로-지내자.md",
+        "title": "친구로-지내자",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:04:58.479992",
+        "path": "wiki/Korean/expressions/친구로-지내자.md"
       }
     ],
-    "culture": [],
+    "culture": [
+      {
+        "name": "korean-dating-culture",
+        "filename": "korean-dating-culture.md",
+        "title": "korean-dating-culture",
+        "size_kb": 2.9,
+        "modified": "2026-06-19T03:05:24.715345",
+        "path": "wiki/Korean/culture/korean-dating-culture.md"
+      }
+    ],
     "study_plan": []
   },
   "raw_sources": [
+    {
+      "name": "dating-romance-kr",
+      "filename": "dating-romance-kr.md",
+      "title": "Dating & Romance — Source Material (Korean)",
+      "size_kb": 6.6,
+      "modified": "2026-06-19T02:50:28.591619",
+      "path": "raw/Korean/dating-romance-kr.md"
+    },
     {
       "name": "first-travel-japan",
       "filename": "first-travel-japan.md",
@@ -602,7 +835,7 @@
       "path": "raw/Korean/travel-basics-kr.md"
     }
   ],
-  "raw_sources_count": 3,
+  "raw_sources_count": 4,
   "corpus": {
     "total": 78,
     "by_level": {
@@ -894,7 +1127,7 @@
       "description": "여행 회화 표현 (길묻기·주문·체크인)",
       "word_count": 8,
       "difficulty": 3,
-      "corpus_type": "_ignored",
+      "corpus_type": "words",
       "corpus_filter": {
         "categories": [
           "travel"
@@ -970,9 +1203,9 @@
   "coverage": {
     "total_stages": 12,
     "total_corpus": 78,
-    "wiki_materials": 70,
-    "sources": 1,
-    "raw_sources": 3,
+    "wiki_materials": 98,
+    "sources": 2,
+    "raw_sources": 4,
     "stages_by_tier": {
       "1": 3,
       "2": 5,
@@ -1092,7 +1325,7 @@
           1
         ],
         "word_count": 8,
-        "corpus_type": "_ignored"
+        "corpus_type": "words"
       },
       {
         "stage_id": "kr_3_1",
@@ -1200,5 +1433,5 @@
     ],
     "coverage_percent": 69.0
   },
-  "generated_at": "2026-06-18T19:00:14.996912"
+  "generated_at": "2026-06-19T03:09:17.238578"
 }

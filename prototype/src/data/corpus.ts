@@ -279,6 +279,29 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_t_058', display: 'guide', meaning: '가이드', level: 2, category: 'travel' },
   { id: 'en_t_059', display: 'cheap', meaning: '싸다', level: 2, category: 'travel' },
   { id: 'en_t_060', display: 'expensive', meaning: '비싸다', level: 2, category: 'travel' },
+
+  // ===== Romance theme (source: [[dating-romance]]) =====
+  // Tier 2: Self-introduction & basic compliments
+  { id: 'en_r_001', display: 'name', meaning: '이름', level: 2, category: 'romance' },
+  { id: 'en_r_002', display: 'meet', meaning: '만나다', level: 2, category: 'romance' },
+  { id: 'en_r_003', display: 'friend', meaning: '친구', level: 2, category: 'romance' },
+  { id: 'en_r_004', display: 'single', meaning: '싱글', level: 2, category: 'romance' },
+  { id: 'en_r_005', display: 'beautiful', meaning: '아름다운', level: 2, category: 'romance' },
+  { id: 'en_r_006', display: 'handsome', meaning: '잘생긴', level: 2, category: 'romance' },
+  { id: 'en_r_007', display: 'cute', meaning: '귀여운', level: 2, category: 'romance' },
+  { id: 'en_r_008', display: 'kind', meaning: '친절한', level: 2, category: 'romance' },
+  { id: 'en_r_009', display: 'smart', meaning: '똑똑한', level: 2, category: 'romance' },
+  { id: 'en_r_010', display: 'funny', meaning: '재미있는', level: 2, category: 'romance' },
+  { id: 'en_r_011', display: 'hobby', meaning: '취미', level: 2, category: 'romance' },
+  { id: 'en_r_012', display: 'date', meaning: '데이트', level: 2, category: 'romance' },
+  { id: 'en_r_013', display: 'cafe', meaning: '카페', level: 2, category: 'romance' },
+  { id: 'en_r_014', display: 'like', meaning: '좋아하다', level: 2, category: 'romance' },
+  { id: 'en_r_015', display: 'miss', meaning: '그리워하다', level: 3, category: 'romance' },
+  { id: 'en_r_016', display: 'comfortable', meaning: '편안한', level: 3, category: 'romance' },
+  { id: 'en_r_017', display: 'kiss', meaning: '키스', level: 3, category: 'romance' },
+  { id: 'en_r_018', display: 'boyfriend', meaning: '남자친구', level: 2, category: 'romance' },
+  { id: 'en_r_019', display: 'girlfriend', meaning: '여자친구', level: 2, category: 'romance' },
+  { id: 'en_r_020', display: 'love', meaning: '사랑하다', level: 3, category: 'romance' },
 ];
 
 // ===== JP (Japanese) =====
@@ -373,6 +396,25 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_t_029', display: '両替', romaji: 'ryougae', meaning: '환전', level: 5, category: 'travel' },
   { id: 'jp_t_030', display: '左', romaji: 'hidari', meaning: '왼쪽', level: 5, category: 'travel' },
   { id: 'jp_t_031', display: '右', romaji: 'migi', meaning: '오른쪽', level: 5, category: 'travel' },
+
+  // ===== Romance theme (source: [[dating-romance-jp]]) =====
+  // Tier 2-3: 자기소개, 칭찬, 데이트, 고백
+  { id: 'jp_r_001', display: '名前', romaji: 'namae', meaning: '이름', level: 2, category: 'romance' },
+  { id: 'jp_r_002', display: '綺麗', romaji: 'kirei', meaning: '아름다운', level: 2, category: 'romance' },
+  { id: 'jp_r_003', display: '可愛い', romaji: 'kawaii', meaning: '귀여운', level: 2, category: 'romance' },
+  { id: 'jp_r_004', display: 'かっこいい', romaji: 'kakkoii', meaning: '멋진', level: 2, category: 'romance' },
+  { id: 'jp_r_005', display: '優しい', romaji: 'yasashii', meaning: '상냥한', level: 2, category: 'romance' },
+  { id: 'jp_r_006', display: '面白い', romaji: 'omoshiroi', meaning: '재미있는', level: 2, category: 'romance' },
+  { id: 'jp_r_007', display: '趣味', romaji: 'shumi', meaning: '취미', level: 2, category: 'romance' },
+  { id: 'jp_r_008', display: 'カフェ', romaji: 'kafe', meaning: '카페', level: 2, category: 'romance' },
+  { id: 'jp_r_009', display: 'デート', romaji: 'deeto', meaning: '데이트', level: 2, category: 'romance' },
+  { id: 'jp_r_010', display: '好き', romaji: 'suki', meaning: '좋아하다', level: 2, category: 'romance' },
+  { id: 'jp_r_011', display: '告白', romaji: 'kokuhaku', meaning: '고백', level: 3, category: 'romance' },
+  { id: 'jp_r_012', display: '付き合う', romaji: 'tsukiau', meaning: '사귀다', level: 3, category: 'romance' },
+  { id: 'jp_r_013', display: '恋人', romaji: 'koibito', meaning: '연인', level: 3, category: 'romance' },
+  { id: 'jp_r_014', display: '彼氏', romaji: 'kareshi', meaning: '남자친구', level: 2, category: 'romance' },
+  { id: 'jp_r_015', display: '彼女', romaji: 'kanojo', meaning: '여자친구', level: 2, category: 'romance' },
+  { id: 'jp_r_016', display: '愛する', romaji: 'aisuru', meaning: '사랑하다', level: 3, category: 'romance' },
 ];
 
 // ===== ES (Spanish) =====
@@ -479,6 +521,29 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_t_057', display: 'foto', meaning: '사진', level: 1, category: 'travel', accentMode: 'any' },
   { id: 'es_t_058', display: 'barato', meaning: '싸다', level: 2, category: 'travel', accentMode: 'any' },
   { id: 'es_t_059', display: 'caro', meaning: '비싸다', level: 2, category: 'travel', accentMode: 'any' },
+
+  // ===== Romance theme (source: [[dating-romance-es]]) =====
+  // Tier 2-3: Presentación, piropos, cita, declaración
+  { id: 'es_r_001', display: 'nombre', meaning: '이름', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_002', display: 'guapo', meaning: '잘생긴 (m)', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_003', display: 'guapa', meaning: '예쁜 (f)', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_004', display: 'bonita', meaning: '예쁜', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_005', display: 'precioso', meaning: '아름다운 (m)', level: 2, category: 'romance', accentMode: 'strict' },
+  { id: 'es_r_006', display: 'preciosa', meaning: '아름다운 (f)', level: 2, category: 'romance', accentMode: 'strict' },
+  { id: 'es_r_007', display: 'sonrisa', meaning: '미소', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_008', display: 'hobby', meaning: '취미', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_009', display: 'café', meaning: '카페', level: 2, category: 'romance', accentMode: 'strict' },
+  { id: 'es_r_010', display: 'cita', meaning: '데이트', level: 2, category: 'romance', accentMode: 'strict' },
+  { id: 'es_r_011', display: 'gustar', meaning: '좋아하다', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_012', display: 'querer', meaning: '사랑하다 (약)', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_013', display: 'amar', meaning: '사랑하다 (강)', level: 3, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_014', display: 'enamorado', meaning: '사랑에 빠진 (m)', level: 3, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_015', display: 'enamorada', meaning: '사랑에 빠진 (f)', level: 3, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_016', display: 'novio', meaning: '남자친구', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_017', display: 'novia', meaning: '여자친구', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_018', display: 'beso', meaning: '키스', level: 3, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_019', display: 'encantado', meaning: '반가운 (m)', level: 2, category: 'romance', accentMode: 'any' },
+  { id: 'es_r_020', display: 'encantada', meaning: '반가운 (f)', level: 2, category: 'romance', accentMode: 'any' },
 ];
 
 export const KR_WORDS: WordEntry[] = [
@@ -560,6 +625,29 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_t_045', display: '바다', jamo: 'ㅂㅏㄷㅏ', meaning: '바다', level: 1, category: 'travel' },
   { id: 'kr_t_046', display: '사진', jamo: 'ㅅㅏㅈㅣㄴ', meaning: '사진', level: 1, category: 'travel' },
   { id: 'kr_t_047', display: '지도', jamo: 'ㅈㅣㄷㅗ', meaning: '지도', level: 1, category: 'travel' },
+
+  // ===== Romance theme (source: [[dating-romance-kr]]) =====
+  // Tier 1-3: 자기소개, 칭찬, 썸, 고백
+  { id: 'kr_r_001', display: '이름', jamo: 'ㅇㅣㄹㅡㅁ', meaning: '이름', level: 1, category: 'romance' },
+  { id: 'kr_r_002', display: '예쁘다', jamo: 'ㅇㅖ쁘다', meaning: '예쁘다', level: 2, category: 'romance' },
+  { id: 'kr_r_003', display: '이쁘다', jamo: 'ㅇㅣ쁘다', meaning: '이쁘다', level: 2, category: 'romance' },
+  { id: 'kr_r_004', display: '잘생겼다', jamo: 'ㅈㅏㄹ생겼따', meaning: '잘생겼다', level: 2, category: 'romance' },
+  { id: 'kr_r_005', display: '멋있다', jamo: 'ㅁㅓㅅ이쓰다', meaning: '멋있다', level: 2, category: 'romance' },
+  { id: 'kr_r_006', display: '귀엽다', jamo: 'ㄱㅜㅣㅇㅕ쁘다', meaning: '귀엽다', level: 2, category: 'romance' },
+  { id: 'kr_r_007', display: '착하다', jamo: 'ㅊㅏㄱ하다', meaning: '착하다', level: 2, category: 'romance' },
+  { id: 'kr_r_008', display: '재미있다', jamo: 'ㅈㅐㅁㅣ이쓰다', meaning: '재미있다', level: 2, category: 'romance' },
+  { id: 'kr_r_009', display: '취미', jamo: 'ㅊㅜㅁㅣ', meaning: '취미', level: 1, category: 'romance' },
+  { id: 'kr_r_010', display: '카페', jamo: 'ㅋㅏ페', meaning: '카페', level: 1, category: 'romance' },
+  { id: 'kr_r_011', display: '영화', jamo: 'ㅇㅕㅇㅎㅘ', meaning: '영화', level: 1, category: 'romance' },
+  { id: 'kr_r_012', display: '좋아하다', jamo: 'ㅈㅗㅏ하다', meaning: '좋아하다', level: 2, category: 'romance' },
+  { id: 'kr_r_013', display: '사랑하다', jamo: 'ㅅㅏ랑하다', meaning: '사랑하다', level: 2, category: 'romance' },
+  { id: 'kr_r_014', display: '그리다', jamo: 'ㄱㅡㄹㅣ다', meaning: '그리워하다', level: 3, category: 'romance' },
+  { id: 'kr_r_015', display: '썸', jamo: 'ㅆㅡㅁ', meaning: '썸', level: 3, category: 'romance' },
+  { id: 'kr_r_016', display: '고백', jamo: 'ㄱㅗ백', meaning: '고백', level: 3, category: 'romance' },
+  { id: 'kr_r_017', display: '사귀다', jamo: 'ㅅㅏㄱㅜㅣ다', meaning: '사귀다', level: 3, category: 'romance' },
+  { id: 'kr_r_018', display: '연인', jamo: 'ㅇㅕㄴㅇㅣㄴ', meaning: '연인', level: 3, category: 'romance' },
+  { id: 'kr_r_019', display: '남자친구', jamo: 'ㄴㅏㅁㅈㅏㅊㅣㄴㄱㅜ', meaning: '남자친구', level: 2, category: 'romance' },
+  { id: 'kr_r_020', display: '여자친구', jamo: 'ㅇㅕㅈㅏㅊㅣㄴㄱㅜ', meaning: '여자친구', level: 2, category: 'romance' },
 ];
 
 export const KR_SENTENCES: WordEntry[] = [

@@ -17,6 +17,14 @@
         "path": "wiki/Spanish/sources/como-agua-para-chocolate-cap1.md"
       },
       {
+        "name": "dating-romance-es",
+        "filename": "dating-romance-es.md",
+        "title": "dating-romance-es",
+        "size_kb": 2.2,
+        "modified": "2026-06-19T02:51:06.749290",
+        "path": "wiki/Spanish/sources/dating-romance-es.md"
+      },
+      {
         "name": "el-ahogado-mas-hermoso-del-mundo",
         "filename": "el-ahogado-mas-hermoso-del-mundo.md",
         "title": "El ahogado más hermoso del mundo",
@@ -75,6 +83,14 @@
         "path": "wiki/Spanish/vocabulary/altivez.md"
       },
       {
+        "name": "amar",
+        "filename": "amar.md",
+        "title": "amar",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:59:32.536151",
+        "path": "wiki/Spanish/vocabulary/amar.md"
+      },
+      {
         "name": "angarillas",
         "filename": "angarillas.md",
         "title": "angarillas",
@@ -123,6 +139,14 @@
         "path": "wiki/Spanish/vocabulary/barato.md"
       },
       {
+        "name": "beso",
+        "filename": "beso.md",
+        "title": "beso",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:59:59.426422",
+        "path": "wiki/Spanish/vocabulary/beso.md"
+      },
+      {
         "name": "billete",
         "filename": "billete.md",
         "title": "billete",
@@ -147,12 +171,28 @@
         "path": "wiki/Spanish/vocabulary/bochorno.md"
       },
       {
+        "name": "bonita",
+        "filename": "bonita.md",
+        "title": "bonita",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:58:31.262281",
+        "path": "wiki/Spanish/vocabulary/bonita.md"
+      },
+      {
         "name": "botellon",
         "filename": "botellon.md",
         "title": "botellón",
         "size_kb": 1.1,
         "modified": "2026-06-16T15:03:09.696604",
         "path": "wiki/Spanish/vocabulary/botellon.md"
+      },
+      {
+        "name": "café",
+        "filename": "café.md",
+        "title": "café",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:58:56.425831",
+        "path": "wiki/Spanish/vocabulary/café.md"
       },
       {
         "name": "caliente",
@@ -209,6 +249,14 @@
         "size_kb": 1.0,
         "modified": "2026-06-16T18:22:13.818225",
         "path": "wiki/Spanish/vocabulary/chapparon.md"
+      },
+      {
+        "name": "cita",
+        "filename": "cita.md",
+        "title": "cita",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:59:04.031139",
+        "path": "wiki/Spanish/vocabulary/cita.md"
       },
       {
         "name": "cuenta",
@@ -275,6 +323,22 @@
         "path": "wiki/Spanish/vocabulary/dulce.md"
       },
       {
+        "name": "enamorado",
+        "filename": "enamorado.md",
+        "title": "enamorado",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:59:39.872323",
+        "path": "wiki/Spanish/vocabulary/enamorado.md"
+      },
+      {
+        "name": "encantado",
+        "filename": "encantado.md",
+        "title": "encantado",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T03:00:08.543046",
+        "path": "wiki/Spanish/vocabulary/encantado.md"
+      },
+      {
         "name": "entrada",
         "filename": "entrada.md",
         "title": "entrada",
@@ -326,9 +390,17 @@
         "name": "guapo",
         "filename": "guapo.md",
         "title": "guapo",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T15:02:54.923567",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:58:25.023453",
         "path": "wiki/Spanish/vocabulary/guapo.md"
+      },
+      {
+        "name": "gustar",
+        "filename": "gustar.md",
+        "title": "gustar",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:59:16.322187",
+        "path": "wiki/Spanish/vocabulary/gustar.md"
       },
       {
         "name": "guía",
@@ -353,6 +425,14 @@
         "size_kb": 0.9,
         "modified": "2026-06-16T18:21:03.263876",
         "path": "wiki/Spanish/vocabulary/heredar.md"
+      },
+      {
+        "name": "hobby",
+        "filename": "hobby.md",
+        "title": "hobby",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:58:48.729015",
+        "path": "wiki/Spanish/vocabulary/hobby.md"
       },
       {
         "name": "hotel",
@@ -491,6 +571,30 @@
         "path": "wiki/Spanish/vocabulary/museo.md"
       },
       {
+        "name": "nombre",
+        "filename": "nombre.md",
+        "title": "nombre",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:58:18.010630",
+        "path": "wiki/Spanish/vocabulary/nombre.md"
+      },
+      {
+        "name": "novia",
+        "filename": "novia.md",
+        "title": "novia",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:59:50.619393",
+        "path": "wiki/Spanish/vocabulary/novia.md"
+      },
+      {
+        "name": "novio",
+        "filename": "novio.md",
+        "title": "novio",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:59:45.481112",
+        "path": "wiki/Spanish/vocabulary/novio.md"
+      },
+      {
         "name": "parque",
         "filename": "parque.md",
         "title": "parque",
@@ -547,6 +651,14 @@
         "path": "wiki/Spanish/vocabulary/ponerse-morado.md"
       },
       {
+        "name": "precioso",
+        "filename": "precioso.md",
+        "title": "precioso",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:58:36.908534",
+        "path": "wiki/Spanish/vocabulary/precioso.md"
+      },
+      {
         "name": "promontorio",
         "filename": "promontorio.md",
         "title": "promontorio",
@@ -561,6 +673,14 @@
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.783743",
         "path": "wiki/Spanish/vocabulary/propina.md"
+      },
+      {
+        "name": "querer",
+        "filename": "querer.md",
+        "title": "querer",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T02:59:24.723540",
+        "path": "wiki/Spanish/vocabulary/querer.md"
       },
       {
         "name": "receta",
@@ -649,6 +769,14 @@
         "size_kb": 1.0,
         "modified": "2026-06-16T18:21:26.808371",
         "path": "wiki/Spanish/vocabulary/someterse.md"
+      },
+      {
+        "name": "sonrisa",
+        "filename": "sonrisa.md",
+        "title": "sonrisa",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:58:42.803383",
+        "path": "wiki/Spanish/vocabulary/sonrisa.md"
       },
       {
         "name": "tapas",
@@ -757,6 +885,14 @@
         "path": "wiki/Spanish/expressions/donde-esta.md"
       },
       {
+        "name": "encantado-de-conocerte",
+        "filename": "encantado-de-conocerte.md",
+        "title": "encantado-de-conocerte",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T03:00:17.294203",
+        "path": "wiki/Spanish/expressions/encantado-de-conocerte.md"
+      },
+      {
         "name": "estar-hecho-pedazos",
         "filename": "estar-hecho-pedazos.md",
         "title": "estar hecho pedazos",
@@ -765,12 +901,28 @@
         "path": "wiki/Spanish/expressions/estar-hecho-pedazos.md"
       },
       {
+        "name": "estoy-enamorado",
+        "filename": "estoy-enamorado.md",
+        "title": "estoy-enamorado",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:00:43.154315",
+        "path": "wiki/Spanish/expressions/estoy-enamorado.md"
+      },
+      {
         "name": "gracias",
         "filename": "gracias.md",
         "title": "gracias",
         "size_kb": 0.8,
         "modified": "2026-06-18T18:56:19.244736",
         "path": "wiki/Spanish/expressions/gracias.md"
+      },
+      {
+        "name": "he-pasado-bien",
+        "filename": "he-pasado-bien.md",
+        "title": "he-pasado-bien",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:00:58.146093",
+        "path": "wiki/Spanish/expressions/he-pasado-bien.md"
       },
       {
         "name": "hombre-pues",
@@ -787,6 +939,14 @@
         "size_kb": 1.1,
         "modified": "2026-06-16T18:23:15.864167",
         "path": "wiki/Spanish/expressions/llorar-como-una-magdalena.md"
+      },
+      {
+        "name": "me-gustas-mucho",
+        "filename": "me-gustas-mucho.md",
+        "title": "me-gustas-mucho",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:00:35.579407",
+        "path": "wiki/Spanish/expressions/me-gustas-mucho.md"
       },
       {
         "name": "no-poder-venir-a-mas",
@@ -821,6 +981,14 @@
         "path": "wiki/Spanish/expressions/pedir-la-mano.md"
       },
       {
+        "name": "puedo-darte-beso",
+        "filename": "puedo-darte-beso.md",
+        "title": "puedo-darte-beso",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:00:50.239030",
+        "path": "wiki/Spanish/expressions/puedo-darte-beso.md"
+      },
+      {
         "name": "que-fuerte",
         "filename": "que-fuerte.md",
         "title": "¡qué fuerte!",
@@ -853,12 +1021,36 @@
         "path": "wiki/Spanish/expressions/quedar-varado.md"
       },
       {
+        "name": "quieres-tomar-algo",
+        "filename": "quieres-tomar-algo.md",
+        "title": "quieres-tomar-algo",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T03:00:27.167008",
+        "path": "wiki/Spanish/expressions/quieres-tomar-algo.md"
+      },
+      {
+        "name": "seguir-siendo-amigos",
+        "filename": "seguir-siendo-amigos.md",
+        "title": "seguir-siendo-amigos",
+        "size_kb": 1.2,
+        "modified": "2026-06-19T03:01:07.342773",
+        "path": "wiki/Spanish/expressions/seguir-siendo-amigos.md"
+      },
+      {
         "name": "subirse-al-higado",
         "filename": "subirse-al-higado.md",
         "title": "subirse al hígado",
         "size_kb": 1.1,
         "modified": "2026-06-16T15:03:49.431545",
         "path": "wiki/Spanish/expressions/subirse-al-higado.md"
+      },
+      {
+        "name": "te-amo",
+        "filename": "te-amo.md",
+        "title": "te-amo",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T03:01:14.593800",
+        "path": "wiki/Spanish/expressions/te-amo.md"
       },
       {
         "name": "tener-cara-de-llamarse",
@@ -959,6 +1151,14 @@
         "path": "wiki/Spanish/culture/siesta-tradicion-verano.md"
       },
       {
+        "name": "spanish-dating-culture",
+        "filename": "spanish-dating-culture.md",
+        "title": "spanish-dating-culture",
+        "size_kb": 2.5,
+        "modified": "2026-06-19T03:01:30.551116",
+        "path": "wiki/Spanish/culture/spanish-dating-culture.md"
+      },
+      {
         "name": "subjuntivo-conversacional",
         "filename": "subjuntivo-conversacional.md",
         "title": "subjuntivo conversacional",
@@ -1004,6 +1204,14 @@
       "path": "raw/Spanish/como-agua-para-chocolate-cap1.md"
     },
     {
+      "name": "dating-romance-es",
+      "filename": "dating-romance-es.md",
+      "title": "Dating & Romance — Source Material (Spanish)",
+      "size_kb": 5.4,
+      "modified": "2026-06-19T02:49:46.052151",
+      "path": "raw/Spanish/dating-romance-es.md"
+    },
+    {
       "name": "el-ahogado-mas-hermoso-del-mundo",
       "filename": "el-ahogado-mas-hermoso-del-mundo.md",
       "title": "El ahogado más hermoso del mundo",
@@ -1036,7 +1244,7 @@
       "path": "raw/Spanish/notes-in-spanish-planes-de-verano.md"
     }
   ],
-  "raw_sources_count": 5,
+  "raw_sources_count": 6,
   "corpus": {
     "total": 155,
     "by_level": {
@@ -1377,9 +1585,9 @@
   "coverage": {
     "total_stages": 12,
     "total_corpus": 155,
-    "wiki_materials": 122,
-    "sources": 4,
-    "raw_sources": 5,
+    "wiki_materials": 147,
+    "sources": 5,
+    "raw_sources": 6,
     "stages_by_tier": {
       "1": 2,
       "2": 5,
@@ -1579,5 +1787,5 @@
     ],
     "coverage_percent": 139.6
   },
-  "generated_at": "2026-06-18T19:00:14.973299"
+  "generated_at": "2026-06-19T03:09:17.209370"
 }

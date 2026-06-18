@@ -1189,4 +1189,84 @@ open Game/typing_language/dashboard/index.html
 python -m http.server -d Game/typing_language/dashboard 8766  # http://localhost:8766
 ```
 
+---
+
+### [2026-06-19] feat | Romance/Dating theme — Language wiki + game stages
+
+#### 목표
+플러팅(남녀 대화) 주제로 학습 자료를 Language LLM wiki에 추가하고,
+게임 스테이지로 연결. PG-13 범위 (고백·데이트·친밀 진전, 성적 암시 없음).
+교재 + 드라마/영화 병행 출처 인용.
+
+#### 추가된 자료 (4개 언어)
+
+**Raw 소스 (4개)**
+- `Language/raw/English/dating-romance.md` — CEFR + Notting Hill, When Harry Met Sally
+- `Language/raw/Japanese/dating-romance-jp.md` — JLPT + 花より男子, ロングバケーション
+- `Language/raw/Spanish/dating-romance-es.md` — DELE + Tres metros sobre el cielo, Élite
+- `Language/raw/Korean/dating-romance-kr.md` — TOPIK + 겨울연가, 사랑의 불시착
+
+**Wiki 페이지 (~115개)**
+- 4개 source overview pages
+- 60 vocabulary pages (15 per language)
+- 32 expression pages (8 per language)
+- 4 culture pages (1 per language)
+  - english-dating-culture, japanese-dating-culture, spanish-dating-culture, korean-dating-culture
+
+**게임 코퍼스 (78 entries)**
+- 20 EN romance entries (en_r_001..020)
+- 16 JP romance entries with romaji (jp_r_001..016)
+- 20 ES romance entries with accentMode (es_r_001..020)
+- 20 KR romance entries with jamo (kr_r_001..020)
+- 새 category: `romance`
+
+**게임 스테이지 (8개)**
+- `en_d_1` First Date Words (12 words, level 2)
+- `en_d_2` Confession & Affection (10 words, level 3)
+- `jp_d_1` デート言葉 (12 words, level 2)
+- `jp_d_2` 告白と進展 (10 words, level 3)
+- `es_d_1` Citas y Piropos (12 words, level 2)
+- `es_d_2` Declaración (10 words, level 3)
+- `kr_d_1` 썸·첫 데이트 (12 words, level 1)
+- `kr_d_2` 고백·연인 (10 words, level 2-3)
+
+#### 파이프라인 준수
+
+- **단일 진실 공급원**: `Language/` wiki가 게임 콘텐츠의 source
+- **인용 의무**: 모든 corpus 항목이 `[[dating-romance]]` (or lang variant) 인용
+- **raw 보호**: `raw/{Lang}/*.md` 절대 수정하지 않음
+- **한 세션 범위**: 4개 언어 모두 동일 패턴 (일관성)
+
+#### 범위 결정 (사용자 선택)
+
+- **PG-13 (15+ 적합)** — 명시적 콘텐츠 제외
+- **교재 + 드라마/영화 병행** — 두 종류 인용 모두 활용
+- **문화적 맥락** — 각 언어별 연애 문화 노트 별도 작성
+
+#### 콘텐츠 카테고리 (모든 언어 공통)
+
+1. **인사/소개** — 이름, 만나서 반가워요
+2. **외모/성격 칭찬** — 예쁘다, 잘생겼다, kind, smart, funny
+3. **관심사** — 취미, 음악, 영화
+4. **데이트 초대** — 같이 밥 먹을래, want coffee, quieres tomar algo
+5. **썸/호감** — 좋아해, like, me gustas, 보고 싶어
+6. **고백** — 사귀자, be my girlfriend, 好きです付き合ってください
+7. **신체 친밀 (with consent)** — 손 잡아도 돼?, puedo besarte
+8. **부드러운 거절** — 친구로 지내자, seguir siendo amigos
+
+#### 검증
+
+- **빌드**: 333.86 KB / gzip 98.34 KB
+- **TypeScript**: ✅ 통과
+- **단위 테스트**: 181 passed (이전 173 + 새 romance 스테이지 8개)
+- **대시보드 갱신**: 577 corpus / 395 wiki materials / 52 stages / 16 sources
+- **모든 스테이지 진행 가능** (fallback chain 작동)
+
+#### 향후 작업 가능
+
+- Romance sentences 추가 (Tier 3+ romance stage)
+- K-content/드라마 스크립트 직접 인용 확장
+- 캐릭터 이미지 romantic 포즈 추가
+- Romance theme mission 다양화
+
 

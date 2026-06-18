@@ -9,6 +9,14 @@
   "wiki": {
     "sources": [
       {
+        "name": "dating-romance",
+        "filename": "dating-romance.md",
+        "title": "dating-romance",
+        "size_kb": 2.4,
+        "modified": "2026-06-19T02:50:41.204290",
+        "path": "wiki/English/sources/dating-romance.md"
+      },
+      {
         "name": "first-travel-japan",
         "filename": "first-travel-japan.md",
         "title": "first-travel-japan",
@@ -35,12 +43,28 @@
         "path": "wiki/English/vocabulary/baggage.md"
       },
       {
+        "name": "beautiful",
+        "filename": "beautiful.md",
+        "title": "beautiful",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:51:57.295241",
+        "path": "wiki/English/vocabulary/beautiful.md"
+      },
+      {
         "name": "bill",
         "filename": "bill.md",
         "title": "bill",
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.781281",
         "path": "wiki/English/vocabulary/bill.md"
+      },
+      {
+        "name": "boyfriend",
+        "filename": "boyfriend.md",
+        "title": "boyfriend",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:53:31.336045",
+        "path": "wiki/English/vocabulary/boyfriend.md"
       },
       {
         "name": "breakfast",
@@ -59,6 +83,14 @@
         "path": "wiki/English/vocabulary/bus.md"
       },
       {
+        "name": "café",
+        "filename": "café.md",
+        "title": "café",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:52:51.092099",
+        "path": "wiki/English/vocabulary/café.md"
+      },
+      {
         "name": "cheap",
         "filename": "cheap.md",
         "title": "cheap",
@@ -75,12 +107,36 @@
         "path": "wiki/English/vocabulary/cold.md"
       },
       {
+        "name": "comfortable",
+        "filename": "comfortable.md",
+        "title": "comfortable",
+        "size_kb": 0.6,
+        "modified": "2026-06-19T02:53:18.085260",
+        "path": "wiki/English/vocabulary/comfortable.md"
+      },
+      {
         "name": "customs",
         "filename": "customs.md",
         "title": "customs",
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.780577",
         "path": "wiki/English/vocabulary/customs.md"
+      },
+      {
+        "name": "cute",
+        "filename": "cute.md",
+        "title": "cute",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:52:12.102789",
+        "path": "wiki/English/vocabulary/cute.md"
+      },
+      {
+        "name": "date",
+        "filename": "date.md",
+        "title": "date",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:52:43.130389",
+        "path": "wiki/English/vocabulary/date.md"
       },
       {
         "name": "delicious",
@@ -123,12 +179,44 @@
         "path": "wiki/English/vocabulary/far.md"
       },
       {
+        "name": "funny",
+        "filename": "funny.md",
+        "title": "funny",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:52:30.515946",
+        "path": "wiki/English/vocabulary/funny.md"
+      },
+      {
+        "name": "girlfriend",
+        "filename": "girlfriend.md",
+        "title": "girlfriend",
+        "size_kb": 0.6,
+        "modified": "2026-06-19T02:53:37.273427",
+        "path": "wiki/English/vocabulary/girlfriend.md"
+      },
+      {
         "name": "guide",
         "filename": "guide.md",
         "title": "guide",
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.782510",
         "path": "wiki/English/vocabulary/guide.md"
+      },
+      {
+        "name": "handsome",
+        "filename": "handsome.md",
+        "title": "handsome",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:52:04.510107",
+        "path": "wiki/English/vocabulary/handsome.md"
+      },
+      {
+        "name": "hobby",
+        "filename": "hobby.md",
+        "title": "hobby",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:52:35.859508",
+        "path": "wiki/English/vocabulary/hobby.md"
       },
       {
         "name": "hot",
@@ -163,12 +251,44 @@
         "path": "wiki/English/vocabulary/intersection.md"
       },
       {
+        "name": "kind",
+        "filename": "kind.md",
+        "title": "kind",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:52:19.310539",
+        "path": "wiki/English/vocabulary/kind.md"
+      },
+      {
+        "name": "kiss",
+        "filename": "kiss.md",
+        "title": "kiss",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T02:53:24.881383",
+        "path": "wiki/English/vocabulary/kiss.md"
+      },
+      {
         "name": "left",
         "filename": "left.md",
         "title": "left",
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.781713",
         "path": "wiki/English/vocabulary/left.md"
+      },
+      {
+        "name": "like",
+        "filename": "like.md",
+        "title": "like",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:52:58.668791",
+        "path": "wiki/English/vocabulary/like.md"
+      },
+      {
+        "name": "love",
+        "filename": "love.md",
+        "title": "love",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T02:53:05.798619",
+        "path": "wiki/English/vocabulary/love.md"
       },
       {
         "name": "luggage",
@@ -187,12 +307,28 @@
         "path": "wiki/English/vocabulary/map.md"
       },
       {
+        "name": "meet",
+        "filename": "meet.md",
+        "title": "meet",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:51:43.092663",
+        "path": "wiki/English/vocabulary/meet.md"
+      },
+      {
         "name": "menu",
         "filename": "menu.md",
         "title": "menu",
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.781175",
         "path": "wiki/English/vocabulary/menu.md"
+      },
+      {
+        "name": "miss",
+        "filename": "miss.md",
+        "title": "miss",
+        "size_kb": 0.7,
+        "modified": "2026-06-19T02:53:12.185900",
+        "path": "wiki/English/vocabulary/miss.md"
       },
       {
         "name": "mountain",
@@ -209,6 +345,14 @@
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.782226",
         "path": "wiki/English/vocabulary/museum.md"
+      },
+      {
+        "name": "name",
+        "filename": "name.md",
+        "title": "name",
+        "size_kb": 0.6,
+        "modified": "2026-06-19T02:51:36.379168",
+        "path": "wiki/English/vocabulary/name.md"
       },
       {
         "name": "near",
@@ -297,6 +441,22 @@
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.782169",
         "path": "wiki/English/vocabulary/shrine.md"
+      },
+      {
+        "name": "single",
+        "filename": "single.md",
+        "title": "single",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:51:49.899762",
+        "path": "wiki/English/vocabulary/single.md"
+      },
+      {
+        "name": "smart",
+        "filename": "smart.md",
+        "title": "smart",
+        "size_kb": 0.6,
+        "modified": "2026-06-19T02:52:25.076595",
+        "path": "wiki/English/vocabulary/smart.md"
       },
       {
         "name": "spicy",
@@ -405,12 +565,92 @@
     ],
     "expressions": [
       {
+        "name": "be-my-girlfriend",
+        "filename": "be-my-girlfriend.md",
+        "title": "be-my-girlfriend",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T02:54:09.733613",
+        "path": "wiki/English/expressions/be-my-girlfriend.md"
+      },
+      {
+        "name": "had-a-great-time",
+        "filename": "had-a-great-time.md",
+        "title": "had-a-great-time",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:54:31.140795",
+        "path": "wiki/English/expressions/had-a-great-time.md"
+      },
+      {
+        "name": "hold-your-hand",
+        "filename": "hold-your-hand.md",
+        "title": "hold-your-hand",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T02:54:24.199500",
+        "path": "wiki/English/expressions/hold-your-hand.md"
+      },
+      {
         "name": "how-much",
         "filename": "how-much.md",
         "title": "how-much",
         "size_kb": 0.8,
         "modified": "2026-06-18T18:56:13.284165",
         "path": "wiki/English/expressions/how-much.md"
+      },
+      {
+        "name": "i-love-you",
+        "filename": "i-love-you.md",
+        "title": "i-love-you",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T02:54:17.519160",
+        "path": "wiki/English/expressions/i-love-you.md"
+      },
+      {
+        "name": "im-busy",
+        "filename": "im-busy.md",
+        "title": "im-busy",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T02:54:53.099652",
+        "path": "wiki/English/expressions/im-busy.md"
+      },
+      {
+        "name": "nice-to-meet-you",
+        "filename": "nice-to-meet-you.md",
+        "title": "nice-to-meet-you",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:53:43.734564",
+        "path": "wiki/English/expressions/nice-to-meet-you.md"
+      },
+      {
+        "name": "really-like-you",
+        "filename": "really-like-you.md",
+        "title": "really-like-you",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:54:00.520756",
+        "path": "wiki/English/expressions/really-like-you.md"
+      },
+      {
+        "name": "see-you-again",
+        "filename": "see-you-again.md",
+        "title": "see-you-again",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:54:37.651824",
+        "path": "wiki/English/expressions/see-you-again.md"
+      },
+      {
+        "name": "stay-friends",
+        "filename": "stay-friends.md",
+        "title": "stay-friends",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T02:54:44.931829",
+        "path": "wiki/English/expressions/stay-friends.md"
+      },
+      {
+        "name": "want-coffee",
+        "filename": "want-coffee.md",
+        "title": "want-coffee",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:53:50.494173",
+        "path": "wiki/English/expressions/want-coffee.md"
       },
       {
         "name": "where-is",
@@ -421,10 +661,27 @@
         "path": "wiki/English/expressions/where-is.md"
       }
     ],
-    "culture": [],
+    "culture": [
+      {
+        "name": "english-dating-culture",
+        "filename": "english-dating-culture.md",
+        "title": "english-dating-culture",
+        "size_kb": 2.3,
+        "modified": "2026-06-19T02:55:06.050070",
+        "path": "wiki/English/culture/english-dating-culture.md"
+      }
+    ],
     "study_plan": []
   },
   "raw_sources": [
+    {
+      "name": "dating-romance",
+      "filename": "dating-romance.md",
+      "title": "Dating & Romance — Source Material (English)",
+      "size_kb": 5.0,
+      "modified": "2026-06-19T02:48:40.828165",
+      "path": "raw/English/dating-romance.md"
+    },
     {
       "name": "first-travel-japan",
       "filename": "first-travel-japan.md",
@@ -442,7 +699,7 @@
       "path": "raw/English/travel-basics.md"
     }
   ],
-  "raw_sources_count": 2,
+  "raw_sources_count": 3,
   "corpus": {
     "total": 162,
     "by_level": {
@@ -801,9 +1058,9 @@
   "coverage": {
     "total_stages": 13,
     "total_corpus": 162,
-    "wiki_materials": 51,
-    "sources": 1,
-    "raw_sources": 2,
+    "wiki_materials": 82,
+    "sources": 2,
+    "raw_sources": 3,
     "stages_by_tier": {
       "1": 3,
       "2": 5,
@@ -1018,5 +1275,5 @@
     ],
     "coverage_percent": 128.6
   },
-  "generated_at": "2026-06-18T19:00:14.912744"
+  "generated_at": "2026-06-19T03:09:17.135326"
 }

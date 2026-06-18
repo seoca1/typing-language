@@ -236,6 +236,30 @@ const EN_STAGES: StageSpec[] = [
     requiresCorpus: 'sentences',
     missions: defaultMissionsForTier(3),
   },
+
+  // ===== Romance theme (source: [[dating-romance]]) =====
+  {
+    id: 'en_d_1',
+    language: 'en',
+    tier: 2,
+    name: 'First Date Words',
+    description: '첫 데이트 어휘 — 자기소개, 칭찬, 데이트 기본',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 2, maxLevel: 2, categories: ['romance'] },
+    missions: defaultMissionsForTier(2),
+  },
+  {
+    id: 'en_d_2',
+    language: 'en',
+    tier: 3,
+    name: 'Confession & Affection',
+    description: '고백과 호감 표현 — like, miss, love, kiss',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['romance'] },
+    missions: defaultMissionsForTier(3),
+  },
 ];
 
 const JP_STAGES: StageSpec[] = [
@@ -431,6 +455,30 @@ const JP_STAGES: StageSpec[] = [
     requiresCorpus: 'sentences',
     missions: defaultMissionsForTier(3),
   },
+
+  // ===== Romance theme (source: [[dating-romance-jp]]) =====
+  {
+    id: 'jp_d_1',
+    language: 'jp',
+    tier: 2,
+    name: 'デート言葉',
+    description: 'デートの基本語彙 — 紹介、褒め言葉、好意',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 2, maxLevel: 2, categories: ['romance'] },
+    missions: defaultMissionsForTier(2),
+  },
+  {
+    id: 'jp_d_2',
+    language: 'jp',
+    tier: 3,
+    name: '告白と進展',
+    description: '告白・恋人関係 — 好き、告白、付き合う',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['romance'] },
+    missions: defaultMissionsForTier(3),
+  },
 ];
 
 const ES_STAGES: StageSpec[] = [
@@ -593,6 +641,32 @@ const ES_STAGES: StageSpec[] = [
     accentMode: 'loose',
     missions: defaultMissionsForTier(3),
   },
+
+  // ===== Romance theme (source: [[dating-romance-es]]) =====
+  {
+    id: 'es_d_1',
+    language: 'es',
+    tier: 2,
+    name: 'Citas y Piropos',
+    description: 'Citas y cumplidos — 자기소개, 칭찬, 데이트',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 2, maxLevel: 2, categories: ['romance'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(2),
+  },
+  {
+    id: 'es_d_2',
+    language: 'es',
+    tier: 3,
+    name: 'Declaración',
+    description: 'Declaración de amor — gustar, querer, amar, enamorado',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['romance'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(3),
+  },
 ];
 
 const KR_STAGES: StageSpec[] = [
@@ -746,6 +820,30 @@ const KR_STAGES: StageSpec[] = [
     difficulty: 3,
     wordCount: 8,
     corpusFilter: { minLevel: 1, maxLevel: 1, categories: ['travel'] },
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== Romance theme (source: [[dating-romance-kr]]) =====
+  {
+    id: 'kr_d_1',
+    language: 'kr',
+    tier: 1,
+    name: '썸·첫 데이트',
+    description: '썸과 첫 데이트 어휘 — 자기소개, 칭찬, 취미',
+    difficulty: 1,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 1, categories: ['romance'] },
+    missions: defaultMissionsForTier(1),
+  },
+  {
+    id: 'kr_d_2',
+    language: 'kr',
+    tier: 3,
+    name: '고백·연인',
+    description: '고백과 연인 — 좋아하다, 사랑하다, 고백, 썸, 연인',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['romance'] },
     missions: defaultMissionsForTier(3),
   },
 ];

@@ -9,6 +9,14 @@
   "wiki": {
     "sources": [
       {
+        "name": "dating-romance-jp",
+        "filename": "dating-romance-jp.md",
+        "title": "dating-romance-jp",
+        "size_kb": 2.6,
+        "modified": "2026-06-19T02:50:54.457128",
+        "path": "wiki/Japanese/sources/dating-romance-jp.md"
+      },
+      {
         "name": "first-travel-korea",
         "filename": "first-travel-korea.md",
         "title": "first-travel-korea",
@@ -361,6 +369,126 @@
         "size_kb": 0.3,
         "modified": "2026-06-18T18:55:33.785818",
         "path": "wiki/Japanese/vocabulary/yeyak.md"
+      },
+      {
+        "name": "かっこいい",
+        "filename": "かっこいい.md",
+        "title": "かっこいい",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:55:44.322980",
+        "path": "wiki/Japanese/vocabulary/かっこいい.md"
+      },
+      {
+        "name": "カフェ",
+        "filename": "カフェ.md",
+        "title": "カフェ",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:56:11.809427",
+        "path": "wiki/Japanese/vocabulary/カフェ.md"
+      },
+      {
+        "name": "デート",
+        "filename": "デート.md",
+        "title": "デート",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T02:56:19.646238",
+        "path": "wiki/Japanese/vocabulary/デート.md"
+      },
+      {
+        "name": "付き合う",
+        "filename": "付き合う.md",
+        "title": "付き合う",
+        "size_kb": 1.0,
+        "modified": "2026-06-19T02:56:41.070248",
+        "path": "wiki/Japanese/vocabulary/付き合う.md"
+      },
+      {
+        "name": "優しい",
+        "filename": "優しい.md",
+        "title": "優しい",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:55:51.457621",
+        "path": "wiki/Japanese/vocabulary/優しい.md"
+      },
+      {
+        "name": "可愛い",
+        "filename": "可愛い.md",
+        "title": "可愛い",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:55:37.315182",
+        "path": "wiki/Japanese/vocabulary/可愛い.md"
+      },
+      {
+        "name": "名前",
+        "filename": "名前.md",
+        "title": "名前",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:55:20.944754",
+        "path": "wiki/Japanese/vocabulary/名前.md"
+      },
+      {
+        "name": "告白",
+        "filename": "告白.md",
+        "title": "告白",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:56:34.160642",
+        "path": "wiki/Japanese/vocabulary/告白.md"
+      },
+      {
+        "name": "好き",
+        "filename": "好き.md",
+        "title": "好き",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:56:26.157136",
+        "path": "wiki/Japanese/vocabulary/好き.md"
+      },
+      {
+        "name": "彼女",
+        "filename": "彼女.md",
+        "title": "彼女",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:57:02.438870",
+        "path": "wiki/Japanese/vocabulary/彼女.md"
+      },
+      {
+        "name": "彼氏",
+        "filename": "彼氏.md",
+        "title": "彼氏",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:56:54.091641",
+        "path": "wiki/Japanese/vocabulary/彼氏.md"
+      },
+      {
+        "name": "恋人",
+        "filename": "恋人.md",
+        "title": "恋人",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:56:47.431187",
+        "path": "wiki/Japanese/vocabulary/恋人.md"
+      },
+      {
+        "name": "綺麗",
+        "filename": "綺麗.md",
+        "title": "綺麗",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:55:29.197053",
+        "path": "wiki/Japanese/vocabulary/綺麗.md"
+      },
+      {
+        "name": "趣味",
+        "filename": "趣味.md",
+        "title": "趣味",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:56:03.455883",
+        "path": "wiki/Japanese/vocabulary/趣味.md"
+      },
+      {
+        "name": "面白い",
+        "filename": "面白い.md",
+        "title": "面白い",
+        "size_kb": 0.8,
+        "modified": "2026-06-19T02:55:57.566856",
+        "path": "wiki/Japanese/vocabulary/面白い.md"
       }
     ],
     "expressions": [
@@ -371,12 +499,77 @@
         "size_kb": 1.2,
         "modified": "2026-06-18T18:56:40.429678",
         "path": "wiki/Japanese/expressions/sumimasen.md"
+      },
+      {
+        "name": "はじめまして",
+        "filename": "はじめまして.md",
+        "title": "はじめまして",
+        "size_kb": 0.9,
+        "modified": "2026-06-19T02:57:09.343539",
+        "path": "wiki/Japanese/expressions/はじめまして.md"
+      },
+      {
+        "name": "また連絡する",
+        "filename": "また連絡する.md",
+        "title": "また連絡する",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T02:57:46.302063",
+        "path": "wiki/Japanese/expressions/また連絡する.md"
+      },
+      {
+        "name": "今度ご飯行かない",
+        "filename": "今度ご飯行かない.md",
+        "title": "今度ご飯行かない",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T02:57:18.053835",
+        "path": "wiki/Japanese/expressions/今度ご飯行かない.md"
+      },
+      {
+        "name": "俺の彼女になってよ",
+        "filename": "俺の彼女になってよ.md",
+        "title": "俺の彼女になってよ",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T02:57:54.100309",
+        "path": "wiki/Japanese/expressions/俺の彼女になってよ.md"
+      },
+      {
+        "name": "好きです付き合ってください",
+        "filename": "好きです付き合ってください.md",
+        "title": "好きです付き合ってください",
+        "size_kb": 1.2,
+        "modified": "2026-06-19T02:57:26.335514",
+        "path": "wiki/Japanese/expressions/好きです付き合ってください.md"
+      },
+      {
+        "name": "手繋いでもいい",
+        "filename": "手繋いでもいい.md",
+        "title": "手繋いでもいい",
+        "size_kb": 1.1,
+        "modified": "2026-06-19T02:57:36.210050",
+        "path": "wiki/Japanese/expressions/手繋いでもいい.md"
       }
     ],
-    "culture": [],
+    "culture": [
+      {
+        "name": "japanese-dating-culture",
+        "filename": "japanese-dating-culture.md",
+        "title": "japanese-dating-culture",
+        "size_kb": 2.5,
+        "modified": "2026-06-19T02:58:10.459295",
+        "path": "wiki/Japanese/culture/japanese-dating-culture.md"
+      }
+    ],
     "study_plan": []
   },
   "raw_sources": [
+    {
+      "name": "dating-romance-jp",
+      "filename": "dating-romance-jp.md",
+      "title": "Dating & Romance — Source Material (Japanese)",
+      "size_kb": 5.8,
+      "modified": "2026-06-19T02:49:14.443268",
+      "path": "raw/Japanese/dating-romance-jp.md"
+    },
     {
       "name": "first-travel-korea",
       "filename": "first-travel-korea.md",
@@ -394,7 +587,7 @@
       "path": "raw/Japanese/travel-basics-jp.md"
     }
   ],
-  "raw_sources_count": 2,
+  "raw_sources_count": 3,
   "corpus": {
     "total": 182,
     "by_level": {
@@ -793,9 +986,9 @@
   "coverage": {
     "total_stages": 15,
     "total_corpus": 182,
-    "wiki_materials": 45,
-    "sources": 1,
-    "raw_sources": 2,
+    "wiki_materials": 68,
+    "sources": 2,
+    "raw_sources": 3,
     "stages_by_tier": {
       "0": 3,
       "1": 2,
@@ -1037,5 +1230,5 @@
     ],
     "coverage_percent": 107.7
   },
-  "generated_at": "2026-06-18T19:00:14.937807"
+  "generated_at": "2026-06-19T03:09:17.166828"
 }
