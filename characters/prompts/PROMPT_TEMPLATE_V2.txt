@@ -1,0 +1,135 @@
+IMPROVED CHARACTER IMAGE PROMPT TEMPLATE (v2)
+==============================================
+
+Use this template for generating character images with GUARANTEED transparent backgrounds.
+
+---
+
+Generate a portrait anime-style character illustration with these specifications:
+
+CHARACTER:
+- Name: [Character Name]
+- Gender: [Male/Female] ([1boy/1girl])
+- Age: [Age range]
+- Hair: [Color, style, length]
+- Eyes: [Color]
+- Expression: [Mood/emotion]
+- Style: [Aesthetic description]
+
+OUTFIT:
+- [Detailed clothing description]
+- [Each item of clothing]
+- [Accessories]
+- [Footwear]
+- [Overall style/theme]
+
+POSE:
+- [Specific pose description]
+- [Body position]
+- [Arm/leg placement]
+- [Overall stance]
+- Full body visible
+- [Action/movement if any]
+
+ACTION (for dynamic poses):
+- [Specific action being performed]
+- [Movement description]
+- [Energy/emotion]
+- [Any special effects like flowing clothes]
+
+🚨 CRITICAL BACKGROUND REQUIREMENT 🚨
+
+BACKGROUND:
+- **TRANSPARENT BACKGROUND REQUIRED (ABSOLUTE MUST)**
+- Format: PNG with alpha channel (RGBA, NOT RGB)
+- NO white background
+- NO colored background
+- NO gradient background
+- Background pixels must have alpha = 0 (fully transparent)
+- Only the character should be visible
+- Completely remove/cut out all background elements
+- This is for game development requiring transparency
+
+IMPORTANT: The background MUST be 100% transparent. 
+Export as PNG with transparency/alpha channel enabled.
+No white, no gray, no colors - pure transparency only.
+
+COMPOSITION:
+- Portrait orientation (vertical)
+- Full body shot (head to toe)
+- Character centered in frame
+- No additional objects or scenery
+- Solo character (no other people)
+- Clean, simple presentation
+- Character isolated on transparent layer
+
+ART STYLE:
+- High-quality anime illustration
+- Clean, crisp linework
+- [Color palette description]
+- Professional digital art
+- Smooth shading and coloring
+- Detailed facial features
+- Well-proportioned anatomy
+- [Specific style notes]
+
+QUALITY TAGS:
+masterpiece, best quality, highly detailed, professional illustration, anime style, clean lines, [style-specific colors], [gender tag], solo, full body, [pose description], [expression], [character theme], transparent background
+
+TECHNICAL SPECIFICATIONS:
+- Resolution: 1024×1536 pixels (portrait 2:3 ratio)
+- Format: PNG with alpha channel
+- **Color mode: RGBA (transparency enabled)**
+- **Background: Fully transparent (alpha = 0)**
+- High detail level
+- Professional quality
+- No compression artifacts
+- Clean edges with anti-aliasing
+
+AVOID:
+- Multiple characters
+- Busy backgrounds
+- **Any solid background (white, colored, gradient) - TRANSPARENCY ONLY**
+- **Background layers of any kind**
+- Text or watermarks
+- Low quality or blurry
+- Incorrect anatomy
+- [Character-specific things to avoid]
+
+TRANSPARENCY VERIFICATION:
+After generation, ensure:
+✅ File format shows "RGBA" (not just "RGB")
+✅ Background appears as checkerboard pattern in image viewer
+✅ No white or colored box around character
+✅ Only character pixels are visible
+
+Save to:
+[Full file path with numbered filename]
+
+This is pose [X]/7 ([pose name]) for [Character Name].
+
+---
+
+NOTES FOR AI GENERATION TOOLS:
+
+**ChatGPT/DALL-E:**
+- Request: "with transparent background" in initial prompt
+- If result has white background, ask: "Please make the background completely transparent"
+
+**Grok/Flux:**
+- Emphasize: "CRITICAL: Transparent background required, no white background"
+- May need post-processing with remove.bg if AI doesn't support transparency
+
+**Stable Diffusion:**
+- Use PNG format
+- Enable alpha channel in output settings
+- May require background removal in post-processing
+
+**Post-Generation:**
+- Verify with: `file [filename].png` → should show "RGBA"
+- View in image editor → should show transparency/checkerboard
+- If white background, use remove.bg or similar tool
+
+---
+
+END OF TEMPLATE
