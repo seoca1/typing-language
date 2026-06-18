@@ -19,11 +19,13 @@ def remove_white_background(image_path, output_path=None, threshold=240):
     
     Args:
         image_path: Path to input image
-        output_path: Path to output PNG (default: same as input)
+        output_path: Path to output PNG (default: same as input, with .png extension)
         threshold: White threshold (0-255, higher = more aggressive)
     """
     if output_path is None:
-        output_path = image_path
+        # Change extension to .png
+        base = os.path.splitext(image_path)[0]
+        output_path = base + '.png'
     
     # Open image (handles both JPEG and PNG)
     img = Image.open(image_path)
@@ -50,28 +52,41 @@ def remove_white_background(image_path, output_path=None, threshold=240):
     # Save as PNG
     result.save(output_path, 'PNG', optimize=True)
     
-    print(f"✓ Converted: {os.path.basename(image_path)}")
+    print(f"✓ Converted: {os.path.basename(image_path)} → {os.path.basename(output_path)}")
     print(f"  Original format: {Image.open(image_path).format}")
     print(f"  New format: PNG (RGBA)")
     print(f"  Size: {result.size}")
     
+    # Delete original if it's JPEG/JPG and different from output
+    if output_path != image_path and os.path.exists(image_path):
+        ext = os.path.splitext(image_path)[1].lower()
+        if ext in ['.jpg', '.jpeg']:
+            os.remove(image_path)
+            print(f"  ✓ Deleted original JPEG: {os.path.basename(image_path)}")
+    
     return result
 
-def batch_convert(directory, pattern='*.png', threshold=240):
+def batch_convert(directory, patterns=['*.png', '*.jpg', '*.jpeg'], threshold=240):
     """
-    Convert all images in directory matching pattern.
+    Convert all images in directory matching patterns.
     
     Args:
         directory: Directory containing images
-        pattern: File pattern (e.g., '*.png')
+        patterns: File patterns (e.g., ['*.png', '*.jpg', '*.jpeg'])
         threshold: White removal threshold
     """
     import glob
     
-    files = glob.glob(os.path.join(directory, pattern))
+    # Support multiple patterns
+    if isinstance(patterns, str):
+        patterns = [patterns]
+    
+    files = []
+    for pattern in patterns:
+        files.extend(glob.glob(os.path.join(directory, pattern)))
     
     if not files:
-        print(f"No files found matching {pattern} in {directory}")
+        print(f"No files found matching {patterns} in {directory}")
         return
     
     print(f"Found {len(files)} files to convert\n")
@@ -87,13 +102,19 @@ def batch_convert(directory, pattern='*.png', threshold=240):
     
     print(f"✓ Completed: {len(files)} files converted to PNG with transparency")
 
-def verify_images(directory, pattern='*.png'):
+def verify_images(directory, patterns=['*.png']):
     """
     Verify that all images are proper PNG with transparency.
     """
     import glob
     
-    files = glob.glob(os.path.join(directory, pattern))
+    # Support multiple patterns
+    if isinstance(patterns, str):
+        patterns = [patterns]
+    
+    files = []
+    for pattern in patterns:
+        files.extend(glob.glob(os.path.join(directory, pattern)))
     
     print("\n" + "="*60)
     print("VERIFICATION REPORT")
@@ -156,8 +177,8 @@ if __name__ == '__main__':
     print("="*60)
     print(f"Directory: {directory}\n")
     
-    # Convert all .png files
-    batch_convert(directory, '*.png', threshold=240)
+    # Convert all image files (PNG, JPG, JPEG)
+    batch_convert(directory, ['*.png', '*.jpg', '*.jpeg'], threshold=240)
     
-    # Verify results
-    verify_images(directory, '*.png')
+    # Verify results (only PNG should remain)
+    verify_images(directory, ['*.png'])
