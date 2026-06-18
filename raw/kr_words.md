@@ -80,74 +80,72 @@ Game/typing_language/prototype/src/data/kr_words.json
 
 ## 여행 (Travel) — Level 1
 
-> **출처**: [[travel-basics-kr]], [[travel]] (TOPIK 1급)
+> **출처**: [[first-travel-japan]] (raw/Korean/first-travel-japan.md)
+> **위키 페이지**: 각 단어마다 별도 페이지 존재 (예: [[kuukou]], [[hoteru]], [[yoyaku]])
+> **카테고리**: travel (여행)
 
 ### 공항 & 비행기
 
 ```yaml
-- { id: kr_t_001, display: 공항, jamo: ㄱㅗㅎㅏㅇ, meaning: 공항, level: 1, category: travel }
-- { id: kr_t_002, display: 여권, jamo: ㅇㅕㄱㅝㄴ, meaning: 여권, level: 1, category: travel }
-- { id: kr_t_003, display: 비행기, jamo: ㅂㅣㅎㅐㅇㄱㅣ, meaning: 비행기, level: 1, category: travel }
-- { id: kr_t_004, display: 짐, jamo: ㅈㅣㅁ, meaning: 짐, level: 1, category: travel }
-- { id: kr_t_005, display: 가방, jamo: ㄱㅏㅂㅏㅇ, meaning: 가방, level: 1, category: travel }
-- { id: kr_t_006, display: 표, jamo: ㅍㅛ, meaning: 표, level: 1, category: travel }
-- { id: kr_t_007, display: 탑승구, jamo: ㅌㅏㅂㅅㅡㅇㄱㅜ, meaning: 탑승구, level: 1, category: travel }
-- { id: kr_t_008, display: 도착, jamo: ㄷㅗㅊㅏㄱ, meaning: 도착, level: 1, category: travel }
-- { id: kr_t_009, display: 출발, jamo: ㅊㅜㅂㅏㄹ, meaning: 출발, level: 1, category: travel }
+- { id: kr_t_001, display: 공항, jamo: ㄱㅗㅎㅏㅇ, meaning: 공항, level: 1, category: travel, source: [[kuukou]] }
+- { id: kr_t_002, display: 여권, jamo: ㅇㅕㄱㅝㄴ, meaning: 여권, level: 1, category: travel, source: [[pasupooto]] }
+- { id: kr_t_003, display: 입국심사, jamo: ㅇㅣㅂㄱㅜㄱㅅㅣㅁㅅㅏ, meaning: 입국심사, level: 2, category: travel, source: [[nyuukoku-shinsa]] }
+- { id: kr_t_004, display: 짐, jamo: ㅈㅣㅁ, meaning: 짐, level: 1, category: travel, source: [[nimotsu]] }
+- { id: kr_t_005, display: 출구, jamo: ㅊㅜㄹㄱㅜ, meaning: 출구, level: 1, category: travel, source: [[deguchi]] }
+- { id: kr_t_006, display: 입구, jamo: ㅇㅣㅂㄱㅜ, meaning: 입구, level: 1, category: travel, source: [[iriguchi]] }
+- { id: kr_t_007, display: 환전, jamo: ㅎㅘㄴㅈㅓㄴ, meaning: 환전, level: 2, category: travel, source: [[ryougae]] }
 ```
 
 ### 호텔
 
 ```yaml
-- { id: kr_t_010, display: 호텔, jamo: ㅎㅗㅌㅔㄹ, meaning: 호텔, level: 1, category: travel }
-- { id: kr_t_011, display: 방, jamo: ㅂㅏㅇ, meaning: 방, level: 1, category: travel }
-- { id: kr_t_012, display: 예약, jamo: ㅇㅖㅇㅏㄱ, meaning: 예약, level: 1, category: travel }
-- { id: kr_t_013, display: 로비, jamo: ㄹㅗㅂㅣ, meaning: 로비, level: 1, category: travel }
-- { id: kr_t_014, display: 열쇠, jamo: ㅇㅕㄹㅅㅚ, meaning: 열쇠, level: 1, category: travel }
-- { id: kr_t_015, display: 묵다, jamo: ㅁㅜㄱㄷㅏ, meaning: 묵다, level: 1, category: travel }
+- { id: kr_t_010, display: 호텔, jamo: ㅎㅗㅌㅔㄹ, meaning: 호텔, level: 1, category: travel, source: [[hoteru]] }
+- { id: kr_t_011, display: 방, jamo: ㅂㅏㅇ, meaning: 방, level: 1, category: travel, source: [[heya]] }
+- { id: kr_t_012, display: 예약, jamo: ㅇㅖㅇㅏㄱ, meaning: 예약, level: 1, category: travel, source: [[yoyaku]] }
+- { id: kr_t_013, display: 아침 식사, jamo: ㅇㅏㅊㅣㅁ ㅅㅣㄱㅅㅏ, meaning: 아침 식사, level: 1, category: travel, source: [[choushoku]] }
+- { id: kr_t_014, display: 묵다, jamo: ㅁㅜㄱㄷㅏ, meaning: 묵다, level: 1, category: travel, source: [[first-travel-japan]] }
 ```
 
 ### 식당
 
 ```yaml
-- { id: kr_t_020, display: 식당, jamo: ㅅㅣㄱㄷㅏㅇ, meaning: 식당, level: 1, category: travel }
-- { id: kr_t_021, display: 메뉴, jamo: ㅁㅔㄴㅠ, meaning: 메뉴, level: 1, category: travel }
-- { id: kr_t_022, display: 주문, jamo: ㅈㅜㅁㅜㄴ, meaning: 주문, level: 1, category: travel }
-- { id: kr_t_023, display: 음식, jamo: ㅇㅡㅁㅅㅣㄱ, meaning: 음식, level: 1, category: travel }
-- { id: kr_t_024, display: 계산, jamo: ㄱㅖㅅㅏㄴ, meaning: 계산, level: 1, category: travel }
-- { id: kr_t_025, display: 팁, jamo: ㅌㅣㅍ, meaning: 팁, level: 1, category: travel }
-- { id: kr_t_026, display: 맛있다, jamo: ㅁㅏㅅㅇㅣㅆㄷㅏ, meaning: 맛있다, level: 1, category: travel }
+- { id: kr_t_020, display: 메뉴, jamo: ㅁㅔㄴㅠ, meaning: 메뉴, level: 1, category: travel, source: [[menyuu]] }
+- { id: kr_t_021, display: 주문, jamo: ㅈㅜㅁㅜㄴ, meaning: 주문, level: 1, category: travel, source: [[chuumon]] }
+- { id: kr_t_022, display: 계산, jamo: ㄱㅖㅅㅏㄴ, meaning: 계산, level: 1, category: travel, source: [[kaikei]] }
+- { id: kr_t_023, display: 맛있다, jamo: ㅁㅏㅅㅇㅣㅆㄷㅏ, meaning: 맛있다, level: 1, category: travel, source: [[oishii]] }
+- { id: kr_t_024, display: 맵다, jamo: ㅁㅐㄷㅏ, meaning: 맵다, level: 1, category: travel, source: [[karai]] }
+- { id: kr_t_025, display: 팁, jamo: ㅌㅣㅍ, meaning: 팁, level: 1, category: travel, source: [[chippu]] }
 ```
 
 ### 교통
 
 ```yaml
-- { id: kr_t_030, display: 지하철, jamo: ㅈㅣㅎㅏㅊㅓㄹ, meaning: 지하철, level: 1, category: travel }
-- { id: kr_t_031, display: 버스, jamo: ㅂㅓㅅㅡ, meaning: 버스, level: 1, category: travel }
-- { id: kr_t_032, display: 택시, jamo: ㅌㅐㄱㅅㅣ, meaning: 택시, level: 1, category: travel }
-- { id: kr_t_033, display: 기차, jamo: ㄱㅣㅊㅏ, meaning: 기차, level: 1, category: travel }
-- { id: kr_t_034, display: 역, jamo: ㅇㅕㄱ, meaning: 역, level: 1, category: travel }
-- { id: kr_t_035, display: 정류장, jamo: ㅈㅓㅇㄹㅠㅈㅏㅇ, meaning: 정류장, level: 1, category: travel }
-- { id: kr_t_036, display: 환승, jamo: ㅎㅘㄴㅅㅡㅇ, meaning: 환승, level: 1, category: travel }
-- { id: kr_t_037, display: 타다, jamo: ㅌㅏㄷㅏ, meaning: 타다, level: 1, category: travel }
-- { id: kr_t_038, display: 내리다, jamo: ㄴㅐㄹㅣㄷㅏ, meaning: 내리다, level: 1, category: travel }
+- { id: kr_t_030, display: 지하철, jamo: ㅈㅣㅎㅏㅊㅓㄹ, meaning: 지하철, level: 1, category: travel, source: [[chikatetsu]] }
+- { id: kr_t_031, display: 버스, jamo: ㅂㅓㅅㅡ, meaning: 버스, level: 1, category: travel, source: [[basu]] }
+- { id: kr_t_032, display: 택시, jamo: ㅌㅐㄱㅅㅣ, meaning: 택시, level: 1, category: travel, source: [[takushii]] }
+- { id: kr_t_033, display: 기차, jamo: ㄱㅣㅊㅏ, meaning: 기차, level: 1, category: travel, source: [[densha]] }
+- { id: kr_t_034, display: 역, jamo: ㅇㅕㄱ, meaning: 역, level: 1, category: travel, source: [[eki]] }
+- { id: kr_t_035, display: 신칸센, jamo: ㅅㅣㄴㅋㅏㄴㅅㅔㄴ, meaning: 신칸센, level: 2, category: travel, source: [[shinkansen]] }
+- { id: kr_t_036, display: 표, jamo: ㅍㅛ, meaning: 표, level: 1, category: travel, source: [[kippu]] }
+- { id: kr_t_037, display: 왼쪽, jamo: ㅇㅗㄴㄱㅗㄱ, meaning: 왼쪽, level: 1, category: travel, source: [[hidari]] }
+- { id: kr_t_038, display: 오른쪽, jamo: ㅇㅗㄹㅡㄴㄲㅗㄱ, meaning: 오른쪽, level: 1, category: travel, source: [[migi]] }
+- { id: kr_t_039, display: 직진, jamo: ㅈㅣㄱㅈㅣㄴ, meaning: 직진, level: 2, category: travel, source: [[massugu]] }
 ```
 
 ### 관광
 
 ```yaml
-- { id: kr_t_040, display: 박물관, jamo: ㅂㅏㄱㅁㅜㄹㄱㅘㄴ, meaning: 박물관, level: 1, category: travel }
-- { id: kr_t_041, display: 해변, jamo: ㅎㅐㅂㅕㄴ, meaning: 해변, level: 1, category: travel }
-- { id: kr_t_042, display: 산, jamo: ㅅㅏㄴ, meaning: 산, level: 1, category: travel }
-- { id: kr_t_043, display: 공원, jamo: ㄱㅗㅇㅇㅜㅓㄴ, meaning: 공원, level: 1, category: travel }
-- { id: kr_t_044, display: 절, jamo: ㅈㅓㄹ, meaning: 절, level: 1, category: travel }
-- { id: kr_t_045, display: 궁궐, jamo: ㄱㅜㅇㄱㅜㄹ, meaning: 궁궐, level: 1, category: travel }
-- { id: kr_t_046, display: 지도, jamo: ㅈㅣㄷㅗ, meaning: 지도, level: 1, category: travel }
-- { id: kr_t_047, display: 사진, jamo: ㅅㅏㅈㅣㄴ, meaning: 사진, level: 1, category: travel }
-- { id: kr_t_048, display: 구경하다, jamo: ㄱㅜㄱㅕㅇㅎㅏㄷㅏ, meaning: 구경하다, level: 1, category: travel }
+- { id: kr_t_040, display: 절, jamo: ㅈㅓㄹ, meaning: 절, level: 1, category: travel, source: [[tera]] }
+- { id: kr_t_041, display: 신사, jamo: ㅅㅣㄴㅅㅏ, meaning: 신사, level: 2, category: travel, source: [[jinja]] }
+- { id: kr_t_042, display: 박물관, jamo: ㅂㅏㄱㅁㅜㄹㄱㅘㄴ, meaning: 박물관, level: 2, category: travel, source: [[hakubutsukan]] }
+- { id: kr_t_043, display: 공원, jamo: ㄱㅗㅇㄱㅜㄱ, meaning: 공원, level: 1, category: travel, source: [[kouen]] }
+- { id: kr_t_044, display: 산, jamo: ㅅㅏㄴ, meaning: 산, level: 1, category: travel, source: [[yama]] }
+- { id: kr_t_045, display: 바다, jamo: ㅂㅏㄷㅏ, meaning: 바다, level: 1, category: travel, source: [[umi]] }
+- { id: kr_t_046, display: 사진, jamo: ㅅㅏㅈㅣㄴ, meaning: 사진, level: 1, category: travel, source: [[shashin]] }
+- { id: kr_t_047, display: 지도, jamo: ㅈㅣㄷㅗ, meaning: 지도, level: 1, category: travel, source: [[chizu]] }
 ```
 
-### 여행 문장 (Travel Phrases)
+### 여행 표현 (Travel Expressions) — Level 3
 
 ```yaml
 - id: kr_t_s_001
@@ -156,7 +154,7 @@ Game/typing_language/prototype/src/data/kr_words.json
   meaning: 화장실 어디예요?
   level: 1
   category: travel
-  source: [[travel]]
+  source: [[sumimasen-wa-doko-desuka]]
 
 - id: kr_t_s_002
   display: 얼마예요?
@@ -164,23 +162,23 @@ Game/typing_language/prototype/src/data/kr_words.json
   meaning: 얼마예요?
   level: 1
   category: travel
-  source: [[travel]]
+  source: [[ikura-desuka]]
 
 - id: kr_t_s_003
-  display: 도와주세요
-  jamo: ㄷㅗㅇㅘㅈㅜㅅㅔㅇㅛ
-  meaning: 도와주세요
-  level: 1
-  category: travel
-  source: [[travel]]
-
-- id: kr_t_s_004
   display: 감사합니다
   jamo: ㄱㅏㅁㅅㅏㅎㅏㅂㄴㅣㄷㅏ
   meaning: 감사합니다
   level: 1
   category: travel
-  source: [[travel]]
+  source: [[arigatou]]
+
+- id: kr_t_s_004
+  display: 도와주세요
+  jamo: ㄷㅗㅇㅘㅈㅜㅅㅔㅇㅛ
+  meaning: 도와주세요
+  level: 1
+  category: travel
+  source: [[first-travel-japan]]
 
 - id: kr_t_s_005
   display: 호텔은 어디예요?
@@ -188,7 +186,7 @@ Game/typing_language/prototype/src/data/kr_words.json
   meaning: 호텔은 어디예요?
   level: 1
   category: travel
-  source: [[travel]]
+  source: [[sumimasen-wa-doko-desuka]]
 ```
 
 ## Level 2 (TOPIK 2, 일상)

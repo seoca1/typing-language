@@ -7,8 +7,393 @@
     "color": "#3b82f6"
   },
   "wiki": {
-    "sources": [],
+    "sources": [
+      {
+        "name": "first-travel-japan",
+        "filename": "first-travel-japan.md",
+        "title": "first-travel-japan",
+        "size_kb": 1.4,
+        "modified": "2026-06-18T19:00:06.586709",
+        "path": "wiki/English/sources/first-travel-japan.md"
+      }
+    ],
     "vocabulary": [
+      {
+        "name": "airport",
+        "filename": "airport.md",
+        "title": "airport",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780370",
+        "path": "wiki/English/vocabulary/airport.md"
+      },
+      {
+        "name": "baggage",
+        "filename": "baggage.md",
+        "title": "baggage",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780697",
+        "path": "wiki/English/vocabulary/baggage.md"
+      },
+      {
+        "name": "bill",
+        "filename": "bill.md",
+        "title": "bill",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781281",
+        "path": "wiki/English/vocabulary/bill.md"
+      },
+      {
+        "name": "breakfast",
+        "filename": "breakfast.md",
+        "title": "breakfast",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781063",
+        "path": "wiki/English/vocabulary/breakfast.md"
+      },
+      {
+        "name": "bus",
+        "filename": "bus.md",
+        "title": "bus",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781554",
+        "path": "wiki/English/vocabulary/bus.md"
+      },
+      {
+        "name": "cheap",
+        "filename": "cheap.md",
+        "title": "cheap",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782569",
+        "path": "wiki/English/vocabulary/cheap.md"
+      },
+      {
+        "name": "cold",
+        "filename": "cold.md",
+        "title": "cold",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782828",
+        "path": "wiki/English/vocabulary/cold.md"
+      },
+      {
+        "name": "customs",
+        "filename": "customs.md",
+        "title": "customs",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780577",
+        "path": "wiki/English/vocabulary/customs.md"
+      },
+      {
+        "name": "delicious",
+        "filename": "delicious.md",
+        "title": "delicious",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782670",
+        "path": "wiki/English/vocabulary/delicious.md"
+      },
+      {
+        "name": "entrance",
+        "filename": "entrance.md",
+        "title": "entrance",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780859",
+        "path": "wiki/English/vocabulary/entrance.md"
+      },
+      {
+        "name": "exit",
+        "filename": "exit.md",
+        "title": "exit",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780805",
+        "path": "wiki/English/vocabulary/exit.md"
+      },
+      {
+        "name": "expensive",
+        "filename": "expensive.md",
+        "title": "expensive",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782619",
+        "path": "wiki/English/vocabulary/expensive.md"
+      },
+      {
+        "name": "far",
+        "filename": "far.md",
+        "title": "far",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782056",
+        "path": "wiki/English/vocabulary/far.md"
+      },
+      {
+        "name": "guide",
+        "filename": "guide.md",
+        "title": "guide",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782510",
+        "path": "wiki/English/vocabulary/guide.md"
+      },
+      {
+        "name": "hot",
+        "filename": "hot.md",
+        "title": "hot",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782876",
+        "path": "wiki/English/vocabulary/hot.md"
+      },
+      {
+        "name": "hotel",
+        "filename": "hotel.md",
+        "title": "hotel",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780967",
+        "path": "wiki/English/vocabulary/hotel.md"
+      },
+      {
+        "name": "immigration",
+        "filename": "immigration.md",
+        "title": "immigration",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780512",
+        "path": "wiki/English/vocabulary/immigration.md"
+      },
+      {
+        "name": "intersection",
+        "filename": "intersection.md",
+        "title": "intersection",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781886",
+        "path": "wiki/English/vocabulary/intersection.md"
+      },
+      {
+        "name": "left",
+        "filename": "left.md",
+        "title": "left",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781713",
+        "path": "wiki/English/vocabulary/left.md"
+      },
+      {
+        "name": "luggage",
+        "filename": "luggage.md",
+        "title": "luggage",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780632",
+        "path": "wiki/English/vocabulary/luggage.md"
+      },
+      {
+        "name": "map",
+        "filename": "map.md",
+        "title": "map",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782463",
+        "path": "wiki/English/vocabulary/map.md"
+      },
+      {
+        "name": "menu",
+        "filename": "menu.md",
+        "title": "menu",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781175",
+        "path": "wiki/English/vocabulary/menu.md"
+      },
+      {
+        "name": "mountain",
+        "filename": "mountain.md",
+        "title": "mountain",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782331",
+        "path": "wiki/English/vocabulary/mountain.md"
+      },
+      {
+        "name": "museum",
+        "filename": "museum.md",
+        "title": "museum",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782226",
+        "path": "wiki/English/vocabulary/museum.md"
+      },
+      {
+        "name": "near",
+        "filename": "near.md",
+        "title": "near",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782007",
+        "path": "wiki/English/vocabulary/near.md"
+      },
+      {
+        "name": "order",
+        "filename": "order.md",
+        "title": "order",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781228",
+        "path": "wiki/English/vocabulary/order.md"
+      },
+      {
+        "name": "park",
+        "filename": "park.md",
+        "title": "park",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782280",
+        "path": "wiki/English/vocabulary/park.md"
+      },
+      {
+        "name": "passport",
+        "filename": "passport.md",
+        "title": "passport",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780445",
+        "path": "wiki/English/vocabulary/passport.md"
+      },
+      {
+        "name": "photo",
+        "filename": "photo.md",
+        "title": "photo",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782420",
+        "path": "wiki/English/vocabulary/photo.md"
+      },
+      {
+        "name": "reservation",
+        "filename": "reservation.md",
+        "title": "reservation",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780917",
+        "path": "wiki/English/vocabulary/reservation.md"
+      },
+      {
+        "name": "restaurant",
+        "filename": "restaurant.md",
+        "title": "restaurant",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781121",
+        "path": "wiki/English/vocabulary/restaurant.md"
+      },
+      {
+        "name": "right",
+        "filename": "right.md",
+        "title": "right",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781764",
+        "path": "wiki/English/vocabulary/right.md"
+      },
+      {
+        "name": "room",
+        "filename": "room.md",
+        "title": "room",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781015",
+        "path": "wiki/English/vocabulary/room.md"
+      },
+      {
+        "name": "sea",
+        "filename": "sea.md",
+        "title": "sea",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782376",
+        "path": "wiki/English/vocabulary/sea.md"
+      },
+      {
+        "name": "shrine",
+        "filename": "shrine.md",
+        "title": "shrine",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782169",
+        "path": "wiki/English/vocabulary/shrine.md"
+      },
+      {
+        "name": "spicy",
+        "filename": "spicy.md",
+        "title": "spicy",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782717",
+        "path": "wiki/English/vocabulary/spicy.md"
+      },
+      {
+        "name": "station",
+        "filename": "station.md",
+        "title": "station",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781389",
+        "path": "wiki/English/vocabulary/station.md"
+      },
+      {
+        "name": "straight",
+        "filename": "straight.md",
+        "title": "straight",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781824",
+        "path": "wiki/English/vocabulary/straight.md"
+      },
+      {
+        "name": "subway",
+        "filename": "subway.md",
+        "title": "subway",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781441",
+        "path": "wiki/English/vocabulary/subway.md"
+      },
+      {
+        "name": "suitcase",
+        "filename": "suitcase.md",
+        "title": "suitcase",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.780749",
+        "path": "wiki/English/vocabulary/suitcase.md"
+      },
+      {
+        "name": "sweet",
+        "filename": "sweet.md",
+        "title": "sweet",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782773",
+        "path": "wiki/English/vocabulary/sweet.md"
+      },
+      {
+        "name": "taxi",
+        "filename": "taxi.md",
+        "title": "taxi",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781609",
+        "path": "wiki/English/vocabulary/taxi.md"
+      },
+      {
+        "name": "temple",
+        "filename": "temple.md",
+        "title": "temple",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.782109",
+        "path": "wiki/English/vocabulary/temple.md"
+      },
+      {
+        "name": "ticket",
+        "filename": "ticket.md",
+        "title": "ticket",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781664",
+        "path": "wiki/English/vocabulary/ticket.md"
+      },
+      {
+        "name": "tip",
+        "filename": "tip.md",
+        "title": "tip",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781334",
+        "path": "wiki/English/vocabulary/tip.md"
+      },
+      {
+        "name": "traffic-light",
+        "filename": "traffic-light.md",
+        "title": "traffic light",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781947",
+        "path": "wiki/English/vocabulary/traffic-light.md"
+      },
+      {
+        "name": "train",
+        "filename": "train.md",
+        "title": "train",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.781495",
+        "path": "wiki/English/vocabulary/train.md"
+      },
       {
         "name": "travel",
         "filename": "travel.md",
@@ -18,11 +403,36 @@
         "path": "wiki/English/vocabulary/travel.md"
       }
     ],
-    "expressions": [],
+    "expressions": [
+      {
+        "name": "how-much",
+        "filename": "how-much.md",
+        "title": "how-much",
+        "size_kb": 0.8,
+        "modified": "2026-06-18T18:56:13.284165",
+        "path": "wiki/English/expressions/how-much.md"
+      },
+      {
+        "name": "where-is",
+        "filename": "where-is.md",
+        "title": "where-is",
+        "size_kb": 0.9,
+        "modified": "2026-06-18T18:56:06.989307",
+        "path": "wiki/English/expressions/where-is.md"
+      }
+    ],
     "culture": [],
     "study_plan": []
   },
   "raw_sources": [
+    {
+      "name": "first-travel-japan",
+      "filename": "first-travel-japan.md",
+      "title": "First Travel Experience — Japan (Korean traveler)",
+      "size_kb": 6.6,
+      "modified": "2026-06-18T18:53:34.543762",
+      "path": "raw/English/first-travel-japan.md"
+    },
     {
       "name": "travel-basics",
       "filename": "travel-basics.md",
@@ -32,16 +442,16 @@
       "path": "raw/English/travel-basics.md"
     }
   ],
-  "raw_sources_count": 1,
+  "raw_sources_count": 2,
   "corpus": {
-    "total": 158,
+    "total": 162,
     "by_level": {
-      "1": 97,
+      "1": 102,
       "2": 55,
-      "3": 6
+      "3": 5
     },
     "by_category": {
-      "travel": 84,
+      "travel": 88,
       "greeting": 12,
       "adjective": 10,
       "basic": 9,
@@ -57,7 +467,7 @@
       "restaurant": 1
     },
     "by_type": {
-      "words": 158,
+      "words": 162,
       "sentences": 0,
       "chars": 0
     },
@@ -390,10 +800,10 @@
   ],
   "coverage": {
     "total_stages": 13,
-    "total_corpus": 158,
-    "wiki_materials": 1,
-    "sources": 0,
-    "raw_sources": 1,
+    "total_corpus": 162,
+    "wiki_materials": 51,
+    "sources": 1,
+    "raw_sources": 2,
     "stages_by_tier": {
       "1": 3,
       "2": 5,
@@ -606,7 +1016,7 @@
         ]
       }
     ],
-    "coverage_percent": 125.4
+    "coverage_percent": 128.6
   },
-  "generated_at": "2026-06-18T18:49:18.351569"
+  "generated_at": "2026-06-18T19:00:14.912744"
 }

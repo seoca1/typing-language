@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T18:49:18.422679",
+  "generated_at": "2026-06-18T19:00:14.997766",
   "languages": [
     {
       "code": "en",
@@ -9,14 +9,14 @@
       "color": "#3b82f6",
       "stats": {
         "stages": 13,
-        "corpus_total": 158,
-        "vocab_wiki": 1,
-        "expressions_wiki": 0,
+        "corpus_total": 162,
+        "vocab_wiki": 48,
+        "expressions_wiki": 2,
         "culture_wiki": 0,
-        "sources_wiki": 0,
+        "sources_wiki": 1,
         "study_plan_wiki": 0,
-        "raw_sources": 1,
-        "coverage_percent": 125.4,
+        "raw_sources": 2,
+        "coverage_percent": 128.6,
         "gaps": 2
       }
     },
@@ -29,12 +29,12 @@
       "stats": {
         "stages": 15,
         "corpus_total": 182,
-        "vocab_wiki": 1,
-        "expressions_wiki": 0,
+        "vocab_wiki": 43,
+        "expressions_wiki": 1,
         "culture_wiki": 0,
-        "sources_wiki": 0,
+        "sources_wiki": 1,
         "study_plan_wiki": 0,
-        "raw_sources": 1,
+        "raw_sources": 2,
         "coverage_percent": 107.7,
         "gaps": 3
       }
@@ -48,12 +48,12 @@
       "stats": {
         "stages": 12,
         "corpus_total": 155,
-        "vocab_wiki": 37,
-        "expressions_wiki": 22,
+        "vocab_wiki": 82,
+        "expressions_wiki": 24,
         "culture_wiki": 10,
         "sources_wiki": 4,
         "study_plan_wiki": 2,
-        "raw_sources": 4,
+        "raw_sources": 5,
         "coverage_percent": 139.6,
         "gaps": 3
       }
@@ -66,25 +66,25 @@
       "color": "#10b981",
       "stats": {
         "stages": 12,
-        "corpus_total": 86,
-        "vocab_wiki": 23,
-        "expressions_wiki": 0,
+        "corpus_total": 78,
+        "vocab_wiki": 66,
+        "expressions_wiki": 3,
         "culture_wiki": 0,
-        "sources_wiki": 0,
+        "sources_wiki": 1,
         "study_plan_wiki": 0,
-        "raw_sources": 2,
-        "coverage_percent": 76.1,
+        "raw_sources": 3,
+        "coverage_percent": 69.0,
         "gaps": 5
       }
     }
   ],
   "totals": {
     "stages": 52,
-    "corpus": 581,
-    "wiki_materials": 100,
-    "raw_sources": 8,
-    "vocab_words": 62,
-    "expressions": 22,
+    "corpus": 577,
+    "wiki_materials": 288,
+    "raw_sources": 12,
+    "vocab_words": 239,
+    "expressions": 30,
     "culture": 10
   },
   "tiers": {

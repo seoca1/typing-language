@@ -7,8 +7,321 @@
     "color": "#ec4899"
   },
   "wiki": {
-    "sources": [],
+    "sources": [
+      {
+        "name": "first-travel-korea",
+        "filename": "first-travel-korea.md",
+        "title": "first-travel-korea",
+        "size_kb": 1.3,
+        "modified": "2026-06-18T19:00:12.327935",
+        "path": "wiki/Japanese/sources/first-travel-korea.md"
+      }
+    ],
     "vocabulary": [
+      {
+        "name": "achim",
+        "filename": "achim.md",
+        "title": "아침",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785968",
+        "path": "wiki/Japanese/vocabulary/achim.md"
+      },
+      {
+        "name": "bada",
+        "filename": "bada.md",
+        "title": "바다",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.787009",
+        "path": "wiki/Japanese/vocabulary/bada.md"
+      },
+      {
+        "name": "bang",
+        "filename": "bang.md",
+        "title": "방",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785918",
+        "path": "wiki/Japanese/vocabulary/bang.md"
+      },
+      {
+        "name": "bangmulgwan",
+        "filename": "bangmulgwan.md",
+        "title": "박물관",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T18:55:33.786862",
+        "path": "wiki/Japanese/vocabulary/bangmulgwan.md"
+      },
+      {
+        "name": "beoseu",
+        "filename": "beoseu.md",
+        "title": "버스",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786330",
+        "path": "wiki/Japanese/vocabulary/beoseu.md"
+      },
+      {
+        "name": "bissada",
+        "filename": "bissada.md",
+        "title": "비싸다",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.787232",
+        "path": "wiki/Japanese/vocabulary/bissada.md"
+      },
+      {
+        "name": "chagapda",
+        "filename": "chagapda.md",
+        "title": "차갑다",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T18:55:33.787417",
+        "path": "wiki/Japanese/vocabulary/chagapda.md"
+      },
+      {
+        "name": "chulgu",
+        "filename": "chulgu.md",
+        "title": "출구",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785709",
+        "path": "wiki/Japanese/vocabulary/chulgu.md"
+      },
+      {
+        "name": "dalda",
+        "filename": "dalda.md",
+        "title": "달다",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.787374",
+        "path": "wiki/Japanese/vocabulary/dalda.md"
+      },
+      {
+        "name": "gakkai",
+        "filename": "gakkai.md",
+        "title": "가까이",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786713",
+        "path": "wiki/Japanese/vocabulary/gakkai.md"
+      },
+      {
+        "name": "gicha",
+        "filename": "gicha.md",
+        "title": "기차",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786276",
+        "path": "wiki/Japanese/vocabulary/gicha.md"
+      },
+      {
+        "name": "gonghang",
+        "filename": "gonghang.md",
+        "title": "공항",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785462",
+        "path": "wiki/Japanese/vocabulary/gonghang.md"
+      },
+      {
+        "name": "gongwon",
+        "filename": "gongwon.md",
+        "title": "공원",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786904",
+        "path": "wiki/Japanese/vocabulary/gongwon.md"
+      },
+      {
+        "name": "gyesan",
+        "filename": "gyesan.md",
+        "title": "계산",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786117",
+        "path": "wiki/Japanese/vocabulary/gyesan.md"
+      },
+      {
+        "name": "gyocharo",
+        "filename": "gyocharo.md",
+        "title": "교차로",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T18:55:33.786618",
+        "path": "wiki/Japanese/vocabulary/gyocharo.md"
+      },
+      {
+        "name": "hotel",
+        "filename": "hotel.md",
+        "title": "호텔",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785872",
+        "path": "wiki/Japanese/vocabulary/hotel.md"
+      },
+      {
+        "name": "hwanjeon",
+        "filename": "hwanjeon.md",
+        "title": "환전",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.787146",
+        "path": "wiki/Japanese/vocabulary/hwanjeon.md"
+      },
+      {
+        "name": "ibguksimsa",
+        "filename": "ibguksimsa.md",
+        "title": "입국심사",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T18:55:33.785563",
+        "path": "wiki/Japanese/vocabulary/ibguksimsa.md"
+      },
+      {
+        "name": "ipgu",
+        "filename": "ipgu.md",
+        "title": "입구",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785762",
+        "path": "wiki/Japanese/vocabulary/ipgu.md"
+      },
+      {
+        "name": "jeol",
+        "filename": "jeol.md",
+        "title": "절",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786813",
+        "path": "wiki/Japanese/vocabulary/jeol.md"
+      },
+      {
+        "name": "jido",
+        "filename": "jido.md",
+        "title": "지도",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.787097",
+        "path": "wiki/Japanese/vocabulary/jido.md"
+      },
+      {
+        "name": "jigjin",
+        "filename": "jigjin.md",
+        "title": "직진",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786571",
+        "path": "wiki/Japanese/vocabulary/jigjin.md"
+      },
+      {
+        "name": "jihacheol",
+        "filename": "jihacheol.md",
+        "title": "지하철",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T18:55:33.786231",
+        "path": "wiki/Japanese/vocabulary/jihacheol.md"
+      },
+      {
+        "name": "jim",
+        "filename": "jim.md",
+        "title": "짐",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785661",
+        "path": "wiki/Japanese/vocabulary/jim.md"
+      },
+      {
+        "name": "jumun",
+        "filename": "jumun.md",
+        "title": "주문",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786064",
+        "path": "wiki/Japanese/vocabulary/jumun.md"
+      },
+      {
+        "name": "maepda",
+        "filename": "maepda.md",
+        "title": "맵다",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.787330",
+        "path": "wiki/Japanese/vocabulary/maepda.md"
+      },
+      {
+        "name": "masitda",
+        "filename": "masitda.md",
+        "title": "맛있다",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T18:55:33.787282",
+        "path": "wiki/Japanese/vocabulary/masitda.md"
+      },
+      {
+        "name": "meolli",
+        "filename": "meolli.md",
+        "title": "멀리",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786764",
+        "path": "wiki/Japanese/vocabulary/meolli.md"
+      },
+      {
+        "name": "oenjjog",
+        "filename": "oenjjog.md",
+        "title": "왼쪽",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786479",
+        "path": "wiki/Japanese/vocabulary/oenjjog.md"
+      },
+      {
+        "name": "oreunjjog",
+        "filename": "oreunjjog.md",
+        "title": "오른쪽",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786527",
+        "path": "wiki/Japanese/vocabulary/oreunjjog.md"
+      },
+      {
+        "name": "pyo",
+        "filename": "pyo.md",
+        "title": "표",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786433",
+        "path": "wiki/Japanese/vocabulary/pyo.md"
+      },
+      {
+        "name": "sajin",
+        "filename": "sajin.md",
+        "title": "사진",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.787054",
+        "path": "wiki/Japanese/vocabulary/sajin.md"
+      },
+      {
+        "name": "san",
+        "filename": "san.md",
+        "title": "산",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786958",
+        "path": "wiki/Japanese/vocabulary/san.md"
+      },
+      {
+        "name": "segwan",
+        "filename": "segwan.md",
+        "title": "세관",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785613",
+        "path": "wiki/Japanese/vocabulary/segwan.md"
+      },
+      {
+        "name": "sikdang",
+        "filename": "sikdang.md",
+        "title": "식당",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786013",
+        "path": "wiki/Japanese/vocabulary/sikdang.md"
+      },
+      {
+        "name": "sinhodeung",
+        "filename": "sinhodeung.md",
+        "title": "신호등",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T18:55:33.786664",
+        "path": "wiki/Japanese/vocabulary/sinhodeung.md"
+      },
+      {
+        "name": "ssada",
+        "filename": "ssada.md",
+        "title": "싸다",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.787188",
+        "path": "wiki/Japanese/vocabulary/ssada.md"
+      },
+      {
+        "name": "taegsi",
+        "filename": "taegsi.md",
+        "title": "택시",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786385",
+        "path": "wiki/Japanese/vocabulary/taegsi.md"
+      },
       {
         "name": "travel",
         "filename": "travel.md",
@@ -16,13 +329,62 @@
         "size_kb": 4.1,
         "modified": "2026-06-18T18:44:48.984832",
         "path": "wiki/Japanese/vocabulary/travel.md"
+      },
+      {
+        "name": "tteugeopda",
+        "filename": "tteugeopda.md",
+        "title": "뜨겁다",
+        "size_kb": 0.4,
+        "modified": "2026-06-18T18:55:33.787461",
+        "path": "wiki/Japanese/vocabulary/tteugeopda.md"
+      },
+      {
+        "name": "yeog",
+        "filename": "yeog.md",
+        "title": "역",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.786178",
+        "path": "wiki/Japanese/vocabulary/yeog.md"
+      },
+      {
+        "name": "yeogwon",
+        "filename": "yeogwon.md",
+        "title": "여권",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785516",
+        "path": "wiki/Japanese/vocabulary/yeogwon.md"
+      },
+      {
+        "name": "yeyak",
+        "filename": "yeyak.md",
+        "title": "예약",
+        "size_kb": 0.3,
+        "modified": "2026-06-18T18:55:33.785818",
+        "path": "wiki/Japanese/vocabulary/yeyak.md"
       }
     ],
-    "expressions": [],
+    "expressions": [
+      {
+        "name": "sumimasen",
+        "filename": "sumimasen.md",
+        "title": "sumimasen",
+        "size_kb": 1.2,
+        "modified": "2026-06-18T18:56:40.429678",
+        "path": "wiki/Japanese/expressions/sumimasen.md"
+      }
+    ],
     "culture": [],
     "study_plan": []
   },
   "raw_sources": [
+    {
+      "name": "first-travel-korea",
+      "filename": "first-travel-korea.md",
+      "title": "初めての旅行 — 韓国",
+      "size_kb": 5.8,
+      "modified": "2026-06-18T18:54:23.710901",
+      "path": "raw/Japanese/first-travel-korea.md"
+    },
     {
       "name": "travel-basics-jp",
       "filename": "travel-basics-jp.md",
@@ -32,7 +394,7 @@
       "path": "raw/Japanese/travel-basics-jp.md"
     }
   ],
-  "raw_sources_count": 1,
+  "raw_sources_count": 2,
   "corpus": {
     "total": 182,
     "by_level": {
@@ -431,9 +793,9 @@
   "coverage": {
     "total_stages": 15,
     "total_corpus": 182,
-    "wiki_materials": 1,
-    "sources": 0,
-    "raw_sources": 1,
+    "wiki_materials": 45,
+    "sources": 1,
+    "raw_sources": 2,
     "stages_by_tier": {
       "0": 3,
       "1": 2,
@@ -675,5 +1037,5 @@
     ],
     "coverage_percent": 107.7
   },
-  "generated_at": "2026-06-18T18:49:18.373706"
+  "generated_at": "2026-06-18T19:00:14.937807"
 }

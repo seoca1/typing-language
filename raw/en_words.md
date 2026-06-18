@@ -89,74 +89,77 @@
 
 ## 여행 어휘 (Travel) — Level 1~2
 
-> **출처**: [[travel-basics]], [[travel]] (CEFR A1-A2)
+> **출처**: [[first-travel-japan]] (raw/English/first-travel-japan.md)
+> **위키 페이지**: 각 단어마다 별도 페이지 존재 (예: [[airport]], [[hotel]], [[passport]])
 > **카테고리**: travel (여행)
 
 ### 공항 & 비행기 (Airport)
 
 ```yaml
-- { id: en_t_001, display: passport, meaning: 여권, level: 1, category: travel }
-- { id: en_t_002, display: ticket, meaning: 표, level: 1, category: travel }
-- { id: en_t_003, display: suitcase, meaning: 여행가방, level: 1, category: travel }
-- { id: en_t_004, display: airport, meaning: 공항, level: 1, category: travel }
-- { id: en_t_005, display: gate, meaning: 탑승구, level: 2, category: travel }
-- { id: en_t_006, display: boarding, meaning: 탑승, level: 2, category: travel }
-- { id: en_t_007, display: flight, meaning: 항공편, level: 2, category: travel }
-- { id: en_t_008, display: arrive, meaning: 도착하다, level: 1, category: travel }
+- { id: en_t_001, display: airport, meaning: 공항, level: 1, category: travel, source: [[airport]], romaji: airport }
+- { id: en_t_002, display: passport, meaning: 여권, level: 1, category: travel, source: [[passport]], romaji: passport }
+- { id: en_t_003, display: immigration, meaning: 입국심사, level: 2, category: travel, source: [[immigration]], romaji: immigration }
+- { id: en_t_004, display: customs, meaning: 세관, level: 2, category: travel, source: [[customs]], romaji: customs }
+- { id: en_t_005, display: luggage, meaning: 짐, level: 2, category: travel, source: [[luggage]], romaji: luggage }
+- { id: en_t_006, display: exit, meaning: 출구, level: 1, category: travel, source: [[exit]], romaji: exit }
+- { id: en_t_007, display: entrance, meaning: 입구, level: 2, category: travel, source: [[entrance]], romaji: entrance }
 ```
 
 ### 호텔 & 숙소 (Hotel)
 
 ```yaml
-- { id: en_t_010, display: hotel, meaning: 호텔, level: 1, category: travel }
-- { id: en_t_011, display: room, meaning: 방, level: 1, category: travel }
-- { id: en_t_012, display: reservation, meaning: 예약, level: 2, category: travel }
-- { id: en_t_013, display: lobby, meaning: 로비, level: 2, category: travel }
-- { id: en_t_014, display: elevator, meaning: 엘리베이터, level: 2, category: travel }
-- { id: en_t_015, display: checkout, meaning: 체크아웃, level: 2, category: travel }
-- { id: en_t_016, display: stay, meaning: 묵다, level: 1, category: travel }
+- { id: en_t_010, display: hotel, meaning: 호텔, level: 1, category: travel, source: [[hotel]], romaji: hotel }
+- { id: en_t_011, display: reservation, meaning: 예약, level: 2, category: travel, source: [[reservation]], romaji: reservation }
+- { id: en_t_012, display: room, meaning: 방, level: 1, category: travel, source: [[room]], romaji: room }
+- { id: en_t_013, display: breakfast, meaning: 아침 식사, level: 2, category: travel, source: [[breakfast]], romaji: breakfast }
+- { id: en_t_014, display: key, meaning: 열쇠, level: 1, category: travel, source: [[key]], romaji: key }
 ```
 
 ### 식당 & 음식 (Restaurant)
 
 ```yaml
-- { id: en_t_020, display: menu, meaning: 메뉴, level: 1, category: travel }
-- { id: en_t_021, display: waiter, meaning: 웨이터, level: 2, category: travel }
-- { id: en_t_022, display: order, meaning: 주문하다, level: 1, category: travel }
-- { id: en_t_023, display: dessert, meaning: 디저트, level: 2, category: travel }
-- { id: en_t_024, display: bill, meaning: 계산서, level: 2, category: travel }
-- { id: en_t_025, display: recommend, meaning: 추천하다, level: 2, category: travel }
+- { id: en_t_020, display: restaurant, meaning: 식당, level: 1, category: travel, source: [[restaurant]], romaji: restaurant }
+- { id: en_t_021, display: menu, meaning: 메뉴, level: 1, category: travel, source: [[menu]], romaji: menu }
+- { id: en_t_022, display: order, meaning: 주문하다, level: 1, category: travel, source: [[order]], romaji: order }
+- { id: en_t_023, display: bill, meaning: 계산서, level: 2, category: travel, source: [[bill]], romaji: bill }
+- { id: en_t_024, display: tip, meaning: 팁, level: 2, category: travel, source: [[tip]], romaji: tip }
+- { id: en_t_025, display: delicious, meaning: 맛있다, level: 1, category: travel, source: [[delicious]], romaji: delicious }
+- { id: en_t_026, display: spicy, meaning: 맵다, level: 2, category: travel, source: [[spicy]], romaji: spicy }
 ```
 
 ### 교통 (Transport)
 
 ```yaml
-- { id: en_t_030, display: subway, meaning: 지하철, level: 1, category: travel }
-- { id: en_t_031, display: taxi, meaning: 택시, level: 1, category: travel }
-- { id: en_t_032, display: station, meaning: 역, level: 1, category: travel }
-- { id: en_t_033, display: platform, meaning: 승강장, level: 2, category: travel }
-- { id: en_t_034, display: transfer, meaning: 환승, level: 2, category: travel }
-- { id: en_t_035, display: ride, meaning: 타다, level: 1, category: travel }
-- { id: en_t_036, display: walk, meaning: 걷다, level: 1, category: travel }
-- { id: en_t_037, display: bus, meaning: 버스, level: 1, category: travel }
+- { id: en_t_030, display: station, meaning: 역, level: 1, category: travel, source: [[station]], romaji: station }
+- { id: en_t_031, display: subway, meaning: 지하철, level: 2, category: travel, source: [[subway]], romaji: subway }
+- { id: en_t_032, display: train, meaning: 기차, level: 2, category: travel, source: [[train]], romaji: train }
+- { id: en_t_033, display: bus, meaning: 버스, level: 1, category: travel, source: [[bus]], romaji: bus }
+- { id: en_t_034, display: taxi, meaning: 택시, level: 1, category: travel, source: [[taxi]], romaji: taxi }
+- { id: en_t_035, display: ticket, meaning: 표, level: 1, category: travel, source: [[ticket]], romaji: ticket }
+- { id: en_t_036, display: left, meaning: 왼쪽, level: 1, category: travel, source: [[left]], romaji: left }
+- { id: en_t_037, display: right, meaning: 오른쪽, level: 1, category: travel, source: [[right]], romaji: right }
+- { id: en_t_038, display: straight, meaning: 직진, level: 2, category: travel, source: [[straight]], romaji: straight }
+- { id: en_t_039, display: near, meaning: 가까이, level: 1, category: travel, source: [[near]], romaji: near }
+- { id: en_t_040, display: far, meaning: 멀리, level: 1, category: travel, source: [[far]], romaji: far }
 ```
 
 ### 관광 (Sightseeing)
 
 ```yaml
-- { id: en_t_040, display: museum, meaning: 박물관, level: 1, category: travel }
-- { id: en_t_041, display: beach, meaning: 해변, level: 1, category: travel }
-- { id: en_t_042, display: mountain, meaning: 산, level: 1, category: travel }
-- { id: en_t_043, display: park, meaning: 공원, level: 1, category: travel }
-- { id: en_t_044, display: visit, meaning: 방문하다, level: 1, category: travel }
-- { id: en_t_045, display: explore, meaning: 탐험하다, level: 2, category: travel }
-- { id: en_t_046, display: map, meaning: 지도, level: 1, category: travel }
-- { id: en_t_047, display: guide, meaning: 가이드, level: 2, category: travel }
-- { id: en_t_048, display: tour, meaning: 투어, level: 2, category: travel }
-- { id: en_t_049, display: view, meaning: 전망, level: 2, category: travel }
+- { id: en_t_050, display: temple, meaning: 절, level: 2, category: travel, source: [[temple]], romaji: temple }
+- { id: en_t_051, display: shrine, meaning: 신사, level: 2, category: travel, source: [[shrine]], romaji: shrine }
+- { id: en_t_052, display: museum, meaning: 박물관, level: 1, category: travel, source: [[museum]], romaji: museum }
+- { id: en_t_053, display: park, meaning: 공원, level: 1, category: travel, source: [[park]], romaji: park }
+- { id: en_t_054, display: mountain, meaning: 산, level: 1, category: travel, source: [[mountain]], romaji: mountain }
+- { id: en_t_055, display: sea, meaning: 바다, level: 1, category: travel, source: [[sea]], romaji: sea }
+- { id: en_t_056, display: photo, meaning: 사진, level: 1, category: travel, source: [[photo]], romaji: photo }
+- { id: en_t_057, display: map, meaning: 지도, level: 1, category: travel, source: [[map]], romaji: map }
+- { id: en_t_058, display: guide, meaning: 가이드, level: 2, category: travel, source: [[guide]], romaji: guide }
+- { id: en_t_059, display: cheap, meaning: 싸다, level: 2, category: travel, source: [[cheap]], romaji: cheap }
+- { id: en_t_060, display: expensive, meaning: 비싸다, level: 2, category: travel, source: [[expensive]], romaji: expensive }
 ```
 
-### 여행 문장 (Travel Phrases) — Level 3
+### 여행 표현 (Travel Expressions) — Level 3
 
 ```yaml
 - id: en_t_s_001
@@ -164,42 +167,48 @@
   meaning: 호텔은 어디에 있나요?
   level: 3
   category: travel
-  source: [[travel]]
+  source: [[where-is]]
+  romaji: where-is-the-hotel
 
 - id: en_t_s_002
-  display: How much does it cost?
+  display: How much is it?
   meaning: 얼마예요?
   level: 3
   category: travel
-  source: [[travel]]
+  source: [[how-much]]
+  romaji: how-much-is-it
 
 - id: en_t_s_003
   display: I would like to check in.
   meaning: 체크인하고 싶습니다.
   level: 3
   category: travel
-  source: [[travel]]
+  source: [[first-travel-japan]]
+  romaji: i-would-like-to-check-in
 
 - id: en_t_s_004
-  display: Could you help me?
-  meaning: 도와주실 수 있나요?
-  level: 3
-  category: travel
-  source: [[travel]]
-
-- id: en_t_s_005
   display: Where is the bathroom?
   meaning: 화장실 어디예요?
   level: 3
   category: travel
-  source: [[travel]]
+  source: [[first-travel-japan]]
+  romaji: where-is-the-bathroom
 
-- id: en_t_s_006
-  display: I would like to order.
-  meaning: 주문하겠습니다.
+- id: en_t_s_005
+  display: May I see the menu?
+  meaning: 메뉴판 좀 볼 수 있을까요?
   level: 3
   category: travel
-  source: [[travel]]
+  source: [[first-travel-japan]]
+  romaji: may-i-see-the-menu
+
+- id: en_t_s_006
+  display: Thank you very much.
+  meaning: 정말 감사합니다.
+  level: 1
+  category: travel
+  source: [[first-travel-japan]]
+  romaji: thank-you-very-much
 ```
 
 ## 카테고리 목록
