@@ -245,26 +245,37 @@ export function spawnFloatingWords(
   centerY: number,
   words: Array<{ text: string; lang: 'en' | 'jp' | 'es' | 'kr' }>,
 ): void {
-  // Limit to 3 concurrent floating words to avoid clutter
-  while (state.floatingWords.length > 4) {
+  // Cap concurrent floating words to avoid clutter.
+  // Higher limit than before (6 vs 4) so the wider spread is more dramatic.
+  while (state.floatingWords.length > 6) {
     state.floatingWords.shift();
   }
 
   for (let i = 0; i < words.length; i++) {
     const w = words[i];
-    // Spread words in a circle around the center
-    const angle = (Math.PI * 2 * i) / words.length + (Math.random() - 0.5) * 0.6;
-    const dist = 80 + Math.random() * 50;
-    const targetX = centerX + Math.cos(angle) * dist;
-    const targetY = centerY + Math.sin(angle) * dist - 30;
 
-    // Initial position (slightly above center)
-    const startX = centerX + (Math.random() - 0.5) * 40;
-    const startY = centerY - 20 - Math.random() * 20;
+    // Spread words in a wide arc above and around the center.
+    // - angle range covers ~270° (upper hemisphere) so words fan out across
+    //   the top of the canvas, not just one side.
+    // - dist range 180~280 is much wider than the old 80~130 so the
+    //   translation effect is clearly visible at typing distance.
+    const baseAngle = -Math.PI / 2; // start pointing up
+    const spread = Math.PI * 1.5; // 270° arc
+    const angle =
+      baseAngle +
+      (spread * i) / Math.max(words.length - 1, 1) +
+      (Math.random() - 0.5) * 0.3; // small jitter
+    const dist = 180 + Math.random() * 100;
+    const targetX = centerX + Math.cos(angle) * dist;
+    const targetY = centerY + Math.sin(angle) * dist - 40;
+
+    // Initial position (centered around the typed character, slight scatter)
+    const startX = centerX + (Math.random() - 0.5) * 60;
+    const startY = centerY - 20 - Math.random() * 30;
 
     // Velocity toward target with random scatter
-    const vx = (targetX - startX) * 0.5 + (Math.random() - 0.5) * 30;
-    const vy = (targetY - startY) * 0.5 - 20 - Math.random() * 30;
+    const vx = (targetX - startX) * 0.5 + (Math.random() - 0.5) * 40;
+    const vy = (targetY - startY) * 0.5 - 30 - Math.random() * 40;
 
     state.floatingWords.push({
       x: startX,
@@ -274,10 +285,10 @@ export function spawnFloatingWords(
       text: w.text,
       lang: w.lang,
       color: getLangColor(w.lang),
-      fontSize: 18 + Math.random() * 6,
-      life: 1400 + Math.random() * 300,
-      maxLife: 1700,
-      rotation: (Math.random() - 0.5) * 30,
+      fontSize: 20 + Math.random() * 8, // slightly larger (was 18-24)
+      life: 1500 + Math.random() * 400, // slightly longer (was 1400-1700)
+      maxLife: 1900,
+      rotation: (Math.random() - 0.5) * 24, // a bit less tilt (was 30)
     });
   }
 }

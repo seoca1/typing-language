@@ -812,31 +812,29 @@ export class Renderer {
         }
       }
     } else {
-      // For words: show floating translations on each keystroke
-      // But throttle to avoid spam (max every 2 chars)
-      if (buffer.length === 1 || buffer.length % 2 === 0) {
-        // Use the typed character's meaning for lookup
-        // For single chars, look up the word itself
-        const lookupDisplay = targetText;
-        const lookupMeaning = state.currentEntry?.meaning;
+      // For words: show floating translations on each keystroke.
+      // Trigger on EVERY char (no throttle) so the wider spread effect is
+      // felt continuously as the user types — throttling made it look
+      // choppy with the new larger radius.
+      const lookupDisplay = targetText;
+      const lookupMeaning = state.currentEntry?.meaning;
 
-        const translations = findCrossLangTranslations(
-          state.language,
-          lookupDisplay,
-          lookupMeaning,
-          2, // Show 2 words
+      const translations = findCrossLangTranslations(
+        state.language,
+        lookupDisplay,
+        lookupMeaning,
+        3, // Show 3 words (was 2) for a fuller spread fan
+      );
+
+      if (translations.length > 0) {
+        // Position above the target text
+        const centerY = 360;
+        spawnFloatingWords(
+          effects,
+          this.width / 2,
+          centerY,
+          translations.map((t) => ({ text: t.display, lang: t.lang as 'en' | 'jp' | 'es' | 'kr' })),
         );
-
-        if (translations.length > 0) {
-          // Position above the target text
-          const centerY = 380;
-          spawnFloatingWords(
-            effects,
-            this.width / 2,
-            centerY,
-            translations.map((t) => ({ text: t.display, lang: t.lang as 'en' | 'jp' | 'es' | 'kr' })),
-          );
-        }
       }
     }
 
