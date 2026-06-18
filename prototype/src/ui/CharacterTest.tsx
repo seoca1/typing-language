@@ -88,9 +88,9 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
       // Render background
       renderBackground(ctx, characterRef.current, canvas.width, canvas.height, timestamp);
 
-      // Render character
+      // Render character (positioned lower for better visibility)
       const cx = canvas.width / 2;
-      const cy = canvas.height / 2 - 50;
+      const cy = canvas.height * 0.65; // Move down to 65% of canvas height
       
       // Temporarily override USE_SPRITES for testing
       const originalUseSprites = GraphicsConfig.USE_SPRITES;
