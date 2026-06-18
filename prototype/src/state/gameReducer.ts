@@ -230,9 +230,21 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
     }
 
     case 'SHOW_CHARACTER_SELECT': {
+      // Create a temporary stage to hold language info for CharacterSelect
+      const tempStage: StageConfig = {
+        id: 'charselect-temp',
+        name: 'Character Select',
+        description: '',
+        language: action.language,
+        difficulty: 1,
+        wordCount: 0,
+        corpusFilter: {},
+        missions: [],
+      };
       return {
         ...state,
         phase: 'charselect',
+        currentStage: tempStage,
       };
     }
 

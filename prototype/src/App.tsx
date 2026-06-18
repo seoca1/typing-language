@@ -500,18 +500,7 @@ export function App() {
   };
 
   const handleShowCharacterSelect = (language: string) => {
-    // Create a temporary stage config to pass language info
-    const tempStage: StageConfig = {
-      id: 'temp',
-      name: 'Character Select',
-      description: '',
-      language,
-      difficulty: 1,
-      wordCount: 0,
-      corpusFilter: {},
-      missions: [],
-    };
-    dispatch({ type: 'START_STAGE', stage: tempStage, enemy: null as any });
+    // Just show character select screen, no need for START_STAGE
     dispatch({ type: 'SHOW_CHARACTER_SELECT', language });
   };
 
