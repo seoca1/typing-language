@@ -45,8 +45,8 @@ import {
   type CharacterState,
 } from './character/CharacterController.js';
 import type { Language, StageConfig } from './types.js';
-import { getResponsiveCanvasSize, needsVirtualKeyboard, logDeviceInfo } from './utils/device.js';
-import { VirtualKeyboard } from './ui/VirtualKeyboard.js';
+import { getResponsiveCanvasSize, logDeviceInfo } from './utils/device.js';
+import { OSKeyboardInput } from './ui/OSKeyboardInput.js';
 
 const LANGUAGE_LABEL: Record<Language, string> = {
   en: 'EN',
@@ -61,8 +61,7 @@ const TUTORIAL_KEY = 'typing-language-tutorial-completed';
 
 export function App() {
   const [canvasSize] = useState(() => getResponsiveCanvasSize());
-  const [showVirtualKeyboard] = useState(() => needsVirtualKeyboard());
-  
+
   const [showTutorial, setShowTutorial] = useState(() => {
     // 튜토리얼을 이미 완료했는지 확인
     return !localStorage.getItem(TUTORIAL_KEY);
@@ -637,12 +636,29 @@ export function App() {
   }
 
   const stage = state.currentStage;
-  const handler = handlerRef.current;
-  const expectedChar = handler?.getExpectedChar() || null;
+  const enabled = state.phase === 'stage';
 
-  const handleVirtualKeyPress = (key: string) => {
-    // Dispatch keyboard event that will be caught by the existing handler
-    window.dispatchEvent(new KeyboardEvent('keydown', { key }));
+  // OS Keyboard input handlers
+  // The OSKeyboardInput component captures OS-native keyboard events.
+  // We dispatch synthetic KeyboardEvents to leverage the existing keydown listener.
+  const handleOSChar = (char: string) => {
+    if (!enabled) return;
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: char, isComposing: false }));
+  };
+
+  const handleOSBackspace = () => {
+    if (!enabled) return;
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Backspace', isComposing: false }));
+  };
+
+  const handleOSEnter = () => {
+    if (!enabled) return;
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', isComposing: false }));
+  };
+
+  const handleOSEscape = () => {
+    if (!enabled) return;
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', isComposing: false }));
   };
 
   return (
@@ -655,13 +671,14 @@ export function App() {
         canvasWidth={canvasSize.width}
         canvasHeight={canvasSize.height}
       />
-      {showVirtualKeyboard && stage && (
-        <VirtualKeyboard
-          language={stage.language}
-          onKeyPress={handleVirtualKeyPress}
-          expectedChar={expectedChar}
-        />
-      )}
+      <OSKeyboardInput
+        enabled={state.phase === 'stage'}
+        language={stage.language}
+        onChar={handleOSChar}
+        onBackspace={handleOSBackspace}
+        onEnter={handleOSEnter}
+        onEscape={handleOSEscape}
+      />
     </>
   );
 }
