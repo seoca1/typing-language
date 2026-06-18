@@ -21,6 +21,7 @@ import { ResultScreen } from './ui/ResultScreen.js';
 import { Tutorial } from './ui/Tutorial.js';
 import { CharacterTest } from './ui/CharacterTest.js';
 import { CharacterSelect } from './ui/CharacterSelect.js';
+import { LanguageSelection } from './ui/LanguageSelection.js';
 import {
   createEffectsState,
   getLanguageAccent,
@@ -66,6 +67,9 @@ export function App() {
     // 튜토리얼을 이미 완료했는지 확인
     return !localStorage.getItem(TUTORIAL_KEY);
   });
+
+  // 선택된 언어 (LanguageSelection → Menu 흐름)
+  const [selectedLanguage, setSelectedLanguage] = useState<Language | null>(null);
 
   // Log device info and preload sprites/images on mount
   useEffect(() => {
@@ -513,6 +517,17 @@ export function App() {
     dispatch({ type: 'SHOW_CHARACTER_SELECT', language });
   };
 
+  const handleSelectLanguage = (langCode: string) => {
+    console.log(`[App] Language selected: ${langCode}`);
+    setSelectedLanguage(langCode as Language);
+  };
+
+  const handleBackToLanguageSelect = () => {
+    console.log('[App] Back to language selection');
+    setSelectedLanguage(null);
+    dispatch({ type: 'BACK_TO_MENU' });
+  };
+
   const handleTutorialComplete = () => {
     localStorage.setItem(TUTORIAL_KEY, 'true');
     setShowTutorial(false);
@@ -540,13 +555,25 @@ export function App() {
     );
   }
 
+  // 초기 진입 화면: LanguageSelection (아직 언어 선택 안 함)
+  if (selectedLanguage === null) {
+    return (
+      <LanguageSelection
+        onSelectLanguage={handleSelectLanguage}
+        onShowTutorial={() => setShowTutorial(true)}
+        onStartCharTest={() => dispatch({ type: 'START_CHARTEST' })}
+      />
+    );
+  }
+
+  // 메뉴 화면 (선택된 언어의 스테이지만 표시)
   if (state.phase === 'menu') {
     return (
       <Menu
+        language={selectedLanguage}
         onStartStage={handleStartStage}
-        onShowTutorial={() => setShowTutorial(true)}
-        onStartCharTest={() => dispatch({ type: 'START_CHARTEST' })}
         onShowCharacterSelect={handleShowCharacterSelect}
+        onBackToLanguageSelect={handleBackToLanguageSelect}
         stageRecords={state.player.stageRecords}
       />
     );
@@ -554,14 +581,14 @@ export function App() {
 
   if (state.phase === 'chartest') {
     return (
-      <CharacterTest onBack={handleBackToMenu} />
+      <CharacterTest onBack={handleBackToLanguageSelect} />
     );
   }
 
   if (state.phase === 'charselect') {
     return (
-      <CharacterSelect 
-        language={state.currentStage?.language || 'en'} 
+      <CharacterSelect
+        language={state.currentStage?.language || 'en'}
         dispatch={dispatch}
       />
     );
@@ -583,8 +610,10 @@ export function App() {
   if (!state.currentStage) {
     return (
       <Menu
+        language={selectedLanguage}
         onStartStage={handleStartStage}
-        onShowTutorial={() => setShowTutorial(true)}
+        onShowCharacterSelect={handleShowCharacterSelect}
+        onBackToLanguageSelect={handleBackToLanguageSelect}
         stageRecords={state.player.stageRecords}
       />
     );

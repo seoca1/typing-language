@@ -1,12 +1,19 @@
-import type { StageConfig, StageRecord } from '../types.js';
+/**
+ * Stage Selection Screen (단일 언어)
+ *
+ * 선택된 언어의 스테이지 카드들을 표시
+ * 캐릭터 선택 버튼 + 뒤로가기 버튼 포함
+ */
+
+import type { StageConfig, StageRecord, Language } from '../types.js';
 import { SAMPLE_STAGES, stagesByTier, type StageTier } from '../data/stages.js';
-import { getAllLanguages } from '../language/index.js';
+import { CHARACTER_INFO } from '../config/characterImages.js';
 
 interface MenuProps {
+  language: Language;
   onStartStage: (stage: StageConfig) => void;
-  onShowTutorial?: () => void;
-  onStartCharTest?: () => void;
-  onShowCharacterSelect?: (language: string) => void;
+  onShowCharacterSelect: (language: string) => void;
+  onBackToLanguageSelect: () => void;
   stageRecords?: Record<string, StageRecord>;
 }
 
@@ -17,6 +24,13 @@ const TIER_LABELS: Record<StageTier, string> = {
   3: 'Tier 3 · 짧은 문장',
   4: 'Tier 4 · 긴 문장',
   5: 'Tier 5 · 단락',
+};
+
+const LANGUAGE_FLAGS: Record<string, string> = {
+  en: '🇺🇸',
+  jp: '🇯🇵',
+  es: '🇪🇸',
+  kr: '🇰🇷',
 };
 
 function StageCard({
@@ -57,116 +71,90 @@ function StageCard({
   );
 }
 
-function LanguageSection({
-  code,
-  label,
-  supportsTier0,
-  stages,
-  onStart,
+export function Menu({
+  language,
+  onStartStage,
   onShowCharacterSelect,
+  onBackToLanguageSelect,
   stageRecords,
-}: {
-  code: string;
-  label: string;
-  supportsTier0: boolean;
-  stages: StageConfig[];
-  onStart: (s: StageConfig) => void;
-  onShowCharacterSelect?: (language: string) => void;
-  stageRecords?: Record<string, StageRecord>;
-}) {
-  const byTier = stagesByTier(code);
+}: MenuProps) {
+  // 현재 언어의 스테이지만 필터링
+  const languageStages = SAMPLE_STAGES.filter((s) => s.language === language);
+  const byTier = stagesByTier(language);
+  const supportsTier0 = language === 'jp' || language === 'en' || language === 'es';
+
+  const languageNames: Record<string, { native: string; en: string }> = {
+    en: { native: 'English', en: '영어' },
+    jp: { native: '日本語', en: '일본어' },
+    es: { native: 'Español', en: '스페인어' },
+    kr: { native: '한국어', en: '한국어' },
+  };
+
+  const langInfo = languageNames[language] || { native: language, en: language };
+  const flag = LANGUAGE_FLAGS[language] || '🌐';
+  const defaultCharacterId = `${language}-${'emily'}`;
+  const defaultCharacter = CHARACTER_INFO[defaultCharacterId];
+
   return (
-    <section className="language-section">
-      <div className="language-section-header">
-        <h2>
-          {label}
-          <small> · {stages.length}개 스테이지</small>
-        </h2>
-        {onShowCharacterSelect && (
-          <button 
-            className="character-select-btn" 
-            onClick={() => onShowCharacterSelect(code)}
+    <div className="menu">
+      <header className="menu-header">
+        <button className="back-btn" onClick={onBackToLanguageSelect}>
+          ← 언어 선택으로
+        </button>
+        <h1>
+          {flag} {langInfo.native}
+          <small> · {langInfo.en}</small>
+        </h1>
+        <p>{languageStages.length}개 스테이지</p>
+        <div className="menu-header-buttons">
+          <button
+            className="character-select-btn"
+            onClick={() => onShowCharacterSelect(language)}
           >
-            👤 캐릭터 선택
+            👤 캐릭터 선택 {defaultCharacter ? `(${defaultCharacter.name})` : ''}
           </button>
-        )}
-      </div>
-      {supportsTier0 && (
-        <div className="tier-group">
+        </div>
+      </header>
+
+      {supportsTier0 && byTier[0] && byTier[0].length > 0 && (
+        <section className="tier-group">
           <h3 className="tier-title">{TIER_LABELS[0]}</h3>
           <div className="stage-grid">
             {byTier[0].map((s) => (
               <StageCard
                 key={s.id}
                 stage={s}
-                onStart={onStart}
+                onStart={onStartStage}
                 record={stageRecords?.[s.id]}
               />
             ))}
           </div>
-        </div>
+        </section>
       )}
+
       {([1, 2, 3, 4, 5] as StageTier[]).map((tier) => {
         const tierStages = byTier[tier];
         if (tierStages.length === 0) return null;
         return (
-          <div key={tier} className="tier-group">
+          <section key={tier} className="tier-group">
             <h3 className="tier-title">{TIER_LABELS[tier]}</h3>
             <div className="stage-grid">
               {tierStages.map((s) => (
                 <StageCard
                   key={s.id}
                   stage={s}
-                  onStart={onStart}
+                  onStart={onStartStage}
                   record={stageRecords?.[s.id]}
                 />
               ))}
             </div>
-          </div>
+          </section>
         );
       })}
-    </section>
-  );
-}
-
-export function Menu({ onStartStage, onShowTutorial, onStartCharTest, onShowCharacterSelect, stageRecords }: MenuProps) {
-  const allLanguages = getAllLanguages();
-  
-  return (
-    <div className="menu">
-      <header className="menu-header">
-        <h1>Typing Language</h1>
-        <p>외국어를 실제 입력하듯 타자하며 적을 격파하라</p>
-        <div className="menu-header-buttons">
-          {onShowTutorial && (
-            <button className="tutorial-btn" onClick={onShowTutorial}>
-              📚 튜토리얼 다시 보기
-            </button>
-          )}
-          {onStartCharTest && (
-            <button className="chartest-btn" onClick={onStartCharTest}>
-              🎨 캐릭터 애니메이션 테스트
-            </button>
-          )}
-        </div>
-      </header>
-
-      {allLanguages.map((lang) => (
-        <LanguageSection
-          key={lang.code}
-          code={lang.code}
-          label={`${lang.name} (${lang.code.toUpperCase()}) — ${lang.nativeName}`}
-          supportsTier0={lang.supportsTier0}
-          stages={SAMPLE_STAGES}
-          onStart={onStartStage}
-          onShowCharacterSelect={onShowCharacterSelect}
-          stageRecords={stageRecords}
-        />
-      ))}
 
       <footer className="menu-footer">
         <p>
-          단어부터 장문까지 6 티어 · 총 {SAMPLE_STAGES.length}개 스테이지 · {allLanguages.length}개 언어 지원
+          단어부터 장문까지 6 티어 · 총 {languageStages.length}개 스테이지
         </p>
       </footer>
     </div>
