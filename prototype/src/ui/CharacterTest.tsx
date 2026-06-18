@@ -257,6 +257,13 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
             >
               👦 Oliver (완료 7/7)
             </button>
+            <button
+              className={currentCharacter === 'en-sophia' ? 'active' : ''}
+              onClick={() => setCurrentCharacter('en-sophia')}
+              style={{ background: currentCharacter === 'en-sophia' ? '#00d9ff' : undefined }}
+            >
+              👩 Sophia (완료 7/7)
+            </button>
           </div>
         </div>
 
