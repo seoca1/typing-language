@@ -638,27 +638,179 @@ export function App() {
   const stage = state.currentStage;
   const enabled = state.phase === 'stage';
 
+  const handleWordComplete = (lastChar: string, event: KeyboardEvent) => {
+    const handler = handlerRef.current;
+    const enemy = stateRef.current.currentEnemy;
+    if (!handler || !enemy) return;
+
+    const currentBuffer = handler.getBuffer();
+    const currentAccuracy = handler.getAccuracy();
+
+    if (lastChar) {
+      console.log('[Enter] buffer:', currentBuffer);
+      console.log('[Enter] target:', enemy.target.text);
+      console.log('[Enter] language:', stage.language);
+    }
+
+    const isCompleted = handler.checkCompletion();
+
+    if (!isCompleted) {
+      console.log('[Enter] NOT completed - resetting for retry');
+      handler.reset();
+      handler.setTarget(enemy.target);
+      return;
+    }
+
+    if (isCompleted) {
+      console.log('[Enter] SUCCESS! Moving to next word.');
+      keyboardRef.current?.pressByEvent(event.key);
+
+      const timeMs = Date.now() - stateRef.current.startTime;
+      const scoreBreakdown = calculateScore(enemy, currentAccuracy, timeMs);
+      const stageState = stageStateRef.current;
+      if (!stageState) return;
+      advanceStage(stageState);
+      const nextEnemy = getCurrentEnemy(stageState);
+      const cleared = !nextEnemy;
+      const cx = CANVAS_W / 2;
+      const cy = 290;
+      const accents = getLanguageAccent(stage.language);
+
+      const fx = effectsRef.current;
+      spawnColorShower(fx, cx, cy, accents, 50);
+      spawnHitBurst(fx, cx, cy, '#ffffff', 30);
+      spawnPopup(fx, cx, cy - 60, `+${scoreBreakdown.total}`, '#ffd700', 44);
+      spawnFlash(fx, '#ffffff', 0.25, 120);
+      triggerShake(fx, 8, 180);
+
+      const isPerfect =
+        currentAccuracy === 100 && stateRef.current.totalErrors === 0;
+      const newCombo = stateRef.current.combo + 1;
+      applyEnemyDefeated(characterRef.current, newCombo, isPerfect, performance.now());
+
+      const audio = getAudioManager();
+      if (isPerfect) {
+        audio.play('perfect');
+        setTimeout(() => spawnPopup(fx, cx, cy + 20, 'PERFECT!', '#00ff88', 38), 80);
+      } else if (newCombo >= 5) {
+        audio.play('combo');
+        setTimeout(() => spawnPopup(fx, cx, cy + 20, 'COMBO!', '#ff6b9d', 32), 80);
+      } else {
+        audio.play('enemy-defeat');
+      }
+
+      dispatch({
+        type: 'ENEMY_DEFEATED',
+        nextEnemy,
+        scoreDelta: scoreBreakdown.total,
+        cleared,
+      });
+
+      if (nextEnemy) {
+        handler.setTarget(nextEnemy.target);
+        const next = handler.getExpectedChar();
+        keyboardRef.current?.setHint(next || null);
+      } else {
+        keyboardRef.current?.setHint(null);
+
+        const stageEndTime = Date.now();
+        const stats: StageRunStats = {
+          enemiesDefeated: stateRef.current.enemiesDefeated + 1,
+          totalEnemies: stageState.enemies.length,
+          errors: stateRef.current.totalErrors,
+          comboMax: stateRef.current.comboMax,
+          comboCurrent: 0,
+          totalKeystrokes: 0,
+          correctKeystrokes: 0,
+          startTime: stateRef.current.startTime,
+          clearedTime: stageEndTime,
+          defeatedEnemies: stageState.enemies.map((e) => ({
+            category: e.target.category,
+            level: e.target.level,
+          })),
+          allCompleted: cleared,
+        };
+        const results = evaluateAllMissions(stage.missions, stats).map((m) => ({
+          missionId: m.missionId,
+          cleared: m.status === 'cleared',
+        }));
+        dispatch({
+          type: 'END_STAGE',
+          missions: stage.missions,
+          results,
+        });
+        const elapsed = stageEndTime - stateRef.current.startTime;
+        const completedTexts = stageState.enemies.map((e) => e.target.text);
+        const wpm = calculateWpm(completedTexts, elapsed);
+        dispatch({ type: 'UPDATE_STATS', accuracy: currentAccuracy, wpm });
+
+        spawnPopup(fx, cx, cy + 60, `STAGE CLEAR!`, '#00d9ff', 56);
+        spawnColorShower(fx, cx, cy + 60, accents, 80);
+
+        applyStageCleared(characterRef.current, performance.now());
+      }
+    }
+  };
+
   // OS Keyboard input handlers
-  // The OSKeyboardInput component captures OS-native keyboard events.
-  // We dispatch synthetic KeyboardEvents to leverage the existing keydown listener.
+  // OSKeyboardInput is the SINGLE source of truth for key events.
+  // We call the input handler directly here (no synthetic dispatch)
+  // to avoid duplicate processing through the window keydown listener.
   const handleOSChar = (char: string) => {
-    if (!enabled) return;
-    window.dispatchEvent(new KeyboardEvent('keydown', { key: char, isComposing: false }));
+    if (!enabled || !handlerRef.current || !state.currentEnemy) return;
+    const mockEvent = {
+      key: char,
+      isComposing: false,
+      preventDefault: () => {},
+    } as KeyboardEvent;
+    const result = handlerRef.current.handleKey(mockEvent);
+    const romajiHint =
+      stage.language === 'jp' && handlerRef.current.getHint
+        ? handlerRef.current.getHint()
+        : undefined;
+    dispatch({ type: 'KEY_INPUT', result, romajiHint });
+    const audio = getAudioManager();
+    if (result.buffer.length > 0) {
+      audio.play('key-correct');
+    } else if (char.length === 1) {
+      audio.play('key-incorrect');
+    }
+    const nextKey = handlerRef.current.getExpectedChar();
+    keyboardRef.current?.setHint(nextKey || null);
+    const enemy = state.currentEnemy;
+    if (enemy && result.buffer.length > 0) {
+      applyCorrectKeystroke(characterRef.current, performance.now());
+    }
+    if (result.completed) {
+      handleWordComplete(char, mockEvent);
+    }
   };
 
   const handleOSBackspace = () => {
-    if (!enabled) return;
-    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Backspace', isComposing: false }));
+    if (!enabled || !handlerRef.current || !state.currentEnemy) return;
+    const mockEvent = {
+      key: 'Backspace',
+      isComposing: false,
+      preventDefault: () => {},
+    } as KeyboardEvent;
+    const result = handlerRef.current.handleKey(mockEvent);
+    dispatch({ type: 'KEY_INPUT', result });
+    getAudioManager().play('key-incorrect');
   };
 
   const handleOSEnter = () => {
-    if (!enabled) return;
-    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', isComposing: false }));
+    if (!enabled || !handlerRef.current || !state.currentEnemy) return;
+    const mockEvent = {
+      key: 'Enter',
+      isComposing: false,
+      preventDefault: () => {},
+    } as KeyboardEvent;
+    handleWordComplete('', mockEvent);
   };
 
   const handleOSEscape = () => {
     if (!enabled) return;
-    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', isComposing: false }));
+    dispatch({ type: 'BACK_TO_MENU' });
   };
 
   return (

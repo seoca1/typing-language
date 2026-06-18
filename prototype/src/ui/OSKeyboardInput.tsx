@@ -5,11 +5,15 @@
  * Works on both PC (physical keyboard + IME) and mobile (OS virtual keyboard).
  *
  * Architecture:
- * - Hidden <input> element captures OS keyboard input
+ * - Hidden <input> element captures OS keyboard input via native keydown
  * - On mobile: focusing the input triggers the OS virtual keyboard
- * - On PC: physical keyboard events bubble up to the input element
+ * - On PC: physical keyboard events bubble to the input element
  * - IME languages (ja, zh) use OS IME for conversion
  * - lang attribute hints which OS keyboard to show (korean, japanese, etc.)
+ *
+ * Single input path:
+ * - Native keydown → onChar/onBackspace/onEnter prop
+ * - No window-level listener (prevents duplicate handling)
  */
 
 import { useEffect, useRef } from 'react';
@@ -28,38 +32,22 @@ interface OSKeyboardInputProps {
   onEnter: () => void;
   /** Called when user presses Escape */
   onEscape?: () => void;
-  /** Called when composition (IME) starts */
-  onCompositionStart?: () => void;
-  /** Called when composition (IME) updates with intermediate text */
-  onCompositionUpdate?: (data: string) => void;
-  /** Called when composition (IME) ends with final text */
-  onCompositionEnd?: (data: string) => void;
 }
 
 /**
  * Map game language to inputMode for mobile keyboards
- *
- * inputMode hints which virtual keyboard to show on mobile devices.
- * See: https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/inputmode
  */
-function getInputMode(lang: Language): 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search' | undefined {
-  switch (lang) {
-    case 'kr':
-      return undefined; // OS default works well
-    case 'jp':
-      return undefined;
-    case 'es':
-      return 'text';
-    default:
-      return 'text';
-  }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function getInputMode(_lang: Language): 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search' | undefined {
+  return 'text';
 }
 
 /**
  * Map game language to OS language code (BCP 47)
  */
-function getLangCode(lang: Language): string {
-  return lang;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function getLangCode(_lang: Language): string {
+  return 'en';
 }
 
 export function OSKeyboardInput({
@@ -69,13 +57,9 @@ export function OSKeyboardInput({
   onBackspace,
   onEnter,
   onEscape,
-  onCompositionStart,
-  onCompositionUpdate,
-  onCompositionEnd,
 }: OSKeyboardInputProps) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const composingRef = useRef(false);
-  const lastValueRef = useRef('');
+  const valueResetTimeoutRef = useRef<number | null>(null);
 
   // Focus / blur based on enabled state
   useEffect(() => {
@@ -96,103 +80,86 @@ export function OSKeyboardInput({
   useEffect(() => {
     if (enabled) {
       inputRef.current?.focus();
+      // Clear value to avoid stale characters
+      if (inputRef.current) inputRef.current.value = '';
     }
   }, [language, enabled]);
 
-  // PC physical keyboard events (mobile OS keyboard also fires keydown)
-  useEffect(() => {
+  // Handle keydown on the input element directly (no window listener)
+  // This is the SINGLE source of truth for key input.
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (!enabled) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if IME composition is active (let OS handle it)
-      if (e.isComposing) return;
-      if (e.key === 'CompositionStart' as any) return;
+    // While IME composition is active, let the IME handle the input
+    // (e.g., Japanese kana → kanji conversion)
+    if ((e.nativeEvent as KeyboardEvent).isComposing) return;
 
-      if (e.key === 'Backspace') {
-        e.preventDefault();
-        onBackspace();
-        return;
-      }
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        onEnter();
-        return;
-      }
+    // Ignore modifier-only key combos (e.g., Ctrl+C)
+    if (e.ctrlKey || e.metaKey || e.altKey) {
+      // But still handle Escape even with modifiers
       if (e.key === 'Escape' && onEscape) {
         e.preventDefault();
         onEscape();
-        return;
       }
-      // Single character keys are handled via input event
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [enabled, onBackspace, onEnter, onEscape]);
-
-  /**
-   * Handle input event (covers both PC physical keyboard and OS mobile keyboard)
-   *
-   * On mobile: OS keyboard inserts composed text. We compare with previous value
-   * to figure out what was typed.
-   * On PC: same event fires for physical keyboard input.
-   * On IME: compositionstart/update/end events fire during conversion.
-   */
-  const handleInput = (e: React.FormEvent<HTMLInputElement>) => {
-    if (!enabled) return;
-    const input = e.currentTarget;
-    const value = input.value;
-    const prev = lastValueRef.current;
-
-    if (composingRef.current) {
-      // IME is composing — skip char-level processing
-      // The final result will come via onCompositionEnd
       return;
     }
 
-    if (value.length > prev.length) {
-      // New character(s) appended
-      const newChars = value.slice(prev.length);
-      for (const ch of newChars) {
-        onChar(ch);
-      }
-    } else if (value.length < prev.length) {
-      // Character(s) deleted (e.g., Backspace on mobile keyboard)
-      const diff = prev.length - value.length;
-      for (let i = 0; i < diff; i++) {
-        onBackspace();
-      }
+    if (e.key === 'Backspace') {
+      e.preventDefault();
+      onBackspace();
+      return;
+    }
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      onEnter();
+      return;
+    }
+    if (e.key === 'Escape' && onEscape) {
+      e.preventDefault();
+      onEscape();
+      return;
     }
 
-    lastValueRef.current = '';
-    input.value = '';
-  };
-
-  const handleCompositionStart = () => {
-    composingRef.current = true;
-    onCompositionStart?.();
-  };
-
-  const handleCompositionUpdate = (e: React.CompositionEvent<HTMLInputElement>) => {
-    if (e.data) {
-      onCompositionUpdate?.(e.data);
+    // Single character keys
+    if (e.key.length === 1) {
+      e.preventDefault();
+      onChar(e.key);
     }
   };
 
+  // Handle IME composition end (Japanese, Chinese, etc.)
+  // When composition ends, the final text is in e.data
   const handleCompositionEnd = (e: React.CompositionEvent<HTMLInputElement>) => {
-    composingRef.current = false;
+    if (!enabled) return;
     const finalText = e.data || '';
     if (finalText) {
-      onCompositionEnd?.(finalText);
-      // Pass each char of the final composed text
+      // Each char of the final composed text
       for (const ch of finalText) {
         onChar(ch);
       }
     }
-    // Clear input after composition ends
+    // Clear the input value
     e.currentTarget.value = '';
-    lastValueRef.current = '';
   };
+
+  // Reset input value after a key is processed (to avoid stale state)
+  const resetInputValue = () => {
+    if (inputRef.current) {
+      // Clear value on next tick so the keydown has already been processed
+      valueResetTimeoutRef.current = window.setTimeout(() => {
+        if (inputRef.current) inputRef.current.value = '';
+      }, 0);
+    }
+  };
+
+  // Cleanup
+  useEffect(() => {
+    return () => {
+      if (valueResetTimeoutRef.current !== null) {
+        clearTimeout(valueResetTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <input
@@ -205,9 +172,11 @@ export function OSKeyboardInput({
       inputMode={getInputMode(language)}
       lang={getLangCode(language)}
       aria-label={`${language} typing input`}
-      onInput={handleInput}
-      onCompositionStart={handleCompositionStart}
-      onCompositionUpdate={handleCompositionUpdate}
+      onKeyDown={(e) => {
+        handleKeyDown(e);
+        // Clear value after key processing (deferred)
+        resetInputValue();
+      }}
       onCompositionEnd={handleCompositionEnd}
       style={{
         position: 'fixed',
