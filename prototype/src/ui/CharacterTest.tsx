@@ -34,34 +34,38 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
   const [showKeyboard, setShowKeyboard] = useState(false); // Hide keyboard by default
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [loadingError, setLoadingError] = useState<string | null>(null);
+  const [currentCharacter, setCurrentCharacter] = useState<string>('en-emily'); // Emily or Oliver
   
-  // Emily character info
-  const emilyInfo = CHARACTER_INFO['en-emily'];
+  // Current character info
+  const characterInfo = CHARACTER_INFO[currentCharacter];
 
   useEffect(() => {
-    // Set Emily as the character for testing
-    setCharacter('en-emily');
+    // Set current character for testing
+    setCharacter(currentCharacter);
     
-    // Preload Emily images immediately
-    const emilyImages = CHARACTER_IMAGES['en-emily'];
-    if (emilyImages) {
-      const imagesToLoad = Object.values(emilyImages);
-      console.log('[CharacterTest] Preloading Emily images:', imagesToLoad.length);
+    // Preload character images immediately
+    const characterImages = CHARACTER_IMAGES[currentCharacter];
+    if (characterImages) {
+      const imagesToLoad = Object.values(characterImages);
+      console.log(`[CharacterTest] Preloading ${currentCharacter} images:`, imagesToLoad.length);
       console.log('[CharacterTest] Image paths:', imagesToLoad.map(img => img.src));
+      
+      setImagesLoaded(false);
+      setLoadingError(null);
       
       ImageLoader.preload(imagesToLoad)
         .then(() => {
-          console.log('[CharacterTest] Emily images loaded successfully!');
+          console.log(`[CharacterTest] ${currentCharacter} images loaded successfully!`);
           setImagesLoaded(true);
           setLoadingError(null);
         })
         .catch(err => {
-          console.error('[CharacterTest] Failed to load Emily images:', err);
+          console.error(`[CharacterTest] Failed to load ${currentCharacter} images:`, err);
           setLoadingError(err.message || 'Failed to load images');
           setImagesLoaded(false);
         });
     } else {
-      setLoadingError('Emily character images not found in config');
+      setLoadingError(`${currentCharacter} images not found in config`);
     }
     
     const canvas = canvasRef.current;
@@ -119,7 +123,7 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
     return () => {
       cancelAnimationFrame(animationFrameRef.current);
     };
-  }, [useSprites, showKeyboard]);
+  }, [useSprites, showKeyboard, currentCharacter]);
 
   // Update pose when selection changes
   useEffect(() => {
@@ -132,12 +136,12 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 24px -apple-system, sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('Emily 캐릭터 이미지 테스트', width / 2, 40);
+    ctx.fillText('캐릭터 이미지 테스트', width / 2, 40);
 
     // Character name
     ctx.fillStyle = '#00d9ff';
     ctx.font = '16px -apple-system, sans-serif';
-    ctx.fillText(`캐릭터: ${emilyInfo.name} (${emilyInfo.id})`, width / 2, 70);
+    ctx.fillText(`${characterInfo.name} (${characterInfo.description})`, width / 2, 70);
 
     // Current pose info
     ctx.fillStyle = '#00ff88';
@@ -232,7 +236,27 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
       
       <div className="character-test-controls">
         <div className="control-group">
-          <h3>Emily의 7가지 포즈 (AI 생성 완료!)</h3>
+          <h3>캐릭터 선택</h3>
+          <div className="button-group">
+            <button
+              className={currentCharacter === 'en-emily' ? 'active' : ''}
+              onClick={() => setCurrentCharacter('en-emily')}
+              style={{ background: currentCharacter === 'en-emily' ? '#00d9ff' : undefined }}
+            >
+              👧 Emily (완료 7/7)
+            </button>
+            <button
+              className={currentCharacter === 'en-oliver' ? 'active' : ''}
+              onClick={() => setCurrentCharacter('en-oliver')}
+              style={{ background: currentCharacter === 'en-oliver' ? '#00d9ff' : undefined }}
+            >
+              👦 Oliver (완료 7/7)
+            </button>
+          </div>
+        </div>
+
+        <div className="control-group">
+          <h3>{characterInfo.name}의 7가지 포즈</h3>
           <div className="button-group">
             <button
               className={currentPose === 'idle' ? 'active' : ''}
@@ -294,7 +318,7 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
               onClick={() => setUseSprites(true)}
               style={{ background: useSprites ? '#00ff88' : undefined }}
             >
-              ✅ Emily AI 이미지
+              ✅ AI 이미지
             </button>
             <button
               className={!useSprites ? 'active' : ''}

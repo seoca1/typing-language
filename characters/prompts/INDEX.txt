@@ -10,11 +10,12 @@ IMAGES COMPLETE:
 ================
 ✅ en/emily/     - 1-idle.txt through 7-pose.txt + README.md + ORDER.txt
                    ✓ ALL 7 IMAGES GENERATED! (7/7) ✓ COMPLETE!
+✅ en/oliver/    - 1-idle.txt through 7-pose.txt + README.md + ORDER.txt
+                   ✓ ALL 7 IMAGES GENERATED! (7/7) ✓ COMPLETE!
 
 PROMPTS READY (Generate Images):
 =================================
 English (EN):
-✅ en/oliver/    - 1-idle.txt through 7-pose.txt + README.md + ORDER.txt (0/7 images)
 ✅ en/sophia/    - 1-idle.txt through 7-pose.txt + README.md + ORDER.txt (0/7 images)
 
 Japanese (JP):
@@ -73,9 +74,9 @@ PROGRESS:
 ---------
 IMAGES COMPLETE:
 Emily:    [✓] 1-idle [✓] 2-wave [✓] 3-jump [✓] 4-clap [✓] 5-spin [✓] 6-dance [✓] 7-pose ✓ COMPLETE!
+Oliver:   [✓] 1-idle [✓] 2-wave [✓] 3-jump [✓] 4-clap [✓] 5-spin [✓] 6-dance [✓] 7-pose ✓ COMPLETE!
 
 PROMPTS READY (Generate Next):
-Oliver:   [📝] 1-idle [📝] 2-wave [📝] 3-jump [📝] 4-clap [📝] 5-spin [📝] 6-dance [📝] 7-pose
 Sophia:   [📝] 1-idle [📝] 2-wave [📝] 3-jump [📝] 4-clap [📝] 5-spin [📝] 6-dance [📝] 7-pose
 Sakura:   [📝] 1-idle [📝] 2-wave [📝] 3-jump [📝] 4-clap [📝] 5-spin [📝] 6-dance [📝] 7-pose
 Yuki:     [📝] 1-idle [📝] 2-wave [📝] 3-jump [📝] 4-clap [📝] 5-spin [📝] 6-dance [📝] 7-pose
@@ -90,11 +91,11 @@ Jiwoo:    [📝] 1-idle [📝] 2-wave [📝] 3-jump [📝] 4-clap [📝] 5-spin 
 SUMMARY:
 --------
 Prompts Complete: 84 / 84 (100%) ✓✓✓
-Images Complete:   7 / 84 (8.3%)
-Images Remaining: 77 / 84 (91.7%)
+Images Complete:  14 / 84 (16.7%)
+Images Remaining: 70 / 84 (83.3%)
 
 By Language:
-- EN: 3 characters × 7 poses = 21 images (7 done, 14 remaining)
+- EN: 3 characters × 7 poses = 21 images (14 done, 7 remaining)
 - JP: 3 characters × 7 poses = 21 images (0 done, 21 remaining)
 - ES: 3 characters × 7 poses = 21 images (0 done, 21 remaining)
 - KR: 3 characters × 7 poses = 21 images (0 done, 21 remaining)
@@ -102,23 +103,14 @@ By Language:
 START HERE (GENERATE IMAGES):
 =============================
 ✅ ALL PROMPTS COMPLETE! (84/84)
-⏳ Start generating images (7/84 done)
+⏳ Start generating images (14/84 done)
 
 RECOMMENDED ORDER:
 ------------------
-1. Complete English characters first (Oliver, Sophia)
+1. Complete English characters first (Sophia - 7 remaining)
 2. Then Japanese characters (Sakura, Yuki, Kaito)
 3. Then Spanish characters (Isabella, Carlos, Luna)
 4. Finally Korean characters (Hana, Minho, Jiwoo)
-
-QUICK START - OLIVER:
----------------------
-cd en/oliver
-cat 1-idle.txt
-# → Copy to ChatGPT/Grok
-# → Generate image
-# → Save: ../../prototype/public/characters/en/oliver/1-idle.png
-# → Repeat for 2-wave.txt through 7-pose.txt
 
 QUICK START - SOPHIA:
 ---------------------
