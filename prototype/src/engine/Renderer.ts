@@ -155,29 +155,45 @@ export class Renderer {
     const cx = this.width / 2;
     const cy = 290;
 
-    // Auto-shrink font for long text (sentences)
-    // Short words: 52px, Long sentences: down to 18px
+    // Determine max width for text wrapping
     const maxWidth = this.width - 80; // 40px padding on each side
-    let fontSize = 52;
-    this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
-    let textWidth = this.ctx.measureText(text).width;
-    while (textWidth > maxWidth && fontSize > 16) {
-      fontSize -= 2;
+
+    // Calculate font size: start large, shrink until single line fits OR multi-line possible
+    let fontSize = 48;
+    const minFontSize = 20;
+    let lines: string[] = [];
+
+    // Try different font sizes: largest that fits OR uses max 3 lines
+    while (fontSize >= minFontSize) {
       this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
-      textWidth = this.ctx.measureText(text).width;
+      lines = this.wrapText(text, maxWidth, state.language);
+      if (lines.length <= 3) {
+        break; // Good fit
+      }
+      fontSize -= 4;
     }
 
+    // Center vertically based on line count
+    const lineHeight = fontSize * 1.3;
+    const totalHeight = lines.length * lineHeight;
+    const startY = cy - totalHeight / 2 + lineHeight / 2;
+
     this.ctx.save();
-    this.ctx.translate(cx, cy);
+    this.ctx.translate(cx, 0);
 
     const glowIntensity = 0.4 + progress * 0.6;
     this.ctx.shadowColor = '#e94560';
     this.ctx.shadowBlur = 20 * glowIntensity;
     this.ctx.fillStyle = '#ffffff';
     this.ctx.textAlign = 'center';
-    this.ctx.fillText(text, 0, 0);
-    this.ctx.shadowBlur = 0;
+    this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
 
+    for (let i = 0; i < lines.length; i++) {
+      const y = startY + i * lineHeight;
+      this.ctx.fillText(lines[i], 0, y);
+    }
+
+    this.ctx.shadowBlur = 0;
     this.ctx.restore();
 
     if (state.romajiHint) {
@@ -242,69 +258,146 @@ export class Renderer {
     const targetText = state.currentEnemy.target.text;
     const buffer = state.buffer;
 
-    // Auto-fit character width based on text length
-    // Short: 34px font, 22px charWidth. Long sentences: shrink dynamically.
-    const maxWidth = this.width - 80; // 40px padding on each side
-    let charWidth = 22;
-    const totalWidth = targetText.length * charWidth;
-    if (totalWidth > maxWidth) {
-      charWidth = Math.max(10, Math.floor(maxWidth / targetText.length));
+    const cx = this.width / 2;
+
+    // Match the same font size and wrapping as drawEnemy
+    const maxWidth = this.width - 80;
+    let fontSize = 48;
+    const minFontSize = 20;
+    let targetLines: string[] = [];
+
+    while (fontSize >= minFontSize) {
+      this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
+      targetLines = this.wrapText(targetText, maxWidth, state.language);
+      if (targetLines.length <= 3) break;
+      fontSize -= 4;
     }
 
-    // Adjust font size based on charWidth
-    let fontSize = 34;
-    if (charWidth < 22) {
-      fontSize = Math.max(14, Math.floor(34 * (charWidth / 22)));
+    const inputFontSize = Math.max(14, Math.floor(fontSize * 0.7));
+    const lineHeight = fontSize * 1.3;
+    const inputLineHeight = inputFontSize * 1.3;
+
+    // Map each character in targetText to its (line, column) position
+    // targetLines reconstruct the text with same line breaks
+    const charPositions: Array<{ line: number; col: number; char: string }> = [];
+    for (let lineIdx = 0; lineIdx < targetLines.length; lineIdx++) {
+      const line = targetLines[lineIdx];
+      for (let col = 0; col < line.length; col++) {
+        charPositions.push({ line: lineIdx, col, char: line[col] });
+      }
     }
 
-    const startX = this.width / 2 - (targetText.length * charWidth) / 2;
-    const baseY = 500;
     const now = Date.now();
     const recent = now - state.lastHitTime < 220;
 
-    this.ctx.font = `bold ${fontSize}px ui-monospace, monospace`;
+    // Render target text line by line (faded if not yet typed, bright if typed)
+    this.ctx.save();
+    this.ctx.translate(cx, 0);
+    this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
     this.ctx.textAlign = 'center';
 
-    for (let i = 0; i < targetText.length; i++) {
-      const char = buffer[i];
-      const targetChar = targetText[i];
-
-      const isLastHit = recent && i === state.lastHitCharIndex;
-      const correct = char !== undefined && char === targetChar;
-      const wrong = char !== undefined && char !== targetChar;
-
-      let pulse = 0;
-      if (isLastHit && correct) {
-        pulse = 1 - (now - state.lastHitTime) / 220;
-      } else if (isLastHit && wrong) {
-        pulse = 1 - (now - state.lastHitTime) / 220;
+    for (let lineIdx = 0; lineIdx < targetLines.length; lineIdx++) {
+      const line = targetLines[lineIdx];
+      // Find global char index range for this line
+      let lineStartGlobal = 0;
+      for (let l = 0; l < lineIdx; l++) {
+        lineStartGlobal += targetLines[l].length;
       }
 
-      const x = startX + i * charWidth;
-      const y = baseY + (wrong && isLastHit ? Math.sin(now / 30) * 3 : 0);
-      const scale = 1 + pulse * 0.4;
+      // Render each character
+      let lineWidth = this.ctx.measureText(line).width;
+      let xCursor = -lineWidth / 2;
 
+      for (let col = 0; col < line.length; col++) {
+        const char = line[col];
+        const globalIdx = lineStartGlobal + col;
+        const bufChar = buffer[globalIdx];
+
+        const isLastHit = recent && globalIdx === state.lastHitCharIndex;
+        const correct = bufChar !== undefined && bufChar === char;
+        const wrong = bufChar !== undefined && bufChar !== char;
+
+        let pulse = 0;
+        if (isLastHit && (correct || wrong)) {
+          pulse = 1 - (now - state.lastHitTime) / 220;
+        }
+
+        const charW = this.ctx.measureText(char).width;
+        const charY = 500 + lineIdx * lineHeight;
+        const charX = xCursor + charW / 2;
+        const scale = 1 + pulse * 0.3;
+        const yOffset = wrong && isLastHit ? Math.sin(now / 30) * 3 : 0;
+
+        this.ctx.save();
+        this.ctx.translate(charX, charY + yOffset);
+        this.ctx.scale(scale, scale);
+
+        if (correct && isLastHit) {
+          this.ctx.shadowColor = '#00ff88';
+          this.ctx.shadowBlur = 14;
+          this.ctx.fillStyle = '#00ff88';
+        } else if (wrong && isLastHit) {
+          this.ctx.shadowColor = '#ff4444';
+          this.ctx.shadowBlur = 14;
+          this.ctx.fillStyle = '#ff4444';
+        } else if (correct) {
+          this.ctx.fillStyle = '#aaffcc';
+        } else if (wrong) {
+          this.ctx.fillStyle = '#ff7777';
+        } else {
+          this.ctx.fillStyle = '#555';
+        }
+
+        this.ctx.fillText(char, 0, 0);
+        this.ctx.restore();
+
+        xCursor += charW;
+      }
+    }
+    this.ctx.restore();
+
+    // Render buffer (input) line by line BELOW target
+    if (buffer.length > 0) {
       this.ctx.save();
-      this.ctx.translate(x, y);
-      this.ctx.scale(scale, scale);
+      this.ctx.translate(cx, 0);
+      this.ctx.font = `${inputFontSize}px ui-monospace, monospace`;
+      this.ctx.textAlign = 'center';
 
-      if (correct && isLastHit) {
-        this.ctx.shadowColor = '#00ff88';
-        this.ctx.shadowBlur = 16;
-        this.ctx.fillStyle = '#00ff88';
-      } else if (wrong && isLastHit) {
-        this.ctx.shadowColor = '#ff4444';
-        this.ctx.shadowBlur = 16;
-        this.ctx.fillStyle = '#ff4444';
-      } else if (correct) {
-        this.ctx.fillStyle = '#aaffcc';
-      } else if (wrong) {
-        this.ctx.fillStyle = '#ff7777';
-      } else {
-        this.ctx.fillStyle = '#444';
+      // Build buffer lines following target line breaks
+      const bufferLines: string[] = [];
+      let bufIdx = 0;
+      for (let lineIdx = 0; lineIdx < targetLines.length; lineIdx++) {
+        const targetLine = targetLines[lineIdx];
+        const lineBuf = buffer.slice(bufIdx, bufIdx + targetLine.length);
+        bufferLines.push(lineBuf);
+        bufIdx += targetLine.length;
       }
 
-      this.ctx.fillText(targetChar, 0, 0);
+      const inputStartY = 500 + targetLines.length * lineHeight + 20;
+
+      for (let lineIdx = 0; lineIdx < bufferLines.length; lineIdx++) {
+        const lineBuf = bufferLines[lineIdx];
+        if (lineBuf.length === 0) continue;
+
+        const y = inputStartY + lineIdx * inputLineHeight;
+
+        // Color the input characters based on correctness
+        const targetLine = targetLines[lineIdx];
+        let lineWidth = this.ctx.measureText(lineBuf).width;
+        let xCursor = -lineWidth / 2;
+
+        for (let col = 0; col < lineBuf.length; col++) {
+          const char = lineBuf[col];
+          const targetChar = targetLine[col];
+          const isCorrect = targetChar !== undefined && char === targetChar;
+          const charW = this.ctx.measureText(char).width;
+
+          this.ctx.fillStyle = isCorrect ? '#00ff88' : '#ff7777';
+          this.ctx.fillText(char, xCursor + charW / 2, y);
+
+          xCursor += charW;
+        }
+      }
       this.ctx.restore();
     }
 
@@ -312,7 +405,8 @@ export class Renderer {
       this.ctx.fillStyle = '#ff4444';
       this.ctx.font = '14px -apple-system, sans-serif';
       this.ctx.textAlign = 'center';
-      this.ctx.fillText('⚠ 글자 수 초과', this.width / 2, baseY + 30);
+      const lastY = 500 + targetLines.length * lineHeight + 20 + targetLines.length * inputLineHeight + 20;
+      this.ctx.fillText('⚠ 글자 수 초과', this.width / 2, lastY);
     }
   }
 
@@ -465,5 +559,53 @@ export class Renderer {
     this.ctx.fillStyle = effects.flash.color;
     this.ctx.fillRect(0, 0, this.width, this.height);
     this.ctx.restore();
+  }
+
+  /**
+   * Wrap text into multiple lines based on max width.
+   * - English/Spanish: word-based wrapping (breaks at spaces)
+   * - Japanese/Korean: character-based wrapping (breaks between any chars)
+   */
+  private wrapText(text: string, maxWidth: number, language: string): string[] {
+    const isWordBased = language === 'en' || language === 'es';
+
+    if (!isWordBased) {
+      // CJK: wrap by character
+      const chars = Array.from(text);
+      const lines: string[] = [];
+      let currentLine = '';
+
+      for (const char of chars) {
+        const testLine = currentLine + char;
+        const width = this.ctx.measureText(testLine).width;
+        if (width > maxWidth && currentLine.length > 0) {
+          lines.push(currentLine);
+          currentLine = char;
+        } else {
+          currentLine = testLine;
+        }
+      }
+      if (currentLine) lines.push(currentLine);
+      return lines;
+    }
+
+    // Word-based: split by spaces
+    const words = text.split(/(\s+)/); // Keep separators
+    const lines: string[] = [];
+    let currentLine = '';
+
+    for (const word of words) {
+      const testLine = currentLine + word;
+      const width = this.ctx.measureText(testLine.trimEnd()).width;
+
+      if (width > maxWidth && currentLine.trim().length > 0) {
+        lines.push(currentLine.trimEnd());
+        currentLine = word.trimStart();
+      } else {
+        currentLine = testLine;
+      }
+    }
+    if (currentLine.trim()) lines.push(currentLine.trimEnd());
+    return lines;
   }
 }
