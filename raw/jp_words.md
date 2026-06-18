@@ -102,6 +102,85 @@
 - { id: jps_003, display: おはようございます, romaji: ohayougozaimasu, meaning: "Good morning (polite)", level: 5, category: greeting }
 ```
 
+## 旅行 (Travel) — Level 5
+
+> **출처**: [[travel-basics-jp]], [[travel]] (JLPT N5-N4)
+
+### 空港・ホテル・観光
+
+```yaml
+- { id: jp_t_001, display: 空港, romaji: kuukou, meaning: 공항, level: 5, category: travel }
+- { id: jp_t_002, display: 駅, romaji: eki, meaning: 역, level: 5, category: travel }
+- { id: jp_t_003, display: 切符, romaji: kippu, meaning: 표, level: 5, category: travel }
+- { id: jp_t_004, display: 予約, romaji: yoyaku, meaning: 예약, level: 5, category: travel }
+- { id: jp_t_005, display: 地図, romaji: chizu, meaning: 지도, level: 5, category: travel }
+- { id: jp_t_006, display: 荷物, romaji: nimotsu, meaning: 짐, level: 5, category: travel }
+- { id: jp_t_007, display: 切符売り場, romaji: kippu uriba, meaning: 매표소, level: 5, category: travel }
+- { id: jp_t_008, display: 出口, romaji: deguchi, meaning: 출구, level: 5, category: travel }
+- { id: jp_t_009, display: 入口, romaji: iriguchi, meaning: 입구, level: 5, category: travel }
+- { id: jp_t_010, display: 改札, romaji: kaisatsu, meaning: 개찰구, level: 5, category: travel }
+- { id: jp_t_011, display: 観光, romaji: kankou, meaning: 관광, level: 5, category: travel }
+- { id: jp_t_012, display: 博物館, romaji: hakubutsukan, meaning: 박물관, level: 5, category: travel }
+- { id: jp_t_013, display: 神社, romaji: jinja, meaning: 신사, level: 5, category: travel }
+- { id: jp_t_014, display: 寺, romaji: tera, meaning: 절, level: 5, category: travel }
+- { id: jp_t_015, display: 城, romaji: shiro, meaning: 성, level: 5, category: travel }
+- { id: jp_t_016, display: 公園, romaji: kouen, meaning: 공원, level: 5, category: travel }
+- { id: jp_t_017, display: ホテル, romaji: hoteru, meaning: 호텔, level: 5, category: travel }
+- { id: jp_t_018, display: 部屋, romaji: heya, meaning: 방, level: 5, category: travel }
+- { id: jp_t_019, display: 注文, romaji: chuumon, meaning: 주문, level: 5, category: travel }
+- { id: jp_t_020, display: 電車, romaji: densha, meaning: 전철, level: 5, category: travel }
+- { id: jp_t_021, display: 地下鉄, romaji: chikatetsu, meaning: 지하철, level: 5, category: travel }
+- { id: jp_t_022, display: バス, romaji: basu, meaning: 버스, level: 5, category: travel }
+- { id: jp_t_023, display: タクシー, romaji: takushii, meaning: 택시, level: 5, category: travel }
+- { id: jp_t_024, display: 新幹線, romaji: shinkansen, meaning: 신칸센, level: 5, category: travel }
+- { id: jp_t_025, display: 山, romaji: yama, meaning: 산, level: 5, category: travel }
+- { id: jp_t_026, display: 海, romaji: umi, meaning: 바다, level: 5, category: travel }
+```
+
+### 旅行フレーズ (Travel Phrases) — Level 5
+
+```yaml
+- id: jp_t_s_001
+  display: すみません、駅はどこですか?
+  romaji: sumimaseneki-wadodesuka
+  meaning: 실례합니다, 역은 어디에 있나요?
+  level: 5
+  category: travel
+  source: [[travel]]
+
+- id: jp_t_s_002
+  display: いくらですか?
+  romaji: ikuradesuka
+  meaning: 얼마예요?
+  level: 5
+  category: travel
+  source: [[travel]]
+
+- id: jp_t_s_003
+  display: トイレはどこですか?
+  romaji: toire-wadodesuka
+  meaning: 화장실 어디예요?
+  level: 5
+  category: travel
+  source: [[travel]]
+
+- id: jp_t_s_004
+  display: 助けてください
+  romaji: tasetekudasai
+  meaning: 도와주세요
+  level: 5
+  category: travel
+  source: [[travel]]
+
+- id: jp_t_s_005
+  display: ありがとうございます
+  romaji: arigatougozaimasu
+  meaning: 감사합니다
+  level: 5
+  category: travel
+  source: [[travel]]
+```
+
 ## 카테고리
 
 - greeting (인사)
@@ -115,6 +194,7 @@
 - person (사람)
 - object (사물)
 - kanji_basic (기본 한자)
+- travel (여행)
 
 ## 확장 계획 (Phase 6)
 

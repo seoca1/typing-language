@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T18:32:00.518376",
+  "generated_at": "2026-06-18T18:49:18.422679",
   "languages": [
     {
       "code": "en",
@@ -8,15 +8,15 @@
       "flag": "🇺🇸",
       "color": "#3b82f6",
       "stats": {
-        "stages": 10,
-        "corpus_total": 74,
-        "vocab_wiki": 0,
+        "stages": 13,
+        "corpus_total": 158,
+        "vocab_wiki": 1,
         "expressions_wiki": 0,
         "culture_wiki": 0,
         "sources_wiki": 0,
         "study_plan_wiki": 0,
-        "raw_sources": 0,
-        "coverage_percent": 77.1,
+        "raw_sources": 1,
+        "coverage_percent": 125.4,
         "gaps": 2
       }
     },
@@ -27,15 +27,15 @@
       "flag": "🇯🇵",
       "color": "#ec4899",
       "stats": {
-        "stages": 12,
-        "corpus_total": 125,
-        "vocab_wiki": 0,
+        "stages": 15,
+        "corpus_total": 182,
+        "vocab_wiki": 1,
         "expressions_wiki": 0,
         "culture_wiki": 0,
         "sources_wiki": 0,
         "study_plan_wiki": 0,
-        "raw_sources": 0,
-        "coverage_percent": 89.9,
+        "raw_sources": 1,
+        "coverage_percent": 107.7,
         "gaps": 3
       }
     },
@@ -46,15 +46,15 @@
       "flag": "🇪🇸",
       "color": "#f59e0b",
       "stats": {
-        "stages": 9,
-        "corpus_total": 79,
-        "vocab_wiki": 36,
+        "stages": 12,
+        "corpus_total": 155,
+        "vocab_wiki": 37,
         "expressions_wiki": 22,
         "culture_wiki": 10,
         "sources_wiki": 4,
         "study_plan_wiki": 2,
         "raw_sources": 4,
-        "coverage_percent": 97.5,
+        "coverage_percent": 139.6,
         "gaps": 3
       }
     },
@@ -65,32 +65,32 @@
       "flag": "🇰🇷",
       "color": "#10b981",
       "stats": {
-        "stages": 9,
-        "corpus_total": 1,
-        "vocab_wiki": 22,
+        "stages": 12,
+        "corpus_total": 86,
+        "vocab_wiki": 23,
         "expressions_wiki": 0,
         "culture_wiki": 0,
         "sources_wiki": 0,
         "study_plan_wiki": 0,
-        "raw_sources": 1,
-        "coverage_percent": 1.2,
+        "raw_sources": 2,
+        "coverage_percent": 76.1,
         "gaps": 5
       }
     }
   ],
   "totals": {
-    "stages": 40,
-    "corpus": 279,
-    "wiki_materials": 96,
-    "raw_sources": 5,
-    "vocab_words": 58,
+    "stages": 52,
+    "corpus": 581,
+    "wiki_materials": 100,
+    "raw_sources": 8,
+    "vocab_words": 62,
     "expressions": 22,
     "culture": 10
   },
   "tiers": {
     "0": 3,
     "1": 10,
-    "2": 8,
+    "2": 20,
     "3": 8,
     "4": 7,
     "5": 4

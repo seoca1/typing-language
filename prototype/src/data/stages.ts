@@ -200,6 +200,42 @@ const EN_STAGES: StageSpec[] = [
     requiresCorpus: 'passages',
     missions: defaultMissionsForTier(5),
   },
+
+  // ===== Travel Theme Stages (여행 테마) =====
+  {
+    id: 'en_t_1',
+    language: 'en',
+    tier: 2,
+    name: 'Travel Essentials',
+    description: '여행 필수 단어 (공항·호텔·식당)',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['travel'] },
+    missions: defaultMissionsForTier(2),
+  },
+  {
+    id: 'en_t_2',
+    language: 'en',
+    tier: 3,
+    name: 'At the Airport',
+    description: '공항에서 쓰는 표현과 단어',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 1, maxLevel: 3, categories: ['travel'] },
+    missions: defaultMissionsForTier(3),
+  },
+  {
+    id: 'en_t_3',
+    language: 'en',
+    tier: 3,
+    name: 'Travel Phrases',
+    description: '여행 회화 표현 (길묻기·주문·체크인)',
+    difficulty: 3,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['travel'] },
+    requiresCorpus: 'sentences',
+    missions: defaultMissionsForTier(3),
+  },
 ];
 
 const JP_STAGES: StageSpec[] = [
@@ -359,6 +395,42 @@ const JP_STAGES: StageSpec[] = [
     requiresCorpus: 'passages',
     missions: defaultMissionsForTier(5),
   },
+
+  // ===== 旅行テーマ (Travel Theme) =====
+  {
+    id: 'jp_t_1',
+    language: 'jp',
+    tier: 2,
+    name: '旅行の基礎',
+    description: '여행 필수 단어 (공항·역·호텔)',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 5, maxLevel: 5, categories: ['travel'] },
+    missions: defaultMissionsForTier(2),
+  },
+  {
+    id: 'jp_t_2',
+    language: 'jp',
+    tier: 3,
+    name: '空港・駅',
+    description: '공항·역에서 쓰는 표현',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 5, maxLevel: 5, categories: ['travel'] },
+    missions: defaultMissionsForTier(3),
+  },
+  {
+    id: 'jp_t_3',
+    language: 'jp',
+    tier: 3,
+    name: '旅行フレーズ',
+    description: '여행 회화 표현 (길묻기·주문)',
+    difficulty: 3,
+    wordCount: 8,
+    corpusFilter: { minLevel: 5, maxLevel: 5, categories: ['travel'] },
+    requiresCorpus: 'sentences',
+    missions: defaultMissionsForTier(3),
+  },
 ];
 
 const ES_STAGES: StageSpec[] = [
@@ -484,6 +556,43 @@ const ES_STAGES: StageSpec[] = [
     accentMode: 'strict',
     missions: defaultMissionsForTier(5),
   },
+
+  // ===== Tema Viajes (Travel Theme) =====
+  {
+    id: 'es_t_1',
+    language: 'es',
+    tier: 2,
+    name: 'Viajes Esenciales',
+    description: '여행 필수 어휘 (공항·호텔·식당)',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['travel'] },
+    missions: defaultMissionsForTier(2),
+  },
+  {
+    id: 'es_t_2',
+    language: 'es',
+    tier: 3,
+    name: 'En el Aeropuerto',
+    description: '공항에서 쓰는 어휘',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 1, maxLevel: 3, categories: ['travel'] },
+    missions: defaultMissionsForTier(3),
+  },
+  {
+    id: 'es_t_3',
+    language: 'es',
+    tier: 3,
+    name: 'Frases de Viaje',
+    description: '여행 회화 표현 (길묻기·주문·체크인)',
+    difficulty: 3,
+    wordCount: 8,
+    corpusFilter: { minLevel: 2, maxLevel: 2, categories: ['travel'] },
+    requiresCorpus: 'sentences',
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(3),
+  },
 ];
 
 const KR_STAGES: StageSpec[] = [
@@ -603,6 +712,41 @@ const KR_STAGES: StageSpec[] = [
     corpusFilter: { minLevel: 5, maxLevel: 5 },
     requiresCorpus: 'passages',
     missions: defaultMissionsForTier(5),
+  },
+
+  // ===== 여행 테마 (Travel Theme) =====
+  {
+    id: 'kr_t_1',
+    language: 'kr',
+    tier: 2,
+    name: '여행 기초',
+    description: '여행 필수 단어 (공항·호텔·식당)',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 1, categories: ['travel'] },
+    missions: defaultMissionsForTier(2),
+  },
+  {
+    id: 'kr_t_2',
+    language: 'kr',
+    tier: 3,
+    name: '공항·역에서',
+    description: '공항·역에서 쓰는 어휘',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 1, maxLevel: 1, categories: ['travel'] },
+    missions: defaultMissionsForTier(3),
+  },
+  {
+    id: 'kr_t_3',
+    language: 'kr',
+    tier: 3,
+    name: '여행 회화',
+    description: '여행 회화 표현 (길묻기·주문·체크인)',
+    difficulty: 3,
+    wordCount: 8,
+    corpusFilter: { minLevel: 1, maxLevel: 1, categories: ['travel'] },
+    missions: defaultMissionsForTier(3),
   },
 ];
 

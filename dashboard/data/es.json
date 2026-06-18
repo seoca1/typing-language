@@ -329,6 +329,14 @@
         "size_kb": 1.0,
         "modified": "2026-06-16T18:22:53.543371",
         "path": "wiki/Spanish/vocabulary/veranear.md"
+      },
+      {
+        "name": "viajes",
+        "filename": "viajes.md",
+        "title": "Viajes - Travel",
+        "size_kb": 3.5,
+        "modified": "2026-06-18T18:45:03.556563",
+        "path": "wiki/Spanish/vocabulary/viajes.md"
       }
     ],
     "expressions": [
@@ -646,12 +654,13 @@
   ],
   "raw_sources_count": 4,
   "corpus": {
-    "total": 79,
+    "total": 155,
     "by_level": {
-      "1": 60,
-      "2": 19
+      "1": 98,
+      "2": 57
     },
     "by_category": {
+      "travel": 76,
       "number": 12,
       "greeting": 10,
       "time": 10,
@@ -667,7 +676,7 @@
       "restaurant": 1
     },
     "by_type": {
-      "words": 79,
+      "words": 155,
       "sentences": 0,
       "chars": 0
     },
@@ -768,7 +777,8 @@
       "person",
       "place",
       "restaurant",
-      "time"
+      "time",
+      "travel"
     ],
     "levels": [
       1,
@@ -825,6 +835,24 @@
       }
     },
     {
+      "id": "es_t_1",
+      "tier": 2,
+      "stage_num": 1,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "Viajes Esenciales",
+      "description": "여행 필수 어휘 (공항·호텔·식당)",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
       "id": "es_2_2",
       "tier": 2,
       "stage_num": 2,
@@ -841,6 +869,42 @@
           "place"
         ],
         "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_t_2",
+      "tier": 2,
+      "stage_num": 2,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "En el Aeropuerto",
+      "description": "공항에서 쓰는 어휘",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_t_3",
+      "tier": 2,
+      "stage_num": 3,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "Frases de Viaje",
+      "description": "여행 회화 표현 (길묻기·주문·체크인)",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 2,
         "maxLevel": 2
       }
     },
@@ -927,14 +991,14 @@
     }
   ],
   "coverage": {
-    "total_stages": 9,
-    "total_corpus": 79,
-    "wiki_materials": 74,
+    "total_stages": 12,
+    "total_corpus": 155,
+    "wiki_materials": 75,
     "sources": 4,
     "raw_sources": 4,
     "stages_by_tier": {
       "1": 2,
-      "2": 2,
+      "2": 5,
       "3": 2,
       "4": 2,
       "5": 1
@@ -979,6 +1043,20 @@
         "corpus_type": "words"
       },
       {
+        "stage_id": "es_t_1",
+        "stage_name": "Viajes Esenciales",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
         "stage_id": "es_2_2",
         "stage_name": "Cotidiano",
         "tier": 2,
@@ -993,6 +1071,34 @@
         ],
         "word_count": 12,
         "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_t_2",
+        "stage_name": "En el Aeropuerto",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_t_3",
+        "stage_name": "Frases de Viaje",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 8,
+        "corpus_type": "sentences"
       },
       {
         "stage_id": "es_3_1",
@@ -1087,7 +1193,7 @@
         "categories": []
       }
     ],
-    "coverage_percent": 97.5
+    "coverage_percent": 139.6
   },
-  "generated_at": "2026-06-18T18:32:00.511182"
+  "generated_at": "2026-06-18T18:49:18.405973"
 }

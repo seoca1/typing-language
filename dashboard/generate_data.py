@@ -227,17 +227,24 @@ def parse_game_stages(lang_code: str) -> list:
         content = f.read()
 
     # Find stage blocks for this language
-    pattern = rf"id:\s*'{lang_code}_(\d+)_(\d+)'.*?(?=id:\s*'|$)"
+    # Match both standard (xx_N_M) and travel (xx_t_N) IDs
+    pattern = rf"id:\s*'{lang_code}_(\d+|t)_(\d+)'.*?(?=id:\s*'|^\]\;|\]\,)"
     matches = re.finditer(pattern, content, re.DOTALL)
 
     stages = []
     for match in matches:
         block = match.group(0)
-        tier = int(match.group(1))
+        tier_raw = match.group(1)
         stage_num = int(match.group(2))
 
+        # Tier mapping: 't' = special theme tier (treat as 2 for grouping)
+        if tier_raw == 't':
+            tier = 2  # Place travel stages in tier 2 for visual grouping
+        else:
+            tier = int(tier_raw)
+
         # Extract stage details
-        stage_id = f"{lang_code}_{tier}_{stage_num}"
+        stage_id = f"{lang_code}_{tier_raw}_{stage_num}"
         name_match = re.search(r"name:\s*['\"](.+?)['\"]", block)
         desc_match = re.search(r"description:\s*['\"](.+?)['\"]", block)
         count_match = re.search(r"wordCount:\s*(\d+)", block)

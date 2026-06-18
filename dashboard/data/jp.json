@@ -8,20 +8,39 @@
   },
   "wiki": {
     "sources": [],
-    "vocabulary": [],
+    "vocabulary": [
+      {
+        "name": "travel",
+        "filename": "travel.md",
+        "title": "旅行 (りょこう) - Travel",
+        "size_kb": 4.1,
+        "modified": "2026-06-18T18:44:48.984832",
+        "path": "wiki/Japanese/vocabulary/travel.md"
+      }
+    ],
     "expressions": [],
     "culture": [],
     "study_plan": []
   },
-  "raw_sources": [],
-  "raw_sources_count": 0,
+  "raw_sources": [
+    {
+      "name": "travel-basics-jp",
+      "filename": "travel-basics-jp.md",
+      "title": "旅行基礎語彙 - Source Material",
+      "size_kb": 1.5,
+      "modified": "2026-06-18T18:45:35.272619",
+      "path": "raw/Japanese/travel-basics-jp.md"
+    }
+  ],
+  "raw_sources_count": 1,
   "corpus": {
-    "total": 125,
+    "total": 182,
     "by_level": {
       "4": 4,
-      "5": 121
+      "5": 178
     },
     "by_category": {
+      "travel": 57,
       "kanji_basic": 42,
       "number": 20,
       "greeting": 15,
@@ -35,7 +54,7 @@
     },
     "by_type": {
       "words": 0,
-      "sentences": 125,
+      "sentences": 182,
       "chars": 2
     },
     "words_sample": [],
@@ -149,7 +168,8 @@
       "object",
       "person",
       "place",
-      "time"
+      "time",
+      "travel"
     ],
     "levels": [
       4,
@@ -255,6 +275,24 @@
       }
     },
     {
+      "id": "jp_t_1",
+      "tier": 2,
+      "stage_num": 1,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "旅行の基礎",
+      "description": "여행 필수 단어 (공항·역·호텔)",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
       "id": "jp_2_2",
       "tier": 2,
       "stage_num": 2,
@@ -270,6 +308,42 @@
         ],
         "minLevel": 2,
         "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_t_2",
+      "tier": 2,
+      "stage_num": 2,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "空港・駅",
+      "description": "공항·역에서 쓰는 표현",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "id": "jp_t_3",
+      "tier": 2,
+      "stage_num": 3,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "旅行フレーズ",
+      "description": "여행 회화 표현 (길묻기·주문)",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 5,
+        "maxLevel": 5
       }
     },
     {
@@ -355,15 +429,15 @@
     }
   ],
   "coverage": {
-    "total_stages": 12,
-    "total_corpus": 125,
-    "wiki_materials": 0,
+    "total_stages": 15,
+    "total_corpus": 182,
+    "wiki_materials": 1,
     "sources": 0,
-    "raw_sources": 0,
+    "raw_sources": 1,
     "stages_by_tier": {
       "0": 3,
       "1": 2,
-      "2": 2,
+      "2": 5,
       "3": 2,
       "4": 2,
       "5": 1
@@ -451,6 +525,20 @@
         "corpus_type": "words"
       },
       {
+        "stage_id": "jp_t_1",
+        "stage_name": "旅行の基礎",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
         "stage_id": "jp_2_2",
         "stage_name": "カタカナ語",
         "tier": 2,
@@ -463,6 +551,34 @@
         ],
         "word_count": 10,
         "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_t_2",
+        "stage_name": "空港・駅",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_t_3",
+        "stage_name": "旅行フレーズ",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 8,
+        "corpus_type": "sentences"
       },
       {
         "stage_id": "jp_3_1",
@@ -557,7 +673,7 @@
         ]
       }
     ],
-    "coverage_percent": 89.9
+    "coverage_percent": 107.7
   },
-  "generated_at": "2026-06-18T18:32:00.483865"
+  "generated_at": "2026-06-18T18:49:18.373706"
 }

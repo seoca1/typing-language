@@ -87,6 +87,121 @@
 
 (추가 예정)
 
+## 여행 어휘 (Travel) — Level 1~2
+
+> **출처**: [[travel-basics]], [[travel]] (CEFR A1-A2)
+> **카테고리**: travel (여행)
+
+### 공항 & 비행기 (Airport)
+
+```yaml
+- { id: en_t_001, display: passport, meaning: 여권, level: 1, category: travel }
+- { id: en_t_002, display: ticket, meaning: 표, level: 1, category: travel }
+- { id: en_t_003, display: suitcase, meaning: 여행가방, level: 1, category: travel }
+- { id: en_t_004, display: airport, meaning: 공항, level: 1, category: travel }
+- { id: en_t_005, display: gate, meaning: 탑승구, level: 2, category: travel }
+- { id: en_t_006, display: boarding, meaning: 탑승, level: 2, category: travel }
+- { id: en_t_007, display: flight, meaning: 항공편, level: 2, category: travel }
+- { id: en_t_008, display: arrive, meaning: 도착하다, level: 1, category: travel }
+```
+
+### 호텔 & 숙소 (Hotel)
+
+```yaml
+- { id: en_t_010, display: hotel, meaning: 호텔, level: 1, category: travel }
+- { id: en_t_011, display: room, meaning: 방, level: 1, category: travel }
+- { id: en_t_012, display: reservation, meaning: 예약, level: 2, category: travel }
+- { id: en_t_013, display: lobby, meaning: 로비, level: 2, category: travel }
+- { id: en_t_014, display: elevator, meaning: 엘리베이터, level: 2, category: travel }
+- { id: en_t_015, display: checkout, meaning: 체크아웃, level: 2, category: travel }
+- { id: en_t_016, display: stay, meaning: 묵다, level: 1, category: travel }
+```
+
+### 식당 & 음식 (Restaurant)
+
+```yaml
+- { id: en_t_020, display: menu, meaning: 메뉴, level: 1, category: travel }
+- { id: en_t_021, display: waiter, meaning: 웨이터, level: 2, category: travel }
+- { id: en_t_022, display: order, meaning: 주문하다, level: 1, category: travel }
+- { id: en_t_023, display: dessert, meaning: 디저트, level: 2, category: travel }
+- { id: en_t_024, display: bill, meaning: 계산서, level: 2, category: travel }
+- { id: en_t_025, display: recommend, meaning: 추천하다, level: 2, category: travel }
+```
+
+### 교통 (Transport)
+
+```yaml
+- { id: en_t_030, display: subway, meaning: 지하철, level: 1, category: travel }
+- { id: en_t_031, display: taxi, meaning: 택시, level: 1, category: travel }
+- { id: en_t_032, display: station, meaning: 역, level: 1, category: travel }
+- { id: en_t_033, display: platform, meaning: 승강장, level: 2, category: travel }
+- { id: en_t_034, display: transfer, meaning: 환승, level: 2, category: travel }
+- { id: en_t_035, display: ride, meaning: 타다, level: 1, category: travel }
+- { id: en_t_036, display: walk, meaning: 걷다, level: 1, category: travel }
+- { id: en_t_037, display: bus, meaning: 버스, level: 1, category: travel }
+```
+
+### 관광 (Sightseeing)
+
+```yaml
+- { id: en_t_040, display: museum, meaning: 박물관, level: 1, category: travel }
+- { id: en_t_041, display: beach, meaning: 해변, level: 1, category: travel }
+- { id: en_t_042, display: mountain, meaning: 산, level: 1, category: travel }
+- { id: en_t_043, display: park, meaning: 공원, level: 1, category: travel }
+- { id: en_t_044, display: visit, meaning: 방문하다, level: 1, category: travel }
+- { id: en_t_045, display: explore, meaning: 탐험하다, level: 2, category: travel }
+- { id: en_t_046, display: map, meaning: 지도, level: 1, category: travel }
+- { id: en_t_047, display: guide, meaning: 가이드, level: 2, category: travel }
+- { id: en_t_048, display: tour, meaning: 투어, level: 2, category: travel }
+- { id: en_t_049, display: view, meaning: 전망, level: 2, category: travel }
+```
+
+### 여행 문장 (Travel Phrases) — Level 3
+
+```yaml
+- id: en_t_s_001
+  display: Where is the hotel?
+  meaning: 호텔은 어디에 있나요?
+  level: 3
+  category: travel
+  source: [[travel]]
+
+- id: en_t_s_002
+  display: How much does it cost?
+  meaning: 얼마예요?
+  level: 3
+  category: travel
+  source: [[travel]]
+
+- id: en_t_s_003
+  display: I would like to check in.
+  meaning: 체크인하고 싶습니다.
+  level: 3
+  category: travel
+  source: [[travel]]
+
+- id: en_t_s_004
+  display: Could you help me?
+  meaning: 도와주실 수 있나요?
+  level: 3
+  category: travel
+  source: [[travel]]
+
+- id: en_t_s_005
+  display: Where is the bathroom?
+  meaning: 화장실 어디예요?
+  level: 3
+  category: travel
+  source: [[travel]]
+
+- id: en_t_s_006
+  display: I would like to order.
+  meaning: 주문하겠습니다.
+  level: 3
+  category: travel
+  source: [[travel]]
+```
+
 ## 카테고리 목록
 
 - greeting (인사)
@@ -102,6 +217,7 @@
 - adjective (형용사)
 - feeling (감정)
 - question (질문)
+- travel (여행)
 
 ## 라이선스
 

@@ -178,6 +178,14 @@
         "path": "wiki/Korean/vocabulary/set.md"
       },
       {
+        "name": "travel",
+        "filename": "travel.md",
+        "title": "여행 (Travel)",
+        "size_kb": 3.2,
+        "modified": "2026-06-18T18:45:13.709884",
+        "path": "wiki/Korean/vocabulary/travel.md"
+      },
+      {
         "name": "yeol",
         "filename": "yeol.md",
         "title": "열",
@@ -198,19 +206,28 @@
       "size_kb": 3.2,
       "modified": "2026-06-18T01:47:11.394837",
       "path": "raw/Korean/topik1-starter.md"
+    },
+    {
+      "name": "travel-basics-kr",
+      "filename": "travel-basics-kr.md",
+      "title": "여행 기초 어휘 - Source Material",
+      "size_kb": 1.3,
+      "modified": "2026-06-18T18:45:44.466318",
+      "path": "raw/Korean/travel-basics-kr.md"
     }
   ],
-  "raw_sources_count": 1,
+  "raw_sources_count": 2,
   "corpus": {
-    "total": 1,
+    "total": 86,
     "by_level": {
-      "1": 1
+      "1": 86
     },
     "by_category": {
+      "travel": 85,
       "greeting": 1
     },
     "by_type": {
-      "words": 1,
+      "words": 86,
       "sentences": 0,
       "chars": 0
     },
@@ -224,12 +241,85 @@
         "category": "greeting",
         "source": "[[annyeonghaseyo]]",
         "note": ""
+      },
+      {
+        "id": "kr_t_001",
+        "display": "공항",
+        "jamo": "ㄱㅗㅎㅏㅇ",
+        "meaning": "공항",
+        "level": 1,
+        "category": "travel"
+      },
+      {
+        "id": "kr_t_002",
+        "display": "여권",
+        "jamo": "ㅇㅕㄱㅝㄴ",
+        "meaning": "여권",
+        "level": 1,
+        "category": "travel"
+      },
+      {
+        "id": "kr_t_003",
+        "display": "비행기",
+        "jamo": "ㅂㅣㅎㅐㅇㄱㅣ",
+        "meaning": "비행기",
+        "level": 1,
+        "category": "travel"
+      },
+      {
+        "id": "kr_t_004",
+        "display": "짐",
+        "jamo": "ㅈㅣㅁ",
+        "meaning": "짐",
+        "level": 1,
+        "category": "travel"
+      },
+      {
+        "id": "kr_t_005",
+        "display": "가방",
+        "jamo": "ㄱㅏㅂㅏㅇ",
+        "meaning": "가방",
+        "level": 1,
+        "category": "travel"
+      },
+      {
+        "id": "kr_t_006",
+        "display": "표",
+        "jamo": "ㅍㅛ",
+        "meaning": "표",
+        "level": 1,
+        "category": "travel"
+      },
+      {
+        "id": "kr_t_007",
+        "display": "탑승구",
+        "jamo": "ㅌㅏㅂㅅㅡㅇㄱㅜ",
+        "meaning": "탑승구",
+        "level": 1,
+        "category": "travel"
+      },
+      {
+        "id": "kr_t_008",
+        "display": "도착",
+        "jamo": "ㄷㅗㅊㅏㄱ",
+        "meaning": "도착",
+        "level": 1,
+        "category": "travel"
+      },
+      {
+        "id": "kr_t_009",
+        "display": "출발",
+        "jamo": "ㅊㅜㅂㅏㄹ",
+        "meaning": "출발",
+        "level": 1,
+        "category": "travel"
       }
     ],
     "sentences_sample": [],
     "chars_sample": [],
     "categories": [
-      "greeting"
+      "greeting",
+      "travel"
     ],
     "levels": [
       1
@@ -308,6 +398,24 @@
       }
     },
     {
+      "id": "kr_t_1",
+      "tier": 2,
+      "stage_num": 1,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "여행 기초",
+      "description": "여행 필수 단어 (공항·호텔·식당)",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
       "id": "kr_2_2",
       "tier": 2,
       "stage_num": 2,
@@ -324,6 +432,42 @@
         ],
         "minLevel": 1,
         "maxLevel": 2
+      }
+    },
+    {
+      "id": "kr_t_2",
+      "tier": 2,
+      "stage_num": 2,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "공항·역에서",
+      "description": "공항·역에서 쓰는 어휘",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "id": "kr_t_3",
+      "tier": 2,
+      "stage_num": 3,
+      "tier_label": "Tier 2 · 단어 확장",
+      "name": "여행 회화",
+      "description": "여행 회화 표현 (길묻기·주문·체크인)",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "_ignored",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 1
       }
     },
     {
@@ -391,14 +535,14 @@
     }
   ],
   "coverage": {
-    "total_stages": 9,
-    "total_corpus": 1,
-    "wiki_materials": 22,
+    "total_stages": 12,
+    "total_corpus": 86,
+    "wiki_materials": 23,
     "sources": 0,
-    "raw_sources": 1,
+    "raw_sources": 2,
     "stages_by_tier": {
       "1": 3,
-      "2": 2,
+      "2": 5,
       "3": 2,
       "4": 1,
       "5": 1
@@ -461,6 +605,20 @@
         "corpus_type": "words"
       },
       {
+        "stage_id": "kr_t_1",
+        "stage_name": "여행 기초",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
         "stage_id": "kr_2_2",
         "stage_name": "시간·장소",
         "tier": 2,
@@ -474,6 +632,34 @@
         ],
         "word_count": 12,
         "corpus_type": "words"
+      },
+      {
+        "stage_id": "kr_t_2",
+        "stage_name": "공항·역에서",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "kr_t_3",
+        "stage_name": "여행 회화",
+        "tier": 2,
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          1
+        ],
+        "word_count": 8,
+        "corpus_type": "_ignored"
       },
       {
         "stage_id": "kr_3_1",
@@ -579,7 +765,7 @@
         ]
       }
     ],
-    "coverage_percent": 1.2
+    "coverage_percent": 76.1
   },
-  "generated_at": "2026-06-18T18:32:00.518001"
+  "generated_at": "2026-06-18T18:49:18.421894"
 }

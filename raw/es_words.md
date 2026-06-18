@@ -93,6 +93,116 @@
 - { id: ess_005, display: Muchísimas gracias., meaning: "정말정말 고마워요.", level: 1, category: greeting, accentMode: any }
 ```
 
+## Viajes (Travel) — Level 1~2
+
+> **출처**: [[viajes-esenciales]], [[viajes]] (CEFR A1-A2)
+
+### Aeropuerto y vuelo
+
+```yaml
+- { id: es_t_001, display: pasaporte, meaning: 여권, level: 1, category: travel }
+- { id: es_t_002, display: aeropuerto, meaning: 공항, level: 1, category: travel }
+- { id: es_t_003, display: maleta, meaning: 여행가방, level: 1, category: travel }
+- { id: es_t_004, display: vuelo, meaning: 항공편, level: 1, category: travel }
+- { id: es_t_005, display: embarque, meaning: 탑승, level: 2, category: travel }
+- { id: es_t_006, display: terminal, meaning: 터미널, level: 2, category: travel }
+- { id: es_t_007, display: reservar, meaning: 예약하다, level: 1, category: travel }
+- { id: es_t_008, display: llegada, meaning: 도착, level: 2, category: travel }
+```
+
+### Hotel
+
+```yaml
+- { id: es_t_010, display: hotel, meaning: 호텔, level: 1, category: travel }
+- { id: es_t_011, display: habitación, meaning: 방, level: 1, category: travel }
+- { id: es_t_012, display: recepción, meaning: 프론트, level: 2, category: travel }
+- { id: es_t_013, display: ascensor, meaning: 엘리베이터, level: 2, category: travel }
+- { id: es_t_014, display: llave, meaning: 열쇠, level: 2, category: travel }
+- { id: es_t_015, display: suite, meaning: 스위트룸, level: 2, category: travel }
+```
+
+### Restaurante
+
+```yaml
+- { id: es_t_020, display: menú, meaning: 메뉴, level: 1, category: travel }
+- { id: es_t_021, display: camarero, meaning: 웨이터, level: 2, category: travel }
+- { id: es_t_022, display: cuenta, meaning: 계산서, level: 2, category: travel }
+- { id: es_t_023, display: propina, meaning: 팁, level: 2, category: travel }
+- { id: es_t_024, display: pedir, meaning: 주문하다, level: 1, category: travel }
+- { id: es_t_025, display: postre, meaning: 디저트, level: 2, category: travel }
+```
+
+### Transporte
+
+```yaml
+- { id: es_t_030, display: metro, meaning: 지하철, level: 1, category: travel }
+- { id: es_t_031, display: autobús, meaning: 버스, level: 1, category: travel }
+- { id: es_t_032, display: taxi, meaning: 택시, level: 1, category: travel }
+- { id: es_t_033, display: tren, meaning: 기차, level: 1, category: travel }
+- { id: es_t_034, display: estación, meaning: 역, level: 1, category: travel }
+- { id: es_t_035, display: parada, meaning: 정류장, level: 2, category: travel }
+- { id: es_t_036, display: andén, meaning: 승강장, level: 2, category: travel }
+```
+
+### Turismo
+
+```yaml
+- { id: es_t_040, display: museo, meaning: 박물관, level: 1, category: travel }
+- { id: es_t_041, display: playa, meaning: 해변, level: 1, category: travel }
+- { id: es_t_042, display: montaña, meaning: 산, level: 1, category: travel }
+- { id: es_t_043, display: catedral, meaning: 대성당, level: 2, category: travel }
+- { id: es_t_044, display: monumento, meaning: 기념물, level: 2, category: travel }
+- { id: es_t_045, display: mapa, meaning: 지도, level: 1, category: travel }
+- { id: es_t_046, display: guía, meaning: 가이드, level: 2, category: travel }
+- { id: es_t_047, display: visitar, meaning: 방문하다, level: 1, category: travel }
+```
+
+### Frases de viaje (Travel Phrases) — Level 2
+
+```yaml
+- id: es_t_s_001
+  display: ¿Dónde está el hotel?
+  meaning: 호텔은 어디에 있나요?
+  level: 2
+  category: travel
+  source: [[viajes]]
+
+- id: es_t_s_002
+  display: ¿Cuánto cuesta?
+  meaning: 얼마예요?
+  level: 2
+  category: travel
+  source: [[viajes]]
+
+- id: es_t_s_003
+  display: Quisiera reservar una habitación.
+  meaning: 객실을 예약하고 싶습니다.
+  level: 2
+  category: travel
+  source: [[viajes]]
+
+- id: es_t_s_004
+  display: ¿Puede ayudarme?
+  meaning: 도와주실 수 있나요?
+  level: 2
+  category: travel
+  source: [[viajes]]
+
+- id: es_t_s_005
+  display: La cuenta, por favor.
+  meaning: 계산서 부탁합니다.
+  level: 2
+  category: travel
+  source: [[viajes]]
+
+- id: es_t_s_006
+  display: ¿Cómo llego al museo?
+  meaning: 박물관에 어떻게 가나요?
+  level: 2
+  category: travel
+  source: [[viajes]]
+```
+
 ## 액센트 단어 일람 (참고)
 
 자주 사용되는 액센트 단어:
@@ -112,6 +222,8 @@
 | francés (프랑스어) | frances |
 | alemán (독일어) | aleman |
 | japonés (일본어) | japones |
+| Cómo (어떻게) | Como |
+| Cuánto (얼마) | Cuanto |
 
 ## 카테고리
 
@@ -128,6 +240,8 @@
 - person (사람)
 - adjective (형용사)
 - question (질문)
+- restaurant (식당)
+- travel (여행)
 
 ## 확장 계획 (Phase 6)
 
