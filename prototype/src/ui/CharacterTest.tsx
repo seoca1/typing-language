@@ -15,7 +15,8 @@ import {
 import { GraphicsConfig } from '../config/graphics.js';
 import type { PoseName } from '../character/CharacterData.js';
 import { setCharacter } from '../character/CharacterSelector.js';
-import { CHARACTER_INFO } from '../config/characterImages.js';
+import { CHARACTER_INFO, CHARACTER_IMAGES } from '../config/characterImages.js';
+import { ImageLoader } from '../sprites/ImageLoader.js';
 
 interface CharacterTestProps {
   onBack: () => void;
@@ -31,6 +32,8 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
   const [useSprites, setUseSprites] = useState(true); // Start with sprites enabled
   const [currentPose, setCurrentPose] = useState<PoseName>('idle');
   const [showKeyboard, setShowKeyboard] = useState(false); // Hide keyboard by default
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadingError, setLoadingError] = useState<string | null>(null);
   
   // Emily character info
   const emilyInfo = CHARACTER_INFO['en-emily'];
@@ -38,6 +41,28 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
   useEffect(() => {
     // Set Emily as the character for testing
     setCharacter('en-emily');
+    
+    // Preload Emily images immediately
+    const emilyImages = CHARACTER_IMAGES['en-emily'];
+    if (emilyImages) {
+      const imagesToLoad = Object.values(emilyImages);
+      console.log('[CharacterTest] Preloading Emily images:', imagesToLoad.length);
+      console.log('[CharacterTest] Image paths:', imagesToLoad.map(img => img.src));
+      
+      ImageLoader.preload(imagesToLoad)
+        .then(() => {
+          console.log('[CharacterTest] Emily images loaded successfully!');
+          setImagesLoaded(true);
+          setLoadingError(null);
+        })
+        .catch(err => {
+          console.error('[CharacterTest] Failed to load Emily images:', err);
+          setLoadingError(err.message || 'Failed to load images');
+          setImagesLoaded(false);
+        });
+    } else {
+      setLoadingError('Emily character images not found in config');
+    }
     
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -117,7 +142,22 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
     // Current pose info
     ctx.fillStyle = '#00ff88';
     ctx.font = 'bold 18px -apple-system, sans-serif';
-    ctx.fillText(`현재 포즈: ${getPoseLabel(currentPose)}`, width / 2, height - 60);
+    ctx.fillText(`현재 포즈: ${getPoseLabel(currentPose)}`, width / 2, height - 80);
+
+    // Loading status
+    if (loadingError) {
+      ctx.fillStyle = '#ff4444';
+      ctx.font = '14px -apple-system, sans-serif';
+      ctx.fillText(`⚠️ 로딩 오류: ${loadingError}`, width / 2, height - 60);
+    } else if (!imagesLoaded) {
+      ctx.fillStyle = '#ffaa00';
+      ctx.font = '14px -apple-system, sans-serif';
+      ctx.fillText('🔄 이미지 로딩 중...', width / 2, height - 60);
+    } else {
+      ctx.fillStyle = '#00ff88';
+      ctx.font = '14px -apple-system, sans-serif';
+      ctx.fillText('✅ 이미지 로딩 완료!', width / 2, height - 60);
+    }
 
     // Image status
     ctx.fillStyle = '#ffaa00';
@@ -127,7 +167,7 @@ export function CharacterTest({ onBack }: CharacterTestProps) {
     // Sprite mode info
     ctx.fillStyle = useSprites ? '#00ff88' : '#ff6b9d';
     ctx.fillText(
-      `렌더링: ${useSprites ? 'Emily AI 이미지 (7/7 완성!)' : '프리미티브 (개발용)'}`,
+      `렌더링: ${useSprites ? 'Emily AI 이미지 (7/7)' : '프리미티브 (개발용)'}`,
       width / 2,
       height - 15
     );
