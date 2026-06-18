@@ -14,9 +14,15 @@
  * Single input path:
  * - Native keydown → onChar/onBackspace/onEnter prop
  * - No window-level listener (prevents duplicate handling)
+ *
+ * Imperative handle (via forwardRef):
+ * - focus(): refocus the hidden input. Required after clicks on other
+ *   elements (e.g., the on-screen canvas keyboard) that may steal focus.
+ *   Without this, physical keyboard input stops working until the page
+ *   is clicked elsewhere and back.
  */
 
-import { useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 import type { Language } from '../types.js';
 
 interface OSKeyboardInputProps {
@@ -32,6 +38,11 @@ interface OSKeyboardInputProps {
   onEnter: () => void;
   /** Called when user presses Escape */
   onEscape?: () => void;
+}
+
+export interface OSKeyboardInputHandle {
+  /** Refocus the hidden input. Use after clicks on other elements. */
+  focus: () => void;
 }
 
 /**
@@ -50,16 +61,26 @@ function getLangCode(_lang: Language): string {
   return 'en';
 }
 
-export function OSKeyboardInput({
+export const OSKeyboardInput = forwardRef<OSKeyboardInputHandle, OSKeyboardInputProps>(function OSKeyboardInput({
   enabled,
   language,
   onChar,
   onBackspace,
   onEnter,
   onEscape,
-}: OSKeyboardInputProps) {
+}, ref) {
   const inputRef = useRef<HTMLInputElement>(null);
   const valueResetTimeoutRef = useRef<number | null>(null);
+
+  // Expose imperative focus() so parents can refocus after a click on
+  // another element (e.g., the canvas-based virtual keyboard) steals focus
+  // away from the hidden input. Without this, physical keyboard input would
+  // stop working after the user clicks a special character on the canvas.
+  useImperativeHandle(ref, () => ({
+    focus: () => {
+      inputRef.current?.focus();
+    },
+  }), []);
 
   // Focus / blur based on enabled state
   useEffect(() => {
@@ -190,4 +211,4 @@ export function OSKeyboardInput({
       }}
     />
   );
-}
+});

@@ -129,6 +129,7 @@ export function App() {
   const effectsRef = useRef<EffectsState>(createEffectsState());
   const lastTickRef = useRef<number>(0);
   const keyboardRef = useRef<Keyboard | null>(null);
+  const osKeyboardRef = useRef<{ focus: () => void } | null>(null);
   const characterRef = useRef<CharacterState>(createInitialCharacterState());
 
   // 진행도 자동 저장
@@ -565,6 +566,12 @@ export function App() {
    * Handle mouse click on the canvas-based virtual keyboard.
    * The click coords are canvas-relative (1024x880). We hit-test against the
    * keyboard's key rectangles and route to the same OSKeyboardInput handlers.
+   *
+   * Important: After handling the click, refocus the hidden OSKeyboardInput.
+   * The click steals focus from the hidden <input>, which would otherwise
+   * stop receiving physical keyboard events. The user must be able to mix
+   * mouse clicks (e.g., for special chars) and physical keyboard input
+   * seamlessly.
    */
   const handleCanvasClick = (x: number, y: number) => {
     if (!enabled) return;
@@ -580,28 +587,33 @@ export function App() {
     switch (label) {
       case 'Backspace':
         handleOSBackspace();
-        return;
+        break;
       case 'Enter':
         handleOSEnter();
-        return;
+        break;
       case 'Space':
         handleOSChar(' ');
-        return;
+        break;
       case 'Tab':
         handleOSChar('\t');
-        return;
+        break;
       case 'Shift':
       case 'Caps':
       case 'Ctrl':
       case 'Cmd':
       case 'Alt':
         // Modifier keys — no character produced
-        return;
+        break;
       default:
         // Regular character key (a-z, digits, ES accents, KR jamo, etc.)
         handleOSChar(label);
-        return;
+        break;
     }
+
+    // Refocus the hidden input so subsequent physical keyboard events
+    // (keydown) keep firing on it. Without this, the user's next
+    // physical-key press would go nowhere.
+    osKeyboardRef.current?.focus();
   };
 
   return (
@@ -617,6 +629,7 @@ export function App() {
         onBackToMenu={handleOSEscape}
       />
       <OSKeyboardInput
+        ref={osKeyboardRef}
         enabled={state.phase === 'stage'}
         language={stage.language}
         onChar={handleOSChar}
