@@ -26,6 +26,7 @@ import {
   isSentence,
 } from '../data/translations.js';
 import { getHiraganaReading } from '../utils/japaneseReading.js';
+import { calculateTypingProgress, calculateKanjiAlpha } from '../utils/typingProgress.js';
 
 export interface RenderState {
   currentEnemy: Enemy | null;
@@ -228,6 +229,19 @@ export class Renderer {
       if (hiragana && hiragana !== enemy.target.text && lines.length === 1) {
         // Single-line target only (multi-line would need wrapping logic)
         const yLine = startY + lineHeight / 2;
+
+        // Typing progress: how much of the romaji has been typed?
+        // Used to dim the kanji as the player types the hiragana.
+        // 0% typed → kanji full opacity (1.0)
+        // 100% typed → kanji dimmed (0.3)
+        // Linear interpolation in between.
+        const totalRomaji = enemy.target.acceptedInputs[0]?.length ?? 0;
+        const progress = calculateTypingProgress(
+          state.buffer.length,
+          totalRomaji,
+        );
+        const kanjiAlpha = calculateKanjiAlpha(progress);
+
         this.ctx.save();
         this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
         this.ctx.textAlign = 'left';
@@ -242,17 +256,19 @@ export class Renderer {
         // Position centered as a group
         let x = cx - totalWidth / 2;
 
-        // Draw hiragana (dim, what the player is typing toward)
-        this.ctx.fillStyle = 'rgba(180, 210, 250, 0.7)';
-        this.ctx.shadowColor = 'transparent';
-        this.ctx.shadowBlur = 0;
+        // Draw hiragana (full opacity — this is the typing target)
+        this.ctx.fillStyle = 'rgba(180, 210, 250, 0.85)';
+        this.ctx.shadowColor = 'rgba(180, 210, 250, 0.6)';
+        this.ctx.shadowBlur = 12;
         this.ctx.fillText(hiragana, x, yLine);
         x += hiraWidth + gap;
 
-        // Draw kanji (bright, the "answer" / target meaning)
+        // Draw kanji with progress-based dimming
+        // (Fades as the player types — the "answer" becomes "achieved")
+        this.ctx.globalAlpha = kanjiAlpha;
         this.ctx.fillStyle = '#ffffff';
         this.ctx.shadowColor = '#e94560';
-        this.ctx.shadowBlur = 20 * glowIntensity;
+        this.ctx.shadowBlur = 20 * glowIntensity * kanjiAlpha;
         this.ctx.fillText(enemy.target.text, x, yLine);
         this.ctx.restore();
       }

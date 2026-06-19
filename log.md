@@ -1380,4 +1380,31 @@ src/ui/ResultScreen.tsx (integrated)
 - 더 정교한 balanced algorithm (학습 진도 기반)
 - 다국어 폰트 stack 최적화
 
+## 2026-06-20
+
+### [2026-06-20] chars | JP + KR 캐릭터 실 이미지 적용
+- JP: sakura/yuki/kaito × 7 poses = 21 PNGs (JPEG→PNG 변환, 흰 배경 투명화)
+- KR: hana/jiwoo × 7 poses + minho × 2 poses = 16 PNGs
+- `scripts/convert_to_png.py` — 임계값 240으로 흰 픽셀→투명 (687×1024 RGBA)
+- `src/config/characterImages.ts` — JP/KR 경로 새 명명규칙(`1-idle.png` ~ `7-pose.png`)으로 갱신
+- minho는 idle/wave만 있어서 다른 포즈는 idle로 자동 fallback (CharacterRenderer.ts:1226)
+- 최종 캐릭터 자산: EN 21 + ES 21 + JP 21 + KR 16 = **79 PNGs** (12 캐릭터, placeholder 없음)
+
+### [2026-06-20] docs | 프로젝트 점검 리포트 (AUDIT.md)
+- 15,012 LOC source / 3,693 LOC tests / 61 source files / 14 test files
+- 313 tests passed (1 skipped)
+- 86 commits, 빌드 462.52 KB / gzip 137.36 KB
+- 콘텐츠 인벤토리: 4언어 × 514 어휘/문장, 60 스테이지, 11 일일 레슨
+- 식별된 미완료: JP/KR 캐릭터(이제 완료), 후리가나 토글, 다중 줄 타깃, 일일 레슨 확장
+
+#### 검증 결과
+- **빌드**: 462.52 KB / gzip 137.36 KB
+- **TypeScript**: ✅ 통과
+- **단위 테스트**: 313 passed (이전 222 + 91 신규: typingProgress 16, 일일 레슨 21 등)
+
+#### 비고
+- 사용자가 이미지를 `Projects/Projects/Game/typing_language/...` (이중 Projects)에 두어 단일 Projects 활성 repo로 복사
+- 두 repo는 같은 원격(github.com/seoca1/typing-language)을 가리키지만 별도 working copy
+- 단일 Projects 경로가 활성 repo (AUDIT.md, 86+ 커밋)
+
 
