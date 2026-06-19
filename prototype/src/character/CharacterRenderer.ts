@@ -1211,7 +1211,8 @@ function renderCharacterImage(
   now: number,
 ): void {
   // 현재 선택된 캐릭터 사용 (수동 선택 우선)
-  // If no manual selection, use language default
+  // If no manual selection, fallback to language default
+  // (Random selection is handled at stage entry via selectCharacterForStage)
   const characterId = getCurrentCharacter() || getCharacterForLanguage(state.language);
   const characterSet = CHARACTER_IMAGES[characterId];
   

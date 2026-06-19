@@ -1541,3 +1541,50 @@ Phase B-4: Weak Words + Mastery Bar
 - 더 많은 source 페이지 추가 (30/lang 목표)
 - 기존 vocab 페이지 강화 (현재 13% 친화 필드 → 50%+ 목표)
 - wikilink 해결을 위한 source 페이지들 명시적 작성
+
+### [2026-06-20] chars | Phase E — Random character selection + 12-char test coverage
+
+#### CharacterSelector 확장 (Phase E)
+
+**문제**: 사용자가 캐릭터를 선택하지 않으면 항상 언어별 default 1명만 나옴 (4언어 × 1 = 4 캐릭터)
+
+**해결**:
+- `selectCharacterForStage(language, stageId)` — 신규 함수
+  - 우선순위: 사용자 선택 > stage ID 기반 random > 언어 default
+  - FNV-1a 해시로 deterministic random — 같은 stage는 항상 같은 캐릭터
+  - 사용자가 선택하지 않았으면 언어별 3명 중 random으로 자동 선택
+- `userHasSelected` flag — 사용자 선택 영구 유지
+- `clearUserSelection()` — 선택 해제 (다음 스테이지부터 random)
+- `resetCharacterSelector()` — 테스트용 전체 리셋
+- `selectCharacterForLanguage` (legacy) — 호환성 유지, 항상 default 반환
+
+#### CharacterRenderer / App.tsx 통합
+
+- `App.tsx`의 `actuallyStartStage`에서 `selectCharacterForStage(stage.language, stage.id)` 호출
+- CharacterRenderer는 변경 없음 (기존 fallback 경로가 작동)
+
+#### 테스트 12명 × 7 포즈 = 84개 PNG 검증
+
+신규 `tests/character/character.test.ts`:
+- 138개 신규 테스트
+  - 12 캐릭터 모두 CHARACTER_IMAGES에 정의됨
+  - 12 × 7 = 84 PNG 파일 존재 + PNG signature 검증 (JPEG 가짜 방지)
+  - LANGUAGE_CHARACTERS 매핑 정확성
+  - LANGUAGE_DEFAULT_CHARACTERS가 각 언어 리스트에 포함
+  - CHARACTER_INFO 메타데이터 완성
+  - Random selection deterministic
+  - Random selection 4언어 12명 모두 reachable (50 stages × 4 langs)
+  - User selection 우선 (override)
+  - clearUserSelection 동작
+
+#### 검증 결과
+- **488 tests passed** (1 skipped) — 이전 350 + 138 신규
+- 빌드 525.07 KB / gzip 165.40 KB (변동 미미)
+- 모든 12 캐릭터 × 7 포즈 PNG = 84/84 ✅
+
+#### 동작 시나리오
+1. 사용자 미선택 + EN stage "en_1_1" → EN 3명(emily/oliver/sophia) 중 random
+2. 사용자 "en-oliver" 선택 → 모든 stage에서 oliver
+3. 같은 stage 반복 → 같은 캐릭터 (deterministic)
+4. 다른 stage → 다른 캐릭터 가능성
+5. 언어 변경 → 그 언어의 3명 중 random

@@ -30,6 +30,7 @@ import { Tutorial } from './ui/Tutorial.js';
 import { LearnScreen } from './ui/LearnScreen.js';
 import { CharacterTest } from './ui/CharacterTest.js';
 import { CharacterSelect } from './ui/CharacterSelect.js';
+import { selectCharacterForStage } from './character/CharacterSelector.js';
 import { LanguageSelection } from './ui/LanguageSelection.js';
 import {
   createEffectsState,
@@ -338,6 +339,9 @@ export function App() {
     effectsRef.current = createEffectsState();
     resetForNewStage(characterRef.current);
     applyLanguageChange(characterRef.current, stage.language);
+    // Phase E: pick character — user-selected takes priority, otherwise
+    // deterministic random per language (3 characters per language).
+    selectCharacterForStage(stage.language, stage.id);
     dispatch({ type: 'START_STAGE', stage, enemy: firstEnemy });
   };
 
