@@ -25,6 +25,7 @@ import {
   getSentenceEnglishTranslation,
   isSentence,
 } from '../data/translations.js';
+import { getRomajiReading, formatReading } from '../utils/japaneseReading.js';
 
 export interface RenderState {
   currentEnemy: Enemy | null;
@@ -214,6 +215,24 @@ export class Renderer {
       this.ctx.font = '20px -apple-system, sans-serif';
       this.ctx.textAlign = 'center';
       this.ctx.fillText(state.romajiHint, cx, cy + 40);
+    }
+
+    // Japanese reading aid: show romaji in parentheses below the target
+    // text so beginners can see what to type. Only for JP stage.
+    // Display format: "日本語" above, "(romaji)" below in dim italic.
+    if (state.language === 'jp') {
+      const romaji = getRomajiReading(enemy.target);
+      const formatted = formatReading(romaji);
+      if (formatted) {
+        this.ctx.save();
+        this.ctx.fillStyle = 'rgba(150, 180, 220, 0.55)';
+        this.ctx.font = 'italic 17px -apple-system, sans-serif';
+        this.ctx.textAlign = 'center';
+        // Position: just below the bottom of the last text line
+        const readingY = startY + lines.length * lineHeight + 12;
+        this.ctx.fillText(formatted, cx, readingY);
+        this.ctx.restore();
+      }
     }
 
     const barWidth = 460;
