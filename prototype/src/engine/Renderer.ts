@@ -25,7 +25,7 @@ import {
   getSentenceEnglishTranslation,
   isSentence,
 } from '../data/translations.js';
-import { getHiraganaReading, formatReading } from '../utils/japaneseReading.js';
+import { getHiraganaReading } from '../utils/japaneseReading.js';
 
 export interface RenderState {
   currentEnemy: Enemy | null;
@@ -217,21 +217,43 @@ export class Renderer {
       this.ctx.fillText(state.romajiHint, cx, cy + 40);
     }
 
-    // Japanese reading aid: show hiragana (converted from romaji) in
-    // parentheses below the target text so beginners can see what to
-    // type. Only for JP stage. Display format:
-    //   "日本語" above, "(にほんご)" below in dim italic.
+    // Japanese reading aid: show hiragana + kanji side-by-side.
+    // The player types romaji (Latin letters) which converts to hiragana,
+    // and the kanji is the "answer" / target meaning.
+    // Layout: "がっこう学校" (hiragana left dim, kanji right bright).
+    // Only when the target contains kanji (i.e., the reading differs
+    // from the displayed text).
     if (state.language === 'jp') {
       const hiragana = getHiraganaReading(enemy.target);
-      const formatted = formatReading(hiragana);
-      if (formatted) {
+      if (hiragana && hiragana !== enemy.target.text && lines.length === 1) {
+        // Single-line target only (multi-line would need wrapping logic)
+        const yLine = startY + lineHeight / 2;
         this.ctx.save();
-        this.ctx.fillStyle = 'rgba(150, 180, 220, 0.55)';
-        this.ctx.font = 'italic 17px -apple-system, sans-serif';
-        this.ctx.textAlign = 'center';
-        // Position: just below the bottom of the last text line
-        const readingY = startY + lines.length * lineHeight + 12;
-        this.ctx.fillText(formatted, cx, readingY);
+        this.ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
+        this.ctx.textAlign = 'left';
+        this.ctx.textBaseline = 'middle';
+
+        // Measure widths
+        const hiraWidth = this.ctx.measureText(hiragana).width;
+        const kanjiWidth = this.ctx.measureText(enemy.target.text).width;
+        const gap = 12;
+        const totalWidth = hiraWidth + gap + kanjiWidth;
+
+        // Position centered as a group
+        let x = cx - totalWidth / 2;
+
+        // Draw hiragana (dim, what the player is typing toward)
+        this.ctx.fillStyle = 'rgba(180, 210, 250, 0.7)';
+        this.ctx.shadowColor = 'transparent';
+        this.ctx.shadowBlur = 0;
+        this.ctx.fillText(hiragana, x, yLine);
+        x += hiraWidth + gap;
+
+        // Draw kanji (bright, the "answer" / target meaning)
+        this.ctx.fillStyle = '#ffffff';
+        this.ctx.shadowColor = '#e94560';
+        this.ctx.shadowBlur = 20 * glowIntensity;
+        this.ctx.fillText(enemy.target.text, x, yLine);
         this.ctx.restore();
       }
     }
