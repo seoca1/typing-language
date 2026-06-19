@@ -1449,3 +1449,41 @@ src/ui/ResultScreen.tsx (integrated)
 - Phase B-3: 인게임 hover 툴팁
 - Phase B-4: Weak Words + Mastery Bar
 - Phase C: build/validate-daily-lessons.py 강화 (신규 필드 검증)
+
+### [2026-06-20] ui | Phase B complete — 게임 UI 학습자료 강화
+
+Phase B-1: Daily Lesson 3-티어 (Quick/Standard/Deep) + wikilink 클릭 + TTS 통합
+- `DailyLessonModal.tsx` — 3-티어 탭 (🟢 1분, 🟡 5분, 🔴 10분), wikilink resolver + 서브모달, TTS hooks
+- `filterMarkdownByTier` — Quick: 1섹션, Standard: 4섹션, Deep: 전체
+- `getQuickVocabSummary` — Definition + 2 examples만 추출
+
+Phase B-2: Learn 화면 (스테이지 시작 전 vocab 미리보기)
+- `LearnScreen.tsx` — 30개 단어까지 미리보기, 핵심/전체 필터, 단어 클릭 시 모달 + TTS
+- `App.tsx` — `pendingStage` state로 stage 진행 흐름 분기 (menu → learn → stage)
+- Enter 키로 바로 시작, Esc로 뒤로가기
+
+Phase B-3: 인게임 hover 툴팁
+- `EnemyTooltip.tsx` — 적 위에 마우스 → 뜻, 입력, 발음, TTS 버튼, 카테고리/난이도 메타
+- `StageScreen.tsx` — 캔버스 mousemove 핸들러, 적 hit-region 자동 감지 (center y=290 ± 100px)
+- 200ms debounce로 마우스-툴팁 간 자연스러운 전환
+
+Phase B-4: Weak Words + Mastery Bar
+- `wordMastery.ts` — localStorage 기반 단어별 attempt/correct/mistake 추적
+  - `getWeakWords(limit)` — mistake count 내림차순
+  - `getOverallMastery()` — 전체 숙련도 % (0-100)
+  - `trackSessionMistake/clearSessionMistakes` — 세션별 약점 추적
+- `ResultScreen.tsx` — Mastery Bar (그라데이션 진행바) + 약한 단어 칩 (5개)
+- `App.tsx` — stage 시작 시 모든 enemy attempt 기록, KEY_INPUT 시 mistake 추적, ENEMY_DEFEATED 시 correct 추적
+
+#### 추가 구현 노트
+- Node 25 broken localStorage 우회: 테스트 파일에서 `// @vitest-environment jsdom` + 수동 polyfill
+- TypeScript: DailyWikiPage → WikiPage, Stage → StageConfig, LearnScreen enemies prop 패턴
+
+#### 검증 결과
+- 350 tests passed (1 skipped), +37 신규 (wordMastery 20, MarkdownView 17)
+- 빌드 495.24 KB / gzip 144.05 KB (Phase A: 466.80 KB / 138.52 KB)
+- 모든 기존 313 테스트 유지
+
+#### 다음 단계
+- Phase C: build/validate-daily-lessons.py 강화 (신규 필드 검증)
+- Phase D: 일일 레슨 11 → 30개로 확장

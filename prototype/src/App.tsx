@@ -12,6 +12,14 @@ import {
   getCurrentEnemy,
 } from './stage/StageSystem.js';
 import { evaluateAllMissions, type StageRunStats } from './mission/MissionSystem.js';
+import {
+  recordAttempt,
+  recordCorrect,
+  recordMistake,
+  trackSessionMistake,
+  clearSessionMistakes,
+} from './data/wordMastery.js';
+import type { Enemy } from './types.js';
 import { SAMPLE_STAGES } from './data/stages.js';
 import { getLanguage } from './language/index.js';
 import { Renderer } from './engine/Renderer.js';
@@ -19,6 +27,7 @@ import { Menu } from './ui/Menu.js';
 import { StageScreen } from './ui/StageScreen.js';
 import { ResultScreen } from './ui/ResultScreen.js';
 import { Tutorial } from './ui/Tutorial.js';
+import { LearnScreen } from './ui/LearnScreen.js';
 import { CharacterTest } from './ui/CharacterTest.js';
 import { CharacterSelect } from './ui/CharacterSelect.js';
 import { LanguageSelection } from './ui/LanguageSelection.js';
@@ -69,6 +78,12 @@ export function App() {
 
   // 선택된 언어 (LanguageSelection → Menu 흐름)
   const [selectedLanguage, setSelectedLanguage] = useState<Language | null>(null);
+
+  // Phase B-2: LearnScreen — vocab preview before stage starts
+  const [pendingStage, setPendingStage] = useState<{
+    stage: StageConfig;
+    enemies: Enemy[];
+  } | null>(null);
 
   // Log device info and preload sprites/images on mount
   useEffect(() => {
@@ -243,6 +258,27 @@ export function App() {
   }, [state.phase, state.currentStage, state.currentEnemy]);
 
   const handleStartStage = (stage: StageConfig) => {
+    // Phase B-2: Build preview enemies first, then show LearnScreen
+    const langConfig = getLanguage(stage.language);
+    let corpus: WordEntry[] = stage.corpusFilter.minLevel && stage.corpusFilter.minLevel >= 3
+      ? [...langConfig.corpus.sentences, ...langConfig.corpus.words]
+      : langConfig.corpus.words;
+    const previewStage = createStageState(stage, [...corpus]);
+    const previewEnemies = previewStage.enemies.slice(0, 30);
+    setPendingStage({ stage, enemies: previewEnemies });
+  };
+
+  const handleConfirmStartStage = () => {
+    if (!pendingStage) return;
+    actuallyStartStage(pendingStage.stage);
+    setPendingStage(null);
+  };
+
+  const handleCancelLearn = () => {
+    setPendingStage(null);
+  };
+
+  const actuallyStartStage = (stage: StageConfig) => {
     const langConfig = getLanguage(stage.language);
 
     // Build the candidate corpus for this stage.
@@ -294,6 +330,11 @@ export function App() {
       console.error(`[App] Stage '${stage.id}' has no enemies after filtering`);
       return;
     }
+    // Phase B-4: Track word attempts for mastery
+    clearSessionMistakes();
+    for (const e of stageState.enemies) {
+      recordAttempt(e.id);
+    }
     effectsRef.current = createEffectsState();
     resetForNewStage(characterRef.current);
     applyLanguageChange(characterRef.current, stage.language);
@@ -344,6 +385,18 @@ export function App() {
       <Tutorial
         onComplete={handleTutorialComplete}
         onStartTutorialStage={handleStartTutorialStage}
+      />
+    );
+  }
+
+  // Phase B-2: LearnScreen — vocab preview before stage starts
+  if (pendingStage) {
+    return (
+      <LearnScreen
+        stage={pendingStage.stage}
+        enemies={pendingStage.enemies}
+        onStart={handleConfirmStartStage}
+        onBack={handleCancelLearn}
       />
     );
   }
@@ -473,6 +526,11 @@ export function App() {
       const newCombo = stateRef.current.combo + 1;
       applyEnemyDefeated(characterRef.current, newCombo, isPerfect, performance.now());
 
+      // Phase B-4: Track word mastery
+      if (isPerfect) {
+        recordCorrect(enemy.id);
+      }
+
       const audio = getAudioManager();
       if (isPerfect) {
         audio.play('perfect');
@@ -555,6 +613,11 @@ export function App() {
       stage.language === 'jp' && handlerRef.current.getHint
         ? handlerRef.current.getHint()
         : undefined;
+    // Phase B-4: Track mistakes for current word
+    if (result.errors > 0 && state.currentEnemy) {
+      recordMistake(state.currentEnemy.id);
+      trackSessionMistake(state.currentEnemy.id);
+    }
     dispatch({ type: 'KEY_INPUT', result, romajiHint });
     const audio = getAudioManager();
     if (result.buffer.length > 0) {

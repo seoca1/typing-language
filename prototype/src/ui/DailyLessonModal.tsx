@@ -1,20 +1,17 @@
 /**
- * DailyLessonModal - Full-screen daily lesson viewer
+ * DailyLessonModal - Full-screen daily lesson viewer (3-tier)
  *
- * Displays the full daily lesson with:
- * - Source topic title
- * - Raw excerpt (original material)
- * - Vocabulary pages
- * - Expression pages
- * - Culture page (if present)
- * - Practice button (links to related game stage)
- * - Close button
+ * Displays the daily lesson with 3 selectable depth levels:
+ * - 🟢 Quick: 1 vocab summary + 1 expression + raw excerpt (~30 sec)
+ * - 🟡 Standard: 3-5 vocab summaries + 2 expressions + 1 culture (~5 min)
+ * - 🔴 Deep: Full content with TTS, dialogues, cross-references (~10 min)
  *
- * Renders content via MarkdownView (XSS-safe).
+ * Wikilinks in vocab pages are clickable, navigating to related word modals.
+ * TTS (Web Speech API) is available in Deep mode.
  */
 
-import { useEffect } from 'react';
-import type { DailyLesson } from '../data/dailyLessons.js';
+import { useEffect, useMemo, useState } from 'react';
+import type { DailyLesson, WikiPage } from '../data/dailyLessons.js';
 import { LANGUAGE_LABEL, type Language } from '../types.js';
 import { markLessonSeen } from '../data/dailyLessons.js';
 import { MarkdownView } from './MarkdownView.js';
@@ -25,6 +22,14 @@ interface DailyLessonModalProps {
   onPractice: (stageId: string) => void;
 }
 
+type Tier = 'quick' | 'standard' | 'deep';
+
+const TIER_META: Record<Tier, { label: string; icon: string; color: string; minutes: number }> = {
+  quick: { label: 'Quick', icon: '🟢', color: '#66dd66', minutes: 1 },
+  standard: { label: 'Standard', icon: '🟡', color: '#ffaa55', minutes: 5 },
+  deep: { label: 'Deep', icon: '🔴', color: '#ff6666', minutes: 10 },
+};
+
 const LANG_COLORS: Record<Language, string> = {
   en: '#3b82f6',
   jp: '#ec4899',
@@ -32,8 +37,77 @@ const LANG_COLORS: Record<Language, string> = {
   kr: '#10b981',
 };
 
+/**
+ * Filter markdown content to only include content up to a given H2 limit.
+ * For Quick: 1 section (Definition only).
+ * For Standard: 4 sections (Definition + Pronunciation + Examples + Memory Tip).
+ * For Deep: all sections.
+ */
+function filterMarkdownByTier(body: string, tier: Tier): string {
+  if (tier === 'deep') return body;
+
+  const lines = body.split('\n');
+  const result: string[] = [];
+  let h2Count = 0;
+  let stopped = false;
+
+  for (const line of lines) {
+    if (stopped) break;
+    if (line.trim().startsWith('## ')) {
+      const limit = tier === 'quick' ? 1 : 4;
+      if (h2Count >= limit) {
+        stopped = true;
+        break;
+      }
+      h2Count++;
+    }
+    result.push(line);
+  }
+  return result.join('\n');
+}
+
+/**
+ * Truncate a markdown body to a single quick summary.
+ * Extracts title, definition, and 1-2 examples only.
+ */
+function getQuickVocabSummary(page: WikiPage): string {
+  const lines = page.body.split('\n');
+  const out: string[] = [];
+  let inDefinition = false;
+  let inExamples = false;
+  let examplesCount = 0;
+
+  out.push(`# ${page.title}`);
+  for (const line of lines) {
+    if (line.trim().startsWith('**Definition:') || line.trim().startsWith('**Definition **')) {
+      out.push(line);
+      inDefinition = true;
+    } else if (line.trim().startsWith('**')) {
+      inDefinition = false;
+    } else if (inDefinition) {
+      out.push(line);
+      inDefinition = false;
+    } else if (line.trim().startsWith('## Examples')) {
+      inExamples = true;
+      out.push('\n## Examples');
+    } else if (inExamples && line.trim().startsWith('-')) {
+      if (examplesCount < 2) {
+        out.push(line);
+        examplesCount++;
+      } else {
+        inExamples = false;
+      }
+    } else if (line.trim().startsWith('## ')) {
+      break;
+    }
+  }
+  return out.join('\n');
+}
+
 export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonModalProps) {
   const color = LANG_COLORS[lesson.language];
+  const [tier, setTier] = useState<Tier>('standard');
+  const [wikilinkTarget, setWikilinkTarget] = useState<WikiPage | null>(null);
 
   // Mark as seen when modal opens
   useEffect(() => {
@@ -43,26 +117,108 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
   // Close on Escape
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') {
+        if (wikilinkTarget) {
+          setWikilinkTarget(null);
+        } else {
+          onClose();
+        }
+      }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [onClose]);
+  }, [onClose, wikilinkTarget]);
+
+  // Resolve wikilink → find a vocab/expression page matching the target
+  const wikilinkResolver = useMemo(() => {
+    const allPages: WikiPage[] = [
+      ...lesson.wiki.vocabulary,
+      ...lesson.wiki.expressions,
+    ];
+    return (target: string): string | null => {
+      const cleaned = target.split('|')[0].trim();
+      const match = allPages.find(
+        (p) => p.title === cleaned || p.filename.replace('.md', '') === cleaned
+      );
+      if (match) {
+        return `#wikilink-${encodeURIComponent(match.filename)}`;
+      }
+      return null; // Broken link indicator
+    };
+  }, [lesson]);
+
+  // Filter content based on tier
+  const content = useMemo(() => {
+    if (tier === 'quick') {
+      return {
+        vocab: lesson.wiki.vocabulary.slice(0, 1).map(getQuickVocabSummary).map((body, i) => ({
+          ...lesson.wiki.vocabulary[i],
+          body,
+        })),
+        expressions: lesson.wiki.expressions.slice(0, 1).map((p) => ({
+          ...p,
+          body: filterMarkdownByTier(p.body, 'quick'),
+        })),
+        culture: lesson.wiki.culture
+          ? { ...lesson.wiki.culture, body: filterMarkdownByTier(lesson.wiki.culture.body, 'quick') }
+          : null,
+      };
+    }
+    if (tier === 'standard') {
+      return {
+        vocab: lesson.wiki.vocabulary.slice(0, 3).map((p) => ({
+          ...p,
+          body: filterMarkdownByTier(p.body, 'standard'),
+        })),
+        expressions: lesson.wiki.expressions.slice(0, 2).map((p) => ({
+          ...p,
+          body: filterMarkdownByTier(p.body, 'standard'),
+        })),
+        culture: lesson.wiki.culture
+          ? { ...lesson.wiki.culture, body: filterMarkdownByTier(lesson.wiki.culture.body, 'standard') }
+          : null,
+      };
+    }
+    return {
+      vocab: lesson.wiki.vocabulary,
+      expressions: lesson.wiki.expressions,
+      culture: lesson.wiki.culture,
+    };
+  }, [lesson, tier]);
+
+  // Handle wikilink click → show related page in sub-modal
+  const handleWikilinkClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.classList.contains('wikilink') && !target.classList.contains('wikilink--broken')) {
+      e.preventDefault();
+      const href = target.getAttribute('href') || '';
+      const m = href.match(/#wikilink-(.+)$/);
+      if (m) {
+        const filename = decodeURIComponent(m[1]);
+        const allPages: WikiPage[] = [
+          ...lesson.wiki.vocabulary,
+          ...lesson.wiki.expressions,
+        ];
+        const page = allPages.find((p) => p.filename === filename);
+        if (page) setWikilinkTarget(page);
+      }
+    }
+  };
 
   return (
     <div className="daily-lesson-modal" onClick={onClose}>
       <div
         className="daily-lesson-modal__content"
         onClick={(e) => e.stopPropagation()}
+        onClickCapture={handleWikilinkClick}
       >
         <div className="daily-lesson-modal__header" style={{ background: color }}>
           <div>
             <div className="daily-lesson-modal__lang">{LANGUAGE_LABEL[lesson.language]}</div>
             <h2 className="daily-lesson-modal__title">오늘의 학습</h2>
             <div className="daily-lesson-modal__meta">
-              {lesson.meta.estimatedReadMinutes}분 · {lesson.wiki.vocabulary.length} 단어 ·{' '}
-              {lesson.wiki.expressions.length} 표현
-              {lesson.wiki.culture && ' · 1 문화'}
+              {content.vocab.length} 단어 · {content.expressions.length} 표현
+              {content.culture && ' · 1 문화'} · {TIER_META[tier].minutes}분 읽기
             </div>
           </div>
           <button
@@ -72,6 +228,27 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           >
             ✕
           </button>
+        </div>
+
+        {/* Tier Selector */}
+        <div className="daily-lesson-modal__tier-selector">
+          {(Object.keys(TIER_META) as Tier[]).map((t) => {
+            const meta = TIER_META[t];
+            return (
+              <button
+                key={t}
+                className={`daily-lesson-modal__tier-btn ${
+                  tier === t ? 'daily-lesson-modal__tier-btn--active' : ''
+                }`}
+                onClick={() => setTier(t)}
+                style={tier === t ? { background: meta.color, color: 'white' } : {}}
+              >
+                <span className="daily-lesson-modal__tier-icon">{meta.icon}</span>
+                <span className="daily-lesson-modal__tier-label">{meta.label}</span>
+                <span className="daily-lesson-modal__tier-time">~{meta.minutes}분</span>
+              </button>
+            );
+          })}
         </div>
 
         <div className="daily-lesson-modal__body">
@@ -84,36 +261,59 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
 
           <section className="daily-lesson-modal__section">
             <h3 className="daily-lesson-modal__section-title">
-              📚 어휘 ({lesson.wiki.vocabulary.length})
+              📚 어휘 ({content.vocab.length}/{lesson.wiki.vocabulary.length})
             </h3>
-            {lesson.wiki.vocabulary.map((page) => (
-              <details key={page.filename} className="daily-lesson-modal__page">
+            {content.vocab.map((page) => (
+              <details
+                key={page.filename}
+                open={tier === 'deep'}
+                className="daily-lesson-modal__page"
+              >
                 <summary className="daily-lesson-modal__page-title">{page.title}</summary>
-                <MarkdownView source={page.body} />
+                <MarkdownView
+                  source={page.body}
+                  linkResolver={wikilinkResolver}
+                  ttsLanguage={lesson.language}
+                  enableTts={tier === 'deep'}
+                />
               </details>
             ))}
           </section>
 
           <section className="daily-lesson-modal__section">
             <h3 className="daily-lesson-modal__section-title">
-              💬 표현 ({lesson.wiki.expressions.length})
+              💬 표현 ({content.expressions.length}/{lesson.wiki.expressions.length})
             </h3>
-            {lesson.wiki.expressions.map((page) => (
-              <details key={page.filename} className="daily-lesson-modal__page">
+            {content.expressions.map((page) => (
+              <details
+                key={page.filename}
+                open={tier === 'deep'}
+                className="daily-lesson-modal__page"
+              >
                 <summary className="daily-lesson-modal__page-title">{page.title}</summary>
-                <MarkdownView source={page.body} />
+                <MarkdownView
+                  source={page.body}
+                  linkResolver={wikilinkResolver}
+                  ttsLanguage={lesson.language}
+                  enableTts={tier === 'deep'}
+                />
               </details>
             ))}
           </section>
 
-          {lesson.wiki.culture && (
+          {content.culture && (
             <section className="daily-lesson-modal__section">
               <h3 className="daily-lesson-modal__section-title">🌏 문화 노트</h3>
               <details open className="daily-lesson-modal__page">
                 <summary className="daily-lesson-modal__page-title">
-                  {lesson.wiki.culture.title}
+                  {content.culture.title}
                 </summary>
-                <MarkdownView source={lesson.wiki.culture.body} />
+                <MarkdownView
+                  source={content.culture.body}
+                  linkResolver={wikilinkResolver}
+                  ttsLanguage={lesson.language}
+                  enableTts={tier === 'deep'}
+                />
               </details>
             </section>
           )}
@@ -142,13 +342,45 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
         </div>
       </div>
 
+      {/* Wikilink Sub-modal */}
+      {wikilinkTarget && (
+        <div
+          className="daily-lesson-modal__wikilink-modal"
+          onClick={() => setWikilinkTarget(null)}
+        >
+          <div
+            className="daily-lesson-modal__wikilink-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div
+              className="daily-lesson-modal__wikilink-header"
+              style={{ background: color }}
+            >
+              <h3>{wikilinkTarget.title}</h3>
+              <button
+                className="daily-lesson-modal__close"
+                onClick={() => setWikilinkTarget(null)}
+                aria-label="닫기"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="daily-lesson-modal__wikilink-body">
+              <MarkdownView
+                source={wikilinkTarget.body}
+                linkResolver={wikilinkResolver}
+                ttsLanguage={lesson.language}
+                enableTts={true}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
       <style>{`
         .daily-lesson-modal {
           position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
+          top: 0; left: 0; right: 0; bottom: 0;
           background: rgba(0, 0, 0, 0.85);
           display: flex;
           align-items: center;
@@ -200,17 +432,46 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           cursor: pointer;
           flex-shrink: 0;
         }
-        .daily-lesson-modal__close:hover {
-          background: rgba(255, 255, 255, 0.3);
+        .daily-lesson-modal__close:hover { background: rgba(255, 255, 255, 0.3); }
+
+        .daily-lesson-modal__tier-selector {
+          display: flex;
+          gap: 8px;
+          padding: 12px 24px;
+          background: #06090f;
+          border-bottom: 1px solid #1a2530;
         }
+        .daily-lesson-modal__tier-btn {
+          flex: 1;
+          padding: 8px 12px;
+          background: #1a2530;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 6px;
+          color: #c5d4e3;
+          font-size: 12px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          transition: all 0.15s;
+        }
+        .daily-lesson-modal__tier-btn:hover {
+          background: #233040;
+        }
+        .daily-lesson-modal__tier-btn--active {
+          font-weight: 600;
+        }
+        .daily-lesson-modal__tier-icon { font-size: 14px; }
+        .daily-lesson-modal__tier-label { font-size: 13px; }
+        .daily-lesson-modal__tier-time { opacity: 0.7; font-size: 11px; }
+
         .daily-lesson-modal__body {
           flex: 1;
           overflow-y: auto;
           padding: 16px 24px;
         }
-        .daily-lesson-modal__section {
-          margin-bottom: 24px;
-        }
+        .daily-lesson-modal__section { margin-bottom: 24px; }
         .daily-lesson-modal__section-title {
           font-size: 16px;
           color: #ffaa55;
@@ -243,17 +504,13 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           padding: 4px 0;
           list-style: none;
         }
-        .daily-lesson-modal__page summary::-webkit-details-marker {
-          display: none;
-        }
+        .daily-lesson-modal__page summary::-webkit-details-marker { display: none; }
         .daily-lesson-modal__page summary::before {
           content: '▸ ';
           display: inline-block;
           transition: transform 0.15s;
         }
-        .daily-lesson-modal__page[open] summary::before {
-          content: '▾ ';
-        }
+        .daily-lesson-modal__page[open] summary::before { content: '▾ '; }
         .daily-lesson-modal__page .markdown-view {
           margin-top: 8px;
           color: #c5d4e3;
@@ -275,6 +532,10 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
         .daily-lesson-modal__page .markdown-view a.wikilink {
           color: #00d9ff;
           text-decoration: underline;
+          cursor: pointer;
+        }
+        .daily-lesson-modal__page .markdown-view a.wikilink:hover {
+          background: rgba(0, 217, 255, 0.15);
         }
         .daily-lesson-modal__page .markdown-view a.wikilink--broken {
           color: #6a7888;
@@ -311,6 +572,52 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           font-style: italic;
           flex: 1;
         }
+
+        /* Wikilink sub-modal */
+        .daily-lesson-modal__wikilink-modal {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 0, 0, 0.6);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          padding: 20px;
+        }
+        .daily-lesson-modal__wikilink-content {
+          background: #0d1420;
+          border: 1px solid #1a2530;
+          border-radius: 12px;
+          max-width: 600px;
+          width: 100%;
+          max-height: 80vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        .daily-lesson-modal__wikilink-header {
+          padding: 12px 20px;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .daily-lesson-modal__wikilink-header h3 {
+          margin: 0;
+          font-size: 18px;
+        }
+        .daily-lesson-modal__wikilink-body {
+          padding: 16px 20px;
+          overflow-y: auto;
+          color: #c5d4e3;
+          font-size: 13px;
+          line-height: 1.6;
+        }
+        .daily-lesson-modal__wikilink-body h1 { font-size: 16px; color: #00d9ff; }
+        .daily-lesson-modal__wikilink-body h2 { font-size: 14px; color: #00d9ff; }
+        .daily-lesson-modal__wikilink-body h3 { font-size: 13px; color: #ffaa55; }
+        .daily-lesson-modal__wikilink-body p { margin: 6px 0; }
       `}</style>
     </div>
   );
