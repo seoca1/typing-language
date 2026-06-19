@@ -589,14 +589,14 @@ export class Renderer {
     for (const w of effects.floatingWords) {
       const lifeRatio = Math.max(0, w.life / w.maxLife);
 
-      // Fade in (first 15%) then fade out (last 50%) — overall more transparent
-      let alpha = 0.85;
+      // Fade in (first 15%) then fade out (last 50%) — still semi-transparent
+      let alpha = 0.92;
       if (lifeRatio < 0.15) {
-        alpha = (lifeRatio / 0.15) * 0.85;
+        alpha = (lifeRatio / 0.15) * 0.92;
       } else if (lifeRatio < 0.5) {
-        alpha = 0.85;
+        alpha = 0.92;
       } else {
-        alpha = ((lifeRatio - 0.5) / 0.5) * 0.85;
+        alpha = ((lifeRatio - 0.5) / 0.5) * 0.92;
       }
 
       this.ctx.save();

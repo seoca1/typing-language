@@ -102,7 +102,7 @@ describe('EffectsSystem — spawnFloatingWords (perimeter positioning)', () => {
     expect(w.x).toBeGreaterThan(80);
   });
 
-  it('words have shorter life (~1.3-1.6s)', () => {
+  it('words have longer life (~1.7-2.1s) for better readability', () => {
     spawnFloatingWords(
       state,
       512,
@@ -111,11 +111,11 @@ describe('EffectsSystem — spawnFloatingWords (perimeter positioning)', () => {
       { width: 1024, height: 880 },
     );
     const w = state.floatingWords[0];
-    expect(w.maxLife).toBeLessThanOrEqual(1600);
-    expect(w.maxLife).toBeGreaterThanOrEqual(1500);
+    expect(w.maxLife).toBeLessThanOrEqual(2100);
+    expect(w.maxLife).toBeGreaterThanOrEqual(1700);
   });
 
-  it('words have smaller font (14-18px)', () => {
+  it('words have larger font (20-26px) for better visibility', () => {
     spawnFloatingWords(
       state,
       512,
@@ -124,8 +124,8 @@ describe('EffectsSystem — spawnFloatingWords (perimeter positioning)', () => {
       { width: 1024, height: 880 },
     );
     const w = state.floatingWords[0];
-    expect(w.fontSize).toBeGreaterThanOrEqual(14);
-    expect(w.fontSize).toBeLessThanOrEqual(18);
+    expect(w.fontSize).toBeGreaterThanOrEqual(20);
+    expect(w.fontSize).toBeLessThanOrEqual(26);
   });
 });
 

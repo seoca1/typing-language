@@ -316,10 +316,10 @@ export function spawnFloatingWords(
       text: w.text,
       lang: w.lang,
       color: getLangColor(w.lang),
-      fontSize: 14 + Math.random() * 4,
-      life: 1300 + Math.random() * 300,
-      maxLife: 1600,
-      rotation: (Math.random() - 0.5) * 12,
+      fontSize: 20 + Math.random() * 6, // 20-26px (was 14-18)
+      life: 1700 + Math.random() * 400, // 1.7-2.1s (was 1.3-1.6s)
+      maxLife: 2100,
+      rotation: (Math.random() - 0.5) * 16, // a bit more tilt for liveliness
     });
   }
 }
