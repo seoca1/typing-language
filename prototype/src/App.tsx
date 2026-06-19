@@ -48,7 +48,7 @@ import type { Language, StageConfig, WordEntry } from './types.js';
 import { getResponsiveCanvasSize, logDeviceInfo } from './utils/device.js';
 import { OSKeyboardInput } from './ui/OSKeyboardInput.js';
 
-const LANGUAGE_LABEL: Record<Language, string> = {
+const LANG_BADGE: Record<Language, string> = {
   en: 'EN',
   jp: 'JP',
   es: 'ES',
@@ -388,6 +388,8 @@ export function App() {
   }
 
   if (state.phase === 'result') {
+    const stageLanguage = state.currentStage?.language as
+      | 'en' | 'jp' | 'es' | 'kr' | undefined;
     return (
       <ResultScreen
         score={state.score}
@@ -395,6 +397,12 @@ export function App() {
         missions={state.missions}
         results={state.missionResults}
         onBack={handleBackToMenu}
+        currentLanguage={stageLanguage}
+        onPracticeStage={(stageId) => {
+          // Find the stage and start it
+          const stage = SAMPLE_STAGES.find((s) => s.id === stageId);
+          if (stage) handleStartStage(stage);
+        }}
       />
     );
   }
@@ -653,7 +661,7 @@ export function App() {
         canvasRef={canvasRef}
         state={state}
         stage={stage}
-        languageLabel={LANGUAGE_LABEL[stage.language]}
+        languageLabel={LANG_BADGE[stage.language]}
         canvasWidth={canvasSize.width}
         canvasHeight={canvasSize.height}
         onCanvasClick={handleCanvasClick}

@@ -13,7 +13,14 @@
  * 2. language/index.ts에서 registerLanguage() 호출
  * 3. 이 타입은 자동으로 확장됨 (런타임 검증)
  */
-export type Language = string;
+export type Language = 'en' | 'jp' | 'es' | 'kr' | string;
+
+export const LANGUAGE_LABEL: Record<string, string> = {
+  en: 'English',
+  jp: '日本語',
+  es: 'Español',
+  kr: '한국어',
+};
 
 export interface Target {
   /** 표시되는 단어/문장 */

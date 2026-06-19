@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "lessons:build": "cd .. && uv run --with pyyaml python scripts/build-daily-lessons.py",
+    "lessons:validate": "cd .. && python3 scripts/validate-daily-lessons.py",
+    "prebuild": "npm run lessons:build && npm run lessons:validate",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "test": "vitest run",

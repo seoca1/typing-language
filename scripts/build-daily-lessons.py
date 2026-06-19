@@ -1,0 +1,600 @@
+#!/usr/bin/env python3
+"""
+Build Daily Lessons - 일일 학습 콘텐츠 빌드 스크립트
+
+Language wiki의 원본(raw) + 정리 자료(wiki)를 결합하여 게임에 표시할
+일일 lesson JSON을 생성합니다.
+
+데이터 흐름:
+    Language/raw/{Lang}/*.md              ← 원본 자료 (드라마, 교재)
+    Language/wiki/{Lang}/sources/*.md     ← 출처 개요 (hub)
+    Language/wiki/{Lang}/vocabulary/*.md  ← 단어 페이지
+    Language/wiki/{Lang}/expressions/*.md ← 표현 페이지
+    Language/wiki/{Lang}/culture/*.md     ← 문화 노트
+                ↓
+    (이 스크립트: source hub를 중심으로 wiki 페이지들을 묶음)
+                ↓
+    prototype/src/data/dailyLessons.json ← 게임이 import하는 데이터
+
+각 lesson = 1 source + 5-7 vocabulary + 2-3 expressions + 0-1 culture
+"""
+
+import json
+import os
+import re
+from datetime import datetime
+from pathlib import Path
+
+# ============================================================================
+# Configuration
+# ============================================================================
+
+LANGUAGE_ROOT = Path("/Users/emilio/projects/Projects/Language")
+GAME_ROOT = Path("/Users/emilio/projects/Projects/Game/typing_language")
+OUTPUT_PATH = GAME_ROOT / "prototype" / "src" / "data" / "dailyLessons.json"
+
+LANG_CODES = {
+    "English": "en",
+    "Japanese": "jp",
+    "Spanish": "es",
+    "Korean": "kr",
+}
+
+# Lesson size constraints
+TARGET_VOCAB_MIN = 5
+TARGET_VOCAB_MAX = 8
+TARGET_EXPR_MIN = 2
+TARGET_EXPR_MAX = 4
+RAW_EXCERPT_MIN = 80
+RAW_EXCERPT_MAX = 800
+MAX_LESSONS_PER_LANG = 30  # 30일 rotation 가능
+
+
+# ============================================================================
+# Markdown Parsing
+# ============================================================================
+
+def extract_title(md_text: str) -> str:
+    """Extract H1 title from markdown."""
+    for line in md_text.splitlines():
+        line = line.strip()
+        if line.startswith("# "):
+            return line[2:].strip()
+    return "Untitled"
+
+
+def extract_first_paragraph(md_text: str, max_chars: int = 500) -> str:
+    """Extract first meaningful paragraph from a markdown file.
+
+    Strategy:
+    1. Skip H1 + metadata block (lines starting with **)
+    2. Skip horizontal rules (---) and empty lines
+    3. If we hit ## before finding content, dive INTO the first ## section
+       and extract its first paragraph (skipping any sub-headings ###)
+    4. Stop at the next ## or after max_chars
+
+    This handles two common patterns:
+    - Old: metadata block, then `---`, then `## Section`, then content
+    - New: metadata block, then `## Section`, then content
+    """
+    lines = md_text.splitlines()
+    paragraph_lines = []
+    in_metadata = True
+    in_first_section = False
+
+    for line in lines:
+        stripped = line.strip()
+
+        # Skip H1
+        if stripped.startswith("# "):
+            continue
+
+        # Hit a new H2 section
+        if stripped.startswith("## "):
+            if in_first_section:
+                # Already inside first section, this is the next one — stop
+                break
+            # Entering first ## section — start collecting from here
+            in_first_section = True
+            in_metadata = False
+            continue
+
+        # Stop at H3 if we're collecting from the first H2 section
+        if in_first_section and stripped.startswith("### "):
+            break
+
+        # Horizontal rule (---) acts as a section break — stop collecting
+        # once we have content. (Both inside and outside metadata block.)
+        if stripped == "---" or stripped.startswith("---"):
+            if in_first_section and paragraph_lines:
+                break
+            continue
+
+        # Skip metadata block lines and empty lines (only before first section)
+        if in_metadata and (
+            stripped.startswith("**")
+            or stripped == ""
+        ):
+            continue
+
+        # First non-metadata line starts the paragraph
+        in_metadata = False
+        paragraph_lines.append(stripped)
+
+        # Stop if we got enough content
+        body = "\n".join(paragraph_lines)
+        if len(body) >= max_chars:
+            break
+
+    body = "\n".join(paragraph_lines).strip()
+    if len(body) > max_chars:
+        body = body[:max_chars].rsplit(".", 1)[0] + "."
+    return body
+
+
+def extract_wikilinks(text: str) -> list[str]:
+    """Extract all [[wikilinks]] from markdown body."""
+    return re.findall(r"\[\[([^\]]+)\]\]", text)
+
+
+def extract_section_wikilinks(md_text: str, section_label: str) -> list[str]:
+    """Extract wikilinks from a specific section (e.g., 'vocabulary 인용').
+
+    Searches for `## {section_label}` or `### {section_label}` (or similar)
+    and returns all wikilinks found in that section until the next
+    ## / ### header or EOF.
+    """
+    lines = md_text.splitlines()
+    links = []
+    in_section = False
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("## ") or stripped.startswith("### "):
+            section_name = stripped.lstrip("# ").lower()
+            # Match section by partial keyword
+            if section_label.lower() in section_name:
+                in_section = True
+                continue
+            elif in_section:
+                # Hit next section
+                break
+        if in_section:
+            links.extend(extract_wikilinks(stripped))
+    return links
+
+
+def slugify(text: str) -> str:
+    """Make a safe filename slug."""
+    s = re.sub(r"[^\w\s-]", "", text.lower())
+    s = re.sub(r"[\s_]+", "-", s).strip("-")
+    return s[:50]
+
+
+# ============================================================================
+# Wiki Scanner
+# ============================================================================
+
+def scan_wiki_pages(lang_dir: Path) -> dict:
+    """Scan all wiki pages for a language.
+
+    Returns:
+    {
+      "vocabulary": { "name": WikiPage, ... },
+      "expressions": { "expr-id": WikiPage, ... },
+      "culture": { "topic": WikiPage, ... },
+      "sources": { "source": WikiPage, ... }
+    }
+    """
+    result = {
+        "vocabulary": {},
+        "expressions": {},
+        "culture": {},
+        "sources": {},
+    }
+
+    for category in result.keys():
+        cat_dir = lang_dir / category
+        if not cat_dir.exists():
+            continue
+        for f in cat_dir.glob("*.md"):
+            text = f.read_text(encoding="utf-8")
+            stem = f.stem
+            result[category][stem] = {
+                "stem": stem,
+                "filename": f.name,
+                "title": extract_title(text),
+                "body": text,
+                "category": category.rstrip("s") if category != "sources" else "source",
+                "sizeChars": len(text),
+            }
+    return result
+
+
+def scan_raw_files(raw_dir: Path) -> list[dict]:
+    """Scan raw source files in a given raw directory.
+
+    Args:
+        raw_dir: Path to the language's raw directory (e.g.,
+                 `Language/raw/English/`). This function expects
+                 the dir to contain .md files directly, not nested.
+    """
+    if not raw_dir.exists():
+        return []
+    result = []
+    for f in sorted(raw_dir.glob("*.md")):
+        text = f.read_text(encoding="utf-8")
+        result.append({
+            "filename": f.name,
+            "stem": f.stem,
+            "title": extract_title(text),
+            "body": text,
+            "sizeChars": len(text),
+        })
+    return result
+
+
+# ============================================================================
+# Lesson Builder
+# ============================================================================
+
+def find_wikilink_target(wikilink: str, wiki: dict) -> str | None:
+    """Resolve a wikilink to a wiki page stem, or None if not found.
+
+    Wikilinks may be:
+    - Exact stem: [[airport]] → "airport"
+    - Stem with annotation: [[airport|the airport]] → "airport"
+    - Display only: [[the airport]] (no match, just for display)
+    """
+    # Take first part before |
+    target = wikilink.split("|")[0].strip()
+    # Check if target matches a wiki stem
+    for category in ["vocabulary", "expressions", "culture", "sources"]:
+        if target in wiki[category]:
+            return target
+    return None
+
+
+def build_lesson_from_source(
+    source_page: dict,
+    wiki: dict,
+    lang: str,
+    raw_page: dict | None = None,
+) -> dict | None:
+    """Build a single daily lesson from a source hub page.
+
+    Source pages have sections like:
+    - vocabulary 인용: [[word1]], [[word2]]
+    - expression 인용: [[expr1]]
+    - culture 인용: [[topic]]
+
+    The lesson combines:
+    - raw excerpt (from raw/{stem}.md) — original source material
+    - wiki vocabulary / expressions / culture pages
+    """
+    body = source_page["body"]
+
+    # Extract wikilinks from each section
+    vocab_links = extract_section_wikilinks(body, "vocabulary 인용")
+    vocab_links += extract_section_wikilinks(body, "어휘 인용")
+    vocab_links += extract_section_wikilinks(body, "vocabulary citations")
+    vocab_links += extract_section_wikilinks(body, "語彙引用")
+    vocab_links += extract_section_wikilinks(body, "Citas de Vocabulario")
+
+    expr_links = extract_section_wikilinks(body, "expression 인용")
+    expr_links += extract_section_wikilinks(body, "표현 인용")
+    expr_links += extract_section_wikilinks(body, "expression citations")
+    expr_links += extract_section_wikilinks(body, "表現引用")
+    expr_links += extract_section_wikilinks(body, "Citas de Expresiones")
+
+    culture_links = extract_section_wikilinks(body, "culture 인용")
+    culture_links += extract_section_wikilinks(body, "문화 인용")
+    culture_links += extract_section_wikilinks(body, "culture citations")
+    culture_links += extract_section_wikilinks(body, "Citas Culturales")
+    culture_links += extract_section_wikilinks(body, "Culture citations")
+
+    # Also try generic [[wikilink]] catch from References section
+    references_match = re.search(
+        r"## (?:인용|References|References)\s*\n([\s\S]+?)(?=\n## |\Z)",
+        body, re.MULTILINE
+    )
+    if references_match:
+        refs_text = references_match.group(1)
+        # Don't duplicate
+        already_found = set(vocab_links + expr_links + culture_links)
+        for link in extract_wikilinks(refs_text):
+            if link not in already_found:
+                # Try to categorize heuristically
+                target = find_wikilink_target(link, wiki)
+                if not target:
+                    continue
+                # Check which category it lives in
+                for cat in ["vocabulary", "expressions", "culture", "sources"]:
+                    if target in wiki[cat]:
+                        if cat == "vocabulary" and len(vocab_links) < TARGET_VOCAB_MAX:
+                            vocab_links.append(link)
+                        elif cat == "expressions" and len(expr_links) < TARGET_EXPR_MAX:
+                            expr_links.append(link)
+                        elif cat == "culture" and not culture_links:
+                            culture_links.append(link)
+                        break
+
+    # Resolve wikilinks to actual wiki pages
+    vocab_pages = []
+    for link in vocab_links:
+        target = find_wikilink_target(link, wiki)
+        if target and target not in vocab_pages:
+            vocab_pages.append(wiki["vocabulary"][target])
+        if len(vocab_pages) >= TARGET_VOCAB_MAX:
+            break
+
+    expr_pages = []
+    for link in expr_links:
+        target = find_wikilink_target(link, wiki)
+        if target and target not in expr_pages:
+            expr_pages.append(wiki["expressions"][target])
+        if len(expr_pages) >= TARGET_EXPR_MAX:
+            break
+
+    culture_page = None
+    for link in culture_links:
+        target = find_wikilink_target(link, wiki)
+        if target and target in wiki["culture"]:
+            culture_page = wiki["culture"][target]
+            break
+
+    # Fallback: if no culture page found via wikilinks, use any available
+    # culture page (e.g., the language's main culture note like
+    # "english-dating-culture"). Round-robin through available ones.
+    if not culture_page and wiki["culture"]:
+        # Use a stable selection: pick the first culture page whose stem
+        # contains a keyword from the source stem, else just the first
+        source_keywords = source_page["stem"].lower().replace("-", " ").split()
+        best_match = None
+        best_score = 0
+        for stem, page in wiki["culture"].items():
+            score = sum(1 for kw in source_keywords if kw in stem.lower())
+            if score > best_score:
+                best_score = score
+                best_match = page
+        culture_page = best_match or next(iter(wiki["culture"].values()))
+
+    # Fallback: if vocab is too small, add from same-language vocabulary
+    if len(vocab_pages) < TARGET_VOCAB_MIN:
+        for stem, page in wiki["vocabulary"].items():
+            if page not in vocab_pages:
+                vocab_pages.append(page)
+            if len(vocab_pages) >= TARGET_VOCAB_MIN:
+                break
+
+    # Fallback: if expressions too small
+    if len(expr_pages) < TARGET_EXPR_MIN:
+        for stem, page in wiki["expressions"].items():
+            if page not in expr_pages:
+                expr_pages.append(page)
+            if len(expr_pages) >= TARGET_EXPR_MIN:
+                break
+
+    # Must have at least minimum content
+    if not vocab_pages or not expr_pages:
+        return None
+
+    # Raw excerpt
+    raw_excerpt = ""
+    if raw_page:
+        raw_excerpt = extract_first_paragraph(raw_page["body"], max_chars=RAW_EXCERPT_MAX)
+    if len(raw_excerpt) < RAW_EXCERPT_MIN:
+        # Use source page body excerpt as fallback
+        raw_excerpt = extract_first_paragraph(source_page["body"], max_chars=RAW_EXCERPT_MAX)
+
+    # Estimate read time (rough: 200 chars/min for non-native)
+    total_chars = len(raw_excerpt) + sum(
+        p["sizeChars"] for p in vocab_pages + expr_pages + ([culture_page] if culture_page else [])
+    )
+    estimated_read_minutes = max(2, min(10, round(total_chars / 1500)))
+
+    # Find related game stages (by category match)
+    related_stages = find_related_stages(lang, source_page["stem"])
+
+    return {
+        "id": f"{lang}_{source_page['stem']}_{datetime.now().strftime('%Y%m%d')}",
+        "date": datetime.now().strftime("%Y-%m-%d"),
+        "language": lang,
+        "sourceTopic": source_page["filename"],
+        "raw": {
+            "sourceFile": raw_page["filename"] if raw_page else "",
+            "excerpt": raw_excerpt,
+        },
+        "wiki": {
+            "vocabulary": [
+                {
+                    "filename": p["filename"],
+                    "title": p["title"],
+                    "body": p["body"],
+                    "category": p["category"],
+                }
+                for p in vocab_pages
+            ],
+            "expressions": [
+                {
+                    "filename": p["filename"],
+                    "title": p["title"],
+                    "body": p["body"],
+                    "category": p["category"],
+                }
+                for p in expr_pages
+            ],
+            "culture": (
+                {
+                    "filename": culture_page["filename"],
+                    "title": culture_page["title"],
+                    "body": culture_page["body"],
+                    "category": culture_page["category"],
+                }
+                if culture_page
+                else None
+            ),
+        },
+        "meta": {
+            "estimatedReadMinutes": estimated_read_minutes,
+            "relatedStages": related_stages,
+        },
+    }
+
+
+def find_related_stages(lang: str, source_stem: str) -> list[str]:
+    """Find game stages related to a wiki source.
+
+    Heuristic: source stem usually contains the topic keyword
+    (e.g., "dating-romance"). Match against stage IDs.
+    """
+    stages_path = GAME_ROOT / "prototype" / "src" / "data" / "stages.ts"
+    if not stages_path.exists():
+        return []
+
+    text = stages_path.read_text(encoding="utf-8")
+    related = []
+
+    # Simple keyword matching
+    keywords = source_stem.replace("-", " ").split()
+    matched_categories = set()
+    for keyword in keywords:
+        if len(keyword) < 3:
+            continue
+        if "dating" in keyword or "romance" in keyword:
+            matched_categories.add("d")  # romance tier
+        elif "travel" in keyword:
+            matched_categories.add("t")  # travel tier
+
+    # If no category matched, return all stages for the language
+    if not matched_categories:
+        pattern = rf"id:\s*'({lang})_(\d+)_(\d+)'"
+        for m in re.finditer(pattern, text):
+            stage_id = m.group(1) + "_" + m.group(2) + "_" + m.group(3)
+            related.append(stage_id)
+    else:
+        for cat in matched_categories:
+            pattern = rf"id:\s*'({lang}_{cat})_(\d+)'"
+            for m in re.finditer(pattern, text):
+                related.append(m.group(1) + "_" + m.group(2))
+
+    # Dedupe
+    seen = set()
+    unique = []
+    for s in related:
+        if s not in seen:
+            seen.add(s)
+            unique.append(s)
+    return unique[:5]  # Max 5 related stages
+
+
+# ============================================================================
+# Main
+# ============================================================================
+
+def main():
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+    all_lessons = []
+    stats = {}
+
+    for lang_name, lang_code in LANG_CODES.items():
+        lang_dir = LANGUAGE_ROOT / "wiki" / lang_name
+        if not lang_dir.exists():
+            print(f"  ✗ {lang_name} ({lang_code}): wiki dir not found")
+            continue
+
+        # Scan all wiki pages
+        wiki = scan_wiki_pages(lang_dir)
+        # Scan raw files (raw dir is sibling of wiki dir)
+        raw_files = scan_raw_files(LANGUAGE_ROOT / "raw" / lang_name)
+        raw_by_stem = {r["stem"]: r for r in raw_files}
+
+        # For each source page, build a lesson
+        lang_lessons = []
+        for stem, source_page in wiki["sources"].items():
+            raw_page = raw_by_stem.get(stem)
+            lesson = build_lesson_from_source(
+                source_page=source_page,
+                wiki=wiki,
+                lang=lang_code,
+                raw_page=raw_page,
+            )
+            if lesson:
+                lang_lessons.append(lesson)
+                if len(lang_lessons) >= MAX_LESSONS_PER_LANG:
+                    break
+
+        # Fallback: if no source pages found, build from each raw file
+        if not lang_lessons and raw_files:
+            print(f"  ⚠ {lang_name}: no source pages, building from raw files")
+            for raw in raw_files:
+                # Use raw file as lesson root
+                pseudo_source = {
+                    "filename": raw["filename"],
+                    "body": raw["body"],
+                    "title": raw["title"],
+                    "stem": raw["stem"],
+                }
+                lesson = build_lesson_from_source(
+                    source_page=pseudo_source,
+                    wiki=wiki,
+                    lang=lang_code,
+                    raw_page=raw,
+                )
+                if lesson:
+                    lang_lessons.append(lesson)
+                    if len(lang_lessons) >= MAX_LESSONS_PER_LANG:
+                        break
+
+        # If still no lessons, build from vocabulary only (last resort)
+        if not lang_lessons:
+            print(f"  ⚠ {lang_name}: building minimal lessons from vocabulary")
+            for stem, vocab_page in list(wiki["vocabulary"].items())[:MAX_LESSONS_PER_LANG]:
+                pseudo_source = {
+                    "filename": f"{stem}.md",
+                    "body": vocab_page["body"],
+                    "title": vocab_page["title"],
+                    "stem": stem,
+                }
+                lesson = build_lesson_from_source(
+                    source_page=pseudo_source,
+                    wiki=wiki,
+                    lang=lang_code,
+                    raw_page=None,
+                )
+                if lesson:
+                    lang_lessons.append(lesson)
+
+        all_lessons.extend(lang_lessons)
+        stats[lang_code] = {
+            "count": len(lang_lessons),
+            "vocab": sum(len(l["wiki"]["vocabulary"]) for l in lang_lessons),
+            "expressions": sum(len(l["wiki"]["expressions"]) for l in lang_lessons),
+            "culture": sum(1 for l in lang_lessons if l["wiki"]["culture"]),
+        }
+
+    # Build output
+    output = {
+        "generatedAt": datetime.now().isoformat(),
+        "schemaVersion": "1.0",
+        "lessonCount": len(all_lessons),
+        "byLanguage": {
+            code: sum(1 for l in all_lessons if l["language"] == code)
+            for code in LANG_CODES.values()
+        },
+        "lessons": all_lessons,
+    }
+
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    print(f"\n=== Build Summary ===")
+    print(f"Generated {len(all_lessons)} lessons at {OUTPUT_PATH.relative_to(GAME_ROOT)}")
+    for code, s in stats.items():
+        print(f"  {code}: {s['count']} lessons | {s['vocab']} vocab | {s['expressions']} expr | {s['culture']} culture")
+    file_size_kb = OUTPUT_PATH.stat().st_size / 1024
+    print(f"File size: {file_size_kb:.1f} KB")
+
+
+if __name__ == "__main__":
+    main()

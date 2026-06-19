@@ -1269,4 +1269,115 @@ python -m http.server -d Game/typing_language/dashboard 8766  # http://localhost
 - 캐릭터 이미지 romantic 포즈 추가
 - Romance theme mission 다양화
 
+### [2026-06-19] feat | 일일 학습 자료 통합 — Language wiki → 게임 result 화면
+
+#### 목표
+Language wiki의 raw + wiki 콘텐츠를 게임의 스테이지 result 화면에
+매일 문서 형태로 제공. 유저별 학습 이력 기반 개인화 rotation.
+
+#### 결정 사항 (사용자 선택)
+- 콘텐츠 구성: **원본 raw + wiki 결합**
+- Rotation: **유저별 학습 이력 기반** (localStorage)
+- UI 위치: **스테이지 사이 (result 화면)**
+
+#### 아키텍처
+```
+Language/raw/{Lang}/*.md          ← 원본 (드라마, 교재)
+Language/wiki/{Lang}/{sources,vocabulary,expressions,culture}/*.md
+            ↓
+scripts/build-daily-lessons.py     ← raw + wiki 스캔, 매칭, JSON 출력
+            ↓
+prototype/src/data/dailyLessons.json  ← (generated) 11 lessons / 4 langs
+            ↓
+src/data/dailyLessons.ts           ← types + localStorage + rotation
+            ↓
+src/ui/MarkdownView.tsx            ← XSS-safe markdown renderer
+src/ui/DailyLessonCard.tsx         ← Result 화면용 작은 카드
+src/ui/DailyLessonModal.tsx        ← Full-screen 학습 뷰어
+            ↓
+src/ui/ResultScreen.tsx (integrated)
+```
+
+#### 빌드 파이프라인
+
+1. `scripts/build-daily-lessons.py`:
+   - Language/wiki/{Lang}/sources/*.md 스캔 (hub 역할)
+   - 각 source 페이지의 "vocabulary 인용", "expression 인용", "culture 인용"
+     섹션에서 wikilink 추출
+   - Language/raw/{Lang}/{stem}.md 의 첫 paragraph를 raw.excerpt로 추출
+   - 4개 언어 × 11 lessons 생성 (en 2, jp 2, es 5, kr 2)
+   - 출력: `prototype/src/data/dailyLessons.json` (149 KB)
+
+2. `scripts/validate-daily-lessons.py`:
+   - 스키마 검증 (DailyLesson 구조)
+   - 4개 언어 coverage 확인
+   - 0 errors, 0 warnings (PASSED)
+
+3. `package.json` prebuild hook:
+   ```json
+   "lessons:build": "cd .. && uv run --with pyyaml python scripts/build-daily-lessons.py",
+   "lessons:validate": "cd .. && python3 scripts/validate-daily-lessons.py",
+   "prebuild": "npm run lessons:build && npm run lessons:validate"
+   ```
+
+#### Rotation 알고리즘 (localStorage 개인화)
+
+- `getNextDailyLesson({ language, excludeSeen })`:
+  1. 언어별 candidates 필터
+  2. 안 본 lesson 우선 (localStorage의 seenLessons 활용)
+  3. 모두 봤으면 가장 오래된 것부터 (재방문)
+  4. 날짜 hash (FNV-1a)로 deterministic 선택 — 같은 날 같은 lesson
+
+- `getBalancedDailyLesson({ preferredLanguage, allLanguages })`:
+  - 선호 언어 unseen 우선
+  - 없으면 다른 언어로 fallback
+  - 모두 봤으면 선호 언어로 재방문
+
+- localStorage key: `typing-language-seen-lessons`
+  - 값: string[] (max 100, FIFO)
+  - jsdom 호환 메모리 fallback 포함
+
+#### UI: Result 화면 통합
+
+`ResultScreen.tsx`에 `<DailyLessonCard>` 추가:
+- 스테이지 클리어 후 "📖 오늘의 학습" 카드 표시
+- "📖 읽어보기" → `<DailyLessonModal>` full-screen
+- "🎮 연습하기" → 관련 stage 시작
+- "나중에" → dismissed (다음에는 다시 표시)
+
+`DailyLessonModal`:
+- 헤더: 언어, 시간, 항목 수
+- 📜 원본 (Raw Material) 섹션
+- 📚 어휘 (collapsible details)
+- 💬 표현 (collapsible details)
+- 🌏 문화 노트 (있으면)
+- 푸터: "🎮 연습하기" + "닫기"
+- ESC 키로 닫기
+
+#### 보안: XSS 방지
+
+- `MarkdownView` 직접 작성 (no `dangerouslySetInnerHTML`)
+- 모든 입력 HTML-escape 후 마크다운 패턴 적용
+- 위키링크 resolver로 명시적 URL만 허용
+- 테스트 7개로 XSS 시도 차단 검증:
+  - `<script>`, `<img onerror>`, `<svg onload>`, `javascript:` URL,
+    `<iframe>`, `<div onclick>` 모두 raw element로 렌더링 안 됨
+
+#### 검증 결과
+
+- **빌드**: 459.17 KB / gzip 135.99 KB (dailyLessons.json 포함)
+- **TypeScript**: ✅ 통과
+- **단위 테스트**: 222 passed (이전 202 + 20 MarkdownView + 21 daily lessons - 21 중복)
+  - 정확: 202 → 222 = +20 tests (MarkdownView)
+  - daily lessons 21 tests는 이미 카운트됨
+- **validate-daily-lessons.py**: 0 errors, 0 warnings
+- **파일 크기**: dailyLessons.json 149 KB
+
+#### 향후 개선
+
+- 더 많은 source 페이지 추가 (현재 11개 → 30+ 가능)
+- Romance sentences 추가 (Tier 3+ romance lessons)
+- 더 정교한 balanced algorithm (학습 진도 기반)
+- 다국어 폰트 stack 최적화
+
 
