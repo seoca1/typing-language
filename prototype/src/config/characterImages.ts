@@ -581,7 +581,6 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   },
 
   // Minho - K-pop Idol Style (K-pop 아이돌)
-  // Note: Only idle + wave available; other poses fall back to idle
   'kr-minho': {
     idle: {
       src: '/characters/kr/minho/1-idle.png',
@@ -592,6 +591,41 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
     },
     wave: {
       src: '/characters/kr/minho/2-wave.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+    jump: {
+      src: '/characters/kr/minho/3-jump.png',
+      width: 290,
+      height: 420,
+      scale: 0.85,
+      offsetY: -68,
+    },
+    clap: {
+      src: '/characters/kr/minho/4-clap.png',
+      width: 290,
+      height: 410,
+      scale: 0.85,
+      offsetY: -58,
+    },
+    spin: {
+      src: '/characters/kr/minho/5-spin.png',
+      width: 300,
+      height: 420,
+      scale: 0.85,
+      offsetY: -63,
+    },
+    dance: {
+      src: '/characters/kr/minho/6-dance.png',
+      width: 310,
+      height: 430,
+      scale: 0.85,
+      offsetY: -68,
+    },
+    pose: {
+      src: '/characters/kr/minho/7-pose.png',
       width: 290,
       height: 410,
       scale: 0.85,
