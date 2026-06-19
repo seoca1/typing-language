@@ -3,16 +3,18 @@
  *
  * Shows when mouse hovers over the current enemy's text area.
  * Displays:
- * - Meaning (뜻)
+ * - Meaning (in user's native language)
  * - Pronunciation guide
  * - TTS button (Web Speech API)
  *
- * Uses absolute positioning over the canvas. Hit-test is computed
- * by the parent component (StageScreen) by tracking mouse position
- * against the enemy text bounding box.
+ * Phase F: Tooltip labels translated via uiTranslations; meaning resolved
+ * via meaningResolver based on the user's native language.
  */
 
 import type { Target } from '../types.js';
+import { getNativeLanguage, type NativeLanguage } from '../data/nativeLanguage.js';
+import { getMeaning } from '../data/meaningResolver.js';
+import { t } from '../data/uiTranslations.js';
 
 interface EnemyTooltipProps {
   target: Target;
@@ -41,6 +43,8 @@ export function EnemyTooltip({
   onClose,
 }: EnemyTooltipProps) {
   const ttsLang = TTS_LANG_MAP[language] ?? 'en-US';
+  const nativeLanguage: NativeLanguage = getNativeLanguage();
+  const meaning = getMeaning(target, nativeLanguage);
 
   // Position tooltip — keep within viewport
   const tooltipWidth = 280;
@@ -60,7 +64,7 @@ export function EnemyTooltip({
       <button
         className="enemy-tooltip__close"
         onClick={onClose}
-        aria-label="닫기"
+        aria-label={t('close', nativeLanguage)}
       >
         ✕
       </button>
@@ -73,8 +77,8 @@ export function EnemyTooltip({
             <button
               className="enemy-tooltip__tts-btn"
               onClick={() => handleTts(target.acceptedInputs[0])}
-              title="발음 듣기"
-              aria-label="발음 듣기"
+              title={t('listeningTo', nativeLanguage)}
+              aria-label={t('listeningTo', nativeLanguage)}
             >
               🔊
             </button>
@@ -82,15 +86,18 @@ export function EnemyTooltip({
         )}
       </div>
 
-      {target.meaning && (
+      {meaning && (
         <div className="enemy-tooltip__meaning">
-          <span className="enemy-tooltip__label">뜻:</span> {target.meaning}
+          <span className="enemy-tooltip__label">{t('meaning', nativeLanguage)}:</span>{' '}
+          {meaning}
         </div>
       )}
 
       {(target as any).pronunciation && (
         <div className="enemy-tooltip__pron">
-          <span className="enemy-tooltip__label">발음:</span>{' '}
+          <span className="enemy-tooltip__label">
+            {t('pronunciation', nativeLanguage)}:
+          </span>{' '}
           <code>{(target as any).pronunciation}</code>
         </div>
       )}
@@ -100,7 +107,9 @@ export function EnemyTooltip({
           <span className="enemy-tooltip__cat">📁 {target.category}</span>
         )}
         {target.level !== undefined && (
-          <span className="enemy-tooltip__level">📊 L{target.level}</span>
+          <span className="enemy-tooltip__level">
+            📊 {t('level', nativeLanguage)} {target.level}
+          </span>
         )}
       </div>
 

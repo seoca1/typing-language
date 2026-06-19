@@ -63,7 +63,12 @@ export interface WordEntry {
   romaji?: string;
   /** KR: 한글 자모 표기 */
   jamo?: string;
+  /** Meaning in the language specified by `meaningLang` (legacy single-lang) */
   meaning?: string;
+  /** Meaning language code ('en', 'ko', 'ja', 'es') — pairs with `meaning` */
+  meaningLang?: 'en' | 'ko' | 'ja' | 'es';
+  /** Phase F: Multilingual meanings — preferred over `meaning`. */
+  meanings?: Partial<Record<'en' | 'ko' | 'ja' | 'es', string>>;
   level: number;
   category?: string;
   /** ES 한정 */

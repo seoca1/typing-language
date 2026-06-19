@@ -15,6 +15,8 @@ import type { DailyLesson, WikiPage } from '../data/dailyLessons.js';
 import { LANGUAGE_LABEL, type Language } from '../types.js';
 import { markLessonSeen } from '../data/dailyLessons.js';
 import { MarkdownView } from './MarkdownView.js';
+import { getNativeLanguage } from '../data/nativeLanguage.js';
+import { t } from '../data/uiTranslations.js';
 
 interface DailyLessonModalProps {
   lesson: DailyLesson;
@@ -215,16 +217,19 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
         <div className="daily-lesson-modal__header" style={{ background: color }}>
           <div>
             <div className="daily-lesson-modal__lang">{LANGUAGE_LABEL[lesson.language]}</div>
-            <h2 className="daily-lesson-modal__title">오늘의 학습</h2>
+            <h2 className="daily-lesson-modal__title">{t('todaysLesson', getNativeLanguage())}</h2>
             <div className="daily-lesson-modal__meta">
-              {content.vocab.length} 단어 · {content.expressions.length} 표현
-              {content.culture && ' · 1 문화'} · {TIER_META[tier].minutes}분 읽기
+              {content.vocab.length} {t('words', getNativeLanguage())} ·{' '}
+              {content.expressions.length} {t('expressions', getNativeLanguage())}
+              {content.culture && ` · 1 ${t('culture', getNativeLanguage())}`} ·{' '}
+              {TIER_META[tier].minutes}
+              {t('minutes', getNativeLanguage())}
             </div>
           </div>
           <button
             className="daily-lesson-modal__close"
             onClick={onClose}
-            aria-label="닫기"
+            aria-label={t('close', getNativeLanguage())}
           >
             ✕
           </button>
@@ -253,7 +258,7 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
 
         <div className="daily-lesson-modal__body">
           <section className="daily-lesson-modal__section">
-            <h3 className="daily-lesson-modal__section-title">📜 원본 (Raw Material)</h3>
+            <h3 className="daily-lesson-modal__section-title">📜 {t('rawMaterial', getNativeLanguage())}</h3>
             <div className="daily-lesson-modal__raw-excerpt">
               {lesson.raw.excerpt}
             </div>
@@ -261,7 +266,7 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
 
           <section className="daily-lesson-modal__section">
             <h3 className="daily-lesson-modal__section-title">
-              📚 어휘 ({content.vocab.length}/{lesson.wiki.vocabulary.length})
+              📚 {t('vocabulary', getNativeLanguage())} ({content.vocab.length}/{lesson.wiki.vocabulary.length})
             </h3>
             {content.vocab.map((page) => (
               <details
@@ -282,7 +287,7 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
 
           <section className="daily-lesson-modal__section">
             <h3 className="daily-lesson-modal__section-title">
-              💬 표현 ({content.expressions.length}/{lesson.wiki.expressions.length})
+              💬 {t('expressions', getNativeLanguage())} ({content.expressions.length}/{lesson.wiki.expressions.length})
             </h3>
             {content.expressions.map((page) => (
               <details
@@ -303,7 +308,7 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
 
           {content.culture && (
             <section className="daily-lesson-modal__section">
-              <h3 className="daily-lesson-modal__section-title">🌏 문화 노트</h3>
+              <h3 className="daily-lesson-modal__section-title">🌏 {t('culture', getNativeLanguage())}</h3>
               <details open className="daily-lesson-modal__page">
                 <summary className="daily-lesson-modal__page-title">
                   {content.culture.title}
@@ -329,15 +334,15 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
                 onClose();
               }}
             >
-              🎮 연습하기 ({lesson.meta.relatedStages[0]})
+              🎮 {t('practice', getNativeLanguage())} ({lesson.meta.relatedStages[0]})
             </button>
           ) : (
             <span className="daily-lesson-modal__no-practice">
-              이 주제와 관련된 연습 스테이지가 곧 추가됩니다
+              {t('relatedStageComingSoon', getNativeLanguage())}
             </span>
           )}
           <button className="daily-lesson-modal__close-btn" onClick={onClose}>
-            닫기
+            {t('close', getNativeLanguage())}
           </button>
         </div>
       </div>
@@ -360,7 +365,7 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
               <button
                 className="daily-lesson-modal__close"
                 onClick={() => setWikilinkTarget(null)}
-                aria-label="닫기"
+                aria-label={t('close', getNativeLanguage())}
               >
                 ✕
               </button>

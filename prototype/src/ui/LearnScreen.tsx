@@ -12,9 +12,12 @@
  * and gameplay, leveraging the existing daily lesson content.
  */
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import type { StageConfig, Enemy } from '../types.js';
 import { LANGUAGE_LABEL, type Language } from '../types.js';
+import { getNativeLanguage, type NativeLanguage } from '../data/nativeLanguage.js';
+import { getMeaning } from '../data/meaningResolver.js';
+import { t } from '../data/uiTranslations.js';
 
 interface LearnScreenProps {
   stage: StageConfig;
@@ -46,16 +49,19 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
   const [tier, setTier] = useState<'all' | 'core'>('all');
 
   // Get vocab from the pre-computed enemy list
-  const vocabList: VocabPreview[] = enemies
-    .slice(0, 30)
-    .map((e) => ({
-      id: e.id,
-      display: e.target.text,
-      input: e.target.acceptedInputs[0] ?? '',
-      meaning: e.target.meaning ?? '',
-      level: e.target.level,
-      category: e.target.category ?? '',
-    }));
+  const nativeLanguage: NativeLanguage = getNativeLanguage();
+  const vocabList: VocabPreview[] = useMemo(
+    () =>
+      enemies.slice(0, 30).map((e) => ({
+        id: e.id,
+        display: e.target.text,
+        input: e.target.acceptedInputs[0] ?? '',
+        meaning: getMeaning(e.target, nativeLanguage) ?? '',
+        level: e.target.level,
+        category: e.target.category ?? '',
+      })),
+    [enemies, nativeLanguage]
+  );
 
   const displayedVocab =
     tier === 'core' ? vocabList.slice(0, 8) : vocabList;
@@ -80,8 +86,12 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
   return (
     <div className="learn-screen">
       <div className="learn-screen__header" style={{ background: color }}>
-        <button className="learn-screen__back" onClick={onBack} aria-label="뒤로">
-          ← 뒤로
+        <button
+          className="learn-screen__back"
+          onClick={onBack}
+          aria-label={t('back', nativeLanguage)}
+        >
+          ← {t('back', nativeLanguage)}
         </button>
         <div className="learn-screen__title-block">
           <div className="learn-screen__lang">{LANGUAGE_LABEL[stage.language]}</div>
@@ -93,20 +103,22 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
           onClick={onStart}
           style={{ background: color }}
         >
-          ⚔️ 시작
+          ⚔️ {t('start', nativeLanguage)}
         </button>
       </div>
 
       <div className="learn-screen__body">
         <div className="learn-screen__filter">
-          <span className="learn-screen__filter-label">표시:</span>
+          <span className="learn-screen__filter-label">
+            {t('preview', nativeLanguage)}:
+          </span>
           <button
             className={`learn-screen__filter-btn ${
               tier === 'core' ? 'learn-screen__filter-btn--active' : ''
             }`}
             onClick={() => setTier('core')}
           >
-            핵심 ({Math.min(8, vocabList.length)})
+            {t('core', nativeLanguage)} ({Math.min(8, vocabList.length)})
           </button>
           <button
             className={`learn-screen__filter-btn ${
@@ -114,7 +126,7 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
             }`}
             onClick={() => setTier('all')}
           >
-            전체 ({vocabList.length})
+            {t('all', nativeLanguage)} ({vocabList.length})
           </button>
         </div>
 
@@ -140,13 +152,18 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
 
         {displayedVocab.length === 0 && (
           <div className="learn-screen__empty">
-            이 스테이지의 단어 정보가 없습니다.
+            {nativeLanguage === 'ko'
+              ? '이 스테이지의 단어 정보가 없습니다.'
+              : nativeLanguage === 'ja'
+              ? 'このステージの単語情報はありません。'
+              : nativeLanguage === 'es'
+              ? 'No hay información de palabras para esta etapa.'
+              : 'No word information for this stage.'}
           </div>
         )}
 
         <div className="learn-screen__tip">
-          💡 <strong>팁</strong>: 각 단어를 클릭하면 더 자세한 정보를 볼 수 있습니다.
-          (히라가나, 한자, 문화 노트 등)
+          💡 <strong>{t('tipHoverForMeaning', nativeLanguage).split('💡')[1]?.trim() || t('tipHoverForMeaning', nativeLanguage)}</strong>
         </div>
       </div>
 
@@ -173,14 +190,15 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
               <button
                 className="learn-screen__vocab-modal-close"
                 onClick={() => setSelectedVocab(null)}
-                aria-label="닫기"
+                aria-label={t('close', nativeLanguage)}
               >
                 ✕
               </button>
             </div>
             <div className="learn-screen__vocab-modal-body">
               <p className="learn-screen__vocab-modal-meaning">
-                <strong>뜻:</strong> {selectedVocab.meaning}
+                <strong>{t('meaning', nativeLanguage)}:</strong>{' '}
+                {selectedVocab.meaning}
               </p>
               <div className="learn-screen__vocab-modal-tts">
                 <button
@@ -201,38 +219,43 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
                     }
                   }}
                 >
-                  🔊 발음 듣기
+                  🔊 {t('listeningTo', nativeLanguage)}
                 </button>
               </div>
               <div className="learn-screen__vocab-modal-section">
-                <h3>💡 학습 노트</h3>
+                <h3>💡 {t('studyNote', nativeLanguage)}</h3>
                 <p>
-                  이 단어는 스테이지에서 {Math.max(1, Math.ceil(vocabList.length / 8))}번
-                  이상 등장합니다. 마스터하면 자동으로 진행 상황을 추적합니다.
+                  {nativeLanguage === 'ko'
+                    ? `이 단어는 스테이지에서 ${Math.max(1, Math.ceil(vocabList.length / 8))}번 이상 등장합니다. 마스터하면 자동으로 진행 상황을 추적합니다.`
+                    : nativeLanguage === 'ja'
+                    ? `この単語はステージで${Math.max(1, Math.ceil(vocabList.length / 8))}回以上出現します。マスターすると自動的に進捗を追跡します。`
+                    : nativeLanguage === 'es'
+                    ? `Esta palabra aparece al menos ${Math.max(1, Math.ceil(vocabList.length / 8))} veces en esta etapa. Tu progreso se rastrea automáticamente.`
+                    : `This word appears at least ${Math.max(1, Math.ceil(vocabList.length / 8))} times in this stage. Progress is tracked automatically.`}
                 </p>
               </div>
               <div className="learn-screen__vocab-modal-section">
-                <h3>📊 단어 정보</h3>
+                <h3>📊 {t('wordInfo', nativeLanguage)}</h3>
                 <table className="learn-screen__vocab-info-table">
                   <tbody>
                     <tr>
-                      <th>표시</th>
+                      <th>{t('display', nativeLanguage)}</th>
                       <td>{selectedVocab.display}</td>
                     </tr>
                     <tr>
-                      <th>입력</th>
+                      <th>{t('input', nativeLanguage)}</th>
                       <td><code>{selectedVocab.input}</code></td>
                     </tr>
                     <tr>
-                      <th>뜻</th>
+                      <th>{t('meaning', nativeLanguage)}</th>
                       <td>{selectedVocab.meaning}</td>
                     </tr>
                     <tr>
-                      <th>난이도</th>
+                      <th>{t('level', nativeLanguage)}</th>
                       <td>Level {selectedVocab.level}</td>
                     </tr>
                     <tr>
-                      <th>카테고리</th>
+                      <th>{t('category', nativeLanguage)}</th>
                       <td>{selectedVocab.category}</td>
                     </tr>
                   </tbody>

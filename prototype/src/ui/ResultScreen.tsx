@@ -12,6 +12,8 @@ import {
   getAttemptedWordCount,
   getWordStats,
 } from '../data/wordMastery.js';
+import { getNativeLanguage } from '../data/nativeLanguage.js';
+import { t } from '../data/uiTranslations.js';
 
 interface ResultScreenProps {
   score: number;
@@ -79,30 +81,47 @@ export function ResultScreen({
 
       {/* Phase B-4: Mastery Overview */}
       <div className="result-mastery">
-        <h2>📊 학습 진행도</h2>
+        <h2>{t('learningProgress', getNativeLanguage())}</h2>
         <div className="mastery-bar">
           <div className="mastery-bar__fill" style={{ width: `${overallMastery}%` }}>
             <span className="mastery-bar__label">{overallMastery}%</span>
           </div>
         </div>
         <p className="mastery-meta">
-          전체 숙련도 · {attemptedWordCount}개 단어 학습 중
+          {t('masteryPercent', getNativeLanguage())} · {attemptedWordCount}{' '}
+          {t('wordsLearned', getNativeLanguage())}
         </p>
       </div>
 
       {/* Phase B-4: Weak Words */}
       {sessionWeakWords.length > 0 && (
         <div className="result-weak-words">
-          <h2>⚠️ 약한 단어 (이번 스테이지)</h2>
+          <h2>{t('weakWords', getNativeLanguage())}</h2>
           <p className="weak-words-hint">
-            실수가 많았던 단어들입니다. 일일 학습에서 복습해보세요.
+            {(() => {
+              const nl = getNativeLanguage();
+              if (nl === 'ko')
+                return '실수가 많았던 단어들입니다. 일일 학습에서 복습해보세요.';
+              if (nl === 'ja')
+                return 'ミスの多い単語です。毎日の学習で復習しましょう。';
+              if (nl === 'es')
+                return 'Palabras con más errores. Repásalas en la lección diaria.';
+              return 'Words with many mistakes. Review them in the daily lesson.';
+            })()}
           </p>
           <div className="weak-words-list">
             {sessionWeakWords.slice(0, 5).map(({ id, stats }) => (
               <div key={id} className="weak-word-chip">
                 <span className="weak-word-id">{id}</span>
                 <span className="weak-word-mistakes">
-                  {stats?.mistakeCount ?? 0}회 실수
+                  {stats?.mistakeCount ?? 0}{' '}
+                  {(() => {
+                    const nl = getNativeLanguage();
+                    if (nl === 'ko') return '회 실수';
+                    if (nl === 'ja') return '回ミス';
+                    if (nl === 'es') return ' errores';
+                    return ' mistakes';
+                  })()}
                 </span>
               </div>
             ))}

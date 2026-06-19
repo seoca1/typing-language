@@ -9,6 +9,8 @@
 
 import type { DailyLesson } from '../data/dailyLessons.js';
 import { LANGUAGE_LABEL, type Language } from '../types.js';
+import { getNativeLanguage } from '../data/nativeLanguage.js';
+import { t } from '../data/uiTranslations.js';
 
 interface DailyLessonCardProps {
   lesson: DailyLesson;
@@ -28,6 +30,7 @@ export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLes
   const color = LANG_COLORS[lesson.language];
   const langLabel = LANGUAGE_LABEL[lesson.language];
   const cultureCount = lesson.wiki.culture ? 1 : 0;
+  const nativeLanguage = getNativeLanguage();
 
   return (
     <div
@@ -37,8 +40,11 @@ export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLes
       <div className="daily-lesson-card__header" style={{ background: color }}>
         <span className="daily-lesson-card__icon">📖</span>
         <div>
-          <div className="daily-lesson-card__title">오늘의 학습</div>
-          <div className="daily-lesson-card__subtitle">{langLabel} · {lesson.meta.estimatedReadMinutes}분</div>
+          <div className="daily-lesson-card__title">{t('todaysLesson', nativeLanguage)}</div>
+          <div className="daily-lesson-card__subtitle">
+            {langLabel} · {lesson.meta.estimatedReadMinutes}
+            {t('minutes', nativeLanguage)}
+          </div>
         </div>
       </div>
 
@@ -49,9 +55,11 @@ export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLes
             : lesson.raw.excerpt}
         </p>
         <div className="daily-lesson-card__meta">
-          <span>📚 {lesson.wiki.vocabulary.length} 단어</span>
-          <span>💬 {lesson.wiki.expressions.length} 표현</span>
-          {cultureCount > 0 && <span>🌏 {cultureCount} 문화</span>}
+          <span>
+            📚 {lesson.wiki.vocabulary.length} {t('words', nativeLanguage)}
+          </span>
+          <span>💬 {lesson.wiki.expressions.length}</span>
+          {cultureCount > 0 && <span>🌏 1</span>}
         </div>
       </div>
 
@@ -61,21 +69,21 @@ export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLes
           style={{ background: color }}
           onClick={() => onOpen(lesson)}
         >
-          📖 읽어보기
+          📖 {t('readMore', nativeLanguage)}
         </button>
         {lesson.meta.relatedStages.length > 0 && (
           <button
             className="daily-lesson-card__btn daily-lesson-card__btn--secondary"
             onClick={() => onPractice(lesson.meta.relatedStages[0])}
           >
-            🎮 연습하기
+            🎮 {t('practice', nativeLanguage)}
           </button>
         )}
         <button
           className="daily-lesson-card__btn daily-lesson-card__btn--tertiary"
           onClick={onSkip}
         >
-          나중에
+          {t('later', nativeLanguage)}
         </button>
       </div>
 

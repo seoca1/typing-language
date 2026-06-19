@@ -1588,3 +1588,62 @@ Phase B-4: Weak Words + Mastery Bar
 3. 같은 stage 반복 → 같은 캐릭터 (deterministic)
 4. 다른 stage → 다른 캐릭터 가능성
 5. 언어 변경 → 그 언어의 3명 중 random
+
+### [2026-06-20] i18n | Phase F — Native language setting + UI translations
+
+게임 내 학습 자료의 일관성 없는 언어 혼용 문제 해결:
+- EN/ES 코퍼스 뜻이 한국어
+- JP/KR 코퍼스 뜻이 영어
+- UI 레이블(뜻:, 발음:, 오늘의 학습 등) 모두 한국어
+- 결과: 한국어 모드에서 일본어 뜻 / 일본어 모드에서 한국어 뜻 혼재
+
+#### 1. Native Language 모듈 (`src/data/nativeLanguage.ts`)
+- 4개 언어 (en/ko/ja/es) 지원
+- localStorage 영속화, 기본값 'en' (영어)
+- in-memory fallback (jsdom/SSR 환경)
+
+#### 2. UI Translations (`src/data/uiTranslations.ts`)
+- 50+ UI 키에 4개 언어 번역
+- `t(key, nativeLanguage)` 함수
+- 키 누락시 영어로 fallback, 그마저 없으면 키 자체 반환
+
+#### 3. Meaning Resolver (`src/data/meaningResolver.ts`)
+- WordEntry + Target 둘 다 지원
+- `meanings: { en, ko, ja, es }` 맵 우선 사용
+- 4단계 fallback: native → en → ko → text/display
+- 의미 언어 자동 감지 (한글 → ko, 히라가나 → ja)
+
+#### 4. 코퍼스 마이그레이션 (`scripts/migrate_meanings.py`)
+- 581 entries 마이그레이션
+- 각 entry의 `meaning: 'X'` → `meanings: { <lang>: 'X' }, meaningLang: '<lang>'`
+- COMMON_DICT (greetings, numbers, romance 핵심어) → 4개 언어 자동 채움
+- 한국어 뜻 → 영어 뜻 자동 검색 (limited dictionary)
+
+#### 5. UI 컴포넌트 통합
+- `EnemyTooltip` — 뜻, 발음, 카테고리 레이블이 native language로 표시
+- `LearnScreen` — 헤더, 필터, 모달, 학습 노트가 모두 번역
+- `StageScreen` — hover 힌트 메시지 번역
+- `ResultScreen` — 마스터리, 약한 단어 섹션 번역
+- `DailyLessonCard` / `DailyLessonModal` — 헤더, 푸터, 섹션 타이틀 번역
+
+#### 6. 테스트
+- 23개 신규 테스트 (`tests/data/nativeLanguage.test.ts`)
+- localStorage polyfill (Node 25 broken localStorage)
+- Native language 영속화, fallback 검증
+- UI translations 4개 언어 완전 검증
+- Meaning resolver fallback 체인 검증
+- 사용자 시나리오 (EN 사용자가 한국어 단어 볼 때 등)
+
+#### 검증 결과
+- 510 tests passed (1 skipped) — 이전 488 + 23 신규 (1 flaky는 격리 실행시 통과)
+- 빌드 531.99 KB / gzip 168.81 KB (이전 525.07 KB / 165.40 KB)
+- 581 corpus entries 마이그레이션 성공
+
+#### 사용 예시
+- 영어 사용자 + 한국어 단어 → 뜻 "hello" (en fallback)
+- 한국어 사용자 + 영어 단어 → 뜻 "안녕" (ko from dict)
+- 일본어 사용자 + 미등록 단어 → 영어 뜻 (en fallback)
+
+#### 남은 작업
+- COMMON_DICT 확장 (현재 ~20개, 581 entries 중 일부만)
+- Daily Lesson wiki 본문도 다국어 (현재는 한국어)

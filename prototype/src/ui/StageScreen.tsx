@@ -4,6 +4,8 @@ import type { GameState } from '../state/gameReducer.js';
 import type { StageConfig, Target } from '../types.js';
 import { getAudioManager } from '../audio/AudioManager.js';
 import { EnemyTooltip } from './EnemyTooltip.js';
+import { getNativeLanguage } from '../data/nativeLanguage.js';
+import { t } from '../data/uiTranslations.js';
 
 interface StageScreenProps {
   canvasRef: RefObject<HTMLCanvasElement>;
@@ -185,7 +187,7 @@ export function StageScreen({
           <p>ACC: {state.accuracy.toFixed(0)}%</p>
         </div>
         <div className="hover-hint">
-          <small>💡 적 위에 마우스를 올리면 뜻/발음을 볼 수 있습니다</small>
+          <small>{t('tipHoverForMeaning', getNativeLanguage())}</small>
         </div>
         <div className="audio-controls">
           <h3>Audio</h3>
