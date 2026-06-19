@@ -1685,3 +1685,159 @@ button:hover {
     font-size: 2.5rem;
   }
 }
+
+/* ==========================================================================
+   MarkdownView - Extended Components
+   ========================================================================== */
+
+/* TTS button */
+.md-tts-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: rgba(0, 217, 255, 0.08);
+  color: #00d9ff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  vertical-align: middle;
+}
+
+.md-tts-btn:hover {
+  background: rgba(0, 217, 255, 0.2);
+  border-color: #00d9ff;
+}
+
+.md-tts-btn--active {
+  background: rgba(255, 170, 85, 0.3);
+  border-color: #ffaa55;
+  color: #ffaa55;
+}
+
+.md-paragraph {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* Callouts */
+.md-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border-left: 4px solid;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.md-callout__icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.md-callout__body {
+  flex: 1;
+}
+
+.md-callout--info {
+  border-color: #00d9ff;
+  background: rgba(0, 217, 255, 0.08);
+}
+
+.md-callout--warning {
+  border-color: #ffaa55;
+  background: rgba(255, 170, 85, 0.08);
+}
+
+.md-callout--tip {
+  border-color: #66dd66;
+  background: rgba(102, 221, 102, 0.08);
+}
+
+.md-callout--danger {
+  border-color: #ff6666;
+  background: rgba(255, 102, 102, 0.08);
+}
+
+.md-callout--note {
+  border-color: #b4d2fa;
+  background: rgba(180, 210, 250, 0.06);
+}
+
+/* Tables */
+.md-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.md-table th,
+.md-table td {
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.md-table th {
+  background: rgba(0, 217, 255, 0.1);
+  color: #00d9ff;
+  font-weight: 600;
+}
+
+.md-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Dialogue blocks */
+.md-dialogue {
+  margin: 10px 0;
+  padding: 10px 14px;
+  background: rgba(180, 210, 250, 0.05);
+  border-radius: 6px;
+  border-left: 4px solid #b4d2fa;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.md-dialogue__header {
+  font-size: 11px;
+  color: #b4d2fa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.md-dialogue__line {
+  margin: 3px 0;
+}
+
+.md-dialogue__speaker {
+  color: #00d9ff;
+  margin-right: 6px;
+}
+
+.md-dialogue__text {
+  color: #c5d4e3;
+}
+
+/* Divider */
+.md-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 14px 0;
+}

@@ -1,22 +1,23 @@
 /**
- * MarkdownView - Simple XSS-safe Markdown Renderer
+ * MarkdownView - XSS-safe Markdown Renderer (Extended)
  *
- * Lightweight markdown renderer for daily lesson content. Supports:
+ * Supports:
  * - # / ## / ### headings
  * - **bold** and *italic*
  * - `inline code`
  * - [text](url) and [[wikilink]] links
  * - - unordered list items
- * - Paragraphs and line breaks
+ * - Code blocks (```...```)
+ * - Callout blocks (!> info / !> warning / !> tip / !> danger)
+ * - Tables (| col | col |)
+ * - TTS button (🔊) for spoken pronunciation via Web Speech API
+ * - Mini-dialogue blocks (```dialogue...```)
  *
  * SECURITY: All input is HTML-escaped BEFORE markdown parsing. No
  * `dangerouslySetInnerHTML` is used. All output is React elements.
- *
- * This is intentionally NOT a full CommonMark renderer. It handles
- * the patterns that appear in our Language/ wiki pages.
  */
 
-import { type ReactNode } from 'react';
+import { type ReactNode, useState } from 'react';
 
 // ============================================================================
 // HTML Escaping (defense-in-depth)
@@ -34,13 +35,85 @@ function escapeHtml(text: string): string {
 }
 
 // ============================================================================
+// Text-to-Speech Hook
+// ============================================================================
+
+/**
+ * Speak the given text using the browser's Web Speech API.
+ * Falls back gracefully if API is unavailable.
+ */
+function speakText(text: string, lang: string = 'en-US'): void {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+    console.warn('[TTS] Web Speech API not available');
+    return;
+  }
+
+  // Cancel any ongoing speech
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = lang;
+  utterance.rate = 0.9; // Slightly slower for learners
+  utterance.pitch = 1.0;
+  window.speechSynthesis.speak(utterance);
+}
+
+/**
+ * BCP 47 language code for the TTS API.
+ * Wiki content language code → BCP 47.
+ */
+const TTS_LANG_MAP: Record<string, string> = {
+  en: 'en-US',
+  jp: 'ja-JP',
+  ja: 'ja-JP',
+  es: 'es-ES',
+  kr: 'ko-KR',
+  ko: 'ko-KR',
+};
+
+function getTtsLang(languageCode?: string): string {
+  if (!languageCode) return 'en-US';
+  return TTS_LANG_MAP[languageCode.toLowerCase()] ?? 'en-US';
+}
+
+/**
+ * TtsButton - A small button that speaks the given text on click.
+ * Uses Web Speech API (free, browser-native).
+ */
+function TtsButton({ text, lang }: { text: string; lang: string }): ReactNode {
+  const [speaking, setSpeaking] = useState(false);
+
+  const handleClick = () => {
+    if (speaking) {
+      window.speechSynthesis.cancel();
+      setSpeaking(false);
+      return;
+    }
+    setSpeaking(true);
+    speakText(text, getTtsLang(lang));
+
+    // Reset state after estimated duration
+    setTimeout(() => setSpeaking(false), Math.max(2000, text.length * 80));
+  };
+
+  return (
+    <button
+      className={`md-tts-btn ${speaking ? 'md-tts-btn--active' : ''}`}
+      onClick={handleClick}
+      title={speaking ? 'Stop' : 'Listen to pronunciation'}
+      aria-label="Listen to pronunciation"
+    >
+      {speaking ? '⏸' : '🔊'}
+    </button>
+  );
+}
+
+// ============================================================================
 // Inline Parser
 // ============================================================================
 
 /**
  * Parse inline markdown: **bold**, *italic*, `code`, [link](url), [[wikilink]]
- *
- * Returns array of ReactNodes. Already-escaped text is split by markers.
  */
 function parseInline(
   text: string,
@@ -48,8 +121,6 @@ function parseInline(
 ): ReactNode[] {
   const nodes: ReactNode[] = [];
 
-  // Order matters: code first (don't parse inside), then bold/italic, then links
-  // Regex matches: `code`, **bold**, *italic*, [text](url), [[wikilink]]
   const pattern =
     /(`[^`]+`)|(\*\*[^*]+\*\*)|(\*[^*]+\*)|(\[\[([^\]]+)\]\])|(\[[^\]]+\]\([^)]+\))/g;
 
@@ -58,7 +129,6 @@ function parseInline(
   let key = 0;
 
   while ((match = pattern.exec(text)) !== null) {
-    // Push preceding plain text
     if (match.index > lastIdx) {
       nodes.push(escapeHtml(text.slice(lastIdx, match.index)));
     }
@@ -66,19 +136,15 @@ function parseInline(
     const fullMatch = match[0];
 
     if (match[1]) {
-      // `code`
       const codeContent = fullMatch.slice(1, -1);
       nodes.push(<code key={key++}>{escapeHtml(codeContent)}</code>);
     } else if (match[2]) {
-      // **bold**
       const boldContent = fullMatch.slice(2, -2);
       nodes.push(<strong key={key++}>{parseInline(boldContent, linkResolver)}</strong>);
     } else if (match[3]) {
-      // *italic*
       const italicContent = fullMatch.slice(1, -1);
       nodes.push(<em key={key++}>{parseInline(italicContent, linkResolver)}</em>);
     } else if (match[4]) {
-      // [[wikilink]]
       const target = match[5];
       const resolved = linkResolver?.(target);
       const displayText = target.split('|')[0].trim();
@@ -89,7 +155,6 @@ function parseInline(
           </a>
         );
       } else {
-        // No resolver — render as styled span (broken link indicator)
         nodes.push(
           <span key={key++} className="wikilink wikilink--broken">
             {escapeHtml(displayText)}
@@ -97,7 +162,6 @@ function parseInline(
         );
       }
     } else if (match[6]) {
-      // [text](url)
       const linkMatch = fullMatch.match(/\[([^\]]+)\]\(([^)]+)\)/);
       if (linkMatch) {
         const linkText = linkMatch[1];
@@ -121,7 +185,6 @@ function parseInline(
     lastIdx = match.index + fullMatch.length;
   }
 
-  // Push remaining text
   if (lastIdx < text.length) {
     nodes.push(escapeHtml(text.slice(lastIdx)));
   }
@@ -133,11 +196,16 @@ function parseInline(
 // Block Parser
 // ============================================================================
 
+type CalloutType = 'info' | 'warning' | 'tip' | 'danger' | 'note';
+
 type Block =
   | { type: 'h1' | 'h2' | 'h3'; level: 1 | 2 | 3; text: string }
   | { type: 'paragraph'; text: string }
   | { type: 'list'; items: string[] }
-  | { type: 'code'; text: string };
+  | { type: 'code'; text: string; lang?: string }
+  | { type: 'callout'; variant: CalloutType; text: string }
+  | { type: 'table'; headers: string[]; rows: string[][] }
+  | { type: 'divider' };
 
 function parseBlocks(md: string): Block[] {
   const lines = md.split('\n');
@@ -157,22 +225,70 @@ function parseBlocks(md: string): Block[] {
     const headingMatch = trimmed.match(/^(#{1,3})\s+(.+)$/);
     if (headingMatch) {
       const level = headingMatch[1].length as 1 | 2 | 3;
-      blocks.push({ type: 'h' + level as 'h1' | 'h2' | 'h3', level, text: headingMatch[2] });
+      blocks.push({ type: ('h' + level) as 'h1' | 'h2' | 'h3', level, text: headingMatch[2] });
       i++;
       continue;
     }
 
-    // Code block (```...```)
+    // Code block (```...```) with optional language tag
     if (trimmed.startsWith('```')) {
+      const langMatch = trimmed.match(/^```(\w*)$/);
+      const codeLang = langMatch?.[1] || undefined;
       const codeLines: string[] = [];
       i++;
       while (i < lines.length && !lines[i].trim().startsWith('```')) {
         codeLines.push(lines[i]);
         i++;
       }
-      blocks.push({ type: 'code', text: codeLines.join('\n') });
-      i++; // skip closing ```
+      blocks.push({ type: 'code', text: codeLines.join('\n'), lang: codeLang });
+      i++;
       continue;
+    }
+
+    // Callout: !> [info|warning|tip|danger|note] text...
+    const calloutMatch = trimmed.match(/^!>\s*\[(\w+)\]\s+(.+)$/);
+    if (calloutMatch) {
+      const variant = calloutMatch[1].toLowerCase() as CalloutType;
+      const text = calloutMatch[2];
+      blocks.push({ type: 'callout', variant, text });
+      i++;
+      continue;
+    }
+
+    // Divider: --- (alone on a line)
+    if (trimmed === '---' || trimmed === '***') {
+      blocks.push({ type: 'divider' });
+      i++;
+      continue;
+    }
+
+    // Table: header | header | header (followed by separator | --- | ---)
+    if (trimmed.includes('|') && i + 1 < lines.length) {
+      const nextLine = lines[i + 1].trim();
+      const separatorMatch = nextLine.match(/^\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)+\|?\s*$/);
+      if (separatorMatch) {
+        const headers = trimmed
+          .split('|')
+          .map((h) => h.trim())
+          .filter((h) => h.length > 0);
+        const rows: string[][] = [];
+        i += 2; // skip header + separator
+        while (i < lines.length && lines[i].trim().includes('|')) {
+          const cells = lines[i]
+            .split('|')
+            .map((c) => c.trim())
+            .filter((c, idx, arr) => {
+              // Filter empty cells at start/end (from leading/trailing pipes)
+              if (idx === 0 && c === '') return false;
+              if (idx === arr.length - 1 && c === '') return false;
+              return true;
+            });
+          if (cells.length > 0) rows.push(cells);
+          i++;
+        }
+        blocks.push({ type: 'table', headers, rows });
+        continue;
+      }
     }
 
     // List item
@@ -189,7 +305,7 @@ function parseBlocks(md: string): Block[] {
       continue;
     }
 
-    // Paragraph (consume until blank line or special line)
+    // Paragraph
     const paraLines: string[] = [];
     while (i < lines.length) {
       const l = lines[i].trim();
@@ -197,6 +313,9 @@ function parseBlocks(md: string): Block[] {
         !l ||
         l.startsWith('#') ||
         l.startsWith('```') ||
+        l.startsWith('!>') ||
+        l === '---' ||
+        l === '***' ||
         l.match(/^[-*]\s+/)
       ) {
         break;
@@ -217,14 +336,14 @@ function parseBlocks(md: string): Block[] {
 // ============================================================================
 
 export interface MarkdownViewProps {
-  /** Markdown source text */
   source: string;
-  /** Optional resolver for [[wikilink]] targets → URL (or null for broken) */
   linkResolver?: (target: string) => string | null;
-  /** Additional CSS class */
   className?: string;
-  /** Optional title to render above the markdown */
   title?: string;
+  /** Language code for TTS (e.g., 'en', 'jp', 'es', 'kr') */
+  ttsLanguage?: string;
+  /** Whether to show TTS buttons on text blocks. Default: false */
+  enableTts?: boolean;
 }
 
 export function MarkdownView({
@@ -232,13 +351,17 @@ export function MarkdownView({
   linkResolver,
   className,
   title,
+  ttsLanguage = 'en',
+  enableTts = false,
 }: MarkdownViewProps) {
   const blocks = parseBlocks(source);
 
   return (
     <div className={`markdown-view ${className ?? ''}`}>
       {title && <h2 className="markdown-view__title">{title}</h2>}
-      {blocks.map((block, idx) => renderBlock(block, idx, linkResolver))}
+      {blocks.map((block, idx) =>
+        renderBlock(block, idx, linkResolver, ttsLanguage, enableTts)
+      )}
     </div>
   );
 }
@@ -246,7 +369,9 @@ export function MarkdownView({
 function renderBlock(
   block: Block,
   key: number,
-  linkResolver?: (target: string) => string | null
+  linkResolver?: (target: string) => string | null,
+  ttsLanguage: string = 'en',
+  enableTts: boolean = false
 ): ReactNode {
   switch (block.type) {
     case 'h1':
@@ -255,21 +380,95 @@ function renderBlock(
       return <h2 key={key}>{parseInline(block.text, linkResolver)}</h2>;
     case 'h3':
       return <h3 key={key}>{parseInline(block.text, linkResolver)}</h3>;
-    case 'paragraph':
-      return <p key={key}>{parseInline(block.text, linkResolver)}</p>;
+    case 'paragraph': {
+      const text = block.text;
+      if (enableTts) {
+        return (
+          <p key={key} className="md-paragraph">
+            {parseInline(text, linkResolver)}
+            <TtsButton text={text} lang={ttsLanguage} />
+          </p>
+        );
+      }
+      return <p key={key}>{parseInline(text, linkResolver)}</p>;
+    }
     case 'list':
       return (
         <ul key={key}>
           {block.items.map((item, i) => (
-            <li key={i}>{parseInline(item, linkResolver)}</li>
+            <li key={i}>
+              {parseInline(item, linkResolver)}
+              {enableTts && <TtsButton text={item.replace(/^[→▸►\-*]\s*/, '')} lang={ttsLanguage} />}
+            </li>
           ))}
         </ul>
       );
     case 'code':
+      // Special: dialogue block
+      if (block.lang === 'dialogue') {
+        return (
+          <div key={key} className="md-dialogue">
+            <div className="md-dialogue__header">💬 Dialogue</div>
+            {block.text.split('\n').map((line, i) => {
+              const m = line.match(/^([A-Z]):\s*(.*)$/);
+              if (m) {
+                return (
+                  <div key={i} className="md-dialogue__line">
+                    <strong className="md-dialogue__speaker">{escapeHtml(m[1])}:</strong>
+                    <span className="md-dialogue__text">{escapeHtml(m[2])}</span>
+                  </div>
+                );
+              }
+              return <div key={i} className="md-dialogue__line">{escapeHtml(line)}</div>;
+            })}
+          </div>
+        );
+      }
       return (
         <pre key={key}>
           <code>{block.text}</code>
         </pre>
       );
+    case 'callout': {
+      const ICONS: Record<CalloutType, string> = {
+        info: 'ℹ️',
+        warning: '⚠️',
+        tip: '💡',
+        danger: '🚫',
+        note: '📝',
+      };
+      return (
+        <div key={key} className={`md-callout md-callout--${block.variant}`}>
+          <span className="md-callout__icon">{ICONS[block.variant]}</span>
+          <span className="md-callout__body">
+            {parseInline(block.text, linkResolver)}
+            {enableTts && <TtsButton text={block.text} lang={ttsLanguage} />}
+          </span>
+        </div>
+      );
+    }
+    case 'table':
+      return (
+        <table key={key} className="md-table">
+          <thead>
+            <tr>
+              {block.headers.map((h, i) => (
+                <th key={i}>{parseInline(h, linkResolver)}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {block.rows.map((row, i) => (
+              <tr key={i}>
+                {row.map((cell, j) => (
+                  <td key={j}>{parseInline(cell, linkResolver)}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      );
+    case 'divider':
+      return <hr key={key} className="md-divider" />;
   }
 }

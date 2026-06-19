@@ -1408,3 +1408,44 @@ src/ui/ResultScreen.tsx (integrated)
 - 단일 Projects 경로가 활성 repo (AUDIT.md, 86+ 커밋)
 
 
+
+### [2026-06-20] content | Language 학습 컨텐츠 강화 (Phase A)
+
+**친절한 학습 자료**로 전환 — 모든 게임 콘텐츠의 진실 공급원(Language/) 보강.
+
+#### 1. 스키마 확장
+- `Language/schema/vocabulary.md` — 신규 필드 명세: Pronunciation, Memory Tip, Common Mistakes, Register, Frequency, Visual, Mini-Dialogue, Tier 시스템
+- `Language/schema/expression.md` — Pattern, Frequency, Register, Comparación 표 추가
+- `Language/schema/culture.md` — Setting, Roles, Scenario, Body Language, Cross-Reference 추가
+
+#### 2. 시드 콘텐츠 (4언어 × 5 vocab = 20개)
+모든 신규 필드 적용:
+- **EN**: beautiful, love, breakfast, kind, handsome
+- **JP**: 綺麗, 好き, 可愛い, 面白い, 優しい
+- **ES**: bonita, amar, beso, guapo, cita
+- **KR**: 사랑, 죄송합니다, 감사합니다, 안녕하세요, 친구
+
+각 단어에 IPA/음절/강세, 연상법, 흔한 실수, 격식, 빈도, 미니 대화, 문화 노트 포함.
+
+#### 3. Culture 4개 강화
+- english-dating-culture: Setting, Roles, Scenario (8단계), Body Language 표
+- japanese-dating-culture: 同棲, 脈あり/なし 시그널, 季節 문화
+- spanish-dating-culture: Vosotros 구분, España vs LatAm 차이, Piropos 라인
+- korean-dating-culture: 썸 단계, 100일 기념일, 호칭 체계
+
+#### 4. 게임 측 MarkdownView 확장
+- `MarkdownView.tsx` — callouts (!> [info|warning|tip|danger|note]), tables (| col | col |), dialogue blocks (```dialogue), dividers (---), TTS hooks (🔊 Web Speech API)
+- 4개국어 BCP 47 매핑 (en→en-US, jp→ja-JP, es→es-ES, kr→ko-KR)
+- `style.css` — md-callout, md-table, md-dialogue, md-tts-btn 스타일
+
+#### 5. 테스트 + 빌드
+- 17개 신규 MarkdownView 테스트 (callouts, tables, dialogue, TTS, integration)
+- 330 tests passed (1 skipped), 빌드 466.80 KB / gzip 138.52 KB
+- `dailyLessons.json` 자동 갱신 (확장 wiki 본문 포함, 검증 통과)
+
+#### 다음 단계
+- Phase B-1: Daily Lesson 3-티어 카드 (🟢 Quick / 🟡 Standard / 🔴 Deep)
+- Phase B-2: "Learn" 화면 (스테이지 시작 전 vocab 미리보기)
+- Phase B-3: 인게임 hover 툴팁
+- Phase B-4: Weak Words + Mastery Bar
+- Phase C: build/validate-daily-lessons.py 강화 (신규 필드 검증)

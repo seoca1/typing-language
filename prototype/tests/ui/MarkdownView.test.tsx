@@ -177,3 +177,185 @@ describe('MarkdownView — Complex Content', () => {
     expect(html).toContain('href="/word/first-travel-japan"');
   });
 });
+
+// ============================================================================
+// Extended Features (Phase A-4): callouts, tables, dialogue, TTS
+// ============================================================================
+
+describe('MarkdownView — Callouts', () => {
+  it('renders !> [info] callout', () => {
+    const html = render('!> [info] This is info');
+    expect(html).toContain('md-callout--info');
+    expect(html).toContain('This is info');
+    expect(html).toContain('ℹ️');
+  });
+
+  it('renders !> [warning] callout', () => {
+    const html = render('!> [warning] Be careful');
+    expect(html).toContain('md-callout--warning');
+    expect(html).toContain('⚠️');
+  });
+
+  it('renders !> [tip] callout', () => {
+    const html = render('!> [tip] Try this approach');
+    expect(html).toContain('md-callout--tip');
+    expect(html).toContain('💡');
+  });
+
+  it('renders !> [danger] callout', () => {
+    const html = render('!> [danger] Do not do this');
+    expect(html).toContain('md-callout--danger');
+    expect(html).toContain('🚫');
+  });
+
+  it('renders !> [note] callout', () => {
+    const html = render('!> [note] FYI');
+    expect(html).toContain('md-callout--note');
+    expect(html).toContain('📝');
+  });
+
+  it('callout text supports inline markdown', () => {
+    const html = render('!> [tip] Try **bold** text');
+    expect(html).toContain('<strong>bold</strong>');
+  });
+});
+
+describe('MarkdownView — Tables', () => {
+  it('renders simple table with header + separator + rows', () => {
+    const md = `
+| Type | Mode | When |
+| --- | --- | --- |
+| ojala | subjuntivo | wishing |
+| a ver si | indicativo | guessing |
+`;
+    const html = render(md);
+    expect(html).toContain('<table');
+    expect(html).toContain('<th>Type</th>');
+    expect(html).toContain('<th>Mode</th>');
+    expect(html).toContain('<th>When</th>');
+    expect(html).toContain('<td>ojala</td>');
+    expect(html).toContain('<td>subjuntivo</td>');
+  });
+
+  it('table supports inline markdown in cells', () => {
+    const md = `
+| A | B |
+| --- | --- |
+| **bold** | *italic* |
+`;
+    const html = render(md);
+    expect(html).toContain('<strong>bold</strong>');
+    expect(html).toContain('<em>italic</em>');
+  });
+
+  it('handles table with leading/trailing pipes', () => {
+    const md = `
+| A | B |
+| --- | --- |
+| 1 | 2 |
+`;
+    const html = render(md);
+    expect(html).toContain('<th>A</th>');
+    expect(html).toContain('<td>1</td>');
+  });
+});
+
+describe('MarkdownView — Dialogue Blocks', () => {
+  it('renders dialogue code block as styled dialogue', () => {
+    const md = '```dialogue\nA: Hello\nB: Hi there\n```';
+    const html = render(md);
+    expect(html).toContain('md-dialogue');
+    expect(html).toContain('Dialogue');
+    expect(html).toContain('md-dialogue__speaker');
+    expect(html).toContain('A:');
+    expect(html).toContain('Hello');
+  });
+
+  it('preserves dialogue lines without speaker prefix', () => {
+    const md = '```dialogue\nA: Hi\n```';
+    const html = render(md);
+    expect(html).toContain('A:');
+  });
+});
+
+describe('MarkdownView — Dividers', () => {
+  it('renders --- as hr', () => {
+    const html = render('Above\n\n---\n\nBelow');
+    expect(html).toContain('md-divider');
+  });
+
+  it('renders *** as hr', () => {
+    const html = render('Above\n\n***\n\nBelow');
+    expect(html).toContain('md-divider');
+  });
+});
+
+describe('MarkdownView — TTS', () => {
+  it('does not show TTS button by default', () => {
+    const html = render('Hello world');
+    expect(html).not.toContain('md-tts-btn');
+  });
+
+  it('shows TTS button when enableTts is true', () => {
+    const html = renderToStaticMarkup(
+      <MarkdownView source="Hello" enableTts={true} ttsLanguage="en" />
+    );
+    expect(html).toContain('md-tts-btn');
+    expect(html).toContain('🔊');
+  });
+
+  it('TTS button works on list items when enabled', () => {
+    const html = renderToStaticMarkup(
+      <MarkdownView
+        source="- Item 1\n- Item 2"
+        enableTts={true}
+        ttsLanguage="jp"
+      />
+    );
+    expect(html).toContain('md-tts-btn');
+  });
+});
+
+describe('MarkdownView — Integration with new fields', () => {
+  it('renders full enhanced vocab page', () => {
+    const md = `
+# beautiful
+
+**Part of Speech:** adjective
+**Level:** A2
+
+**Definition:** Pleasing the senses.
+
+**Memory Tip:** BEAU + ti + ful = beautiful
+
+## Examples
+
+- "You look beautiful tonight."
+
+\`\`\`dialogue
+A: You look beautiful.
+B: Thank you!
+\`\`\`
+
+## Cultural Notes
+
+- Be specific with compliments.
+
+!> [tip] Pair with eye contact + smile for sincerity
+
+| Type | Use |
+| --- | --- |
+| beautiful | people |
+| handsome | men |
+
+[[handsome]] — comparison
+`;
+    const html = render(md, (t) => `/word/${t}`);
+    expect(html).toContain('<h1>beautiful</h1>');
+    expect(html).toContain('md-callout--tip');
+    expect(html).toContain('md-dialogue');
+    expect(html).toContain('<table');
+    expect(html).toContain('Memory Tip');
+    expect(html).toContain('handsome');
+  });
+});
