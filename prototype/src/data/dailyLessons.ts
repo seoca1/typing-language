@@ -30,76 +30,145 @@ export interface WikiPage {
   body: string;
   /** 카테고리 */
   category: WikiCategory;
+  /** Phase A: tier (0-3) */
+  tier?: number;
+  /** Phase A: friendly field flags */
+  hasPronunciation?: boolean;
+  hasMemoryTip?: boolean;
+  hasCommonMistakes?: boolean;
+  hasDialogue?: boolean;
 }
 
-export interface DailyLesson {
-  /** 고유 ID: {lang}_{stem}_{date} */
+/**
+ * Internal storage format (v1.1+) — wiki pages stored once, lessons
+ * reference them by filename. This dramatically reduces file size when
+ * the same page appears in multiple lessons.
+ */
+export interface DailyLessonCompact {
   id: string;
-  /** 빌드 날짜 (YYYY-MM-DD) */
   date: string;
-  /** 학습 언어 */
   language: 'en' | 'jp' | 'es' | 'kr';
-  /** 출처 topic (source 페이지 filename) */
   sourceTopic: string;
-  /** 원본 (raw) 발췌 */
   raw: {
     sourceFile: string;
     excerpt: string;
   };
-  /** wiki 페이지 묶음 */
+  /** Filenames only — look up body in DailyLessonsData.wikiIndex */
+  vocabulary: string[];
+  expressions: string[];
+  culture: string | null;
+  meta: {
+    estimatedReadMinutes: number;
+    relatedStages: string[];
+    /** Phase A: tier distribution */
+    vocabTiers?: { tier1: number; tier2: number; tier3: number };
+    hasDialogue?: boolean;
+    wikilinkCount?: number;
+  };
+}
+
+export interface DailyLessonsDataCompact {
+  generatedAt: string;
+  schemaVersion: string;
+  lessonCount: number;
+  byLanguage: Record<string, number>;
+  /** Phase D: deduplicated wiki pages */
+  wikiIndex: Record<string, Omit<WikiPage, 'filename'>>;
+  lessons: DailyLessonCompact[];
+}
+
+/** Public type — consumers see this fully-joined view */
+export interface DailyLesson {
+  id: string;
+  date: string;
+  language: 'en' | 'jp' | 'es' | 'kr';
+  sourceTopic: string;
+  raw: {
+    sourceFile: string;
+    excerpt: string;
+  };
   wiki: {
     vocabulary: WikiPage[];
     expressions: WikiPage[];
     culture: WikiPage | null;
   };
-  /** 메타데이터 */
   meta: {
     estimatedReadMinutes: number;
-    /** 게임 스테이지 ID 목록 (e.g., ["en_d_1", "en_d_2"]) */
     relatedStages: string[];
+    vocabTiers?: { tier1: number; tier2: number; tier3: number };
+    hasDialogue?: boolean;
+    wikilinkCount?: number;
   };
 }
 
-export interface DailyLessonsData {
-  generatedAt: string;
-  schemaVersion: string;
-  lessonCount: number;
-  byLanguage: Record<string, number>;
-  lessons: DailyLesson[];
+// ============================================================================
+// Data Access — Phase D: v1.1 with deduplicated wiki index
+// ============================================================================
+
+const data = rawData as DailyLessonsDataCompact;
+
+function getPage(filename: string): WikiPage | null {
+  const entry = data.wikiIndex?.[filename];
+  if (!entry) return null;
+  return { filename, ...entry };
 }
 
-// ============================================================================
-// Data Access
-// ============================================================================
-
-const data = rawData as DailyLessonsData;
+function expandLesson(compact: DailyLessonCompact): DailyLesson {
+  return {
+    id: compact.id,
+    date: compact.date,
+    language: compact.language,
+    sourceTopic: compact.sourceTopic,
+    raw: compact.raw,
+    wiki: {
+      vocabulary: compact.vocabulary
+        .map(getPage)
+        .filter((p): p is WikiPage => p !== null),
+      expressions: compact.expressions
+        .map(getPage)
+        .filter((p): p is WikiPage => p !== null),
+      culture: compact.culture ? getPage(compact.culture) : null,
+    },
+    meta: compact.meta,
+  };
+}
 
 /**
- * 모든 lesson 반환.
+ * Get the deduplicated wiki page index (for cross-lesson lookups).
+ */
+export function getWikiIndex(): Record<string, Omit<WikiPage, 'filename'>> {
+  return data.wikiIndex;
+}
+
+/**
+ * 모든 lesson 반환 (joined).
  */
 export function getAllLessons(): DailyLesson[] {
-  return data.lessons;
+  return data.lessons.map(expandLesson);
 }
 
 /**
  * 언어별 lesson 필터.
  */
 export function getLessonsByLanguage(language: Language): DailyLesson[] {
-  return data.lessons.filter((l) => l.language === language);
+  return data.lessons.filter((l) => l.language === language).map(expandLesson);
 }
 
 /**
  * ID로 lesson 조회.
  */
 export function getLessonById(id: string): DailyLesson | null {
-  return data.lessons.find((l) => l.id === id) ?? null;
+  const compact = data.lessons.find((l) => l.id === id);
+  return compact ? expandLesson(compact) : null;
 }
 
 /**
  * Stage ID로 연관된 lesson 조회 (관련 stage 매칭).
  */
 export function getLessonsByStageId(stageId: string): DailyLesson[] {
-  return data.lessons.filter((l) => l.meta.relatedStages.includes(stageId));
+  return data.lessons
+    .filter((l) => l.meta.relatedStages.includes(stageId))
+    .map(expandLesson);
 }
 
 // ============================================================================
@@ -309,10 +378,15 @@ export function getDataSummary(): {
   total: number;
   byLanguage: Record<string, number>;
   generatedAt: string;
+  wikiPageCount: number;
+  /** Phase D: schema version (1.0 = legacy, 1.1 = dedup wiki index) */
+  schemaVersion: string;
 } {
   return {
     total: data.lessonCount,
     byLanguage: data.byLanguage,
     generatedAt: data.generatedAt,
+    wikiPageCount: Object.keys(data.wikiIndex ?? {}).length,
+    schemaVersion: data.schemaVersion,
   };
 }

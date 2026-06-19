@@ -1487,3 +1487,57 @@ Phase B-4: Weak Words + Mastery Bar
 #### 다음 단계
 - Phase C: build/validate-daily-lessons.py 강화 (신규 필드 검증)
 - Phase D: 일일 레슨 11 → 30개로 확장
+
+### [2026-06-20] pipeline | Phase C+D complete — content pipeline + 42 lessons
+
+#### Phase C: build/validate 파이프라인 강화
+
+**build-daily-lessons.py 확장**:
+- `detect_fields()` — Phase A 필드 자동 감지 (Pronunciation/Memory Tip/Common Mistakes/Register/Frequency/Mini-Dialogue/Etymology/Visual)
+- `classify_tier()` — Tier 1/2/3 자동 분류 (T1≥3 + T2≥2 + T3≥1 = Tier 3)
+- `extract_wikilink_targets()` — wikilink 인용 추출
+- `build_global_wiki_index()` — 크로스 레슨 위키 인덱스 (385 → 399 페이지)
+- 각 lesson에 `meta.vocabTiers`, `meta.hasDialogue`, `meta.wikilinkCount` 추가
+- Lessons를 tier 점수순으로 정렬 (풍부한 콘텐츠 우선)
+- **dedup wiki index 출력 (schema v1.1)**: 동일 wiki page를 1번만 저장 → 679KB → 191KB (71% 감소)
+
+**validate-daily-lessons.py 강화**:
+- Phase A 필드 감지 (validate_friendly_fields)
+- Tier 1/2/3 분류 (classify_page_tier)
+- 위키링크 해결 검증 (validate_wikilinks)
+- `--tier-report` 옵션: 언어별 Tier 분포, Pronunciation/Memory Tip/Common Mistakes/Dialogue 커버리지
+- v1.0 + v1.1 (dedup) 형식 모두 지원
+- 언어별 30개 권장 (IDEAL_LESSONS_PER_LANG)
+
+#### Phase D: 11 → 42 lessons 확장
+
+위키 source 페이지 24개 신규 추가 (각 언어당 6개):
+- **EN** (12 total): daily-life-basics, food-and-dining, shopping-and-money, technology-and-internet, health-and-body, holidays-and-celebrations, sports-and-hobbies, travel-adventure
+- **JP** (11 total): daily-life-basics, food-and-dining, shopping-and-money, technology-and-internet, health-and-body, holidays-and-celebrations, sports-and-hobbies, travel-adventure
+- **ES** (9 total): comida-y-restaurante, trabajo-y-carrera, viaje-aventura, fiestas-y-celebraciones
+- **KR** (10 total): daily-life-basics, food-and-dining, shopping-and-money, technology-and-internet, health-and-body, holidays-and-celebrations, sports-and-hobbies, travel-basics
+
+각 source는 5+ 어휘, 1+ 표현, 1+ 문화 노트, daily-life/health/tech/holidays/sports 등 다양한 주제 커버.
+
+#### 최종 통계
+
+| 항목 | 이전 | 현재 | 변화 |
+|---|---|---|---|
+| Total lessons | 11 | **42** | +281% |
+| Wiki pages indexed | 385 | **399** | +14 |
+| EN lessons | 2 | **12** | +500% |
+| JP lessons | 2 | **11** | +450% |
+| ES lessons | 5 | **9** | +80% |
+| KR lessons | 2 | **10** | +400% |
+| JSON file size | 207 KB | **191 KB** | -8% (dedup 효과) |
+| Bundle (gzip) | 144 KB | **165 KB** | +14% (콘텐츠 양) |
+
+#### 검증 결과
+- 350 tests passed (1 skipped)
+- 빌드 524.07 KB / gzip 165.13 KB
+- 검증 PASSED: 0 errors, 10 warnings (30개 미만 권장 + 위키링크)
+
+#### 다음 단계
+- 더 많은 source 페이지 추가 (30/lang 목표)
+- 기존 vocab 페이지 강화 (현재 13% 친화 필드 → 50%+ 목표)
+- wikilink 해결을 위한 source 페이지들 명시적 작성
