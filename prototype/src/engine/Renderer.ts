@@ -580,19 +580,23 @@ export class Renderer {
 
   /**
    * 떠다니는 단어 렌더링 (다른 언어 번역 효과)
+   *
+   * Words are now placed at canvas perimeter slots (corners + edges)
+   * to avoid covering the target text and input buffer in the center.
+   * Smaller, more transparent pills for less visual competition.
    */
   private drawFloatingWords(effects: EffectsState): void {
     for (const w of effects.floatingWords) {
       const lifeRatio = Math.max(0, w.life / w.maxLife);
 
-      // Fade in (first 15%) then fade out (last 50%)
-      let alpha = 1;
+      // Fade in (first 15%) then fade out (last 50%) — overall more transparent
+      let alpha = 0.85;
       if (lifeRatio < 0.15) {
-        alpha = lifeRatio / 0.15;
+        alpha = (lifeRatio / 0.15) * 0.85;
       } else if (lifeRatio < 0.5) {
-        alpha = 1;
+        alpha = 0.85;
       } else {
-        alpha = (lifeRatio - 0.5) / 0.5;
+        alpha = ((lifeRatio - 0.5) / 0.5) * 0.85;
       }
 
       this.ctx.save();
@@ -600,27 +604,27 @@ export class Renderer {
       this.ctx.translate(w.x, w.y);
       this.ctx.rotate((w.rotation * Math.PI) / 180);
 
-      // Background pill for readability
+      // Smaller background pill
       this.ctx.font = `bold ${w.fontSize}px -apple-system, sans-serif`;
       const textWidth = this.ctx.measureText(w.text).width;
-      const padX = 10;
-      const padY = 5;
+      const padX = 8;
+      const padY = 4;
       const pillW = textWidth + padX * 2;
       const pillH = w.fontSize + padY * 2;
 
-      this.ctx.fillStyle = 'rgba(15, 20, 35, 0.85)';
+      this.ctx.fillStyle = 'rgba(15, 20, 35, 0.7)';
       this.ctx.shadowColor = w.color;
-      this.ctx.shadowBlur = 14;
-      this.drawRoundRect(-pillW / 2, -pillH / 2, pillW, pillH, 8);
+      this.ctx.shadowBlur = 10;
+      this.drawRoundRect(-pillW / 2, -pillH / 2, pillW, pillH, 6);
       this.ctx.fill();
       this.ctx.shadowBlur = 0;
 
       // Language label (small flag-like)
       const langLabel = this.getLangFlag(w.lang);
-      this.ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
-      this.ctx.font = '9px -apple-system, sans-serif';
+      this.ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+      this.ctx.font = '8px -apple-system, sans-serif';
       this.ctx.textAlign = 'left';
-      this.ctx.fillText(langLabel, -pillW / 2 + padX - 2, -pillH / 2 + 10);
+      this.ctx.fillText(langLabel, -pillW / 2 + padX - 2, -pillH / 2 + 9);
 
       // Word text
       this.ctx.fillStyle = w.color;
@@ -633,53 +637,57 @@ export class Renderer {
   }
 
   /**
-   * 문장 영어 번역 미리보기 렌더링
+   * 문장 영어 번역 미리보기 렌더링 (top-left 배치, 게임 텍스트 안 가림)
+   *
+   * p.x, p.y are the top-left corner of the box.
+   * Smaller and more transparent than before.
    */
   private drawSentencePreview(effects: EffectsState): void {
     if (!effects.sentencePreview) return;
     const p = effects.sentencePreview;
     const lifeRatio = Math.max(0, p.life / p.maxLife);
 
-    let alpha = 1;
+    let alpha = 0.85;
     if (lifeRatio < 0.15) {
-      alpha = lifeRatio / 0.15;
+      alpha = (lifeRatio / 0.15) * 0.85;
     } else if (lifeRatio > 0.7) {
-      alpha = (1 - lifeRatio) / 0.3;
+      alpha = ((1 - lifeRatio) / 0.3) * 0.85;
     }
 
     this.ctx.save();
     this.ctx.globalAlpha = alpha;
 
-    this.ctx.font = 'italic 16px -apple-system, sans-serif';
+    // Smaller, italic — at top-left (out of game text area)
+    this.ctx.font = 'italic 13px -apple-system, sans-serif';
     const textWidth = this.ctx.measureText(p.text).width;
-    const padX = 14;
-    const boxW = textWidth + padX * 2;
-    const boxH = 32;
-    const boxX = p.x - boxW / 2;
-    const boxY = p.y - boxH / 2;
+    const padX = 10;
+    const boxW = Math.min(textWidth + padX * 2 + 50, this.width - 320);
+    const boxH = 24;
+    const boxX = p.x;
+    const boxY = p.y;
 
     // Subtle background
-    this.ctx.fillStyle = 'rgba(15, 20, 35, 0.92)';
+    this.ctx.fillStyle = 'rgba(15, 20, 35, 0.75)';
     this.ctx.strokeStyle = p.color;
-    this.ctx.lineWidth = 1.5;
+    this.ctx.lineWidth = 1;
     this.ctx.shadowColor = p.color;
-    this.ctx.shadowBlur = 10;
-    this.drawRoundRect(boxX, boxY, boxW, boxH, 10);
+    this.ctx.shadowBlur = 6;
+    this.drawRoundRect(boxX, boxY, boxW, boxH, 8);
     this.ctx.fill();
     this.ctx.stroke();
     this.ctx.shadowBlur = 0;
 
     // EN flag label
     this.ctx.fillStyle = 'rgba(180, 220, 255, 0.7)';
-    this.ctx.font = 'bold 9px -apple-system, sans-serif';
+    this.ctx.font = 'bold 8px -apple-system, sans-serif';
     this.ctx.textAlign = 'left';
-    this.ctx.fillText('🇺🇸 EN', boxX + 8, boxY + 12);
+    this.ctx.fillText('🇺🇸 EN', boxX + 6, boxY + 10);
 
     // Translation text
     this.ctx.fillStyle = p.color;
-    this.ctx.font = 'italic 16px -apple-system, sans-serif';
-    this.ctx.textAlign = 'center';
-    this.ctx.fillText(p.text, p.x, p.y + 6);
+    this.ctx.font = 'italic 13px -apple-system, sans-serif';
+    this.ctx.textAlign = 'left';
+    this.ctx.fillText(p.text, boxX + 36, boxY + 16);
 
     this.ctx.restore();
   }
@@ -798,24 +806,25 @@ export class Renderer {
     const sentenceMode = isSentence(targetText);
 
     if (sentenceMode) {
-      // For sentences: show English preview once at the start of typing
+      // For sentences: show English preview once at the start of typing.
+      // Place at top-left (p.x, p.y = top-left corner of box) to avoid
+      // covering the target text and input buffer in the center.
       if (buffer.length === 1 && state.language !== 'en') {
         const englishTranslation = getSentenceEnglishTranslation(state.language, targetText);
         if (englishTranslation) {
           showSentencePreview(
             effects,
             englishTranslation,
-            this.width / 2,
-            420, // Above the target text
-            3500, // Show for 3.5 seconds
+            300, // x = left edge of box
+            18, // y = top edge of box (just below the top score)
+            3500,
           );
         }
       }
     } else {
       // For words: show floating translations on each keystroke.
-      // Trigger on EVERY char (no throttle) so the wider spread effect is
-      // felt continuously as the user types — throttling made it look
-      // choppy with the new larger radius.
+      // Words are spawned at canvas perimeter slots (corners/edges) by
+      // EffectsSystem — centerX/centerY are ignored for positioning.
       const lookupDisplay = targetText;
       const lookupMeaning = state.currentEntry?.meaning;
 
@@ -823,17 +832,16 @@ export class Renderer {
         state.language,
         lookupDisplay,
         lookupMeaning,
-        3, // Show 3 words (was 2) for a fuller spread fan
+        3,
       );
 
       if (translations.length > 0) {
-        // Position above the target text
-        const centerY = 360;
         spawnFloatingWords(
           effects,
-          this.width / 2,
-          centerY,
+          this.width / 2, // ignored — kept for API compat
+          0, // ignored
           translations.map((t) => ({ text: t.display, lang: t.lang as 'en' | 'jp' | 'es' | 'kr' })),
+          { width: this.width, height: this.height },
         );
       }
     }

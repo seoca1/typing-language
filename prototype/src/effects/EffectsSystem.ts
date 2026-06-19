@@ -239,43 +239,74 @@ export function triggerShake(state: EffectsState, intensity: number, duration: n
  * @param centerY - 중심 y 좌표
  * @param words - 표시할 단어 배열 (각각 다른 언어)
  */
+/**
+ * Floating word perimeter positions (canvas corners + edges).
+ * These are the "safe zones" that don't overlap with the target text
+ * (y ~200-300), input buffer (y ~400-500), or virtual keyboard (y > 580).
+ *
+ * The renderer cycles through these slots so multiple words don't
+ * stack on top of each other.
+ *
+ * Coordinates assume a 1024x880 canvas — if different, the caller
+ * can pass width/height via the optional `bounds` parameter.
+ */
+const DEFAULT_PERIMETER_SLOTS: ReadonlyArray<{ x: number; y: number }> = [
+  // Top edge (above target text)
+  { x: 180, y: 50 },
+  { x: 380, y: 35 },
+  { x: 644, y: 35 },
+  { x: 844, y: 50 },
+  // Mid edges (left/right of canvas, between target and input)
+  { x: 60, y: 280 },
+  { x: 964, y: 280 },
+];
+
+export interface FloatingWordsBounds {
+  width: number;
+  height: number;
+}
+
 export function spawnFloatingWords(
   state: EffectsState,
-  centerX: number,
-  centerY: number,
+  _centerX: number,
+  _centerY: number,
   words: Array<{ text: string; lang: 'en' | 'jp' | 'es' | 'kr' }>,
+  bounds: FloatingWordsBounds = { width: 1024, height: 880 },
 ): void {
   // Cap concurrent floating words to avoid clutter.
-  // Higher limit than before (6 vs 4) so the wider spread is more dramatic.
-  while (state.floatingWords.length > 6) {
-    state.floatingWords.shift();
+  // Make room for incoming words (cap at 6 total)
+  const CAP = 6;
+  const roomNeeded = CAP - state.floatingWords.length;
+  if (roomNeeded < words.length) {
+    const toShift = words.length - roomNeeded;
+    for (let i = 0; i < toShift; i++) {
+      state.floatingWords.shift();
+    }
   }
+
+  // Scale perimeter slots to actual canvas size (proportional to default 1024×880)
+  const scaleX = bounds.width / 1024;
+  const scaleY = bounds.height / 880;
 
   for (let i = 0; i < words.length; i++) {
     const w = words[i];
 
-    // Spread words in a wide arc above and around the center.
-    // - angle range covers ~270° (upper hemisphere) so words fan out across
-    //   the top of the canvas, not just one side.
-    // - dist range 180~280 is much wider than the old 80~130 so the
-    //   translation effect is clearly visible at typing distance.
-    const baseAngle = -Math.PI / 2; // start pointing up
-    const spread = Math.PI * 1.5; // 270° arc
-    const angle =
-      baseAngle +
-      (spread * i) / Math.max(words.length - 1, 1) +
-      (Math.random() - 0.5) * 0.3; // small jitter
-    const dist = 180 + Math.random() * 100;
-    const targetX = centerX + Math.cos(angle) * dist;
-    const targetY = centerY + Math.sin(angle) * dist - 40;
+    // Cycle through perimeter slots so words spread across the canvas
+    // instead of stacking in the center where the text lives.
+    const slotIdx = (state.floatingWords.length + i) % DEFAULT_PERIMETER_SLOTS.length;
+    const slot = DEFAULT_PERIMETER_SLOTS[slotIdx];
+    const targetX = slot.x * scaleX + (Math.random() - 0.5) * 30;
+    const targetY = slot.y * scaleY + (Math.random() - 0.5) * 20;
 
-    // Initial position (centered around the typed character, slight scatter)
-    const startX = centerX + (Math.random() - 0.5) * 60;
-    const startY = centerY - 20 - Math.random() * 30;
+    // Spawn at a random perimeter slot too (not at center) so words
+    // don't fly inward toward the text. Add slight randomness.
+    const spawnSlot = DEFAULT_PERIMETER_SLOTS[(slotIdx + 1) % DEFAULT_PERIMETER_SLOTS.length];
+    const startX = spawnSlot.x * scaleX + (Math.random() - 0.5) * 40;
+    const startY = spawnSlot.y * scaleY + (Math.random() - 0.5) * 20;
 
-    // Velocity toward target with random scatter
-    const vx = (targetX - startX) * 0.5 + (Math.random() - 0.5) * 40;
-    const vy = (targetY - startY) * 0.5 - 30 - Math.random() * 40;
+    // Gentle drift velocity toward target slot (no big arc)
+    const vx = (targetX - startX) * 0.15 + (Math.random() - 0.5) * 8;
+    const vy = (targetY - startY) * 0.15 + (Math.random() - 0.5) * 8;
 
     state.floatingWords.push({
       x: startX,
@@ -285,10 +316,10 @@ export function spawnFloatingWords(
       text: w.text,
       lang: w.lang,
       color: getLangColor(w.lang),
-      fontSize: 20 + Math.random() * 8, // slightly larger (was 18-24)
-      life: 1500 + Math.random() * 400, // slightly longer (was 1400-1700)
-      maxLife: 1900,
-      rotation: (Math.random() - 0.5) * 24, // a bit less tilt (was 30)
+      fontSize: 14 + Math.random() * 4,
+      life: 1300 + Math.random() * 300,
+      maxLife: 1600,
+      rotation: (Math.random() - 0.5) * 12,
     });
   }
 }
