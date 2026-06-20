@@ -112,7 +112,11 @@ export function Menu({
   // 현재 언어의 스테이지만 필터링
   const languageStages = SAMPLE_STAGES.filter((s) => s.language === language);
   const byTier = stagesByTier(language);
-  const supportsTier0 = language === 'jp' || language === 'en' || language === 'es';
+  // Detect whether the current language has a Tier 0 section in SAMPLE_STAGES.
+  // Only JP has Tier 0 stages in the current corpus. EN/ES/KR start at Tier 1,
+  // so they don't show a Tier 0 section.
+  const supportsTier0 =
+    byTier[0] !== undefined && byTier[0].length > 0;
 
   // Phase I: compute stage locks for each stage based on prior clears
   // Use ALL language stages (including those from byTier without corpus)
@@ -200,9 +204,20 @@ export function Menu({
       {([1, 2, 3, 4, 5] as StageTier[]).map((tier) => {
         const tierStages = byTier[tier];
         if (tierStages.length === 0) return null;
+        // For EN/ES/KR (no Tier 0), Tier 1 is the first tier and is auto-unlocked.
+        // Show a small hint so the user knows why there's no prerequisite.
+        const showTier1Hint =
+          tier === 1 &&
+          !supportsTier0 &&
+          tierStages.some((s) => lockMap[s.id]?.unlocked);
         return (
           <section key={tier} className="tier-group">
             <h3 className="tier-title">{TIER_LABELS[tier]}</h3>
+            {showTier1Hint && (
+              <p className="tier-hint tier-hint-auto">
+                ✨ 시작 단계 — 바로 플레이할 수 있어요
+              </p>
+            )}
             <div className="stage-grid">
               {tierStages.map((s) => (
                 <StageCard

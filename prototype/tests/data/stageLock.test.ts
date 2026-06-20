@@ -13,6 +13,7 @@ import {
   countNewlyUnlocked,
 } from '../../src/data/stageLock.js';
 import type { StageRecord } from '../../src/types.js';
+import { SAMPLE_STAGES } from '../../src/data/stages.js';
 
 function makeRecord(
   stageId: string,
@@ -179,6 +180,60 @@ describe('stageLock — multi-language', () => {
 
     const records = makeRecords([['en_1_1', true]]);
     expect(checkStageUnlocked('en_2_1', records).unlocked).toBe(true);
+  });
+
+  // Regression coverage — bug fixed in commit 8c1b60d
+  // "Tier 1 permanently locked in EN/ES/KR because no Tier 0 stages exist"
+  // These tests prevent regression by exhaustively checking all Tier 1 stages
+  // across all 4 languages with multiple record scenarios.
+  it('REGRESSION: All SAMPLE_STAGES Tier 1 stages — empty records', () => {
+    const tier1 = SAMPLE_STAGES.filter((s) => /_1_\d+$/.test(s.id));
+    expect(tier1.length).toBeGreaterThan(0);
+
+    for (const stage of tier1) {
+      const lock = checkStageUnlocked(stage.id, {});
+      const lang = stage.id.split('_')[0];
+      if (lang === 'jp') {
+        // JP has Tier 0, so Tier 1 correctly requires it
+        expect(lock.unlocked, `${stage.id} should be locked`).toBe(false);
+      } else {
+        // EN/ES/KR have no Tier 0, so Tier 1 auto-unlocked
+        expect(lock.unlocked, `${stage.id} should be unlocked`).toBe(true);
+      }
+    }
+  });
+
+  it('REGRESSION: Stale localStorage with hypothetical en_0_1 (not cleared) does not block Tier 1', () => {
+    // Old game version may have saved stageRecords with stage IDs that no longer exist
+    const staleRecords = makeRecords([
+      ['en_0_1', false], // exists but not cleared
+      ['es_0_1', false],
+      ['kr_0_1', false],
+    ]);
+    expect(checkStageUnlocked('en_1_1', staleRecords).unlocked).toBe(true);
+    expect(checkStageUnlocked('es_1_1', staleRecords).unlocked).toBe(true);
+    expect(checkStageUnlocked('kr_1_1', staleRecords).unlocked).toBe(true);
+  });
+
+  it('REGRESSION: Cross-language records do not unlock other languages', () => {
+    const jpRecords = makeRecords([['jp_0_1', true]]);
+    // EN/ES/KR Tier 1 still auto-unlocked regardless of JP state
+    expect(checkStageUnlocked('en_1_1', jpRecords).unlocked).toBe(true);
+    expect(checkStageUnlocked('es_1_1', jpRecords).unlocked).toBe(true);
+    expect(checkStageUnlocked('kr_1_1', jpRecords).unlocked).toBe(true);
+    // JP Tier 1 now unlocked (because jp_0_1 cleared)
+    expect(checkStageUnlocked('jp_1_1', jpRecords).unlocked).toBe(true);
+  });
+
+  it('REGRESSION: After clearing all Tier 1 stages, Tier 2 unlocks for EN/ES/KR', () => {
+    const records = makeRecords([
+      ['en_1_1', true], ['en_1_2', true], ['en_1_3', true],
+      ['es_1_1', true], ['es_1_2', true],
+      ['kr_1_1', true], ['kr_1_2', true], ['kr_1_3', true],
+    ]);
+    expect(checkStageUnlocked('en_2_1', records).unlocked).toBe(true);
+    expect(checkStageUnlocked('es_2_1', records).unlocked).toBe(true);
+    expect(checkStageUnlocked('kr_2_1', records).unlocked).toBe(true);
   });
 });
 

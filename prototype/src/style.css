@@ -430,6 +430,21 @@ button:hover {
   letter-spacing: 0.05em;
 }
 
+.tier-hint {
+  font-size: 0.78rem;
+  margin: 0 0 0.6rem 0;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(120, 220, 180, 0.08);
+  color: var(--accent-2);
+  border-left: 3px solid var(--accent-2);
+}
+
+.tier-hint-auto {
+  /* Subtle "auto-unlocked" hint for EN/ES/KR Tier 1 (no Tier 0 prerequisite) */
+  font-style: italic;
+}
+
 .tier-badge {
   display: inline-block;
   background: var(--bg);

@@ -18,14 +18,23 @@
 
 import type { StageTier } from '../data/stages.js';
 import type { StageRecord } from '../types.js';
-import { SAMPLE_STAGES } from '../data/stages.js';
+import { ALL_STAGES } from '../data/stages.js';
 
 /** Romance/Travel special unlock thresholds */
 const ROMANCE_MIN_CLEARS = 2;
 const TRAVEL_MIN_CLEARS = 3;
 
 /**
- * Pre-computed: which tiers exist for each language (from SAMPLE_STAGES).
+ * Pre-computed: which tiers exist for each language (from ALL_STAGES — the
+ * full stage definitions, including corpus-pending stages).
+ *
+ * Why ALL_STAGES instead of SAMPLE_STAGES?
+ * - SAMPLE_STAGES filters out stages requiring missing corpus (Tier 4+ for most languages).
+ * - ALL_STAGES gives us the COMPLETE tier range, so unlocking logic remains
+ *   correct even when corpus is added later.
+ * - Example: If EN Tier 4 becomes available, the prevTier=3 check still works
+ *   because ALL_LANGUAGES_TIERS.en includes both 3 and 4.
+ *
  * Used to detect languages without Tier 0 (EN, ES, KR).
  *
  * Examples:
@@ -36,7 +45,7 @@ const TRAVEL_MIN_CLEARS = 3;
  */
 const ALL_LANGUAGES_TIERS: Record<string, Set<number>> = (() => {
   const map: Record<string, Set<number>> = {};
-  for (const stage of SAMPLE_STAGES) {
+  for (const stage of ALL_STAGES) {
     const m = stage.id.match(/_(\d+)_\d+$/);
     if (!m) continue;
     if (!map[stage.language]) map[stage.language] = new Set();
