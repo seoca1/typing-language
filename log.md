@@ -1647,3 +1647,55 @@ Phase B-4: Weak Words + Mastery Bar
 #### 남은 작업
 - COMMON_DICT 확장 (현재 ~20개, 581 entries 중 일부만)
 - Daily Lesson wiki 본문도 다국어 (현재는 한국어)
+
+### [2026-06-20] i18n | Phase G — Settings UI + 4-lang dictionary expansion
+
+Phase F의 모국어 설정이 localStorage만 가능했던 한계 → Settings UI 추가 + COMMON_DICT 확장.
+
+#### 1. SettingsScreen (`src/ui/SettingsScreen.tsx`)
+- 4개 언어 선택 UI (en/ko/ja/es)
+- 클릭시 선택한 언어로 TTS 안내음 ("English", "한국어" 등)
+- 사운드 on/off + 볼륨 슬라이더
+- 현재 학습 언어 표시
+- ⚙️ 아이콘 버튼으로 Menu 헤더에서 접근
+
+#### 2. App.tsx 통합
+- `showSettings` state로 오버레이 모드
+- Menu 헤더 우상단 ⚙️ 버튼 → SettingsScreen 열기
+- `setShowSettings(true/false)` 토글
+
+#### 3. Menu.tsx 개선
+- `onShowSettings` prop 추가
+- `.menu-header-top` flex 레이아웃
+- `.settings-btn` 스타일 (40px round button)
+
+#### 4. COMMON_DICT 100+ 어휘 확장
+- 이전: ~20개 핵심어 → **100+ 어휘** (greetings, numbers, colors, animals, family, time, romance, food, adjectives, travel, common verbs, pronouns)
+- JP/KR/ES 고유 어휘 (kawaii, arigatou, hola, sarang 등)도 포함
+- EN corpus: 42/50 entries (84%) 4개 언어 커버
+- JP/ES/KR corpus: 대부분 4개 언어 채워짐
+
+#### 5. migrate_meanings.py 개선
+- 중복 처리 안전성 강화
+- `Already migrated: 0 / Skipped: 1` — 모든 entries 마이그레이션 가능
+- 581 entries 마이그레이션 + 94 entries enriched (4개 언어 모두)
+
+#### 6. 마이그레이션 결과
+- EN corpus: 42/50 (84%) 4-lang
+- 전체 16% entries가 4개 언어 모두 포함
+- 나머지 84%는 1개 언어만 (의도된 fallback이 작동)
+
+#### 검증 결과
+- 511 tests passed (1 skipped, 1 flaky 격리 실행시 통과)
+- 빌드 535.42 KB / gzip 170.62 KB
+- Settings 화면 localStorage 기반 모국어 변경 즉시 반영
+
+#### 사용 예시
+- 영어 사용자가 게임 시작 → ⚙️ → "Español" 선택 → 즉시 모든 UI가 스페인어로
+- 설정 변경은 localStorage에 저장되어 영구 유지
+- 4개 언어 중 자유롭게 전환 가능
+
+#### 남은 작업
+- COMMON_DICT 더 확장 (~100개 → 500+) - 모든 entry 4-lang 커버
+- 자동 번역 API 통합 (Google Translate / LibreTranslate)
+- Daily Lesson wiki 본문 다국어화

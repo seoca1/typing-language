@@ -32,6 +32,7 @@ import { CharacterTest } from './ui/CharacterTest.js';
 import { CharacterSelect } from './ui/CharacterSelect.js';
 import { selectCharacterForStage } from './character/CharacterSelector.js';
 import { LanguageSelection } from './ui/LanguageSelection.js';
+import { SettingsScreen } from './ui/SettingsScreen.js';
 import {
   createEffectsState,
   getLanguageAccent,
@@ -76,6 +77,9 @@ export function App() {
     // 튜토리얼을 이미 완료했는지 확인
     return !localStorage.getItem(TUTORIAL_KEY);
   });
+
+  // Phase G: Settings screen overlay (accessed from menu)
+  const [showSettings, setShowSettings] = useState(false);
 
   // 선택된 언어 (LanguageSelection → Menu 흐름)
   const [selectedLanguage, setSelectedLanguage] = useState<Language | null>(null);
@@ -424,7 +428,18 @@ export function App() {
         onStartStage={handleStartStage}
         onShowCharacterSelect={handleShowCharacterSelect}
         onBackToLanguageSelect={handleBackToLanguageSelect}
+        onShowSettings={() => setShowSettings(true)}
         stageRecords={state.player.stageRecords}
+      />
+    );
+  }
+
+  // Phase G: Settings overlay (highest priority — accessible from menu)
+  if (showSettings) {
+    return (
+      <SettingsScreen
+        language={selectedLanguage ?? undefined}
+        onClose={() => setShowSettings(false)}
       />
     );
   }

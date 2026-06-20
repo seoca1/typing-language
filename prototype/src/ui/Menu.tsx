@@ -14,6 +14,8 @@ interface MenuProps {
   onStartStage: (stage: StageConfig) => void;
   onShowCharacterSelect: (language: string) => void;
   onBackToLanguageSelect: () => void;
+  /** Phase G: Settings screen launcher */
+  onShowSettings?: () => void;
   stageRecords?: Record<string, StageRecord>;
 }
 
@@ -76,6 +78,7 @@ export function Menu({
   onStartStage,
   onShowCharacterSelect,
   onBackToLanguageSelect,
+  onShowSettings,
   stageRecords,
 }: MenuProps) {
   // 현재 언어의 스테이지만 필터링
@@ -98,9 +101,21 @@ export function Menu({
   return (
     <div className="menu">
       <header className="menu-header">
-        <button className="back-btn" onClick={onBackToLanguageSelect}>
-          ← 언어 선택으로
-        </button>
+        <div className="menu-header-top">
+          <button className="back-btn" onClick={onBackToLanguageSelect}>
+            ← 언어 선택으로
+          </button>
+          {onShowSettings && (
+            <button
+              className="settings-btn"
+              onClick={onShowSettings}
+              aria-label="Settings"
+              title="Settings"
+            >
+              ⚙️
+            </button>
+          )}
+        </div>
         <h1>
           {flag} {langInfo.native}
           <small> · {langInfo.en}</small>
