@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { MissionConfig, StageRecord } from '../types.js';
 import { DailyLessonCard } from './DailyLessonCard.js';
 import { DailyLessonModal } from './DailyLessonModal.js';
@@ -16,6 +16,10 @@ import { getNativeLanguage } from '../data/nativeLanguage.js';
 import { t } from '../data/uiTranslations.js';
 import { SAMPLE_STAGES } from '../data/stages.js';
 import { countNewlyUnlocked } from '../data/stageLock.js';
+import {
+  recordPlay,
+  type DailyStreakState,
+} from '../data/dailyStreak.js';
 
 interface ResultScreenProps {
   score: number;
@@ -60,6 +64,26 @@ export function ResultScreen({
     delete prevRecords[clearedStageId];
     const allStageIds = SAMPLE_STAGES.map((s) => s.id);
     return countNewlyUnlocked(allStageIds, prevRecords, stageRecords);
+  }, [stageRecords, clearedStageId]);
+
+  // Phase J: Record today's play and capture streak milestone
+  const [streakInfo, setStreakInfo] = useState<{
+    state: DailyStreakState;
+    newMilestone?: { days: number; icon: string; label: string };
+  } | null>(null);
+
+  useEffect(() => {
+    if (stageRecords && clearedStageId) {
+      const record = stageRecords[clearedStageId];
+      if (record?.cleared) {
+        // Only record if the stage was actually cleared (not just attempted)
+        const result = recordPlay();
+        setStreakInfo({
+          state: result.state,
+          newMilestone: result.newMilestone,
+        });
+      }
+    }
   }, [stageRecords, clearedStageId]);
 
   // Phase B-4: Weak Words from this session
@@ -109,6 +133,27 @@ export function ResultScreen({
               {newlyUnlocked.length > 3 && (
                 <span className="unlock-chip">+{newlyUnlocked.length - 3} more</span>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Phase J: Daily Streak Celebration */}
+      {streakInfo && (
+        <div className={`result-streak-banner ${streakInfo.newMilestone ? 'result-streak-banner--milestone' : ''}`}>
+          <div className="result-streak-banner__icon">
+            {streakInfo.newMilestone?.icon ||
+              (streakInfo.state.currentStreak >= 7 ? '🔥' : '📅')}
+          </div>
+          <div className="result-streak-banner__text">
+            <strong>
+              {streakInfo.newMilestone?.label ||
+                `${streakInfo.state.currentStreak}-day streak`}
+            </strong>
+            <div className="result-streak-banner__sub">
+              {streakInfo.newMilestone
+                ? `🎉 New milestone! Come back tomorrow for ${streakInfo.newMilestone.days + 1}!`
+                : `Longest streak: ${streakInfo.state.longestStreak} days · Total: ${streakInfo.state.totalDaysPlayed}`}
             </div>
           </div>
         </div>
@@ -255,6 +300,40 @@ export function ResultScreen({
           border-radius: 12px;
           font-size: 11px;
           font-family: monospace;
+        }
+
+        /* Phase J: Streak Banner */
+        .result-streak-banner {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          background: rgba(255, 107, 157, 0.1);
+          border: 1px solid #ff6b9d;
+          border-radius: 12px;
+          padding: 12px 16px;
+          margin: 12px 0;
+        }
+        .result-streak-banner--milestone {
+          background: linear-gradient(135deg, rgba(255, 107, 157, 0.2), rgba(255, 170, 85, 0.2));
+          border: 2px solid #ff6b9d;
+          animation: streakCelebrate 2s ease-in-out infinite;
+        }
+        @keyframes streakCelebrate {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.02); }
+        }
+        .result-streak-banner__icon {
+          font-size: 28px;
+        }
+        .result-streak-banner__text strong {
+          font-size: 16px;
+          color: #ff6b9d;
+          display: block;
+        }
+        .result-streak-banner__sub {
+          font-size: 12px;
+          color: #b4d2fa;
+          margin-top: 2px;
         }
         .mastery-bar {
           background: #1a2530;

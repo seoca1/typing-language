@@ -1794,3 +1794,52 @@ Phase H는 Phase G에서 발견된 5개 unresolved wikilinks 해결.
 - 현재: 자연스러운 진행 (Tier 0 → Tier 1 → ... → Romance/Travel)
 - 진행 상황 시각화, 동기 부여
 - 단계별 학습 곡선 형성
+
+### [2026-06-20] feat | Phase J — Daily streak tracking
+
+매일 플레이를 장려하는 일일 streak 시스템.
+
+#### 1. dailyStreak.ts 모듈
+- `recordPlay(fakeToday?)` — 오늘 플레이 기록, streak 업데이트
+- `getStreakDisplay()` — UI 표시용 상태 (`status: 'new'|'continue'|'broken'|'none'`)
+- Streak milestones: 3/7/14/30/50/100/365 일 (🌱/🔥/⚡/🏆/👑/💯/🎉)
+- `resetStreak()` — 테스트/리셋용
+- localStorage 영속화 + in-memory fallback
+
+#### 2. Menu 헤더 streak 표시
+- 🔥/📅/⏰/💔/🌱 5개 상태에 따라 다른 아이콘/색
+- "5" (현재 streak) 한 줄로 표시
+- 호버시 전체 텍스트 ("5-day streak (play today!)")
+
+#### 3. ResultScreen streak 배너
+- 새 streak 또는 마일스톤 도달시 축하 배너
+- 마일스톤: 펄스 애니메이션 + "🎉 New milestone!"
+- 일반 streak: 상태 표시 ("Longest: X days · Total: Y")
+- "Come back tomorrow for X!" 메시지
+
+#### 4. 테스트 (15개 신규)
+- 첫 플레이 → streak=1
+- 같은 날 두번째 → 변화 없음
+- 다음 날 → streak+1
+- 3일 연속 → streak=3, longest=3
+- 1일 skip → streak=1 (reset), longest 유지
+- Milestones (3, 7, 14, 30, 100, 365) 트리거
+- 같은 마일스톤 재트리거 방지 (lastMilestone 추적)
+- localStorage 영속화
+- Reset 동작
+
+#### 검증 결과
+- 545 tests passed (1 skipped) — 이전 530 + 15 신규
+- 빌드 616.90 KB / gzip 195.64 KB
+- streak 시스템 동작 확인
+
+#### 사용자 경험
+- Menu 상단에 오늘의 streak 즉시 확인 (📅 5)
+- 7일+ 연속시 🔥 아이콘
+- 놓치면 💔 (broken) → 다음 플레이시 1부터 재시작
+- 마일스톤 도달시 Result에 축하 배너
+
+#### 향후 개선
+- Streak 보호권 (주 1일 쉬어도 OK)
+- 주말 보너스 (주말에 더 많은 XP)
+- 친구와 streak 비교

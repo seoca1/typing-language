@@ -12,6 +12,7 @@ import {
   checkStageUnlocked,
   type StageLockInfo,
 } from '../data/stageLock.js';
+import { getStreakDisplay } from '../data/dailyStreak.js';
 
 interface MenuProps {
   language: Language;
@@ -116,6 +117,9 @@ export function Menu({
     languageStages.map((s) => [s.id, checkStageUnlocked(s.id, records)])
   );
 
+  // Phase J: daily streak display
+  const streak = getStreakDisplay();
+
   const languageNames: Record<string, { native: string; en: string }> = {
     en: { native: 'English', en: '영어' },
     jp: { native: '日本語', en: '일본어' },
@@ -135,16 +139,24 @@ export function Menu({
           <button className="back-btn" onClick={onBackToLanguageSelect}>
             ← 언어 선택으로
           </button>
-          {onShowSettings && (
-            <button
-              className="settings-btn"
-              onClick={onShowSettings}
-              aria-label="Settings"
-              title="Settings"
+          <div className="menu-header-top-right">
+            <span
+              className={`streak-badge streak-badge--${streak.status}`}
+              title={streak.text}
             >
-              ⚙️
-            </button>
-          )}
+              {streak.icon} {streak.count > 0 ? streak.count : '—'}
+            </span>
+            {onShowSettings && (
+              <button
+                className="settings-btn"
+                onClick={onShowSettings}
+                aria-label="Settings"
+                title="Settings"
+              >
+                ⚙️
+              </button>
+            )}
+          </div>
         </div>
         <h1>
           {flag} {langInfo.native}
