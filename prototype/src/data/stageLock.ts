@@ -18,10 +18,32 @@
 
 import type { StageTier } from '../data/stages.js';
 import type { StageRecord } from '../types.js';
+import { SAMPLE_STAGES } from '../data/stages.js';
 
 /** Romance/Travel special unlock thresholds */
 const ROMANCE_MIN_CLEARS = 2;
 const TRAVEL_MIN_CLEARS = 3;
+
+/**
+ * Pre-computed: which tiers exist for each language (from SAMPLE_STAGES).
+ * Used to detect languages without Tier 0 (EN, ES, KR).
+ *
+ * Examples:
+ * - EN: {1, 2, 3, 4, 5} — no Tier 0
+ * - JP: {0, 1, 2, 3, 4, 5} — full range
+ * - ES: {1, 2, 3, 4, 5} — no Tier 0
+ * - KR: {1, 2, 3, 4, 5} — no Tier 0
+ */
+const ALL_LANGUAGES_TIERS: Record<string, Set<number>> = (() => {
+  const map: Record<string, Set<number>> = {};
+  for (const stage of SAMPLE_STAGES) {
+    const m = stage.id.match(/_(\d+)_\d+$/);
+    if (!m) continue;
+    if (!map[stage.language]) map[stage.language] = new Set();
+    map[stage.language].add(parseInt(m[1], 10));
+  }
+  return map;
+})();
 
 export interface StageLockInfo {
   /** Is this stage unlocked? */
@@ -95,6 +117,19 @@ export function checkStageUnlocked(
   // Extract language prefix (e.g., "en" from "en_0_1")
   const langPrefix = stageId.split('_')[0];
   const prevTier = currentTier - 1;
+
+  // Check if prevTier actually exists for this language by scanning
+  // ALL_STAGES (the full stage definitions). If no stage exists at
+  // prevTier for this language (e.g., EN/ES/KR have no Tier 0),
+  // then this tier is the lowest and auto-unlocked.
+  // NOTE: This requires `langPrefix` to match a real language.
+  const prevTierHasStages = ALL_LANGUAGES_TIERS[langPrefix]?.has(prevTier) ?? true;
+
+  if (!prevTierHasStages) {
+    // No stages exist at prevTier for this language → auto-unlocked
+    return { unlocked: true };
+  }
+
   const prevTierCleared = Object.entries(stageRecords).some(
     ([id, record]) => {
       if (!record.cleared) return false;

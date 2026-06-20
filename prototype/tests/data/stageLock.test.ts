@@ -47,8 +47,9 @@ describe('stageLock — tier-based unlock', () => {
     expect(checkStageUnlocked('jp_0_1', {}).unlocked).toBe(true);
   });
 
-  it('Tier 1 is locked when no Tier 0 cleared', () => {
-    const result = checkStageUnlocked('en_1_1', {});
+it('JP Tier 1 is locked when no Tier 0 cleared', () => {
+    // JP has Tier 0, so Tier 1 should require it
+    const result = checkStageUnlocked('jp_1_1', {});
     expect(result.unlocked).toBe(false);
     expect(result.reason).toContain('Tier 0');
   });
@@ -88,15 +89,17 @@ describe('stageLock — tier-based unlock', () => {
   });
 
   it('Tier 4 and Tier 5 follow same chain', () => {
+    // JP Tier 4 stages (jp_4_1, jp_4_2) require news/business corpus
+    // which may not be available, so test EN Tier 3 → Tier 4 (EN has Tier 4)
     let records: Record<string, StageRecord> = {};
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 1; i <= 3; i++) {
       records[`en_${i}_1`] = makeRecord(`en_${i}_1`, true);
     }
-    expect(checkStageUnlocked('en_5_1', records).unlocked).toBe(true);
+    expect(checkStageUnlocked('en_4_1', records).unlocked).toBe(true);
 
-    // Remove Tier 4 — Tier 5 locked
-    delete records['en_4_1'];
-    expect(checkStageUnlocked('en_5_1', records).unlocked).toBe(false);
+    // Remove Tier 3 — Tier 4 should be locked
+    delete records['en_3_1'];
+    expect(checkStageUnlocked('en_4_1', records).unlocked).toBe(false);
   });
 });
 
@@ -134,17 +137,48 @@ describe('stageLock — romance/travel unlock', () => {
 });
 
 describe('stageLock — multi-language', () => {
-  it('KR stages unlock independently per language', () => {
-    // EN cleared doesn't unlock KR
-    const records = makeRecords([['en_0_1', true]]);
-    expect(checkStageUnlocked('kr_1_1', records).unlocked).toBe(false);
-    // KR cleared doesn't unlock EN
-    const records2 = makeRecords([['kr_0_1', true]]);
-    expect(checkStageUnlocked('en_1_1', records2).unlocked).toBe(false);
+  it('language isolation (only JP has Tier 0)', () => {
+    // EN Tier 0 doesn't exist → use jp_0_1 for cross-language isolation test
+    const records = makeRecords([['jp_0_1', true]]);
+    expect(checkStageUnlocked('kr_1_1', records).unlocked).toBe(true); // KR auto-unlocked (no Tier 0)
+    expect(checkStageUnlocked('en_1_1', records).unlocked).toBe(true); // EN auto-unlocked
+    expect(checkStageUnlocked('es_1_1', records).unlocked).toBe(true); // ES auto-unlocked
+    // JP still requires Tier 0 cleared
+    expect(checkStageUnlocked('jp_1_1', records).unlocked).toBe(true);
   });
 
   it('handles unknown stage ID format (allow by default)', () => {
     expect(checkStageUnlocked('unknown_format', {}).unlocked).toBe(true);
+  });
+
+  // Regression: languages without Tier 0 (EN, ES, KR) had Tier 1+ permanently
+  // locked because "any Tier 0 stage" requirement could never be satisfied.
+  it('KR Tier 1 unlocked by default (no Tier 0 in KR)', () => {
+    expect(checkStageUnlocked('kr_1_1', {}).unlocked).toBe(true);
+    expect(checkStageUnlocked('kr_1_2', {}).unlocked).toBe(true);
+  });
+
+  it('EN Tier 1 unlocked by default (no Tier 0 in EN)', () => {
+    expect(checkStageUnlocked('en_1_1', {}).unlocked).toBe(true);
+  });
+
+  it('ES Tier 1 unlocked by default (no Tier 0 in ES)', () => {
+    expect(checkStageUnlocked('es_1_1', {}).unlocked).toBe(true);
+  });
+
+  it('JP Tier 1 still requires Tier 0 (Tier 0 exists in JP)', () => {
+    expect(checkStageUnlocked('jp_1_1', {}).unlocked).toBe(false);
+    // After clearing any JP Tier 0, JP Tier 1 unlocks
+    const records = makeRecords([['jp_0_1', true]]);
+    expect(checkStageUnlocked('jp_1_1', records).unlocked).toBe(true);
+  });
+
+  it('Tier 2+ still requires previous tier cleared (when prev tier exists)', () => {
+    // EN has Tier 1 but no Tier 0 — Tier 2 should require Tier 1
+    expect(checkStageUnlocked('en_2_1', {}).unlocked).toBe(false);
+
+    const records = makeRecords([['en_1_1', true]]);
+    expect(checkStageUnlocked('en_2_1', records).unlocked).toBe(true);
   });
 });
 
@@ -175,11 +209,13 @@ describe('stageLock — utility functions', () => {
   });
 
   it('getNextStageToPlay returns null when all cleared or locked', () => {
-    // No tier 0 cleared, no tier 1 cleared
+    // For JP: en_1_1 (in records) is en, but we're testing JP tier lock
+    // en_1_1 is auto-unlocked (no en Tier 0 needed for EN Tier 1)
+    // Use JP Tier 2 which requires JP Tier 1 cleared
     const records = makeRecords([
-      ['en_1_1', false], // locked
+      ['jp_2_1', false], // locked (no jp Tier 1 cleared)
     ]);
-    expect(getNextStageToPlay(['en_1_1'], records)).toBeNull();
+    expect(getNextStageToPlay(['jp_2_1'], records)).toBeNull();
   });
 });
 

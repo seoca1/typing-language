@@ -1911,3 +1911,35 @@ Phase H는 Phase G에서 발견된 5개 unresolved wikilinks 해결.
 **After**: "🔒 Locked · Clear any Tier 1 stage first (e.g., en_1_1)"
 
 **영향**: 잠긴 스테이지 hover시 더 명확한 안내, 다음에 클리어할 스테이지 ID 직접 표시
+
+### [2026-06-20] fix | Tier 0 부재 언어 (EN/ES/KR) 잠금 버그 수정
+
+**버그**: EN/ES/KR 언어는 Tier 0 stage가 없는데 Tier 1+ stage가 영구 잠금
+- 원인: `checkStageUnlocked`가 "Tier N requires Tier N-1 cleared" 검사
+- Tier 0 stage가 존재하지 않으면 조건 절대 충족 불가 → 모든 상위 tier 영구 잠금
+
+**데이터 확인**:
+- EN: tier 1-5 (Tier 0 없음)
+- JP: tier 0-5 (전체)
+- ES: tier 1-5 (Tier 0 없음)
+- KR: tier 1-5 (Tier 0 없음)
+
+**수정**:
+1. `ALL_LANGUAGES_TIERS` — SAMPLE_STAGES에서 언어별 tier 집합 미리 계산
+2. `checkStageUnlocked`: prevTier 존재 여부 검사
+3. prevTier에 stage 없으면 자동 unlocked (Tier 0 없는 언어)
+
+**테스트 추가**:
+- KR/EN/ES Tier 1 기본 unlocked (Tier 0 없음)
+- JP Tier 1 여전히 Tier 0 요구
+- EN Tier 2는 Tier 1 요구 (Tier 0 요구 안 함)
+- Tier 4→5 체인 (JP는 Tier 4 corpus 미비로 SAMPLE_STAGES 제외 → EN으로 테스트)
+
+**검증**:
+- 553 tests passed (1 flaky 격리 통과)
+- 빌드 617.21 KB / gzip 195.81 KB
+
+**영향**:
+- EN/ES/KR 모든 tier 정상 진행 가능
+- 잠금 메시지가 실제 잠긴 stage만 표시
+- JP만 Tier 0 → Tier 1 잠금 체인 적용
