@@ -49,12 +49,15 @@ function StageCard({
   stage: StageConfig;
   onStart: (s: StageConfig) => void;
   record?: StageRecord;
-  lock: StageLockInfo;
+  lock?: StageLockInfo;
 }) {
   const stars = record?.stars || 0;
   const cleared = record?.cleared || false;
   const bestScore = record?.bestScore || 0;
-  const locked = !lock.unlocked;
+  // Defensive fallback: if lock is undefined (e.g., stage not in lockMap),
+  // treat as unlocked
+  const locked = lock ? !lock.unlocked : false;
+  const lockReason = lock?.reason || '';
 
   const handleClick = () => {
     if (locked) return; // Don't start locked stages
@@ -66,7 +69,7 @@ function StageCard({
       className={`stage-card ${cleared ? 'stage-cleared' : ''} ${locked ? 'stage-locked' : ''}`}
       onClick={handleClick}
       disabled={locked}
-      title={locked ? lock.reason : stage.description}
+      title={locked ? lockReason : stage.description}
     >
       <div className="stage-card-header">
         <h3>
@@ -84,14 +87,14 @@ function StageCard({
           </div>
         ) : null}
       </div>
-      <p>{locked ? lock.reason : stage.description}</p>
+      <p>{locked ? lockReason : stage.description}</p>
       <div className="stage-footer">
         <small>{stage.wordCount}개</small>
         {cleared && bestScore > 0 && (
           <small className="best-score">최고: {bestScore}점</small>
         )}
         {locked && (
-          <small className="lock-hint">{lock.reason}</small>
+          <small className="lock-hint">{lockReason}</small>
         )}
       </div>
     </button>
@@ -112,10 +115,14 @@ export function Menu({
   const supportsTier0 = language === 'jp' || language === 'en' || language === 'es';
 
   // Phase I: compute stage locks for each stage based on prior clears
+  // Use ALL language stages (including those from byTier without corpus)
+  // to ensure lockMap covers every stage rendered
   const records = stageRecords || {};
-  const lockMap = Object.fromEntries(
-    languageStages.map((s) => [s.id, checkStageUnlocked(s.id, records)])
-  );
+  const allLanguageStages = SAMPLE_STAGES.filter((s) => s.language === language);
+  const lockMap: Record<string, StageLockInfo> = {};
+  for (const s of allLanguageStages) {
+    lockMap[s.id] = checkStageUnlocked(s.id, records);
+  }
 
   // Phase J: daily streak display
   const streak = getStreakDisplay();

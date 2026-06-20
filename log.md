@@ -1843,3 +1843,24 @@ Phase H는 Phase G에서 발견된 5개 unresolved wikilinks 해결.
 - Streak 보호권 (주 1일 쉬어도 OK)
 - 주말 보너스 (주말에 더 많은 XP)
 - 친구와 streak 비교
+
+### [2026-06-20] fix | Phase I 버그 수정 — Menu.tsx lockMap undefined
+
+**증거**: `TypeError: Cannot read properties of undefined (reading 'unlocked')`
+
+**원인**: 
+- `stagesByTier(language)`는 `ALL_STAGES` 사용 — corpus 유무에 관계없이 모든 stage
+- `languageStages = SAMPLE_STAGES.filter(...)`는 corpus 있는 것만
+- `lockMap`은 `languageStages`로 빌드 → 일부 stage가 lockMap에 없음
+- StageCard가 byTier[tier]에서 받은 stage의 lock을 lookup → undefined.unlocked 크래시
+
+**수정**:
+1. lockMap을 모든 language stages로 빌드 (corpus 유무 무관)
+2. StageCard의 `lock` prop을 optional로 변경
+3. `lock` undefined시 fallback (unlocked = false)
+4. `lockReason` 로컬 변수 추가하여 optional chaining
+
+**검증**:
+- 545 tests passed
+- 빌드 616.90 KB / gzip 195.64 KB
+- 런타임 에러 해결
