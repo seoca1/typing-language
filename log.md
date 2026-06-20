@@ -1699,3 +1699,54 @@ Phase F의 모국어 설정이 localStorage만 가능했던 한계 → Settings 
 - COMMON_DICT 더 확장 (~100개 → 500+) - 모든 entry 4-lang 커버
 - 자동 번역 API 통합 (Google Translate / LibreTranslate)
 - Daily Lesson wiki 본문 다국어화
+
+### [2026-06-20] i18n | Phase H — Wikilink resolution + content stubs
+
+Phase H는 Phase G에서 발견된 5개 unresolved wikilinks 해결.
+
+#### 1. Build Script 개선
+- `_source_pages` 첨부: lesson이 참조하는 source page도 wikiIndex에 등록
+- wikilink 해결 시 vocabulary/expression/culture/source 4가지 모두 참조 가능
+- `global_wiki_index`: 399 → 410 pages
+
+#### 2. Validator 개선
+- wikilink 검증이 **모든 on-disk wiki 파일**도 포함
+- 잘못된 경로 fallback (active repo + Language repo 모두 지원)
+- 5개 unresolved → 0개 (1차) → 5개 (다른 곳 발견) 순환 개선
+
+#### 3. 누락 wiki 페이지 신규 작성
+위키 link에서 참조되지만 페이지가 없던 항목들 추가:
+- **EN**: friend, pretty, family (모두 신규 vocab 페이지)
+- **JP**: 映画 (영화), パスポート (여권)
+- **ES**: amigo (친구), hermoso (아름다운)
+- **KR**: 여권 (여권)
+- **All langs**: travel (meta hub page), first-travel-spain (ES source)
+- **KR**: travel-basics-kr (KR source)
+
+#### 4. Migration 영향
+- JP: Tier3 14 → 25 entries (78% 증가!)
+- KR: Tier3 9 → 10 (마이너스)
+- 전체 45 lessons (44 → 45)
+- 새 source page가 lesson으로 변환되어 EN 12 → 13
+
+#### 5.번들 크기 영향
+- 번들 535 → 609 KB (74 KB 증가)
+- gzip 170 → 193 KB (23 KB 증가)
+- 일일 레슨 JSON 191 → 254 KB (32% 증가)
+- 추가 wikilink stub 페이지들이 본문에 들어가서 큰 영향
+- 여전히 gzip 200 KB 미만, 합리적
+
+#### 검증 결과
+- 511 tests passed (1 skipped)
+- 빌드 609.06 KB / gzip 193.52 KB
+- daily lessons: 45 (EN 13, JP 11, ES 10, KR 11)
+- Wiki index: 410 pages
+
+#### 알려진 unresolved (warning, not error)
+- 자주 등장하지만 자주 사용 안 되는 어휘들 (音楽, gorgeous, attractive 등)
+- 해결책: 각각의 위키 페이지를 추가하면 되지만 우선순위 낮음
+- 사용자가 더 많이 사용되는 단어를 우선 추가할 수 있음
+
+#### 향후 개선
+- 위키 페이지 자동 생성 (번역 API 활용)
+- 덜 흔한 어휘 stub 페이지 일괄 생성

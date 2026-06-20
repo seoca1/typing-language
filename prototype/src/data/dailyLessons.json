@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-20T02:11:17.872199",
+  "generatedAt": "2026-06-21T04:15:32.449556",
   "schemaVersion": "1.1",
-  "lessonCount": 42,
+  "lessonCount": 45,
   "byLanguage": {
-    "en": 12,
+    "en": 13,
     "jp": 11,
-    "es": 9,
-    "kr": 10
+    "es": 10,
+    "kr": 11
   },
   "wikiIndex": {
     "name.md": {
@@ -28,6 +28,16 @@
       "hasMemoryTip": false,
       "hasCommonMistakes": false,
       "hasDialogue": false
+    },
+    "friend.md": {
+      "title": "friend",
+      "body": "# friend\n\n**Part of Speech:** noun\n**Level:** A1\n\n**Definition:** A person you like and trust, not family or romantic partner.\n\n**Pronunciation:**\n- IPA: /frend/\n- Syllables: friend (1 syllable)\n\n**Memory Tip:** A \"friend\" ends a fight — that's why they're called friend. Or: friend = \"fr\" + \"iend\" — the best person to \"end\" your week with!\n\n**Common Mistakes:**\n- ❌ \"He is my friend John\" → \"He is my friend, John\" (appositive, comma)\n- ❌ \"a friends\" → \"a friend\" (singular) / \"friends\" (plural)\n- ❌ \"friend with me\" → \"friend of mine\" / \"my friend\"\n- ✅ \"We're friends\" (state) vs \"We're making friends\" (action)\n- Note: In Spanish \"amigo/amiga\", in Korean \"친구 (chingu)\", in Japanese \"友達 (tomodachi)\"\n\n**Register:** universal — appropriate for all contexts.\n**Frequency:** ⭐⭐⭐⭐⭐ (top 200 English words)\n\n## Examples\n\n- \"She's my best friend.\" — 가장 친한 친구\n- \"We're going out with friends tonight.\" — 오늘 밤 친구들이랑 놀러 가요\n- \"Make new friends!\" — 새 친구 사귀어!\n- \"Old friends are the best.\" — 오랜 친구가 최고\n- \"Are you two friends?\" — 너 둘 친구야?\n\n## Mini-Dialogue\n\n```\nA: How did you two meet?   ← 어떻게 만났어?\nB: We were friends in college.   ← 대학 때 친구였어.\nA: That's nice. Still close?   ← 좋네. 아직 친해?\nB: Yeah, best friends for 10 years!   ← 응, 10년 넘게 절친이야!\n```\n\n## Related Terms\n\n- [[boyfriend]] — 남자친구\n- [[girlfriend]] — 여자친구\n- [[family]] — 가족\n- [[love]] — 사랑\n- [[hello]] — 인사\n\n## Cultural Notes\n\n- **Best friend (BFF)**: Close friend, like family. Western cultures emphasize individualism but value deep friendships.\n- **Korean 12-year cycle**: Korea has special friendship anniversaries (100일, 200일, etc.).\n- **Friendzone**: Western term — when one wants romance but the other sees them as friend only.\n\n## Sources\n\n- [[daily-life-basics]] — 일상 어휘\n- [[dating-romance]] — 친구 vs 연인 구분\n- English Vocabulary in Use (Pre-Intermediate)",
+      "category": "vocabulary",
+      "tier": 3,
+      "hasPronunciation": true,
+      "hasMemoryTip": true,
+      "hasCommonMistakes": true,
+      "hasDialogue": true
     },
     "single.md": {
       "title": "single",
@@ -78,16 +88,6 @@
       "hasMemoryTip": true,
       "hasCommonMistakes": true,
       "hasDialogue": true
-    },
-    "smart.md": {
-      "title": "smart",
-      "body": "# smart\n\n**Part of Speech:** adjective\n**Level:** A2\n\n**Definition:** 똑똑한 — Having or showing a quick-witted intelligence.\n\n## Examples\n\n- \"You're really smart.\" — 지적 매력\n- \"That's a smart idea.\" — 아이디어 칭찬\n- \"He's smart and hardworking.\" — 종합\n\n## Related Terms\n\n- [[kind]] — kindness\n- [[funny]] — humor\n- [[clever]] — UK English equivalent\n\n## Cultural Notes\n\n\"Smart\" = US/Canada. \"Clever\" = UK (often implies trickery). Modern\n\"smart\" is gender-neutral. Highly valued trait, especially in\nlong-term partner context.\n\n## Sources\n\n- [[dating-romance]] — Compliments (personality)\n- Oxford 3000 (A2)\n",
-      "category": "vocabulary",
-      "tier": 1,
-      "hasPronunciation": false,
-      "hasMemoryTip": false,
-      "hasCommonMistakes": false,
-      "hasDialogue": false
     },
     "nice-to-meet-you.md": {
       "title": "nice-to-meet-you",
@@ -269,15 +269,15 @@
       "hasCommonMistakes": true,
       "hasDialogue": true
     },
-    "カフェ.md": {
-      "title": "カフェ",
-      "body": "# カフェ\n\n**Part of Speech:** 名詞 (noun, katakana loanword)\n**Level:** N4\n\n**Definition:** 카페 — Café; coffee shop.\n\n**読み方:** カフェ (kafe)\n\n## Examples\n\n- 「カフェで話そう」 — Let's talk at a café\n- 「駅前のカフェ」 — Café in front of the station\n- 「カフェ巡り」 — Café hopping\n\n## Related Terms\n\n- [[デート]] — date\n- [[レストラン]] — restaurant\n- [[映画]] — movie\n\n## Cultural Notes\n\n**일본 데이트의 가장 흔한 장소**. 첫 데이트 부담 ↓, 공공장소, 짧음.\n日本中で数千 개의 カフェ, 스타벅스/도톤보리/개인 카페 등 다양.\n\n**체인점**: 스타벅스, 블루보틀, 도쿄의 백화점 카페\n**개성**: 인디 카페 — 감성, 사진, 디저트\n\n## Sources\n\n- [[dating-romance-jp]] — 데이트 장소\n- 日本語で広がる恋の話\n",
+    "映画.md": {
+      "title": "映画",
+      "body": "# 映画\n\n**Part of Speech:** 名詞 (noun)\n**Level:** N5\n\n**Definition:** 映画 (えいが) — movie, film. A moving picture shown in theaters or on screen.\n\n**Pronunciation:**\n- 読み方: えいが (eiga)\n- Pitch: 平板 (L-L-H) — えい↑が↑ (flat → slight rise on が)\n- Type: N5 JLPT vocabulary\n\n**Memory Tip:** 映 (えい, reflect/project) + 画 (が, picture) = 映画 = \"projected picture\" = movie!\n\n**Common Mistakes:**\n- ❌ 「えいが」 (wrong pitch accent) → 「えい↑が」flat\n- ❌ 「映画館」 → 「映画館 (えいがかん)」 is correct (theater)\n- ❌ 「映画を見る」 → Correct! 「を見る」= to watch\n- ✅ 「映画を見ます」(polite)\n- ✅ 「映画が好きです」(I like movies)\n- ✅ 「映画館に行きましょう」(Let's go to the theater)\n- Note: 「映画」 can refer to any visual content (TV show, anime, etc.) in casual speech.\n\n**Register:** universal.\n**Frequency:** ⭐⭐⭐⭐ (top 1000 JP words)\n\n## Examples\n\n- 「映画を見ます」 — I watch a movie.\n- 「映画が好きですか?」 — Do you like movies?\n- 「どの映画が好き?」 — Which movie do you like?\n- 「映画館に行こう」 — Let's go to the movie theater.\n- 「日本映画」 — Japanese movie\n\n## Mini-Dialogue\n\n```\nA: 週末、何する?   ← What are you doing this weekend?\nB: 映画を見に行くつもり。   ← I'm planning to go see a movie.\nA: いいね! 何の映画?   ← Nice! What movie?\nB: 新しい韓国映画。   ← A new Korean movie.\nA: 一緒に行こう!   ← Let's go together!\n```\n\n## Related Terms\n\n- [[本]] — book\n- [[音楽]] — music\n- [[ドラマ]] — TV drama\n- [[アニメ]] — anime\n- [[テレビ]] — TV\n- [[趣味]] — hobby\n\n## Cultural Notes\n\n- **Japanese cinema**: Anime (宮崎駿/宮崎駿監督) and J-horror (リング、呪怨) globally famous.\n- **映画館 (cinema)**: Toho, TOEI, Shochiku are major chains. Late shows are popular.\n- **Korean Wave**: 한국 영화/드라마 일본에서 매우 인기 (K-content very popular in Japan).\n- **ホームシアター (home theater)**: Common in Japan due to small apartments.\n- **映画の日 (Movie Day)**: December 1st — Toho anniversary, special screenings.\n- **Subtitles vs Dubbing**: Japan prefers subtitles (字幕) for foreign films.\n\n## Sources\n\n- [[sports-and-hobbies]] — 여가 활동\n- [[daily-life-basics]] — 일상 어휘\n- Minna no Nihongo L8",
       "category": "vocabulary",
-      "tier": 1,
-      "hasPronunciation": false,
-      "hasMemoryTip": false,
-      "hasCommonMistakes": false,
-      "hasDialogue": false
+      "tier": 3,
+      "hasPronunciation": true,
+      "hasMemoryTip": true,
+      "hasCommonMistakes": true,
+      "hasDialogue": true
     },
     "はじめまして.md": {
       "title": "はじめまして",
@@ -362,16 +362,6 @@
     "beoseu.md": {
       "title": "버스",
       "body": "# 버스\n\n**Part of Speech:** 名詞 (명사)\n\n**Definition:** バス\n\n**Romaji:** beoseu\n\n**Language of Origin:** 韓国語 (한국어)\n\n## Examples\n\n- **버스 はどこですか?** — 버스은(는) 어디인가요?\n- **버스**は旅行で必須です。\n\n## Related Terms\n\n- [[여권]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-korea]]\n",
-      "category": "vocabulary",
-      "tier": 1,
-      "hasPronunciation": false,
-      "hasMemoryTip": false,
-      "hasCommonMistakes": false,
-      "hasDialogue": false
-    },
-    "ssada.md": {
-      "title": "싸다",
-      "body": "# 싸다\n\n**Part of Speech:** 名詞 (명사)\n\n**Definition:** 安い\n\n**Romaji:** ssada\n\n**Language of Origin:** 韓国語 (한국어)\n\n## Examples\n\n- **싸다 はどこですか?** — 싸다은(는) 어디인가요?\n- **싸다**は旅行で必須です。\n\n## Related Terms\n\n- [[여권]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-korea]]\n",
       "category": "vocabulary",
       "tier": 1,
       "hasPronunciation": false,
@@ -798,12 +788,282 @@
       "hasMemoryTip": false,
       "hasCommonMistakes": false,
       "hasDialogue": false
+    },
+    "dating-romance.md": {
+      "title": "dating-romance",
+      "body": "# dating-romance\n\n**Type:** Curriculum + Film dialogue\n**Language:** English (외국인 학습자 관점)\n**Theme:** Dating & Romance — flirting, courtship, affection (PG-13)\n**Date Ingested:** 2026-06-19\n**Level:** CEFR B1-B2\n\n## 원본 (Source)\n\n`raw/English/dating-romance.md`\n\n## 핵심 추출 사항 (Key Extractions)\n\n### 어휘 카테고리 (Vocabulary)\n1. **인사/소개 (Greetings)**: name, meet, friend, single\n2. **외모/성격 (Description)**: beautiful, handsome, cute, kind, smart, funny\n3. **관심사 (Interests)**: hobby, music, book, movie, weekend\n4. **데이트 (Date)**: café, restaurant, movie, walk, dinner\n5. **감정 (Emotion)**: like, miss, love, smile, comfortable\n6. **진전 (Progression)**: hand, kiss, boyfriend, girlfriend, relationship\n\n### 표현 (Expressions)\n- \"Nice to meet you.\" — 첫인사\n- \"Would you like to grab a coffee?\" — 초대\n- \"I really like you.\" — 호감\n- \"Will you be my girlfriend?\" — 고백\n- \"I love you.\" — 사랑\n- \"Can I hold your hand?\" — 친밀 진전 (with consent)\n- \"I had a great time.\" — 감사 인사\n- \"Let's stay friends.\" — 부드러운 거절\n\n### 문화 노트 (Cultural Notes)\n- 미국은 \"Let's hang out\"이 모호 → 의도 명확히\n- 영국은 \"I love you\" 더 늦게\n- \"Check, please\" (US) vs \"Bill, please\" (UK)\n- Consent (\"Can I ___?\") is now standard\n\n## 게임 활용 (Game Application)\n\n### 단어 목록 (Vocabulary → Game)\n이 출처에서 추출한 단어들은 다음 카테고리로 게임 코퍼스에 추가:\n- `category: romance`\n- `level: 2-3`\n- `input: direct`\n\n### 신규 스테이지 (New Stages)\n- `en_d_1`: First Date Vocabulary (10 words)\n- `en_d_2`: Confession & Affection (8 expressions)\n\n## 인용 (References)\n\n### 어휘 인용 (Vocabulary citations)\n- [[name]], [[meet]], [[friend]], [[single]]\n- [[beautiful]], [[handsome]], [[cute]], [[kind]], [[smart]], [[funny]]\n- [[hobby]], [[music]], [[weekend]]\n- [[date]], [[café]], [[movie]], [[dinner]]\n- [[like]], [[miss]], [[love]], [[comfortable]]\n- [[hand]], [[kiss]], [[boyfriend]], [[girlfriend]], [[relationship]]\n\n### 표현 인용 (Expression citations)\n- [[nice-to-meet-you]]\n- [[want-coffee]]\n- [[like-you]]\n- [[be-my-girlfriend]]\n- [[love-you]]\n- [[hold-your-hand]]\n- [[had-a-great-time]]\n- [[stay-friends]]\n\n### 문화 인용 (Culture citations)\n- [[split-the-bill]]\n- [[i-love-you-timing]]\n- [[consent]]\n- [[hang-out-meaning]]\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "first-travel-japan.md": {
+      "title": "first-travel-japan",
+      "body": "# first-travel-japan\n\n**Type:** Travel journal / 실전 학습 노트\n**Language:** English (외국인 학습자 관점)\n**Theme:** 일본 첫 여행 (한국인 학습자 시점)\n**Date Ingested:** 2024-06-18\n**Level:** CEFR A1-A2\n\n## 원본 (Source)\n\n`raw/English/first-travel-japan.md`\n\n## 핵심 추출 사항 (Key Extractions)\n\n### 어휘 카테고리\n1. **공항 (Airport)**: airport, passport, immigration, customs, luggage\n2. **호텔 (Hotel)**: hotel, reservation, room, breakfast, key\n3. **식당 (Restaurant)**: restaurant, menu, order, bill, tip\n4. **교통 (Transport)**: station, subway, train, bus, taxi\n5. **관광 (Sightseeing)**: temple, shrine, museum, park, mountain\n\n### 표현 (Expressions)\n- \"Where is the hotel?\" — 위치 묻기\n- \"How much is it?\" — 가격 묻기\n- \"Thank you very much\" — 감사\n- \"Excuse me\" — 사과/호출\n\n### 문화 노트 (Cultural Notes)\n- No tipping in Japan\n- Remove shoes at homes/temples\n- Chopstick etiquette\n- Photo restrictions\n- Onsen manners\n\n## 게임 활용 (Game Application)\n\n### 단어 목록 (Vocabulary → Game)\n이 출처에서 추출한 단어들은 다음 카테고리로 게임 코퍼스에 추가:\n- `category: travel`\n- `level: 1-2`\n- `input: romaji`\n\n## 인용 (References)\n\n- **vocabulary 인용**: [[airport]], [[passport]], [[hotel]], ...\n- **expression 인용**: [[where-is]], [[how-much]]\n- **culture 인용**: [[tipping]], [[shoes-off]]\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "technology-and-internet.md": {
+      "title": "Technology and Internet — English (Source Hub)",
+      "body": "# Technology and Internet — English (Source Hub)\n\n**Type:** Technology\n**Date Added:** 2026-06-20\n**Language Level:** A2-B1 (Intermediate)\n\n## Summary\n\nEnglish vocabulary for technology, internet, computers, smartphones. Modern essential terms.\n\n## Key Takeaways\n\n- Computer hardware (keyboard, mouse, screen, laptop)\n- Internet terms (website, email, app, password, wifi)\n- Social media (post, like, share, follow, comment)\n- Common tech verbs (download, upload, search, click, scroll)\n- Tech problems (broken, slow, error, update, virus)\n\n## Vocabulary Extracted\n\n- [[computer]] — 컴퓨터\n- [[phone]] — 전화\n- [[screen]] — 화면\n- [[keyboard]] — 키보드\n- [[internet]] — 인터넷\n- [[email]] — 이메일\n- [[password]] — 비밀번호\n- [[app]] — 앱\n- [[website]] — 웹사이트\n- [[wifi]] — 와이파이\n\n## Expressions Extracted\n\n- \"What's the wifi password?\" — 와이파이 비밀번호 뭐예요?\n- \"Can I charge my phone?\" — 핸드폰 충전해도 돼요?\n- \"The wifi isn't working\" — 와이파이가 안 돼요\n- \"I need to download an app\" — 앱 다운로드해야 해요\n- \"How do I connect?\" — 어떻게 연결해요?\n\n## Cultural Insights\n\n- Smartphone addiction: very common in US/Asia, less so in Europe\n- Tipping for tech support: NOT customary\n- Tech etiquette: don't take calls in restaurants/movies\n- \"I'm off the grid\" = no phone/internet\n- Battery life: carry a portable charger\n- Streaming: Netflix/Hulu/Disney+ dominant in US\n\n## Sources\n\n- [[work-and-career]] — professional contexts\n- [[daily-life-basics]] — general vocab\n- Tech in English (podcast)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "health-and-body.md": {
+      "title": "Health and Body — English (Source Hub)",
+      "body": "# Health and Body — English (Source Hub)\n\n**Type:** Health\n**Date Added:** 2026-06-20\n**Language Level:** A1-A2 (Beginner)\n\n## Summary\n\nEnglish vocabulary for health, body parts, illness, doctor visits. Essential for emergencies and daily life.\n\n## Key Takeaways\n\n- Body parts (head, hand, foot, eye, ear)\n- Common illnesses (cold, flu, fever, headache, stomachache)\n- Doctor/hospital vocabulary (appointment, prescription, pharmacy)\n- Health verbs (hurt, sick, tired, better, worse)\n- Wellness (exercise, sleep, water, food)\n\n## Vocabulary Extracted\n\n- [[head]] — 머리\n- [[hand]] — 손\n- [[foot]] — 발\n- [[stomach]] — 배\n- [[cold]] — 감기\n- [[fever]] — 열\n- [[doctor]] — 의사\n- [[hospital]] — 병원\n- [[medicine]] — 약\n- [[pain]] — 통증\n\n## Expressions Extracted\n\n- \"I don't feel well\" — 몸이 안 좋아요\n- \"I have a headache\" — 두통이 있어요\n- \"Where does it hurt?\" — 어디가 아프세요?\n- \"I need a doctor\" — 의사가 필요해요\n- \"Call an ambulance\" — 구급차를 불러주세요\n\n## Cultural Insights\n\n- Healthcare: very expensive in US without insurance\n- Pharmacy: CVS, Walgreens common in US\n- \"Take your medicine\" often means OTC drugs (Tylenol, Advil)\n- Mental health: increasingly discussed openly in US\n- \"Man flu\" (slang): men exaggerating cold symptoms\n- \"I'm sick\" = general illness; \"I have a cold\" = specific\n\n## Sources\n\n- [[daily-life-basics]] — general vocab\n- [[travel-basics]] — emergencies\n- Oxford Picture Dictionary (Health)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "travel-adventure.md": {
+      "title": "Travel Adventure — English (Source Hub)",
+      "body": "# Travel Adventure — English (Source Hub)\n\n**Type:** Travel / Adventure\n**Date Added:** 2026-06-20\n**Language Level:** B1-B2 (Intermediate)\n\n## Summary\n\nEnglish for travel adventures — hiking, camping, outdoor activities, weather, emergencies. Intermediate vocabulary for active travelers.\n\n## Key Takeaways\n\n- Outdoor activities (hike, climb, swim, ski)\n- Camping gear (tent, sleeping bag, backpack, flashlight)\n- Weather conditions (sunny, cloudy, rainy, stormy, foggy)\n- Emergencies (injury, lost, stranded, evacuation)\n- Directions in nature (north, south, east, west, trail)\n\n## Vocabulary Extracted\n\n- [[mountain]] — 산\n- [[forest]] — 숲\n- [[river]] — 강\n- [[lake]] — 호수\n- [[beach]] — 해변\n- [[tent]] — 텐트\n- [[compass]] — 나침반\n- [[map]] — 지도\n- [[weather]] — 날씨\n- [[storm]] — 폭풍\n\n## Expressions Extracted\n\n- \"How far is it?\" — 얼마나 먼가요?\n- \"I'm lost\" — 길을 잃었어요\n- \"Can you help me?\" — 도와주세요\n- \"Where is the trail?\" — 산책로는 어디예요?\n- \"I need a doctor\" — 의사가 필요해요\n\n## Cultural Insights\n\n- Hiking culture: very popular in US (Appalachian, Pacific Crest trails)\n- National Parks: $20-35 entry, many have annual passes\n- Bear safety: \"If it's black, fight back. If it's brown, lie down. If it's white, say goodnight.\"\n- Weather: always check forecast before outdoor activities\n- Cell service: often no signal in mountains/national parks\n\n## Sources\n\n- [[travel-basics]] — basic travel\n- [[outdoor-english]] — outdoor scenarios\n- REI Co-op guides\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "work-and-career.md": {
+      "title": "Work and Career — English (Source Hub)",
+      "body": "# Work and Career — English (Source Hub)\n\n**Type:** Work / Professional\n**Date Added:** 2026-06-20\n**Language Level:** A2-B2 (Intermediate)\n\n## Summary\n\nEnglish vocabulary for the workplace — job titles, meetings, emails, business etiquette. Useful for professionals working in international environments.\n\n## Key Takeaways\n\n- Job titles and roles\n- Office vocabulary (meeting, deadline, project, report)\n- Email phrases (please find attached, regards, kindly)\n- Interview language (experience, skills, salary)\n- Business meeting phrases (agenda, action items, follow up)\n\n## Vocabulary Extracted\n\n- [[work]] — 일\n- [[office]] — 사무실\n- [[meeting]] — 회의\n- [[manager]] — 매니저\n- [[project]] — 프로젝트\n- [[deadline]] — 마감\n- [[email]] — 이메일\n- [[salary]] — 급여\n- [[colleague]] — 동료\n- [[boss]] — 상사\n\n## Expressions Extracted\n\n- \"Let's schedule a meeting\" — 회의를 잡아보죠\n- \"I'll get back to you\" — 답장드릴게요\n- \"Per my last email\" — 지난 이메일에 따르면\n- \"Please find attached\" — 첨부 파일 확인 부탁드립니다\n- \"Best regards\" — 감사합니다 (closing)\n\n## Cultural Insights\n\n- Direct vs indirect: US is direct, UK is more indirect\n- Email formality: American business more casual than Japanese/Korean\n- Networking: critical in US, less so in some European countries\n- \"Let's grab coffee\" = informal meeting, common in US business\n- Work-life balance: varies widely; US tends to overwork\n\n## Sources\n\n- [[business-english]] — professional contexts\n- [[email-etiquette]] — digital communication\n- Business English Pod (podcast)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "holidays-and-celebrations.md": {
+      "title": "Holidays and Celebrations — English (Source Hub)",
+      "body": "# Holidays and Celebrations — English (Source Hub)\n\n**Type:** Holidays\n**Date Added:** 2026-06-20\n**Language Level:** A2-B1 (Intermediate)\n\n## Summary\n\nEnglish vocabulary for holidays, celebrations, festivals, special days. Cultural context for major Western holidays.\n\n## Key Takeaways\n\n- Major holidays (Christmas, Thanksgiving, Halloween, Easter)\n- Celebration vocabulary (party, gift, decoration, fireworks)\n- Wedding vocabulary (bride, groom, ring, vows)\n- Birthday (cake, candles, wish, surprise)\n- Cultural sensitivity (religious vs secular)\n\n## Vocabulary Extracted\n\n- [[holiday]] — 휴일\n- [[birthday]] — 생일\n- [[christmas]] — 크리스마스\n- [[halloween]] — 할로윈\n- [[thanksgiving]] — 추수감사절\n- [[easter]] — 부활절\n- [[wedding]] — 결혼식\n- [[party]] — 파티\n- [[gift]] — 선물\n- [[cake]] — 케이크\n\n## Expressions Extracted\n\n- \"Happy birthday!\" — 생일 축하해요!\n- \"Merry Christmas\" — 메리 크리스마스\n- \"Thank you for the gift\" — 선물 고마워요\n- \"I love holidays\" — 휴일 좋아해요\n- \"Are you coming to the party?\" — 파티 올 거예요?\n\n## Cultural Insights\n\n- Christmas: Dec 25, family gathering, gift exchange\n- Thanksgiving: 4th Thursday of November, US/Canada only\n- Halloween: Oct 31, costumes, trick-or-treat\n- Weddings: usually 6+ months planning, expensive ($30K+ in US)\n- Birthdays: cake with candles, \"Happy Birthday\" song\n- \"Black Friday\": day after Thanksgiving, biggest sale day in US\n- Public holidays: 10-11 federal holidays in US\n\n## Sources\n\n- [[daily-life-basics]] — general vocab\n- [[dating-romance]] — social situations\n- American Holidays (cultural guide)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "shopping-and-money.md": {
+      "title": "Shopping and Money — English (Source Hub)",
+      "body": "# Shopping and Money — English (Source Hub)\n\n**Type:** Shopping / Money\n**Date Added:** 2026-06-20\n**Language Level:** A1-A2 (Beginner)\n\n## Summary\n\nEnglish for shopping, money, prices, bargaining. Useful for travelers and daily life.\n\n## Key Takeaways\n\n- Types of shops (grocery, department, convenience, market)\n- Money vocabulary (cash, card, change, refund, receipt)\n- Price phrases (how much, expensive, cheap, discount)\n- Shopping actions (buy, sell, return, exchange, try on)\n- Common products (clothes, electronics, food, gifts)\n\n## Vocabulary Extracted\n\n- [[shop]] — 가게\n- [[money]] — 돈\n- [[cash]] — 현금\n- [[card]] — 카드\n- [[price]] — 가격\n- [[cheap]] — 싼\n- [[expensive]] — 비싼\n- [[discount]] — 할인\n- [[receipt]] — 영수증\n- [[refund]] — 환불\n\n## Expressions Extracted\n\n- \"How much is it?\" — 얼마예요?\n- \"Do you take credit cards?\" — 카드 받나요?\n- \"Can I have a discount?\" — 할인 되나요?\n- \"Can I try it on?\" — 입어볼 수 있나요?\n- \"Where is the fitting room?\" — 탈의실 어디예요?\n\n## Cultural Insights\n\n- Sales tax: varies by state in US (0-10%)\n- Tipping: not required in retail (but appreciated for great service)\n- \"Free gift with purchase\": common marketing tactic\n- Returns: usually 30-90 days with receipt\n- Haggling: not common in US retail, only at markets/garage sales\n- Sales tax is added at checkout, NOT on the price tag\n\n## Sources\n\n- [[daily-life-basics]] — basic vocab\n- [[travel-basics]] — traveler needs\n- Practical English Usage (Oxford)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "travel.md": {
+      "title": "travel",
+      "body": "# travel\n\n**Type:** General Topic (Hub Page)\n**Date Added:** 2026-06-20\n**Language Level:** All levels\n\n## Overview\n\n**Travel** (여행 / 旅行 / viaje) — the act of moving between geographic locations, often for leisure, business, or learning. Central theme across language learning.\n\nThis is a meta-page referenced from many vocabulary pages. For specific travel content per language:\n\n- **English travel**: [[travel-basics]], [[travel-adventure]]\n- **Japanese travel**: [[travel-basics]], [[travel-adventure]]\n- **Spanish travel**: [[first-travel-spain]], [[viaje-aventura]]\n- **Korean travel**: [[travel-basics]]\n\n## Common Travel Topics\n\n| Category | Examples |\n|---|---|\n| Transportation | [[airport]], [[train]], [[taxi]], [[bus]], [[subway]] |\n| Accommodation | [[hotel]], [[passport]], [[station]] |\n| Food | [[restaurant]], [[breakfast]], [[water]], [[coffee]] |\n| Directions | [[left]], [[right]], [[near]], [[far]] |\n| Money | [[expensive]], [[cheap]] |\n| Communication | [[hello]], [[please]], [[thank you\\|thanks]] |\n\n## Useful Phrases (Multilingual)\n\n| English | 한국어 | 日本語 | Español |\n|---|---|---|---|\n| Where is...? | ~는 어디예요? | ~はどこですか? | ¿Dónde está...? |\n| How much? | 얼마예요? | いくらですか? | ¿Cuánto cuesta? |\n| I don't understand | 모르겠어요 | わかりません | No entiendo |\n| Please speak slowly | 천천히 말해주세요 | ゆっくり話してください | Hable despacio, por favor |\n| Thank you | 감사합니다 | ありがとうございます | Gracias |\n| Excuse me | 실례합니다 | すみません | Disculpe |\n\n## Sources\n\n- [[travel-basics]] — beginner essentials\n- [[travel-adventure]] — advanced travel\n- All language wikis",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "food-and-dining.md": {
+      "title": "Food and Dining — English (Source Hub)",
+      "body": "# Food and Dining — English (Source Hub)\n\n**Type:** Food / Restaurant\n**Date Added:** 2026-06-20\n**Language Level:** A1-B1 (Beginner)\n\n## Summary\n\nEnglish vocabulary for restaurants, cooking, food types, dietary restrictions. Useful for travelers and food enthusiasts.\n\n## Key Takeaways\n\n- Restaurant vocabulary (menu, waiter, bill, tip)\n- Common foods (bread, meat, fish, vegetables, fruit)\n- Drinks (water, coffee, tea, juice, beer, wine)\n- Cooking methods (boil, fry, bake, grill)\n- Flavors (sweet, sour, salty, bitter, spicy)\n- Dietary restrictions (vegetarian, vegan, gluten-free)\n\n## Vocabulary Extracted\n\n- [[breakfast]] — 아침 식사\n- [[lunch]] — 점심\n- [[dinner]] — 저녁\n- [[water]] — 물\n- [[coffee]] — 커피\n- [[tea]] — 차\n- [[delicious]] — 맛있는\n- [[spicy]] — 매운\n- [[sweet]] — 달콤한\n- [[hot]] — 뜨거운\n\n## Expressions Extracted\n\n- \"I'm hungry\" — 배고파요\n- \"Can I see the menu?\" — 메뉴판 보여주세요\n- \"The check, please\" — 계산서 주세요\n- \"It's delicious\" — 맛있어요\n- \"I'm vegetarian\" — 저는 채식주의자예요\n\n## Cultural Insights\n\n- Tipping: 15-20% standard in US, included in UK/EU\n- Fast food culture: very different from European sit-down dining\n- Coffee: drip (US) vs espresso (Europe) — order differently\n- \"Grab a bite\" = quick meal, often fast food\n- Brunch: late morning (10am-1pm) — popular weekend meal\n\n## Sources\n\n- [[restaurant-english]] — restaurant scenarios\n- [[breakfast]] — common morning food\n- Cambridge English Vocabulary in Use\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "travel-basics.md": {
+      "title": "Travel Basics — English (Source Hub)",
+      "body": "# Travel Basics — English (Source Hub)\n\n**Type:** Travel / Daily Life\n**Date Added:** 2026-06-20\n**Language Level:** A1-B1 (Beginner)\n\n## Summary\n\nEssential English vocabulary and phrases for travelers — airports, hotels, restaurants, transportation, emergencies. Covers the top 50 most-used travel words.\n\n## Key Takeaways\n\n- Greetings and politeness (please, thank you, sorry)\n- Numbers and money (cash, card, change)\n- Directions (left, right, near, far)\n- Transportation (bus, train, taxi, plane)\n- Food and drink (menu, water, coffee, check)\n- Emergencies (help, police, hospital, lost)\n\n## Vocabulary Extracted\n\n- [[airport]] — 공항\n- [[baggage]] — 수하물\n- [[bus]] — 버스\n- [[hotel]] — 호텔\n- [[restaurant]] — 식당\n- [[taxi]] — 택시\n- [[train]] — 기차\n- [[passport]] — 여권\n- [[ticket]] — 표\n- [[map]] — 지도\n\n## Expressions Extracted\n\n- \"How much is it?\" — 얼마예요?\n- \"Where is...?\" — ~는 어디인가요?\n- \"Can you help me?\" — 도와주실 수 있나요?\n- \"I don't understand\" — 이해하지 못합니다\n- \"Do you speak English?\" — 영어 하세요?\n\n## Cultural Insights\n\n- Tipping: 15-20% in US, 10-12% in UK, not expected in many other English-speaking countries\n- Personal space: ~45cm in conversation\n- Eye contact: direct eye contact = honesty; avoiding = shifty/lying\n- Loud talking: Americans louder than British/Australians\n\n## Sources\n\n- [[first-travel-japan]] — related travel prep\n- [[travel-basics]] — generic travel vocabulary\n- Cambridge English Vocabulary in Use (Pre-Intermediate)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "daily-life-basics.md": {
+      "title": "Daily Life Basics — English (Source Hub)",
+      "body": "# Daily Life Basics — English (Source Hub)\n\n**Type:** Daily Life\n**Date Added:** 2026-06-20\n**Language Level:** A1-A2 (Beginner)\n\n## Summary\n\nEveryday English for daily routines — greetings, time, weather, family, hobbies, work. The most commonly used words in everyday conversation.\n\n## Key Takeaways\n\n- Greetings (hello, good morning, how are you)\n- Time expressions (today, tomorrow, yesterday, now)\n- Family members (mother, father, sister, brother)\n- Common verbs (go, come, eat, drink, sleep, work)\n- Adjectives (good, bad, big, small, hot, cold)\n- Numbers (1-100, ordinals)\n\n## Vocabulary Extracted\n\n- [[hello]] — 안녕\n- [[goodbye]] — 잘 가\n- [[good-morning]] — 좋은 아침\n- [[thank-you]] — 감사\n- [[please]] — 부디\n- [[sorry]] — 미안\n- [[yes]] — 네\n- [[no]] — 아니요\n- [[family]] — 가족\n- [[friend]] — 친구\n- [[love]] — 사랑\n- [[work]] — 일\n\n## Expressions Extracted\n\n- \"How are you?\" — 잘 지내세요?\n- \"Nice to meet you\" — 만나서 반가워요\n- \"See you later\" — 나중에 봐\n- \"Take care\" — 잘 지내\n- \"Have a nice day\" — 좋은 하루 보내\n\n## Cultural Insights\n\n- Small talk: weather, weekend plans, sports teams\n- \"How are you?\" is rhetorical — short answer expected (\"Fine, thanks\")\n- American optimism: \"Great!\" / \"Awesome!\" / \"Awesome sauce\" (slang)\n- British understatement: \"Not bad\" / \"Quite good\" / \"Lovely\"\n\n## Sources\n\n- [[travel-basics]] — related vocabulary\n- [[dating-romance]] — social situations\n- English for Everyone (Beginner)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "sports-and-hobbies.md": {
+      "title": "Sports and Hobbies — English (Source Hub)",
+      "body": "# Sports and Hobbies — English (Source Hub)\n\n**Type:** Sports / Hobbies\n**Date Added:** 2026-06-20\n**Language Level:** A1-B1 (Beginner)\n\n## Summary\n\nEnglish vocabulary for sports, hobbies, recreation, fitness. Useful for casual conversation and active lifestyle.\n\n## Key Takeaways\n\n- Common sports (soccer, basketball, tennis, swimming, running)\n- Hobby vocabulary (reading, cooking, painting, music)\n- Fitness (gym, yoga, exercise, workout)\n- Outdoor activities (hiking, camping, fishing, cycling)\n- Sports terms (team, score, win, lose, champion)\n\n## Vocabulary Extracted\n\n- [[sport]] — 스포츠\n- [[football]] — 미식축구 (US) / 축구 (UK)\n- [[soccer]] — 축구\n- [[basketball]] — 농구\n- [[tennis]] — 테니스\n- [[swimming]] — 수영\n- [[running]] — 달리기\n- [[yoga]] — 요가\n- [[music]] — 음악\n- [[reading]] — 독서\n\n## Expressions Extracted\n\n- \"Do you play any sports?\" — 운동 하세요?\n- \"What's your hobby?\" — 취미가 뭐예요?\n- \"I love playing tennis\" — 테니스 좋아해요\n- \"Let's go for a run\" — 달리기 가자\n- \"I'm a big fan\" — 저는 큰 팬이에요\n\n## Cultural Insights\n\n- Sports culture: very important in US (football, basketball, baseball)\n- \"Football\" means different things: soccer in UK, football in US\n- March Madness: US college basketball tournament, huge\n- World Cup: globally watched\n- Hiking: very popular in Colorado, California, Pacific Northwest\n- Yoga: very common in US, often 1+ class per week\n- Fantasy sports: very popular in US\n\n## Sources\n\n- [[daily-life-basics]] — general vocab\n- [[travel-adventure]] — outdoor activities\n- NPR Sports\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "dating-romance-jp.md": {
+      "title": "dating-romance-jp",
+      "body": "# dating-romance-jp\n\n**Type:** Curriculum + Drama dialogue\n**Language:** 日本語 (JLPT N4-N3)\n**Theme:** 恋愛会話・デート・告白 (PG-13相当)\n**Date Ingested:** 2026-06-19\n**Level:** JLPT N4-N3\n\n## 원본 (Source)\n\n`raw/Japanese/dating-romance-jp.md`\n\n## 重要: 敬語レベル\n\n恋愛会話は **ため口 (casual)** が基本. 告白前は丁寧語、恋人同士は\n必ず ため口. 敬語レベルは関係性のシグナル.\n\n## 核心抽出 (Key Extractions)\n\n### 語彙カテゴリー (Vocabulary)\n1. **紹介 (Introduction)**: 名前、趣味、血液型、出身\n2. **褒め言葉 (Compliments)**: 綺麗、可愛い、かっこいい、優しい、面白い\n3. **興味 (Interest)**: 趣味、音楽、映画、休日の過ごし方\n4. **デート (Date)**: カフェ、レストラン、映画、散歩\n5. **感情 (Emotion)**: 好き、嫌い、愛してる、会いたい\n6. **進展 (Progression)**: 告白、付き合う、恋人、彼氏、彼女\n\n### 表現 (Expressions)\n- 「はじめまして」 — 첫인사\n- 「今度ご飯行かない?」 — 초대 (casual)\n- 「好きです。付き合ってください」 — 正式 告白\n- 「俺の彼女になってよ」 — casual 告白\n- 「手、繋いでもいい?」 — 친밀 진전 (with consent)\n- 「ごちそうさま」 — 식사 후 인사\n- 「ありがとう、また連絡するね」 — 別れ 인사\n\n### 文化ノート (Cultural Notes)\n- 告白文化 (kokuhaku culture) — 正式 イベント\n- 既読スルー (kidoku suru) — LINE 매너\n- 脈あり シグナル — 거리, 시선, 연락 빈도\n- 敬語 → ため口 移行 — 관계 정의\n- 割り勘 vs おごり — Z世代 변화\n\n## ゲーム活用 (Game Application)\n\n### 単語リスト (Vocabulary → Game)\n- `category: romance`\n- `level: 2-3`\n- `input: romaji`\n- 漢字/ひらがな 표시\n\n### 新規ステージ (New Stages)\n- `jp_d_1`: デート言葉 (10 words)\n- `jp_d_2`: 告白・進展 (8 expressions)\n\n## 引用 (References)\n\n### 語彙引用 (Vocabulary citations)\n- [[名前]], [[趣味]], [[綺麗]], [[可愛い]], [[かっこいい]]\n- [[優しい]], [[面白い]], [[音楽]], [[映画]]\n- [[カフェ]], [[レストラン]], [[好き]], [[愛する]]\n- [[告白]], [[付き合う]], [[恋人]], [[彼氏]], [[彼女]]\n\n### 表現引用 (Expression citations)\n- [[はじめまして]]\n- [[今度ご飯行かない]]\n- [[好きです付き合ってください]]\n- [[俺の彼女になってよ]]\n- [[手繋いでもいい]]\n- [[また連絡する]]\n\n### 文化引用 (Culture citations)\n- [[kokuhaku-culture]]\n- [[kidoku-suru]]\n- [[myaku-ari-signals]]\n- [[keigo-to-tameguchi]]\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "first-travel-korea.md": {
+      "title": "first-travel-korea",
+      "body": "# first-travel-korea\n\n**Type:** 旅行ジャーナル / 実戦学習ノート\n**Language:** 日本語\n**Theme:** 韓国初旅行 (ソウル/釜山)\n**Date Ingested:** 2024-06-18\n**Level:** JLPT N5\n\n## 原文 (Source)\n\n`raw/Japanese/first-travel-korea.md`\n\n## 重要な抽出事項 (Key Extractions)\n\n### 語彙カテゴリー\n1. **空港**: 空港, パスポート, 荷物, 両替\n2. **ホテル**: ホテル, 予約, 部屋, 朝食\n3. **レストラン**: 食堂, メニュー, 注文, 会計\n4. **交通**: 駅, 地下鉄, 切符, 左/右\n5. **観光**: 寺, 博物館, 公園, 山\n\n### 表現 (Expressions)\n- すみません、…はどこですか? — 위치 묻기\n- いくらですか? — 가격 묻기\n- 注文お願いします — 주문 표현\n- ありがとうございます — 감사\n\n### 文化ノート (Cultural Notes)\n- 韓国はチップなし\n- 靴を脱ぐ (韓屋・食堂・寺)\n- 写真マナー\n- チムジルバンエチケット\n\n## ゲーム活用 (Game Application)\n\n### 単語リスト (Vocabulary → Game)\nこのソースから抽出した単語:\n- category: travel\n- level: 5 (JLPT N5)\n- input: romaji\n\n## 引用 (References)\n\n- vocabulary 引用: [[gonghang]], [[yeogwon]], [[hotel]], ...\n- expression 引用: [[sumimasen]], ...\n- culture 引用: [[tipping]], [[shoes-off]]\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "dating-romance-es.md": {
+      "title": "dating-romance-es",
+      "body": "# dating-romance-es\n\n**Type:** Curriculum + Telenovela/diálogo cinematográfico\n**Language:** Español (B1-B2)\n**Theme:** Coqueteo, citas, relaciones (PG-13)\n**Date Ingested:** 2026-06-19\n**Level:** CEFR B1-B2\n\n## Original (Source)\n\n`raw/Spanish/dating-romance-es.md`\n\n## Núcleo (Key Extractions)\n\n### Vocabulario\n1. **Presentación (Introduction)**: nombre, apodo, \"mucho gusto\", encantado\n2. **Piropos/Cumplidos (Compliments)**: guapo, guapa, bonita, precioso, sonrisa\n3. **Intereses (Interests)**: hobby, música, película, planes\n4. **Cita (Date)**: café, restaurante, cine, cenar\n5. **Emoción (Emotion)**: gustar, querer, amar, enamorar, echar de menos\n6. **Progresión (Progression)**: declaración, pareja, novio, novia, beso, abrazo\n\n### Expresiones\n- \"Encantado/a de conocerte.\" — primera impresión\n- \"¿Quieres tomar algo conmigo?\" — invitar\n- \"Me gustas mucho\" — interés\n- \"Estoy enamorado/a de ti\" — declaración\n- \"¿Puedo cogerte la mano?\" —亲近 progreso (con consentimiento)\n- \"Lo he pasado muy bien\" — agradecimiento\n- \"Prefiero que sigamos siendo amigos\" — rechazo educado\n\n### Notas Culturales\n- Cumplidos directos son bienvenidos\n- Beso en la mejilla (saludo): 1 (España) o 2 (LatAm)\n- \"Te quiero\" vs \"Te amo\" — distinción\n- Vosotros (España) vs Ustedes (LatAm)\n- Consentimiento explícito es norma\n\n## Aplicación al Juego (Game Application)\n\n### Vocabulario → Juego\n- `category: romance`\n- `level: 2-3`\n- `input: direct`\n- `accentMode: 'loose'` (default)\n\n### Etapas Nuevas (New Stages)\n- `es_d_1`: Citas y Piropos (10 palabras)\n- `es_d_2`: Declaración (8 expresiones)\n\n## Referencias (References)\n\n### Citas de Vocabulario (Vocabulary citations)\n- [[nombre]], [[encantado]], [[guapo]], [[guapa]], [[bonita]]\n- [[precioso]], [[sonrisa]], [[hobby]], [[música]]\n- [[café]], [[restaurante]], [[gustar]], [[querer]], [[amar]]\n- [[enamorado]], [[novio]], [[novia]], [[beso]], [[abrazo]]\n\n### Citas de Expresiones (Expression citations)\n- [[encantado-de-conocerte]]\n- [[quieres-tomar-algo]]\n- [[me-gustas-mucho]]\n- [[estoy-enamorado]]\n- [[puedo-cogerte-mano]]\n- [[he-pasado-bien]]\n- [[seguir-siendo-amigos]]\n\n### Citas Culturales (Culture citations)\n- [[cumplidos-directos]]\n- [[beso-mejilla]]\n- [[te-quiero-vs-te-amo]]\n- [[consentimiento]]\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "fiestas-y-celebraciones.md": {
+      "title": "Fiestas y Celebraciones (Holidays) — Spanish (Source Hub)",
+      "body": "# Fiestas y Celebraciones (Holidays) — Spanish (Source Hub)\n\n**Type:** Fiestas\n**Date Added:** 2026-06-20\n**Language Level:** A1-B1 (Beginner)\n\n## Summary\n\nEspañol para fiestas, celebraciones, días especiales. Cultura hispana.\n\n## Key Takeaways\n\n- Fiestas principales — Navidad, Año Nuevo, Semana Santa\n- Celebraciones familiares — bodas, cumpleaños, bautizos\n- Festivales — La Tomatina, San Fermín, Día de los Muertos\n- Tradiciones regionales — diferentes por país\n\n## Vocabulary Extracted\n\n- [[fiesta]] — 파티\n- [[cumpleanos]] — 생일\n- [[navidad]] — 크리스마스\n- [[ano-nuevo]] — 새해\n- [[boda]] — 결혼식\n- [[regalo]] — 선물\n- [[pastel]] — 케이크\n- [[quinceanera]] — 퀸세아녜라\n- [[carnaval]] — 카니발\n- [[semana-santa]] — 부활절 주간\n\n## Expressions Extracted\n\n- \"¡Feliz cumpleaños!\" — 생일 축하해요!\n- \"Feliz Navidad\" — 메리 크리스마스\n- \"Gracias por el regalo\" — 선물 고마워요\n- \"Feliz Año Nuevo\" — 새해 복 많이 받으세요\n- \"¿Vienes a la fiesta?\" — 파티 올 거예요?\n\n## Cultural Insights\n\n- Navidad: 24-25 diciembre, Nochebuena cena familiar\n- Año Nuevo: 31 dic, uvas con las 12 campanadas\n- Semana Santa: religiosa, procesiones en España y LatAm\n- Día de los Muertos: 1-2 nov, México, altares y calaveras\n- La Tomatina: última miércoles de agosto, Buñol, España\n- San Fermín: 6-14 julio, Pamplona, encierro\n- Quinceañera: 15 años, México, gran celebración\n- Carnaval: febrero, Brasil/Río famoso\n\n## Sources\n\n- [[daily-life-basics]] — vocabulario general\n- [[dating-romance-es]] — situaciones sociales\n- Guía cultural hispana\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "first-travel-spain.md": {
+      "title": "first-travel-spain (Source Hub)",
+      "body": "# first-travel-spain (Source Hub)\n\n**Type:** Travel / Cultural\n**Date Added:** 2026-06-20\n**Language Level:** A2 (Beginner)\n\n## Summary\n\nSpanish travel vocabulary and phrases for first-time visitors — airports, hotels, restaurants, transportation, basic Spanish etiquette. Built for absolute beginners planning a Spain trip.\n\n## Key Takeaways\n\n- Greetings (hola, buenos días, hasta luego)\n- Numbers and money (euro, cuánto cuesta)\n- Transportation (metro, taxi, tren, autobús)\n- Food culture (tapas, menú del día, sobremesa)\n- Tourist phrases (dónde está, no hablo español)\n\n## Vocabulary Extracted\n\n- [[hola]] — hello\n- [[gracias]] — thank you\n- [[por favor]] — please\n- [[buenos días]] — good morning\n- [[buenas noches]] — good night\n- [[adiós]] — goodbye\n- [[aeropuerto]] — airport\n- [[estación]] — station\n- [[hotel]] — hotel\n- [[restaurante]] — restaurant\n- [[metro]] — metro/subway\n\n## Expressions Extracted\n\n- \"¿Dónde está...?\" — Where is...?\n- \"¿Cuánto cuesta?\" — How much is it?\n- \"No hablo español\" — I don't speak Spanish\n- \"La cuenta, por favor\" — The check, please\n- \"Una mesa para dos\" — A table for two\n- \"¿Habla inglés?\" — Do you speak English?\n- \"¡Qué bonito!\" — How pretty!\n\n## Cultural Insights\n\n- **Spain time zones**: Lunch 14:00-16:00, dinner 21:00-23:00. Adjust your schedule.\n- **Tapas culture**: Free small dishes with drinks, especially in Andalusia.\n- **Tío/Tía**: Adults called uncle/aunt by children, even non-relatives — close family-like friendships.\n- **¡Hala!**: Expresses surprise, like \"Wow!\" in English.\n- **Besos**: 1 cheek kiss (Spain) or 2 cheeks (LatAm) when greeting close friends.\n- **Tipping**: Not required, but rounding up appreciated (5-10%).\n\n## Sources\n\n- [[spanish-dating-culture]] — español社交文化\n- [[comida-y-restaurante]] — 식당 문화\n- [[viaje-aventura]] — 모험 여행\n- Prisma A1/A2",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "viaje-aventura.md": {
+      "title": "Viaje de Aventura (Travel Adventure) — Spanish (Source Hub)",
+      "body": "# Viaje de Aventura (Travel Adventure) — Spanish (Source Hub)\n\n**Type:** Viaje / Aventura\n**Date Added:** 2026-06-20\n**Language Level:** B1-B2 (Intermediate)\n\n## Summary\n\nEspañol para aventuras de viaje — senderismo, camping, actividades al aire libre, clima, emergencias.\n\n## Key Takeaways\n\n- Actividades al aire libre (excursión, escalada, natación, esquí)\n- Equipo de camping (tienda, saco de dormir, mochila, linterna)\n- Condiciones climáticas (soleado, nublado, lluvioso, tormentoso)\n- Emergencias (herida, perdido, varado, evacuación)\n- Direcciones en la naturaleza (norte, sur, este, oeste, sendero)\n\n## Vocabulary Extracted\n\n- [[montana]] — 산\n- [[bosque]] — 숲\n- [[rio]] — 강\n- [[lago]] — 호수\n- [[playa]] — 해변\n- [[tienda-de-campana]] — 텐트\n- [[brujula]] — 나침반\n- [[mapa]] — 지도\n- [[clima]] — 날씨\n- [[tormenta]] — 폭풍\n\n## Expressions Extracted\n\n- \"¿A qué distancia está?\" — 얼마나 먼가요?\n- \"Estoy perdido\" — 길을 잃었어요\n- \"¿Puede ayudarme?\" — 도와주세요\n- \"¿Dónde está el sendero?\" — 산책로는 어디예요?\n- \"Necesito un médico\" — 의사가 필요해요\n\n## Cultural Insights\n\n- Senderismo: muy popular en España (Picos de Europa, Sierra Nevada)\n- Parques Nacionales: España tiene 16, LatAm muchos más\n- Cultura de camping: fuerte en España, Argentina, Chile\n- Clima mediterráneo: España — veranos calurosos, inviernos suaves\n- \"Emergencia\" vs \"Urgencia\": emergencia = vida en riesgo, urgencia = menos grave\n- Conectividad: a veces sin señal en zonas remotas\n\n## Sources\n\n- [[first-travel-spain]] — España\n- [[travel-basics]] — básico\n- [[como-agua-para-chocolate-cap1]] — contexto cultural\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "como-agua-para-chocolate-cap1.md": {
+      "title": "Como agua para chocolate - Capítulo 1 (Enero)",
+      "body": "# Como agua para chocolate - Capítulo 1 (Enero)\n\n**Type:** novela (resumen + pasajes + notas)\n**Autora:** Laura Esquivel (1989)\n**Date Added:** 2026-06-22\n**Language Level:** B1-B2 (intermedio-alto)\n**Recopilado de:** Pasajes citados en estudios literarios (uso educativo)\n\n## Summary\n\nTita es la hija menor de Mama Elena, matriarca estricta de la hacienda De la Garza en Coahuila (México), a principios del siglo XX. La tradición familiar prohíbe que la hija menor se case: debe cuidar a su madre hasta la muerte. Tita se enamora de Pedro Muzquiz, pero Mama Elena rechaza el matrimonio. Pedro, en un acto desesperado, se casa con Rosaura, la hermana mayor, para poder estar cerca de Tita. El capítulo abre con Tita llorando en la cocina mientras pela cebollas para las tortas de Navidad — y queda establecido que sus lágrimas tienen efecto casi sobrenatural en la comida.\n\n## Key Takeaways\n\n- **Estructura de recetario**: 12 capítulos mensuales, cada uno encabezado por una receta\n- **Realismo mágico cotidiano**: las emociones de Tita se transmiten a la comida\n- **Subjuntivo adverbial**: `cuando + subjuntivo` para futuro incierto\n- **Diminutivos mexicanos** con función cariñosa, no solo de tamaño\n- **Espacio femenino**: la cocina como único lugar de libertad\n\n## Vocabulario Extraído\n\n- [[cebolla]]\n- [[matriarca]]\n- [[heredar]]\n- [[sollozar]]\n- [[anhelar]]\n- [[desafiar]]\n- [[someterse]]\n- [[molcajete]]\n- [[masa]]\n- [[receta]]\n- [[tradicion]]\n- [[mandato]]\n\n## Expresiones Extraídas\n\n- [[pedir-la-mano]]\n- [[llorar-como-una-magdalena]]\n- [[a-fuego-lento]]\n- [[tener-el-corazon-en-un-puno]]\n- [[no-poder-venir-a-mas]]\n- [[estar-hecho-pedazos]]\n\n## Cultural Insights\n\n- [[realismo-magico-esquivel]] - el estilo de Esquivel\n- [[cocina-espacio-femenino]] - la cocina como refugio\n- [[mexico-patriarcado-tradicion]] - tradición y opresión\n- [[recetario-como-estructura]] - estructura narrativa del recetario\n\n## Conexión con Semana 1\n\n> Ver [[el-ahgado-mas-hermoso-del-mundo]] para comparar con García Márquez:\n> - Mismo estilo: realismo mágico latinoamericano\n> - Diferente espacio: mar (Colombia) vs. cocina (México)\n> - Misma estructura binaria: femenino (cuidado, emoción) vs. masculino (acción, decisión)\n\n## Notas\n\nTexto completo en edición impresa/oficial. Este archivo contiene pasajes representativos y resumen para estudio autónomo. Ideal para Bloque A del [[weekly-plan]] (subjuntivo adverbial).\n\n## Sources\n\n- *Como agua para chocolate* (Laura Esquivel, 1989, Planeta)\n- Estudios: Pilar Quintana, Helena Araújo, Cecilia Rodríguez\n- Película homónima (1992) - apoyo visual, no sustituye lectura\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "comida-y-restaurante.md": {
+      "title": "Comida y Restaurante (Food and Restaurant) — Spanish (Source Hub)",
+      "body": "# Comida y Restaurante (Food and Restaurant) — Spanish (Source Hub)\n\n**Type:** Comida / Restaurante\n**Date Added:** 2026-06-20\n**Language Level:** A1-B1 (Beginner)\n\n## Summary\n\nEspañol para comida, restaurantes, cocina, restricciones dietéticas. Útil para viajeros y entusiastas de la gastronomía.\n\n## Key Takeaways\n\n- Vocabulario de restaurante (menú, mesero, cuenta, propina)\n- Comidas comunes (pan, carne, pescado, verduras, frutas)\n- Bebidas (agua, café, té, jugo, cerveza, vino)\n- Métodos de cocción (hervir, freír, hornear, asar)\n- Sabores (dulce, salado, amargo, agrio, picante)\n- Restricciones dietéticas (vegetariano, vegano, sin gluten)\n\n## Vocabulary Extracted\n\n- [[desayuno]] — 아침\n- [[almuerzo]] — 점심\n- [[cena]] — 저녁\n- [[agua]] — 물\n- [[cafe]] — 커피\n- [[te]] — 차\n- [[delicioso]] — 맛있는\n- [[picante]] — 매운\n- [[dulce]] — 단\n- [[carne]] — 고기\n\n## Expressions Extracted\n\n- \"Tengo hambre\" — 배고파요\n- \"¿Puedo ver el menú?\" — 메뉴판 보여주세요\n- \"La cuenta, por favor\" — 계산서 주세요\n- \"Está delicioso\" — 맛있어요\n- \"Soy vegetariano\" — 저는 채식주의자예요\n\n## Cultural Insights\n\n- Propinas: 10-15% en España, no obligatorio; 10% en México habitual\n- Horarios: España cena 21-23h, LatAm cena 19-21h\n- Tapeo: en España, picar (tapas) es costumbre\n- Menú del día: almuerzo fijo económico en España\n- Asado: Argentina/Chile famosos por la carne\n- Comida familiar: Latinos suelen comer en familia\n\n## Sources\n\n- [[first-travel-spain]] — España\n- [[viaje-aventura]] — viajero\n- [[como-agua-para-chocolate-cap1]] — cocina\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "notes-in-spanish-listening-log.md": {
+      "title": "Notes in Spanish - Listening Log",
+      "body": "# Notes in Spanish - Listening Log\n\n**Type:** listening log + podcast study guide\n**Podcast:** Notes in Spanish (Advanced) - Ben y Marina\n**Date Added:** 2026-06-16\n**Language Level:** B1-B2\n**Episode de referencia:** \"La siesta de verano\"\n\n## Summary\n\nPlantilla de estudio para episodios del podcast *Notes in Spanish Advanced*. El archivo raw recopila muletillas, expresiones con subjuntivo, vocabulario cultural de España y patrones de shadowing. Es un **listening log**, no una transcripción oficial: el audio real se escucha en notesinspanish.com/advanced.\n\n## Key Takeaways\n\n- **Muletillas españolas** son el mayor reto: \"vamos que\", \"es que\", \"hombre pues\", \"total que\" - sin ellas el español suena \"de libro\"\n- **Subjuntivo en cláusulas adjetivas/adverbiales** aparece con naturalidad: \"cuando llegues\", \"que tenga terraza\"\n- **Ser vs. Estar** en descripciones físicas (intrínsecas vs. impresión momentánea)\n- **Registro coloquial peninsular** vs. **registro neutro/Latinoamérica** - diferencias notables\n- **Shadowing** (repetición con audio) es la técnica más efectiva para fijar estos patrones\n\n## Vocabulario Extraído\n\n- [[siesta]]\n- [[tapas]]\n- [[currar]]\n- [[guapo]]\n- [[mola]]\n- [[botellon]]\n- [[calor-pegajoso]]\n- [[ponerse-morado]]\n\n## Expresiones Extraídas\n\n- [[vamos-que]]\n- [[hombre-pues]]\n- [[yo-que-tu]]\n- [[que-fuerte]]\n- [[que-pasada]]\n\n## Cultural Insights\n\n- [[espana-vs-latinoamerica-registro]] - diferencias coloquiales\n- [[siesta-tradicion-verano]] - costumbre en declive\n\n## Notas\n\nAudible source: https://notesinspanish.com/advanced/. Se recomienda escuchar 1 episodio por semana (lunes o martes), rellenar la sección 8 del raw como registro, y revisar Anki los viernes.\n\n## Sources\n\n- Notes in Spanish (Advanced) - https://notesinspanish.com/advanced/\n- RAE - https://www.rae.es/\n- *Marca coloquial* - estudio del registro informal peninsular\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "notes-in-spanish-planes-de-verano.md": {
+      "title": "Notes in Spanish Advanced - Planes de verano",
+      "body": "# Notes in Spanish Advanced - Planes de verano\n\n**Type:** listening log + subjuntivo adverbial study guide\n**Podcast:** Notes in Spanish (Advanced) - Ben y Marina\n**Date Added:** 2026-06-22\n**Language Level:** B1-B2\n**Tema:** \"Planes de verano\" + subjuntivo en cláusulas adverbiales\n\n## Summary\n\nListening log centrado en cómo nativos hablan de planes futuros en español peninsular, con foco en **subjuntivo adverbial** (cuando, antes de que, para que, ojalá). El audio real se escucha en notesinspanish.com/advanced. Este documento es la **plantilla de estudio**: muletillas, estructuras, vocabulario temático y ejercicios.\n\n## Key Takeaways\n\n- **Subjuntivo adverbial** es la estructura de subjuntivo más usada en conversación cotidiana\n- **Cuatro disparadores principales**: `cuando` (futuro incierto), `antes de que` (anterioridad), `para que` (finalidad), `ojalá` (deseo)\n- **Excepción clave**: `a ver si` lleva **indicativo**, no subjuntivo\n- **Vocabulario estival**: bochorno, chaparrón, solanera, escapada, pillar\n- **Diferencia peninsular**: \"pillar\" (agarrar) es típicamente español; en México se prefiere \"agarrar\" o \"tomar\"\n\n## Vocabulario Extraído\n\n- [[bochorno]]\n- [[chapparon]]\n- [[solanera]]\n- [[escapada]]\n- [[pillar]]\n- [[apuntarse]]\n- [[animarse]]\n- [[veranear]]\n\n## Expresiones Extraídas\n\n- [[cuando-subjuntivo]]\n- [[antes-de-que-subjuntivo]]\n- [[para-que-subjuntivo]]\n- [[ojala]]\n- [[a-ver-si]]\n- [[que-va]]\n\n## Cultural Insights\n\n- [[verano-espana-tradiciones]] - agosto, pueblos vaciados, costa\n- [[subjuntivo-conversacional]] - cuándo nativos usan subjuntivo en habla espontánea\n\n## Notas\n\nEl audio original se escucha en https://notesinspanish.com/advanced/. Se recomienda escuchar 1 episodio por semana. Esta semana: tema \"planes de verano\" para reforzar subjuntivo adverbial.\n\n## Sources\n\n- Notes in Spanish (Advanced) - https://notesinspanish.com/advanced/\n- RAE - https://www.rae.es/\n- *Gramática de uso del español* (SM Ediciones)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "el-ahogado-mas-hermoso-del-mundo.md": {
+      "title": "El ahogado más hermoso del mundo",
+      "body": "# El ahogado más hermoso del mundo\n\n**Type:** cuento (short story)\n**Autor:** Gabriel García Márquez (1968)\n**Date Added:** 2026-06-16\n**Language Level:** B1-B2 (intermedio-alto)\n**Recopilado de:** Ciudad Seva (uso educativo)\n\n## Summary\n\nEn un pueblo costero desértico aparece el cadáver de un ahogado gigantesco. Mientras los hombres buscan a quién pertenece, las mujeres lo limpian, lo visten, le dan el nombre de Esteban y lo lloran como si fuera suyo. Al final, los hombres también lo reconocen y le hacen funerales magníficos, transformándose el pueblo entero:从此窗户更宽、屋顶更高、阳台上开始长花。\n\n## Key Takeaways\n\n- **Realismo mágico**: lo extraordinario se trata con naturalidad cotidiana\n- **Subjuntivo e imperfecto de subjuntivo** como motor narrativo: \"si hubiera sabido\", \"habría tenido\", \"que hubiera hecho brotar\"\n- **Estructura binaria**: femenino (imaginación, cuidado) vs. masculino (acción, utilidad) - invertida al final\n- **Maridaje de registros**: vocabulario náutico técnico + emoción lírica\n- **Frase emblemática**: \"es el pueblo de Esteban\" - la palabra final del cuento resignifica todo\n\n## Vocabulario Extraído\n\n- [[promontorio]]\n- [[sargazo]]\n- [[acantilado]]\n- [[altivez]]\n- [[desvalido]]\n- [[angarillas]]\n- [[minucioso]]\n- [[bobo]]\n\n## Expresiones Extraídas\n\n- [[quedar-varado]]\n- [[dar-la-voz-de-alarma]]\n- [[subirse-al-higado]]\n- [[tener-cara-de-llamarse]]\n- [[devolverlo-huerfano-a-las-aguas]]\n\n## Cultural Insights\n\n- [[realismo-magico-marquez]] - el estilo de García Márquez\n- [[pueblo-costero-funeral]] - rituales funerarios en pueblos pequeños\n\n## Notas\n\nTexto completo disponible en `raw/Spanish/el-ahgado-mas-hermoso-del-mundo.md` (cuidado, ~1700 palabras). El cuento es ideal para Bloque A (subjuntivo) del plan de 4 semanas - ver [[weekly-plan]].\n\n## Sources\n\n- Recopilado de: https://ciudadseva.com/texto/el-ahogado-mas-hermoso-del-mundo/\n- Obra original en *La increíble y triste historia de la cándida Eréndira y de su abuela desalmada* (1972)\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "trabajo-y-carrera.md": {
+      "title": "Trabajo y Carrera (Work and Career) — Spanish (Source Hub)",
+      "body": "# Trabajo y Carrera (Work and Career) — Spanish (Source Hub)\n\n**Type:** Trabajo / Profesional\n**Date Added:** 2026-06-20\n**Language Level:** A2-B2 (Intermediate)\n\n## Summary\n\nEspañol para el lugar de trabajo — títulos de trabajo, reuniones, correos, etiqueta empresarial.\n\n## Key Takeaways\n\n- Cargos y roles profesionales\n- Vocabulario de oficina (reunión, plazo, proyecto, informe)\n- Frases para correos (adjunto, saludos, atentamente)\n- Lenguaje de entrevista (experiencia, habilidades, salario)\n- Frases para reuniones (agenda, tareas, seguimiento)\n\n## Vocabulary Extracted\n\n- [[trabajo]] — 일\n- [[oficina]] — 사무실\n- [[reunion]] — 회의\n- [[jefe]] — 상사\n- [[proyecto]] — 프로젝트\n- [[plazo]] — 마감\n- [[correo-electronico]] — 이메일\n- [[salario]] — 급여\n- [[colega]] — 동료\n- [[empleado]] — 직원\n\n## Expressions Extracted\n\n- \"Vamos a agendar una reunión\" — 회의를 잡아보죠\n- \"Te respondo luego\" — 답장드릴게요\n- \"Como decía en mi correo anterior\" — 지난 이메일에 따르면\n- \"Adjunto encontrarás\" — 첨부 파일 확인 부탁드립니다\n- \"Cordialmente\" — 감사합니다 (cerrando correo)\n\n## Cultural Insights\n\n- Horario: España 9-18h con pausa para almuerzo (14-16h), LatAm 8-17h\n- Siesta: en algunas regiones, tiendas cierran 14-17h\n- Café: en España, \"café con leche\" o \"café solo\" — social\n- \"Tú\" vs \"usted\": empresas LatAm prefieren \"usted\", España mezcla\n- Networking: en España, las comidas de trabajo son clave\n- Email: \"estimado/a\" formal vs \"hola\" informal\n\n## Sources\n\n- [[first-travel-spain]] — contexto\n- [[viaje-aventura]] — viajero\n- DELE B1/B2 자료\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "travel-basics-kr.md": {
+      "title": "travel-basics-kr (Source Hub)",
+      "body": "# travel-basics-kr (Source Hub)\n\n**Type:** Travel / Reference\n**Date Added:** 2026-06-20\n**Language Level:** TOPIK I 1-2\n\n## Summary\n\nKorean travel vocabulary for Korean learners visiting Korea or learning about Korean culture. Covers basic travel phrases, places, and cultural insights specific to Korean travel.\n\n## Key Takeaways\n\n- 기본 인사 (basic greetings) — 안녕하세요, 감사합니다\n- 교통 (transportation) — 버스, 지하철, 택시, 기차\n- 장소 (places) — 공항, 호텔, 식당, 길\n- 음식 (food) — 김치, 비빔밥, 불고기\n- 응급 (emergency) — 도와주세요, 병원\n\n## Vocabulary Extracted\n\n- [[안녕하세요]] — hello\n- [[감사합니다]] — thank you\n- [[공항]] — airport\n- [[호텔]] — hotel\n- [[식당]] — restaurant\n- [[버스]] — bus\n- [[지하철]] — subway\n- [[택시]] — taxi\n- [[여권]] — passport\n\n## Expressions Extracted\n\n- \"안녕하세요\" — Hello\n- \"감사합니다\" — Thank you\n- \"천천히 말씀해 주세요\" — Please speak slowly\n- \"이거 얼마예요?\" — How much is this?\n- \"화장실 어디예요?\" — Where is the bathroom?\n- \"도와주세요\" — Please help\n\n## Cultural Insights\n\n- Korean restaurants: 대부분 반찬 무료 (most side dishes free)\n- Subway: T-money 카드 (T-money card) 사용, 환불 가능\n- Taxi: 호출벨 (call button) 또는 앱 (app)\n- 음료: 커피/차 무료 refill 드물음 (rare free refills)\n- K-pop/K-drama 관련 영어/일본어 사용 흔함\n\n## Sources\n\n- [[daily-life-basics]] — 일상 어휘\n- [[food-and-dining]] — 음식 문화\n- [[first-travel-japan]] — 일본 여행 대비",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
+    },
+    "dating-romance-kr.md": {
+      "title": "dating-romance-kr",
+      "body": "# dating-romance-kr\n\n**Type:** Curriculum + K-Drama/영화\n**Language:** 한국어 (TOPIK 2-3급)\n**Theme:** 연애 회화, 썸, 고백 (15세 이상)\n**Date Ingested:** 2026-06-19\n**Level:** TOPIK 2-3급\n\n## 원본 (Source)\n\n`raw/Korean/dating-romance-kr.md`\n\n## 핵심: 존댓말 ↔ 반말\n\n연애 회화의 핵심 전환점: **반말 시작**. 연인 사이의 가장 큰 관계\n정의 신호 중 하나. 그 전까지는 다정한 말투에도 존댓말 사용.\n\n## 핵심 추출 (Key Extractions)\n\n### 어휘 카테고리\n1. **자기소개 (Introduction)**: 이름, 나이, 취미, 혈액형\n2. **외모 칭찬 (Appearance compliments)**: 예쁘다, 이쁘다, 잘생겼다, 멋있다, 귀엽다\n3. **관심사 (Interests)**: 취미, 음악, 영화, 주말 계획\n4. **데이트 (Date)**: 카페, 레스토랑, 영화, 산책\n5. **감정 (Emotion)**: 좋아하다, 그리다, 사랑하다, 보고 싶다\n6. **진전 (Progression)**: 썸, 고백, 사귀다, 손잡다, 뽀뽀, 키스\n\n### 표현\n- \"만나서 반가워요\" — 첫인사\n- \"같이 밥 먹을래?\" — 초대 (casual)\n- \"너 자꾸 생각나\" — 썸 표현\n- \"나 너 좋아해. 사귀자\" — 고백\n- \"손 잡아도 돼?\" — 친밀 진전 (with consent)\n- \"나중에 또 보자\" — 헤어짐 인사\n- \"친구로 지내자\" — 부드러운 거절\n\n### 문화 노트\n- 썸 (some) — 교제 전 단계\n- 오빠/언니 vs 형/누나 — 호칭으로 관계 정의\n- 존댓말 → 반말 전환 — 관계 시그널\n- 커피 데이트 — 가장 흔한 첫 데이트\n- \"내가 낼게\" / \"더치페이\" — 결제 문화\n- 100일 / Valentine / White Day / Pepero Day\n\n## 게임 활용 (Game Application)\n\n### 어휘 → 게임\n- `category: romance`\n- `level: 1-3`\n- `input: jamo` (자모 직접 입력)\n- `jamo` 필드 필수\n\n### 신규 스테이지 (New Stages)\n- `kr_d_1`: 썸·첫 데이트 (10 words)\n- `kr_d_2`: 고백·연인 (8 expressions)\n\n## 인용 (References)\n\n### 어휘 인용 (Vocabulary citations)\n- [[이름]], [[취미]], [[예쁘다]], [[이쁘다]], [[잘생겼다]]\n- [[멋있다]], [[귀엽다]], [[착하다]], [[재미있다]]\n- [[카페]], [[영화]], [[음악]]\n- [[좋아하다]], [[그리다]], [[사랑하다]]\n- [[썸]], [[고백]], [[사귀다]], [[연인]], [[남자친구]], [[여자친구]]\n\n### 표현 인용 (Expression citations)\n- [[만나서-반가워요]]\n- [[같이-밥-먹을래]]\n- [[너-자꾸-생각나]]\n- [[나-너-좋아해]]\n- [[손-잡아도-돼]]\n- [[나중에-또-보자]]\n- [[친구로-지내자]]\n\n### 문화 인용 (Culture citations)\n- [[썸-문화]]\n- [[호칭-관계]]\n- [[존댓말-반말-전환]]\n- [[한국-연애-결제]]\n",
+      "category": "source",
+      "tier": 0,
+      "hasPronunciation": false,
+      "hasMemoryTip": false,
+      "hasCommonMistakes": false,
+      "hasDialogue": false
     }
   },
   "lessons": [
     {
-      "id": "en_dating-romance_20260620",
-      "date": "2026-06-20",
+      "id": "en_dating-romance_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "dating-romance.md",
       "raw": {
@@ -813,12 +1073,12 @@
       "vocabulary": [
         "name.md",
         "meet.md",
+        "friend.md",
         "single.md",
         "beautiful.md",
         "handsome.md",
         "cute.md",
-        "kind.md",
-        "smart.md"
+        "kind.md"
       ],
       "expressions": [
         "nice-to-meet-you.md",
@@ -834,17 +1094,17 @@
           "en_d_2"
         ],
         "vocabTiers": {
-          "tier1": 5,
+          "tier1": 4,
           "tier2": 0,
-          "tier3": 3
+          "tier3": 4
         },
         "hasDialogue": true,
-        "wikilinkCount": 43
+        "wikilinkCount": 45
       }
     },
     {
-      "id": "en_first-travel-japan_20260620",
-      "date": "2026-06-20",
+      "id": "en_first-travel-japan_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "first-travel-japan.md",
       "raw": {
@@ -880,8 +1140,8 @@
       }
     },
     {
-      "id": "en_technology-and-internet_20260620",
-      "date": "2026-06-20",
+      "id": "en_technology-and-internet_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "technology-and-internet.md",
       "raw": {
@@ -919,8 +1179,8 @@
       }
     },
     {
-      "id": "en_health-and-body_20260620",
-      "date": "2026-06-20",
+      "id": "en_health-and-body_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "health-and-body.md",
       "raw": {
@@ -958,8 +1218,8 @@
       }
     },
     {
-      "id": "en_travel-adventure_20260620",
-      "date": "2026-06-20",
+      "id": "en_travel-adventure_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "travel-adventure.md",
       "raw": {
@@ -995,8 +1255,8 @@
       }
     },
     {
-      "id": "en_work-and-career_20260620",
-      "date": "2026-06-20",
+      "id": "en_work-and-career_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "work-and-career.md",
       "raw": {
@@ -1034,8 +1294,8 @@
       }
     },
     {
-      "id": "en_holidays-and-celebrations_20260620",
-      "date": "2026-06-20",
+      "id": "en_holidays-and-celebrations_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
@@ -1073,8 +1333,8 @@
       }
     },
     {
-      "id": "en_shopping-and-money_20260620",
-      "date": "2026-06-20",
+      "id": "en_shopping-and-money_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "shopping-and-money.md",
       "raw": {
@@ -1112,8 +1372,45 @@
       }
     },
     {
-      "id": "en_food-and-dining_20260620",
-      "date": "2026-06-20",
+      "id": "en_travel_20260621",
+      "date": "2026-06-21",
+      "language": "en",
+      "sourceTopic": "travel.md",
+      "raw": {
+        "sourceFile": "",
+        "excerpt": "**Travel** (여행 / 旅行 / viaje) — the act of moving between geographic locations, often for leisure, business, or learning. Central theme across language learning.\n\nThis is a meta-page referenced from many vocabulary pages. For specific travel content per language:\n\n- **English travel**: [[travel-basics]], [[travel-adventure]]\n- **Japanese travel**: [[travel-basics]], [[travel-adventure]]\n- **Spanish travel**: [[first-travel-spain]], [[viaje-aventura]]\n- **Korean travel**: [[travel-basics]]"
+      },
+      "vocabulary": [
+        "traffic-light.md",
+        "kiss.md",
+        "sweet.md",
+        "cute.md",
+        "photo.md"
+      ],
+      "expressions": [
+        "i-love-you.md",
+        "really-like-you.md"
+      ],
+      "culture": "english-dating-culture.md",
+      "meta": {
+        "estimatedReadMinutes": 7,
+        "relatedStages": [
+          "en_t_1",
+          "en_t_2",
+          "en_t_3"
+        ],
+        "vocabTiers": {
+          "tier1": 5,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "hasDialogue": false,
+        "wikilinkCount": 23
+      }
+    },
+    {
+      "id": "en_food-and-dining_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "food-and-dining.md",
       "raw": {
@@ -1151,8 +1448,8 @@
       }
     },
     {
-      "id": "en_travel-basics_20260620",
-      "date": "2026-06-20",
+      "id": "en_travel-basics_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "travel-basics.md",
       "raw": {
@@ -1188,8 +1485,8 @@
       }
     },
     {
-      "id": "en_daily-life-basics_20260620",
-      "date": "2026-06-20",
+      "id": "en_daily-life-basics_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "daily-life-basics.md",
       "raw": {
@@ -1227,8 +1524,8 @@
       }
     },
     {
-      "id": "en_sports-and-hobbies_20260620",
-      "date": "2026-06-20",
+      "id": "en_sports-and-hobbies_20260621",
+      "date": "2026-06-21",
       "language": "en",
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
@@ -1266,8 +1563,8 @@
       }
     },
     {
-      "id": "jp_dating-romance-jp_20260620",
-      "date": "2026-06-20",
+      "id": "jp_dating-romance-jp_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "dating-romance-jp.md",
       "raw": {
@@ -1282,7 +1579,7 @@
         "かっこいい.md",
         "優しい.md",
         "面白い.md",
-        "カフェ.md"
+        "映画.md"
       ],
       "expressions": [
         "はじめまして.md",
@@ -1298,17 +1595,17 @@
           "jp_d_2"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 4
+          "tier3": 5
         },
         "hasDialogue": true,
-        "wikilinkCount": 30
+        "wikilinkCount": 35
       }
     },
     {
-      "id": "jp_technology-and-internet_20260620",
-      "date": "2026-06-20",
+      "id": "jp_technology-and-internet_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "technology-and-internet.md",
       "raw": {
@@ -1320,7 +1617,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1328,7 +1625,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1337,17 +1634,17 @@
           "jp_1_2"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_health-and-body_20260620",
-      "date": "2026-06-20",
+      "id": "jp_health-and-body_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "health-and-body.md",
       "raw": {
@@ -1359,7 +1656,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1367,7 +1664,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1376,17 +1673,17 @@
           "jp_1_2"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_travel-adventure_20260620",
-      "date": "2026-06-20",
+      "id": "jp_travel-adventure_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "travel-adventure.md",
       "raw": {
@@ -1398,7 +1695,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1406,24 +1703,24 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_t_1",
           "jp_t_2",
           "jp_t_3"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_holidays-and-celebrations_20260620",
-      "date": "2026-06-20",
+      "id": "jp_holidays-and-celebrations_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
@@ -1435,7 +1732,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1443,7 +1740,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1452,17 +1749,17 @@
           "jp_1_2"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_shopping-and-money_20260620",
-      "date": "2026-06-20",
+      "id": "jp_shopping-and-money_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "shopping-and-money.md",
       "raw": {
@@ -1474,7 +1771,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1482,7 +1779,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1491,17 +1788,17 @@
           "jp_1_2"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_food-and-dining_20260620",
-      "date": "2026-06-20",
+      "id": "jp_food-and-dining_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "food-and-dining.md",
       "raw": {
@@ -1513,7 +1810,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1521,7 +1818,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1530,17 +1827,17 @@
           "jp_1_2"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_travel-basics_20260620",
-      "date": "2026-06-20",
+      "id": "jp_travel-basics_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "travel-basics.md",
       "raw": {
@@ -1552,7 +1849,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1560,24 +1857,24 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_t_1",
           "jp_t_2",
           "jp_t_3"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_daily-life-basics_20260620",
-      "date": "2026-06-20",
+      "id": "jp_daily-life-basics_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "daily-life-basics.md",
       "raw": {
@@ -1589,7 +1886,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1597,7 +1894,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1606,17 +1903,17 @@
           "jp_1_2"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_sports-and-hobbies_20260620",
-      "date": "2026-06-20",
+      "id": "jp_sports-and-hobbies_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
@@ -1628,7 +1925,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1636,7 +1933,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1645,17 +1942,17 @@
           "jp_1_2"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "jp_first-travel-korea_20260620",
-      "date": "2026-06-20",
+      "id": "jp_first-travel-korea_20260621",
+      "date": "2026-06-21",
       "language": "jp",
       "sourceTopic": "first-travel-korea.md",
       "raw": {
@@ -1667,7 +1964,7 @@
         "好き.md",
         "dalda.md",
         "beoseu.md",
-        "ssada.md"
+        "映画.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1675,24 +1972,24 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "jp_t_1",
           "jp_t_2",
           "jp_t_3"
         ],
         "vocabTiers": {
-          "tier1": 4,
+          "tier1": 3,
           "tier2": 0,
-          "tier3": 1
+          "tier3": 2
         },
         "hasDialogue": true,
-        "wikilinkCount": 23
+        "wikilinkCount": 31
       }
     },
     {
-      "id": "es_dating-romance-es_20260620",
-      "date": "2026-06-20",
+      "id": "es_dating-romance-es_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "dating-romance-es.md",
       "raw": {
@@ -1732,8 +2029,8 @@
       }
     },
     {
-      "id": "es_fiestas-y-celebraciones_20260620",
-      "date": "2026-06-20",
+      "id": "es_fiestas-y-celebraciones_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "fiestas-y-celebraciones.md",
       "raw": {
@@ -1771,8 +2068,45 @@
       }
     },
     {
-      "id": "es_viaje-aventura_20260620",
-      "date": "2026-06-20",
+      "id": "es_first-travel-spain_20260621",
+      "date": "2026-06-21",
+      "language": "es",
+      "sourceTopic": "first-travel-spain.md",
+      "raw": {
+        "sourceFile": "first-travel-spain.md",
+        "excerpt": "Coreano aprendiendo español que viaja a España por primera vez. Situaciones reales que se encuentran al llegar al aeropuerto, alojarse en hotel, pedir comida, pedir direcciones y hacer turismo."
+      },
+      "vocabulary": [
+        "inmigración.md",
+        "viajes.md",
+        "matriarca.md",
+        "chapparon.md",
+        "catedral.md"
+      ],
+      "expressions": [
+        "estoy-enamorado.md",
+        "subirse-al-higado.md"
+      ],
+      "culture": "pueblo-costero-funeral.md",
+      "meta": {
+        "estimatedReadMinutes": 6,
+        "relatedStages": [
+          "es_t_1",
+          "es_t_2",
+          "es_t_3"
+        ],
+        "vocabTiers": {
+          "tier1": 4,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "hasDialogue": false,
+        "wikilinkCount": 29
+      }
+    },
+    {
+      "id": "es_viaje-aventura_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "viaje-aventura.md",
       "raw": {
@@ -1810,8 +2144,8 @@
       }
     },
     {
-      "id": "es_como-agua-para-chocolate-cap1_20260620",
-      "date": "2026-06-20",
+      "id": "es_como-agua-para-chocolate-cap1_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "como-agua-para-chocolate-cap1.md",
       "raw": {
@@ -1849,8 +2183,8 @@
       }
     },
     {
-      "id": "es_comida-y-restaurante_20260620",
-      "date": "2026-06-20",
+      "id": "es_comida-y-restaurante_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "comida-y-restaurante.md",
       "raw": {
@@ -1888,8 +2222,8 @@
       }
     },
     {
-      "id": "es_notes-in-spanish-listening-log_20260620",
-      "date": "2026-06-20",
+      "id": "es_notes-in-spanish-listening-log_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "notes-in-spanish-listening-log.md",
       "raw": {
@@ -1927,8 +2261,8 @@
       }
     },
     {
-      "id": "es_notes-in-spanish-planes-de-verano_20260620",
-      "date": "2026-06-20",
+      "id": "es_notes-in-spanish-planes-de-verano_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "notes-in-spanish-planes-de-verano.md",
       "raw": {
@@ -1966,8 +2300,8 @@
       }
     },
     {
-      "id": "es_el-ahogado-mas-hermoso-del-mundo_20260620",
-      "date": "2026-06-20",
+      "id": "es_el-ahogado-mas-hermoso-del-mundo_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "el-ahogado-mas-hermoso-del-mundo.md",
       "raw": {
@@ -2005,8 +2339,8 @@
       }
     },
     {
-      "id": "es_trabajo-y-carrera_20260620",
-      "date": "2026-06-20",
+      "id": "es_trabajo-y-carrera_20260621",
+      "date": "2026-06-21",
       "language": "es",
       "sourceTopic": "trabajo-y-carrera.md",
       "raw": {
@@ -2044,8 +2378,8 @@
       }
     },
     {
-      "id": "kr_first-travel-japan_20260620",
-      "date": "2026-06-20",
+      "id": "kr_first-travel-japan_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "first-travel-japan.md",
       "raw": {
@@ -2081,8 +2415,8 @@
       }
     },
     {
-      "id": "kr_technology-and-internet_20260620",
-      "date": "2026-06-20",
+      "id": "kr_technology-and-internet_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "technology-and-internet.md",
       "raw": {
@@ -2120,8 +2454,8 @@
       }
     },
     {
-      "id": "kr_health-and-body_20260620",
-      "date": "2026-06-20",
+      "id": "kr_health-and-body_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "health-and-body.md",
       "raw": {
@@ -2159,8 +2493,8 @@
       }
     },
     {
-      "id": "kr_holidays-and-celebrations_20260620",
-      "date": "2026-06-20",
+      "id": "kr_holidays-and-celebrations_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
@@ -2198,8 +2532,8 @@
       }
     },
     {
-      "id": "kr_shopping-and-money_20260620",
-      "date": "2026-06-20",
+      "id": "kr_shopping-and-money_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "shopping-and-money.md",
       "raw": {
@@ -2237,8 +2571,8 @@
       }
     },
     {
-      "id": "kr_food-and-dining_20260620",
-      "date": "2026-06-20",
+      "id": "kr_food-and-dining_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "food-and-dining.md",
       "raw": {
@@ -2276,8 +2610,8 @@
       }
     },
     {
-      "id": "kr_travel-basics_20260620",
-      "date": "2026-06-20",
+      "id": "kr_travel-basics_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "travel-basics.md",
       "raw": {
@@ -2313,8 +2647,8 @@
       }
     },
     {
-      "id": "kr_daily-life-basics_20260620",
-      "date": "2026-06-20",
+      "id": "kr_daily-life-basics_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "daily-life-basics.md",
       "raw": {
@@ -2352,8 +2686,8 @@
       }
     },
     {
-      "id": "kr_sports-and-hobbies_20260620",
-      "date": "2026-06-20",
+      "id": "kr_sports-and-hobbies_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
@@ -2391,8 +2725,45 @@
       }
     },
     {
-      "id": "kr_dating-romance-kr_20260620",
-      "date": "2026-06-20",
+      "id": "kr_travel-basics-kr_20260621",
+      "date": "2026-06-21",
+      "language": "kr",
+      "sourceTopic": "travel-basics-kr.md",
+      "raw": {
+        "sourceFile": "travel-basics-kr.md",
+        "excerpt": "한국어 학습자를 위한 여행 기본 어휘 레퍼런스. 다음 출처 기반:\n\n- TOPIK 1급 어휘 목록\n- Yonsei Korean 1·2 (여행 단원)\n- 경희대학교 한국어 교재\n- Visit Korea 공식 여행 가이드"
+      },
+      "vocabulary": [
+        "zeikan.md",
+        "yasui.md",
+        "chuumon.md",
+        "잘생겼다.md",
+        "annyeonghaseyo.md"
+      ],
+      "expressions": [
+        "sumimasen-wa-doko-desuka.md",
+        "나중에-또-보자.md"
+      ],
+      "culture": "korean-dating-culture.md",
+      "meta": {
+        "estimatedReadMinutes": 8,
+        "relatedStages": [
+          "kr_t_1",
+          "kr_t_2",
+          "kr_t_3"
+        ],
+        "vocabTiers": {
+          "tier1": 4,
+          "tier2": 0,
+          "tier3": 1
+        },
+        "hasDialogue": true,
+        "wikilinkCount": 30
+      }
+    },
+    {
+      "id": "kr_dating-romance-kr_20260621",
+      "date": "2026-06-21",
       "language": "kr",
       "sourceTopic": "dating-romance-kr.md",
       "raw": {
