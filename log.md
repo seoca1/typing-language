@@ -1891,3 +1891,23 @@ Phase H는 Phase G에서 발견된 5개 unresolved wikilinks 해결.
 - 12 캐릭터 모두 고유 src prefix
 
 **영향**: Phase E (random selection)가 의도대로 작동 — 12명 캐릭터 모두 정상 표시
+
+### [2026-06-20] ux | 잠금 메시지 개선
+
+사용자 질문: "Clear any Tier - stage first 표시 의미를 알려줘"
+
+**현재 메시지 의미**: 이전 티어의 스테이지를 하나라도 클리어하면 해제
+- 예: `en_2_1` (Tier 2) 잠김 → "Tier 1 stage 클리어 필요"
+- Romance 스테이지: 2개 클리어 필요
+- Travel 스테이지: 3개 클리어 필요
+
+**개선**:
+- 잠금 아이콘 명시 (`🔒 Locked · ...`)
+- 진행도 표시 (`(${cleared}/${required})`)
+- 구체적 예시 (`(e.g., en_1_1)`)
+- Romance/Travel 메시지에도 동일한 형식 적용
+
+**Before**: "Clear any Tier 1 stage first"
+**After**: "🔒 Locked · Clear any Tier 1 stage first (e.g., en_1_1)"
+
+**영향**: 잠긴 스테이지 hover시 더 명확한 안내, 다음에 클리어할 스테이지 ID 직접 표시

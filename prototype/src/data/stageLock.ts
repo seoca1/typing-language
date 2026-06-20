@@ -58,7 +58,7 @@ export function checkStageUnlocked(
     if (cleared < ROMANCE_MIN_CLEARS) {
       return {
         unlocked: false,
-        reason: `Clear ${ROMANCE_MIN_CLEARS} stages to unlock romance`,
+        reason: `🔒 Locked · Clear ${ROMANCE_MIN_CLEARS} stages to unlock romance (${cleared}/${ROMANCE_MIN_CLEARS})`,
         requires: [],
       };
     }
@@ -69,7 +69,7 @@ export function checkStageUnlocked(
     if (cleared < TRAVEL_MIN_CLEARS) {
       return {
         unlocked: false,
-        reason: `Clear ${TRAVEL_MIN_CLEARS} stages to unlock travel`,
+        reason: `🔒 Locked · Clear ${TRAVEL_MIN_CLEARS} stages to unlock travel (${cleared}/${TRAVEL_MIN_CLEARS})`,
         requires: [],
       };
     }
@@ -107,9 +107,11 @@ export function checkStageUnlocked(
   if (!prevTierCleared) {
     const safePrevTier = Math.max(0, Math.min(5, prevTier)) as StageTier;
     const exampleStageId = findFirstStageOfTier(safePrevTier, stageRecords);
+    // Build example requirement (e.g., "en_1_1") for clearer instruction
+    const exampleHint = exampleStageId ? ` (e.g., ${exampleStageId})` : '';
     return {
       unlocked: false,
-      reason: `Clear any Tier ${prevTier} stage first`,
+      reason: `🔒 Locked · Clear any Tier ${prevTier} stage first${exampleHint}`,
       requires: exampleStageId ? [exampleStageId] : [],
     };
   }
