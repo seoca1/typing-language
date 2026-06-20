@@ -182,7 +182,8 @@ def scan_wiki_pages(lang_dir: Path) -> dict:
       "vocabulary": { "name": WikiPage, ... },
       "expressions": { "expr-id": WikiPage, ... },
       "culture": { "topic": WikiPage, ... },
-      "sources": { "source": WikiPage, ... }
+      "sources": { "source": WikiPage, ... },
+      "jp-travel-vocab": { "name": WikiPage, ... },  # KR only: Japanese
     }
     """
     result = {
@@ -207,6 +208,24 @@ def scan_wiki_pages(lang_dir: Path) -> dict:
                 "category": category.rstrip("s") if category != "sources" else "source",
                 "sizeChars": len(text),
             }
+
+    # KR-only: jp-travel-vocab (Japanese phrases for KR learners)
+    jp_travel_dir = lang_dir / "jp-travel-vocab"
+    if jp_travel_dir.exists():
+        result["jp-travel-vocab"] = {}
+        for f in jp_travel_dir.glob("*.md"):
+            text = f.read_text(encoding="utf-8")
+            stem = f.stem
+            result["jp-travel-vocab"][stem] = {
+                "stem": stem,
+                "filename": f.name,
+                "title": extract_title(text),
+                "body": text,
+                "category": "vocabulary",
+                "sizeChars": len(text),
+                "origin": "japanese",
+            }
+
     return result
 
 
@@ -243,14 +262,36 @@ def find_wikilink_target(wikilink: str, wiki: dict) -> str | None:
     Wikilinks may be:
     - Exact stem: [[airport]] → "airport"
     - Stem with annotation: [[airport|the airport]] → "airport"
+    - Title (Korean/display text): [[달다]] → match by title for KR
     - Display only: [[the airport]] (no match, just for display)
     """
     # Take first part before |
     target = wikilink.split("|")[0].strip()
-    # Check if target matches a wiki stem
-    for category in ["vocabulary", "expressions", "culture", "sources"]:
-        if target in wiki[category]:
+    # Check if target matches a wiki stem (incl. jp-travel-vocab for KR)
+    for category in ["vocabulary", "expressions", "culture", "sources", "jp-travel-vocab"]:
+        if category in wiki and target in wiki[category]:
             return target
+    # Fallback: match by title (for KR/JP where wikilinks use Korean/JP text)
+    for category in ["vocabulary", "expressions", "culture", "sources", "jp-travel-vocab"]:
+        if category in wiki:
+            for stem, page in wiki[category].items():
+                if page.get("title") == target:
+                    return stem
+    return None
+
+
+def find_wikilink_category(wikilink: str, wiki: dict) -> str | None:
+    """Find which category a wikilink belongs to."""
+    target = wikilink.split("|")[0].strip()
+    for category in ["vocabulary", "expressions", "culture", "sources", "jp-travel-vocab"]:
+        if category in wiki and target in wiki[category]:
+            return category
+    # Try by title
+    for category in ["vocabulary", "expressions", "culture", "sources", "jp-travel-vocab"]:
+        if category in wiki:
+            for stem, page in wiki[category].items():
+                if page.get("title") == target:
+                    return category
     return None
 
 
@@ -279,6 +320,10 @@ def build_lesson_from_source(
     vocab_links += extract_section_wikilinks(body, "vocabulary citations")
     vocab_links += extract_section_wikilinks(body, "語彙引用")
     vocab_links += extract_section_wikilinks(body, "Citas de Vocabulario")
+    # Also catch "Vocabulary Extracted", "Vocabulary", etc.
+    vocab_links += extract_section_wikilinks(body, "vocabulary extracted")
+    vocab_links += extract_section_wikilinks(body, "vocabulario")
+    vocab_links += extract_section_wikilinks(body, "vocab")
 
     expr_links = extract_section_wikilinks(body, "expression 인용")
     expr_links += extract_section_wikilinks(body, "표현 인용")
@@ -294,7 +339,7 @@ def build_lesson_from_source(
 
     # Also try generic [[wikilink]] catch from References section
     references_match = re.search(
-        r"## (?:인용|References|References)\s*\n([\s\S]+?)(?=\n## |\Z)",
+        r"##\s+(?:인용|References|Citas|引用|인용\s*\(References\))\s*(?:\([^)]+\))?\s*\n([\s\S]+?)(?=\n## |\Z)",
         body, re.MULTILINE
     )
     if references_match:
@@ -308,9 +353,9 @@ def build_lesson_from_source(
                 if not target:
                     continue
                 # Check which category it lives in
-                for cat in ["vocabulary", "expressions", "culture", "sources"]:
-                    if target in wiki[cat]:
-                        if cat == "vocabulary" and len(vocab_links) < TARGET_VOCAB_MAX:
+                for cat in ["vocabulary", "jp-travel-vocab", "expressions", "culture", "sources"]:
+                    if cat in wiki and target in wiki[cat]:
+                        if cat in ("vocabulary", "jp-travel-vocab") and len(vocab_links) < TARGET_VOCAB_MAX:
                             vocab_links.append(link)
                         elif cat == "expressions" and len(expr_links) < TARGET_EXPR_MAX:
                             expr_links.append(link)
@@ -318,12 +363,18 @@ def build_lesson_from_source(
                             culture_links.append(link)
                         break
 
-    # Resolve wikilinks to actual wiki pages
+    # Resolve wikilinks to actual wiki pages (vocab + jp-travel-vocab)
     vocab_pages = []
+    seen_stems = set()
     for link in vocab_links:
         target = find_wikilink_target(link, wiki)
-        if target and target not in vocab_pages:
-            vocab_pages.append(wiki["vocabulary"][target])
+        if target and target not in seen_stems:
+            seen_stems.add(target)
+            # Check both vocab pools
+            pool = wiki.get("vocabulary", {}) if target in wiki.get("vocabulary", {}) \
+                else wiki.get("jp-travel-vocab", {})
+            if target in pool:
+                vocab_pages.append(pool[target])
         if len(vocab_pages) >= TARGET_VOCAB_MAX:
             break
 
@@ -573,16 +624,68 @@ def main():
             "culture": sum(1 for l in lang_lessons if l["wiki"]["culture"]),
         }
 
-    # Build output
+    # Build v1.1 compact output (deduplicated wiki index)
+    wiki_index: dict = {}
+    compact_lessons = []
+
+    for lesson in all_lessons:
+        wiki = lesson.get("wiki", {})
+        # Add vocab pages to wikiIndex
+        vocab_filenames = []
+        for v in wiki.get("vocabulary", []):
+            fname = v.get("filename")
+            if not fname:
+                continue
+            wiki_index[fname] = {
+                "title": v.get("title"),
+                "body": v.get("body"),
+                "category": v.get("category", "vocabulary"),
+            }
+            vocab_filenames.append(fname)
+        # Add expression pages
+        expr_filenames = []
+        for e in wiki.get("expressions", []):
+            fname = e.get("filename")
+            if not fname:
+                continue
+            wiki_index[fname] = {
+                "title": e.get("title"),
+                "body": e.get("body"),
+                "category": e.get("category", "expression"),
+            }
+            expr_filenames.append(fname)
+        # Add culture page
+        culture_filename = None
+        c = wiki.get("culture")
+        if c and c.get("filename"):
+            culture_filename = c.get("filename")
+            wiki_index[culture_filename] = {
+                "title": c.get("title"),
+                "body": c.get("body"),
+                "category": c.get("category", "culture"),
+            }
+        compact_lessons.append({
+            "id": lesson["id"],
+            "date": lesson["date"],
+            "language": lesson["language"],
+            "sourceTopic": lesson["sourceTopic"],
+            "raw": lesson["raw"],
+            "vocabulary": vocab_filenames,
+            "expressions": expr_filenames,
+            "culture": culture_filename,
+            "meta": lesson.get("meta", {}),
+        })
+
     output = {
         "generatedAt": datetime.now().isoformat(),
-        "schemaVersion": "1.0",
-        "lessonCount": len(all_lessons),
+        "schemaVersion": "1.1",
+        "lessonCount": len(compact_lessons),
         "byLanguage": {
-            code: sum(1 for l in all_lessons if l["language"] == code)
+            code: sum(1 for l in compact_lessons if l["language"] == code)
             for code in LANG_CODES.values()
         },
-        "lessons": all_lessons,
+        "wikiIndex": wiki_index,
+        "lessons": compact_lessons,
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:

@@ -68,7 +68,7 @@ def validate_schema(data: dict) -> list[str]:
         if key not in data:
             errors.append(f"Missing top-level key: {key}")
 
-    if data.get("schemaVersion") != "1.0":
+    if data.get("schemaVersion") not in ("1.0", "1.1"):
         errors.append(f"Invalid schemaVersion: {data.get('schemaVersion')}")
 
     if not isinstance(data.get("lessons"), list):
@@ -81,16 +81,21 @@ def validate_schema(data: dict) -> list[str]:
     return errors
 
 
-def validate_lesson(lesson: dict, idx: int) -> list[str]:
+def validate_lesson(lesson: dict, idx: int, data: dict) -> list[str]:
     """Validate a single lesson. Returns list of errors."""
     errors = []
     prefix = f"Lesson[{idx}] ({lesson.get('id', '?')})"
 
-    # Required fields
-    required = ["id", "date", "language", "sourceTopic", "raw", "wiki", "meta"]
+    # Required fields (wiki is optional in v1.1 — vocab/expressions at top level)
+    required = ["id", "date", "language", "sourceTopic", "raw", "meta"]
     for key in required:
         if key not in lesson:
             errors.append(f"{prefix}: missing '{key}'")
+    # v1.1: require vocabulary and expressions at top level
+    if not lesson.get("wiki"):
+        for key in ["vocabulary", "expressions"]:
+            if key not in lesson:
+                errors.append(f"{prefix}: missing '{key}' (v1.1)")
 
     # Language check
     if lesson.get("language") not in REQUIRED_LANG:
@@ -108,10 +113,33 @@ def validate_lesson(lesson: dict, idx: int) -> list[str]:
             f"min {MIN_RAW_EXCERPT_CHARS})"
         )
 
-    # Wiki content
+    # Wiki content — handle both v1.0 (nested wiki.vocabulary[dict])
+    # and v1.1 (top-level vocabulary=[filenames] + wikiIndex lookup)
+    schema = data.get("schemaVersion") if "data" in dir() else None
     wiki = lesson.get("wiki", {})
-    vocab = wiki.get("vocabulary", [])
-    exprs = wiki.get("expressions", [])
+    if wiki:
+        vocab = wiki.get("vocabulary", [])
+        exprs = wiki.get("expressions", [])
+    else:
+        # v1.1 compact
+        vocab_filenames = lesson.get("vocabulary", [])
+        exprs_filenames = lesson.get("expressions", [])
+        wiki_index = data.get("wikiIndex", {})
+        vocab = [
+            {**(wiki_index.get(fn, {})), "filename": fn}
+            for fn in vocab_filenames
+            if fn in wiki_index
+        ]
+        exprs = [
+            {**(wiki_index.get(fn, {})), "filename": fn}
+            for fn in vocab_filenames
+            if fn in wiki_index
+        ]
+        exprs = [
+            {**(wiki_index.get(fn, {})), "filename": fn}
+            for fn in exprs_filenames
+            if fn in wiki_index
+        ]
 
     if len(vocab) < MIN_VOCAB_PER_LESSON:
         errors.append(
@@ -193,7 +221,7 @@ def main():
 
     # Lessons
     for i, lesson in enumerate(data.get("lessons", [])):
-        all_errors.extend(validate_lesson(lesson, i))
+        all_errors.extend(validate_lesson(lesson, i, data))
 
     # Coverage
     all_warnings.extend(validate_coverage(data))
