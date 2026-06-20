@@ -1864,3 +1864,30 @@ Phase H는 Phase G에서 발견된 5개 unresolved wikilinks 해결.
 - 545 tests passed
 - 빌드 616.90 KB / gzip 195.64 KB
 - 런타임 에러 해결
+
+### [2026-06-20] fix | 캐릭터 "Loading..." 무한 표시 버그 수정
+
+**증거**: Phase E (random character selection) 이후 캐릭터 이미지가 "Loading..." 으로 멈춤
+
+**근본 원인**: 
+- App.tsx가 `LANGUAGE_DEFAULT_CHARACTERS` (4개 default)만 preload
+- Phase E는 스테이지 진입시 `selectCharacterForStage`가 4개 언어 × 3 캐릭터 = 12명 중 random 선택
+- default가 아닌 캐릭터 (예: en-oliver)는 preload 안됨 → ImageLoader.get() → null → "Loading..." 표시
+
+**수정 (2 layer defense)**:
+1. **App.tsx preload**: `LANGUAGE_DEFAULT_CHARACTERS` → `CHARACTER_IMAGES` 전체 (12명 × 7 포즈 = 84 이미지)
+2. **CharacterRenderer.ts on-demand load**: 이미지가 없으면 `ImageLoader.load(imageConfig)` 호출
+   - 첫 호출: "Loading..." 표시 + 백그라운드 로드
+   - 다음 프레임: 로드 완료, 캐릭터 표시
+
+**검증**:
+- 549 tests passed (4 신규) — 이전 545 + 4
+- 빌드 616.86 KB / gzip 195.63 KB
+
+**테스트 추가 (4개)**:
+- 12 캐릭터 × 7 포즈 = 84 이미지 확인
+- 모든 캐릭터 7 포즈 정의 확인
+- 모든 src가 올바른 형식 (/characters/{lang}/{name}/{pose}.png)
+- 12 캐릭터 모두 고유 src prefix
+
+**영향**: Phase E (random selection)가 의도대로 작동 — 12명 캐릭터 모두 정상 표시

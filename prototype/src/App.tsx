@@ -105,20 +105,18 @@ export function App() {
       }
     });
 
-    // Preload external character images for all languages
-    import('./config/characterImages.js').then(({ USE_EXTERNAL_IMAGES, CHARACTER_IMAGES, LANGUAGE_DEFAULT_CHARACTERS }) => {
+    // Preload external character images for ALL characters (12 total)
+    // Phase E fix: random character selection may pick non-default characters,
+    // so we must preload every character (not just the language defaults)
+    import('./config/characterImages.js').then(({ USE_EXTERNAL_IMAGES, CHARACTER_IMAGES }) => {
       if (USE_EXTERNAL_IMAGES) {
         import('./sprites/ImageLoader.js').then(({ ImageLoader }) => {
-          // 모든 언어의 기본 캐릭터 프리로드
           const imagesToLoad: any[] = [];
-          
-          Object.values(LANGUAGE_DEFAULT_CHARACTERS).forEach((characterId: any) => {
-            const characterSet = CHARACTER_IMAGES[characterId];
-            if (characterSet) {
-              imagesToLoad.push(...Object.values(characterSet));
-            }
+
+          Object.values(CHARACTER_IMAGES).forEach((characterSet) => {
+            imagesToLoad.push(...Object.values(characterSet));
           });
-          
+
           if (imagesToLoad.length > 0) {
             ImageLoader.preload(imagesToLoad)
               .then(() => console.log(`[App] Preloaded ${imagesToLoad.length} character images`))

@@ -1225,7 +1225,15 @@ function renderCharacterImage(
 
   // Get image config for current pose
   const imageConfig = characterSet[state.pose] || characterSet.idle;
-  const loadedImage = ImageLoader.get(imageConfig.src);
+  let loadedImage = ImageLoader.get(imageConfig.src);
+
+  // On-demand load if not yet preloaded (Phase E fix: random selection
+  // may pick characters that weren't in the initial preload batch)
+  if (!loadedImage) {
+    ImageLoader.load(imageConfig).catch(() => {
+      // Silent failure — placeholder shown below
+    });
+  }
 
   if (!loadedImage || !loadedImage.loaded) {
     // Image not loaded yet, show placeholder or fallback
