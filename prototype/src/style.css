@@ -101,6 +101,35 @@ body {
   background: rgba(0, 255, 136, 0.05);
 }
 
+.stage-card.stage-locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(0.7);
+  background: rgba(50, 50, 50, 0.1);
+}
+
+.stage-card.stage-locked:hover {
+  transform: none;
+  border-color: var(--border);
+}
+
+.stage-card.stage-locked h3 {
+  color: #6a7888;
+}
+
+.lock-badge {
+  font-size: 1.25rem;
+  opacity: 0.7;
+}
+
+.lock-hint {
+  color: #6a7888;
+  font-style: italic;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
 .stage-card-header {
   display: flex;
   justify-content: space-between;

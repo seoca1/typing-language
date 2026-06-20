@@ -8,6 +8,10 @@
 import type { StageConfig, StageRecord, Language } from '../types.js';
 import { SAMPLE_STAGES, stagesByTier, type StageTier } from '../data/stages.js';
 import { CHARACTER_INFO } from '../config/characterImages.js';
+import {
+  checkStageUnlocked,
+  type StageLockInfo,
+} from '../data/stageLock.js';
 
 interface MenuProps {
   language: Language;
@@ -39,34 +43,54 @@ function StageCard({
   stage,
   onStart,
   record,
+  lock,
 }: {
   stage: StageConfig;
   onStart: (s: StageConfig) => void;
   record?: StageRecord;
+  lock: StageLockInfo;
 }) {
   const stars = record?.stars || 0;
   const cleared = record?.cleared || false;
   const bestScore = record?.bestScore || 0;
+  const locked = !lock.unlocked;
+
+  const handleClick = () => {
+    if (locked) return; // Don't start locked stages
+    onStart(stage);
+  };
 
   return (
-    <button className={`stage-card ${cleared ? 'stage-cleared' : ''}`} onClick={() => onStart(stage)}>
+    <button
+      className={`stage-card ${cleared ? 'stage-cleared' : ''} ${locked ? 'stage-locked' : ''}`}
+      onClick={handleClick}
+      disabled={locked}
+      title={locked ? lock.reason : stage.description}
+    >
       <div className="stage-card-header">
         <h3>
           {stage.name}
           <span className="tier-badge">T{stage.difficulty}</span>
         </h3>
-        {cleared && (
+        {locked ? (
+          <div className="stage-status">
+            <span className="lock-badge">🔒</span>
+          </div>
+        ) : cleared ? (
           <div className="stage-status">
             <span className="clear-badge">✓</span>
             <span className="stars">{'⭐'.repeat(stars)}</span>
           </div>
-        )}
+        ) : null}
       </div>
-      <p>{stage.description}</p>
+      <p>{locked ? lock.reason : stage.description}</p>
       <div className="stage-footer">
         <small>{stage.wordCount}개</small>
         {cleared && bestScore > 0 && (
           <small className="best-score">최고: {bestScore}점</small>
+        )}
+        {locked && (
+          <small className="lock-hint">{lock.reason}</small>
         )}
       </div>
     </button>
@@ -85,6 +109,12 @@ export function Menu({
   const languageStages = SAMPLE_STAGES.filter((s) => s.language === language);
   const byTier = stagesByTier(language);
   const supportsTier0 = language === 'jp' || language === 'en' || language === 'es';
+
+  // Phase I: compute stage locks for each stage based on prior clears
+  const records = stageRecords || {};
+  const lockMap = Object.fromEntries(
+    languageStages.map((s) => [s.id, checkStageUnlocked(s.id, records)])
+  );
 
   const languageNames: Record<string, { native: string; en: string }> = {
     en: { native: 'English', en: '영어' },
@@ -141,6 +171,7 @@ export function Menu({
                 stage={s}
                 onStart={onStartStage}
                 record={stageRecords?.[s.id]}
+                lock={lockMap[s.id]}
               />
             ))}
           </div>
@@ -160,6 +191,7 @@ export function Menu({
                   stage={s}
                   onStart={onStartStage}
                   record={stageRecords?.[s.id]}
+                  lock={lockMap[s.id]}
                 />
               ))}
             </div>

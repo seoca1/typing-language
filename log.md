@@ -1750,3 +1750,47 @@ Phase H는 Phase G에서 발견된 5개 unresolved wikilinks 해결.
 #### 향후 개선
 - 위키 페이지 자동 생성 (번역 API 활용)
 - 덜 흔한 어휘 stub 페이지 일괄 생성
+
+### [2026-06-20] feat | Phase I — Stage lock + unlock system
+
+게임 진행 시스템 강화: 스테이지 잠금 + 해제 시스템.
+
+#### 1. Stage Lock 로직 (`src/data/stageLock.ts`)
+- Tier 기반 unlock: Tier N은 Tier N-1 클리어 후 해제
+- Romance (_d_) 스테이지: 2개 클리어 시 해제
+- Travel (_t_) 스테이지: 3개 클리어 시 해제
+- 언어별 독립 잠금 (EN/KR/JP/ES 각자 진행)
+
+#### 2. Menu UI 잠금 표시
+- 🔒 자물쇠 아이콘 + 회색조 (grayscale)
+- disabled 버튼, hover 막힘
+- 잠금 이유 표시 ("Clear Tier 0 first", "Clear 2 stages to unlock romance")
+- 마우스 호버만으로 정보 확인 가능
+
+#### 3. App 가드
+- `handleStartStage` 잠금 확인
+- 잠긴 스테이지 직접 호출 시 무시 (console warning)
+- 우회 방지 (URL hash, 직접 클릭 등)
+
+#### 4. ResultScreen Unlock 알림
+- 새 스테이지 잠금 해제 시 글리머/펄스 애니메이션 배너
+- "🔓 +3 new stages unlocked!" 메시지
+- 해제된 스테이지 ID 칩으로 표시
+
+#### 5. 테스트 (19개 신규)
+- Tier 0-5 잠금 체인 (모든 단계)
+- Romance/Travel 특수 unlock
+- 언어별 독립 (KR clears → EN not unlocked)
+- `getNextStageToPlay` (다음 플레이할 스테이지)
+- `countNewlyUnlocked` (방금 해제된 스테이지)
+
+#### 검증 결과
+- 530 tests passed (1 skipped) — 511 + 19 신규
+- 빌드 612.59 KB / gzip 194.52 KB
+- 잠금/해제 UI 정상 작동
+
+#### 사용자 경험 변화
+- 이전: 모든 스테이지 자유 선택 (어려운 것부터 플레이 가능)
+- 현재: 자연스러운 진행 (Tier 0 → Tier 1 → ... → Romance/Travel)
+- 진행 상황 시각화, 동기 부여
+- 단계별 학습 곡선 형성

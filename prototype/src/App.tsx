@@ -19,6 +19,7 @@ import {
   trackSessionMistake,
   clearSessionMistakes,
 } from './data/wordMastery.js';
+import { checkStageUnlocked } from './data/stageLock.js';
 import type { Enemy } from './types.js';
 import { SAMPLE_STAGES } from './data/stages.js';
 import { getLanguage } from './language/index.js';
@@ -263,6 +264,13 @@ export function App() {
   }, [state.phase, state.currentStage, state.currentEnemy]);
 
   const handleStartStage = (stage: StageConfig) => {
+    // Phase I: Guard — refuse to start locked stages
+    const lock = checkStageUnlocked(stage.id, state.player.stageRecords || {});
+    if (!lock.unlocked) {
+      console.warn(`[App] Refused to start locked stage ${stage.id}: ${lock.reason}`);
+      return;
+    }
+
     // Phase B-2: Build preview enemies first, then show LearnScreen
     const langConfig = getLanguage(stage.language);
     let corpus: WordEntry[] = stage.corpusFilter.minLevel && stage.corpusFilter.minLevel >= 3
@@ -470,6 +478,8 @@ export function App() {
         results={state.missionResults}
         onBack={handleBackToMenu}
         currentLanguage={stageLanguage}
+        stageRecords={state.player.stageRecords}
+        clearedStageId={state.currentStage?.id}
         onPracticeStage={(stageId) => {
           // Find the stage and start it
           const stage = SAMPLE_STAGES.find((s) => s.id === stageId);

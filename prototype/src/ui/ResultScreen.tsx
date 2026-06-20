@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import type { MissionConfig } from '../types.js';
+import type { MissionConfig, StageRecord } from '../types.js';
 import { DailyLessonCard } from './DailyLessonCard.js';
 import { DailyLessonModal } from './DailyLessonModal.js';
 import {
@@ -14,6 +14,8 @@ import {
 } from '../data/wordMastery.js';
 import { getNativeLanguage } from '../data/nativeLanguage.js';
 import { t } from '../data/uiTranslations.js';
+import { SAMPLE_STAGES } from '../data/stages.js';
+import { countNewlyUnlocked } from '../data/stageLock.js';
 
 interface ResultScreenProps {
   score: number;
@@ -25,6 +27,10 @@ interface ResultScreenProps {
   currentLanguage?: 'en' | 'jp' | 'es' | 'kr';
   /** Callback to start a practice stage from the daily lesson card */
   onPracticeStage?: (stageId: string) => void;
+  /** Stage records — used for unlock detection */
+  stageRecords?: Record<string, StageRecord>;
+  /** ID of the stage just cleared — used to compute newly unlocked */
+  clearedStageId?: string;
 }
 
 export function ResultScreen({
@@ -35,6 +41,8 @@ export function ResultScreen({
   onBack,
   currentLanguage,
   onPracticeStage,
+  stageRecords,
+  clearedStageId,
 }: ResultScreenProps) {
   const [dailyLessonOpen, setDailyLessonOpen] = useState(false);
   const [dailyLessonDismissed, setDailyLessonDismissed] = useState(false);
@@ -44,6 +52,15 @@ export function ResultScreen({
     if (!currentLanguage) return null;
     return getNextDailyLesson({ language: currentLanguage });
   }, [currentLanguage]);
+
+  // Phase I: Newly unlocked stages (compute by simulating removal of cleared stage's record)
+  const newlyUnlocked = useMemo(() => {
+    if (!stageRecords || !clearedStageId) return [];
+    const prevRecords = { ...stageRecords };
+    delete prevRecords[clearedStageId];
+    const allStageIds = SAMPLE_STAGES.map((s) => s.id);
+    return countNewlyUnlocked(allStageIds, prevRecords, stageRecords);
+  }, [stageRecords, clearedStageId]);
 
   // Phase B-4: Weak Words from this session
   const sessionWeakWords = useMemo(() => {
@@ -78,6 +95,24 @@ export function ResultScreen({
         <p>Score: <strong>{score}</strong></p>
         <p>Defeated: <strong>{enemiesDefeated}</strong></p>
       </div>
+
+      {/* Phase I: Newly Unlocked Stages Banner */}
+      {newlyUnlocked.length > 0 && (
+        <div className="result-unlock-banner">
+          <div className="result-unlock-banner__icon">🔓</div>
+          <div className="result-unlock-banner__text">
+            <strong>+{newlyUnlocked.length} new stage{newlyUnlocked.length > 1 ? 's' : ''} unlocked!</strong>
+            <div className="result-unlock-banner__list">
+              {newlyUnlocked.slice(0, 3).map((id) => (
+                <span key={id} className="unlock-chip">{id}</span>
+              ))}
+              {newlyUnlocked.length > 3 && (
+                <span className="unlock-chip">+{newlyUnlocked.length - 3} more</span>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Phase B-4: Mastery Overview */}
       <div className="result-mastery">
@@ -175,6 +210,51 @@ export function ResultScreen({
           font-size: 16px;
           color: #00d9ff;
           margin: 0 0 12px 0;
+        }
+
+        /* Phase I: Unlock Banner */
+        .result-unlock-banner {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          background: linear-gradient(135deg, rgba(102, 221, 102, 0.15), rgba(0, 217, 255, 0.15));
+          border: 2px solid #66dd66;
+          border-radius: 12px;
+          padding: 14px 18px;
+          margin: 16px 0;
+          animation: unlockGlow 2s ease-in-out infinite;
+        }
+        @keyframes unlockGlow {
+          0%, 100% { box-shadow: 0 0 12px rgba(102, 221, 102, 0.3); }
+          50% { box-shadow: 0 0 24px rgba(102, 221, 102, 0.6); }
+        }
+        .result-unlock-banner__icon {
+          font-size: 32px;
+          flex-shrink: 0;
+        }
+        .result-unlock-banner__text {
+          flex: 1;
+          color: #fff;
+        }
+        .result-unlock-banner__text strong {
+          font-size: 16px;
+          color: #66dd66;
+          display: block;
+          margin-bottom: 6px;
+        }
+        .result-unlock-banner__list {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+        .unlock-chip {
+          background: rgba(0, 217, 255, 0.2);
+          border: 1px solid #00d9ff;
+          color: #fff;
+          padding: 2px 8px;
+          border-radius: 12px;
+          font-size: 11px;
+          font-family: monospace;
         }
         .mastery-bar {
           background: #1a2530;
