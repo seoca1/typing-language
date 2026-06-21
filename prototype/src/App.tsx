@@ -614,6 +614,18 @@ export function App() {
         const wpm = calculateWpm(completedTexts, elapsed);
         dispatch({ type: 'UPDATE_STATS', accuracy: currentAccuracy, wpm });
 
+        // Phase I/II fix: persist stage record so Menu shows ✓/stars and
+        // tier-based lock chain recognizes this stage as cleared.
+        if (state.currentStage) {
+          dispatch({
+            type: 'UPDATE_STAGE_RECORD',
+            stageId: state.currentStage.id,
+            score: stateRef.current.score + scoreBreakdown.total,
+            wpm,
+            accuracy: currentAccuracy,
+          });
+        }
+
         spawnPopup(fx, cx, cy + 60, `STAGE CLEAR!`, '#00d9ff', 56);
         spawnColorShower(fx, cx, cy + 60, accents, 80);
 
