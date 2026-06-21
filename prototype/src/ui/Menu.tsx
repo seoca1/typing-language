@@ -119,10 +119,13 @@ export function Menu({
     byTier[0] !== undefined && byTier[0].length > 0;
 
   // Phase I: compute stage locks for each stage based on prior clears
-  // Use ALL language stages (including those from byTier without corpus)
-  // to ensure lockMap covers every stage rendered
+  // Bug fix: use ALL language stages (from byTier) — NOT just SAMPLE_STAGES —
+  // so lockMap covers every stage rendered, including Tier 4+ corpus-pending
+  // stages that exist in ALL_STAGES but not in SAMPLE_STAGES. Previously
+  // missing lockMap entries caused StageCard to treat them as unlocked
+  // (the `const locked = lock ? !lock.unlocked : false` fallback).
   const records = stageRecords || {};
-  const allLanguageStages = SAMPLE_STAGES.filter((s) => s.language === language);
+  const allLanguageStages = Object.values(byTier).flat();
   const lockMap: Record<string, StageLockInfo> = {};
   for (const s of allLanguageStages) {
     lockMap[s.id] = checkStageUnlocked(s.id, records);

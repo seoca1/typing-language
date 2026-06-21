@@ -290,6 +290,16 @@ export function App() {
   };
 
   const actuallyStartStage = (stage: StageConfig) => {
+    // Defense-in-depth: re-check lock before actually starting the stage.
+    // handleStartStage already checks, but stale state or rapid clicks
+    // could bypass it. This guards handleConfirmStartStage → actuallyStartStage.
+    const lock = checkStageUnlocked(stage.id, state.player.stageRecords || {});
+    if (!lock.unlocked) {
+      console.warn(`[App] Refused to start locked stage ${stage.id}: ${lock.reason}`);
+      setPendingStage(null);
+      return;
+    }
+
     const langConfig = getLanguage(stage.language);
 
     // Build the candidate corpus for this stage.
