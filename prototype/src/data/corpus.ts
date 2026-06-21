@@ -796,6 +796,92 @@ export const KR_SENTENCES: WordEntry[] = [
     level: 5,
     category: 'culture',
   },
+
+  // Tier 4: 뉴스 헤드라인 (Tier 4 unlock — requires 'news' corpus)
+  {
+    id: 'krs_301',
+    display: '과학자들이 태평양에서 새로운 심해어 종을 발견했습니다.',
+    meaning: 'Scientists discovered a new species of deep-sea fish in the Pacific Ocean.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_302',
+    display: '국제 기후 정상회의가 탄소 배출 감축에 관한 역사적 합의에 도달했습니다.',
+    meaning: 'The international climate summit reached a historic agreement on carbon emission reductions.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_303',
+    display: '한 대형 기술 회사가 의료용 인공지능 플랫폼을 공개했습니다.',
+    meaning: 'A major tech company unveiled an AI platform for healthcare.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_304',
+    display: '올림픽 선수들이 개회식을 준비하고 있습니다.',
+    meaning: 'Olympic athletes are preparing for the opening ceremony.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_305',
+    display: '연구자들이 재생 에너지 저장 기술의 큰 진전을 발표했습니다.',
+    meaning: 'Researchers announced significant progress in renewable energy storage technology.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_306',
+    display: '중앙은행이 인플레이션 억제를 위해 금리를 인상했습니다.',
+    meaning: 'The central bank raised interest rates to combat inflation.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_307',
+    display: '새로운 고고학적 발견이 고대 문명의 역사에 빛을 비춥니다.',
+    meaning: 'A new archaeological discovery sheds light on ancient civilization history.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_308',
+    display: '세계 보건 기구가 열대병 예방 신종 백신을 승인했습니다.',
+    meaning: 'The WHO approved a new vaccine for tropical disease prevention.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_309',
+    display: '주요 항공사가 내년 국제선 노선 확대를 발표했습니다.',
+    meaning: 'A major airline announced expansion of international flight routes next year.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_310',
+    display: '교육부가 초등학교용 새로운 디지털 학습 프로그램을 도입했습니다.',
+    meaning: 'The education ministry introduced a new digital learning program for primary schools.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_311',
+    display: '우주 탐사선이 화성 표면에 탐사선 착륙에 성공했습니다.',
+    meaning: 'The space mission successfully landed a rover on the Martian surface.',
+    level: 4,
+    category: 'news',
+  },
+  {
+    id: 'krs_312',
+    display: '세계 지도자들이 기후 변화 대책에 대해 논의하기 위해 모였습니다.',
+    meaning: 'World leaders gathered to discuss climate change countermeasures.',
+    level: 4,
+    category: 'news',
+  },
 ];
 
 export const EN_SENTENCES: WordEntry[] = [
@@ -827,6 +913,20 @@ export const EN_SENTENCES: WordEntry[] = [
   { id: 'ens_203', display: 'In the heart of the city, people rush through their daily routines, barely noticing the small moments of beauty that surround them every day.', level: 5, category: 'literature' },
   { id: 'ens_204', display: 'Technology has transformed the way we communicate, allowing us to connect instantly with people across the globe and share ideas in real time.', level: 5, category: 'technology' },
   { id: 'ens_205', display: 'Despite facing numerous challenges and setbacks, she never gave up on her dreams and continued working hard towards achieving her goals.', level: 5, category: 'inspiration' },
+
+  // Tier 4: News headlines (Tier 4 unlock — requires 'news' corpus)
+  { id: 'ens_301', display: 'Scientists discover new species of deep-sea fish in the Pacific Ocean.', level: 4, category: 'news' },
+  { id: 'ens_302', display: 'International climate summit reaches historic agreement on carbon emissions.', level: 4, category: 'news' },
+  { id: 'ens_303', display: 'Tech company unveils revolutionary artificial intelligence platform for healthcare.', level: 4, category: 'news' },
+  { id: 'ens_304', display: 'Olympic athletes prepare for opening ceremony amid global anticipation.', level: 4, category: 'news' },
+  { id: 'ens_305', display: 'Researchers announce breakthrough in renewable energy storage technology.', level: 4, category: 'news' },
+  { id: 'ens_306', display: 'Central bank raises interest rates to combat rising inflation pressures.', level: 4, category: 'news' },
+  { id: 'ens_307', display: 'New archaeological discovery sheds light on ancient civilization history.', level: 4, category: 'news' },
+  { id: 'ens_308', display: 'Global health organization approves new vaccine for tropical disease prevention.', level: 4, category: 'news' },
+  { id: 'ens_309', display: 'Major airline announces expansion of international flight routes next year.', level: 4, category: 'news' },
+  { id: 'ens_310', display: 'Education ministry introduces new digital learning program for primary schools.', level: 4, category: 'news' },
+  { id: 'ens_311', display: 'Space mission successfully lands rover on Martian surface to search for water.', level: 4, category: 'news' },
+  { id: 'ens_312', display: 'World leaders gather to discuss urgent measures against climate change threats.', level: 4, category: 'news' },
 ];
 
 export const JP_SENTENCES: WordEntry[] = [
@@ -854,6 +954,20 @@ export const JP_SENTENCES: WordEntry[] = [
   { id: 'jps_202', display: '技術の発展により、私たちは世界中の人々と瞬時につながり、リアルタイムでアイデアを共有することができるようになりました。', romaji: 'gijutsunohattenniyoriwatashitachihasekaijiuunohitobitotonshunjinitunagaririarutaimudeaideiawokoyuusurkotogadekiruyouninarimashita', meanings: { en: 'Thanks to technological advances, we can now connect instantly with people around the world and share ideas in real time.' }, meaningLang: 'en', level: 5, category: 'technology' },
   { id: 'jps_203', display: '彼女は多くの困難や挫折に直面しても、決して夢を諦めず、目標を達成するために努力を続けました。', romaji: 'kanojowaookunokonnnannzasetunichokumennshitemodeshiteketteshiteyumewoankiramezumokuhyouwotasseisurutameniryokuwotsudzukemashita', meanings: { en: 'Despite facing many difficulties and setbacks, she never gave up on her dreams and continued working hard to achieve her goals.' }, meaningLang: 'en', level: 5, category: 'inspiration' },
   { id: 'jps_204', display: '桜の花が咲く春の季節は、日本で最も美しい時期の一つとして知られており、多くの人々が花見を楽しみます。', romaji: 'sakuranohanagazakuharunokisetsuwanihonndemottomoutsukushiijikinohtotoshiteshirareteorisokuunohitobitagahannmiwotanoshimimasu', meanings: { en: 'The spring season when cherry blossoms bloom is known as one of the most beautiful times in Japan, and many people enjoy flower viewing.' }, meaningLang: 'en', level: 5, category: 'culture' },
+
+  // Tier 4: ニュース見出し (Tier 4 unlock — requires 'news' corpus)
+  { id: 'jps_301', display: '科学者たちが太平洋で新しい深海魚の種を発見した。', romaji: 'kagakushatachigataiheiyoudeshinkaisakizanaonoshuwohakumeinishita', meanings: { en: 'Scientists discovered a new species of deep-sea fish in the Pacific Ocean.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_302', display: '国際気候サミットが炭素排出削減の歴史的合意に達した。', romaji: 'kokusaikikousamittogatansohaisishukugennnorekishitekigouinitasshita', meanings: { en: 'The international climate summit reached a historic agreement on carbon emission reductions.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_303', display: '大手テック企業が医療向けAIプラットフォームを公開した。', romaji: 'ohtetekkukigyougairyoumukeAIpurattofoomuwukoukaisyita', meanings: { en: 'A major tech company unveiled an AI platform for healthcare.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_304', display: 'オリンピック選手たちが開会式に向けて準備を進めている。', romaji: 'orinpikkusennshutachigakaikaishikinimuketejunnbiwosusumeru', meanings: { en: 'Olympic athletes are preparing for the opening ceremony.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_305', display: '研究者らが再生可能エネルギー貯蔵技術で大きな進展を遂げた。', romaji: 'kenkyuusharagasaiseikanounerugiichojikutsugijutsudeookunashintenwotogeta', meanings: { en: 'Researchers achieved significant progress in renewable energy storage technology.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_306', display: '中央銀行がインフレ抑制のために金利を引き上げた。', romaji: 'chuuoukinngougainhureyokuseinotamenikinriwohiageeta', meanings: { en: 'The central bank raised interest rates to combat inflation.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_307', display: '新たな考古学的発見が古代文明の歴史に光を当てる。', romaji: 'aratanakoukogakutekihakkengakokodaibunmeinorekishinihikariwoateru', meanings: { en: 'A new archaeological discovery sheds light on ancient civilization history.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_308', display: '世界保健機関が熱帯病予防の新ワクチンを承認した。', romaji: 'sekaihokenkikannetatsubyouyobounoshinwakuchinwoshouninnshita', meanings: { en: 'The WHO approved a new vaccine for tropical disease prevention.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_309', display: '大手航空会社が来年の国際線路線拡大を発表した。', romaji: 'ohtekoukuugaishagarainenonkokusaisennrosenmkakudaiwohappyoushita', meanings: { en: 'A major airline announced expansion of international flight routes next year.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_310', display: '教育省が小学校向けの新しいデジタル学習プログラムを導入した。', romaji: 'kyouikushougashougakkoumukenoatarashiidejitarugakushuppuroguramuwodounyuushita', meanings: { en: 'The education ministry introduced a new digital learning program for primary schools.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_311', display: '宇宙探査機が火星の表面にローバーの着陸に成功した。', romaji: 'uchuutansakukigakaseinohyoumenniRoobanochakurikunoseikoushita', meanings: { en: 'The space mission successfully landed a rover on the Martian surface.' }, meaningLang: 'en', level: 4, category: 'news' },
+  { id: 'jps_312', display: '世界各国の指導者たちが気候変動対策について話し合った。', romaji: 'sekaikakukununshidoushatachigakikuhennndoutaisakunitsuitehanashiatta', meanings: { en: 'World leaders gathered to discuss climate change countermeasures.' }, meaningLang: 'en', level: 4, category: 'news' },
 ];
 
 export const ES_SENTENCES: WordEntry[] = [
@@ -883,6 +997,20 @@ export const ES_SENTENCES: WordEntry[] = [
   { id: 'ess_203', display: 'A pesar de enfrentar numerosos desafíos y contratiempos, ella nunca renunció a sus sueños y continuó trabajando duro para alcanzar sus metas.', level: 5, category: 'inspiration' },
   { id: 'ess_204', display: 'En el corazón de la ciudad, la gente corre a través de sus rutinas diarias, apenas notando los pequeños momentos de belleza que los rodean cada día.', level: 5, category: 'literature' },
   { id: 'ess_205', display: 'El zorro marrón rápido salta sobre el perro perezoso mientras el sol se pone detrás de las montañas distantes, pintando el cielo en tonos de naranja y púrpura.', level: 5, category: 'literature' },
+
+  // Tier 4: Titulares de noticias (Tier 4 unlock — requires 'news' corpus)
+  { id: 'ess_301', display: 'Científicos descubren una nueva especie de pez en el océano Pacífico.', level: 4, category: 'news' },
+  { id: 'ess_302', display: 'La cumbre climática internacional alcanza un acuerdo histórico sobre emisiones.', level: 4, category: 'news' },
+  { id: 'ess_303', display: 'Una empresa tecnológica presenta una plataforma de inteligencia artificial.', level: 4, category: 'news' },
+  { id: 'ess_304', display: 'Los atletas olímpicos se preparan para la ceremonia de apertura.', level: 4, category: 'news' },
+  { id: 'ess_305', display: 'Investigadores anuncian un avance en tecnología de energía renovable.', level: 4, category: 'news' },
+  { id: 'ess_306', display: 'El banco central sube las tasas de interés para combatir la inflación.', level: 4, category: 'news' },
+  { id: 'ess_307', display: 'Un nuevo descubrimiento arqueológico revela la historia de civilizaciones antiguas.', level: 4, category: 'news' },
+  { id: 'ess_308', display: 'La organización mundial de la salud aprueba una nueva vacuna tropical.', level: 4, category: 'news' },
+  { id: 'ess_309', display: 'Una importante aerolínea anuncia la expansión de rutas internacionales.', level: 4, category: 'news' },
+  { id: 'ess_310', display: 'El ministerio de educación lanza un nuevo programa de aprendizaje digital.', level: 4, category: 'news' },
+  { id: 'ess_311', display: 'La misión espacial logra aterrizar un rover en la superficie de Marte.', level: 4, category: 'news' },
+  { id: 'ess_312', display: 'Los líderes mundiales se reúnen para discutir medidas contra el cambio climático.', level: 4, category: 'news' },
 ];
 
 export const CORPUS = {
