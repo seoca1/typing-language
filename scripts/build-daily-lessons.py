@@ -46,7 +46,7 @@ TARGET_VOCAB_MAX = 8
 TARGET_EXPR_MIN = 2
 TARGET_EXPR_MAX = 4
 RAW_EXCERPT_MIN = 80
-RAW_EXCERPT_MAX = 800
+RAW_EXCERPT_MAX = 600  # Multi-paragraph target length
 MAX_LESSONS_PER_LANG = 30  # 30일 rotation 가능
 
 
@@ -61,6 +61,99 @@ def extract_title(md_text: str) -> str:
         if line.startswith("# "):
             return line[2:].strip()
     return "Untitled"
+
+
+def extract_source_excerpt(md_text: str, max_chars: int = 600) -> str:
+    """Extract a rich excerpt from a source hub page.
+
+    Source hub pages have structure like:
+    - ## Summary / ## 概要 / ## 文脈 / ## Overview (brief overview)
+    - ## Key Takeaways / ## 핵심 추출 사항 / ## 重要な抽出事項
+    - ## Vocabulary Extracted / ## 어휘 / ## 語彙カテゴリー
+    - ## Sources / ## 인용 / ## 出典
+
+    This extracts Summary + Key Takeaways + Vocabulary Extracted
+    for a rich raw excerpt.
+    """
+    lines = md_text.splitlines()
+    in_first_section = False
+    in_metadata = True
+    paragraph_lines: list[str] = []
+    # Multi-language section aliases
+    included_sections = {
+        # English
+        "Summary", "Overview", "Key Takeaways", "Vocabulary Extracted",
+        "Vocabulary", "Expressions Extracted",
+        # Korean
+        "개요", "요약", "핵심 추출 사항", "어휘 카테고리", "어휘",
+        "표현", "인용",
+        # Japanese
+        "概要", "文脈", "重要な抽出事項", "語彙カテゴリー",
+        "語彙", "表現", "原文", "重要な抽出",
+        # Spanish
+        "Resumen", "Conclusiones Clave", "Vocabulario Extraído",
+        "Vocabulario", "Expresiones Extraídas",
+    }
+    current_section = None
+    stopped = False
+
+    for line in lines:
+        if stopped:
+            break
+        stripped = line.strip()
+
+        if stripped.startswith("# "):
+            continue
+
+        if stripped.startswith("## "):
+            section_name = stripped.lstrip("# ").strip()
+            # Strip parenthetical like "(Travel journal)" for matching
+            clean_name = section_name.split("(")[0].strip()
+            if not in_first_section:
+                in_first_section = True
+                in_metadata = False
+                current_section = clean_name
+                if current_section in included_sections:
+                    paragraph_lines.append(stripped)
+                continue
+            # Already in first section. New section heading.
+            if current_section in included_sections and clean_name in included_sections:
+                # Transition from one kept section to another — keep going
+                current_section = clean_name
+                paragraph_lines.append("")  # blank line between sections
+                paragraph_lines.append(stripped)
+            else:
+                # Either leaving a kept section, or entering a non-kept section
+                # — stop here.
+                if paragraph_lines:
+                    stopped = True
+                break
+            continue
+
+        if stripped.startswith("### "):
+            break
+
+        if stripped == "---" or stripped.startswith("---"):
+            continue
+
+        if in_metadata and (
+            stripped.startswith("**")
+            or stripped == ""
+        ):
+            continue
+
+        in_metadata = False
+        if current_section in included_sections:
+            paragraph_lines.append(stripped)
+
+        body = "\n".join(paragraph_lines)
+        if len(body) >= max_chars:
+            break
+
+    body = "\n".join(paragraph_lines).strip()
+    if len(body) > max_chars:
+        body = body[:max_chars].rsplit(".", 1)[0] + "."
+    return body
 
 
 def extract_first_paragraph(md_text: str, max_chars: int = 500) -> str:
@@ -99,9 +192,15 @@ def extract_first_paragraph(md_text: str, max_chars: int = 500) -> str:
             in_metadata = False
             continue
 
-        # Stop at H3 if we're collecting from the first H2 section
+        # Stop at H3 only if we have enough content; otherwise allow H3
+        # through so short sections can collect from H3 subsections too.
         if in_first_section and stripped.startswith("### "):
-            break
+            # Check current body length
+            current_len = len("\n".join(paragraph_lines))
+            if current_len >= 100:
+                break  # Enough content, stop at H3
+            # Otherwise continue past H3 (the H3 header itself we skip)
+            continue
 
         # Horizontal rule (---) acts as a section break — stop collecting
         # once we have content. (Both inside and outside metadata block.)
@@ -209,7 +308,7 @@ def scan_wiki_pages(lang_dir: Path) -> dict:
                 "sizeChars": len(text),
             }
 
-    # KR-only: jp-travel-vocab (Japanese phrases for KR learners)
+    # EN + KR: jp-travel-vocab (Japanese phrases for EN/KR learners)
     jp_travel_dir = lang_dir / "jp-travel-vocab"
     if jp_travel_dir.exists():
         result["jp-travel-vocab"] = {}
@@ -434,8 +533,9 @@ def build_lesson_from_source(
     if raw_page:
         raw_excerpt = extract_first_paragraph(raw_page["body"], max_chars=RAW_EXCERPT_MAX)
     if len(raw_excerpt) < RAW_EXCERPT_MIN:
-        # Use source page body excerpt as fallback
-        raw_excerpt = extract_first_paragraph(source_page["body"], max_chars=RAW_EXCERPT_MAX)
+        # Use source page body excerpt as fallback — but include Key Takeaways
+        # + Vocabulary list section for richer content.
+        raw_excerpt = extract_source_excerpt(source_page["body"], max_chars=RAW_EXCERPT_MAX)
 
     # Estimate read time (rough: 200 chars/min for non-native)
     total_chars = len(raw_excerpt) + sum(

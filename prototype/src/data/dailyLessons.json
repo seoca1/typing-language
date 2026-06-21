@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T05:44:37.365265",
+  "generatedAt": "2026-06-21T17:39:20.794463",
   "schemaVersion": "1.1",
   "lessonCount": 45,
   "byLanguage": {
@@ -9,29 +9,34 @@
     "kr": 11
   },
   "wikiIndex": {
-    "airport.md": {
-      "title": "airport",
-      "body": "# airport\n\n**Part of Speech:** noun\n\n**Definition:** 공항\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the airport?** — airport은(는) 어디인가요?\n- **airport** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+    "kuukou.md": {
+      "title": "kuukou (空港)",
+      "body": "# kuukou (空港)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 공항\n\n**Romaja:** kuukou\n\n**Language of Origin:** 일본어 (空港)\n\n## Examples\n\n- **kuukou はどこですか?** — 空港는 어디인가요?\n- **空港**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
       "category": "vocabulary"
     },
-    "passport.md": {
-      "title": "passport",
-      "body": "# passport\n\n**Part of Speech:** noun\n\n**Definition:** 여권\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the passport?** — passport은(는) 어디인가요?\n- **passport** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+    "pasupooto.md": {
+      "title": "pasupooto (パスポート)",
+      "body": "# pasupooto (パスポート)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 여권\n\n**Romaja:** pasupooto\n\n**Language of Origin:** 일본어 (パスポート)\n\n## Examples\n\n- **pasupooto はどこですか?** — パスポート는 어디인가요?\n- **パスポート**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
       "category": "vocabulary"
     },
-    "hotel.md": {
-      "title": "호텔",
-      "body": "# 호텔\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Hotel — 유료로 숙박을 제공하는 시설.\n\n**Etymology:** 외래어 (hotel, 영어에서 차용)\n\n**Romaja:** hotel\n\n---\n\n## Examples\n\n- **호텔은 어디예요?** — Where is the hotel?\n- **호텔을 예약했어요.** — I have booked a hotel.\n- **호텔에 체크인할게요.** — I'll check in at the hotel.\n\n---\n\n## Related Terms\n\n- [[예약]] — reservation\n- [[숙박]] — accommodation\n- [[체크인]] — check-in\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
+    "hoteru.md": {
+      "title": "hoteru (ホテル)",
+      "body": "# hoteru (ホテル)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 호텔\n\n**Romaja:** hoteru\n\n**Language of Origin:** 일본어 (ホテル)\n\n## Examples\n\n- **hoteru はどこですか?** — ホテル는 어디인가요?\n- **ホテル**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
       "category": "vocabulary"
     },
-    "traffic-light.md": {
-      "title": "traffic light",
-      "body": "# traffic light\n\n**Part of Speech:** noun\n\n**Definition:** 신호등\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the traffic light?** — traffic light은(는) 어디인가요?\n- **traffic light** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+    "nimotsu.md": {
+      "title": "nimotsu (荷物)",
+      "body": "# nimotsu (荷物)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 짐, 수하물\n\n**Romaja:** nimotsu\n\n**Language of Origin:** 일본어 (荷物)\n\n## Examples\n\n- **nimotsu はどこですか?** — 荷物는 어디인가요?\n- **荷物**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
       "category": "vocabulary"
     },
-    "kiss.md": {
-      "title": "kiss",
-      "body": "# kiss\n\n**Part of Speech:** noun / verb\n**Level:** A2\n\n**Definition:** 키스 — Touch with the lips as a sign of love, greeting, or respect.\n\n## Examples (Noun)\n\n- \"First kiss\" — 첫 키스\n- \"Goodnight kiss\" — 작별 키스\n- \"Peck on the cheek\" — 가벼운 키스\n\n## Examples (Verb)\n\n- \"Can I kiss you?\" — 명시적 동의 요청 (중요)\n- \"They kissed at the airport.\" — 장면 묘사\n- \"Kiss me.\" — 직접적 요청\n\n## Related Terms\n\n- [[hold-your-hand]] — earlier progression\n- [[love]] — strong affection\n- [[be-my-girlfriend]] — commitment\n\n## Cultural Notes\n\n**Consent is essential**: Modern dating requires explicit verbal\npermission before physical affection. **\"Can I kiss you?\"** is now\nthe expected, respectful approach — not awkward, but considerate.\n\n**Public displays**: Common in US/Europe, varies by region/context.\n\n## Sources\n\n- [[dating-romance]] — Affection progression\n- Cambridge English Vocabulary in Use (Pre-Intermediate)\n",
+    "chikatetsu.md": {
+      "title": "chikatetsu (地下鉄)",
+      "body": "# chikatetsu (地下鉄)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 지하철\n\n**Romaja:** chikatetsu\n\n**Language of Origin:** 일본어 (地下鉄)\n\n## Examples\n\n- **chikatetsu はどこですか?** — 地下鉄는 어디인가요?\n- **地下鉄**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
+      "category": "vocabulary"
+    },
+    "densha.md": {
+      "title": "densha (電車)",
+      "body": "# densha (電車)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 전철\n\n**Romaja:** densha\n\n**Language of Origin:** 일본어 (電車)\n\n## Examples\n\n- **densha はどこですか?** — 電車는 어디인가요?\n- **電車**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
       "category": "vocabulary"
     },
     "where-is.md": {
@@ -49,19 +54,44 @@
       "body": "# English Dating Culture\n\n**Type:** romance, social-ritual\n**Region:** US / UK / Canada / Australia (English-speaking countries)\n\n## Overview\n\nEnglish-speaking countries (especially US) have **explicit, individualist** dating culture. Romantic intent is usually stated clearly, consent is verbal, and personal boundaries are respected. Modern dating emphasizes direct communication, gender equality (in principle), and emotional honesty.\n\n## Setting\n\nA first date in the US/UK: **coffee shop, restaurant, bar, or walk in a park**. Evening (7-9pm typical). Casual to smart-casual dress. Two people meeting with romantic intent, getting to know each other.\n\n## Roles\n\n- **Person who invites (inviter)** — takes initiative, suggests time/place\n- **Invitee** — can accept, suggest alternatives, or decline politely\n- Both pay attention to comfort, consent, and clear communication\n\n## Scenario: A Typical First Date\n\n1. **Planning** — Inviter suggests a specific time/place (\"Want to grab coffee Saturday at 3?\")\n2. **Acceptance** — Invitee confirms or reschedules\n3. **Arrival** — Both arrive on time (5 min early is normal); greet with smile + light hug or wave\n4. **Conversation** — Mix of light (hobbies, work) and deeper (values, life goals) topics\n5. **Physical contact** — Wait for clear signals; ask before initiating hand-holding or kissing\n6. **Bill** — Often offered by inviter, but splitting is normal; \"Let's split?\" is OK\n7. **End** — Confirm interest: \"I had a great time, want to do this again?\"\n8. **Follow-up text** — Within 24 hours: \"Thanks for tonight, I really enjoyed it.\"\n\n## Cultural Insight\n\n### \"Hanging Out\" vs \"Dating\"\n\nIn US English, \"date\" implies **explicit romantic intent**. \"Hang out\" is ambiguous — could be friends or romantic. Modern dating advice encourages **clarifying intent early** to avoid misunderstandings.\n\n**\"Are we hanging out or dating?\"** is a real conversation that happens. Best to be clear from the start.\n\n### Splitting the Bill\n\n**Generation gap**:\n- Older generations: man traditionally pays\n- Younger (Z, Millennials): 50/50 split is normal\n- Most common: person who invited pays, but offering to split is polite\n\n**Tactful**: Don't insist either way. \"Let's split it?\" or \"I've got this one\" are both fine.\n\n### Consent Culture\n\nModern English-speaking countries (especially US/Canada/UK) have embraced **explicit verbal consent**:\n- \"Can I hold your hand?\"\n- \"Can I kiss you?\"\n- \"Is this okay?\"\n\nNot asking is now considered a **red flag**. Asking is **mature**, not awkward.\n\n### \"I Love You\" Timing\n\n- **US**: typically 2-3 months into a relationship\n- **UK**: often later (3-6 months)\n- **Australia**: relatively early (1-2 months)\n\nEarlier expression: \"I really like you\" (more universally safe).\n\n### Personal Space\n\n- **Friends/acquaintances**: ~45cm (18in)\n- **Romantic partners**: closer, touching common\n- **Strangers**: arm's length+\n\n**Eye contact**: 60-70% during conversation = interested.\n\n### Online / Text Dating\n\n- **Apps**: Tinder, Bumble, Hinge dominant in US/UK\n- **First contact**: text/messaging common\n- **Phone call**: more sincere, less common\n- **Asking out**: text is fine; in-person or call for serious intent\n\n## Useful Phrases\n\n- [[i-like-you]] — early affection\n- [[i-love-you]] — deep feeling\n- [[beautiful]] — appearance compliment\n- [[handsome]] — male appearance compliment\n- [[kind]] — personality compliment\n- [[can-i-kiss-you]] — consent request\n- [[would-you-like-to]] — invitation\n- [[i-had-a-great-time]] — end-of-date\n- [[see-you-again]] — follow-up\n\n## What NOT to Do\n\n- ❌ **\"Wanna date?\"** in first message — too direct\n- ❌ **Bombarding texts** — turn-off\n- ❌ **\"You up?\"** late-night texts — usually means casual sex\n- ❌ **Love bombing** — excessive flattery early\n- ❌ **Ghosting** — disappearing without explanation (avoidable but common)\n- ❌ **\"You're so beautiful\"** to a stranger on the street — catcalling, harassment\n- ❌ **Asking weight, age, salary** on first date — too personal\n- ❌ **Talking only about yourself** — reciprocal conversation expected\n\n## Body Language\n\n| Gesture | Meaning |\n|---|---|\n| Eye contact 60-70% | Interested, engaged |\n| Mirroring (leaning in, gestures) | Comfortable, in sync |\n| Looking at phone during date | Disinterested, rude |\n| Fidgeting, looking around | Nervous or bored |\n| Touching face/hair (other person) | Often flirting, but not always |\n| Hand on table palm up | Inviting touch |\n| Turning body toward you | Engaged |\n\n## Cross-Reference\n\n- Compare with: [[japanese-dating-culture]], [[spanish-dating-culture]], [[korean-dating-culture]]\n- See also: [[i-love-you]], [[beautiful]], [[handsome]]\n\n## Holiday / Special Days\n\n- **Valentine's Day** (Feb 14) — big romantic holiday\n- **Anniversaries** — celebrate relationship start\n- **No formal \"100 days\" celebration** (unlike Korean culture)\n\n## Sources\n\n- [[dating-romance]] — main source\n- BBC Learning English — Relationships\n- The Atlantic — Modern dating essays\n- OKCupid / Hinge dating blog posts\n- Consent culture resources (Planned Parenthood, etc.)\n",
       "category": "culture"
     },
-    "sweet.md": {
-      "title": "sweet",
-      "body": "# sweet\n\n**Part of Speech:** noun\n\n**Definition:** 달다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the sweet?** — sweet은(는) 어디인가요?\n- **sweet** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+    "computer.md": {
+      "title": "computer",
+      "body": "# computer\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A device for processing data and running programs.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"I use a computer for work.\"\n- \"My computer is fast.\"\n- \"A new computer costs $1000.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "cute.md": {
-      "title": "cute",
-      "body": "# cute\n\n**Part of Speech:** adjective\n**Level:** A2\n\n**Definition:** 귀여운 — Attractive in a youthful, endearing way.\n\n## Examples\n\n- \"That's a cute outfit.\" — 패션 칭찬\n- \"You look cute when you smile.\" — 부드러운 칭찬\n- \"He's so cute.\" — 가볍고 친근한 호감 표현\n\n## Related Terms\n\n- [[beautiful]] — formal beauty\n- [[handsome]] — traditional male beauty\n- [[pretty]] — slightly formal\n\n## Cultural Notes\n\n\"Cute\" in American English = attractive in a youthful/adorable way.\nSuitable for early stages of dating. Less formal than \"beautiful\" —\ncan feel friend-zone-ish if used too much. Pair with other compliments.\n\n## Sources\n\n- [[dating-romance]] — Compliments (appearance)\n- BBC Learning English — Adjectives for people\n",
+    "phone.md": {
+      "title": "phone",
+      "body": "# phone\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A device for voice communication.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Answer the phone.\"\n- \"My phone is ringing.\"\n- \"A new phone costs a lot.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "photo.md": {
-      "title": "photo",
-      "body": "# photo\n\n**Part of Speech:** noun\n\n**Definition:** 사진\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the photo?** — photo은(는) 어디인가요?\n- **photo** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+    "screen.md": {
+      "title": "screen",
+      "body": "# screen\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A flat surface where images are displayed.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Look at the screen.\"\n- \"A big screen is better.\"\n- \"The screen is blank.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "keyboard.md": {
+      "title": "keyboard",
+      "body": "# keyboard\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** Input device with keys for typing.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Type on the keyboard.\"\n- \"My keyboard is broken.\"\n- \"Buy a wireless keyboard.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "internet.md": {
+      "title": "internet",
+      "body": "# internet\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A global network connecting computers worldwide.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"The internet is fast here.\"\n- \"I browse the internet.\"\n- \"No internet connection.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "email.md": {
+      "title": "email",
+      "body": "# email\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** Electronic mail — messages sent via the internet.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Send me an email.\"\n- \"Check your email daily.\"\n- \"What is your email address?\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "password.md": {
+      "title": "password",
+      "body": "# password\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A secret word or phrase for authentication.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Enter your password.\"\n- \"Change your password.\"\n- \"Forgot the password.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "app.md": {
+      "title": "app",
+      "body": "# app\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** Short for application — a software program.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Download the app.\"\n- \"This app is useful.\"\n- \"Delete the app.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
     "i-love-you.md": {
@@ -74,9 +104,44 @@
       "body": "# really-like-you\n\n**Part of Speech:** expression (confession, partial)\n**Definition:** \"난 정말 너를 좋아해\" — Strong but not full confession.\n\n**Form:** I really like you.\n\n## Usage\n\n호감 표현의 중간 단계. \"like\" 보다 강하지만 \"love\" 전 단계.\n\n## Variations\n\n- **I like you.** — 약한 호감\n- **I really like you.** — 확고한 호감\n- **I'm falling for you.** — 빠지는 중\n- **I like you a lot.** — 비슷한 강도\n\n## Cultural Notes\n\nThis is a **safe confession** for early stages. Less weight than\n\"I love you\" but clearer than just \"I like you\". Many people use\nthis as the actual \"I love you\" precursor in serious relationships.\n\n## Related Expressions\n\n- [[i-love-you]] — the next step\n- [[be-my-girlfriend]] — formal proposal\n- [[hold-your-hand]] — physical progression\n\n## Sources\n\n- [[dating-romance]] — Confession progression\n- The Notebook (2004) — \"I am who I am because of you\"\n",
       "category": "expression"
     },
+    "head.md": {
+      "title": "head",
+      "body": "# head\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** The upper part of the body.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"My head aches.\"\n- \"Shake your head.\"\n- \"Use your head.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "hand.md": {
+      "title": "hand",
+      "body": "# hand\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** The end of the arm used for grasping.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Wash your hands.\"\n- \"Hold my hand.\"\n- \"My hands are cold.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "foot.md": {
+      "title": "foot",
+      "body": "# foot\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** The lower extremity of the leg.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"My foot hurts.\"\n- \"Wash your feet.\"\n- \"Stand on one foot.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "stomach.md": {
+      "title": "stomach",
+      "body": "# stomach\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** The organ that digests food.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"My stomach hurts.\"\n- \"Empty stomach.\"\n- \"Full stomach.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
     "cold.md": {
       "title": "cold",
       "body": "# cold\n\n**Part of Speech:** noun\n\n**Definition:** 차갑다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the cold?** — cold은(는) 어디인가요?\n- **cold** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
+    "fever.md": {
+      "title": "fever",
+      "body": "# fever\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** An elevated body temperature.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"I have a fever.\"\n- \"The fever is high.\"\n- \"Reduce the fever.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "doctor.md": {
+      "title": "doctor",
+      "body": "# doctor\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A person qualified to practice medicine.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"See a doctor.\"\n- \"Call the doctor.\"\n- \"The doctor is busy.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "hospital.md": {
+      "title": "hospital",
+      "body": "# hospital\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** An institution providing medical care.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Go to the hospital.\"\n- \"The hospital is near.\"\n- \"Born in a hospital.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
     "mountain.md": {
@@ -89,6 +154,61 @@
       "body": "# map\n\n**Part of Speech:** noun\n\n**Definition:** 지도\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the map?** — map은(는) 어디인가요?\n- **map** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
+    "traffic-light.md": {
+      "title": "traffic light",
+      "body": "# traffic light\n\n**Part of Speech:** noun\n\n**Definition:** 신호등\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the traffic light?** — traffic light은(는) 어디인가요?\n- **traffic light** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
+    "kiss.md": {
+      "title": "kiss",
+      "body": "# kiss\n\n**Part of Speech:** noun / verb\n**Level:** A2\n\n**Definition:** 키스 — Touch with the lips as a sign of love, greeting, or respect.\n\n## Examples (Noun)\n\n- \"First kiss\" — 첫 키스\n- \"Goodnight kiss\" — 작별 키스\n- \"Peck on the cheek\" — 가벼운 키스\n\n## Examples (Verb)\n\n- \"Can I kiss you?\" — 명시적 동의 요청 (중요)\n- \"They kissed at the airport.\" — 장면 묘사\n- \"Kiss me.\" — 직접적 요청\n\n## Related Terms\n\n- [[hold-your-hand]] — earlier progression\n- [[love]] — strong affection\n- [[be-my-girlfriend]] — commitment\n\n## Cultural Notes\n\n**Consent is essential**: Modern dating requires explicit verbal\npermission before physical affection. **\"Can I kiss you?\"** is now\nthe expected, respectful approach — not awkward, but considerate.\n\n**Public displays**: Common in US/Europe, varies by region/context.\n\n## Sources\n\n- [[dating-romance]] — Affection progression\n- Cambridge English Vocabulary in Use (Pre-Intermediate)\n",
+      "category": "vocabulary"
+    },
+    "sweet.md": {
+      "title": "sweet",
+      "body": "# sweet\n\n**Part of Speech:** noun\n\n**Definition:** 달다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the sweet?** — sweet은(는) 어디인가요?\n- **sweet** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
+    "holiday.md": {
+      "title": "holiday",
+      "body": "# holiday\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A day of celebration or rest.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Public holiday.\"\n- \"Holiday season.\"\n- \"Take a holiday.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "birthday.md": {
+      "title": "birthday",
+      "body": "# birthday\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** The anniversary of one's birth.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Happy birthday!\"\n- \"When is your birthday?\"\n- \"My birthday is in May.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "christmas.md": {
+      "title": "christmas",
+      "body": "# christmas\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** December 25th — Christian celebration.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Merry Christmas!\"\n- \"Christmas gifts.\"\n- \"Spend Christmas with family.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "halloween.md": {
+      "title": "halloween",
+      "body": "# halloween\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** October 31st celebration.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Trick or treat!\"\n- \"Halloween costume.\"\n- \"Halloween party.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "thanksgiving.md": {
+      "title": "thanksgiving",
+      "body": "# thanksgiving\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A US holiday in November.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Happy Thanksgiving!\"\n- \"Thanksgiving dinner.\"\n- \"Family Thanksgiving.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "easter.md": {
+      "title": "easter",
+      "body": "# easter\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A Christian celebration in spring.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Happy Easter!\"\n- \"Easter eggs.\"\n- \"Easter Sunday.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "wedding.md": {
+      "title": "wedding",
+      "body": "# wedding\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A marriage ceremony.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Wedding ceremony.\"\n- \"Wedding gift.\"\n- \"Attend a wedding.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "party.md": {
+      "title": "party",
+      "body": "# party\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A social gathering for celebration.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Birthday party.\"\n- \"Throw a party.\"\n- \"Join the party.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
     "cheap.md": {
       "title": "cheap",
       "body": "# cheap\n\n**Part of Speech:** noun\n\n**Definition:** 싸다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the cheap?** — cheap은(는) 어디인가요?\n- **cheap** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
@@ -97,6 +217,11 @@
     "expensive.md": {
       "title": "expensive",
       "body": "# expensive\n\n**Part of Speech:** noun\n\n**Definition:** 비싸다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the expensive?** — expensive은(는) 어디인가요?\n- **expensive** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
+    "medicine.md": {
+      "title": "medicine",
+      "body": "# medicine\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A substance used to treat illness.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Take your medicine.\"\n- \"The medicine works.\"\n- \"Buy medicine.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
     "breakfast.md": {
@@ -149,6 +274,11 @@
       "body": "# handsome\n\n**Part of Speech:** adjective\n**Level:** A2\n\n**Definition:** (Of a man) good-looking, attractive. Can also apply to objects (a handsome building) or amounts (a handsome sum).\n\n**Etymology:** From \"hand\" + Old English \"sum\" (easy, ready to hand). Originally meant \"easy to handle, near at hand.\" Sense of \"good-looking\" developed ~16th century.\n\n**Pronunciation:**\n- IPA: /ˈhænsəm/\n- Syllables: hand-some\n- Stress: 1st syllable (HAND-some)\n- Note: \"ds\" is silent in pronunciation\n\n**Memory Tip:** A **HAND-SOME** man is good enough to **handle** (a room, a date, a job interview). Confident, capable, attractive.\n\n**Common Mistakes:**\n- ❌ \"She's handsome\" → traditional rule: women = [[beautiful]]/[[pretty]], men = handsome\n- ❌ \"Handsomely\" (as adjective) → \"handsomely\" is the adverb (\"He was handsomely dressed\")\n- ❌ \"A handsome\" alone → needs a noun (\"a handsome man\" / \"a handsome face\")\n- ✅ \"He's really handsome.\" (describing a man)\n- ✅ \"What a handsome couple.\" (couple = mixed, both look good)\n- ✅ \"A handsome profit.\" (large, generous — different meaning!)\n- Note: Modern usage is **more flexible** — \"handsome woman\" is becoming acceptable, especially for non-binary or strong-featured. But \"beautiful\" is safer default.\n\n**Register:** semi-formal. Standard compliment.\n**Frequency:** ⭐⭐⭐⭐\n\n## Examples\n\n- \"He's really handsome.\" — 외모 칭찬\n- \"What a handsome couple.\" — 부부/커플 칭찬\n- \"Handsome and charming.\" — 종합 칭찬\n- \"A handsome salary.\" — 넉넉한 급여 (different meaning)\n- \"A handsome building.\" — 웅장한 건물 (object)\n\n## Mini-Dialogue (Complimenting)\n\n```\nA: That's a nice photo of your boyfriend.   ← 남자친구 사진 잘 나왔네.\nB: Thanks! He's pretty handsome, right?   ← 고마워! 꽤 잘생기지, 맞아?\nA: Definitely. And he looks kind too.   ← 확실히. 그리고 친절해 보여.\nB: He really is. The total package.   ← 진짜 그래. 완벽해.\n```\n\n## Related Terms\n\n- [[beautiful]] — usually for women / general beauty\n- [[cute]] — playful, younger vibe; can apply to men\n- [[pretty]] — women, less intense than beautiful\n- [[gorgeous]] — stronger than handsome; \"wow factor\"\n- [[attractive]] — neutral, can be physical/personality\n- [[good-looking]] — casual alternative to handsome\n- [[hunky]] — slang, very handsome (often muscular)\n- [[cute]] / [[hot]] — younger generation, casual\n\n## Cultural Notes\n\n- Traditionally: **handsome = men**, **beautiful = women**, **pretty = women or gender-neutral**. Modern usage is more flexible.\n- **Avoid overusing** \"handsome\" — feels generic. Specific compliments feel more genuine:\n  - \"You have a great smile.\"\n  - \"I love your sense of style.\"\n  - \"Your eyes are striking.\"\n- **\"Handsome\" can describe objects** — a handsome car, a handsome profit. Old-fashioned but elegant.\n- **Dating apps**: \"handsome\" is overused. Be specific to stand out.\n- **Age factor**: \"handsome\" sounds slightly old-fashioned; younger people use \"cute\" or \"hot\" more.\n\n## Sources\n\n- [[english-dating-culture]] — Compliments (appearance)\n- [[beautiful]] — comparison (women)\n- Oxford Word Skills (Intermediate)\n",
       "category": "vocabulary"
     },
+    "cute.md": {
+      "title": "cute",
+      "body": "# cute\n\n**Part of Speech:** adjective\n**Level:** A2\n\n**Definition:** 귀여운 — Attractive in a youthful, endearing way.\n\n## Examples\n\n- \"That's a cute outfit.\" — 패션 칭찬\n- \"You look cute when you smile.\" — 부드러운 칭찬\n- \"He's so cute.\" — 가볍고 친근한 호감 표현\n\n## Related Terms\n\n- [[beautiful]] — formal beauty\n- [[handsome]] — traditional male beauty\n- [[pretty]] — slightly formal\n\n## Cultural Notes\n\n\"Cute\" in American English = attractive in a youthful/adorable way.\nSuitable for early stages of dating. Less formal than \"beautiful\" —\ncan feel friend-zone-ish if used too much. Pair with other compliments.\n\n## Sources\n\n- [[dating-romance]] — Compliments (appearance)\n- BBC Learning English — Adjectives for people\n",
+      "category": "vocabulary"
+    },
     "kind.md": {
       "title": "kind",
       "body": "# kind\n\n**Part of Speech:** adjective\n**Level:** A2\n\n**Definition:** Having or showing a friendly, generous, considerate nature. Describes consistent behavior toward others.\n\n**Etymology:** Old English \"gecynde\" (natural, native). Sense of \"good-natured\" developed ~13th century. Cognate with \"kind\" (noun, meaning type/category) — both from \"kin\" (family).\n\n**Pronunciation:**\n- IPA: /kaɪnd/\n- Syllables: kind (1 syllable)\n- Note: Same pronunciation as \"kind\" (type) — context disambiguates\n- \"Kind to me\" = adjective (good-natured)\n- \"What kind?\" = noun (type)\n\n**Memory Tip:** \"**KIND**\" person is a **KIN**dred soul (family-like). You treat them like family = kind. Or: \"Kin-d\" → family + goodness = kindness.\n\n**Common Mistakes:**\n- ❌ \"You're kind\" alone → can sound like a diagnosis (\"You have a kind heart\" — awkward)\n- ❌ \"Kind person\" (always with article) → \"You're a kind person\"\n- ❌ \"She is very kindly\" (as adjective) → \"She is very kind\" (kind is the adjective; kindly is the adverb)\n- ✅ \"That's so kind of you.\" (gratitude — most common use)\n- ✅ \"He's kind to everyone.\" (describing behavior)\n- ✅ \"Kind words\" / \"kind thoughts\" (noun use — types of)\n- Note: \"Kind\" describes **action**, not appearance. For appearance use [[handsome]], [[beautiful]].\n\n**Register:** universally appropriate, sincere. Slightly elevated in writing.\n**Frequency:** ⭐⭐⭐⭐ (top 500 English words)\n\n## Examples\n\n- \"You're really kind.\" — 성격 칭찬\n- \"That's so kind of you.\" — 감사 (very common response to help)\n- \"He's kind to everyone.\" — 일관된 친절\n- \"It was kind of strange.\" — 약간 (= \"sort of\" — different meaning!)\n- \"Kind regards\" — 이메일/편지 맺음말\n\n## Mini-Dialogue (Friend)\n\n```\nA: Thanks for helping me move today!   ← 오늘搬家 도와줘서 고마워!\nB: No problem. That's what friends are for.   ← 천만에. 그게 친구하는 일이지.\nA: You're really kind, you know that?   ← 너 진짜 친절하다, 알지?\nB: Aw, you're making me blush.   ← 에이, 부끄럽잖아.\n```\n\n## Related Terms\n\n- [[nice]] — weaker, more general; \"nice\" is overused\n- [[good]] — broader (kind of person, good at math, good food)\n- [[sweet]] — warmer, more affectionate; \"That's sweet of you\"\n- [[generous]] — emphasizes giving, sharing\n- [[considerate]] — thinks of others' needs\n- [[gentle]] — soft-spoken, mild\n- [[caring]] — actively takes care of others\n\n## Cultural Notes\n\n- \"Kind\" is consistently rated one of the **most attractive traits** in English-speaking dating surveys (above \"smart\" or \"funny\" for long-term relationships).\n- A **sincere compliment** — describes consistent behavior, not just appearance.\n- **\"Kind of\"** (adjective + of) = \"sort of\" (somewhat). Different meaning. \"I'm kind of tired\" = \"I'm somewhat tired.\"\n- **\"Kind regards\"** is a professional sign-off — common in business emails.\n- \"Be kind\" has become a cultural movement (mental health awareness, social media).\n- **Polite culture**: \"That's so kind\" is a common response to ANY small favor. Reinforces social bonds.\n\n## Sources\n\n- [[english-dating-culture]] — Compliments (personality)\n- [[nice]] — comparison\n- Cambridge English Vocabulary in Use (Pre-Intermediate)\n",
@@ -174,6 +304,11 @@
       "body": "# hold-your-hand\n\n**Part of Speech:** expression (intimacy request)\n**Definition:** \"손 잡아도 돼?\" — Consent request for first physical affection.\n\n**Form:** Can I hold your hand?\n\n## Usage\n\n**신체 친밀의 첫 단계** + **명시적 동의** 요청. 현대 영어권의 매너.\n\n## Variations\n\n- **Can I hold your hand?** — 정중\n- **Want to hold my hand?** — 캐주얼\n- **May I hold your hand?** — 격식\n\n## Cultural Notes\n\n**Consent is the standard**: Modern dating ethics in English-speaking\ncountries require **explicit verbal permission** before physical\nintimacy. \"Can I hold your hand?\" is **expected, not awkward**.\n\n**Not asking** = potential red flag.\n\n**Earlier stage**: \"Want to walk together?\" (just being close).\nThen: holding hands.\nThen: arm around waist.\nThen: kiss (also with consent).\n\n## Related Expressions\n\n- [[kiss]] — next step\n- [[really-like-you]] — emotional context\n- [[be-my-girlfriend]] — relationship status\n\n## Sources\n\n- [[dating-romance]] — Affection progression\n- Modern dating ethics literature\n",
       "category": "expression"
     },
+    "airport.md": {
+      "title": "airport",
+      "body": "# airport\n\n**Part of Speech:** noun\n\n**Definition:** 공항\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the airport?** — airport은(는) 어디인가요?\n- **airport** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
     "baggage.md": {
       "title": "baggage",
       "body": "# baggage\n\n**Part of Speech:** noun\n\n**Definition:** 수하물\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the baggage?** — baggage은(는) 어디인가요?\n- **baggage** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
@@ -182,6 +317,11 @@
     "bus.md": {
       "title": "bus",
       "body": "# bus\n\n**Part of Speech:** noun\n\n**Definition:** 버스\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the bus?** — bus은(는) 어디인가요?\n- **bus** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
+    "hotel.md": {
+      "title": "호텔",
+      "body": "# 호텔\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Hotel — 유료로 숙박을 제공하는 시설.\n\n**Etymology:** 외래어 (hotel, 영어에서 차용)\n\n**Romaja:** hotel\n\n---\n\n## Examples\n\n- **호텔은 어디예요?** — Where is the hotel?\n- **호텔을 예약했어요.** — I have booked a hotel.\n- **호텔에 체크인할게요.** — I'll check in at the hotel.\n\n---\n\n## Related Terms\n\n- [[예약]] — reservation\n- [[숙박]] — accommodation\n- [[체크인]] — check-in\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
       "category": "vocabulary"
     },
     "restaurant.md": {
@@ -199,6 +339,11 @@
       "body": "# train\n\n**Part of Speech:** noun\n\n**Definition:** 기차\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the train?** — train은(는) 어디인가요?\n- **train** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
+    "passport.md": {
+      "title": "passport",
+      "body": "# passport\n\n**Part of Speech:** noun\n\n**Definition:** 여권\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the passport?** — passport은(는) 어디인가요?\n- **passport** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
     "hello.md": {
       "title": "hello",
       "body": "# hello\n\n**Part of Speech:** interjection / noun\n**Level:** A1\n\n**Definition:** \"Hello\" — a common spoken greeting used when meeting someone.\n\n**Pronunciation:**\n- IPA: /həˈloʊ/ (AmE) /həˈləʊ/ (BrE)\n- Syllables: hel-lo (2 syllables)\n- Stress: 2nd syllable (hel-LO)\n\n**Memory Tip:** \"Hel-lo!\" — the friendlier you sound, the warmer the greeting. Or: HELLO = \"Hell O\" (greeting from a friendly place).\n\n**Common Mistakes:**\n- ❌ \"Hell-o\" (no clear enunciation) → \"Heh-LOW\" or \"Huh-LOW\"\n- ❌ \"Hello my friend\" → \"Hello, my friend\" (comma after greeting)\n- ❌ \"Hello John\" (no greeting context) → \"Hello, John!\" (with comma + exclamation)\n- ✅ \"Hello!\" (general)\n- ✅ \"Hello, how are you?\" (with follow-up)\n- ✅ \"Say hello to your wife\" (give greetings)\n- Note: In US English, \"hi\" is more casual; \"hello\" is more formal/neutral. In UK, \"hello\" is universal. In phone calls: \"Hello?\" to check connection.\n\n**Register:** neutral, universal. Works in all contexts (formal/informal).\n**Frequency:** ⭐⭐⭐⭐⭐ (top 100 English words)\n\n## Examples\n\n- \"Hello! How are you?\" — 안녕! 어떻게 지내?\n- \"Hello, nice to meet you.\" — 안녕하세요, 만나서 반가워요.\n- \"She said hello and walked past.\" — 그녀는 인사하고 지나갔다.\n- \"Hello, is anyone there?\" — (전화) 여보세요, 계신가요?\n- \"Hello world!\" (programming cliché) — 첫 프로그램 출력\n\n## Mini-Dialogue\n\n```\nA: Hello! I'm Jane.   ← 안녕하세요! 제인입니다.\nB: Hi Jane, nice to meet you. I'm Tom.   ← 안녕하세요 제인, 만나서 반가워요. 톰이에요.\nA: Hello Tom. How are you?   ← 안녕하세요 톰. 잘 지내세요?\nB: I'm good, thanks. And you?   ← 잘 지내요, 감사해요. 당신은요?\nA: Doing well, thanks.   ← 잘 지내요, 감사.\n```\n\n## Related Terms\n\n- [[hi]] — more casual\n- [[goodbye]] / [[bye]] — parting\n- [[good morning]] — formal greeting (AM)\n- [[good evening]] — formal greeting (PM)\n- [[nice to meet you]] — first meeting\n\n## Cultural Notes\n\n- **\"Hi\" vs \"Hello\"**: \"Hi\" is more casual/American. \"Hello\" is universal/British-leaning formal.\n- **Phone answering**: \"Hello?\" to check if connection. Some countries (e.g., Japan) say \"moshimoshi\".\n- **First meeting**: Often \"Hello, nice to meet you\" or \"Hi, I'm [name]\" with handshake.\n- **Time of day**: \"Good morning/afternoon/evening\" more formal than \"hello\" for specific times.\n- **Global spread**: \"Hello\" used worldwide as English lingua franca greeting.\n- **Spanish**: \"Hola\", Korean: \"안녕하세요\", Japanese: \"こんにちは\", French: \"Bonjour\", German: \"Hallo\"\n\n## Sources\n\n- [[daily-life-basics]] — 일상 어휘\n- [[greetings]] — 모든 인사\n- English Vocabulary in Use (Beginner)",
@@ -214,29 +359,69 @@
       "body": "# love\n\n**Part of Speech:** verb / noun\n**Level:** A2\n\n**Definition:** An intense feeling of deep affection. As verb: to feel this way toward someone/something. As noun: the feeling itself.\n\n**Etymology:** Old English \"lufu\" (love, affection). Cognate with Old High German \"luba\" (love). Indo-European root *leubh- (to love, desire).\n\n**Pronunciation:**\n- IPA: /lʌv/ (as noun AND verb — same pronunciation!)\n- Syllables: love (1 syllable)\n- Note: The \"e\" is silent\n\n**Memory Tip:** \"**L**ong-term **O**verwhelming **V**ivid **E**motion\" — L.O.V.E. The four stages of intense feeling: lasting, overwhelming, vivid, eternal.\n\n**Common Mistakes:**\n- ❌ \"I love to you\" → \"I love you\"\n- ❌ \"Love you!\" to a stranger → feels like a prank\n- ❌ \"I'm loving it\" (McDonald's slogan) — grammatically OK in present continuous, but use \"I love it\" for serious contexts\n- ✅ \"I love you\" — direct, sincere, romantic\n- ✅ \"I'd love to\" — accepting an invitation (NOT romantic)\n- Note: \"Love\" appears in **escalation**: like → really like → love. Don't skip steps with people.\n\n**Register:** \"I love you\" = serious/deep. \"Love ya!\" = casual. \"I'd love to\" = neutral invitation response.\n**Frequency:** ⭐⭐⭐⭐⭐ (top 200 English words)\n\n## Examples (Verb)\n\n- \"I love you.\" — 진지한 사랑 고백\n- \"I love this song.\" — 강한 호감 (취향)\n- \"Love ya!\" — 캐주얼 (친구, 가족)\n- \"I'd love to come.\" — 초대 수락\n- \"She loves chocolate.\" — 취향\n\n## Examples (Noun)\n\n- \"Love is patient, love is kind.\" — 격언 (성경, 영화 인용)\n- \"Falling in love\" — 사랑에 빠지다\n- \"True love\" — 진짜 사랑\n- \"Love at first sight\" — 첫눈에 반함\n- \"Make love, not war\" — 유명 슬로건 (1960s)\n\n## Mini-Dialogue (Romantic)\n\n```\nA: I've been thinking about you a lot.   ← 당신에 대해 많이 생각했어요.\nB: Me too. I feel the same way.   ← 나도. 나도 같은 마음이야.\nA: I think I'm falling in love with you.   ← 나 당신을 사랑에 빠진 것 같아.\nB: I love you too.   ← 나도 당신을 사랑해.\nA: I love you.   ← 사랑해.\n```\n\n## Related Terms\n\n- [[like]] — weaker feeling (escalation)\n- [[miss]] — feeling of absence\n- [[adore]] — stronger than love (poetic)\n- [[cherish]] — protective love\n- [[heart]] — symbol of love\n- [[kiss]] — physical expression\n- [[boyfriend]] / [[girlfriend]] — person you love\n\n## Cultural Notes\n\n- **Timing matters**: In US, \"I love you\" typically 2-3 months into dating. In UK, often later. In Korea/Japan, sometimes years. Earlier safer expression: \"I really like you a lot\" (US) or \"좋아해\" (KR).\n- **\"I love you\" vs \"Love ya\"**: same words, VERY different weight. \"Love ya\" = friendly, casual (friends, family). \"I love you\" = serious (romantic).\n- **Same-sex usage**: same conventions; no separate phrase needed.\n- **\"Fall in love\"** is romantic; \"feel love\" is general.\n- **\"Make love\"** = sexual; \"have sex\" = more direct. Different registers.\n\n## Sources\n\n- [[english-dating-culture]] — Affection progression, timing norms\n- [[i-love-you]] — the phrase itself\n- Cambridge English Vocabulary in Use (Intermediate)\n",
       "category": "vocabulary"
     },
-    "achim.md": {
-      "title": "아침",
-      "body": "# 아침\n\n**Part of Speech:** 名詞 (명사)\n\n**Definition:** 朝\n\n**Romaji:** achim\n\n**Language of Origin:** 韓国語 (한국어)\n\n## Examples\n\n- **아침 はどこですか?** — 아침은(는) 어디인가요?\n- **아침**は旅行で必須です。\n\n## Related Terms\n\n- [[여권]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-korea]]\n",
+    "sport.md": {
+      "title": "sport",
+      "body": "# sport\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** An athletic activity.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"I love sport.\"\n- \"Play a sport.\"\n- \"Sport is fun.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "好き.md": {
-      "title": "好き",
-      "body": "# 好き\n\n**Part of Speech:** 形容詞 (な-adjective) / 名詞 (noun)\n**Level:** N5\n\n**Definition:** To like; affection. (Romaji: **suki**) Used for people, things, activities, food, ideas.\n\n**読み方:** すき (suki)\n\n**Etymology:** 好 (this kanji alone) + き (kun-reading). 好 = \"woman (女) + child (子)\" = preference. Ancient Chinese character meaning \"good, prefer.\"\n\n**Pronunciation:**\n- 読み方: すき (suki)\n- Pitch: 頭高 (L-H) — す↓き↑  / alternatively H-L (acceptable both)\n- Type: な-adjective (changes to 好きな, 好きに, 好きだ)\n\n**Memory Tip:** \"**S**tandard **U**niversal **K**ind **I**nterest\" — SU-KI. Whatever you **suki** = you want more of it. 4 letters = simple word.\n\n**Common Mistakes:**\n- ❌ 「好きの人」 → 「好きな人」(na-adj needs な before noun)\n- ❌ 「好きありません」 → 「好きじゃありません」or 「好きではありません」(negative な-adj)\n- ❌ 「あなたのこと好き」 → 「あなたのことが好き」(が required with のこと = \"you\" emphasis)\n- ❌ 「コーヒーが好きじゃない」→ OK grammatically, but 「好きじゃないです」more natural\n- ✅ 「○○が好きです」(standard polite)\n- ✅ 「好きになります」(will come to like — process)\n- ✅ 「好きになっちゃった」(ended up liking — casual, often used in romance)\n- Note: 「好き」to a friend/stranger feels like a **confession** (告白). Be careful!\n\n**Register:** standard polite. Universally appropriate. Also casual in casual contexts.\n**Frequency:** ⭐⭐⭐⭐⭐ (top 200 JP words)\n\n**Visual:**\n```\n   好 = 女 (woman) + 子 (child)\n       \"woman prefers child\" = preference, liking\n   ─────────\n   好き = preference + abstract ending = to like\n```\n\n## Examples\n\n- 「あなたが好きです」 — I like you (full romantic confession, polite)\n- 「○○が好きです」 — I like ___\n- 「好きになっちゃった」 — I ended up liking (you) — casual\n- 「コーヒーが好きです」 — I like coffee\n- 「好きだよ」 — I like you (casual, intimate)\n- 「日本料理が好きになりました」 — I've come to like Japanese food\n\n## Mini-Dialogue (Confession)\n\n```\nA: あのさ... 話したいことがあるんだけど。   ← 저기... 할 말 있어.\nB: うん、何？   ← 응, 뭔데?\nA: ずっと前から、あなたのことが好きだった。   ← 오래 전부터, 너를 좋아했어.\nB: えっ... 私も。   ← 뭐... 나도.\nA: 本当？ 嬉しい。   ← 정말? 기뻐.\nB: (笑) よかった。   ← (웃음) 다행이다.\n```\n\n## Variations\n\n- 好き(すき) — basic like\n- 大好き(だいすき) — love, really like\n- 愛してる(あいしてる) — love you (rare, very deep)\n- 好感(こうかん) — goodwill (formal)\n- 好む(このむ) — to prefer, like (verb, formal)\n\n## Related Terms\n\n- [[嫌い]] — dislike\n- [[愛する]] — love (heavy, formal)\n- [[告白]] — confession\n- [[可愛い]] — cute\n- [[綺麗]] — beautiful\n- [[恋人]] — lover\n- [[彼氏]] / [[彼女]] — boyfriend/girlfriend\n- [[付き合う]] — to date, go out with\n\n## Cultural Notes\n\n- **「好きです」= 告白의 표준 표현**. 일본에서는 \"I love you\"보다 \"好きです\"를 더 자주 사용 (일본 문화에서 愛する는 매우 무거움).\n- **段階 (stages of affection)**:\n  - 好き — 좋아함 (호감)\n  - 大好き — 매우 좋아함 (강한 호감)\n  - 愛してる — 사랑해 (rare, deep, married couples)\n  - 愛しています — I love you (very formal, often translated as \"I love you\" in songs)\n- **카드를 게임화**: \"Confession\" 단계의 단어 — 발음이 발라드 (ballad) 가사에 자주 등장.\n- **\"告白\"는 거절할 수 있는 분위기** — 일본에서는 상대에게 부담을 주지 않는 매너 (호감을 표현하되 답을 강요하지 않음).\n- **타이밍**: 일본 데이팅에서 好き表白은 2-3개월 이상 교제 후가 일반적. 너무 빠르면 부담.\n\n## Sources\n\n- [[japanese-dating-culture]] — 고백\n- [[告白]] — confession pattern\n- 花より男子 — 牧野つくし「好きよ」\n- Genki I (Chapter 4)\n",
+    "football.md": {
+      "title": "football",
+      "body": "# football\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** American football or soccer.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Play football.\"\n- \"Football season.\"\n- \"Watch football on TV.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "dalda.md": {
-      "title": "달다",
-      "body": "# 달다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Sweet.\n\n**Etymology:** 순 우리말\n\n**Romaja:** dalda\n\n---\n\n## Examples\n\n- **너무 달아요.** — Too sweet.\n- **달고 맛있어요.** — Sweet and delicious.\n- **덜 달게 해주세요.** — Make it less sweet, please.\n\n---\n\n## Related Terms\n\n- [[맵다]] — spicy\n- [[시다]] — sour\n- [[쓰다]] — bitter\n- [[맛있다]] — delicious\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
+    "soccer.md": {
+      "title": "soccer",
+      "body": "# soccer\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A team sport with a round ball.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Play soccer.\"\n- \"Soccer game.\"\n- \"Watch soccer.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "beoseu.md": {
-      "title": "버스",
-      "body": "# 버스\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Bus — 다수의 승객을 수송하는 대형 차량.\n\n**Etymology:** 외래어 (bus, 영어에서 차용)\n\n**Romaja:** beoseu\n\n---\n\n## Examples\n\n- **버스는 어디서 타요?** — Where do I take the bus?\n- **버스 정류장이에요.** — It's a bus stop.\n- **다음 버스가 언제예요?** — When is the next bus?\n\n---\n\n## Related Terms\n\n- [[지하철]] — subway\n- [[택시]] — taxi\n- [[기차]] — train\n- [[정류장]] — stop\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
+    "basketball.md": {
+      "title": "basketball",
+      "body": "# basketball\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A team sport played with a ball.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Play basketball.\"\n- \"Watch basketball.\"\n- \"Basketball game.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "映画.md": {
-      "title": "映画",
-      "body": "# 映画\n\n**Part of Speech:** 名詞 (noun)\n**Level:** N5\n\n**Definition:** 映画 (えいが) — movie, film. A moving picture shown in theaters or on screen.\n\n**Pronunciation:**\n- 読み方: えいが (eiga)\n- Pitch: 平板 (L-L-H) — えい↑が↑ (flat → slight rise on が)\n- Type: N5 JLPT vocabulary\n\n**Memory Tip:** 映 (えい, reflect/project) + 画 (が, picture) = 映画 = \"projected picture\" = movie!\n\n**Common Mistakes:**\n- ❌ 「えいが」 (wrong pitch accent) → 「えい↑が」flat\n- ❌ 「映画館」 → 「映画館 (えいがかん)」 is correct (theater)\n- ❌ 「映画を見る」 → Correct! 「を見る」= to watch\n- ✅ 「映画を見ます」(polite)\n- ✅ 「映画が好きです」(I like movies)\n- ✅ 「映画館に行きましょう」(Let's go to the theater)\n- Note: 「映画」 can refer to any visual content (TV show, anime, etc.) in casual speech.\n\n**Register:** universal.\n**Frequency:** ⭐⭐⭐⭐ (top 1000 JP words)\n\n## Examples\n\n- 「映画を見ます」 — I watch a movie.\n- 「映画が好きですか?」 — Do you like movies?\n- 「どの映画が好き?」 — Which movie do you like?\n- 「映画館に行こう」 — Let's go to the movie theater.\n- 「日本映画」 — Japanese movie\n\n## Mini-Dialogue\n\n```\nA: 週末、何する?   ← What are you doing this weekend?\nB: 映画を見に行くつもり。   ← I'm planning to go see a movie.\nA: いいね! 何の映画?   ← Nice! What movie?\nB: 新しい韓国映画。   ← A new Korean movie.\nA: 一緒に行こう!   ← Let's go together!\n```\n\n## Related Terms\n\n- [[本]] — book\n- [[音楽]] — music\n- [[ドラマ]] — TV drama\n- [[アニメ]] — anime\n- [[テレビ]] — TV\n- [[趣味]] — hobby\n\n## Cultural Notes\n\n- **Japanese cinema**: Anime (宮崎駿/宮崎駿監督) and J-horror (リング、呪怨) globally famous.\n- **映画館 (cinema)**: Toho, TOEI, Shochiku are major chains. Late shows are popular.\n- **Korean Wave**: 한국 영화/드라마 일본에서 매우 인기 (K-content very popular in Japan).\n- **ホームシアター (home theater)**: Common in Japan due to small apartments.\n- **映画の日 (Movie Day)**: December 1st — Toho anniversary, special screenings.\n- **Subtitles vs Dubbing**: Japan prefers subtitles (字幕) for foreign films.\n\n## Sources\n\n- [[sports-and-hobbies]] — 여가 활동\n- [[daily-life-basics]] — 일상 어휘\n- Minna no Nihongo L8",
+    "tennis.md": {
+      "title": "tennis",
+      "body": "# tennis\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A racquet sport.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Play tennis.\"\n- \"Tennis match.\"\n- \"Watch tennis.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "swimming.md": {
+      "title": "swimming",
+      "body": "# swimming\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** Moving through water using limbs.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Go swimming.\"\n- \"Swimming pool.\"\n- \"I enjoy swimming.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "running.md": {
+      "title": "running",
+      "body": "# running\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** Moving faster than walking.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Go running.\"\n- \"Running shoes.\"\n- \"I run every morning.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "yoga.md": {
+      "title": "yoga",
+      "body": "# yoga\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A practice of mental and physical exercises.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Do yoga.\"\n- \"Yoga class.\"\n- \"Yoga is relaxing.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "コンピュータ.md": {
+      "title": "コンピュータ",
+      "body": "# コンピュータ\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Computer — 電子計算機。\n\n**Romaji:** konpyu-ta\n\n---\n\n## Examples\n\n- **コンピュータを使っていますか?** — Do you use a computer?\n- **コンピュータで仕事をします。** — I work on a computer.\n- **新しいコンピュータが欲しいです。** — I want a new computer.\n\n---\n\n## Related Terms\n\n- [[ノートパソコン]]\n- [[キーボード]]\n- [[画面]]\n- [[インターネット]]\n\n---\n\n## Sources\n\n- [[technology-and-internet]]\n",
+      "category": "vocabulary"
+    },
+    "スマホ.md": {
+      "title": "スマホ",
+      "body": "# スマホ\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Smartphone.\n\n**Romaji:** sumaho\n\n---\n\n## Examples\n\n- **スマホで話します。** — I talk on my smartphone.\n- **スマホを忘れました。** — I forgot my smartphone.\n- **新しいスマホです。** — It's a new smartphone.\n\n---\n\n## Related Terms\n\n- [[コンピュータ]]\n- [[アプリ]]\n- [[インターネット]]\n\n---\n\n## Sources\n\n- [[technology-and-internet]]\n",
+      "category": "vocabulary"
+    },
+    "画面.md": {
+      "title": "画面",
+      "body": "# 画面\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Screen / display.\n\n**Romaji:** gamen\n\n---\n\n## Examples\n\n- **画面を見てください。** — Please look at the screen.\n- **画面が小さいです。** — The screen is small.\n- **画面がきれいですね。** — The screen is beautiful.\n\n---\n\n## Related Terms\n\n- [[コンピュータ]]\n- [[キーボード]]\n\n---\n\n## Sources\n\n- [[technology-and-internet]]\n",
+      "category": "vocabulary"
+    },
+    "キーボード.md": {
+      "title": "キーボード",
+      "body": "# キーボード\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Keyboard.\n\n**Romaji:** ki-bo-do\n\n---\n\n## Examples\n\n- **キーボードで打ちます。** — I type on the keyboard.\n- **キーボードが壊れました。** — The keyboard broke.\n- **新しいキーボードを買いました。** — I bought a new keyboard.\n\n---\n\n## Related Terms\n\n- [[コンピュータ]]\n- [[画面]]\n\n---\n\n## Sources\n\n- [[technology-and-internet]]\n",
+      "category": "vocabulary"
+    },
+    "インターネット.md": {
+      "title": "インターネット",
+      "body": "# インターネット\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Internet.\n\n**Romaji:** inta-netto\n\n---\n\n## Examples\n\n- **インターネットが遅いです。** — The internet is slow.\n- **インターネットに接続します。** — I connect to the internet.\n- **インターネットで探します。** — I search on the internet.\n\n---\n\n## Related Terms\n\n- [[Wi-Fi]]\n- [[ウェブサイト]]\n- [[コンピュータ]]\n\n---\n\n## Sources\n\n- [[technology-and-internet]]\n",
       "category": "vocabulary"
     },
     "今度ご飯行かない.md": {
@@ -253,6 +438,86 @@
       "title": "Japanese Dating Culture",
       "body": "# Japanese Dating Culture\n\n**Type:** 文化ノート, 恋愛\n**地域:** 日本 (Japan)\n\n## Overview\n\n일본 데이팅 문화는 **间接(間接)·儀礼(儀礼)·段階(段階)** 중심. 감정 표현은 段階적으로 진행되며, 敬語(경어)에서 タメ口(반말)로의 전환이 관계 진전의 핵심 신호. 告白(고백)은 **공식 이벤트**로, 명확한 의례.\n\n## Setting\n\nA first date in Japan: **カフェ, 動物園, 水族館, 映画, 散歩(산책)**. Often daytime (昼) for first date; evening for established couples. Quiet, conversational activities preferred over loud bars.\n\n## Roles\n\n- **告白する人 (kokuhaku suru hito)** — Confessor (traditionally male, but increasingly either)\n- **告白される人 (kokuhaku sareru hito)** — Confessee\n- **彼氏 / 彼女 (kareshita / kanojo)** — Boyfriend / girlfriend (after confession)\n- **気になる人 (ki ni naru hito)** — \"Person of interest\" (pre-confession)\n\n## Scenario: Typical First Date → Confession\n\n1. **友達 (Tomodachi)** — Friends, met through school/work/hobby\n2. **気になる / 片思い (Ki ni naru / Kataomoi)** — One or both feel attraction\n3. **何回かデート (Nankai ka deeto)** — Several dates, group + 1-on-1\n4. **告白 (Kokuhaku)** — Confession, often in person, often a \"dramatic\" moment\n5. **付き合う (Tsukiau)** — Officially dating\n6. **恋人 (Koibito)** — Established couple\n\n## Cultural Insight\n\n### 告白 (Kokuhaku) 文化\n\n일본에서 告白 = 공식 이벤트. 서양의 \"DTR\" (Define The Relationship)보다 더 의례적이고 무게감 있음.\n\n**典型的な流れ**:\n1. 友達 (친구)\n2. 気になる / 片思い (썸/짝사랑)\n3. 何回かデート (몇 번 데이트)\n4. 告白 (고백, in-person)\n5. 付き合う (사귀다)\n6. 恋人 (연인)\n\n### 敬語 → タメ口 シフト\n\n**가장 중요한 관계성 전환점**. 연인 사이의 가장 큰 신호 중 하나.\n\n- 그 전: 「○○さん、好きです」\n- 후: 「○○ちゃん、好き」\n\n이 시점이 자연스럽게 정해지지 않으면 관계 진행이 막힐 수 있음.\n\n### 脈あり vs 脈なし シグナル\n\n**脈あり (myaku-ari) — 관심이 있는 신호**:\n- 자주 연락 (먼저)\n- 2人だけの時間 を求める\n- ボディタッチ OK (어깨, 팔)\n- 食事에 おごろうとする (Z세대: 割り勘 OK)\n- 目を見て話す\n\n**脈なし (myaku-nashi) — 관심 없는 신호**:\n- 既読スルー (kidoku suru) — LINE 읽고 답장 안 함\n- 短返信 (짧은 답장)\n- グループに ばかり混ぜようとする\n- 視線合わない\n\n### 割り勘 vs おごり\n\n**世代 차이**:\n- 30代 이상: 男性 おごり 일반적\n- Z世代: 割り勘 (각자 내기) 主流\n\n**판단 기준**: 연인끼리 처음엔 おごり 가능. Z세대는 最初から 割り勘 가능.\n\n### 個人空間 と 距離感\n\n- 初対面: 1m 이상\n- 友達: 50cm-1m\n- 恋人: 30-50cm (터치 가능)\n- 身体接触: 一般的に 서양보다 적음\n\n### 季節と文化\n\n- **クリスマス**: 恋人 일(day). 커플 행위, イルミネーション.\n- **バレンタイン (2/14)**: 여성이 남성에게 チョコ. ホワイトデー (3/14): 남성이 답례.\n- **お花見 (4월)**: 벚꽃 구경 데이트.\n- **夏祭り (8월)**: 전통 축제 데이트.\n\n### 既婚 / 同棲\n\n- 同棲: 점차 보편화 (20-30대)\n- 婚前 동거: 一般的\n\n## Useful Phrases\n\n- [[好き]] — I like you\n- [[綺麗]] — beautiful\n- [[可愛い]] — cute\n- [[優しい]] — kind\n- [[面白い]] — interesting/funny\n- [[デート]] — date\n- [[告白]] — confession\n- [[付き合う]] — to date\n- [[恋人]] — lover\n- 好きです (suki desu) — I like you\n- ありがとう (arigatou) — thank you\n- おはよう / おやすみ — good morning / good night (intimacy signal)\n\n## What NOT to Do\n\n- ❌ **ボディタッチ 너무 일찍** — 부담\n- ❌ **LINE 너무 자주** — 부담\n- ❌ **告白 너무 일찍** — 부담\n- ❌ **敬語 → タメ口 너무 늦게** — 관계 막힘\n- ❌ **既読スルー 続ける** — 끝\n- ❌ **人前で大声で愛情表現** — 매우 부적절\n- ❌ **食事のマナー 무시** (음료, 이쑤시개 등) — 일본에서 매우 부정적\n\n## Body Language\n\n| Gesture | Meaning |\n|---|---|\n| 目を見て話す (eye contact while talking) | 脈あり (interested) |\n| 髪を触る (touching hair) | 脈あり (flirting) |\n| ボディタッチ (light touch on arm) | 脈あり |\n| 足を組む (crossing legs toward you) | 脈あり |\n| 腕を組む (crossed arms) | 防御的 / 緊張 |\n| 視線を逸らす (looking away) | 緊張 / 脈なし |\n| ため口 (casual speech) | 親密 (intimate) — 関係進行中 |\n\n## Cross-Reference\n\n- Compare with: [[english-dating-culture]], [[spanish-dating-culture]], [[korean-dating-culture]]\n- See also: [[好き]], [[告白]], [[付き合う]], [[恋人]]\n\n## 一般的な失敗\n\n- **ボディタッチ 너무 일찍** — 부담\n- **LINE 너무 자주** — 부담\n- **告白 너무 일찍** — 부담\n- **敬語 → タメ口 너무 늦게** — 관계 막힘\n- **既読スルー 続ける** — 끝\n\n## Sources\n\n- [[dating-romance-jp]] — 메인 소스\n- 花より男子, 失恋ショコラティエ, ロングバケーション\n- 京都日本語学校 — 恋愛表現 シラバス\n- NHK 日本語講座\n- Z世代 恋愛トレンド レポート (2023)\n",
       "category": "culture"
+    },
+    "頭.md": {
+      "title": "頭",
+      "body": "# 頭\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Head.\n\n**Romaji:** atama\n\n---\n\n## Examples\n\n- **頭が痛いです。** — My head hurts.\n- **頭を冷やします。** — I cool my head.\n- **頭がよいです。** — I'm smart.\n\n---\n\n## Related Terms\n\n- [[病院]]\n- [[医者]]\n- [[風邪]]\n\n---\n\n## Sources\n\n- [[health-and-body]]\n",
+      "category": "vocabulary"
+    },
+    "手.md": {
+      "title": "手",
+      "body": "# 手\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Hand.\n\n**Romaji:** te\n\n---\n\n## Examples\n\n- **手を洗います。** — I wash my hands.\n- **手が冷たいです。** — My hands are cold.\n- **手を挙げてください。** — Please raise your hand.\n\n---\n\n## Related Terms\n\n- [[足]]\n- [[お腹]]\n\n---\n\n## Sources\n\n- [[health-and-body]]\n",
+      "category": "vocabulary"
+    },
+    "足.md": {
+      "title": "足",
+      "body": "# 足\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Foot / leg.\n\n**Romaji:** ashi\n\n---\n\n## Examples\n\n- **足が痛いです。** — My foot hurts.\n- **足が速いです。** — I'm fast on foot.\n- **足を動かします。** — I move my legs.\n\n---\n\n## Related Terms\n\n- [[手]]\n- [[病院]]\n\n---\n\n## Sources\n\n- [[health-and-body]]\n",
+      "category": "vocabulary"
+    },
+    "お腹.md": {
+      "title": "お腹",
+      "body": "# お腹\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Stomach / belly.\n\n**Romaji:** onaka\n\n---\n\n## Examples\n\n- **お腹が痛いです。** — My stomach hurts.\n- **お腹が空きました。** — I'm hungry.\n- **お腹いっぱいです。** — I'm full.\n\n---\n\n## Related Terms\n\n- [[病院]]\n- [[医者]]\n\n---\n\n## Sources\n\n- [[health-and-body]]\n",
+      "category": "vocabulary"
+    },
+    "風邪.md": {
+      "title": "風邪",
+      "body": "# 風邪\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Cold (illness).\n\n**Romaji:** kaze\n\n---\n\n## Examples\n\n- **風邪をひきました。** — I caught a cold.\n- **風邪がなおりました。** — My cold is cured.\n- **風邪をうつさないでください。** — Please don't spread your cold.\n\n---\n\n## Related Terms\n\n- [[病院]]\n- [[医者]]\n- [[薬]]\n\n---\n\n## Sources\n\n- [[health-and-body]]\n",
+      "category": "vocabulary"
+    },
+    "熱.md": {
+      "title": "熱",
+      "body": "# 熱\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Fever / heat.\n\n**Romaji:** netsu\n\n---\n\n## Examples\n\n- **熱があります。** — I have a fever.\n- **熱が高いです。** — I have a high fever.\n- **熱が下がりました。** — My fever went down.\n\n---\n\n## Related Terms\n\n- [[風邪]]\n- [[病院]]\n- [[医者]]\n\n---\n\n## Sources\n\n- [[health-and-body]]\n",
+      "category": "vocabulary"
+    },
+    "医者.md": {
+      "title": "医者",
+      "body": "# 医者\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Doctor.\n\n**Romaji:** isha\n\n---\n\n## Examples\n\n- **医者に診てもらいます。** — I see a doctor.\n- **いい医者を知っていますか?** — Do you know a good doctor?\n- **医者に行きます。** — I go to the doctor.\n\n---\n\n## Related Terms\n\n- [[病院]]\n- [[薬]]\n- [[風邪]]\n\n---\n\n## Sources\n\n- [[health-and-body]]\n",
+      "category": "vocabulary"
+    },
+    "病院.md": {
+      "title": "病院",
+      "body": "# 病院\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Hospital.\n\n**Romaji:** byo-in\n\n---\n\n## Examples\n\n- **病院に行きます。** — I go to the hospital.\n- **病院が遠いです。** — The hospital is far.\n- **病院で待ちます。** — I wait at the hospital.\n\n---\n\n## Related Terms\n\n- [[医者]]\n- [[薬]]\n- [[風邪]]\n\n---\n\n## Sources\n\n- [[health-and-body]]\n",
+      "category": "vocabulary"
+    },
+    "山.md": {
+      "title": "山",
+      "body": "# 山\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** やま (yama) — mountain.\n\n---\n\n## Examples\n\n- **山に登ります。** — I climb a mountain.\n- **高い山** — high mountain\n- **富士山** — Mt. Fuji\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "category": "vocabulary"
+    },
+    "森.md": {
+      "title": "森",
+      "body": "# 森\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** もり (mori) — forest.\n\n---\n\n## Examples\n\n- **森を歩きます。** — I walk in the forest.\n- **深い森** — deep forest\n- **森の中** — in the forest\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "category": "vocabulary"
+    },
+    "川.md": {
+      "title": "川",
+      "body": "# 川\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** かわ (kawa) — river.\n\n---\n\n## Examples\n\n- **川で釣りをします。** — I fish in the river.\n- **川が流れます。** — The river flows.\n- **大きな川** — big river\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "category": "vocabulary"
+    },
+    "湖.md": {
+      "title": "湖",
+      "body": "# 湖\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** みずうみ (mizuumi) — lake.\n\n---\n\n## Examples\n\n- **湖がきれいです。** — The lake is beautiful.\n- **湖でボートに乗ります。** — I ride a boat on the lake.\n- **湖の近く** — near the lake\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "category": "vocabulary"
+    },
+    "海.md": {
+      "title": "海",
+      "body": "# 海\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** うみ (umi) — sea, ocean.\n\n---\n\n## Examples\n\n- **海で泳ぎます。** — I swim in the sea.\n- **海が美しいです。** — The sea is beautiful.\n- **海辺** — seaside\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "category": "vocabulary"
+    },
+    "テント.md": {
+      "title": "テント",
+      "body": "# テント\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** tent.\n\n---\n\n## Examples\n\n- **テントを張ります。** — I pitch a tent.\n- **テントで寝ます。** — I sleep in a tent.\n- **キャンプ用テント** — camping tent\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "category": "vocabulary"
+    },
+    "コンパス.md": {
+      "title": "コンパス",
+      "body": "# コンパス\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** compass.\n\n---\n\n## Examples\n\n- **コンパスで方向を確認します。** — I check direction with a compass.\n- **磁石コンパス** — magnetic compass\n- **コンパスが必要です。** — I need a compass.\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "category": "vocabulary"
+    },
+    "地図.md": {
+      "title": "地図",
+      "body": "# 地図\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** ちず (chizu) — map.\n\n---\n\n## Examples\n\n- **地図を見ます。** — I look at a map.\n- **地図を持っていますか?** — Do you have a map?\n- **道路地図** — road map\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "category": "vocabulary"
     },
     "名前.md": {
       "title": "名前",
@@ -289,6 +554,11 @@
       "body": "# 面白い\n\n**Part of Speech:** 形容詞 (い-adjective)\n**Level:** N4\n\n**Definition:** Interesting; funny; amusing; enjoyable. Combines English \"interesting\" + \"funny\" + \"enjoyable\" in one word.\n\n**読み方:** おもしろい (omoshiroi)\n\n**Etymology:** 面(おも) = \"face, surface\" + 白(しろ)い = \"white.\" Originally meant \"having a clear/bright face\" → vivid, distinctive. Shifted to \"interesting\" by Edo period (17-19c).\n\n**Pronunciation:**\n- 読み方: おもしろい (omoshiroi)\n- Pitch: 平板 (L-L-L-H-H) — おもしろ↓い↑ (flat-low → い high)\n- Type: い-adjective\n\n**Memory Tip:** \"**O**ne **MOSHI** **RO**und **I**nteresting\" — when something hits 面白い, you want one more round. Or: \"面白(おもしろう)い\" = \"face becomes white\" = surprised face = interesting!\n\n**Common Mistakes:**\n- ❌ 「面白いです」 → 「面白いですね」(more natural with sentence-end particle)\n- ❌ 「面白くない人」 → sounds harsh; prefer 「話が合わない」(we don't click)\n- ❌ 「面白くありません」→ 「面白くないです」(i-adj, polite form)\n- ❌ 「面白い人」 to mean \"weird person\" → 「面白い人」= positive (funny/interesting); use 「変な人」for weird\n- ✅ 「面白い映画だった」(It was an interesting movie)\n- ✅ 「彼、面白いね」(He's funny, isn't he)\n- ✅ 「話が面白い」(The conversation is interesting)\n- Note: 「面白い」can be **negative** if context is ironic: 「本当に面白いね」with sarcastic tone = \"wow, how 'interesting'\" (sarcastic).\n\n**Register:** standard polite. Universally appropriate.\n**Frequency:** ⭐⭐⭐⭐⭐ (top 500 JP words)\n\n**Visual:**\n```\n   面 = face, mask (9 strokes)\n       ↓\n   白 = white, plain (5 strokes)\n   ─────────\n   面白い = \"face is white\" = surprised, vivid, interesting\n```\n\n## Examples\n\n- 「面白い人」 — Interesting/funny person\n- 「面白い映画」 — Interesting movie\n- 「話が面白い」 — Story/conversation is interesting\n- 「面白いことない？」 — Nothing interesting happening? (asking)\n- 「面白い話があるよ」 — I have an interesting story\n\n## Mini-Dialogue (Date Idea)\n\n```\nA: 今週末、何する？   ← 이번 주말, 뭐 해?\nB: 面白い映画があるんだ、見に行かない？   ← 재미있는 영화 있는데, 보러 갈래?\nA: いいね！ 何の映画？   ← 좋아! 무슨 영화?\nB: 韓国映画なんだけど... 試してみる？   ← 한국 영화인데... 시도해볼래?\nA: もちろん！楽しみ。   ← 당연하지! 기대돼.\n```\n\n## Variations\n\n- 面白(おもしろ)い — standard\n- 楽(たの)しい — enjoyable (different nuance: more emotional/fun)\n- 愉快(ゆかい) — cheerful, amusing (literary)\n- 興味深い(きょうみぶかい) — intellectually interesting\n- 笑(わら)える — laughable, funny (specific to humor)\n\n## Related Terms\n\n- [[優しい]] — kind\n- [[綺麗]] — beautiful\n- [[カフェ]] — café (for date ideas)\n- 楽しい — enjoyable\n- 退屈(たいくつ) — boring (antonym)\n- つまらない — boring (colloquial)\n- 笑える — funny\n- 興味深い — fascinating\n\n## Cultural Notes\n\n- **일본어에서 「面白い」= 재미있다/즐겁다/흥미로운** 모두 포함. 영어 \"funny\" + \"interesting\" + \"enjoyable\" 통합.\n- 사람을 묘사할 때: **분위기 메이커, 대화가 잘 통하는 사람** 신호. 데이트에서 매우 중요한 매력.\n- **\"He/she is 面白い\"** = they make you laugh, you want to spend more time with them, they have stories to tell.\n- **음식에 사용**: 「この料理、面白い味だね」= \"interesting taste\" (not bad, but unusual).\n- **드라마, 만화에서**: 거의 모든 \"funny\" 상황이 面白い로 표현됨.\n- **비판적 사용**: 「本当に面白くないね」 = sarcastic, very cutting.\n\n## Sources\n\n- [[japanese-dating-culture]] — 칭찬\n- TRY! N4 文法\n- 日本語中級J501\n",
       "category": "vocabulary"
     },
+    "音楽.md": {
+      "title": "音楽",
+      "body": "# 音楽\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Music.\n\n**Romaji:** ongaku\n\n---\n\n## Examples\n\n- **音楽を聴きます。** — I listen to music.\n- **音楽が好きです。** — I like music.\n- **クラシック音楽** — classical music\n\n---\n\n## Related Terms\n\n- [[映画]]\n- [[読書]]\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]\n",
+      "category": "vocabulary"
+    },
     "はじめまして.md": {
       "title": "はじめまして",
       "body": "# はじめまして\n\n**Part of Speech:** 表現 (expression, greeting)\n**Definition:** \"만나서 반갑습니다\" — Standard first-time greeting.\n\n## Usage\n\n처음 만났을 때 사용. \"처음 뵙겠습니다\"와 같은 격식. 그 후 \"よろしくお願いします\"로 이어짐.\n\n## Variations\n\n- **はじめまして** — Standard polite\n- **初めまして** — 다른 표기 (같은 발음)\n- **初めてお会いします** — 격식 (비즈니스)\n\n## Cultural Notes\n\n**대화 흐름**:\n1. はじめまして (처음 뵙겠습니다)\n2. 私は○○です (저는 ○○입니다)\n3. よろしくお願いします (잘 부탁드립니다)\n\n**반응**: 상대도 같은 3단계로 답함.\n\n**참고**: 같은 사람에게 두 번 사용하지 않음 (두 번째 만남부터는\nこんにちは / こんばんは).\n\n## Sources\n\n- [[dating-romance-jp]] — 자기소개\n- みんなの日本語 初級\n",
@@ -299,9 +569,184 @@
       "body": "# 好きです付き合ってください\n\n**Part of Speech:** 表現 (expression, formal confession)\n**Definition:** \"좋아합니다, 사귀어 주세요\" — Standard formal confession.\n\n**Form:** 好きです。付き合ってください。\n\n## Usage\n\n일본 연애 문화의 **고백의 정석**. 2-3개월 친밀해진 후, in-person.\n\n## Variations\n\n- **好きです。付き合ってください。** — 가장 격식\n- **好きです。** — 강한 호감\n- **俺の彼女になってください** — 남성 → 여성, 캐주얼\n- **俺のことが好きか?** — 매우 캐주얼 (드라마틱)\n\n## Cultural Notes\n\n**이 표현의 문화적 무게**:\n서양의 \"Will you be my girlfriend?\"와 비슷하지만 **더 격식적**.\n일본에서는 告白 자체가 큰 이벤트로 인식.\n\n**위치 선택**도 중요**: 공원, 카페, 해변, 옥상 등 분위기 있는 곳.\n밤이 더 로맨틱.\n\n**응답**:\n- 긍정: 「私も好きです」 (나도 좋아해)\n- 보류: 「考えさせて」 (생각하게 해줘)\n- 거절: 「ごめんなさい」 (미안)\n\n## Related Expressions\n\n- [[手繋いでもいい]] — 친밀 진전\n- [[俺の彼女になってよ]] — 캐주얼\n\n## Sources\n\n- [[dating-romance-jp]] — 고백\n- 花より男子\n",
       "category": "expression"
     },
+    "祝日.md": {
+      "title": "祝日",
+      "body": "# 祝日\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Public holiday.\n\n**Romaji:** shukujitsu\n\n---\n\n## Examples\n\n- **今日は祝日です。** — Today is a holiday.\n- **祝日に休みます。** — I rest on holidays.\n- **祝日カレンダー** — holiday calendar\n\n---\n\n## Related Terms\n\n- [[祭り]]\n- [[正月]]\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]\n",
+      "category": "vocabulary"
+    },
+    "誕生日.md": {
+      "title": "誕生日",
+      "body": "# 誕生日\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Birthday.\n\n**Romaji:** tanjyo-bi\n\n---\n\n## Examples\n\n- **誕生日おめでとう!** — Happy birthday!\n- **誕生日はいつですか?** — When is your birthday?\n- **誕生日パーティーをします。** — I have a birthday party.\n\n---\n\n## Related Terms\n\n- [[ケーキ]]\n- [[クリスマス]]\n- [[プレゼント]]\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]\n",
+      "category": "vocabulary"
+    },
+    "クリスマス.md": {
+      "title": "クリスマス",
+      "body": "# クリスマス\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Christmas.\n\n**Romaji:** kurisumasu\n\n---\n\n## Examples\n\n- **メリークリスマス!** — Merry Christmas!\n- **クリスマスに会いましょう。** — Let's meet on Christmas.\n- **クリスマスパーティー** — Christmas party\n\n---\n\n## Related Terms\n\n- [[誕生日]]\n- [[ケーキ]]\n- [[プレゼント]]\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]\n",
+      "category": "vocabulary"
+    },
+    "正月.md": {
+      "title": "正月",
+      "body": "# 正月\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** New Year / January.\n\n**Romaji:** shougatsu\n\n---\n\n## Examples\n\n- **あけましておめでとうございます。** — Happy New Year.\n- **正月休み** — New Year holiday\n- **正月料理** — New Year food\n\n---\n\n## Related Terms\n\n- [[祝日]]\n- [[祭り]]\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]\n",
+      "category": "vocabulary"
+    },
+    "結婚式.md": {
+      "title": "結婚式",
+      "body": "# 結婚式\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Wedding ceremony.\n\n**Romaji:** kekkonshiki\n\n---\n\n## Examples\n\n- **結婚式に招待されました。** — I was invited to a wedding.\n- **結婚式おめでとうございます!** — Congratulations on your wedding!\n- **結婚式は来月です。** — The wedding is next month.\n\n---\n\n## Related Terms\n\n- [[誕生日]]\n- [[祭り]]\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]\n",
+      "category": "vocabulary"
+    },
+    "ケーキ.md": {
+      "title": "ケーキ",
+      "body": "# ケーキ\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Cake.\n\n**Romaji:** ke-ki\n\n---\n\n## Examples\n\n- **ケーキを切る。** — Cut the cake.\n- **ケーキがおいしい。** — The cake is delicious.\n- **誕生日ケーキ** — birthday cake\n\n---\n\n## Related Terms\n\n- [[誕生日]]\n- [[クリスマス]]\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]\n",
+      "category": "vocabulary"
+    },
+    "花火.md": {
+      "title": "花火",
+      "body": "# 花火\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Fireworks.\n\n**Romaji:** hanabi\n\n---\n\n## Examples\n\n- **花火がきれいです。** — Fireworks are beautiful.\n- **花火を見ます。** — I watch fireworks.\n- **夏の花火大会** — summer fireworks festival\n\n---\n\n## Related Terms\n\n- [[祭り]]\n- [[誕生日]]\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]\n",
+      "category": "vocabulary"
+    },
+    "祭り.md": {
+      "title": "祭り",
+      "body": "# 祭り\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Festival.\n\n**Romaji:** matsuri\n\n---\n\n## Examples\n\n- **夏祭りが楽しいです。** — Summer festival is fun.\n- **祭りに参加します。** — I participate in a festival.\n- **お祭りを見ます。** — I watch the festival.\n\n---\n\n## Related Terms\n\n- [[祝日]]\n- [[正月]]\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]\n",
+      "category": "vocabulary"
+    },
+    "店.md": {
+      "title": "店",
+      "body": "# 店\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Shop / store.\n\n**Romaji:** mise\n\n---\n\n## Examples\n\n- **店に行きます。** — I go to the store.\n- **あの店は安いです。** — That store is cheap.\n- **新しい店** — new store\n\n---\n\n## Related Terms\n\n- [[お金]]\n- [[安い]]\n- [[高い]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "category": "vocabulary"
+    },
+    "お金.md": {
+      "title": "お金",
+      "body": "# お金\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Money.\n\n**Romaji:** okane\n\n---\n\n## Examples\n\n- **お金がありません。** — I don't have money.\n- **お金を借ります。** — I borrow money.\n- **お金が要ります。** — I need money.\n\n---\n\n## Related Terms\n\n- [[カード]]\n- [[現金]]\n- [[価格]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "category": "vocabulary"
+    },
+    "現金.md": {
+      "title": "現金",
+      "body": "# 現金\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Cash.\n\n**Romaji:** genkin\n\n---\n\n## Examples\n\n- **現金で払います。** — I pay in cash.\n- **現金のみ** — cash only\n- **現金が必要ですか?** — Do you need cash?\n\n---\n\n## Related Terms\n\n- [[カード]]\n- [[お金]]\n- [[割引]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "category": "vocabulary"
+    },
+    "カード.md": {
+      "title": "カード",
+      "body": "# カード\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Card.\n\n**Romaji:** ka-do\n\n---\n\n## Examples\n\n- **カードで払います。** — I pay by card.\n- **カードをください。** — Card please.\n- **クレジットカード** — credit card\n\n---\n\n## Related Terms\n\n- [[お金]]\n- [[現金]]\n- [[割引]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "category": "vocabulary"
+    },
+    "価格.md": {
+      "title": "価格",
+      "body": "# 価格\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Price.\n\n**Romaji:** kakaku\n\n---\n\n## Examples\n\n- **価格はいくらですか?** — How much is the price?\n- **価格表** — price list\n- **高い価格** — high price\n\n---\n\n## Related Terms\n\n- [[高い]]\n- [[安い]]\n- [[お金]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "category": "vocabulary"
+    },
+    "安い.md": {
+      "title": "安い",
+      "body": "# 安い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Cheap / inexpensive.\n\n**Romaji:** yasui\n\n---\n\n## Examples\n\n- **安いですね。** — It's cheap.\n- **安い店** — cheap store\n- **もっと安いのがいいです。** — I want something cheaper.\n\n---\n\n## Related Terms\n\n- [[高い]]\n- [[価格]]\n- [[割引]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "category": "vocabulary"
+    },
+    "高い.md": {
+      "title": "高い",
+      "body": "# 高い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Expensive / high.\n\n**Romaji:** takai\n\n---\n\n## Examples\n\n- **それは高いです。** — That is expensive.\n- **高い値段** — high price\n- **もう少し安いのをください。** — A little cheaper please.\n\n---\n\n## Related Terms\n\n- [[安い]]\n- [[価格]]\n- [[お金]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "category": "vocabulary"
+    },
+    "割引.md": {
+      "title": "割引",
+      "body": "# 割引\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Discount.\n\n**Romaji:** waribiki\n\n---\n\n## Examples\n\n- **割引があります。** — There is a discount.\n- **5%割引** — 5% discount\n- **学生割引** — student discount\n\n---\n\n## Related Terms\n\n- [[安い]]\n- [[カード]]\n- [[お金]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "category": "vocabulary"
+    },
+    "朝食.md": {
+      "title": "朝食",
+      "body": "# 朝食\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Breakfast.\n\n**Romaji:** choushoku\n\n---\n\n## Examples\n\n- **朝食は何ですか?** — What's for breakfast?\n- **朝食を食べます。** — I eat breakfast.\n- **朝食抜き** — skip breakfast\n\n---\n\n## Related Terms\n\n- [[昼食]]\n- [[夕食]]\n- [[おいしい]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "category": "vocabulary"
+    },
+    "昼食.md": {
+      "title": "昼食",
+      "body": "# 昼食\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Lunch.\n\n**Romaji:** chūshoku\n\n---\n\n## Examples\n\n- **昼食は12時です。** — Lunch is at 12.\n- **昼食を食べます。** — I eat lunch.\n- **昼食は何がいいですか?** — What do you want for lunch?\n\n---\n\n## Related Terms\n\n- [[朝食]]\n- [[夕食]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "category": "vocabulary"
+    },
+    "夕食.md": {
+      "title": "夕食",
+      "body": "# 夕食\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Dinner.\n\n**Romaji:** yūshoku\n\n---\n\n## Examples\n\n- **夕食は7時です。** — Dinner is at 7.\n- **夕食を作りましょう。** — Let's make dinner.\n- **夕食は外で食べます。** — I eat dinner out.\n\n---\n\n## Related Terms\n\n- [[朝食]]\n- [[昼食]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "category": "vocabulary"
+    },
+    "水.md": {
+      "title": "水",
+      "body": "# 水\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Water.\n\n**Romaji:** mizu\n\n---\n\n## Examples\n\n- **水をください。** — Water please.\n- **水が飲みたいです。** — I want to drink water.\n- **水道水** — tap water\n\n---\n\n## Related Terms\n\n- [[お茶]]\n- [[朝食]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "category": "vocabulary"
+    },
+    "お茶.md": {
+      "title": "お茶",
+      "body": "# お茶\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Tea.\n\n**Romaji:** ocha\n\n---\n\n## Examples\n\n- **お茶をどうぞ。** — Have some tea.\n- **緑茶が好きです。** — I like green tea.\n- **お茶の時間** — tea time\n\n---\n\n## Related Terms\n\n- [[水]]\n- [[朝食]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "category": "vocabulary"
+    },
+    "おいしい.md": {
+      "title": "おいしい",
+      "body": "# おいしい\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Delicious / tasty.\n\n**Romaji:** oishii\n\n---\n\n## Examples\n\n- **とてもおいしいです。** — It's very delicious.\n- **おいしい料理** — delicious food\n- **一番おいしいのはどれ?** — Which is the most delicious?\n\n---\n\n## Related Terms\n\n- [[甘い]]\n- [[辛い]]\n- [[朝食]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "category": "vocabulary"
+    },
+    "辛い.md": {
+      "title": "辛い",
+      "body": "# 辛い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Spicy.\n\n**Romaji:** karai\n\n---\n\n## Examples\n\n- **とても辛いです。** — It's very spicy.\n- **辛い料理** — spicy food\n- **辛くしないでください。** — Please don't make it spicy.\n\n---\n\n## Related Terms\n\n- [[おいしい]]\n- [[魚]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "category": "vocabulary"
+    },
+    "甘い.md": {
+      "title": "甘い",
+      "body": "# 甘い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Sweet.\n\n**Romaji:** amai\n\n---\n\n## Examples\n\n- **このケーキは甘いです。** — This cake is sweet.\n- **甘いもの** — sweet things\n- **甘すぎます。** — It's too sweet.\n\n---\n\n## Related Terms\n\n- [[おいしい]]\n- [[ケーキ]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "category": "vocabulary"
+    },
     "パスポート.md": {
       "title": "パスポート",
       "body": "# パスポート\n\n**Part of Speech:** 名詞 (noun, katakana loanword)\n**Level:** N5\n\n**Definition:** パスポート — passport. A government-issued travel document.\n\n**Word Origin:** English \"passport\" → Japanese パスポート (katakana loanword).\n\n**Pronunciation:**\n- 読み方: パスポート (pasupōto)\n- Pitch: 平板 (L-L-L-L-L) — ぱ↑す↑ぽ↑ー↑と↑ (flat)\n\n**Memory Tip:** Just memorize as a katakana loanword: パス + ポート. Pass the port(al) to travel!\n\n**Common Mistakes:**\n- ❌ 「ぱすぽーと」(wrong pitch) → 「ぱすぽーと」 flat\n- ❌ 「パスポートを見せてください」 → OK but 「を見せてください」= \"show me your\"\n- ❌ 「パスポート番号」 → Correct! (passport number)\n- ✅ 「パスポートを見せてください」 — Please show me your passport.\n- ✅ 「パスポートをなくしました」 — I lost my passport.\n- ✅ 「パスポートの更新」 — passport renewal\n- Note: Required for international travel. Japan's passport is highly ranked globally.\n\n**Register:** formal/travel context.\n**Frequency:** ⭐⭐⭐ (travel context)\n\n## Examples\n\n- 「パスポートを見せてください」 — Please show me your passport.\n- 「パスポートをなくしました」 — I lost my passport.\n- 「パスポート番号を書いてください」 — Please write your passport number.\n- 「パスポートの有効期限」 — passport expiration date\n- 「日本パスポート」 — Japanese passport\n\n## Mini-Dialogue\n\n```\nA: パスポート見せてください。   ← Please show me your passport.\nB: ここにあります。   ← Here it is.\nA: 滞在予定は?   ← How long will you stay?\nB: 二週間です。   ← Two weeks.\nA: 滞在の目的は?   ← What's the purpose of your stay?\nB: 観光です。   ← Sightseeing.\n```\n\n## Related Terms\n\n- [[空港]] — airport\n- [[ホテル]] — hotel\n- [[ビザ]] — visa\n- [[切符]] — ticket\n- [[外国]] — foreign country\n- [[旅]] — travel\n\n## Cultural Notes\n\n- **Japan passport**: 세계 4위 수준 (ranked ~4th globally for visa-free access, ~194 countries).\n- **有効期限 (validity)**: 5년 (5 years for adults) / 10년 (10 years).\n- **更新 (renewal)**: 外務省 (Ministry of Foreign Affairs) or passport center. 최근은 자동 갱신 가능.\n- **분실 (loss)**: 가까운 영사관 (consulate) or 일본에서는 外務省 본부.\n- **出入国審査 (immigration)**: 자동 출입국 심사대 (automated gate) 도입, fingerprint 등록.\n- **한국인**: 한국 여권은 일본 무비자 입국 가능 (한국 시민 90일 무비자).\n\n## Sources\n\n- [[travel-basics]] — 여행 기초 어휘\n- [[first-travel-korea]] — 한국 여행\n- [[travel-adventure]] — 모험 여행",
+      "category": "vocabulary"
+    },
+    "achim.md": {
+      "title": "아침",
+      "body": "# 아침\n\n**Part of Speech:** 名詞 (명사)\n\n**Definition:** 朝\n\n**Romaji:** achim\n\n**Language of Origin:** 韓国語 (한국어)\n\n## Examples\n\n- **아침 はどこですか?** — 아침은(는) 어디인가요?\n- **아침**は旅行で必須です。\n\n## Related Terms\n\n- [[여권]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-korea]]\n",
+      "category": "vocabulary"
+    },
+    "好き.md": {
+      "title": "好き",
+      "body": "# 好き\n\n**Part of Speech:** 形容詞 (な-adjective) / 名詞 (noun)\n**Level:** N5\n\n**Definition:** To like; affection. (Romaji: **suki**) Used for people, things, activities, food, ideas.\n\n**読み方:** すき (suki)\n\n**Etymology:** 好 (this kanji alone) + き (kun-reading). 好 = \"woman (女) + child (子)\" = preference. Ancient Chinese character meaning \"good, prefer.\"\n\n**Pronunciation:**\n- 読み方: すき (suki)\n- Pitch: 頭高 (L-H) — す↓き↑  / alternatively H-L (acceptable both)\n- Type: な-adjective (changes to 好きな, 好きに, 好きだ)\n\n**Memory Tip:** \"**S**tandard **U**niversal **K**ind **I**nterest\" — SU-KI. Whatever you **suki** = you want more of it. 4 letters = simple word.\n\n**Common Mistakes:**\n- ❌ 「好きの人」 → 「好きな人」(na-adj needs な before noun)\n- ❌ 「好きありません」 → 「好きじゃありません」or 「好きではありません」(negative な-adj)\n- ❌ 「あなたのこと好き」 → 「あなたのことが好き」(が required with のこと = \"you\" emphasis)\n- ❌ 「コーヒーが好きじゃない」→ OK grammatically, but 「好きじゃないです」more natural\n- ✅ 「○○が好きです」(standard polite)\n- ✅ 「好きになります」(will come to like — process)\n- ✅ 「好きになっちゃった」(ended up liking — casual, often used in romance)\n- Note: 「好き」to a friend/stranger feels like a **confession** (告白). Be careful!\n\n**Register:** standard polite. Universally appropriate. Also casual in casual contexts.\n**Frequency:** ⭐⭐⭐⭐⭐ (top 200 JP words)\n\n**Visual:**\n```\n   好 = 女 (woman) + 子 (child)\n       \"woman prefers child\" = preference, liking\n   ─────────\n   好き = preference + abstract ending = to like\n```\n\n## Examples\n\n- 「あなたが好きです」 — I like you (full romantic confession, polite)\n- 「○○が好きです」 — I like ___\n- 「好きになっちゃった」 — I ended up liking (you) — casual\n- 「コーヒーが好きです」 — I like coffee\n- 「好きだよ」 — I like you (casual, intimate)\n- 「日本料理が好きになりました」 — I've come to like Japanese food\n\n## Mini-Dialogue (Confession)\n\n```\nA: あのさ... 話したいことがあるんだけど。   ← 저기... 할 말 있어.\nB: うん、何？   ← 응, 뭔데?\nA: ずっと前から、あなたのことが好きだった。   ← 오래 전부터, 너를 좋아했어.\nB: えっ... 私も。   ← 뭐... 나도.\nA: 本当？ 嬉しい。   ← 정말? 기뻐.\nB: (笑) よかった。   ← (웃음) 다행이다.\n```\n\n## Variations\n\n- 好き(すき) — basic like\n- 大好き(だいすき) — love, really like\n- 愛してる(あいしてる) — love you (rare, very deep)\n- 好感(こうかん) — goodwill (formal)\n- 好む(このむ) — to prefer, like (verb, formal)\n\n## Related Terms\n\n- [[嫌い]] — dislike\n- [[愛する]] — love (heavy, formal)\n- [[告白]] — confession\n- [[可愛い]] — cute\n- [[綺麗]] — beautiful\n- [[恋人]] — lover\n- [[彼氏]] / [[彼女]] — boyfriend/girlfriend\n- [[付き合う]] — to date, go out with\n\n## Cultural Notes\n\n- **「好きです」= 告白의 표준 표현**. 일본에서는 \"I love you\"보다 \"好きです\"를 더 자주 사용 (일본 문화에서 愛する는 매우 무거움).\n- **段階 (stages of affection)**:\n  - 好き — 좋아함 (호감)\n  - 大好き — 매우 좋아함 (강한 호감)\n  - 愛してる — 사랑해 (rare, deep, married couples)\n  - 愛しています — I love you (very formal, often translated as \"I love you\" in songs)\n- **카드를 게임화**: \"Confession\" 단계의 단어 — 발음이 발라드 (ballad) 가사에 자주 등장.\n- **\"告白\"는 거절할 수 있는 분위기** — 일본에서는 상대에게 부담을 주지 않는 매너 (호감을 표현하되 답을 강요하지 않음).\n- **타이밍**: 일본 데이팅에서 好き表白은 2-3개월 이상 교제 후가 일반적. 너무 빠르면 부담.\n\n## Sources\n\n- [[japanese-dating-culture]] — 고백\n- [[告白]] — confession pattern\n- 花より男子 — 牧野つくし「好きよ」\n- Genki I (Chapter 4)\n",
+      "category": "vocabulary"
+    },
+    "dalda.md": {
+      "title": "달다",
+      "body": "# 달다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Sweet.\n\n**Etymology:** 순 우리말\n\n**Romaja:** dalda\n\n---\n\n## Examples\n\n- **너무 달아요.** — Too sweet.\n- **달고 맛있어요.** — Sweet and delicious.\n- **덜 달게 해주세요.** — Make it less sweet, please.\n\n---\n\n## Related Terms\n\n- [[맵다]] — spicy\n- [[시다]] — sour\n- [[쓰다]] — bitter\n- [[맛있다]] — delicious\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
+      "category": "vocabulary"
+    },
+    "beoseu.md": {
+      "title": "버스",
+      "body": "# 버스\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Bus — 다수의 승객을 수송하는 대형 차량.\n\n**Etymology:** 외래어 (bus, 영어에서 차용)\n\n**Romaja:** beoseu\n\n---\n\n## Examples\n\n- **버스는 어디서 타요?** — Where do I take the bus?\n- **버스 정류장이에요.** — It's a bus stop.\n- **다음 버스가 언제예요?** — When is the next bus?\n\n---\n\n## Related Terms\n\n- [[지하철]] — subway\n- [[택시]] — taxi\n- [[기차]] — train\n- [[정류장]] — stop\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
+      "category": "vocabulary"
+    },
+    "スポーツ.md": {
+      "title": "スポーツ",
+      "body": "# スポーツ\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Sports.\n\n**Romaji:** supo-tsu\n\n---\n\n## Examples\n\n- **スポーツが好きです。** — I like sports.\n- **スポーツをする** — play sports\n- **冬のスポーツ** — winter sports\n\n---\n\n## Related Terms\n\n- [[野球]]\n- [[水泳]]\n- [[ヨガ]]\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]\n",
+      "category": "vocabulary"
+    },
+    "野球.md": {
+      "title": "野球",
+      "body": "# 野球\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Baseball.\n\n**Romaji:** yakyū\n\n---\n\n## Examples\n\n- **野球を見ます。** — I watch baseball.\n- **野球をします。** — I play baseball.\n- **プロ野球** — professional baseball\n\n---\n\n## Related Terms\n\n- [[スポーツ]]\n- [[水泳]]\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]\n",
+      "category": "vocabulary"
+    },
+    "テニス.md": {
+      "title": "テニス",
+      "body": "# テニス\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Tennis.\n\n**Romaji:** tenisu\n\n---\n\n## Examples\n\n- **テニスをします。** — I play tennis.\n- **テニスコート** — tennis court\n- **テニスが好きです。** — I like tennis.\n\n---\n\n## Related Terms\n\n- [[スポーツ]]\n- [[野球]]\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]\n",
+      "category": "vocabulary"
+    },
+    "水泳.md": {
+      "title": "水泳",
+      "body": "# 水泳\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Swimming.\n\n**Romaji:** suiei\n\n---\n\n## Examples\n\n- **水泳をします。** — I swim.\n- **プールで水泳** — swim in the pool\n- **水泳が得意です。** — I'm good at swimming.\n\n---\n\n## Related Terms\n\n- [[スポーツ]]\n- [[ヨガ]]\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]\n",
+      "category": "vocabulary"
+    },
+    "ジョギング.md": {
+      "title": "ジョギング",
+      "body": "# ジョギング\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Jogging.\n\n**Romaji:** jogingu\n\n---\n\n## Examples\n\n- **毎朝ジョギングします。** — I jog every morning.\n- **公園でジョギング** — jogging in the park\n- **ジョギングシューズ** — jogging shoes\n\n---\n\n## Related Terms\n\n- [[スポーツ]]\n- [[水泳]]\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]\n",
+      "category": "vocabulary"
+    },
+    "ヨガ.md": {
+      "title": "ヨガ",
+      "body": "# ヨガ\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Yoga.\n\n**Romaji:** yoga\n\n---\n\n## Examples\n\n- **ヨガをします。** — I do yoga.\n- **ヨガのクラス** — yoga class\n- **毎朝ヨガ** — yoga every morning\n\n---\n\n## Related Terms\n\n- [[スポーツ]]\n- [[ジョギング]]\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]\n",
+      "category": "vocabulary"
+    },
+    "読書.md": {
+      "title": "読書",
+      "body": "# 読書\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Reading.\n\n**Romaji:** dokusho\n\n---\n\n## Examples\n\n- **読書が好きです。** — I like reading.\n- **本を読む** — read a book\n- **読書の時間** — reading time\n\n---\n\n## Related Terms\n\n- [[映画]]\n- [[音楽]]\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]\n",
       "category": "vocabulary"
     },
     "gonghang.md": {
@@ -319,29 +764,44 @@
       "body": "# sumimasen\n\n**Part of Speech:** 表現 (けいひょう) — 感動詞 (interjección)\n\n**Definition:** \"실례합니다\" / \"죄송합니다\" / \"감사합니다\" — 세 가지 의미로 모두 쓰이는 다기능 표현.\n\n**Romaji:** sumimasen\n\n**Polite form:** すみません (standard)\n\n## 세 가지 용도\n\n1. **호출** — \"Excuse me\" (직원에게 부를 때)\n2. **사과** — \"I'm sorry\" (실수 후)\n3. **감사** — \"Thank you\" (작은 호의에)\n\n## Examples\n\n- **すみません、駅はどこですか?** — 실례합니다, 역은 어디인가요?\n- **すみません、遅れました** — 죄송합니다, 늦었습니다.\n- **すみません、助かりました** — 감사합니다, 도움되었습니다.\n\n## Variations\n\n| 형태 | 정중함 | 용도 |\n|------|--------|------|\n| すみません | Polite | 일반 |\n| すいません | Casual | 구어, 빠르게 |\n| すみませんでした | Past Polite | 사후 사과 |\n| すみませんで した | Formal | 격식 |\n\n## Cultural Notes\n\n한국어의 \"저기요\" + \"죄송합니다\" + \"감사합니다\"를 한 단어로 합친 것과 유사. 너무 자주 쓰면 자연스럽지만, 정중한 뉘앙스를 잃을 수도 있음.\n\n## Sources\n\n- [[first-travel-japan]]\n- [[first-travel-korea]]\n",
       "category": "expression"
     },
-    "inmigración.md": {
-      "title": "inmigración",
-      "body": "# inmigración\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 입국심사\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el inmigración?** — inmigración은(는) 어디인가요?\n- **inmigración** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
+    "fiesta.md": {
+      "title": "fiesta",
+      "body": "# fiesta\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Fiesta — celebración.\n\n---\n\n## Examples\n\n- \"Hay una fiesta hoy.\"\n- \"Fiesta de cumpleaños.\"\n- \"¿Vamos a la fiesta?\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "viajes.md": {
-      "title": "Viajes - Travel",
-      "body": "# Viajes - Travel\n\n**Source:** [[viajes-esenciales]]\n**Theme:** Travel & Tourism\n**Level:** A1-A2\n\nVocabulario esencial de viajes. Aeropuertos, hoteles, restaurantes, transporte y turismo — las palabras más útiles para cualquier viaje hispanohablante.\n\n---\n\n## Aeropuerto\n\n### Sustantivos\n\n- **pasaporte** — 여권\n- **billete / boleto** — 티켓, 표\n- **tarjeta de embarque** — 탑승권\n- **equipaje / maleta** — 수하물 / 여행가방\n- **maleta** — 여행가방\n- **puerta de embarque** — 탑승구\n- **terminal** — 터미널\n- **facturar** — 체크인하다\n- **mostrador** — 카운터\n- **vuelo** — 항공편\n\n### Verbos\n\n- **facturar** — 체크인하다\n- **embarcar** — 탑승하다\n- **aterrizar** — 착륙하다\n- **despegar** — 이륙하다\n- **llegar** — 도착하다\n- **salir** — 출발하다\n\n---\n\n## Hotel\n\n### Sustantivos\n\n- **reserva** — 예약\n- **recepción** — 프론트 데스크\n- **habitación** — 방\n- **habitación individual** — 1인실\n- **habitación doble** — 2인실\n- **suite** — 스위트룸\n- **llave / tarjeta** — 열쇠 / 카드\n- **ascensor** — 엘리베이터\n- **vestíbulo** — 로비\n\n### Verbos\n\n- **reservar** — 예약하다\n- **alojarse** — 묵다\n- **registrarse** — 체크인하다\n\n---\n\n## Restaurante\n\n### Sustantivos\n\n- **carta / menú** — 메뉴\n- **camarero / mesero** — 웨이터/여종업원\n- **cuenta** — 계산서\n- **propina** — 팁\n- **entrante** — 전채\n- **plato principal** — 메인 요리\n- **postre** — 디저트\n- **bebida** — 음료\n- **botella** — 병\n- **vaso** — 잔\n\n### Verbos\n\n- **pedir** — 주문하다\n- **recomendar** — 추천하다\n- **probar** — 맛보다\n- **pagar** — 지불하다\n- **invitar** — 쏘다\n\n---\n\n## Transporte\n\n### Sustantivos\n\n- **metro** — 지하철\n- **autobús** — 버스\n- **taxi** — 택시\n- **tren** — 기차\n- **estación** — 역\n- **parada** — 정류장\n- **billete / boleto** — 표\n- **andén** — 승강장\n- **transbordo** — 환승\n- **aeropuerto** — 공항\n\n### Verbos\n\n- **coger / tomar** — 타다\n- **bajar** — 내리다\n- **subir** — 타다\n- **conducir** — 운전하다\n- **caminar / andar** — 걷다\n\n---\n\n## Turismo\n\n### Sustantivos\n\n- **mapa** — 지도\n- **guía** — 가이드\n- **tour / excursión** — 투어 / 소풍\n- **museo** — 박물관\n- **catedral** — 대성당\n- **monumento** — 기념물\n- **playa** — 해변\n- **montaña** — 산\n- **parque** — 공원\n- **mirador** — 전망대\n\n### Verbos\n\n- **visitar** — 방문하다\n- **explorar** — 탐험하다\n- **fotografiar** — 사진 찍다\n- **conocer** — 알아보다\n\n---\n\n## Direcciones (방향)\n\n### Frases clave\n\n- **¿Dónde está...?** — ...는 어디에 있나요?\n- **¿Cómo llego a...?** — ...에 어떻게 가나요?\n- **Siga recto** — 직진하세요\n- **Gire a la izquierda / derecha** — 좌회전/우회전하세요\n- **a la izquierda / derecha** — 왼쪽/오른쪽에\n- **al lado de** — 옆에\n- **enfrente de** — 건너편에\n- **entre** — 사이에\n- **cerca de** — 가까이에\n- **lejos de** — 멀리\n\n---\n\n## Frases útiles (유용한 표현)\n\n- **Disculpe / Perdón** — 실례합니다\n- **¿Cuánto cuesta?** — 얼마예요?\n- **¿Dónde está el baño?** — 화장실 어디예요?\n- **No entiendo** — 이해가 안 돼요\n- **¿Puede ayudarme?** — 도와주실 수 있나요?\n- **Gracias** — 감사합니다\n- **Por favor** — 부디\n\n---\n\n## Sources\n\n- [[viajes-esenciales]]\n",
+    "cumpleanos.md": {
+      "title": "cumpleanos",
+      "body": "# cumpleanos\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Cumpleaños — aniversario del nacimiento.\n\n---\n\n## Examples\n\n- \"¡Feliz cumpleaños!\"\n- \"¿Cuándo es tu cumpleaños?\"\n- \"Fiesta de cumpleaños.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "matriarca.md": {
-      "title": "matriarca",
-      "body": "# matriarca\n\n**Part of Speech:** sustantivo femenino\n\n**Definition:** Mujer que ejerce el poder o la autoridad principal en una familia o grupo. Madre que gobierna con mano firme.\n\n**Etymology:** Del latín *mater* (madre) + griego *archē* (mando, gobierno).\n\n## Examples\n\n- *Su madre, doña Carmen, era la **matriarca** de la familia De la Garza.*\n- *La **matriarca** decidió que el menor no se casaría.*\n- *Es una **matriarca** respetada por todos sus hijos y nietos.*\n\n## Related Terms\n\n- [[patriarca]] - versión masculina\n- [[cabeza-de-familia]] - neutro\n- [[matriarcado]] - sistema social\n\n## Cultural Notes\n\nEn Latinoamérica rural del siglo XX, la **matriarca** tenía poder absoluto sobre la vida de las hijas solteras, especialmente en lo referente al matrimonio. **Mama Elena** en *Como agua para chocolate* es el arquetipo: su autoridad es ley indiscutible, respaldada por la \"tradición sagrada\". El conflicto novela-matriarca es uno de los grandes temas de la literatura latinoamericana.\n\n## Sources\n\n- [[como-agua-para-chocolate-cap1]]\n- [[mexico-patriarcado-tradicion]]\n",
+    "navidad.md": {
+      "title": "navidad",
+      "body": "# navidad\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Navidad — 25 de diciembre.\n\n---\n\n## Examples\n\n- \"¡Feliz Navidad!\"\n- \"Navidad en familia.\"\n- \"Regalos de Navidad.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "chapparon.md": {
-      "title": "chaparrón",
-      "body": "# chaparrón\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** Lluvia fuerte y breve, usualmente con tormenta. Aguacero.\n\n**Etymology:** Del vasco *txaparrón* o del antiguo *chapuz* (chapuzón). Posible influencia del euskera.\n\n## Examples\n\n- *Viene un **chaparrón**, mejor esperar un rato.*\n- *Cayó un **chaparrón** tremendo y nos empapamos.*\n- *El **chaparrón** solo duró diez minutos.*\n\n## Related Terms\n\n- [[aguacero]] - lluvia intensa\n- [[tormenta]] - con aparato eléctrico\n- [[llovizna]] - lluvia fina\n- [[chaparrón-vespertino]] - el típico de verano\n\n## Cultural Notes\n\nEl **chaparrón** es la lluvia típica de verano en España: cae con fuerza, dura poco, y refresca. En Madrid, después del **chaparrón** vespertino suele salir el sol y aparecer el arco iris. Culturalmente, el **chaparrón** es welcome break del calor. En Latinoamérica, **chaparrón** también se usa pero es más común en zonas andinas y centrales.\n\n## Sources\n\n- [[notes-in-spanish-planes-de-verano]]\n",
+    "ano-nuevo.md": {
+      "title": "ano-nuevo",
+      "body": "# ano-nuevo\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Año Nuevo — 1 de enero.\n\n---\n\n## Examples\n\n- \"¡Feliz Año Nuevo!\"\n- \"Celebramos el Año Nuevo.\"\n- \"Año Nuevo, vida nueva.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "catedral.md": {
-      "title": "catedral",
-      "body": "# catedral\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 대성당\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el catedral?** — catedral은(는) 어디인가요?\n- **catedral** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
+    "boda.md": {
+      "title": "boda",
+      "body": "# boda\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Boda — ceremonia de matrimonio.\n\n---\n\n## Examples\n\n- \"La boda es en junio.\"\n- \"Invitación de boda.\"\n- \"Boda civil.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "regalo.md": {
+      "title": "regalo",
+      "body": "# regalo\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Regalo — cosa que se da sin pago.\n\n---\n\n## Examples\n\n- \"Un regalo para ti.\"\n- \"Compré un regalo.\"\n- \"¿Quieres un regalo?\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "pastel.md": {
+      "title": "pastel",
+      "body": "# pastel\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Pastel — tarta dulce.\n\n---\n\n## Examples\n\n- \"El pastel está delicioso.\"\n- \"Cortar el pastel.\"\n- \"Pastel de chocolate.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "quinceanera.md": {
+      "title": "quinceanera",
+      "body": "# quinceanera\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Quinceañera — fiesta a los 15 años.\n\n---\n\n## Examples\n\n- \"Su quinceañera fue hermosa.\"\n- \"Fiesta de quinceañera.\"\n- \"Vestido de quinceañera.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
     "estoy-enamorado.md": {
@@ -389,9 +849,29 @@
       "body": "# mapa\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 지도\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el mapa?** — mapa은(는) 어디인가요?\n- **mapa** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
       "category": "vocabulary"
     },
+    "jefe.md": {
+      "title": "jefe",
+      "body": "# jefe\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Jefe — persona que dirige.\n\n---\n\n## Examples\n\n- \"Mi jefe es estricto.\"\n- \"Hablar con el jefe.\"\n- \"Buen jefe.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "inmigración.md": {
+      "title": "inmigración",
+      "body": "# inmigración\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 입국심사\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el inmigración?** — inmigración은(는) 어디인가요?\n- **inmigración** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
+      "category": "vocabulary"
+    },
+    "viajes.md": {
+      "title": "Viajes - Travel",
+      "body": "# Viajes - Travel\n\n**Source:** [[viajes-esenciales]]\n**Theme:** Travel & Tourism\n**Level:** A1-A2\n\nVocabulario esencial de viajes. Aeropuertos, hoteles, restaurantes, transporte y turismo — las palabras más útiles para cualquier viaje hispanohablante.\n\n---\n\n## Aeropuerto\n\n### Sustantivos\n\n- **pasaporte** — 여권\n- **billete / boleto** — 티켓, 표\n- **tarjeta de embarque** — 탑승권\n- **equipaje / maleta** — 수하물 / 여행가방\n- **maleta** — 여행가방\n- **puerta de embarque** — 탑승구\n- **terminal** — 터미널\n- **facturar** — 체크인하다\n- **mostrador** — 카운터\n- **vuelo** — 항공편\n\n### Verbos\n\n- **facturar** — 체크인하다\n- **embarcar** — 탑승하다\n- **aterrizar** — 착륙하다\n- **despegar** — 이륙하다\n- **llegar** — 도착하다\n- **salir** — 출발하다\n\n---\n\n## Hotel\n\n### Sustantivos\n\n- **reserva** — 예약\n- **recepción** — 프론트 데스크\n- **habitación** — 방\n- **habitación individual** — 1인실\n- **habitación doble** — 2인실\n- **suite** — 스위트룸\n- **llave / tarjeta** — 열쇠 / 카드\n- **ascensor** — 엘리베이터\n- **vestíbulo** — 로비\n\n### Verbos\n\n- **reservar** — 예약하다\n- **alojarse** — 묵다\n- **registrarse** — 체크인하다\n\n---\n\n## Restaurante\n\n### Sustantivos\n\n- **carta / menú** — 메뉴\n- **camarero / mesero** — 웨이터/여종업원\n- **cuenta** — 계산서\n- **propina** — 팁\n- **entrante** — 전채\n- **plato principal** — 메인 요리\n- **postre** — 디저트\n- **bebida** — 음료\n- **botella** — 병\n- **vaso** — 잔\n\n### Verbos\n\n- **pedir** — 주문하다\n- **recomendar** — 추천하다\n- **probar** — 맛보다\n- **pagar** — 지불하다\n- **invitar** — 쏘다\n\n---\n\n## Transporte\n\n### Sustantivos\n\n- **metro** — 지하철\n- **autobús** — 버스\n- **taxi** — 택시\n- **tren** — 기차\n- **estación** — 역\n- **parada** — 정류장\n- **billete / boleto** — 표\n- **andén** — 승강장\n- **transbordo** — 환승\n- **aeropuerto** — 공항\n\n### Verbos\n\n- **coger / tomar** — 타다\n- **bajar** — 내리다\n- **subir** — 타다\n- **conducir** — 운전하다\n- **caminar / andar** — 걷다\n\n---\n\n## Turismo\n\n### Sustantivos\n\n- **mapa** — 지도\n- **guía** — 가이드\n- **tour / excursión** — 투어 / 소풍\n- **museo** — 박물관\n- **catedral** — 대성당\n- **monumento** — 기념물\n- **playa** — 해변\n- **montaña** — 산\n- **parque** — 공원\n- **mirador** — 전망대\n\n### Verbos\n\n- **visitar** — 방문하다\n- **explorar** — 탐험하다\n- **fotografiar** — 사진 찍다\n- **conocer** — 알아보다\n\n---\n\n## Direcciones (방향)\n\n### Frases clave\n\n- **¿Dónde está...?** — ...는 어디에 있나요?\n- **¿Cómo llego a...?** — ...에 어떻게 가나요?\n- **Siga recto** — 직진하세요\n- **Gire a la izquierda / derecha** — 좌회전/우회전하세요\n- **a la izquierda / derecha** — 왼쪽/오른쪽에\n- **al lado de** — 옆에\n- **enfrente de** — 건너편에\n- **entre** — 사이에\n- **cerca de** — 가까이에\n- **lejos de** — 멀리\n\n---\n\n## Frases útiles (유용한 표현)\n\n- **Disculpe / Perdón** — 실례합니다\n- **¿Cuánto cuesta?** — 얼마예요?\n- **¿Dónde está el baño?** — 화장실 어디예요?\n- **No entiendo** — 이해가 안 돼요\n- **¿Puede ayudarme?** — 도와주실 수 있나요?\n- **Gracias** — 감사합니다\n- **Por favor** — 부디\n\n---\n\n## Sources\n\n- [[viajes-esenciales]]\n",
+      "category": "vocabulary"
+    },
     "cebolla.md": {
       "title": "cebolla",
       "body": "# cebolla\n\n**Part of Speech:** sustantivo femenino\n\n**Definition:** Planta hortense de la familia de las liliáceas, con bulbo comestible, de olor y sabor fuertes. Provoca lágrimas al cortarla.\n\n**Etymology:** Del latín *cepulla*, diminutivo de *cepa* (cabeza,tronco).\n\n## Examples\n\n- *Mientras las **cebollas** que se estaban cociendo en el horno despedían un vapor penetrante...*\n- *Pela una **cebolla** y sofríela en aceite de oliva.*\n- *Lloraba como una **cebolla** pelada.* (modismo mexicano coloquial)\n\n## Related Terms\n\n- [[ajo]] - similar, pariente de la cebolla\n- [[puerro]] - variedad de cebolla\n- [[chalota]] - cebolla suave\n\n## Cultural Notes\n\nEn México, pelar cebollas en la cocina es metáfora de **llanto femenino silencioso** en el ámbito doméstico. En *Como agua para chocolate*, las lágrimas de Tita al pelar cebollas se mezclan con la comida y producen efectos mágicos. La frase \"llorar como una cebolla\" es coloquial y se aplica a llanto intenso.\n\n## Sources\n\n- [[como-agua-para-chocolate-cap1]]\n",
+      "category": "vocabulary"
+    },
+    "matriarca.md": {
+      "title": "matriarca",
+      "body": "# matriarca\n\n**Part of Speech:** sustantivo femenino\n\n**Definition:** Mujer que ejerce el poder o la autoridad principal en una familia o grupo. Madre que gobierna con mano firme.\n\n**Etymology:** Del latín *mater* (madre) + griego *archē* (mando, gobierno).\n\n## Examples\n\n- *Su madre, doña Carmen, era la **matriarca** de la familia De la Garza.*\n- *La **matriarca** decidió que el menor no se casaría.*\n- *Es una **matriarca** respetada por todos sus hijos y nietos.*\n\n## Related Terms\n\n- [[patriarca]] - versión masculina\n- [[cabeza-de-familia]] - neutro\n- [[matriarcado]] - sistema social\n\n## Cultural Notes\n\nEn Latinoamérica rural del siglo XX, la **matriarca** tenía poder absoluto sobre la vida de las hijas solteras, especialmente en lo referente al matrimonio. **Mama Elena** en *Como agua para chocolate* es el arquetipo: su autoridad es ley indiscutible, respaldada por la \"tradición sagrada\". El conflicto novela-matriarca es uno de los grandes temas de la literatura latinoamericana.\n\n## Sources\n\n- [[como-agua-para-chocolate-cap1]]\n- [[mexico-patriarcado-tradicion]]\n",
       "category": "vocabulary"
     },
     "heredar.md": {
@@ -494,6 +974,31 @@
       "body": "# desayuno\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 아침 식사\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el desayuno?** — desayuno은(는) 어디인가요?\n- **desayuno** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
       "category": "vocabulary"
     },
+    "almuerzo.md": {
+      "title": "almuerzo",
+      "body": "# almuerzo\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Almuerzo — comida del mediodía.\n\n---\n\n## Examples\n\n- \"El almuerzo está listo.\"\n- \"¿Qué hay para el almuerzo?\"\n- \"Almuerzo de trabajo.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "cena.md": {
+      "title": "cena",
+      "body": "# cena\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Cena — comida de la noche.\n\n---\n\n## Examples\n\n- \"¿Qué hay para cenar?\"\n- \"Cenar en casa.\"\n- \"La cena está rica.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "agua.md": {
+      "title": "agua",
+      "body": "# agua\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Agua — líquido transparente.\n\n---\n\n## Examples\n\n- \"Un vaso de agua, por favor.\"\n- \"Agua fría.\"\n- \"Agua mineral.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "cafe.md": {
+      "title": "cafe",
+      "body": "# cafe\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Café — bebida de granos tostados.\n\n---\n\n## Examples\n\n- \"Un café, por favor.\"\n- \"Café con leche.\"\n- \"Me gusta el café.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "te.md": {
+      "title": "te",
+      "body": "# te\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Té — bebida de hierbas.\n\n---\n\n## Examples\n\n- \"Un té caliente.\"\n- \"Té verde.\"\n- \"¿Quieres té?\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
     "delicioso.md": {
       "title": "delicioso",
       "body": "# delicioso\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 맛있다\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el delicioso?** — delicioso은(는) 어디인가요?\n- **delicioso** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
@@ -502,11 +1007,6 @@
     "picante.md": {
       "title": "picante",
       "body": "# picante\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 맵다\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el picante?** — picante은(는) 어디인가요?\n- **picante** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
-      "category": "vocabulary"
-    },
-    "dulce.md": {
-      "title": "dulce",
-      "body": "# dulce\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 달다\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el dulce?** — dulce은(는) 어디인가요?\n- **dulce** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
       "category": "vocabulary"
     },
     "siesta.md": {
@@ -552,6 +1052,11 @@
     "bochorno.md": {
       "title": "bochorno",
       "body": "# bochorno\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** Calor húmedo y sofocante. Por extensión: vergüenza o rubor intenso.\n\n**Etymology:** Del latín *vulturnus* → *bochornus* (viento del sur, calor). Relación con el viento cálido que precede a las tormentas.\n\n## Examples\n\n- *¡Qué **bochorno** hace hoy en Sevilla!*\n- *Pasó un **bochorno** terrible al verle en público.*\n- *El **bochorno** del mediodía invita a la siesta.*\n\n## Related Terms\n\n- [[calor-pegajoso]] - calor húmedo (ya en wiki)\n- [[sofoco]] - sensación de falta de aire por calor\n- [[verguenza]] - sentido figurado\n\n## Cultural Notes\n\nEn España, **bochorno** es más que calor: implica **humedad y falta de aire**. Es típico de las costas mediterráneas y del sur. En verano en Madrid, el **bochorno** es uno de los grandes temas de conversación. En sentido figurado, **pasar un bochorno** = pasar vergüenza ajena o propia.\n\n## Sources\n\n- [[notes-in-spanish-planes-de-verano]]\n- [[calor-pegajoso]]\n",
+      "category": "vocabulary"
+    },
+    "chapparon.md": {
+      "title": "chaparrón",
+      "body": "# chaparrón\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** Lluvia fuerte y breve, usualmente con tormenta. Aguacero.\n\n**Etymology:** Del vasco *txaparrón* o del antiguo *chapuz* (chapuzón). Posible influencia del euskera.\n\n## Examples\n\n- *Viene un **chaparrón**, mejor esperar un rato.*\n- *Cayó un **chaparrón** tremendo y nos empapamos.*\n- *El **chaparrón** solo duró diez minutos.*\n\n## Related Terms\n\n- [[aguacero]] - lluvia intensa\n- [[tormenta]] - con aparato eléctrico\n- [[llovizna]] - lluvia fina\n- [[chaparrón-vespertino]] - el típico de verano\n\n## Cultural Notes\n\nEl **chaparrón** es la lluvia típica de verano en España: cae con fuerza, dura poco, y refresca. En Madrid, después del **chaparrón** vespertino suele salir el sol y aparecer el arco iris. Culturalmente, el **chaparrón** es welcome break del calor. En Latinoamérica, **chaparrón** también se usa pero es más común en zonas andinas y centrales.\n\n## Sources\n\n- [[notes-in-spanish-planes-de-verano]]\n",
       "category": "vocabulary"
     },
     "solanera.md": {
@@ -629,19 +1134,39 @@
       "body": "# realismo mágico (Esquivel)\n\n**Overview:** Laura Esquivel es heredera del realismo mágico de García Márquez, pero su **varita mágica** es la **comida**: a diferencia de otros autores, el prodigio no se manifiesta en apariciones o viajes, sino en que **la comida transmite emociones**. Las lágrimas de Tita al pelar cebollas se mezclan con la masa y los que comen sienten su tristeza.\n\n## Key Points\n\n- **Subversión de la cocina**: la cocina no es solo lugar doméstico, es **tejido narrativo**\n- **Emociones comestibles**: cada receta está emocionalmente cargada\n- **Recetario como estructura**: 12 capítulos, 12 meses, 12 recetas\n- **Feminidad mágica**: Tita, Gertrudis, Nacha - las mujeres tienen el poder\n- **Mestizaje cultural**: recetas mexicanas + estructura europea + magia indígena\n\n## Language Connections\n\n- [[cebolla]] - el alimento que evoca lágrimas\n- [[molcajete]] - utensilio prehispánico\n- [[masa]] - la base de la cocina mexicana\n- [[receta]] - estructura narrativa central\n- [[sollozar]] - el llanto que cocina\n- [[a-fuego-lento]] - técnica y metáfora\n\n## Diferencias con García Márquez\n\n| Elemento | García Márquez | Esquivel |\n|----------|----------------|----------|\n| Motor mágico | el lenguaje, los aparecidos | la comida, las emociones |\n| Espacio | la calle, el pueblo, la casa | la cocina (interior) |\n| Tiempo | cíclico, legendario | mensual, doméstico |\n| Femenino | colectivo (las mujeres) | individual (Tita, Gertrudis) |\n| Estructura | novela lineal | recetario |\n\n## Fuentes principales\n\n- Laura Esquivel, *Como agua para chocolate* (1989)\n- Estudios de Pilar Quintana, Cecilia Rodríguez\n- Película homónima (1992, Alfonso Arau) - útil como apoyo\n\n## Sources\n\n- [[como-agua-para-chocolate-cap1]]\n- [[realismo-magico-marquez]] (Semana 1)\n- [[cocina-espacio-femenino]]\n",
       "category": "culture"
     },
-    "kuukou.md": {
-      "title": "kuukou (空港)",
-      "body": "# kuukou (空港)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 공항\n\n**Romaja:** kuukou\n\n**Language of Origin:** 일본어 (空港)\n\n## Examples\n\n- **kuukou はどこですか?** — 空港는 어디인가요?\n- **空港**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
+    "trabajo.md": {
+      "title": "trabajo",
+      "body": "# trabajo\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Trabajo — empleo o tarea.\n\n---\n\n## Examples\n\n- \"Tengo mucho trabajo.\"\n- \"Buscar trabajo.\"\n- \"Trabajo en equipo.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "pasupooto.md": {
-      "title": "pasupooto (パスポート)",
-      "body": "# pasupooto (パスポート)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 여권\n\n**Romaja:** pasupooto\n\n**Language of Origin:** 일본어 (パスポート)\n\n## Examples\n\n- **pasupooto はどこですか?** — パスポート는 어디인가요?\n- **パスポート**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
+    "oficina.md": {
+      "title": "oficina",
+      "body": "# oficina\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Oficina — lugar de trabajo.\n\n---\n\n## Examples\n\n- \"Trabajo en una oficina.\"\n- \"Oficina central.\"\n- \"La oficina está lejos.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "nimotsu.md": {
-      "title": "nimotsu (荷物)",
-      "body": "# nimotsu (荷物)\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** 짐, 수하물\n\n**Romaja:** nimotsu\n\n**Language of Origin:** 일본어 (荷物)\n\n## Examples\n\n- **nimotsu はどこですか?** — 荷物는 어디인가요?\n- **荷物**은(는) 실전 여행에서 자주 쓰이는 표현.\n\n## Related Terms\n\n- [[パスポート]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics-kr]]\n",
+    "reunion.md": {
+      "title": "reunion",
+      "body": "# reunion\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Reunión — encuentro de personas.\n\n---\n\n## Examples\n\n- \"Reunión a las 10.\"\n- \"Tengo una reunión.\"\n- \"Reunión de equipo.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "proyecto.md": {
+      "title": "proyecto",
+      "body": "# proyecto\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Proyecto — trabajo planificado.\n\n---\n\n## Examples\n\n- \"Nuevo proyecto.\"\n- \"Trabajar en un proyecto.\"\n- \"Proyecto terminado.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "plazo.md": {
+      "title": "plazo",
+      "body": "# plazo\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Plazo — tiempo límite.\n\n---\n\n## Examples\n\n- \"El plazo es mañana.\"\n- \"Cumplir el plazo.\"\n- \"Plazo final.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "correo-electronico.md": {
+      "title": "correo-electronico",
+      "body": "# correo-electronico\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Correo electrónico — email.\n\n---\n\n## Examples\n\n- \"Enviar un correo electrónico.\"\n- \"Revisa tu correo.\"\n- \"Mi correo electrónico.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "salario.md": {
+      "title": "salario",
+      "body": "# salario\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Salario — pago por trabajo.\n\n---\n\n## Examples\n\n- \"Buen salario.\"\n- \"Recibir el salario.\"\n- \"Aumento de salario.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
     "sumimasen-wa-doko-desuka.md": {
@@ -659,29 +1184,134 @@
       "body": "# Korean Dating Culture\n\n**Type:** 문화 노트, 恋愛\n**지역:** 한국 (대한민국)\n\n## Overview\n\n한국 데이팅 문화는 **단계(段階)·계열(階級)·K-content 영향** 중심. 썸(좁은曖昧함)이라는 독특한 단계, 존댓말→반말 전환의 결정성, 100일 기념일 의례가 특징. K-drama/K-pop이 роман틱 표현에 큰 영향.\n\n## Setting\n\nA first date in Korea: **카페, 식당, 영화, 전시회, 공원**. Daytime preferred for first dates (낮 데이트); evening for established couples. 둘만의 시간(2人だけの時間)을 점점 늘려가는 패턴.\n\n## Roles\n\n- **썸 상대 (some sangdae)** — Person you're in \"some\" stage with\n- **고백하는 사람 (go-baeng-ha-neun sa-ram)** — Confessor\n- **사귀는 사람 (sa-gwi-neun sa-ram)** — Person you're dating\n- **연인 (yeon-in)** — Lover/partner\n- **남자친구 / 여자친구 (nam-ja-chin-gu / yeo-ja-chin-gu)** — Boyfriend/girlfriend (literal: \"male friend\"/\"female friend\" but means romantic partner)\n\n## Scenario: Korean Dating Stages\n\n1. **관심 (관심 단계)** — Interest developing, often through mutual friends/work\n2. **썸 (Some stage)** — Mutual interest, ambiguous, 1-3 months\n3. **고백 (Confession)** — Explicit declaration, often with question\n4. **사귀다 (Dating)** — Official couple\n5. **연인 (Established couple)** — Long-term, possibly moving toward marriage\n6. **동거 / 결혼** — Cohabitation / marriage\n\n## Cultural Insight\n\n### 썸 (Some) 문화\n\n한국만의 독특한 연애 단계. 영어/일본어에 직접 번역 없음.\n\n**단계**:\n1. 관심 (interest) — 눈치\n2. 썸 (some) — 서로 관심, 모호함\n3. 고백 (confession) — 명시\n4. 사귀다 (dating) — 공식 연인\n5. 연인 (couple)\n\n**썸의 핵심 질문**: \"우리 지금 뭐야?\" (What are we right now?)\n\n**썸의 특징**:\n- 1-3개월 지속\n- 양쪽 모두 관심 있지만 명시 안 함\n- \"관심 있어 보이는데 확인이 안 됨\"\n\n### 존댓말 → 반말 전환\n\n**가장 중요한 관계 신호 중 하나**. 연인 사이의 핵심 전환점.\n\n- 전: \"○○씨, 오늘 뭐 했어요?\" (격식)\n- 후: \"○○아, 오늘 뭐 했어?\" (반말)\n\n**이 전환을 자연스럽게**: 보통 고백 → 사귀기 후 며칠 내.\n\n**주의**: 영원히 존댓말 = \"친구로 남고 싶다\"의 신호.\n\n### 호칭 (Titles)\n\n**호칭이 관계를 정의**:\n- 여자친구 → \"오빠\" (남자친구) / \"자기야\"\n- 남자친구 → \"여보\" / \"자기\" / \"이름+아\"\n- 친한 남자 친구 → \"형\" / \"오빠\" (주의: 연인 ❌)\n- 친한 여자 친구 → \"언니\" / \"누나\"\n\n**애칭 (endearments)**: 자기야, 여보, 내사랑, 왕자님, 공주님, 꿀님\n\n### 100일 (100 Days) 기념일\n\n**한국만의 독특한 문화**: 100일 단위로 기념.\n\n**주요 100일**:\n- 100일 — 첫 번째 큰 기념일\n- 200일, 300일, 500일\n- 1000일 — 매우 큰 milestone\n\n**선물**: 꽃, 케이크, 작은 선물, 손편지.\n\n### 결제 문화\n\n**전통**: 남자친구가 계산.\n**Z세대 변화**:\n- 더치페이 (Dutch pay) 흔함\n- \"내가 낼게\" / \"다음에 네가 내\"\n- 각자 다른 문화 존중\n\n### 계절 / 기념일\n\n- **발렌타인 (2/14)**: 여자가 남자에게 초콜릿\n- **화이트데이 (3/14)**: 남자가 여자에게 사탕\n- **빼빼로데이 (11/11)**: 빼빼로 교환\n- **기념일**: 100일 단위 + 1주년\n\n### K-Drama / K-Pop 영향\n\n**한국 데이트 문화는 K-content에 영향**:\n- \"오빠\" 호칭 (드라마 영향)\n- 썸 문화 (드라마 묘사)\n- 100일 기념일\n- 이상형 (ideal type) 개념\n\n### Consent\n\n**현대 한국에서도 명시적 동의가 표준**:\n- \"손 잡아도 돼?\" (Can I hold your hand?)\n- \"키스해도 돼?\" (Can I kiss you?)\n\n**질투 표현**: \"이 사람 누구야?\" \"왜 그 사람이랑?\" — 한국 연애의 일부로 받아들여짐 (단, 폭언/통제는 NO).\n\n## Useful Phrases\n\n- [[안녕하세요]] — hello\n- [[감사합니다]] — thank you\n- [[죄송합니다]] — I'm sorry\n- [[sarang]] — love\n- [[chingu]] — friend (also boyfriend/girlfriend as 남자친구/여자친구)\n- 좋아해요 — I like you\n- 사랑해 — I love you\n- 보고 싶어 — I miss you\n- 자기야 — honey/baby\n- 여보 — honey (married)\n- 고백할게 — I'll confess\n- 사귀자 — Let's date\n\n## What NOT to Do\n\n- ❌ **너무 일찍 반말** (친구로 인식될 위험)\n- ❌ **너무 일찍 신체 접촉** (불편)\n- ❌ **지나친 소유욕/질투** (독)\n- ❌ **연락 안 하기** (관심 없는 신호)\n- ❌ **100일 / 기념일 무시** (큰 매너 위반)\n- ❌ **\"우리 사귀자\" 너무 일찍** (1-2주 내) — 부담\n- ❌ **공개적인 애정 표현 (PDA) 과도** — 부끄럽게 느낄 수 있음\n- ❌ **전 애인 비교** — 절대 금기\n\n## Body Language\n\n| Gesture | Meaning |\n|---|---|\n| 손 잡기 (holding hands) | 관심, 사귀는 중 |\n| 팔짱 끼기 (linked arms) | 친밀 |\n| 어깨 기대기 (leaning on shoulder) | 편안함 |\n| 머리 쓰다듬기 (patting head) | 애정 (남→여) |\n| 손등 쓰다듬기 | 부드러운 애정 |\n| 눈 마주침 + 미소 | 관심 표현 |\n| 시선 회피 | 부담, 쑥스러움 |\n| 스마트폰 확인 | 관심 없음 (예의 위반) |\n\n## Cross-Reference\n\n- Compare with: [[english-dating-culture]], [[japanese-dating-culture]], [[spanish-dating-culture]]\n- See also: [[sarang]], [[chingu]], [[annyeonghaseyo]]\n\n## 100일 / 기념일 문화 상세\n\n- **100일**: 첫 기념일. 꽃, 케이크, 작은 선물\n- **200일**: 100일보다 덜 중요하지만 챙김\n- **300일**: 관계 안정화 시점\n- **500일**: 중요한 milestone\n- **1000일**: 거의 결혼 수준, 큰 선물\n- **1주년**: 365일, 더 중요한 milestone\n- **기념일 무시는 큰 매너 위반**\n\n## Sources\n\n- [[dating-romance-kr]] — 메인 소스\n- 별에서 온 그대, 사랑의 불시착, 응답하라 1988\n- TalkToMeInKorean Level 7-9\n- 국립국어원 표준국어대사전\n- KBS 한국어\n- 한국 연애 트렌드 보고서 (2023)\n",
       "category": "culture"
     },
-    "ssada.md": {
-      "title": "싸다",
-      "body": "# 싸다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Cheap / inexpensive.\n\n**Etymology:** 순 우리말\n\n**Romaja:** ssada\n\n---\n\n## Examples\n\n- **싸고 좋아요.** — Cheap and good.\n- **이거 싸요?** — Is this cheap?\n- **더 싼 거 있어요?** — Is there something cheaper?\n\n---\n\n## Related Terms\n\n- [[비싸다]] — expensive\n- [[가격]] — price\n- [[돈]] — money\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
+    "컴퓨터.md": {
+      "title": "컴퓨터",
+      "body": "# 컴퓨터\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Computer — 전자 계산을 수행하는 기계.\n\n**Etymology:** 외래어 (computer, 영어에서 차용)\n\n**Romaja:** keompyuteo\n\n---\n\n## Examples\n\n- **컴퓨터가 있어요?** — Do you have a computer?\n- **컴퓨터로 작업해요.** — I work with a computer.\n- **컴퓨터를 사려고 해요.** — I'm planning to buy a computer.\n\n---\n\n## Related Terms\n\n- [[노트북]] — laptop\n- [[키보드]] — keyboard\n- [[화면]] — screen\n- [[인터넷]] — internet\n- [[email]]\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
       "category": "vocabulary"
     },
-    "masissda.md": {
-      "title": "맛있다",
-      "body": "# 맛있다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Delicious / tasty.\n\n**Etymology:** 순 우리말\n\n**Romaja:** masissda\n\n---\n\n## Examples\n\n- **너무 맛있어요!** — So delicious!\n- **이거 맛있어요?** — Is this tasty?\n- **한국 음식이 맛있어요.** — Korean food is delicious.\n\n---\n\n## Related Terms\n\n- [[맵다]] — spicy\n- [[달다]] — sweet\n- [[음식]] — food\n- [[식당]] — restaurant\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
+    "스마트폰.md": {
+      "title": "스마트폰",
+      "body": "# 스마트폰\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Smartphone — 휴대 가능한 다기능 컴퓨터.\n\n**Etymology:** 외래어 (smartphone, 영어에서 차용)\n\n**Romaja:** seumahtupon\n\n---\n\n## Examples\n\n- **스마트폰을 사용해요.** — I use a smartphone.\n- **스마트폰이 없어요.** — I don't have a smartphone.\n- **새 스마트폰이에요?** — Is it a new smartphone?\n\n---\n\n## Related Terms\n\n- [[컴퓨터]] — computer\n- [[전화]] — phone\n- [[앱]] — app\n- [[인터넷]] — internet\n- [[와이파이]] — wifi\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
       "category": "vocabulary"
     },
-    "jikjin.md": {
-      "title": "직진",
-      "body": "# 직진\n\n**Part of Speech:** 명사 (noun) / 부사 (adverb)\n\n**Definition:** Straight ahead.\n\n**Etymology:** 한자 (直進) 기반\n\n**Romaja:** jikjin\n\n---\n\n## Examples\n\n- **직진하세요.** — Go straight.\n- **직진하면 보여요.** — It's straight ahead.\n- **100미터 직진이에요.** — It's straight for 100 meters.\n\n---\n\n## Related Terms\n\n- [[왼쪽]] — left\n- [[오른쪽]] — right\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
+    "화면.md": {
+      "title": "화면",
+      "body": "# 화면\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Screen — 디스플레이 장치.\n\n**Etymology:** 한자 (畫面) 기반\n\n**Romaja:** hwamyeon\n\n---\n\n## Examples\n\n- **화면이 커요.** — The screen is big.\n- **화면을 봐 주세요.** — Please look at the screen.\n- **화면이 깨졌어요.** — The screen is broken.\n\n---\n\n## Related Terms\n\n- [[컴퓨터]] — computer\n- [[키보드]] — keyboard\n- [[스마트폰]] — smartphone\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
       "category": "vocabulary"
     },
-    "yeol.md": {
+    "키보드.md": {
+      "title": "키보드",
+      "body": "# 키보드\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Keyboard — 타이핑하는 입력 장치.\n\n**Etymology:** 외래어 (keyboard, 영어에서 차용)\n\n**Romaja:** kibodeu\n\n---\n\n## Examples\n\n- **키보드로 타이핑해요.** — I type with the keyboard.\n- **키보드가 깨졌어요.** — The keyboard is broken.\n- **새 키보드를 샀어요.** — I bought a new keyboard.\n\n---\n\n## Related Terms\n\n- [[컴퓨터]] — computer\n- [[화면]] — screen\n- [[타이핑]] — typing\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
+      "category": "vocabulary"
+    },
+    "인터넷.md": {
+      "title": "인터넷",
+      "body": "# 인터넷\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Internet — 전 세계 컴퓨터 네트워크.\n\n**Etymology:** 외래어 (internet, 영어에서 차용)\n\n**Romaja:** inteonet\n\n---\n\n## Examples\n\n- **인터넷이 빨라요.** — The internet is fast.\n- **인터넷을 사용해요.** — I use the internet.\n- **인터넷이 안 돼요.** — The internet is not working.\n\n---\n\n## Related Terms\n\n- [[와이파이]] — wifi\n- [[웹사이트]] — website\n- [[이메일]] — email\n- [[컴퓨터]] — computer\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
+      "category": "vocabulary"
+    },
+    "이메일.md": {
+      "title": "이메일",
+      "body": "# 이메일\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Email — 전자 우편.\n\n**Etymology:** 외래어 (e-mail, 영어에서 차용)\n\n**Romaja:** imeil\n\n---\n\n## Examples\n\n- **이메일을 보냈어요.** — I sent an email.\n- **이메일을 확인하세요.** — Please check your email.\n- **이메일 주소가 뭐예요?** — What is your email address?\n\n---\n\n## Related Terms\n\n- [[인터넷]] — internet\n- [[비밀번호]] — password\n- [[컴퓨터]] — computer\n- [[스마트폰]] — smartphone\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
+      "category": "vocabulary"
+    },
+    "비밀번호.md": {
+      "title": "비밀번호",
+      "body": "# 비밀번호\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Password — 시스템 접근을 위한 인증 코드.\n\n**Etymology:** 외래어 (password, 영어에서 차용)\n\n**Romaja:** bimilbeonho\n\n---\n\n## Examples\n\n- **비밀번호를 입력하세요.** — Please enter the password.\n- **비밀번호가 뭐예요?** — What is the password?\n- **비밀번호를 잊어버렸어요.** — I forgot the password.\n\n---\n\n## Related Terms\n\n- [[이메일]] — email\n- [[계정]] — account\n- [[인터넷]] — internet\n- [[컴퓨터]] — computer\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
+      "category": "vocabulary"
+    },
+    "앱.md": {
+      "title": "앱",
+      "body": "# 앱\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** App — 모바일 애플리케이션.\n\n**Etymology:** 외래어 (app, 영어에서 차용)\n\n**Romaja:** aep\n\n---\n\n## Examples\n\n- **앱을 다운로드해요.** — I download apps.\n- **이 앱이 좋아요.** — This app is good.\n- **앱을 삭제할게요.** — I'll delete the app.\n\n---\n\n## Related Terms\n\n- [[스마트폰]] — smartphone\n- [[컴퓨터]] — computer\n- [[인터넷]] — internet\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
+      "category": "vocabulary"
+    },
+    "머리.md": {
+      "title": "머리",
+      "body": "# 머리\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Head — 사람이나 동물의 신체 일부.\n\n**Etymology:** 순 우리말\n\n**Romaja:** meori\n\n---\n\n## Examples\n\n- **머리가 아파요.** — My head hurts.\n- **머리가 좋아요.** — I have a good head.\n- **머리를 감아요.** — I wash my hair.\n\n---\n\n## Related Terms\n\n- [[몸]] — body\n- [[얼굴]] — face\n- [[병원]] — hospital\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
+    "손.md": {
+      "title": "손",
+      "body": "# 손\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Hand — 팔의 끝부분.\n\n**Etymology:** 순 우리말\n\n**Romaja:** son\n\n---\n\n## Examples\n\n- **손이 따뜻해요.** — The hand is warm.\n- **손을 씻어요.** — I wash my hands.\n- **손을 내밀어요.** — I extend my hand.\n\n---\n\n## Related Terms\n\n- [[발]] — foot\n- [[팔]] — arm\n- [[몸]] — body\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
+    "발.md": {
+      "title": "발",
+      "body": "# 발\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Foot — 다리의 끝부분.\n\n**Etymology:** 순 우리말\n\n**Romaja:** bal\n\n---\n\n## Examples\n\n- **발이 아파요.** — My foot hurts.\n- **발이 시려요.** — My feet are cold.\n- **발을 움직여요.** — I move my feet.\n\n---\n\n## Related Terms\n\n- [[손]] — hand\n- [[다리]] — leg\n- [[몸]] — body\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
+    "배.md": {
+      "title": "배",
+      "body": "# 배\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Stomach / belly — 복부.\n\n**Etymology:** 순 우리말\n\n**Romaja:** bae\n\n---\n\n## Examples\n\n- **배가 아파요.** — My stomach hurts.\n- **배가 고파요.** — I'm hungry.\n- **배가 불러요.** — I'm full.\n\n---\n\n## Related Terms\n\n- [[몸]] — body\n- [[병원]] — hospital\n- [[의사]] — doctor\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
+    "감기.md": {
+      "title": "감기",
+      "body": "# 감기\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Cold (illness) — 호흡기 감염 질환.\n\n**Etymology:** 한자 (感氣) 기반\n\n**Romaja:** gamgi\n\n---\n\n## Examples\n\n- **감기에 걸렸어요.** — I caught a cold.\n- **감기가 심해요.** — The cold is bad.\n- **감기를 앓고 있어요.** — I'm suffering from a cold.\n\n---\n\n## Related Terms\n\n- [[병원]] — hospital\n- [[의사]] — doctor\n- [[약]] — medicine\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
+    "열.md": {
       "title": "열",
-      "body": "# 열\n\n**Part of Speech:** numeral\n\n**Definition:** Ten (native Korean).\n\n**Romaja:** yeol\n\n## Examples\n\n- 하나부터 열까지 — from 1 to 10\n- 열 시 — 10 o'clock\n\n## Related Terms\n\n- [[아홉]]\n- [[하나]]\n\n## Sources\n\n- TOPIK 1급 어휘 목록\n- [[topik1-starter]]",
+      "body": "# 열\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Fever / heat — 체온 상승.\n\n**Etymology:** 한자 (熱) 기반\n\n**Romaja:** yeol\n\n---\n\n## Examples\n\n- **열이 나요.** — I have a fever.\n- **열이 높아요.** — The fever is high.\n- **열을 재주세요.** — Please measure my temperature.\n\n---\n\n## Related Terms\n\n- [[감기]] — cold\n- [[병원]] — hospital\n- [[의사]] — doctor\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
+    "의사.md": {
+      "title": "의사",
+      "body": "# 의사\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Doctor — 의학 전문가.\n\n**Etymology:** 한자 (醫師) 기반\n\n**Romaja:** uisa\n\n---\n\n## Examples\n\n- **의사에게 가요.** — I go to the doctor.\n- **의사가 좋대요.** — They say the doctor is good.\n- **의사 선생님** — doctor (honorific)\n\n---\n\n## Related Terms\n\n- [[병원]] — hospital\n- [[약]] — medicine\n- [[감기]] — cold\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
+    "병원.md": {
+      "title": "병원",
+      "body": "# 병원\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Hospital — 의료 시설.\n\n**Etymology:** 한자 (病院) 기반\n\n**Romaja:** byeongwon\n\n---\n\n## Examples\n\n- **병원에 가요.** — I go to the hospital.\n- **병원이 멀어요.** — The hospital is far.\n- **병원에서 일해요.** — I work at a hospital.\n\n---\n\n## Related Terms\n\n- [[의사]] — doctor\n- [[약]] — medicine\n- [[감기]] — cold\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
+    "명절.md": {
+      "title": "명절",
+      "body": "# 명절\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Major holiday — 설날/추석 같은 큰 명절.\n\n**Etymology:** 한자 (名節) 기반\n\n**Romaja:** myeongjeol\n\n---\n\n## Examples\n\n- **명절에 가족과 만나요.** — I meet family on major holidays.\n- **명절 선물** — holiday gift\n- **명절 음식** — holiday food\n\n---\n\n## Related Terms\n\n- [[설날]] — Lunar New Year\n- [[추석]] — Chuseok\n- [[가족]] — family\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]",
+      "category": "vocabulary"
+    },
+    "생일.md": {
+      "title": "생일",
+      "body": "# 생일\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Birthday — 태어난 날의 기념일.\n\n**Etymology:** 한자 (生日) 기반\n\n**Romaja:** saengil\n\n---\n\n## Examples\n\n- **생일 축하해요!** — Happy birthday!\n- **생일이 언제예요?** — When is your birthday?\n- **생일 파티를 해요.** — We have a birthday party.\n\n---\n\n## Related Terms\n\n- [[케이크]] — cake\n- [[선물]] — gift\n- [[파티]] — party\n- [[축하]] — celebration\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]",
+      "category": "vocabulary"
+    },
+    "크리스마스.md": {
+      "title": "크리스마스",
+      "body": "# 크리스마스\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Christmas — 12월 25일 기념일.\n\n**Etymology:** 외래어 (Christmas, 영어에서 차용)\n\n**Romaja:** keuriseumaseu\n\n---\n\n## Examples\n\n- **메리 크리스마스!** — Merry Christmas!\n- **크리스마스에 만나요.** — Let's meet on Christmas.\n- **크리스마스 파티** — Christmas party\n\n---\n\n## Related Terms\n\n- [[파티]] — party\n- [[선물]] — gift\n- [[케이크]] — cake\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]",
+      "category": "vocabulary"
+    },
+    "설날.md": {
+      "title": "설날",
+      "body": "# 설날\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Lunar New Year — 음력 1월 1일 한국 명절.\n\n**Etymology:** 한자 (설날) 기반\n\n**Romaja:** seollal\n\n---\n\n## Examples\n\n- **설날에 가족과 만나요.** — I meet family on Lunar New Year.\n- **설날에 세배해요.** — I do sebae on Lunar New Year.\n- **설날 먹어요.** — I eat on Lunar New Year.\n\n---\n\n## Related Terms\n\n- [[명절]] — holiday\n- [[세배]] — sebae (New Year's bow)\n- [[가족]] — family\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]",
+      "category": "vocabulary"
+    },
+    "추석.md": {
+      "title": "추석",
+      "body": "# 추석\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Chuseok — 음력 8월 15일 한국 명절.\n\n**Etymology:** 한자 (秋夕) 기반\n\n**Romaja:** chuseok\n\n---\n\n## Examples\n\n- **추석에 가족과 만나요.** — I meet family on Chuseok.\n- **추석 송편을 만들어요.** — I make songpyeon for Chuseok.\n- **추석 연휴** — Chuseok holiday\n\n---\n\n## Related Terms\n\n- [[명절]] — holiday\n- [[가족]] — family\n- [[송편]] — songpyeon\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]",
+      "category": "vocabulary"
+    },
+    "결혼식.md": {
+      "title": "결혼식",
+      "body": "# 결혼식\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Wedding ceremony.\n\n**Etymology:** 한자 (結婚式) 기반\n\n**Romaja:** gyeolhonsik\n\n---\n\n## Examples\n\n- **결혼식에 초대받았어요.** — I was invited to a wedding.\n- **결혼식 축하해요!** — Congratulations on your wedding!\n- **결혼식이 내일이에요.** — The wedding is tomorrow.\n\n---\n\n## Related Terms\n\n- [[축하]] — celebration\n- [[가족]] — family\n- [[선물]] — gift\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]",
+      "category": "vocabulary"
+    },
+    "파티.md": {
+      "title": "파티",
+      "body": "# 파티\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Party — 축하 모임.\n\n**Etymology:** 외래어 (party, 영어에서 차용)\n\n**Romaja:** pati\n\n---\n\n## Examples\n\n- **파티에 초대해요.** — I invite to the party.\n- **파티가 재미있어요.** — The party is fun.\n- **파티에서 만나요.** — Let's meet at the party.\n\n---\n\n## Related Terms\n\n- [[생일]] — birthday\n- [[케이크]] — cake\n- [[선물]] — gift\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]",
+      "category": "vocabulary"
+    },
+    "선물.md": {
+      "title": "선물",
+      "body": "# 선물\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Gift / present.\n\n**Etymology:** 한자 (膳物) 기반\n\n**Romaja:** seonmul\n\n---\n\n## Examples\n\n- **선물 드릴게요.** — I'll give you a gift.\n- **선물 고마워요.** — Thanks for the gift.\n- **선물을 사러 가요.** — I'm going to buy a present.\n\n---\n\n## Related Terms\n\n- [[생일]] — birthday\n- [[크리스마스]] — Christmas\n- [[파티]] — party\n\n---\n\n## Sources\n\n- [[holidays-and-celebrations]]",
       "category": "vocabulary"
     },
     "gagyeok.md": {
       "title": "가격",
       "body": "# 가격\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Price / cost.\n\n**Etymology:** 한자 (價格) 기반\n\n**Romaja:** gagyeok\n\n---\n\n## Examples\n\n- **가격이 얼마예요?** — How much is it?\n- **가격이 비싸요.** — The price is high.\n- **싼 가격이에요.** — It's a low price.\n\n---\n\n## Related Terms\n\n- [[돈]] — money\n- [[비싸다]] — expensive\n- [[싸다]] — cheap\n- [[계산]] — bill\n\n---\n\n## Sources\n\n- [[shopping-and-money-kr]]",
+      "category": "vocabulary"
+    },
+    "ssada.md": {
+      "title": "싸다",
+      "body": "# 싸다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Cheap / inexpensive.\n\n**Etymology:** 순 우리말\n\n**Romaja:** ssada\n\n---\n\n## Examples\n\n- **싸고 좋아요.** — Cheap and good.\n- **이거 싸요?** — Is this cheap?\n- **더 싼 거 있어요?** — Is there something cheaper?\n\n---\n\n## Related Terms\n\n- [[비싸다]] — expensive\n- [[가격]] — price\n- [[돈]] — money\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
       "category": "vocabulary"
     },
     "bissada.md": {
@@ -692,6 +1322,11 @@
     "mul.md": {
       "title": "물",
       "body": "# 물\n\n**Part of Speech:** noun\n\n**Definition:** Water.\n\n**Etymology:** Pure Korean (순 우리말).\n\n**Romaja:** mul\n\n## Examples\n\n- 물 주세요. — Water, please.\n- 물 마셔요. — I drink water.\n\n## Related Terms\n\n- [[밥]] — rice/meal\n- [[음식]] — food\n\n## Cultural Notes\n\n기본 어휘. 한국 식당에서 \"물 주세요\"는 필수 표현.\n\n## Sources\n\n- TOPIK 1급 어휘 목록\n- [[topik1-starter]]",
+      "category": "vocabulary"
+    },
+    "masissda.md": {
+      "title": "맛있다",
+      "body": "# 맛있다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Delicious / tasty.\n\n**Etymology:** 순 우리말\n\n**Romaja:** masissda\n\n---\n\n## Examples\n\n- **너무 맛있어요!** — So delicious!\n- **이거 맛있어요?** — Is this tasty?\n- **한국 음식이 맛있어요.** — Korean food is delicious.\n\n---\n\n## Related Terms\n\n- [[맵다]] — spicy\n- [[달다]] — sweet\n- [[음식]] — food\n- [[식당]] — restaurant\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
       "category": "vocabulary"
     },
     "maepda.md": {
@@ -819,9 +1454,44 @@
       "body": "# 학교\n\n**Part of Speech:** noun\n\n**Definition:** School.\n\n**Etymology:** Pure Korean (순 우리말).\n\n**Romaja:** haggyo\n\n> 발음: 학 + 교 = 학꾜 (ㄱ + ㅕ → ㄱㄱㅕ)\n\n## Examples\n\n- 학교에 가요. — I go to school.\n- 학교 친구. — School friend.\n\n## Related Terms\n\n- [[공부]] — study\n- [[학생]] — student\n- [[선생님]] — teacher\n\n## Sources\n\n- TOPIK 1급 어휘 목록\n- [[topik1-starter]]",
       "category": "vocabulary"
     },
-    "영화.md": {
-      "title": "영화",
-      "body": "# 영화\n\n**Part of Speech:** 명사\n**Level:** TOPIK 1급\n\n**Definition:** 영화 — Movie; film.\n\n## Examples\n\n- \"영화 보러 가자\" — Let's go see a movie\n- \"영화 뭐 봐?\" — What movie (should we see)?\n- \"영화 좋아해?\" — Do you like movies?\n\n## Related Terms\n\n- [[카페]] — café\n- [[데이트]] — date\n- [[취미]] — hobby\n\n## Cultural Notes\n\n**한국 데이트의 흔한 활동**. CGV, 메가박스, 롯데시네마.\n\n**고전 데이트 코스의 시작**: 카페 → 영화 → 식사.\n\n**영화 고르기의 매너**: 양쪽 다 좋아하는 장르 선택. 한 사람이\n결정권을 갖는 것이 자연스러움.\n\n## Sources\n\n- [[dating-romance-kr]] — 데이트\n- TOPIK 1급\n",
+    "스포츠.md": {
+      "title": "스포츠",
+      "body": "# 스포츠\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Sports — 운동 경기.\n\n**Etymology:** 외래어 (sports, 영어에서 차용)\n\n**Romaja:** seupocheu\n\n---\n\n## Examples\n\n- **스포츠를 좋아해요.** — I like sports.\n- **스포츠 뉴스** — sports news\n- **스포츠 센터** — sports center\n\n---\n\n## Related Terms\n\n- [[축구]] — soccer\n- [[야구]] — baseball\n- [[농구]] — basketball\n- [[수영]] — swimming\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]",
+      "category": "vocabulary"
+    },
+    "축구.md": {
+      "title": "축구",
+      "body": "# 축구\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Soccer / football.\n\n**Etymology:** 외래어 (축구) 기반\n\n**Romaja:** chukgu\n\n---\n\n## Examples\n\n- **축구를 좋아해요.** — I like soccer.\n- **축구 경기를 봐요.** — I watch a soccer game.\n- **축구선수** — soccer player\n\n---\n\n## Related Terms\n\n- [[스포츠]] — sports\n- [[야구]] — baseball\n- [[농구]] — basketball\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]",
+      "category": "vocabulary"
+    },
+    "야구.md": {
+      "title": "야구",
+      "body": "# 야구\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Baseball.\n\n**Etymology:** 한자 (野球) 기반\n\n**Romaja:** yagu\n\n---\n\n## Examples\n\n- **야구를 해요.** — I play baseball.\n- **야구 경기 보러 가요.** — I'm going to watch a baseball game.\n- **한국 야구가 좋아요.** — Korean baseball is good.\n\n---\n\n## Related Terms\n\n- [[스포츠]] — sports\n- [[축구]] — soccer\n- [[농구]] — basketball\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]",
+      "category": "vocabulary"
+    },
+    "농구.md": {
+      "title": "농구",
+      "body": "# 농구\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Basketball.\n\n**Etymology:** 한자 (籠球) 기반\n\n**Romaja:** nonggu\n\n---\n\n## Examples\n\n- **농구를 해요.** — I play basketball.\n- **농구 선수** — basketball player\n- **농구 좋아하세요?** — Do you like basketball?\n\n---\n\n## Related Terms\n\n- [[스포츠]] — sports\n- [[축구]] — soccer\n- [[야구]] — baseball\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]",
+      "category": "vocabulary"
+    },
+    "수영.md": {
+      "title": "수영",
+      "body": "# 수영\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Swimming — 물에서 하는 운동.\n\n**Etymology:** 한자 (水泳) 기반\n\n**Romaja:** suyeong\n\n---\n\n## Examples\n\n- **수영을 좋아해요.** — I like swimming.\n- **수영장에서 수영해요.** — I swim at the pool.\n- **수영 배우기** — learning to swim\n\n---\n\n## Related Terms\n\n- [[스포츠]] — sports\n- [[운동]] — exercise\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]",
+      "category": "vocabulary"
+    },
+    "조깅.md": {
+      "title": "조깅",
+      "body": "# 조깅\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Jogging — 천천히 뛰는 운동.\n\n**Etymology:** 외래어 (jogging, 영어에서 차용)\n\n**Romaja:** joging\n\n---\n\n## Examples\n\n- **조깅을 해요.** — I go jogging.\n- **아침에 조깅해요.** — I jog in the morning.\n- **조깅화** — jogging shoes\n\n---\n\n## Related Terms\n\n- [[스포츠]] — sports\n- [[수영]] — swimming\n- [[운동]] — exercise\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]",
+      "category": "vocabulary"
+    },
+    "요가.md": {
+      "title": "요가",
+      "body": "# 요가\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Yoga — 몸과 마음을 단련하는 운동.\n\n**Etymology:** 외래어 (yoga, 영어에서 차용)\n\n**Romaja:** yoga\n\n---\n\n## Examples\n\n- **요가를 해요.** — I do yoga.\n- **요가 수업을 들어요.** — I take a yoga class.\n- **요가 센터** — yoga center\n\n---\n\n## Related Terms\n\n- [[운동]] — exercise\n- [[수영]] — swimming\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]",
+      "category": "vocabulary"
+    },
+    "음악.md": {
+      "title": "음악",
+      "body": "# 음악\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Music.\n\n**Etymology:** 한자 (音樂) 기반\n\n**Romaja:** eumak\n\n---\n\n## Examples\n\n- **음악을 들어요.** — I listen to music.\n- **음악이 좋아요.** — I like music.\n- **음악 수업** — music class\n\n---\n\n## Related Terms\n\n- [[영화]] — movie\n- [[독서]] — reading\n- [[취미]] — hobby\n\n---\n\n## Sources\n\n- [[sports-and-hobbies]]",
       "category": "vocabulary"
     }
   },
@@ -836,11 +1506,12 @@
         "excerpt": "영어 학습 관점에서, 한국인이 일본 여행 시 만나는 상황을 영어로 어떻게 표현하는지 정리한 자료. 한국어 원어민이 일본에 가서 영어로 소통하는 시나리오를 다룬다 (일본어는 영어 통역이 가능한 경우가 많음).\n\n일부 일본어 단어는 한자를 한국인이 읽을 수 있어 학습 효율이 높음."
       },
       "vocabulary": [
-        "airport.md",
-        "passport.md",
-        "hotel.md",
-        "traffic-light.md",
-        "kiss.md"
+        "kuukou.md",
+        "pasupooto.md",
+        "hoteru.md",
+        "nimotsu.md",
+        "chikatetsu.md",
+        "densha.md"
       ],
       "expressions": [
         "where-is.md",
@@ -863,14 +1534,17 @@
       "sourceTopic": "technology-and-internet.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "English vocabulary for technology, internet, computers, smartphones. Modern essential terms."
+        "excerpt": "## Summary\n\nEnglish vocabulary for technology, internet, computers, smartphones. Modern essential terms.\n\n\n## Key Takeaways\n\n- Computer hardware (keyboard, mouse, screen, laptop)\n- Internet terms (website, email, app, password, wifi)\n- Social media (post, like, share, follow, comment)\n- Common tech verbs (download, upload, search, click, scroll)\n- Tech problems (broken, slow, error, update, virus)\n\n\n## Vocabulary Extracted\n\n- [[computer]] — 컴퓨터\n- [[phone]] — 전화\n- [[screen]] — 화면\n- [[keyboard]] — 키보드\n- [[internet]] — 인터넷\n- [[email]] — 이메일\n- [[password]] — 비밀번호\n- [[app]] — 앱\n- [[website]] — 웹사이트"
       },
       "vocabulary": [
-        "traffic-light.md",
-        "kiss.md",
-        "sweet.md",
-        "cute.md",
-        "photo.md"
+        "computer.md",
+        "phone.md",
+        "screen.md",
+        "keyboard.md",
+        "internet.md",
+        "email.md",
+        "password.md",
+        "app.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -878,7 +1552,7 @@
       ],
       "culture": "english-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "en_1_1",
           "en_1_2",
@@ -895,14 +1569,17 @@
       "sourceTopic": "health-and-body.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "English vocabulary for health, body parts, illness, doctor visits. Essential for emergencies and daily life."
+        "excerpt": "## Summary\n\nEnglish vocabulary for health, body parts, illness, doctor visits. Essential for emergencies and daily life."
       },
       "vocabulary": [
+        "head.md",
+        "hand.md",
+        "foot.md",
+        "stomach.md",
         "cold.md",
-        "traffic-light.md",
-        "kiss.md",
-        "sweet.md",
-        "cute.md"
+        "fever.md",
+        "doctor.md",
+        "hospital.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -927,14 +1604,14 @@
       "sourceTopic": "travel-adventure.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "English for travel adventures — hiking, camping, outdoor activities, weather, emergencies. Intermediate vocabulary for active travelers."
+        "excerpt": "## Summary\n\nEnglish for travel adventures — hiking, camping, outdoor activities, weather, emergencies. Intermediate vocabulary for active travelers."
       },
       "vocabulary": [
         "mountain.md",
         "map.md",
+        "head.md",
         "traffic-light.md",
-        "kiss.md",
-        "sweet.md"
+        "kiss.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -957,14 +1634,14 @@
       "sourceTopic": "work-and-career.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "English vocabulary for the workplace — job titles, meetings, emails, business etiquette. Useful for professionals working in international environments."
+        "excerpt": "## Summary\n\nEnglish vocabulary for the workplace — job titles, meetings, emails, business etiquette. Useful for professionals working in international environments."
       },
       "vocabulary": [
+        "email.md",
+        "head.md",
         "traffic-light.md",
         "kiss.md",
-        "sweet.md",
-        "cute.md",
-        "photo.md"
+        "sweet.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -989,14 +1666,17 @@
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "English vocabulary for holidays, celebrations, festivals, special days. Cultural context for major Western holidays."
+        "excerpt": "## Summary\n\nEnglish vocabulary for holidays, celebrations, festivals, special days. Cultural context for major Western holidays."
       },
       "vocabulary": [
-        "traffic-light.md",
-        "kiss.md",
-        "sweet.md",
-        "cute.md",
-        "photo.md"
+        "holiday.md",
+        "birthday.md",
+        "christmas.md",
+        "halloween.md",
+        "thanksgiving.md",
+        "easter.md",
+        "wedding.md",
+        "party.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1021,14 +1701,14 @@
       "sourceTopic": "shopping-and-money.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "English for shopping, money, prices, bargaining. Useful for travelers and daily life."
+        "excerpt": "## Summary\n\nEnglish for shopping, money, prices, bargaining. Useful for travelers and daily life."
       },
       "vocabulary": [
         "cheap.md",
         "expensive.md",
+        "head.md",
         "traffic-light.md",
-        "kiss.md",
-        "sweet.md"
+        "kiss.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1053,14 +1733,14 @@
       "sourceTopic": "travel.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "**Travel** (여행 / 旅行 / viaje) — the act of moving between geographic locations, often for leisure, business, or learning. Central theme across language learning.\n\nThis is a meta-page referenced from many vocabulary pages. For specific travel content per language:\n\n- **English travel**: [[travel-basics]], [[travel-adventure]]\n- **Japanese travel**: [[travel-basics]], [[travel-adventure]]\n- **Spanish travel**: [[first-travel-spain]], [[viaje-aventura]]\n- **Korean travel**: [[travel-basics]]"
+        "excerpt": "## Overview\n\n**Travel** (여행 / 旅行 / viaje) — the act of moving between geographic locations, often for leisure, business, or learning. Central theme across language learning.\n\nThis is a meta-page referenced from many vocabulary pages. For specific travel content per language:\n\n- **English travel**: [[travel-basics]], [[travel-adventure]]\n- **Japanese travel**: [[travel-basics]], [[travel-adventure]]\n- **Spanish travel**: [[first-travel-spain]], [[viaje-aventura]]\n- **Korean travel**: [[travel-basics]]"
       },
       "vocabulary": [
+        "head.md",
         "traffic-light.md",
         "kiss.md",
         "sweet.md",
-        "cute.md",
-        "photo.md"
+        "medicine.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1068,7 +1748,7 @@
       ],
       "culture": "english-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 6,
         "relatedStages": [
           "en_t_1",
           "en_t_2",
@@ -1083,7 +1763,7 @@
       "sourceTopic": "food-and-dining.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "English vocabulary for restaurants, cooking, food types, dietary restrictions. Useful for travelers and food enthusiasts."
+        "excerpt": "## Summary\n\nEnglish vocabulary for restaurants, cooking, food types, dietary restrictions. Useful for travelers and food enthusiasts."
       },
       "vocabulary": [
         "breakfast.md",
@@ -1182,14 +1862,14 @@
       "sourceTopic": "daily-life-basics.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "Everyday English for daily routines — greetings, time, weather, family, hobbies, work. The most commonly used words in everyday conversation."
+        "excerpt": "## Summary\n\nEveryday English for daily routines — greetings, time, weather, family, hobbies, work. The most commonly used words in everyday conversation."
       },
       "vocabulary": [
         "hello.md",
         "family.md",
         "friend.md",
         "love.md",
-        "traffic-light.md"
+        "head.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1214,14 +1894,17 @@
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "English vocabulary for sports, hobbies, recreation, fitness. Useful for casual conversation and active lifestyle."
+        "excerpt": "## Summary\n\nEnglish vocabulary for sports, hobbies, recreation, fitness. Useful for casual conversation and active lifestyle."
       },
       "vocabulary": [
-        "traffic-light.md",
-        "kiss.md",
-        "sweet.md",
-        "cute.md",
-        "photo.md"
+        "sport.md",
+        "football.md",
+        "soccer.md",
+        "basketball.md",
+        "tennis.md",
+        "swimming.md",
+        "running.md",
+        "yoga.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1246,14 +1929,14 @@
       "sourceTopic": "technology-and-internet.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "일본어 테크놀로지, 인터넷, 컴퓨터, 스마트폰 어휘. 현대 필수 단어."
+        "excerpt": "## Summary\n\n일본어 테크놀로지, 인터넷, 컴퓨터, 스마트폰 어휘. 현대 필수 단어."
       },
       "vocabulary": [
-        "achim.md",
-        "好き.md",
-        "dalda.md",
-        "beoseu.md",
-        "映画.md"
+        "コンピュータ.md",
+        "スマホ.md",
+        "画面.md",
+        "キーボード.md",
+        "インターネット.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1261,7 +1944,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 4,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1278,14 +1961,17 @@
       "sourceTopic": "health-and-body.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "일본어 건강, 신체, 질병, 병원 어휘. 응급 상황과 일상 생활에 필수."
+        "excerpt": "## Summary\n\n일본어 건강, 신체, 질병, 병원 어휘. 응급 상황과 일상 생활에 필수.\n\n\n## Key Takeaways\n\n- 体の部位 (신체 부위) — 頭, 手, 足, 目, 耳\n- 一般的な病気 (일반 질병) — 風邪, インフルエンザ, 熱\n- 医者/病院 (의사/병원) — 予約, 処方箋, 薬局\n- 健康動詞 — 痛い, 病気, 疲れた\n\n\n## Vocabulary Extracted\n\n- [[頭]] — 머리\n- [[手]] — 손\n- [[足]] — 발\n- [[お腹]] — 배\n- [[風邪]] — 감기\n- [[熱]] — 열\n- [[医者]] — 의사\n- [[病院]] — 병원\n- [[薬]] — 약\n- [[痛み]] — 통증\n\n\n## Expressions Extracted\n\n- 「気分が悪いです」 — 몸이 안 좋아요\n- 「頭が痛いです」 — 두통이 있어요\n- 「どこが痛いですか?」 — 어디가 아프세요?\n- 「医者が必要です」 — 의사가 필요해요\n- 「救急車を呼んでください」 — 구급차를 불러주세요"
       },
       "vocabulary": [
-        "achim.md",
-        "好き.md",
-        "dalda.md",
-        "beoseu.md",
-        "映画.md"
+        "頭.md",
+        "手.md",
+        "足.md",
+        "お腹.md",
+        "風邪.md",
+        "熱.md",
+        "医者.md",
+        "病院.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1293,7 +1979,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1310,14 +1996,17 @@
       "sourceTopic": "travel-adventure.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "일본어 모험 여행 어휘 — 하이킹, 캠핑, 야외 활동, 날씨, 긴급 상황."
+        "excerpt": "## Summary\n\n일본어 모험 여행 어휘 — 하이킹, 캠핑, 야외 활동, 날씨, 긴급 상황.\n\n\n## Key Takeaways\n\n- アウトドア活動 (야외 활동) — ハイキング, 登山, スキー\n- キャンプ用品 (캠핑 용품) — テント, 寝袋, リュック\n- 天気 (날씨) — 晴れ, 曇り, 雨, 嵐\n- 緊急 (긴급) — 怪我, 道に迷った, 救助\n- 自然の方角 (자연 방향) — 北, 南, 東, 西\n\n\n## Vocabulary Extracted\n\n- [[山]] — 산\n- [[森]] — 숲\n- [[川]] — 강\n- [[湖]] — 호수\n- [[海]] — 바다\n- [[テント]] — 텐트\n- [[コンパス]] — 나침반\n- [[地図]] — 지도\n- [[天気]] — 날씨\n- [[嵐]] — 폭풍\n\n\n## Expressions Extracted\n\n- 「どのぐらい遠いですか?」 — 얼마나 먼가요?\n- 「道に迷いました」 — 길을 잃었어요\n- 「助けてください」 — 도와주세요\n- 「登山道はどちらですか?」 — 등산로는 어디인가요?\n- 「医者が必要です」 — 의사가 필요해요"
       },
       "vocabulary": [
-        "achim.md",
-        "好き.md",
-        "dalda.md",
-        "beoseu.md",
-        "映画.md"
+        "山.md",
+        "森.md",
+        "川.md",
+        "湖.md",
+        "海.md",
+        "テント.md",
+        "コンパス.md",
+        "地図.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1325,7 +2014,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "jp_t_1",
           "jp_t_2",
@@ -1350,7 +2039,7 @@
         "かっこいい.md",
         "優しい.md",
         "面白い.md",
-        "映画.md"
+        "音楽.md"
       ],
       "expressions": [
         "はじめまして.md",
@@ -1374,14 +2063,17 @@
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "일본어 휴일, 축제, 기념일 어휘. 일본 주요 명절 문화 맥락."
+        "excerpt": "## Summary\n\n일본어 휴일, 축제, 기념일 어휘. 일본 주요 명절 문화 맥락.\n\n\n## Key Takeaways\n\n- 主な祝日 (주요 공휴일) — 元日, ゴールデンウィーク, お盆\n- お祝い (경사) — 結婚, 出産, 誕生日\n- クリスマス、バレンタイン — 서양 명절\n- 花火大会, 夏祭り — 여름 축제\n\n\n## Vocabulary Extracted\n\n- [[祝日]] — 공휴일\n- [[誕生日]] — 생일\n- [[クリスマス]] — 크리스마스\n- [[正月]] — 새해\n- [[結婚式]] — 결혼식\n- [[パーティー]] — 파티\n- [[プレゼント]] — 선물\n- [[ケーキ]] — 케이크\n- [[花火]] — 불꽃놀이\n- [[祭り]] — 축제\n\n\n## Expressions Extracted\n\n- 「お誕生日おめでとう!」 — 생일 축하해요!\n- 「メリークリスマス」 — 메리 크리스마스\n- 「プレゼントありがとう」 — 선물 고마워요\n- 「お正月大好き」 — 설날 정말 좋아해요\n- 「パーティー来ますか?」 — 파티 올 거예요?"
       },
       "vocabulary": [
-        "achim.md",
-        "好き.md",
-        "dalda.md",
-        "beoseu.md",
-        "映画.md"
+        "祝日.md",
+        "誕生日.md",
+        "クリスマス.md",
+        "正月.md",
+        "結婚式.md",
+        "ケーキ.md",
+        "花火.md",
+        "祭り.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1389,7 +2081,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1406,14 +2098,17 @@
       "sourceTopic": "shopping-and-money.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "일본어 쇼핑, 돈, 가격 어휘. 여행자와 일상 생활에 유용."
+        "excerpt": "## Summary\n\n일본어 쇼핑, 돈, 가격 어휘. 여행자와 일상 생활에 유용.\n\n\n## Key Takeaways\n\n- 店の種類 (가게 종류) — コンビニ, スーパー, デパート, 市場\n- お金 (돈) — 現金, カード, お釣り\n- 価格 (가격) — 高い, 安い, 割引\n- 買い物 (쇼핑) — 買う, 売る, 返品, 試着\n\n\n## Vocabulary Extracted\n\n- [[店]] — 가게\n- [[お金]] — 돈\n- [[現金]] — 현금\n- [[カード]] — 카드\n- [[価格]] — 가격\n- [[安い]] — 싼\n- [[高い]] — 비싼\n- [[割引]] — 할인\n- [[レシート]] — 영수증\n- [[返品]] — 환불\n\n\n## Expressions Extracted\n\n- 「いくらですか?」 — 얼마예요?\n- 「カードは使えますか?」 — 카드 되나요?\n- 「割引できますか?」 — 할인 되나요?\n- 「試着してもいいですか?」 — 입어볼 수 있나요?\n- 「試着室はどこですか?」 — 탈의실 어디예요?"
       },
       "vocabulary": [
-        "achim.md",
-        "好き.md",
-        "dalda.md",
-        "beoseu.md",
-        "映画.md"
+        "店.md",
+        "お金.md",
+        "現金.md",
+        "カード.md",
+        "価格.md",
+        "安い.md",
+        "高い.md",
+        "割引.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1421,7 +2116,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1438,14 +2133,17 @@
       "sourceTopic": "food-and-dining.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "일본 음식 문화 어휘 — 식당, 요리, 음식 종류, 식이 제한."
+        "excerpt": "## Summary\n\n일본 음식 문화 어휘 — 식당, 요리, 음식 종류, 식이 제한.\n\n\n## Key Takeaways\n\n- レストラン (식당) 어휘\n- 食べ物 (음식) — ご飯, 肉, 魚, 野菜, 果物\n- 飲み物 (음료) — 水, お茶, ビール\n- 調理法 (조리법) — 焼く, 煮る, 蒸す\n- 味 (맛) — 甘い, 酸っぱい, 塩辛い, 苦い, 辛い\n\n\n## Vocabulary Extracted\n\n- [[朝食]] — 아침 식사\n- [[昼食]] — 점심\n- [[夕食]] — 저녁\n- [[水]] — 물\n- [[お茶]] — 차\n- [[おいしい]] — 맛있는\n- [[辛い]] — 매운\n- [[甘い]] — 단\n- [[魚]] — 생선\n- [[肉]] — 고기\n\n\n## Expressions Extracted\n\n- 「お腹が空いた」 — 배고파요\n- 「メニューを見せてください」 — 메뉴판 보여주세요\n- 「お会計お願いします」 — 계산 부탁해요\n- 「おいしいです」 — 맛있어요\n- 「辛くしないでください」 — 맵게 하지 말아주세요"
       },
       "vocabulary": [
-        "achim.md",
-        "好き.md",
-        "dalda.md",
-        "beoseu.md",
-        "映画.md"
+        "朝食.md",
+        "昼食.md",
+        "夕食.md",
+        "水.md",
+        "お茶.md",
+        "おいしい.md",
+        "辛い.md",
+        "甘い.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1453,7 +2151,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1470,14 +2168,14 @@
       "sourceTopic": "travel-basics.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "일본 여행을 위한 필수 어휘와 표현 — 공항, 호텔, 식당, 교통, 긴급 상황. 상위 50개 가장 자주 쓰이는 여행 단어."
+        "excerpt": "## Summary\n\n일본 여행을 위한 필수 어휘와 표현 — 공항, 호텔, 식당, 교통, 긴급 상황. 상위 50개 가장 자주 쓰이는 여행 단어.\n\n\n## Key Takeaways\n\n- 挨拶と礼儀 (인사/예의) — お願いします, ありがとう, すみません\n- 数字とお金 (숫자/돈) — 千, 万, 円\n- 方向 (방향) — 左, 右, 近く, 遠く\n- 交通 (교통) — 電車, バス, タクシー, 飛行機\n- 食べ物と飲み物 (음식/음료) — メニュー, 水, コーヒー\n- 緊急 (긴급) — 助けて, 警察, 病院\n\n\n## Vocabulary Extracted\n\n- [[空港]] — 공항\n- [[荷物]] — 짐\n- [[バス]] — 버스\n- [[ホテル]] — 호텔\n- [[レストラン]] — 식당\n- [[タクシー]] — 택시\n- [[電車]] — 전철\n- [[パスポート]] — 여권\n- [[切符]] — 표\n- [[地図]] — 지도\n\n\n## Expressions Extracted\n\n- 「いくらですか?」 — 얼마예요?\n- 「~はどこですか?」 — ~는 어디인가요?\n- 「助けてください」 — 도와주세요\n- 「わかりません」 — 모르겠습니다\n- 「英語を話せますか?」 — 영어 할 줄 아세요?"
       },
       "vocabulary": [
         "パスポート.md",
+        "地図.md",
+        "インターネット.md",
         "achim.md",
-        "好き.md",
-        "dalda.md",
-        "beoseu.md"
+        "好き.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1500,14 +2198,14 @@
       "sourceTopic": "daily-life-basics.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "일본어 일상 회화 어휘 — 인사, 시간, 날씨, 가족, 취미, 직장. 가장 자주 쓰이는 단어들."
+        "excerpt": "## Summary\n\n일본어 일상 회화 어휘 — 인사, 시간, 날씨, 가족, 취미, 직장. 가장 자주 쓰이는 단어들.\n\n\n## Key Takeaways\n\n- 挨拶 (인사) — おはよう, こんにちは, こんばんは\n- 時間 (시간) — 今日, 明日, 昨日, 今\n- 家族 (가족) — お母さん, お父さん, 兄弟\n- 動詞 (동사) — 行く, 来る, 食べる, 飲む, 寝る, 働く\n- 形容詞 (형용사) — いい, 悪い, 大きい, 小さい\n\n\n## Vocabulary Extracted\n\n- [[こんにちは]] — 안녕\n- [[おはよう]] — 좋은 아침\n- [[こんばんは]] — 좋은 저녁\n- [[ありがとう]] — 감사\n- [[すみません]] — 미안/실례\n- [[お願いします]] — 부탁합니다\n- [[家族]] — 가족\n- [[友達]] — 친구\n- [[好き]] — 좋아함\n- [[仕事]] — 직장\n\n\n## Expressions Extracted\n\n- 「お元気ですか?」 — 잘 지내세요?\n- 「はじめまして」 — 처음 뵙겠습니다\n- 「また明日」 — 내일 또 봐\n- 「おやすみなさい」 — 잘 자\n- 「いってきます」 — 다녀오겠습니다"
       },
       "vocabulary": [
         "好き.md",
+        "インターネット.md",
         "achim.md",
         "dalda.md",
-        "beoseu.md",
-        "映画.md"
+        "beoseu.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1515,7 +2213,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 6,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1532,14 +2230,17 @@
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "日本語のスポーツと趣味の語彙を集めた学習資料。アウトドア活動、屋内レジャー、文化活動など、日本でよく行われるスポーツ・趣味について学びます。野球、サッカー、テニス、ヨガ、読書、カラオケなど、多彩なトピックをカバー。"
+        "excerpt": "## Summary\n\n日本語のスポーツと趣味の語彙を集めた学習資料。アウトドア活動、屋内レジャー、文化活動など、日本でよく行われるスポーツ・趣味について学びます。野球、サッカー、テニス、ヨガ、読書、カラオケなど、多彩なトピックをカバー。\n\n\n## Key Takeaways\n\n- 一般的なスポーツ — 野球, サッカー, テニス, 水泳\n- 趣味の語彙 — 読書, 料理, 音楽\n- フィットネス — ジム, ヨガ, 運動\n- アウトドア — ハイキング, キャンプ\n\n\n## Vocabulary Extracted\n\n- [[スポーツ]] — 스포츠\n- [[野球]] — 야구\n- [[サッカー]] — 축구\n- [[テニス]] — 테니스\n- [[水泳]] — 수영\n- [[ジョギング]] — 조깅\n- [[ヨガ]] — 요가\n- [[音楽]] — 음악\n- [[読書]] — 독서\n- [[映画]] — 영화\n\n\n## Expressions Extracted\n\n- 「何かスポーツしますか?」 — 운동 하세요?\n- 「趣味は何ですか?」 — 취미가 뭐예요?\n- 「テニスが好きです」 — 테니스 좋아해요\n- 「一緒に走ろう」 — 같이 달리자\n- 「ファンです」 — 팬이에요"
       },
       "vocabulary": [
-        "映画.md",
-        "achim.md",
-        "好き.md",
-        "dalda.md",
-        "beoseu.md"
+        "スポーツ.md",
+        "野球.md",
+        "テニス.md",
+        "水泳.md",
+        "ジョギング.md",
+        "ヨガ.md",
+        "音楽.md",
+        "読書.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1547,7 +2248,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -1564,14 +2265,14 @@
       "sourceTopic": "first-travel-korea.md",
       "raw": {
         "sourceFile": "first-travel-korea.md",
-        "excerpt": "`raw/Japanese/first-travel-korea.md`"
+        "excerpt": "## 原文 (Source)\n\n`raw/Japanese/first-travel-korea.md`\n\n\n## 重要な抽出事項 (Key Extractions)"
       },
       "vocabulary": [
         "gonghang.md",
         "yeogwon.md",
         "hotel.md",
-        "achim.md",
-        "好き.md"
+        "インターネット.md",
+        "achim.md"
       ],
       "expressions": [
         "sumimasen.md",
@@ -1579,7 +2280,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 4,
         "relatedStages": [
           "jp_t_1",
           "jp_t_2",
@@ -1594,14 +2295,17 @@
       "sourceTopic": "fiestas-y-celebraciones.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "Español para fiestas, celebraciones, días especiales. Cultura hispana."
+        "excerpt": "## Summary\n\nEspañol para fiestas, celebraciones, días especiales. Cultura hispana."
       },
       "vocabulary": [
-        "inmigración.md",
-        "viajes.md",
-        "matriarca.md",
-        "chapparon.md",
-        "catedral.md"
+        "fiesta.md",
+        "cumpleanos.md",
+        "navidad.md",
+        "ano-nuevo.md",
+        "boda.md",
+        "regalo.md",
+        "pastel.md",
+        "quinceanera.md"
       ],
       "expressions": [
         "estoy-enamorado.md",
@@ -1609,7 +2313,7 @@
       ],
       "culture": "pueblo-costero-funeral.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 4,
         "relatedStages": [
           "es_1_1",
           "es_1_2",
@@ -1656,14 +2360,14 @@
       "sourceTopic": "viaje-aventura.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "Español para aventuras de viaje — senderismo, camping, actividades al aire libre, clima, emergencias."
+        "excerpt": "## Summary\n\nEspañol para aventuras de viaje — senderismo, camping, actividades al aire libre, clima, emergencias."
       },
       "vocabulary": [
         "playa.md",
         "mapa.md",
+        "jefe.md",
         "inmigración.md",
-        "viajes.md",
-        "matriarca.md"
+        "viajes.md"
       ],
       "expressions": [
         "estoy-enamorado.md",
@@ -1757,14 +2461,17 @@
       "sourceTopic": "comida-y-restaurante.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "Español para comida, restaurantes, cocina, restricciones dietéticas. Útil para viajeros y entusiastas de la gastronomía."
+        "excerpt": "## Summary\n\nEspañol para comida, restaurantes, cocina, restricciones dietéticas. Útil para viajeros y entusiastas de la gastronomía."
       },
       "vocabulary": [
         "desayuno.md",
+        "almuerzo.md",
+        "cena.md",
+        "agua.md",
+        "cafe.md",
+        "te.md",
         "delicioso.md",
-        "picante.md",
-        "dulce.md",
-        "inmigración.md"
+        "picante.md"
       ],
       "expressions": [
         "estoy-enamorado.md",
@@ -1772,7 +2479,7 @@
       ],
       "culture": "pueblo-costero-funeral.md",
       "meta": {
-        "estimatedReadMinutes": 3,
+        "estimatedReadMinutes": 4,
         "relatedStages": [
           "es_1_1",
           "es_1_2",
@@ -1789,7 +2496,7 @@
       "sourceTopic": "notes-in-spanish-listening-log.md",
       "raw": {
         "sourceFile": "notes-in-spanish-listening-log.md",
-        "excerpt": "> Nota: este archivo es una **plantilla de listening log** (cuaderno de escucha). El audio original se escucha en el podcast; este documento captura los puntos gramaticales, léxicos y culturales típicos de los episodios avanzados para estudio autónomo.\n\n\n\n| Campo              | Valor                                              |\n| ------------------ | -------------------------------------------------- |\n| Tema               | Costumbres españolas - la siesta y el calor        |\n| Duración típica    | 6-8 min                                            |\n| Velocidad          | ~85% de la velocidad natural                       |\n| Acento principal   | Castellano centro-norte (Madrid)                   |\n| Tono               | Conversacional, humorístico                        |"
+        "excerpt": "> Nota: este archivo es una **plantilla de listening log** (cuaderno de escucha). El audio original se escucha en el podcast; este documento captura los puntos gramaticales, léxicos y culturales típicos de los episodios avanzados para estudio autónomo."
       },
       "vocabulary": [
         "siesta.md",
@@ -1894,14 +2601,17 @@
       "sourceTopic": "trabajo-y-carrera.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "Español para el lugar de trabajo — títulos de trabajo, reuniones, correos, etiqueta empresarial."
+        "excerpt": "## Summary\n\nEspañol para el lugar de trabajo — títulos de trabajo, reuniones, correos, etiqueta empresarial."
       },
       "vocabulary": [
-        "inmigración.md",
-        "viajes.md",
-        "matriarca.md",
-        "chapparon.md",
-        "catedral.md"
+        "trabajo.md",
+        "oficina.md",
+        "reunion.md",
+        "jefe.md",
+        "proyecto.md",
+        "plazo.md",
+        "correo-electronico.md",
+        "salario.md"
       ],
       "expressions": [
         "estoy-enamorado.md",
@@ -1909,7 +2619,7 @@
       ],
       "culture": "pueblo-costero-funeral.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 4,
         "relatedStages": [
           "es_1_1",
           "es_1_2",
@@ -1956,14 +2666,17 @@
       "sourceTopic": "technology-and-internet.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "한국어 테크놀로지, 인터넷, 컴퓨터, 스마트폰 어휘. 현대 필수 단어."
+        "excerpt": "## Summary\n\n한국어 테크놀로지, 인터넷, 컴퓨터, 스마트폰 어휘. 현대 필수 단어."
       },
       "vocabulary": [
-        "dalda.md",
-        "beoseu.md",
-        "ssada.md",
-        "masissda.md",
-        "jikjin.md"
+        "컴퓨터.md",
+        "스마트폰.md",
+        "화면.md",
+        "키보드.md",
+        "인터넷.md",
+        "이메일.md",
+        "비밀번호.md",
+        "앱.md"
       ],
       "expressions": [
         "sumimasen-wa-doko-desuka.md",
@@ -1971,7 +2684,7 @@
       ],
       "culture": "korean-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 5,
+        "estimatedReadMinutes": 6,
         "relatedStages": [
           "kr_1_1",
           "kr_1_2",
@@ -1988,14 +2701,17 @@
       "sourceTopic": "health-and-body.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "한국어 건강, 신체, 질병, 병원 어휘. 응급 상황과 일상 생활에 필수."
+        "excerpt": "## Summary\n\n한국어 건강, 신체, 질병, 병원 어휘. 응급 상황과 일상 생활에 필수.\n\n\n## Key Takeaways\n\n- 신체 부위 — 머리, 손, 발, 눈, 귀\n- 일반 질병 — 감기, 독감, 열\n- 의사/병원 — 예약, 처방전, 약국\n- 건강 동사 — 아프다, 아프다, 피곤하다\n\n\n## Vocabulary Extracted\n\n- [[머리]] — 머리\n- [[손]] — 손\n- [[발]] — 발\n- [[배]] — 배\n- [[감기]] — 감기\n- [[열]] — 열\n- [[의사]] — 의사\n- [[병원]] — 병원\n- [[약]] — 약\n- [[통증]] — 통증\n\n\n## Expressions Extracted\n\n- \"몸이 안 좋아요\" — I don't feel well\n- \"두통이 있어요\" — I have a headache\n- \"어디가 아파요?\" — Where does it hurt?\n- \"의사가 필요해요\" — I need a doctor\n- \"구급차를 불러주세요\" — Call an ambulance"
       },
       "vocabulary": [
-        "yeol.md",
-        "dalda.md",
-        "beoseu.md",
-        "ssada.md",
-        "masissda.md"
+        "머리.md",
+        "손.md",
+        "발.md",
+        "배.md",
+        "감기.md",
+        "열.md",
+        "의사.md",
+        "병원.md"
       ],
       "expressions": [
         "sumimasen-wa-doko-desuka.md",
@@ -2003,7 +2719,7 @@
       ],
       "culture": "korean-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 5,
+        "estimatedReadMinutes": 6,
         "relatedStages": [
           "kr_1_1",
           "kr_1_2",
@@ -2020,14 +2736,17 @@
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "한국어 명절, 기념일, 축제 어휘. 한국 주요 명절 문화."
+        "excerpt": "## Summary\n\n한국어 명절, 기념일, 축제 어휘. 한국 주요 명절 문화.\n\n\n## Key Takeaways\n\n- 한국 명절 — 설날, 추석\n- 서양 명절 — 크리스마스, 발렌타인, 화이트데이\n- 기념일 — 생일, 결혼기념일\n- 한국 전통 행사 — 제기, 세배, 차례\n\n\n## Vocabulary Extracted\n\n- [[명절]] — 명절\n- [[생일]] — 생일\n- [[크리스마스]] — 크리스마스\n- [[설날]] — 설날\n- [[추석]] — 추석\n- [[결혼식]] — 결혼식\n- [[파티]] — 파티\n- [[선물]] — 선물\n- [[케이크]] — 케이크\n- [[세배]] — 세배\n\n\n## Expressions Extracted\n\n- \"생일 축하해요!\" — Happy birthday!\n- \"메리 크리스마스\" — Merry Christmas\n- \"선물 고마워요\" — Thank you for the gift\n- \"새해 복 많이 받으세요\" — Happy new year\n- \"파티 올 거예요?\" — Are you coming to the party?"
       },
       "vocabulary": [
-        "dalda.md",
-        "beoseu.md",
-        "ssada.md",
-        "masissda.md",
-        "jikjin.md"
+        "명절.md",
+        "생일.md",
+        "크리스마스.md",
+        "설날.md",
+        "추석.md",
+        "결혼식.md",
+        "파티.md",
+        "선물.md"
       ],
       "expressions": [
         "sumimasen-wa-doko-desuka.md",
@@ -2035,7 +2754,7 @@
       ],
       "culture": "korean-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 5,
+        "estimatedReadMinutes": 6,
         "relatedStages": [
           "kr_1_1",
           "kr_1_2",
@@ -2052,7 +2771,7 @@
       "sourceTopic": "shopping-and-money.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "한국 쇼핑, 돈, 가격 어휘. 여행자와 일상 생활에 유용."
+        "excerpt": "## Summary\n\n한국 쇼핑, 돈, 가격 어휘. 여행자와 일상 생활에 유용.\n\n\n## Key Takeaways\n\n- 가게 종류 — 편의점, 마트, 백화점, 시장\n- 돈 — 현금, 카드, 거스름돈\n- 가격 — 비싸다, 싸다, 할인\n- 쇼핑 행동 — 사다, 팔다, 환불, 입어보다\n\n\n## Vocabulary Extracted\n\n- [[가게]] — 가게\n- [[돈]] — 돈\n- [[현금]] — 현금\n- [[카드]] — 카드\n- [[가격]] — 가격\n- [[싸다]] — 싸다\n- [[비싸다]] — 비싸다\n- [[할인]] — 할인\n- [[영수증]] — 영수증\n- [[환불]] — 환불\n\n\n## Expressions Extracted\n\n- \"얼마예요?\" — How much is it?\n- \"카드 돼요?\" — Do you take card?\n- \"할인 돼요?\" — Can I get a discount?\n- \"입어볼 수 있어요?\" — Can I try it on?\n- \"탈의실 어디예요?\" — Where is the fitting room?"
       },
       "vocabulary": [
         "gagyeok.md",
@@ -2084,7 +2803,7 @@
       "sourceTopic": "food-and-dining.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "한국 음식 문화 어휘 — 식당, 요리, 음식 종류, 식이 제한. 한국 여행자가 알아야 할 핵심."
+        "excerpt": "## Summary\n\n한국 음식 문화 어휘 — 식당, 요리, 음식 종류, 식이 제한. 한국 여행자가 알아야 할 핵심.\n\n\n## Key Takeaways\n\n- 식당 어휘 — 메뉴, 주문, 계산\n- 한국 음식 — 김치, 비빔밥, 불고기, 떡볶이\n- 음료 — 물, 차, 커피, 소주, 맥주\n- 조리법 — 굽다, 볶다, 끓이다, 찌다\n- 맛 — 달다, 짜다, 맵다, 신맛\n\n\n## Vocabulary Extracted\n\n- [[아침]] — 아침\n- [[점심]] — 점심\n- [[저녁]] — 저녁\n- [[물]] — 물\n- [[커피]] — 커피\n- [[맛있다]] — 맛있다\n- [[맵다]] — 맵다\n- [[짜다]] — 짜다\n- [[달다]] — 달다\n- [[김치]] — 김치\n\n\n## Expressions Extracted\n\n- \"배고파요\" — I'm hungry\n- \"메뉴판 주세요\" — Menu, please\n- \"계산해 주세요\" — Check, please\n- \"맛있어요!\" — Delicious!\n- \"맵지 않게 해주세요\" — Not spicy, please"
       },
       "vocabulary": [
         "mul.md",
@@ -2150,7 +2869,7 @@
       "sourceTopic": "travel-basics.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "한국 여행을 위한 필수 어휘 — 공항, 호텔, 식당, 교통, 긴급 상황. 한국인이 외국인에게 알려주고 싶은 핵심 단어."
+        "excerpt": "## Summary\n\n한국 여행을 위한 필수 어휘 — 공항, 호텔, 식당, 교통, 긴급 상황. 한국인이 외국인에게 알려주고 싶은 핵심 단어.\n\n\n## Key Takeaways\n\n- 인사/예의 — 안녕하세요, 감사합니다, 죄송합니다\n- 숫자/돈 — 천, 만, 원\n- 방향 — 왼쪽, 오른쪽, 가깝다, 멀다\n- 교통 — 버스, 지하철, 택시, 기차\n- 음식/음료 — 메뉴, 물, 커피\n- 긴급 — 도와주세요, 경찰, 병원\n\n\n## Vocabulary Extracted\n\n- [[공항]] — 공항\n- [[짐]] — 수하물\n- [[버스]] — 버스\n- [[호텔]] — 호텔\n- [[식당]] — 식당\n- [[택시]] — 택시\n- [[지하철]] — 지하철\n- [[여권]] — 여권\n- [[표]] — 표\n- [[지도]] — 지도\n\n\n## Expressions Extracted\n\n- \"얼마예요?\" — How much?\n- \"~는 어디예요?\" — Where is ~?\n- \"도와주세요\" — Please help\n- \"모르겠어요\" — I don't know\n- \"한국어 할 줄 아세요?\" — Do you speak Korean?"
       },
       "vocabulary": [
         "gonghang.md",
@@ -2168,7 +2887,7 @@
       ],
       "culture": "korean-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 8,
         "relatedStages": [
           "kr_t_1",
           "kr_t_2",
@@ -2183,7 +2902,7 @@
       "sourceTopic": "daily-life-basics.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "한국어 일상 회화 어휘 — 인사, 시간, 가족, 취미, 직장."
+        "excerpt": "## Summary\n\n한국어 일상 회화 어휘 — 인사, 시간, 가족, 취미, 직장.\n\n\n## Key Takeaways\n\n- 인사 — 안녕하세요, 안녕, 처음 뵙겠습니다\n- 시간 — 오늘, 내일, 어제, 지금\n- 가족 — 어머니, 아버지, 형제\n- 동사 — 가다, 오다, 먹다, 마시다, 자다, 일하다\n- 형용사 — 좋다, 나쁘다, 크다, 작다\n\n\n## Vocabulary Extracted\n\n- [[안녕하세요]] — Hello\n- [[감사합니다]] — Thank you\n- [[죄송합니다]] — I'm sorry\n- [[가족]] — Family\n- [[친구]] — Friend\n- [[사랑]] — Love\n- [[일]] — Work\n- [[학교]] — School\n- [[집]] — Home\n- [[시간]] — Time\n\n\n## Expressions Extracted\n\n- \"잘 지내세요?\" — How are you?\n- \"만나서 반갑습니다\" — Nice to meet you\n- \"또 만나요\" — See you again\n- \"안녕히 가세요\" — Goodbye\n- \"잘 자요\" — Good night"
       },
       "vocabulary": [
         "annyeonghaseyo.md",
@@ -2217,14 +2936,17 @@
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
         "sourceFile": "",
-        "excerpt": "한국 스포츠와 취미 어휘를 모은 학습 자료. 야외 활동, 실내 레저, 문화 활동 등 한국에서 자주 하는 스포츠와 취미에 대해 배웁니다. 야구, 축구, 농구, 수영, 요가, 독서, K-pop 댄스 등 다양한 주제를 다룹니다."
+        "excerpt": "## Summary\n\n한국 스포츠와 취미 어휘를 모은 학습 자료. 야외 활동, 실내 레저, 문화 활동 등 한국에서 자주 하는 스포츠와 취미에 대해 배웁니다. 야구, 축구, 농구, 수영, 요가, 독서, K-pop 댄스 등 다양한 주제를 다룹니다.\n\n\n## Key Takeaways\n\n- 일반 스포츠 — 축구, 야구, 농구, 수영\n- 취미 어휘 — 독서, 요리, 음악\n- 피트니스 — 헬스장, 요가, 운동\n- 야외 활동 — 하이킹, 캠핑\n\n\n## Vocabulary Extracted\n\n- [[스포츠]] — 스포츠\n- [[축구]] — 축구\n- [[야구]] — 야구\n- [[농구]] — 농구\n- [[수영]] — 수영\n- [[조깅]] — 조깅\n- [[요가]] — 요가\n- [[음악]] — 음악\n- [[독서]] — 독서\n- [[영화]] — 영화\n\n\n## Expressions Extracted\n\n- \"운동 하세요?\" — Do you exercise?\n- \"취미가 뭐예요?\" — What's your hobby?\n- \"축구 좋아해요\" — I like soccer\n- \"같이 운동하자\" — Let's exercise together\n- \"팬이에요\" — I'm a fan"
       },
       "vocabulary": [
-        "영화.md",
-        "dalda.md",
-        "beoseu.md",
-        "ssada.md",
-        "masissda.md"
+        "스포츠.md",
+        "축구.md",
+        "야구.md",
+        "농구.md",
+        "수영.md",
+        "조깅.md",
+        "요가.md",
+        "음악.md"
       ],
       "expressions": [
         "sumimasen-wa-doko-desuka.md",
@@ -2232,7 +2954,7 @@
       ],
       "culture": "korean-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 5,
+        "estimatedReadMinutes": 6,
         "relatedStages": [
           "kr_1_1",
           "kr_1_2",
