@@ -18,6 +18,8 @@ import { LANGUAGE_LABEL, type Language } from '../types.js';
 import { getNativeLanguage, type NativeLanguage } from '../data/nativeLanguage.js';
 import { getMeaning } from '../data/meaningResolver.js';
 import { t } from '../data/uiTranslations.js';
+import { lookupWikiPage } from '../data/wikiLookup.js';
+import { MarkdownView } from './MarkdownView.js';
 
 interface LearnScreenProps {
   stage: StageConfig;
@@ -41,6 +43,7 @@ interface VocabPreview {
   meaning: string;
   level: number;
   category: string;
+  source?: string;
 }
 
 export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProps) {
@@ -59,6 +62,7 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
         meaning: getMeaning(e.target, nativeLanguage) ?? '',
         level: e.target.level,
         category: e.target.category ?? '',
+        source: e.target.source,
       })),
     [enemies, nativeLanguage]
   );
@@ -146,6 +150,28 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
                 <span className="learn-screen__vocab-level">L{v.level}</span>
                 <span className="learn-screen__vocab-cat">{v.category}</span>
               </div>
+              <button
+                className="learn-screen__card-tts"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if ('speechSynthesis' in window) {
+                    window.speechSynthesis.cancel();
+                    const u = new SpeechSynthesisUtterance(v.input);
+                    const langMap: Record<string, string> = {
+                      en: 'en-US',
+                      jp: 'ja-JP',
+                      es: 'es-ES',
+                      kr: 'ko-KR',
+                    };
+                    u.lang = langMap[stage.language] ?? 'en-US';
+                    u.rate = 0.85;
+                    window.speechSynthesis.speak(u);
+                  }
+                }}
+                aria-label="Play pronunciation"
+              >
+                🔊
+              </button>
             </button>
           ))}
         </div>
@@ -222,6 +248,22 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
                   🔊 {t('listeningTo', nativeLanguage)}
                 </button>
               </div>
+              {(() => {
+              const wikiPage = lookupWikiPage(selectedVocab.source, stage.language);
+              if (wikiPage) {
+                return (
+                  <div className="learn-screen__vocab-modal-section">
+                    <h3>📖 Wiki</h3>
+                    <MarkdownView
+                      source={wikiPage.body}
+                      ttsLanguage={stage.language}
+                      enableTts={true}
+                    />
+                  </div>
+                );
+              }
+              return null;
+              })()}
               <div className="learn-screen__vocab-modal-section">
                 <h3>💡 {t('studyNote', nativeLanguage)}</h3>
                 <p>
@@ -258,6 +300,12 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
                       <th>{t('category', nativeLanguage)}</th>
                       <td>{selectedVocab.category}</td>
                     </tr>
+                    {selectedVocab.source && (
+                      <tr>
+                        <th>Source</th>
+                        <td>{selectedVocab.source}</td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>
@@ -370,6 +418,7 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
           text-align: left;
           transition: all 0.15s;
           color: #c5d4e3;
+          position: relative;
         }
         .learn-screen__vocab-card:hover {
           background: #1a2530;
@@ -398,6 +447,25 @@ export function LearnScreen({ stage, enemies, onStart, onBack }: LearnScreenProp
           display: flex;
           gap: 6px;
           font-size: 10px;
+        }
+        .learn-screen__card-tts {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background: rgba(0, 217, 255, 0.1);
+          border: none;
+          border-radius: 4px;
+          padding: 4px 6px;
+          font-size: 14px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.15s;
+        }
+        .learn-screen__vocab-card:hover .learn-screen__card-tts {
+          opacity: 1;
+        }
+        .learn-screen__card-tts:hover {
+          background: rgba(0, 217, 255, 0.25);
         }
         .learn-screen__vocab-level {
           background: rgba(255, 170, 85, 0.2);

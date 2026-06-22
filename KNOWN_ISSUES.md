@@ -93,15 +93,42 @@ cy = canvas.height * 0.65
 
 ---
 
+## 🟡 Medium Issues (중간)
+
+### Issue #4: 설정 버튼 - 환경설정 저장 안됨
+
+**상태:** 🟡 Open
+**우선순위:** Medium
+**발견일:** 2026-06-23
+
+#### **증상:**
+스테이지 선택 화면 우측 상단 ⚙️ 버튼 클릭 시 설정 화면이 열리나, Native Language 변경이 저장되지 않음
+
+#### **예상 원인:**
+- `SettingsScreen`에서 `setNativeLanguage()` 호출은 되나 localStorage 연동 미확인
+- 또는 App.tsx의 `nativeLanguage` state와 `SettingsScreen`의 local state가 동기화 안됨
+
+#### **관련 파일:**
+- `src/ui/SettingsScreen.tsx` - 설정 화면
+- `src/App.tsx` - 네이티브 언어 상태 관리
+- `src/state/localStorage.ts` - 영속성
+
+#### **다음 단계:**
+1. `setNativeLanguage()`이 localStorage에 저장되는지 확인
+2. 앱 재시작 후 언어 설정이 유지되는지 테스트
+3. SettingsScreen의 local state와 App state 동기화 확인
+
+---
+
 ## 📊 이슈 통계
 
 **현재 상태:**
 - 🔴 Critical: 1개 (빈 화면)
-- 🟡 Medium: 1개 (spin 효과)
+- 🟡 Medium: 2개 (spin 효과, 설정 저장 안됨)
 - ✅ Fixed: 1개
 
-**해결률:** 33% (1/3)
+**해결률:** 25% (1/4)
 
 ---
 
-**마지막 업데이트:** 2024-06-18
+**마지막 업데이트:** 2026-06-23

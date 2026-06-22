@@ -17,6 +17,11 @@ import { markLessonSeen } from '../data/dailyLessons.js';
 import { MarkdownView } from './MarkdownView.js';
 import { getNativeLanguage } from '../data/nativeLanguage.js';
 import { t } from '../data/uiTranslations.js';
+import {
+  markPageMastered,
+  unmarkPageMastered,
+  isPageMastered,
+} from '../data/lessonProgress.js';
 
 interface DailyLessonModalProps {
   lesson: DailyLesson;
@@ -110,6 +115,7 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
   const color = LANG_COLORS[lesson.language];
   const [tier, setTier] = useState<Tier>('standard');
   const [wikilinkTarget, setWikilinkTarget] = useState<WikiPage | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Mark as seen when modal opens
   useEffect(() => {
@@ -151,8 +157,13 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
 
   // Filter content based on tier
   const content = useMemo(() => {
+    const q = searchQuery.toLowerCase();
+    const matchesQuery = (page: WikiPage) =>
+      !q || page.title.toLowerCase().includes(q) || page.body.toLowerCase().includes(q);
+
+    let base;
     if (tier === 'quick') {
-      return {
+      base = {
         vocab: lesson.wiki.vocabulary.slice(0, 1).map(getQuickVocabSummary).map((body, i) => ({
           ...lesson.wiki.vocabulary[i],
           body,
@@ -165,9 +176,8 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           ? { ...lesson.wiki.culture, body: filterMarkdownByTier(lesson.wiki.culture.body, 'quick') }
           : null,
       };
-    }
-    if (tier === 'standard') {
-      return {
+    } else if (tier === 'standard') {
+      base = {
         vocab: lesson.wiki.vocabulary.slice(0, 3).map((p) => ({
           ...p,
           body: filterMarkdownByTier(p.body, 'standard'),
@@ -180,13 +190,28 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           ? { ...lesson.wiki.culture, body: filterMarkdownByTier(lesson.wiki.culture.body, 'standard') }
           : null,
       };
+    } else {
+      base = {
+        vocab: lesson.wiki.vocabulary,
+        expressions: lesson.wiki.expressions,
+        culture: lesson.wiki.culture,
+      };
     }
+
     return {
-      vocab: lesson.wiki.vocabulary,
-      expressions: lesson.wiki.expressions,
-      culture: lesson.wiki.culture,
+      vocab: base.vocab.filter(matchesQuery),
+      expressions: base.expressions.filter(matchesQuery),
+      culture: base.culture && matchesQuery(base.culture) ? base.culture : null,
     };
-  }, [lesson, tier]);
+  }, [lesson, tier, searchQuery]);
+
+  // Progress stats
+  const progress = useMemo(() => {
+    const total = lesson.wiki.vocabulary.length + lesson.wiki.expressions.length;
+    const mastered = lesson.wiki.vocabulary.filter((p) => isPageMastered(lesson.id, p.filename)).length +
+      lesson.wiki.expressions.filter((p) => isPageMastered(lesson.id, p.filename)).length;
+    return { mastered, total };
+  }, [lesson]);
 
   // Handle wikilink click → show related page in sub-modal
   const handleWikilinkClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -256,6 +281,20 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           })}
         </div>
 
+        {/* Search + Progress */}
+        <div className="daily-lesson-modal__search-row">
+          <input
+            className="daily-lesson-modal__search"
+            type="text"
+            placeholder={getNativeLanguage() === 'ko' ? '단어 검색...' : 'Search...'}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <span className="daily-lesson-modal__progress-label">
+            ✓ {progress.mastered}/{progress.total}
+          </span>
+        </div>
+
         <div className="daily-lesson-modal__body">
           <section className="daily-lesson-modal__section">
             <h3 className="daily-lesson-modal__section-title">📜 {t('rawMaterial', getNativeLanguage())}</h3>
@@ -268,42 +307,80 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
             <h3 className="daily-lesson-modal__section-title">
               📚 {t('vocabulary', getNativeLanguage())} ({content.vocab.length}/{lesson.wiki.vocabulary.length})
             </h3>
-            {content.vocab.map((page) => (
-              <details
-                key={page.filename}
-                open={tier === 'deep'}
-                className="daily-lesson-modal__page"
-              >
-                <summary className="daily-lesson-modal__page-title">{page.title}</summary>
-                <MarkdownView
-                  source={page.body}
-                  linkResolver={wikilinkResolver}
-                  ttsLanguage={lesson.language}
-                  enableTts={tier === 'deep'}
-                />
-              </details>
-            ))}
+            {content.vocab.map((page) => {
+              const learned = isPageMastered(lesson.id, page.filename);
+              return (
+                <details
+                  key={page.filename}
+                  open={tier === 'deep'}
+                  className={`daily-lesson-modal__page ${learned ? 'daily-lesson-modal__page--learned' : ''}`}
+                >
+                  <summary className="daily-lesson-modal__page-title">
+                    <button
+                      className={`daily-lesson-modal__learn-btn ${learned ? 'daily-lesson-modal__learn-btn--active' : ''}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (learned) {
+                          unmarkPageMastered(lesson.id, page.filename);
+                        } else {
+                          markPageMastered(lesson.id, page.filename);
+                        }
+                      }}
+                      aria-label={learned ? 'Unmark as learned' : 'Mark as learned'}
+                    >
+                      {learned ? '✓' : '○'}
+                    </button>
+                    {page.title}
+                  </summary>
+                  <MarkdownView
+                    source={page.body}
+                    linkResolver={wikilinkResolver}
+                    ttsLanguage={lesson.language}
+                    enableTts={tier === 'deep'}
+                  />
+                </details>
+              );
+            })}
           </section>
 
           <section className="daily-lesson-modal__section">
             <h3 className="daily-lesson-modal__section-title">
               💬 {t('expressions', getNativeLanguage())} ({content.expressions.length}/{lesson.wiki.expressions.length})
             </h3>
-            {content.expressions.map((page) => (
-              <details
-                key={page.filename}
-                open={tier === 'deep'}
-                className="daily-lesson-modal__page"
-              >
-                <summary className="daily-lesson-modal__page-title">{page.title}</summary>
-                <MarkdownView
-                  source={page.body}
-                  linkResolver={wikilinkResolver}
-                  ttsLanguage={lesson.language}
-                  enableTts={tier === 'deep'}
-                />
+            {content.expressions.map((page) => {
+              const learned = isPageMastered(lesson.id, page.filename);
+              return (
+                <details
+                  key={page.filename}
+                  open={tier === 'deep'}
+                  className={`daily-lesson-modal__page ${learned ? 'daily-lesson-modal__page--learned' : ''}`}
+                >
+                  <summary className="daily-lesson-modal__page-title">
+                    <button
+                      className={`daily-lesson-modal__learn-btn ${learned ? 'daily-lesson-modal__learn-btn--active' : ''}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (learned) {
+                          unmarkPageMastered(lesson.id, page.filename);
+                        } else {
+                          markPageMastered(lesson.id, page.filename);
+                        }
+                      }}
+                      aria-label={learned ? 'Unmark as learned' : 'Mark as learned'}
+                    >
+                      {learned ? '✓' : '○'}
+                    </button>
+                    {page.title}
+                  </summary>
+                  <MarkdownView
+                    source={page.body}
+                    linkResolver={wikilinkResolver}
+                    ttsLanguage={lesson.language}
+                    enableTts={tier === 'deep'}
+                  />
               </details>
-            ))}
+            );
+          })}
           </section>
 
           {content.culture && (
@@ -471,6 +548,37 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
         .daily-lesson-modal__tier-label { font-size: 13px; }
         .daily-lesson-modal__tier-time { opacity: 0.7; font-size: 11px; }
 
+        .daily-lesson-modal__search-row {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 8px 24px;
+          background: #06090f;
+          border-bottom: 1px solid #1a2530;
+        }
+        .daily-lesson-modal__search {
+          flex: 1;
+          background: #1a2530;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 6px;
+          padding: 6px 12px;
+          color: #c5d4e3;
+          font-size: 13px;
+        }
+        .daily-lesson-modal__search::placeholder {
+          color: #6a7888;
+        }
+        .daily-lesson-modal__search:focus {
+          outline: none;
+          border-color: #00d9ff;
+        }
+        .daily-lesson-modal__progress-label {
+          color: #66dd66;
+          font-size: 13px;
+          font-weight: 600;
+          white-space: nowrap;
+        }
+
         .daily-lesson-modal__body {
           flex: 1;
           overflow-y: auto;
@@ -516,6 +624,24 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           transition: transform 0.15s;
         }
         .daily-lesson-modal__page[open] summary::before { content: '▾ '; }
+        .daily-lesson-modal__page--learned {
+          border-color: rgba(102, 221, 102, 0.4);
+        }
+        .daily-lesson-modal__learn-btn {
+          background: none;
+          border: none;
+          font-size: 14px;
+          cursor: pointer;
+          padding: 0 6px 0 0;
+          color: #6a7888;
+          line-height: 1;
+        }
+        .daily-lesson-modal__learn-btn:hover {
+          color: #66dd66;
+        }
+        .daily-lesson-modal__learn-btn--active {
+          color: #66dd66;
+        }
         .daily-lesson-modal__page .markdown-view {
           margin-top: 8px;
           color: #c5d4e3;

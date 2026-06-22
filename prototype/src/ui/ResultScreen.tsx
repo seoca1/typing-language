@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import type { MissionConfig, StageRecord } from '../types.js';
+import type { MissionConfig, StageRecord, Language } from '../types.js';
 import { DailyLessonCard } from './DailyLessonCard.js';
 import { DailyLessonModal } from './DailyLessonModal.js';
 import {
@@ -13,6 +13,7 @@ import {
   getWordStats,
 } from '../data/wordMastery.js';
 import { getNativeLanguage } from '../data/nativeLanguage.js';
+import { getMeaning } from '../data/meaningResolver.js';
 import { t } from '../data/uiTranslations.js';
 import { SAMPLE_STAGES } from '../data/stages.js';
 import { countNewlyUnlocked } from '../data/stageLock.js';
@@ -20,6 +21,9 @@ import {
   recordPlay,
   type DailyStreakState,
 } from '../data/dailyStreak.js';
+import { lookupWordById } from '../data/wordById.js';
+import { lookupWikiPage } from '../data/wikiLookup.js';
+import { MarkdownView } from './MarkdownView.js';
 
 interface ResultScreenProps {
   score: number;
@@ -50,6 +54,14 @@ export function ResultScreen({
 }: ResultScreenProps) {
   const [dailyLessonOpen, setDailyLessonOpen] = useState(false);
   const [dailyLessonDismissed, setDailyLessonDismissed] = useState(false);
+  const [selectedWeakWord, setSelectedWeakWord] = useState<{
+    id: string;
+    display: string;
+    input: string;
+    meaning: string;
+    source?: string;
+    language: Language;
+  } | null>(null);
 
   // Pick today's lesson for the current language (deterministic by date)
   const dailyLesson: DailyLesson | null = useMemo(() => {
@@ -190,21 +202,104 @@ export function ResultScreen({
             })()}
           </p>
           <div className="weak-words-list">
-            {sessionWeakWords.slice(0, 5).map(({ id, stats }) => (
-              <div key={id} className="weak-word-chip">
-                <span className="weak-word-id">{id}</span>
-                <span className="weak-word-mistakes">
-                  {stats?.mistakeCount ?? 0}{' '}
-                  {(() => {
-                    const nl = getNativeLanguage();
-                    if (nl === 'ko') return '회 실수';
-                    if (nl === 'ja') return '回ミス';
-                    if (nl === 'es') return ' errores';
-                    return ' mistakes';
-                  })()}
-                </span>
+            {sessionWeakWords.slice(0, 5).map(({ id, stats }) => {
+              const word = lookupWordById(id);
+              const display = word?.display ?? id;
+              const input = word?.romaji ?? word?.display ?? display;
+              const lang = id.split('_')[0] as Language;
+              const meaning = word ? getMeaning(word, getNativeLanguage()) ?? '' : '';
+              return (
+                <button
+                  key={id}
+                  className="weak-word-chip"
+                  onClick={() => word && setSelectedWeakWord({ id, display, input, meaning, source: word.source, language: lang })}
+                >
+                  <span className="weak-word-display">{display}</span>
+                  <span className="weak-word-meaning">{meaning}</span>
+                  <span className="weak-word-mistakes">
+                    {stats?.mistakeCount ?? 0}{' '}
+                    {(() => {
+                      const nl = getNativeLanguage();
+                      if (nl === 'ko') return '회';
+                      if (nl === 'ja') return '回';
+                      if (nl === 'es') return '';
+                      return '';
+                    })()}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Weak Word Detail Modal */}
+      {selectedWeakWord && (
+        <div
+          className="weak-word-modal"
+          onClick={() => setSelectedWeakWord(null)}
+        >
+          <div
+            className="weak-word-modal__content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="weak-word-modal__header">
+              <div>
+                <h2>{selectedWeakWord.display}</h2>
+                <div className="weak-word-modal__input">
+                  {selectedWeakWord.input}
+                </div>
               </div>
-            ))}
+              <button
+                className="weak-word-modal__close"
+                onClick={() => setSelectedWeakWord(null)}
+              >
+                ✕
+              </button>
+            </div>
+            <div className="weak-word-modal__body">
+              <p className="weak-word-modal__meaning">
+                <strong>Meaning:</strong> {selectedWeakWord.meaning}
+              </p>
+              <div className="weak-word-modal__tts">
+                <button
+                  className="weak-word-modal__tts-btn"
+                  onClick={() => {
+                    if ('speechSynthesis' in window) {
+                      window.speechSynthesis.cancel();
+                      const u = new SpeechSynthesisUtterance(selectedWeakWord.input);
+                      const langMap: Record<string, string> = {
+                        en: 'en-US',
+                        jp: 'ja-JP',
+                        es: 'es-ES',
+                        kr: 'ko-KR',
+                      };
+                      u.lang = langMap[selectedWeakWord.language] ?? 'en-US';
+                      u.rate = 0.85;
+                      window.speechSynthesis.speak(u);
+                    }
+                  }}
+                >
+                  🔊 Listen
+                </button>
+              </div>
+              {(() => {
+                const wikiPage = lookupWikiPage(selectedWeakWord.source, selectedWeakWord.language);
+                if (wikiPage) {
+                  return (
+                    <div className="weak-word-modal__section">
+                      <h3>📖 Wiki</h3>
+                      <MarkdownView
+                        source={wikiPage.body}
+                        ttsLanguage={selectedWeakWord.language}
+                        enableTts={true}
+                      />
+                    </div>
+                  );
+                }
+                return null;
+              })()}
+            </div>
           </div>
         </div>
       )}
@@ -394,14 +489,112 @@ export function ResultScreen({
           border-radius: 4px;
           padding: 4px 10px;
           font-size: 12px;
+          cursor: pointer;
+          color: #c5d4e3;
+          transition: all 0.15s;
         }
-        .weak-word-id {
+        .weak-word-chip:hover {
+          background: rgba(255, 102, 102, 0.25);
+          border-color: rgba(255, 102, 102, 0.6);
+        }
+        .weak-word-display {
           color: #fff;
           font-weight: 600;
+        }
+        .weak-word-meaning {
+          color: #b4d2fa;
+          font-size: 11px;
         }
         .weak-word-mistakes {
           color: #ffaa55;
           font-size: 11px;
+        }
+
+        /* Weak Word Modal */
+        .weak-word-modal {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 0, 0, 0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 200;
+          padding: 20px;
+        }
+        .weak-word-modal__content {
+          background: #0d1420;
+          border: 1px solid #1a2530;
+          border-radius: 12px;
+          max-width: 500px;
+          width: 100%;
+          max-height: 80vh;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+        .weak-word-modal__header {
+          background: #1a2530;
+          padding: 16px 20px;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+        .weak-word-modal__header h2 {
+          margin: 0;
+          font-size: 22px;
+        }
+        .weak-word-modal__input {
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.85);
+          font-family: monospace;
+          margin-top: 4px;
+        }
+        .weak-word-modal__close {
+          background: rgba(255, 255, 255, 0.2);
+          color: white;
+          border: none;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .weak-word-modal__body {
+          padding: 16px 20px;
+          overflow-y: auto;
+          color: #c5d4e3;
+          font-size: 13px;
+          line-height: 1.6;
+        }
+        .weak-word-modal__meaning {
+          background: rgba(0, 217, 255, 0.05);
+          padding: 10px 14px;
+          border-radius: 6px;
+          margin: 0 0 14px 0;
+        }
+        .weak-word-modal__tts {
+          margin: 8px 0 16px;
+        }
+        .weak-word-modal__tts-btn {
+          background: rgba(0, 217, 255, 0.15);
+          color: #00d9ff;
+          border: 1px solid #00d9ff;
+          padding: 6px 12px;
+          border-radius: 4px;
+          font-size: 12px;
+          cursor: pointer;
+        }
+        .weak-word-modal__tts-btn:hover {
+          background: rgba(0, 217, 255, 0.25);
+        }
+        .weak-word-modal__section {
+          margin-top: 14px;
+        }
+        .weak-word-modal__section h3 {
+          font-size: 14px;
+          color: #ffaa55;
+          margin: 0 0 8px 0;
         }
       `}</style>
     </div>

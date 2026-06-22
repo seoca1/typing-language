@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T01:26:31.693760",
+  "generatedAt": "2026-06-23T02:33:11.241277",
   "schemaVersion": "1.1",
   "lessonCount": 45,
   "byLanguage": {
@@ -301,12 +301,12 @@
     },
     "water.md": {
       "title": "Water",
-      "body": "# Water\n\n**Part of Speech:** noun\n\n**Definition:** water\n\n---\n\n## Sources\n\n- [[food-vocabulary]]\n",
+      "body": "# Water\n\n**Part of Speech:** noun\n**Level:** A1\n\n**Definition:** A colorless, transparent liquid that is essential for life; the liquid that comes from taps, bottles, etc.\n\n**Pronunciation:**\n- IPA: /ˈwɔːtər/\n- Syllables: wa-ter (2 syllables)\n- Stress: first syllable (WA-ter)\n\n**Etymology:** From Old English \"wæter\", from Proto-Germanic \"*watōr\". Related to German \"Wasser\", Dutch \"water\".\n\n**Common Mistakes:**\n- ❌ \"I want a water\" → unless you mean \"a bottle of water\"\n- ❌ \"The water is too cold\" → correct usage\n- ✅ \"Can I have some water?\"\n- ✅ \"Water is essential for life.\"\n\n**Frequency:** ⭐⭐⭐⭐ (top 500 English words)\n\n## Examples\n\n- \"Can I have some water?\" — 물 한 잔 주세요\n- \"Water is essential for life.\" — 물은 생명에 필수야\n\n## Related Terms\n\n- [[coffee]] — other drink\n- [[juice]] — other drink\n\n## Sources\n\n- [[food-vocabulary]]\n",
       "category": "vocabulary"
     },
     "coffee.md": {
       "title": "Coffee",
-      "body": "# Coffee\n\n**Part of Speech:** noun\n\n**Definition:** coffee\n\n---\n\n## Sources\n\n- [[food-vocabulary]]\n",
+      "body": "# Coffee\n\n**Part of Speech:** noun\n**Level:** A1\n\n**Definition:** A hot or cold drink made from roasted coffee beans, or the beans themselves.\n\n**Pronunciation:**\n- IPA: /ˈkɔːfi/\n- Syllables: cof-fee (2 syllables)\n- Stress: first syllable (COF-fee)\n\n**Etymology:** From Turkish \"kahve\", from Arabic \"qahwa\" (wine). Originally meant \"wine\" in Arabic; coffee was called \"the wine of Islam.\"\n\n**Common Mistakes:**\n- ❌ \"I want a coffee please\" → British usage, but usually \"I want coffee\" (uncountable)\n- ❌ \"Two coffees, please\" → American usage (countable cups)\n- ✅ \"I need my morning coffee.\"\n- ✅ \"Would you like some coffee?\"\n\n**Types:**\n- **Espresso** — concentrated, Italian style\n- **Latte** — espresso with steamed milk\n- **Cappuccino** — espresso with foamed milk\n- **Americano** — espresso diluted with water\n\n**Frequency:** ⭐⭐⭐⭐ (top 500 English words)\n\n## Examples\n\n- \"I can't function without my morning coffee.\" — 아침 커피 없으면 못 움직여\n- \"Let's go for coffee sometime.\" — 언젠가 커피 한잔 하자\n\n## Related Terms\n\n- [[tea]] — other common drink\n- [[cafe]] — place to drink coffee\n- [[water]] — other beverage\n\n## Sources\n\n- [[food-vocabulary]]\n",
       "category": "vocabulary"
     },
     "tea.md": {
@@ -315,8 +315,8 @@
       "category": "vocabulary"
     },
     "delicious.md": {
-      "title": "delicious",
-      "body": "# delicious\n\n**Part of Speech:** noun\n\n**Definition:** 맛있다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the delicious?** — delicious은(는) 어디인가요?\n- **delicious** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "title": "Delicious",
+      "body": "# Delicious\n\n**Part of Speech:** adjective\n**Level:** A1\n\n**Definition:** Highly pleasant to taste; very tasty.\n\n**Pronunciation:**\n- IPA: /dɪˈlɪʃəs/\n- Syllables: de-li-cious (3 syllables)\n- Stress: second syllable (de-LI-cious)\n\n**Etymology:** From Latin \"deliciosus\" (delightful), from \"deliciae\" (delight).\n\n**Frequency:** ⭐⭐⭐ (top 1500)\n\n## Examples\n\n- \"This food is delicious!\" — 이 음식 정말 맛있어!\n- \"That was a delicious meal.\" — 정말 맛있는 식사였어\n\n## Related Terms\n\n- [[food-vocabulary]] — food category\n\n## Sources\n\n- [[food-vocabulary]]\n",
       "category": "vocabulary"
     },
     "spicy.md": {
@@ -405,8 +405,8 @@
       "category": "vocabulary"
     },
     "restaurant.md": {
-      "title": "restaurant",
-      "body": "# restaurant\n\n**Part of Speech:** noun\n\n**Definition:** 식당\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the restaurant?** — restaurant은(는) 어디인가요?\n- **restaurant** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "title": "Restaurant",
+      "body": "# Restaurant\n\n**Part of Speech:** noun\n**Level:** A1\n\n**Definition:** A place where people pay to sit and eat meals prepared on the premises.\n\n**Pronunciation:**\n- IPA: /ˈrɛstərɒnt/\n- Syllables: res-tau-rant (3 syllables)\n- Stress: first syllable (RES-tau-rant)\n\n**Etymology:** From French \"restaurant\" (a restorative thing), from Latin \"restaurare\" (to restore).\n\n**Frequency:** ⭐⭐⭐ (top 1500)\n\n## Examples\n\n- \"Let's eat at a restaurant.\" — 음식점에서 먹자\n- \"I work at a restaurant.\" — 음식점에서 일해\n\n## Related Terms\n\n- [[menu]] — what you read at a restaurant\n- [[order]] — what you do at a restaurant\n- [[food-vocabulary]] — food category\n\n## Sources\n\n- [[food-vocabulary]]\n",
       "category": "vocabulary"
     },
     "taxi.md": {
@@ -1896,7 +1896,7 @@
       ],
       "culture": "english-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 8,
         "relatedStages": [
           "en_1_1",
           "en_1_2",
@@ -1965,7 +1965,7 @@
       ],
       "culture": "english-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 7,
         "relatedStages": [
           "en_t_1",
           "en_t_2",

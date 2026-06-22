@@ -33,6 +33,8 @@ export interface Target {
   category?: string;
   /** 난이도 (1~5) */
   level: number;
+  /** Wiki source page (e.g. 'meat', 'chicken') */
+  source?: string;
 }
 
 export interface MatchResult {

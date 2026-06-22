@@ -19,6 +19,7 @@ export function createEnemy(
     meaning: word.meaning,
     category: word.category,
     level: word.level,
+    source: word.source,
   };
 
   // HP는 글자 수에 비례. 단, JP는 romaji 길이 기준
