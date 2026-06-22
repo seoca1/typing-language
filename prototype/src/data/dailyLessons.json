@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T00:07:51.075616",
+  "generatedAt": "2026-06-23T00:50:37.237792",
   "schemaVersion": "1.1",
   "lessonCount": 45,
   "byLanguage": {
@@ -424,6 +424,11 @@
       "body": "# インターネット\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Internet.\n\n**Romaji:** inta-netto\n\n---\n\n## Examples\n\n- **インターネットが遅いです。** — The internet is slow.\n- **インターネットに接続します。** — I connect to the internet.\n- **インターネットで探します。** — I search on the internet.\n\n---\n\n## Related Terms\n\n- [[Wi-Fi]]\n- [[ウェブサイト]]\n- [[コンピュータ]]\n\n---\n\n## Sources\n\n- [[technology-and-internet]]\n",
       "category": "vocabulary"
     },
+    "メール.md": {
+      "title": "メール",
+      "body": "# メール\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** めーる (meeru) — email.\n\n**Romaji:** meeru\n\n---\n\n## Examples\n\n- **メールを送ります。** — I send an email.\n- **メールを受け取りました。** — I received an email.\n- **ビジネスメール** — business email\n\n---\n\n## Related Terms\n\n- [[メッセージ]]\n- [[電話]]\n\n---\n\n## Sources\n\n- [[business-vocabulary-jp]]\n",
+      "category": "vocabulary"
+    },
     "今度ご飯行かない.md": {
       "title": "今度ご飯行かない",
       "body": "# 今度ご飯行かない\n\n**Part of Speech:** 表現 (expression, invitation)\n**Definition:** \"이번에 밥 먹으러 가지 않을래?\" — Standard casual date invitation.\n\n**Form:** 今度ご飯行かない? (Kondo gohan ikanai?)\n\n## Usage\n\n친한 사이지에서 사용. 너무 캐주얼하므로 처음 만난 사람에게는\n「今度ご飯でもどう?」가 더 적절.\n\n## Variations\n\n- **今度ご飯行かない?** — 캐주얼\n- **今度ご飯でもどう?** — 살짝 정중\n- **食事行きましょう** — 정중\n- **ご飯食べに行こう** — 친한 사이 (남자끼리도 OK)\n\n## Cultural Notes\n\n**「ご飯」= 끼니의 의미 + 데이트의 의미**. 연인 사이에서\n\"ご飯行こう\" = \"데이트하자\".\n\n**응답**:\n- 긍정: 「行こう!」「いいね!」\n- 보류: 「予定確認するね」\n- 거절: 「残念だけど、その日はちょっと…」\n\n## Related Expressions\n\n- [[好きです付き合ってください]] — 공식 고백\n- [[手繋いでもいい]] — 신체 친밀\n\n## Sources\n\n- [[dating-romance-jp]] — 초대\n- 失恋ショコラティエ\n",
@@ -481,27 +486,27 @@
     },
     "山.md": {
       "title": "山",
-      "body": "# 山\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** やま (yama) — mountain.\n\n---\n\n## Examples\n\n- **山に登ります。** — I climb a mountain.\n- **高い山** — high mountain\n- **富士山** — Mt. Fuji\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "body": "# 山\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** やま (yama) — mountain.\n\n**Romaji:** yama\n\n---\n\n## Examples\n\n- **山に登ります。** — I climb a mountain.\n- **富士山** — Mt. Fuji\n\n---\n\n## Related Terms\n\n- [[川]]\n- [[海]]\n- [[森]]\n\n---\n\n## Sources\n\n- [[nature-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "森.md": {
       "title": "森",
-      "body": "# 森\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** もり (mori) — forest.\n\n---\n\n## Examples\n\n- **森を歩きます。** — I walk in the forest.\n- **深い森** — deep forest\n- **森の中** — in the forest\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "body": "# 森\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** もり (mori) — forest.\n\n**Romaji:** mori\n\n---\n\n## Examples\n\n- **森があります。** — There is a forest.\n- **森の中** — in the forest\n\n---\n\n## Related Terms\n\n- [[山]]\n- [[木]]\n\n---\n\n## Sources\n\n- [[nature-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "川.md": {
       "title": "川",
-      "body": "# 川\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** かわ (kawa) — river.\n\n---\n\n## Examples\n\n- **川で釣りをします。** — I fish in the river.\n- **川が流れます。** — The river flows.\n- **大きな川** — big river\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "body": "# 川\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** かわ (kawa) — river.\n\n**Romaji:** kawa\n\n---\n\n## Examples\n\n- **川があります。** — There is a river.\n- **川辺** — riverside\n\n---\n\n## Related Terms\n\n- [[山]]\n- [[海]]\n\n---\n\n## Sources\n\n- [[nature-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "湖.md": {
       "title": "湖",
-      "body": "# 湖\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** みずうみ (mizuumi) — lake.\n\n---\n\n## Examples\n\n- **湖がきれいです。** — The lake is beautiful.\n- **湖でボートに乗ります。** — I ride a boat on the lake.\n- **湖の近く** — near the lake\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "body": "# 湖\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** B1\n\n**Definition:** みずうみ (mizuum i) — lake.\n\n**Romaji:** mizuum i\n\n---\n\n## Examples\n\n- **湖があります。** — There is a lake.\n- **湖畔** — lakeside\n\n---\n\n## Related Terms\n\n- [[海]]\n- [[川]]\n\n---\n\n## Sources\n\n- [[nature-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "海.md": {
       "title": "海",
-      "body": "# 海\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** うみ (umi) — sea, ocean.\n\n---\n\n## Examples\n\n- **海で泳ぎます。** — I swim in the sea.\n- **海が美しいです。** — The sea is beautiful.\n- **海辺** — seaside\n\n---\n\n## Related Terms\n\n- [[travel-adventure]]\n- [[travel-basics]]\n\n---\n\n## Sources\n\n- [[travel-adventure]]\n",
+      "body": "# 海\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A1\n\n**Definition:** うみ (umi) — sea.\n\n**Romaji:** umi\n\n---\n\n## Examples\n\n- **海があります。** — There is a sea.\n- **海辺** — seaside\n\n---\n\n## Related Terms\n\n- [[川]]\n- [[山]]\n\n---\n\n## Sources\n\n- [[nature-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "テント.md": {
@@ -536,7 +541,7 @@
     },
     "可愛い.md": {
       "title": "可愛い",
-      "body": "# 可愛い\n\n**Part of Speech:** 形容詞 (い-adjective)\n**Level:** N4\n\n**Definition:** Cute; adorable; charming. Used for people, animals, things, behaviors. A central word in Japanese pop culture.\n\n**読み方:** かわいい (kawaii)\n\n**Etymology:** Originally 可愛(かは)し (kahashi) = \"embarrassed, pitiable\" (Heian period). 顔(かほ)し (kahoshi) = \"lovely face.\" Shifted to \"cute\" in 20th century; popularized by Sanrio (Hello Kitty, 1970s).\n\n**Pronunciation:**\n- 読み方: かわいい (kawaii)\n- Pitch: 頭高 (H-L-L-L-L) — か↓わ↑い↑い↑  / also L-H-H-H acceptable\n- Type: い-adjective (可愛い,  可愛くない,  可愛かった)\n\n**Memory Tip:** \"**Kawaii**\" = 5 letters, kawaii. English speakers learn this word first! 「**KA**me **WAI** (turtle) **I**」→ A cute turtle. Or: the sound mimics the cuteness — high-pitched, soft ending.\n\n**Common Mistakes:**\n- ❌ 「可愛い人」 alone → actually OK (\"a cute person\"), but ambiguous\n- ❌ 「可愛くありません」 → 「可愛くありません」or 「可愛くないです」(i-adj, no な)\n- ❌ 「可愛いね」to a man → sounds like calling him girly/childish, possibly offensive\n- ❌ 「可愛い」 to mean \"sexy/hot\" → WRONG; use 魅力的 or セクシー\n- ✅ 「可愛いね」(casual compliment — universal)\n- ✅ 「可愛い赤ちゃん」(cute baby — standard)\n- ✅ 「可愛い性格だね」(cute personality — describes endearing traits)\n- Note: For men, use ハンサム or かっこいい, NOT 可愛い. Exception: when describing specific cute behavior (a childlike smile) is fine.\n\n**Register:** casual to semi-formal. Universally appropriate in casual contexts.\n**Frequency:** ⭐⭐⭐⭐⭐ (cultural icon, top 300 JP words)\n\n**Visual:**\n```\n   可 = can/may\n       ↓\n   愛 = love, affection\n   ─────────\n   可愛い = \"lovable-able\" = cute\n```\n\n## Examples\n\n- 「可愛いね」 — You're cute (casual compliment)\n- 「可愛い服」 — Cute clothes\n- 「可愛い赤ちゃん」 — Cute baby\n- 「可愛いキャラクター」 — Cute character\n- 「可愛く撮って」(Take a cute photo of me) — modern phrase\n- 「あの子の笑顔、可愛いな」(That kid's smile is cute)\n\n## Mini-Dialogue (Casual)\n\n```\nA: この猫、見て！   ← 이 고양이, 봐!\nB: えっ、めっちゃ可愛い！   ← 뭐야, 진짜 귀엽다!\nA: ね、触ってもいい？   ← 그렇지, 만져봐도 돼?\nB: うん、優しくね。   ← 응, 살살.\nA: (猫がなでなで)   ← (고양이 쓰다듬기)\nB: 幸せそう...   ← 행복해 보인다...\n```\n\n## Variations\n\n- 可愛(かわい)い — standard\n- 愛(いと)らしい — elegant/endearing, more literary\n- チャーミング — katakana (charming)\n- カワイイ — katakana (kawaii, pop culture)\n\n## Related Terms\n\n- [[綺麗]] — beautiful (more elegant/adult)\n- [[優しい]] — kind\n- [[面白い]] — funny/interesting\n- [[ハンサム]] — handsome\n- [[かっこいい]] — cool (often men)\n- [[美人]] — beautiful woman\n- [[アイドル]] — idol (kawaii aesthetic)\n\n## Cultural Notes\n\n- **일본 문화에서 \"kawaii\"는 매우 광범위한 칭찬** — 외모, 행동, 물건, 캐릭터 모두에 사용. 글로벌 문화에서도 통용.\n- **외모 칭찬으로 사용 시**: 여성/아이에게 자연스러움. 남성에게는 상황에 따라 (귀여운 행동 묘사 시).\n- **카와이 문화**: Hello Kitty, Sanrio, 일본 패션, 만화. 사회적 미의식의 큰 축.\n- **카와이 시점**: 어떤 것이 cute한지 — 캐릭터, 디자인, 행동. 단순히 \"예쁘다\"보다 더 큰 범위.\n- **남성에게**: 절대적으로 부적절하지는 않지만, \"아이같다\"는 뉘앙스가 있어 사용 자제. 부부의 사적인 대화에 한해 OK.\n- **\"Kawaii desu ne\"** (可愛いですね) = almost a cultural greeting when seeing something cute.\n\n## Sources\n\n- [[japanese-dating-culture]] — 칭찬\n- 日本語中級J501\n- Sanrio history (1970s)\n- 日本語ジャーナル (various issues)\n",
+      "body": "# 可愛い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Level:** A2\n\n**Definition:** かわいい (kawaii) — cute.\n\n**Romaji:** kawaii\n\n---\n\n## Examples\n\n- **可愛いいです。** — It is cute.\n- **真的太可愛い** — really cute\n\n---\n\n## Related Terms\n\n- [[綺麗]]\n- [[立派]]\n\n---\n\n## Sources\n\n- [[emotions-personality-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "かっこいい.md": {
@@ -546,7 +551,7 @@
     },
     "優しい.md": {
       "title": "優しい",
-      "body": "# 優しい\n\n**Part of Speech:** 形容詞 (い-adjective)\n**Level:** N4\n\n**Definition:** Kind; gentle; considerate. Describes people, words, actions, things.\n\n**読み方:** やさしい (yasashii)\n\n**Etymology:** 優(やさ) = \"gentle, superior\" + しい = adjective ending. Old Japanese also 優(ゆ)し = same meaning. Originally described noble/refined behavior; shifted to general kindness.\n\n**Pronunciation:**\n- 読み方: やさしい (yasashii)\n- Pitch: 頭高 (H-L-L-L) — や↓さ↑し↑い↑  / also L-H-H-H\n- Type: い-adjective\n\n**Memory Tip:** \"**Y**ou're **A** **S**o **A** **SHI**\" — \"you are a 'sashi' (gentle spirit)\". The 'sa-shi-i' rhythm feels soft, like kindness. Or: 優しい → \"**Y**es, **A**-**S**mooth **I**-nteraction\" = kind.\n\n**Common Mistakes:**\n- ❌ 「優しい人」 alone → OK grammatically, but 「優しい人だね」more natural\n- ❌ 「優しくありません」 → 「優しくないです」(i-adj polite negative)\n- ❌ 「優しいね」to a stranger → too forward (sounds like flirting)\n- ❌ Confusing with 易しい(やさしい) — \"easy (to understand)\" — SAME pronunciation!\n  - 「優しい先生」= kind teacher\n  - 「易しい問題」= easy question\n- ✅ 「優しい人」(kind person)\n- ✅ 「彼、彼女は優しい」(He/she is kind)\n- ✅ 「優しくしてほしい」(I want to be treated gently)\n- Note: 「優しい」= consistent kindness, not just one action. For single acts, use 優しいね more casually.\n\n**Register:** standard polite. Universally appropriate when sincere.\n**Frequency:** ⭐⭐⭐⭐⭐ (top 300 JP words)\n\n**Visual:**\n```\n   優 = \"person (人) + worry (尤)\"\n       \"person worried about others\" = kind\n   ─────────\n   優しい = kind, gentle (action-focused)\n```\n\n## Examples\n\n- 「優しい人」 — Kind person\n- 「彼はとても優しい」 — He is very kind\n- 「優しくしてください」 — Please be gentle\n- 「優しい言葉」 — Kind words\n- 「優しい性格」 — Kind personality\n- 「ご親切に」(thank you for your kindness — formal)\n\n## Mini-Dialogue (Compliment)\n\n```\nA: 今日は寒いね。   ← 오늘 춥다.\nB: どうぞ、私のコート。   ← 자, 제 코트요.\nA: えっ、いいよ。   ← 뭐, 괜찮아.\nB: いいから、着て。優しいんだよ、私。   ← 괜찮다니까, 입어. 착한 사람이야, 나는.\nA: (笑) ありがとう。   ← (웃음) 고마워.\nB: (優しく微笑む)   ← (다정하게 미소짓다)\n```\n\n## Variations\n\n- 優(やさ)しい — standard, common\n- 親切(しんせつ) — kind (different nuance: more active helpfulness)\n- 温(あたた)かい — warm (different: emotional warmth)\n- 穏(おだ)やか — calm, gentle (personality)\n- 大人(おとな)しい — quiet, gentle (behavior)\n- 可愛(かわい)い — cute (different: endearing)\n\n## Related Terms\n\n- [[面白い]] — funny\n- [[綺麗]] — beautiful\n- [[好き]] — like\n- 親切 — kind (helpful)\n- 温かい — warm\n- 穏やか — calm\n- 大人しい — quiet\n- 厳しい — strict (antonym)\n\n## Cultural Notes\n\n- **외모보다 인성을 칭찬할 때 사용**. 일본에서 인성 칭찬은 진심으로 받아들여지는 안전한 표현.\n- **상대가 누구에게**: \"優しいね\"는 여자친구/남자친구 사이에서 매우 흔한 칭찬.\n- **일본어의 뉘앙스**:\n  - 優しい = consistent, habitual kindness\n  - 親切 = situational helpfulness (e.g., helpful staff)\n  - 温かい = emotional warmth, hospitality\n- **발음 함정**: 易しい(やさしい) \"easy\"와 동음. 문맥으로 구분.\n- **데일리에서 \"優しい\" 칭찬의 무게**: 매우 진지한 호감 표현 — \"I see how kind you are\" = trust signal.\n- **부모→자녀**: 일본 부모가 자녀에게 가장 많이 쓰는 칭찬 중 하나.\n\n## Sources\n\n- [[japanese-dating-culture]] — 칭찬\n- 日本語中級J501\n- TRY! N4 文法\n",
+      "body": "# 優しい\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Level:** A2\n\n**Definition:** やさしい (yasashii) — kind/gentle.\n\n**Romaji:** yasashii\n\n---\n\n## Examples\n\n- **優しい人啊。** — He is a kind person.\n- **本当に優しい** — really kind\n\n---\n\n## Related Terms\n\n- [[親切]]\n- [[温かい]]\n\n---\n\n## Sources\n\n- [[emotions-personality-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "面白い.md": {
@@ -636,12 +641,12 @@
     },
     "安い.md": {
       "title": "安い",
-      "body": "# 安い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Cheap / inexpensive.\n\n**Romaji:** yasui\n\n---\n\n## Examples\n\n- **安いですね。** — It's cheap.\n- **安い店** — cheap store\n- **もっと安いのがいいです。** — I want something cheaper.\n\n---\n\n## Related Terms\n\n- [[高い]]\n- [[価格]]\n- [[割引]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "body": "# 安い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Level:** A1\n\n**Definition:** やすい (yasui) — cheap/inexpensive.\n\n**Romaji:** yasui\n\n---\n\n## Examples\n\n- **安い服** — cheap clothes\n- **本当に安い** — really cheap\n\n---\n\n## Related Terms\n\n- [[高い]]\n- [[古い]]\n\n---\n\n## Sources\n\n- [[clothing-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "高い.md": {
       "title": "高い",
-      "body": "# 高い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Expensive / high.\n\n**Romaji:** takai\n\n---\n\n## Examples\n\n- **それは高いです。** — That is expensive.\n- **高い値段** — high price\n- **もう少し安いのをください。** — A little cheaper please.\n\n---\n\n## Related Terms\n\n- [[安い]]\n- [[価格]]\n- [[お金]]\n\n---\n\n## Sources\n\n- [[shopping-and-money]]\n",
+      "body": "# 高い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Level:** A1\n\n**Definition:** たかい (takai) — expensive/high.\n\n**Romaji:** takai\n\n---\n\n## Examples\n\n- **高い服** — expensive clothes\n- **本当に高い** — really expensive\n\n---\n\n## Related Terms\n\n- [[安い]]\n- [[新しい]]\n\n---\n\n## Sources\n\n- [[clothing-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "割引.md": {
@@ -651,17 +656,17 @@
     },
     "朝食.md": {
       "title": "朝食",
-      "body": "# 朝食\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Breakfast.\n\n**Romaji:** choushoku\n\n---\n\n## Examples\n\n- **朝食は何ですか?** — What's for breakfast?\n- **朝食を食べます。** — I eat breakfast.\n- **朝食抜き** — skip breakfast\n\n---\n\n## Related Terms\n\n- [[昼食]]\n- [[夕食]]\n- [[おいしい]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "body": "# 朝食\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A1\n\n**Definition:** ちょうしょく (choushoku) — breakfast.\n\n**Romaji:** choushoku\n\n---\n\n## Examples\n\n- **朝食を食べます。** — I eat breakfast.\n- **朝ごはん** — breakfast (casual)\n- **朝食付き** — breakfast included\n\n---\n\n## Related Terms\n\n- [[昼食]]\n- [[夕食]]\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "昼食.md": {
       "title": "昼食",
-      "body": "# 昼食\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Lunch.\n\n**Romaji:** chūshoku\n\n---\n\n## Examples\n\n- **昼食は12時です。** — Lunch is at 12.\n- **昼食を食べます。** — I eat lunch.\n- **昼食は何がいいですか?** — What do you want for lunch?\n\n---\n\n## Related Terms\n\n- [[朝食]]\n- [[夕食]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "body": "# 昼食\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A1\n\n**Definition:** ちゅうしょく (chuushoku) — lunch.\n\n**Romaji:** chuushoku\n\n---\n\n## Examples\n\n- **昼食を食べます。** — I eat lunch.\n- **お昼ごはん** — lunch (casual)\n- **昼休み** — lunch break\n\n---\n\n## Related Terms\n\n- [[朝食]]\n- [[夕食]]\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "夕食.md": {
       "title": "夕食",
-      "body": "# 夕食\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Dinner.\n\n**Romaji:** yūshoku\n\n---\n\n## Examples\n\n- **夕食は7時です。** — Dinner is at 7.\n- **夕食を作りましょう。** — Let's make dinner.\n- **夕食は外で食べます。** — I eat dinner out.\n\n---\n\n## Related Terms\n\n- [[朝食]]\n- [[昼食]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "body": "# 夕食\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A1\n\n**Definition:** ゆうしょく (yuushoku) — dinner.\n\n**Romaji:** yuushoku\n\n---\n\n## Examples\n\n- **夕食を食べます。** — I eat dinner.\n- **夕飯** — dinner (casual)\n- **夕ごはん** — dinner (casual)\n\n---\n\n## Related Terms\n\n- [[朝食]]\n- [[昼食]]\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "水.md": {
@@ -671,7 +676,7 @@
     },
     "お茶.md": {
       "title": "お茶",
-      "body": "# お茶\n\n**Part of Speech:** 名詞 (noun)\n\n**Definition:** Tea.\n\n**Romaji:** ocha\n\n---\n\n## Examples\n\n- **お茶をどうぞ。** — Have some tea.\n- **緑茶が好きです。** — I like green tea.\n- **お茶の時間** — tea time\n\n---\n\n## Related Terms\n\n- [[水]]\n- [[朝食]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "body": "# お茶\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A1\n\n**Definition:** おちゃ (ocha) — tea.\n\n**Romaji:** ocha\n\n---\n\n## Examples\n\n- **お茶を飲みます。** — I drink tea.\n- **緑茶** — green tea (ryokucha)\n- **紅茶** — black tea (koucha)\n\n---\n\n## Related Terms\n\n- [[コーヒー]]\n- [[水]]\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "おいしい.md": {
@@ -681,12 +686,12 @@
     },
     "辛い.md": {
       "title": "辛い",
-      "body": "# 辛い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Spicy.\n\n**Romaji:** karai\n\n---\n\n## Examples\n\n- **とても辛いです。** — It's very spicy.\n- **辛い料理** — spicy food\n- **辛くしないでください。** — Please don't make it spicy.\n\n---\n\n## Related Terms\n\n- [[おいしい]]\n- [[魚]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "body": "# 辛い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Level:** A2\n\n**Definition:** からい (karai) — spicy.\n\n**Romaji:** karai\n\n---\n\n## Examples\n\n- **この料理は辛いです。** — This dish is spicy.\n- **辛くない** — not spicy\n- **四川料理は辛い** — Sichuan food is spicy\n\n---\n\n## Related Terms\n\n- [[美味しい]]\n- [[甘い]]\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "甘い.md": {
       "title": "甘い",
-      "body": "# 甘い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Definition:** Sweet.\n\n**Romaji:** amai\n\n---\n\n## Examples\n\n- **このケーキは甘いです。** — This cake is sweet.\n- **甘いもの** — sweet things\n- **甘すぎます。** — It's too sweet.\n\n---\n\n## Related Terms\n\n- [[おいしい]]\n- [[ケーキ]]\n\n---\n\n## Sources\n\n- [[food-and-dining]]\n",
+      "body": "# 甘い\n\n**Part of Speech:** 形容詞 (adjective)\n\n**Level:** A1\n\n**Definition:** あまい (amai) — sweet.\n\n**Romaji:** amai\n\n---\n\n## Examples\n\n- **このお菓子は甘いです。** — This snack is sweet.\n- **甘いもの** — sweet things\n- **甘党** — sweet tooth\n\n---\n\n## Related Terms\n\n- [[辛い]]\n- [[酸っぱい]]\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "パスポート.md": {
@@ -694,9 +699,19 @@
       "body": "# パスポート\n\n**Part of Speech:** 名詞 (noun, katakana loanword)\n**Level:** N5\n\n**Definition:** パスポート — passport. A government-issued travel document.\n\n**Word Origin:** English \"passport\" → Japanese パスポート (katakana loanword).\n\n**Pronunciation:**\n- 読み方: パスポート (pasupōto)\n- Pitch: 平板 (L-L-L-L-L) — ぱ↑す↑ぽ↑ー↑と↑ (flat)\n\n**Memory Tip:** Just memorize as a katakana loanword: パス + ポート. Pass the port(al) to travel!\n\n**Common Mistakes:**\n- ❌ 「ぱすぽーと」(wrong pitch) → 「ぱすぽーと」 flat\n- ❌ 「パスポートを見せてください」 → OK but 「を見せてください」= \"show me your\"\n- ❌ 「パスポート番号」 → Correct! (passport number)\n- ✅ 「パスポートを見せてください」 — Please show me your passport.\n- ✅ 「パスポートをなくしました」 — I lost my passport.\n- ✅ 「パスポートの更新」 — passport renewal\n- Note: Required for international travel. Japan's passport is highly ranked globally.\n\n**Register:** formal/travel context.\n**Frequency:** ⭐⭐⭐ (travel context)\n\n## Examples\n\n- 「パスポートを見せてください」 — Please show me your passport.\n- 「パスポートをなくしました」 — I lost my passport.\n- 「パスポート番号を書いてください」 — Please write your passport number.\n- 「パスポートの有効期限」 — passport expiration date\n- 「日本パスポート」 — Japanese passport\n\n## Mini-Dialogue\n\n```\nA: パスポート見せてください。   ← Please show me your passport.\nB: ここにあります。   ← Here it is.\nA: 滞在予定は?   ← How long will you stay?\nB: 二週間です。   ← Two weeks.\nA: 滞在の目的は?   ← What's the purpose of your stay?\nB: 観光です。   ← Sightseeing.\n```\n\n## Related Terms\n\n- [[空港]] — airport\n- [[ホテル]] — hotel\n- [[ビザ]] — visa\n- [[切符]] — ticket\n- [[外国]] — foreign country\n- [[旅]] — travel\n\n## Cultural Notes\n\n- **Japan passport**: 세계 4위 수준 (ranked ~4th globally for visa-free access, ~194 countries).\n- **有効期限 (validity)**: 5년 (5 years for adults) / 10년 (10 years).\n- **更新 (renewal)**: 外務省 (Ministry of Foreign Affairs) or passport center. 최근은 자동 갱신 가능.\n- **분실 (loss)**: 가까운 영사관 (consulate) or 일본에서는 外務省 본부.\n- **出入国審査 (immigration)**: 자동 출입국 심사대 (automated gate) 도입, fingerprint 등록.\n- **한국인**: 한국 여권은 일본 무비자 입국 가능 (한국 시민 90일 무비자).\n\n## Sources\n\n- [[travel-basics]] — 여행 기초 어휘\n- [[first-travel-korea]] — 한국 여행\n- [[travel-adventure]] — 모험 여행",
       "category": "vocabulary"
     },
-    "achim.md": {
-      "title": "아침",
-      "body": "# 아침\n\n**Part of Speech:** 名詞 (명사)\n\n**Definition:** 朝\n\n**Romaji:** achim\n\n**Language of Origin:** 韓国語 (한국어)\n\n## Examples\n\n- **아침 はどこですか?** — 아침은(는) 어디인가요?\n- **아침**は旅行で必須です。\n\n## Related Terms\n\n- [[여권]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-korea]]\n",
+    "ズボン.md": {
+      "title": "ズボン",
+      "body": "# ズボン\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** ずぼん (zubon) — pants/trousers.\n\n**Romaji:** zubon\n\n---\n\n## Examples\n\n- **ズボンを穿きます。** — I wear pants.\n- **白いズボン** — white pants\n\n---\n\n## Related Terms\n\n- [[シャツ]]\n- [[スカート]]\n\n---\n\n## Sources\n\n- [[clothing-vocabulary-jp]]\n",
+      "category": "vocabulary"
+    },
+    "和牛.md": {
+      "title": "和牛",
+      "body": "# 和牛\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** B1\n\n**Definition:** わぎゅう (wagyuu) — Wagyu beef.\n\n**Romaji:** wagyuu\n\n---\n\n## Examples\n\n- **和牛を食べます。** — I eat Wagyu beef.\n- **和牛の輸出** — Wagyu beef export\n\n---\n\n## Related Terms\n\n- [[牛肉]]\n- [[肉]]\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
+      "category": "vocabulary"
+    },
+    "トラ.md": {
+      "title": "トラ",
+      "body": "# トラ\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** とら (tora) — tiger.\n\n**Romaji:** tora\n\n---\n\n## Examples\n\n- **トラがいます。** — There is a tiger.\n- **我真的喜歡トラ** — I really like tigers\n\n---\n\n## Related Terms\n\n- [[ライオン]]\n- [[熊]]\n\n---\n\n## Sources\n\n- [[animals-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "好き.md": {
@@ -704,14 +719,9 @@
       "body": "# 好き\n\n**Part of Speech:** 形容詞 (な-adjective) / 名詞 (noun)\n**Level:** N5\n\n**Definition:** To like; affection. (Romaji: **suki**) Used for people, things, activities, food, ideas.\n\n**読み方:** すき (suki)\n\n**Etymology:** 好 (this kanji alone) + き (kun-reading). 好 = \"woman (女) + child (子)\" = preference. Ancient Chinese character meaning \"good, prefer.\"\n\n**Pronunciation:**\n- 読み方: すき (suki)\n- Pitch: 頭高 (L-H) — す↓き↑  / alternatively H-L (acceptable both)\n- Type: な-adjective (changes to 好きな, 好きに, 好きだ)\n\n**Memory Tip:** \"**S**tandard **U**niversal **K**ind **I**nterest\" — SU-KI. Whatever you **suki** = you want more of it. 4 letters = simple word.\n\n**Common Mistakes:**\n- ❌ 「好きの人」 → 「好きな人」(na-adj needs な before noun)\n- ❌ 「好きありません」 → 「好きじゃありません」or 「好きではありません」(negative な-adj)\n- ❌ 「あなたのこと好き」 → 「あなたのことが好き」(が required with のこと = \"you\" emphasis)\n- ❌ 「コーヒーが好きじゃない」→ OK grammatically, but 「好きじゃないです」more natural\n- ✅ 「○○が好きです」(standard polite)\n- ✅ 「好きになります」(will come to like — process)\n- ✅ 「好きになっちゃった」(ended up liking — casual, often used in romance)\n- Note: 「好き」to a friend/stranger feels like a **confession** (告白). Be careful!\n\n**Register:** standard polite. Universally appropriate. Also casual in casual contexts.\n**Frequency:** ⭐⭐⭐⭐⭐ (top 200 JP words)\n\n**Visual:**\n```\n   好 = 女 (woman) + 子 (child)\n       \"woman prefers child\" = preference, liking\n   ─────────\n   好き = preference + abstract ending = to like\n```\n\n## Examples\n\n- 「あなたが好きです」 — I like you (full romantic confession, polite)\n- 「○○が好きです」 — I like ___\n- 「好きになっちゃった」 — I ended up liking (you) — casual\n- 「コーヒーが好きです」 — I like coffee\n- 「好きだよ」 — I like you (casual, intimate)\n- 「日本料理が好きになりました」 — I've come to like Japanese food\n\n## Mini-Dialogue (Confession)\n\n```\nA: あのさ... 話したいことがあるんだけど。   ← 저기... 할 말 있어.\nB: うん、何？   ← 응, 뭔데?\nA: ずっと前から、あなたのことが好きだった。   ← 오래 전부터, 너를 좋아했어.\nB: えっ... 私も。   ← 뭐... 나도.\nA: 本当？ 嬉しい。   ← 정말? 기뻐.\nB: (笑) よかった。   ← (웃음) 다행이다.\n```\n\n## Variations\n\n- 好き(すき) — basic like\n- 大好き(だいすき) — love, really like\n- 愛してる(あいしてる) — love you (rare, very deep)\n- 好感(こうかん) — goodwill (formal)\n- 好む(このむ) — to prefer, like (verb, formal)\n\n## Related Terms\n\n- [[嫌い]] — dislike\n- [[愛する]] — love (heavy, formal)\n- [[告白]] — confession\n- [[可愛い]] — cute\n- [[綺麗]] — beautiful\n- [[恋人]] — lover\n- [[彼氏]] / [[彼女]] — boyfriend/girlfriend\n- [[付き合う]] — to date, go out with\n\n## Cultural Notes\n\n- **「好きです」= 告白의 표준 표현**. 일본에서는 \"I love you\"보다 \"好きです\"를 더 자주 사용 (일본 문화에서 愛する는 매우 무거움).\n- **段階 (stages of affection)**:\n  - 好き — 좋아함 (호감)\n  - 大好き — 매우 좋아함 (강한 호감)\n  - 愛してる — 사랑해 (rare, deep, married couples)\n  - 愛しています — I love you (very formal, often translated as \"I love you\" in songs)\n- **카드를 게임화**: \"Confession\" 단계의 단어 — 발음이 발라드 (ballad) 가사에 자주 등장.\n- **\"告白\"는 거절할 수 있는 분위기** — 일본에서는 상대에게 부담을 주지 않는 매너 (호감을 표현하되 답을 강요하지 않음).\n- **타이밍**: 일본 데이팅에서 好き表白은 2-3개월 이상 교제 후가 일반적. 너무 빠르면 부담.\n\n## Sources\n\n- [[japanese-dating-culture]] — 고백\n- [[告白]] — confession pattern\n- 花より男子 — 牧野つくし「好きよ」\n- Genki I (Chapter 4)\n",
       "category": "vocabulary"
     },
-    "dalda.md": {
-      "title": "달다",
-      "body": "# 달다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Sweet.\n\n**Etymology:** 순 우리말\n\n**Romaja:** dalda\n\n---\n\n## Examples\n\n- **너무 달아요.** — Too sweet.\n- **달고 맛있어요.** — Sweet and delicious.\n- **덜 달게 해주세요.** — Make it less sweet, please.\n\n---\n\n## Related Terms\n\n- [[맵다]] — spicy\n- [[시다]] — sour\n- [[쓰다]] — bitter\n- [[맛있다]] — delicious\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
-      "category": "vocabulary"
-    },
-    "beoseu.md": {
-      "title": "버스",
-      "body": "# 버스\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Bus — 다수의 승객을 수송하는 대형 차량.\n\n**Etymology:** 외래어 (bus, 영어에서 차용)\n\n**Romaja:** beoseu\n\n---\n\n## Examples\n\n- **버스는 어디서 타요?** — Where do I take the bus?\n- **버스 정류장이에요.** — It's a bus stop.\n- **다음 버스가 언제예요?** — When is the next bus?\n\n---\n\n## Related Terms\n\n- [[지하철]] — subway\n- [[택시]] — taxi\n- [[기차]] — train\n- [[정류장]] — stop\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
+    "仕事.md": {
+      "title": "仕事",
+      "body": "# 仕事\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** しごと (shigoto) — work/job.\n\n**Romaji:** shigoto\n\n---\n\n## Examples\n\n- **仕事をします。** — I do work.\n- **仕事中** — during work\n\n---\n\n## Related Terms\n\n- [[会社]]\n- [[プロジェクト]]\n\n---\n\n## Sources\n\n- [[business-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "スポーツ.md": {
@@ -1167,6 +1177,16 @@
     "salario.md": {
       "title": "salario",
       "body": "# salario\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Salario — pago por trabajo.\n\n---\n\n## Examples\n\n- \"Buen salario.\"\n- \"Recibir el salario.\"\n- \"Aumento de salario.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "dalda.md": {
+      "title": "달다",
+      "body": "# 달다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Sweet.\n\n**Etymology:** 순 우리말\n\n**Romaja:** dalda\n\n---\n\n## Examples\n\n- **너무 달아요.** — Too sweet.\n- **달고 맛있어요.** — Sweet and delicious.\n- **덜 달게 해주세요.** — Make it less sweet, please.\n\n---\n\n## Related Terms\n\n- [[맵다]] — spicy\n- [[시다]] — sour\n- [[쓰다]] — bitter\n- [[맛있다]] — delicious\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
+      "category": "vocabulary"
+    },
+    "beoseu.md": {
+      "title": "버스",
+      "body": "# 버스\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Bus — 다수의 승객을 수송하는 대형 차량.\n\n**Etymology:** 외래어 (bus, 영어에서 차용)\n\n**Romaja:** beoseu\n\n---\n\n## Examples\n\n- **버스는 어디서 타요?** — Where do I take the bus?\n- **버스 정류장이에요.** — It's a bus stop.\n- **다음 버스가 언제예요?** — When is the next bus?\n\n---\n\n## Related Terms\n\n- [[지하철]] — subway\n- [[택시]] — taxi\n- [[기차]] — train\n- [[정류장]] — stop\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
       "category": "vocabulary"
     },
     "sumimasen-wa-doko-desuka.md": {
@@ -1936,7 +1956,8 @@
         "スマホ.md",
         "画面.md",
         "キーボード.md",
-        "インターネット.md"
+        "インターネット.md",
+        "メール.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -1944,7 +1965,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 4,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "jp_0_1",
           "jp_0_2",
@@ -2173,9 +2194,9 @@
       "vocabulary": [
         "パスポート.md",
         "地図.md",
-        "インターネット.md",
-        "achim.md",
-        "好き.md"
+        "ズボン.md",
+        "和牛.md",
+        "トラ.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -2183,7 +2204,7 @@
       ],
       "culture": "japanese-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 7,
+        "estimatedReadMinutes": 6,
         "relatedStages": [
           "jp_t_1",
           "jp_t_2",
@@ -2202,10 +2223,10 @@
       },
       "vocabulary": [
         "好き.md",
-        "インターネット.md",
-        "achim.md",
-        "dalda.md",
-        "beoseu.md"
+        "仕事.md",
+        "ズボン.md",
+        "和牛.md",
+        "トラ.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -2271,8 +2292,8 @@
         "gonghang.md",
         "yeogwon.md",
         "hotel.md",
-        "インターネット.md",
-        "achim.md"
+        "ズボン.md",
+        "和牛.md"
       ],
       "expressions": [
         "sumimasen.md",
