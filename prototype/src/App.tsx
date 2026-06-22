@@ -34,6 +34,9 @@ import { CharacterSelect } from './ui/CharacterSelect.js';
 import { selectCharacterForStage } from './character/CharacterSelector.js';
 import { LanguageSelection } from './ui/LanguageSelection.js';
 import { SettingsScreen } from './ui/SettingsScreen.js';
+import { KoreanKeyboardWarning } from './ui/KoreanKeyboardWarning.js';
+import { NonKoreanKeyboardWarning } from './ui/NonKoreanKeyboardWarning.js';
+import { isKoreanCharacter } from './utils/keyboardLayout.js';
 import {
   createEffectsState,
   getLanguageAccent,
@@ -90,6 +93,11 @@ export function App() {
     stage: StageConfig;
     enemies: Enemy[];
   } | null>(null);
+
+  // Keyboard warning states
+  const [pendingKoreanWarning, setPendingKoreanWarning] = useState<StageConfig | null>(null);
+  const [showWrongKeyboardWarning, setShowWrongKeyboardWarning] = useState(false);
+  const recentCharsRef = useRef<string[]>([]);
 
   // Log device info and preload sprites/images on mount
   useEffect(() => {
@@ -281,12 +289,39 @@ export function App() {
 
   const handleConfirmStartStage = () => {
     if (!pendingStage) return;
+    if (pendingStage.stage.language === 'kr') {
+      setPendingKoreanWarning(pendingStage.stage);
+      return;
+    }
     actuallyStartStage(pendingStage.stage);
     setPendingStage(null);
   };
 
   const handleCancelLearn = () => {
     setPendingStage(null);
+  };
+
+  const handleKoreanWarningDismiss = () => {
+    setPendingKoreanWarning(null);
+  };
+
+  const handleKoreanWarningContinue = () => {
+    const stage = pendingKoreanWarning;
+    setPendingKoreanWarning(null);
+    setPendingStage(null);
+    if (stage) {
+      actuallyStartStage(stage);
+    }
+  };
+
+  const handleWrongKeyboardDismiss = () => {
+    setShowWrongKeyboardWarning(false);
+    recentCharsRef.current = [];
+  };
+
+  const handleWrongKeyboardContinue = () => {
+    setShowWrongKeyboardWarning(false);
+    recentCharsRef.current = [];
   };
 
   const actuallyStartStage = (stage: StageConfig) => {
@@ -650,6 +685,20 @@ export function App() {
   // to avoid duplicate processing through the window keydown listener.
   const handleOSChar = (char: string) => {
     if (!enabled || !handlerRef.current || !state.currentEnemy) return;
+
+    // Detect Korean characters on non-Korean stages
+    const currentStage = state.currentStage;
+    if (currentStage && currentStage.language !== 'kr' && !showWrongKeyboardWarning && isKoreanCharacter(char)) {
+      recentCharsRef.current.push(char);
+      if (recentCharsRef.current.length >= 2) {
+        setShowWrongKeyboardWarning(true);
+        recentCharsRef.current = [];
+        return;
+      }
+    } else {
+      recentCharsRef.current = [];
+    }
+
     const mockEvent = {
       key: char,
       isComposing: false,
@@ -788,6 +837,18 @@ export function App() {
         onEnter={handleOSEnter}
         onEscape={handleOSEscape}
       />
+      {pendingKoreanWarning && (
+        <KoreanKeyboardWarning
+          onDismiss={handleKoreanWarningDismiss}
+          onContinue={handleKoreanWarningContinue}
+        />
+      )}
+      {showWrongKeyboardWarning && (
+        <NonKoreanKeyboardWarning
+          onDismiss={handleWrongKeyboardDismiss}
+          onContinue={handleWrongKeyboardContinue}
+        />
+      )}
     </>
   );
 }
