@@ -29,8 +29,14 @@ from pathlib import Path
 # Configuration
 # ============================================================================
 
-LANGUAGE_ROOT = Path("/Users/emilio/projects/Projects/Language")
-GAME_ROOT = Path("/Users/emilio/projects/Projects/Game/typing_language")
+LANGUAGE_ROOT = Path(os.environ.get(
+    "LANGUAGE_ROOT",
+    Path(__file__).parent.parent.parent.parent / "Language"
+)).resolve()
+GAME_ROOT = Path(os.environ.get(
+    "GAME_ROOT",
+    Path(__file__).parent.parent
+)).resolve()
 OUTPUT_PATH = GAME_ROOT / "prototype" / "src" / "data" / "dailyLessons.json"
 
 LANG_CODES = {
@@ -276,6 +282,9 @@ def slugify(text: str) -> str:
 def scan_wiki_pages(lang_dir: Path) -> dict:
     """Scan all wiki pages for a language.
 
+    Supports nested topic directories (e.g., vocabulary/food/meat.md).
+    Topic aggregator pages (index.md) use their parent directory as stem.
+
     Returns:
     {
       "vocabulary": { "name": WikiPage, ... },
@@ -296,12 +305,19 @@ def scan_wiki_pages(lang_dir: Path) -> dict:
         cat_dir = lang_dir / category
         if not cat_dir.exists():
             continue
-        for f in cat_dir.glob("*.md"):
+        # Recursively find all .md files in subdirectories
+        for f in cat_dir.glob("**/*.md"):
             text = f.read_text(encoding="utf-8")
-            stem = f.stem
+            # For index.md files (topic aggregators), use parent dir name as stem
+            if f.stem == "index":
+                stem = f.parent.name
+                filename = str(f.relative_to(cat_dir))
+            else:
+                stem = f.stem
+                filename = str(f.relative_to(cat_dir))
             result[category][stem] = {
                 "stem": stem,
-                "filename": f.name,
+                "filename": filename,
                 "title": extract_title(text),
                 "body": text,
                 "category": category.rstrip("s") if category != "sources" else "source",
@@ -312,12 +328,13 @@ def scan_wiki_pages(lang_dir: Path) -> dict:
     jp_travel_dir = lang_dir / "jp-travel-vocab"
     if jp_travel_dir.exists():
         result["jp-travel-vocab"] = {}
-        for f in jp_travel_dir.glob("*.md"):
+        for f in jp_travel_dir.glob("**/*.md"):
             text = f.read_text(encoding="utf-8")
-            stem = f.stem
+            stem = f.stem if f.stem != "index" else f.parent.name
+            filename = str(f.relative_to(jp_travel_dir))
             result["jp-travel-vocab"][stem] = {
                 "stem": stem,
-                "filename": f.name,
+                "filename": filename,
                 "title": extract_title(text),
                 "body": text,
                 "category": "vocabulary",

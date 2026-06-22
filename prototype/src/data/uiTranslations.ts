@@ -97,7 +97,16 @@ export type TranslationKey =
   | 'nativeLanguage' // 모국어 / Native Language
   | 'characterSelect' // 캐릭터 선택
   | 'randomCharacter' // 랜덤 캐릭터
-  | 'noCharacterSelected'; // 선택 안 함
+  | 'noCharacterSelected' // 선택 안 함
+  | 'stages' // 스테이지 (메뉴)
+  | 'bestScore' // 최고 점수
+  | 'points' // 점
+  | 'startingStage' // 시작 단계
+  | 'startingStageReady' // 시작 단계 - 바로 플레이 가능
+  | 'unlocked' // 잠금 해제
+  | 'locked' // 잠김
+  | 'tierRange' // 티어 범위
+  | 'menuFooter'; // 메뉴 푸터
 
 export const UI_STRINGS: Record<TranslationKey, Record<NativeLanguage, string>> = {
   // Stage / Game UI
@@ -204,6 +213,17 @@ export const UI_STRINGS: Record<TranslationKey, Record<NativeLanguage, string>> 
   characterSelect: { en: 'Character Select', ko: '캐릭터 선택', ja: 'キャラ選択', es: 'Selección de personaje' },
   randomCharacter: { en: 'Random', ko: '랜덤', ja: 'ランダム', es: 'Aleatorio' },
   noCharacterSelected: { en: 'No character selected', ko: '선택 안 함', ja: '未選択', es: 'Sin selección' },
+
+  // Menu specific
+  stages: { en: 'stages', ko: '스테이지', ja: 'ステージ', es: 'etapas' },
+  bestScore: { en: 'Best', ko: '최고', ja: '最高', es: 'Mejor' },
+  points: { en: 'pts', ko: '점', ja: '点', es: 'pts' },
+  startingStage: { en: 'Starting Stage', ko: '시작 단계', ja: '開始ステージ', es: 'Etapa inicial' },
+  startingStageReady: { en: 'Starting Stage — Ready to play!', ko: '시작 단계 — 바로 플레이할 수 있어요', ja: '開始ステージ — すぐにプレイ可能', es: '¡Etapa inicial — Listo para jugar!' },
+  unlocked: { en: 'Unlocked!', ko: '잠금 해제!', ja: 'ロック解除!', es: '¡Desbloqueado!' },
+  locked: { en: 'Locked', ko: '잠김', ja: 'ロック', es: 'Bloqueado' },
+  tierRange: { en: 'Tiers {min}-{max}', ko: '티어 {min}-{max}', ja: 'ティア{min}-{max}', es: 'Niveles {min}-{max}' },
+  menuFooter: { en: 'Words to paragraphs · {count} {stages}', ko: '단어부터 장문까지 6 티어 · 총 {count} 스테이지', ja: '単語から段落まで6ティア · 合計{count}ステージ', es: 'Palabras a párrafos · {count} {stages}' },
 };
 
 /**

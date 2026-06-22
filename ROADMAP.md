@@ -221,16 +221,16 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 **현재 상태**:
 - ✅ 게임 코어 완성 (입력/격파/미션/스테이지/캐릭터)
 - ✅ 4개 언어 지원 (EN/JP/ES/KR)
-- ✅ 30+ 스테이지 (Tier 1-3)
-- ✅ 106개 테스트 통과
-- ✅ 프로덕션 빌드 가능 (196KB gzip 61KB)
-- 🔄 배포 준비 중
+- ✅ 140 스테이지 (Tier 0-5, Romance/Travel 테마)
+- ✅ 666개 테스트 통과 (1 skipped)
+- ✅ 프로덕션 빌드 가능 (891KB gzip 264KB)
+- ✅ GitHub Pages 자동 배포
 
 **남은 작업**:
-1. 배포 설정 (GitHub Pages)
-2. 메타 태그/OG 이미지
-3. 사용자 피드백 수집
-4. 옵션 메뉴 구현
+1. ⚠️ 이슈 #4 Fix: Settings Native Language persistence
+2. ⚠️ 이슈 #1 Fix: Blank screen after multiple restarts
+3. 옵션 메뉴 구현 (키맵, 색맹 모드)
+4. 사운드 (BGM, SFX) - optional
 5. 추가 콘텐츠 (Tier 4-5)
 
 ---
@@ -256,8 +256,9 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 
 **프로젝트 현황**:
 - **코드베이스**: 15,000+ LOC
-- **테스트**: 106 tests (105 passed + 1 skipped)
-- **번들 크기**: 196KB (gzip 61KB)
+- **테스트**: 666 tests (666 passed + 1 skipped)
+- **번들 크기**: 891KB (gzip 264KB)
 - **언어**: 4개 (EN/JP/ES/KR)
-- **스테이지**: 30+
-- **총 콘텐츠**: 197 단어 + 66 문장
+- **스테이지**: 140
+- **Daily Lessons**: 45
+- **총 코퍼스**: EN 155 / JP 117 / ES 137 / KR 105

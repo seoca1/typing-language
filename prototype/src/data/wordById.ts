@@ -11,17 +11,23 @@ import { ES_WORDS } from './corpus.js';
 import { KR_WORDS } from './corpus.js';
 import type { WordEntry } from '../types.js';
 
-const ALL_WORDS: readonly WordEntry[] = [
-  ...EN_WORDS,
-  ...JP_WORDS,
-  ...ES_WORDS,
-  ...KR_WORDS,
-];
+let WORD_MAP: Map<string, WordEntry> | undefined;
 
-const WORD_MAP = new Map<string, WordEntry>(
-  ALL_WORDS.map((w) => [w.id, w])
-);
+function getWordMap(): Map<string, WordEntry> {
+  if (!WORD_MAP) {
+    const ALL_WORDS: readonly WordEntry[] = [
+      ...EN_WORDS,
+      ...JP_WORDS,
+      ...ES_WORDS,
+      ...KR_WORDS,
+    ];
+    WORD_MAP = new Map<string, WordEntry>(
+      ALL_WORDS.map((w) => [w.id, w])
+    );
+  }
+  return WORD_MAP;
+}
 
 export function lookupWordById(id: string): WordEntry | undefined {
-  return WORD_MAP.get(id);
+  return getWordMap().get(id);
 }

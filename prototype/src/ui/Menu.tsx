@@ -19,6 +19,8 @@ import {
   type StageLockInfo,
 } from '../data/stageLock.js';
 import { getStreakDisplay } from '../data/dailyStreak.js';
+import { getNativeLanguage, type NativeLanguage } from '../data/nativeLanguage.js';
+import { t } from '../data/uiTranslations.js';
 
 interface MenuProps {
   language: Language;
@@ -53,6 +55,7 @@ function StageCard({
   lock,
   selected,
   dataStageId,
+  nativeLanguage,
 }: {
   stage: StageConfig;
   onStart: (s: StageConfig) => void;
@@ -60,17 +63,16 @@ function StageCard({
   lock?: StageLockInfo;
   selected?: boolean;
   dataStageId?: string;
+  nativeLanguage: NativeLanguage;
 }) {
   const stars = record?.stars || 0;
   const cleared = record?.cleared || false;
   const bestScore = record?.bestScore || 0;
-  // Defensive fallback: if lock is undefined (e.g., stage not in lockMap),
-  // treat as unlocked
   const locked = lock ? !lock.unlocked : false;
   const lockReason = lock?.reason || '';
 
   const handleClick = () => {
-    if (locked) return; // Don't start locked stages
+    if (locked) return;
     onStart(stage);
   };
 
@@ -100,9 +102,9 @@ function StageCard({
       </div>
       <p>{locked ? lockReason : stage.description}</p>
       <div className="stage-footer">
-        <small>{stage.wordCount}개</small>
+        <small>{stage.wordCount} {t('words', nativeLanguage)}</small>
         {cleared && bestScore > 0 && (
-          <small className="best-score">최고: {bestScore}점</small>
+          <small className="best-score">{t('bestScore', nativeLanguage)}: {bestScore} {t('points', nativeLanguage)}</small>
         )}
         {locked && (
           <small className="lock-hint">{lockReason}</small>
@@ -120,6 +122,8 @@ export function Menu({
   onShowSettings,
   stageRecords,
 }: MenuProps) {
+  const nativeLanguage = getNativeLanguage();
+
   // 현재 언어의 스테이지만 필터링
   const languageStages = SAMPLE_STAGES.filter((s) => s.language === language);
   const byTier = stagesByTier(language);
@@ -239,13 +243,13 @@ export function Menu({
           {flag} {langInfo.native}
           <small> · {langInfo.en}</small>
         </h1>
-        <p>{languageStages.length}개 스테이지</p>
+        <p>{languageStages.length} {t('stages', nativeLanguage)}</p>
         <div className="menu-header-buttons">
           <button
             className="character-select-btn"
             onClick={() => onShowCharacterSelect(language)}
           >
-            👤 캐릭터 선택 {defaultCharacter ? `(${defaultCharacter.name})` : ''}
+            👤 {t('selectCharacter', nativeLanguage)} {defaultCharacter ? `(${defaultCharacter.name})` : ''}
           </button>
         </div>
       </header>
@@ -263,6 +267,7 @@ export function Menu({
                 lock={lockMap[s.id]}
                 selected={selectedIndex === i}
                 dataStageId={s.id}
+                nativeLanguage={nativeLanguage}
               />
             ))}
           </div>
@@ -283,7 +288,7 @@ export function Menu({
             <h3 className="tier-title">{TIER_LABELS[tier]}</h3>
             {showTier1Hint && (
               <p className="tier-hint tier-hint-auto">
-                ✨ 시작 단계 — 바로 플레이할 수 있어요
+                ✨ {t('startingStageReady', nativeLanguage)}
               </p>
             )}
             <div className="stage-grid">
@@ -298,6 +303,7 @@ export function Menu({
                     lock={lockMap[s.id]}
                     selected={selectedIndex === globalIndex}
                     dataStageId={s.id}
+                    nativeLanguage={nativeLanguage}
                   />
                 );
               })}
@@ -308,7 +314,7 @@ export function Menu({
 
       <footer className="menu-footer">
         <p>
-          단어부터 장문까지 6 티어 · 총 {languageStages.length}개 스테이지
+          {t('menuFooter', nativeLanguage).replace('{count}', String(languageStages.length)).replace('{stages}', t('stages', nativeLanguage))}
         </p>
       </footer>
     </div>

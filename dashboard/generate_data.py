@@ -20,8 +20,14 @@ from collections import defaultdict, Counter
 from datetime import datetime
 
 # Configuration
-LANGUAGE_ROOT = Path("/Users/emilio/projects/Projects/Language")
-GAME_ROOT = Path("/Users/emilio/projects/Projects/Game/typing_language")
+LANGUAGE_ROOT = Path(os.environ.get(
+    "LANGUAGE_ROOT",
+    Path(__file__).parent.parent.parent.parent / "Language"
+)).resolve()
+GAME_ROOT = Path(os.environ.get(
+    "GAME_ROOT",
+    Path(__file__).parent.parent
+)).resolve()
 DASHBOARD_DATA = GAME_ROOT / "dashboard" / "data"
 
 LANG_CODES = {
@@ -321,9 +327,6 @@ def compute_coverage(lang_code: str, wiki_data: dict, corpus_data: dict, stages_
 
     # Source coverage
     sources_count = len(wiki_data.get("sources", []))
-    raw_sources_count = (
-        len(scan_raw_sources({"English": "English", "Japanese": "Japanese", "Spanish": "Spanish", "Korean": "Korean"}.get(lang_code, "").title() if False else "")) if False else 0
-    )
 
     # Compute gaps: which stage needs corpus that doesn't exist yet
     gaps = []

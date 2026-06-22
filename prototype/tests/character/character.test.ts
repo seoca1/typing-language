@@ -152,11 +152,12 @@ describe('Character Configuration — CharacterInfo Metadata', () => {
 
       it('image src points to a real file', () => {
         const set = CHARACTER_IMAGES[id];
-        // src is like "/characters/en/emily/1-idle.png" — leading slash
-        // means it's relative to the public root (vite serves /public/ at /).
-        // Strip "/characters/" prefix and join with PUBLIC_DIR.
+        // src is like "/typing-language/characters/en/emily/1-idle.png" (GitHub Pages)
+        // or "/characters/en/emily/1-idle.png" (dev).
+        // Strip base path prefix and join with PUBLIC_DIR.
         const relative = set.idle.src
           .replace(/^\//, '')
+          .replace(/^typing-language\//, '')
           .replace(/^characters\//, '');
         const filepath = path.join(PUBLIC_DIR, relative);
         expect(fs.existsSync(filepath)).toBe(true);

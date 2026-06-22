@@ -1,30 +1,31 @@
 # Typing Language — 프로젝트 상태 리포트
 
-> **최종 업데이트**: 2026-06-20
-> **최종 커밋**: `8c1b60d`
-> **버전**: Phase A → J 완료 + 4개 버그 수정
+> **최종 업데이트**: 2026-06-23
+> **최종 커밋**: 구조적 재점검 + 리팩토링
+> **버전**: Phase 7 완료 직전 — 140 스테이지, 666 테스트
 
 ---
 
 ## 1. 한 줄 요약
 
-4개국어(EN/JP/ES/KR) 타이핑 학습 게임, **GitHub Pages 자동 배포**. **553 tests passing** (1 flaky 격리 통과), **617 KB / gzip 196 KB**, **42 daily lessons**, **12명 캐릭터 (84 PNG)**, **410 wiki 페이지**. 12단계 Phase + 4 버그 수정으로 완성도 대폭 향상.
+4개국어(EN/JP/ES/KR) 타이핑 학습 게임, **GitHub Pages 자동 배포**. **666 tests passing** (1 skipped), **891 KB / gzip 264 KB**, **45 daily lessons**, **12명 캐릭터 (84 PNG)**, **477+ wiki 페이지**. Phase 7 완성 직전.
 
 ---
 
 ## 2. 누적 메트릭
 
-| 항목 | 초기값 (Phase A 시작) | 최종값 (Phase J 완료) | 변화 |
+| 항목 | 초기값 (Phase A 시작) | 최종값 (현재) | 변화 |
 |---|---|---|---|
-| **테스트** | 313 passed | **553 passed** | +240 (+77%) |
-| 테스트 파일 | 14 | **20** | +6 |
-| **번들 크기** | 463 KB | **617 KB** | +33% |
-| gzip 크기 | 137 KB | **196 KB** | +43% |
-| CSS | 21 KB | 24 KB | +14% |
-| **daily lessons** | 11 | **42** | +281% |
-| Wiki 페이지 | 385 | **410** | +7% |
+| **테스트** | 313 passed | **666 passed** | +353 (+113%) |
+| 테스트 파일 | 14 | **23** | +9 |
+| **번들 크기** | 463 KB | **891 KB** | +92% |
+| gzip 크기 | 137 KB | **264 KB** | +93% |
+| CSS | 21 KB | 27 KB | +29% |
+| **daily lessons** | 11 | **45** | +309% |
+| Wiki 페이지 | 385 | **477+** | +24% |
+| **스테이지** | 30+ | **140** | +367% |
 | 신규 파일 | – | 7개 신규 + 5개 강화 | – |
-| 커밋 | – | **약 25개** (Phase A-J) | – |
+| 커밋 | – | **약 30개** (Phase A-J + refactor) | – |
 
 ### 언어별 학습 콘텐츠
 
@@ -237,14 +238,14 @@
 - `tests/data/dailyLessons.test.ts` (21 tests)
 - `tests/data/dailyStreak.test.ts` (15 tests)
 - `tests/data/nativeLanguage.test.ts` (23 tests)
-- `tests/data/stageLock.test.ts` (24 tests)
+- `tests/data/stageLock.test.ts` (28 tests)
 - `tests/data/wordMastery.test.ts` (20 tests)
 - `tests/effects/EffectsSystem.test.ts` (10 tests) *[1 flaky]*
 - `tests/engine/Keyboard.test.ts` (12 tests)
-- `tests/input/*` (5 files, ~50 tests)
-- `tests/stage/StageIntegration.test.ts` (10 tests)
-- `tests/ui/MarkdownView.test.tsx` (40 tests)
-- `tests/utils/*` (3 files, 76 tests)
+- `tests/input/*` (5 files, ~106 tests)
+- `tests/stage/StageIntegration.test.ts` (132 tests)
+- `tests/ui/MarkdownView.test.tsx` (37 tests)
+- `tests/utils/*` (3 files, 81 tests)
 
 ### Flaky 테스트
 - `EffectsSystem.test.ts > spawnFloatingWords > distributes across multiple perimeter slots`
@@ -275,9 +276,10 @@ https://seoca1.github.io/typing-language/
 | Phase D 후 | 524 KB | 165 KB |
 | Phase F 후 | 531 KB | 168 KB |
 | Phase H 후 | 609 KB | 193 KB |
-| Phase J 후 | **617 KB** | **196 KB** |
+| Phase J 후 | 617 KB | 196 KB |
+| **현재** | **891 KB** | **264 KB** |
 
-증가 원인: wikilink 해결을 위한 stub 페이지 9개 + daily lesson 콘텐츠 확장 + 신규 기능
+증가 원인: 140 스테이지 확장 + daily lesson 45개 + LearnScreen wiki 연동 + 캐릭터 12명
 
 ---
 
@@ -378,8 +380,8 @@ Game/typing_language/
 ```bash
 # 개발
 npm run dev          # Vite dev server
-npm test             # 553 tests
-npm run build        # 프로덕션 빌드
+npm test             # 666 tests (1 skipped)
+npm run build        # 프로덕션 빌드 (891 KB)
 
 # 콘텐츠 파이프라인
 uv run --with pyyaml python3 scripts/build-daily-lessons.py
