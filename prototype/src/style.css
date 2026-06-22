@@ -117,6 +117,12 @@ body {
   color: #6a7888;
 }
 
+.stage-card.stage-selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+  transform: scale(1.02);
+}
+
 .lock-badge {
   font-size: 1.25rem;
   opacity: 0.7;
@@ -956,6 +962,11 @@ button:hover {
   animation: pulse 0.5s infinite;
 }
 
+.key-kr {
+  min-width: 28px;
+  font-size: 0.85rem;
+}
+
 .key-space {
   flex: 1;
   min-width: 120px;
@@ -1704,6 +1715,13 @@ button:hover {
 
 .language-card:active {
   transform: translateY(-2px);
+}
+
+.language-card.language-card-selected {
+  border-color: var(--theme-color, #6366f1);
+  box-shadow: 0 0 24px rgba(99, 102, 241, 0.5),
+              0 0 0 2px var(--theme-color, #6366f1);
+  transform: translateY(-4px);
 }
 
 .language-flag {

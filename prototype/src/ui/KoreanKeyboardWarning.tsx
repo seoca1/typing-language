@@ -18,17 +18,32 @@ export function KoreanKeyboardWarning({ onDismiss, onContinue }: KoreanKeyboardW
         const next = [...prev, char].slice(-5);
         return next;
       });
-    } else if (e.key === 'Escape') {
-      onDismiss();
     } else if (e.key === 'Enter' || e.key === ' ') {
       onContinue();
     }
-  }, [onDismiss, onContinue]);
+  }, [onContinue]);
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        e.preventDefault();
+        onDismiss();
+      } else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        e.preventDefault();
+        const char = e.key.toLowerCase();
+        setTypedKeys(prev => {
+          const next = [...prev, char].slice(-5);
+          return next;
+        });
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        onContinue();
+      }
+    };
+
+    document.addEventListener('keydown', handler, true);
+    return () => document.removeEventListener('keydown', handler, true);
+  }, [handleKeyDown, onDismiss, onContinue]);
 
   useEffect(() => {
     const recentKeys = typedKeys.slice(-3);

@@ -4,8 +4,13 @@
  * 초기 진입 화면 - 학습할 언어 선택
  * 한 번 선택하면 해당 언어 스테이지 선택 화면으로 이동
  * 다른 언어로 바꾸려면 초기 화면으로 돌아가야 함
+ *
+ * 키보드 네비게이션:
+ * - ←↑→↓ : 언어 이동
+ * - Enter : 언어 선택
  */
 
+import { useState, useEffect, useCallback } from 'react';
 import type { LanguageConfig } from '../language/LanguageRegistry.js';
 import { getAllLanguages } from '../language/index.js';
 
@@ -35,12 +40,37 @@ export function LanguageSelection({
   onStartCharTest,
 }: LanguageSelectionProps) {
   const languages = getAllLanguages();
+  const COLS = 2;
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') {
+        setSelectedIndex((i) => Math.min(i + 1, languages.length - 1));
+      } else if (e.key === 'ArrowLeft') {
+        setSelectedIndex((i) => Math.max(i - 1, 0));
+      } else if (e.key === 'ArrowDown') {
+        setSelectedIndex((i) => Math.min(i + COLS, languages.length - 1));
+      } else if (e.key === 'ArrowUp') {
+        setSelectedIndex((i) => Math.max(i - COLS, 0));
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        const lang = languages[selectedIndex];
+        if (lang) onSelectLanguage(lang.code);
+      }
+    },
+    [languages, selectedIndex, onSelectLanguage]
+  );
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
 
   return (
     <div className="language-selection">
       <header className="language-selection-header">
         <h1>Typing Language</h1>
-        <p>외국어를 실제 입력하듯 타자하며 적을 격파하라</p>
+        <p>외국어를 실제 입력하듯 타자하며 배워보세요</p>
       </header>
 
       <section className="language-grid-section">
@@ -52,10 +82,10 @@ export function LanguageSelection({
         </p>
 
         <div className="language-grid">
-          {languages.map((lang: LanguageConfig) => (
+          {languages.map((lang: LanguageConfig, i: number) => (
             <button
               key={lang.code}
-              className="language-card"
+              className={`language-card ${selectedIndex === i ? 'language-card-selected' : ''}`}
               style={{
                 '--theme-color': LANGUAGE_THEME[lang.code] || '#6366f1',
               } as React.CSSProperties}
@@ -87,7 +117,7 @@ export function LanguageSelection({
           </button>
         )}
         <p className="language-selection-info">
-          {languages.length}개 언어 지원 · 각 언어별 7 티어 · 84개 스테이지
+          {languages.length}개 언어 지원 · 각 언어별 7 티어 · 140개 스테이지
         </p>
       </footer>
     </div>

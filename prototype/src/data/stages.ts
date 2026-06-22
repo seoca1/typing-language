@@ -260,6 +260,266 @@ const EN_STAGES: StageSpec[] = [
     corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['romance'] },
     missions: defaultMissionsForTier(3),
   },
+
+  // ===== 음식/요리 테마 (Food Theme) — source: [[food-vocabulary]] =====
+  {
+    id: 'en_f_1',
+    language: 'en',
+    tier: 2,
+    name: 'Food & Cooking',
+    description: '기본 음식 어휘 — meat, vegetable, fruits, beverages',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['food'] },
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 비즈니스 테마 (Business Theme) — source: [[business-vocabulary]] =====
+  {
+    id: 'en_b_1',
+    language: 'en',
+    tier: 2,
+    name: 'Business English',
+    description: '비즈니스 기본 어휘 — email, meeting, work expressions',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['business'] },
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 감정/성격 테마 (Emotion Theme) — source: [[emotions-personality-vocabulary]] =====
+  {
+    id: 'en_e_1',
+    language: 'en',
+    tier: 2,
+    name: 'Emotions & Personality',
+    description: '감정과 성격 표현 — happy, sad, kind, rude, personality traits',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['emotion'] },
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 자연/날씨 테마 (Nature Theme) — source: [[nature-vocabulary]] =====
+  {
+    id: 'en_n_1',
+    language: 'en',
+    tier: 2,
+    name: 'Nature & Weather',
+    description: '자연과 날씨 어휘 — sun, rain, mountain, forest, seasons',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['nature'] },
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 동물 테마 (Animals Theme) — source: [[animals-vocabulary]] =====
+  {
+    id: 'en_a_1',
+    language: 'en',
+    tier: 2,
+    name: 'Animals',
+    description: '동물 어휘 — pets, wild animals, insects, sea creatures',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['animals'] },
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 의류/패션 테마 (Clothing Theme) — source: [[clothing-vocabulary]] =====
+  {
+    id: 'en_c_1',
+    language: 'en',
+    tier: 2,
+    name: 'Clothing & Fashion',
+    description: '의류와 패션 어휘 — shirt, dress, shoes, materials',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['clothing'] },
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 감정/성격 테마 Tier 3 (Emotion Theme Lv2) — advanced emotions =====
+  {
+    id: 'en_e_2',
+    language: 'en',
+    tier: 3,
+    name: 'Emotions Advanced',
+    description: '고급 감정 표현 — to envy, to be grateful, flutter, jealous',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['emotion'] },
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 음식/요리 테마 Tier 3 (Food Theme Lv2) =====
+  {
+    id: 'en_f_2',
+    language: 'en',
+    tier: 3,
+    name: 'Food Advanced',
+    description: '고급 음식 어휘 — ingredients, cooking methods, dining',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['food'] },
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 비즈니스 테마 Tier 3 (Business Theme Lv2) =====
+  {
+    id: 'en_b_2',
+    language: 'en',
+    tier: 3,
+    name: 'Business Advanced',
+    description: '고급 비즈니스 어휘 — negotiation, strategy, corporate',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['business'] },
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 자연/날씨 테마 Tier 3 (Nature Theme Lv2) =====
+  {
+    id: 'en_n_2',
+    language: 'en',
+    tier: 3,
+    name: 'Nature Advanced',
+    description: '고급 자연 어휘 — ecosystem, geography, climate',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['nature'] },
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 동물 테마 Tier 3 (Animals Theme Lv2) =====
+  {
+    id: 'en_a_2',
+    language: 'en',
+    tier: 3,
+    name: 'Animals Advanced',
+    description: '고급 동물 어휘 — wildlife, marine life, animal behavior',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['animals'] },
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 의류/패션 테마 Tier 3 (Clothing Theme Lv2) =====
+  {
+    id: 'en_c_2',
+    language: 'en',
+    tier: 3,
+    name: 'Clothing Advanced',
+    description: '고급 의류 어휘 — designer brands, fashion trends, tailoring',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['clothing'] },
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 감정/성격 Tier 4 (Emotion Theme Lv3) — expert =====
+  {
+    id: 'en_e_3',
+    language: 'en',
+    tier: 4,
+    name: 'Emotions Expert',
+    description: '전문가 수준 감정 표현 — 복합 감정, 심리 상태',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['emotion'] },
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 음식/요리 Tier 4 (Food Theme Lv3) =====
+  {
+    id: 'en_f_3',
+    language: 'en',
+    tier: 4,
+    name: 'Food Expert',
+    description: '전문 음식 어휘 — 미슐랭, 와인 pairing, 고급 레시피',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['food'] },
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 비즈니스 Tier 4 (Business Theme Lv3) =====
+  {
+    id: 'en_b_3',
+    language: 'en',
+    tier: 4,
+    name: 'Business Expert',
+    description: '전문 비즈니스 어휘 — 인수합병, IPO, 현지화',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['business'] },
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 자연 Tier 4 (Nature Theme Lv3) =====
+  {
+    id: 'en_n_3',
+    language: 'en',
+    tier: 4,
+    name: 'Nature Expert',
+    description: '전문 자연 어휘 — 생물다양성, 기후변화, 지질학',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['nature'] },
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 동물 Tier 4 (Animals Theme Lv3) =====
+  {
+    id: 'en_a_3',
+    language: 'en',
+    tier: 4,
+    name: 'Animals Expert',
+    description: '전문 동물 어휘 — 종 보전, 생태학, 동물학',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['animals'] },
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 의류 Tier 4 (Clothing Theme Lv3) =====
+  {
+    id: 'en_c_3',
+    language: 'en',
+    tier: 4,
+    name: 'Clothing Expert',
+    description: '전문 의류 어휘 — Haute couture, 소재 공학, 패션 역사',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['clothing'] },
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 감정 Tier 5 (Emotion Theme Lv4) — master =====
+  {
+    id: 'en_e_4',
+    language: 'en',
+    tier: 5,
+    name: 'Emotions Master',
+    description: '마스터 수준 감정 표현 — 철학, 문학, 복합 감정',
+    difficulty: 5,
+    wordCount: 6,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['emotion'] },
+    missions: defaultMissionsForTier(5),
+  },
+
+  // ===== 음식 Tier 5 (Food Theme Lv4) =====
+  {
+    id: 'en_f_4',
+    language: 'en',
+    tier: 5,
+    name: 'Food Master',
+    description: '마스터 수준 음식 표현 — 미식가, food critic',
+    difficulty: 5,
+    wordCount: 6,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['food'] },
+    missions: defaultMissionsForTier(5),
+  },
 ];
 
 const JP_STAGES: StageSpec[] = [
@@ -479,6 +739,286 @@ const JP_STAGES: StageSpec[] = [
     corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['romance'] },
     missions: defaultMissionsForTier(3),
   },
+
+  // ===== 食べ物テーマ (Food Theme) — source: [[food-vocabulary]] =====
+  {
+    id: 'jp_f_1',
+    language: 'jp',
+    tier: 2,
+    name: '食べ物基本',
+    description: '基本的な食べ物語彙 — 肉、野菜、果物、飲み物',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['food'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== ビジネステーマ (Business Theme) — source: [[business-vocabulary]] =====
+  {
+    id: 'jp_b_1',
+    language: 'jp',
+    tier: 2,
+    name: 'ビジネス基本',
+    description: 'ビジネス基本語彙 — メール、会议、仕事表現',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['business'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 感情/性格テーマ (Emotion Theme) — source: [[emotions-personality-vocabulary]] =====
+  {
+    id: 'jp_e_1',
+    language: 'jp',
+    tier: 2,
+    name: '感情・性格',
+    description: '感情と性格表現 — 嬉しい、悲しい、性格描写',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['emotion'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 自然/天気テーマ (Nature Theme) — source: [[nature-vocabulary]] =====
+  {
+    id: 'jp_n_1',
+    language: 'jp',
+    tier: 2,
+    name: '自然・天気',
+    description: '自然と天気語彙 — 太陽、雨、山、森、季節',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['nature'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 動物テーマ (Animals Theme) — source: [[animals-vocabulary]] =====
+  {
+    id: 'jp_a_1',
+    language: 'jp',
+    tier: 2,
+    name: '動物',
+    description: '動物語彙 — ペット、野生动物、昆虫、海の生き物',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['animals'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 衣服/ファッションフォーラム (Clothing Theme) — source: [[clothing-vocabulary]] =====
+  {
+    id: 'jp_c_1',
+    language: 'jp',
+    tier: 2,
+    name: '衣服・ファッション',
+    description: '衣服とファッション語彙 — シャツ、ドレス、靴、素材',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['clothing'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 感情/性格 Tier 3 (Emotion Theme Lv2) =====
+  {
+    id: 'jp_e_2',
+    language: 'jp',
+    tier: 3,
+    name: '感情・性格 Advanced',
+    description: '上級感情表現 — 羨ましい、緊張する、心配する',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['emotion'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 食物 Tier 3 (Food Theme Lv2) =====
+  {
+    id: 'jp_f_2',
+    language: 'jp',
+    tier: 3,
+    name: '食物 Advanced',
+    description: '上級食物語彙 — 食材、調理法、食文化',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['food'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== ビジネス Tier 3 (Business Theme Lv2) =====
+  {
+    id: 'jp_b_2',
+    language: 'jp',
+    tier: 3,
+    name: 'ビジネス Advanced',
+    description: '上級ビジネス語彙 — 交渉、戦略、企業',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['business'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 自然 Tier 3 (Nature Theme Lv2) =====
+  {
+    id: 'jp_n_2',
+    language: 'jp',
+    tier: 3,
+    name: '自然 Advanced',
+    description: '上級自然語彙 — 生態系、地理、気候',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['nature'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 動物 Tier 3 (Animals Theme Lv2) =====
+  {
+    id: 'jp_a_2',
+    language: 'jp',
+    tier: 3,
+    name: '動物 Advanced',
+    description: '上級動物語彙 — 野生生物、海洋生物、動物の行動',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['animals'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 衣服 Tier 3 (Clothing Theme Lv2) =====
+  {
+    id: 'jp_c_2',
+    language: 'jp',
+    tier: 3,
+    name: '衣服 Advanced',
+    description: '上級衣服語彙 — デザイナーブランド、ファッション趋势、仕立て',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['clothing'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 感情/性格 Tier 4 (Emotion Theme Lv3) =====
+  {
+    id: 'jp_e_3',
+    language: 'jp',
+    tier: 4,
+    name: '感情・性格 Expert',
+    description: '전문 수준 감정 표현 — 복합 감정, 심리 상태',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['emotion'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 食物 Tier 4 (Food Theme Lv3) =====
+  {
+    id: 'jp_f_3',
+    language: 'jp',
+    tier: 4,
+    name: '食物 Expert',
+    description: '전문 음식 어휘 — ミシュuran、ワイン pairing、高給レシピ',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['food'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== ビジネス Tier 4 (Business Theme Lv3) =====
+  {
+    id: 'jp_b_3',
+    language: 'jp',
+    tier: 4,
+    name: 'ビジネス Expert',
+    description: '전문 비즈니스 어휘 — M&A、IPO、ローカライゼーション',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['business'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 自然 Tier 4 (Nature Theme Lv3) =====
+  {
+    id: 'jp_n_3',
+    language: 'jp',
+    tier: 4,
+    name: '自然 Expert',
+    description: '전문 자연 어휘 — 生物多様性、気候変動、地質学',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['nature'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 動物 Tier 4 (Animals Theme Lv3) =====
+  {
+    id: 'jp_a_3',
+    language: 'jp',
+    tier: 4,
+    name: '動物 Expert',
+    description: '전문 동물 어휘 — 種の保全、生態学、動物学',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['animals'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 衣服 Tier 4 (Clothing Theme Lv3) =====
+  {
+    id: 'jp_c_3',
+    language: 'jp',
+    tier: 4,
+    name: '衣服 Expert',
+    description: '전문 의류 어휘 — Otteutu、素材工学、ファッション歴史',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['clothing'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 感情 Tier 5 (Emotion Theme Lv4) =====
+  {
+    id: 'jp_e_4',
+    language: 'jp',
+    tier: 5,
+    name: '感情 Master',
+    description: 'マスター 수준 감정 표현 — 철학, 문학, 복합 감정',
+    difficulty: 5,
+    wordCount: 6,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['emotion'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(5),
+  },
+
+  // ===== 食物 Tier 5 (Food Theme Lv4) =====
+  {
+    id: 'jp_f_4',
+    language: 'jp',
+    tier: 5,
+    name: '食物 Master',
+    description: 'マスター 수준 음식 표현 — 미식가, food critic',
+    difficulty: 5,
+    wordCount: 6,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['food'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(5),
+  },
 ];
 
 const ES_STAGES: StageSpec[] = [
@@ -667,6 +1207,286 @@ const ES_STAGES: StageSpec[] = [
     accentMode: 'loose',
     missions: defaultMissionsForTier(3),
   },
+
+  // ===== Comida theme (Food Theme) — source: [[food-vocabulary]] =====
+  {
+    id: 'es_f_1',
+    language: 'es',
+    tier: 2,
+    name: 'Comida y Bebida',
+    description: '基本的食べ物 vocabulary — carne, verduras, frutas',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['food'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== Negocios theme (Business Theme) — source: [[business-vocabulary]] =====
+  {
+    id: 'es_b_1',
+    language: 'es',
+    tier: 2,
+    name: 'Negocios Básico',
+    description: '、基本 business vocabulary — correo, reunión, trabajo',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['business'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== Emociones y Personalidad (Emotion Theme) — source: [[emotions-personality-vocabulary]] =====
+  {
+    id: 'es_e_1',
+    language: 'es',
+    tier: 2,
+    name: 'Emociones y Personalidad',
+    description: 'Emoción y personalidad — feliz, triste, amable, grosero',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['emotion'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== Naturaleza y Clima (Nature Theme) — source: [[nature-vocabulary]] =====
+  {
+    id: 'es_n_1',
+    language: 'es',
+    tier: 2,
+    name: 'Naturaleza y Clima',
+    description: 'Naturaleza y tiempo — sol, lluvia, montaña, bosque, estaciones',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['nature'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== Animales (Animals Theme) — source: [[animals-vocabulary]] =====
+  {
+    id: 'es_a_1',
+    language: 'es',
+    tier: 2,
+    name: 'Animales',
+    description: 'Animalés — mascotas, animales salvajes, insectos, criaturas marinas',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['animals'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== Ropa y Moda (Clothing Theme) — source: [[clothing-vocabulary]] =====
+  {
+    id: 'es_c_1',
+    language: 'es',
+    tier: 2,
+    name: 'Ropa y Moda',
+    description: 'Ropa y moda — camisa, vestido, zapatos, materiales',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['clothing'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== Emociones Tier 3 (Emotion Theme Lv2) =====
+  {
+    id: 'es_e_2',
+    language: 'es',
+    tier: 3,
+    name: 'Emociones Advanced',
+    description: 'Emoción avanzada — envidiar, agradecer, aletear, celoso',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['emotion'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== Comida Tier 3 (Food Theme Lv2) =====
+  {
+    id: 'es_f_2',
+    language: 'es',
+    tier: 3,
+    name: 'Comida Advanced',
+    description: 'Comida avanzada — ingredientes, métodos de cocción, dining',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['food'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== Negocios Tier 3 (Business Theme Lv2) =====
+  {
+    id: 'es_b_2',
+    language: 'es',
+    tier: 3,
+    name: 'Negocios Advanced',
+    description: 'Negocio avanzado — negociación, estrategia, corporativa',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['business'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== Naturaleza Tier 3 (Nature Theme Lv2) =====
+  {
+    id: 'es_n_2',
+    language: 'es',
+    tier: 3,
+    name: 'Naturaleza Advanced',
+    description: 'Naturaleza avanzada — ecosistema, geografía, clima',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['nature'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== Animales Tier 3 (Animals Theme Lv2) =====
+  {
+    id: 'es_a_2',
+    language: 'es',
+    tier: 3,
+    name: 'Animales Advanced',
+    description: 'Animales avanzados — fauna salvaje, vida marina, comportamiento',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['animals'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== Ropa Tier 3 (Clothing Theme Lv2) =====
+  {
+    id: 'es_c_2',
+    language: 'es',
+    tier: 3,
+    name: 'Ropa Advanced',
+    description: 'Ropa avanzada — marcas de diseñador, tendencias, sastrería',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['clothing'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== Emociones Tier 4 (Emotion Theme Lv3) =====
+  {
+    id: 'es_e_3',
+    language: 'es',
+    tier: 4,
+    name: 'Emociones Expert',
+    description: 'experto 감정 표현 — 복합 감정, 심리 상태',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['emotion'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== Comida Tier 4 (Food Theme Lv3) =====
+  {
+    id: 'es_f_3',
+    language: 'es',
+    tier: 4,
+    name: 'Comida Expert',
+    description: 'experto 음식 어휘 — 미슐랭, 와인 pairing, 고급 레시피',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['food'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== Negocios Tier 4 (Business Theme Lv3) =====
+  {
+    id: 'es_b_3',
+    language: 'es',
+    tier: 4,
+    name: 'Negocios Expert',
+    description: 'experto 비즈니스 어휘 — 인수합병, IPO, 현지화',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['business'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== Naturaleza Tier 4 (Nature Theme Lv3) =====
+  {
+    id: 'es_n_3',
+    language: 'es',
+    tier: 4,
+    name: 'Naturaleza Expert',
+    description: 'experto 자연 어휘 — 생물다양성, 기후변화, 지질학',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['nature'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== Animales Tier 4 (Animals Theme Lv3) =====
+  {
+    id: 'es_a_3',
+    language: 'es',
+    tier: 4,
+    name: 'Animales Expert',
+    description: 'experto 동물 어휘 — 종 보전, 생태학, 동물학',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['animals'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== Ropa Tier 4 (Clothing Theme Lv3) =====
+  {
+    id: 'es_c_3',
+    language: 'es',
+    tier: 4,
+    name: 'Ropa Expert',
+    description: 'experto 의류 어휘 — Otteutu, 소재 공학, 패션 역사',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['clothing'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== Emociones Tier 5 (Emotion Theme Lv4) =====
+  {
+    id: 'es_e_4',
+    language: 'es',
+    tier: 5,
+    name: 'Emociones Master',
+    description: 'master 수준 감정 표현 — 철학, 문학, 복합 감정',
+    difficulty: 5,
+    wordCount: 6,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['emotion'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(5),
+  },
+
+  // ===== Comida Tier 5 (Food Theme Lv4) =====
+  {
+    id: 'es_f_4',
+    language: 'es',
+    tier: 5,
+    name: 'Comida Master',
+    description: 'master 수준 음식 표현 — 미식가, food critic',
+    difficulty: 5,
+    wordCount: 6,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['food'] },
+    accentMode: 'loose',
+    missions: defaultMissionsForTier(5),
+  },
 ];
 
 const KR_STAGES: StageSpec[] = [
@@ -845,6 +1665,286 @@ const KR_STAGES: StageSpec[] = [
     wordCount: 10,
     corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['romance'] },
     missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 음식/요리 테마 (Food Theme) — source: [[food-vocabulary]] =====
+  {
+    id: 'kr_f_1',
+    language: 'kr',
+    tier: 2,
+    name: '한국 음식',
+    description: '기본 음식 어휘 — 고기, 야채, 과일, 한국 음식',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['food'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 비즈니스 테마 (Business Theme) — source: [[business-vocabulary]] =====
+  {
+    id: 'kr_b_1',
+    language: 'kr',
+    tier: 2,
+    name: '비즈니스 기본',
+    description: '비즈니스 기본 어휘 — 이메일, 회의, 직장 표현',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['business'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 감정/성격 테마 (Emotion Theme) — source: [[emotions-personality-vocabulary]] =====
+  {
+    id: 'kr_e_1',
+    language: 'kr',
+    tier: 2,
+    name: '감정·성격',
+    description: '감정과 성격 표현 — 기쁨, 슬픔, 성격 묘사',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['emotion'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 자연/날씨 테마 (Nature Theme) — source: [[nature-vocabulary]] =====
+  {
+    id: 'kr_n_1',
+    language: 'kr',
+    tier: 2,
+    name: '자연·날씨',
+    description: '자연과 날씨 어휘 — 태양, 비, 산, 숲, 계절',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['nature'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 동물 테마 (Animals Theme) — source: [[animals-vocabulary]] =====
+  {
+    id: 'kr_a_1',
+    language: 'kr',
+    tier: 2,
+    name: '동물',
+    description: '동물 어휘 — 반려동물, 야생동물, 곤충, 해양 생물',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['animals'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 의류/패션 테마 (Clothing Theme) — source: [[clothing-vocabulary]] =====
+  {
+    id: 'kr_c_1',
+    language: 'kr',
+    tier: 2,
+    name: '의류·패션',
+    description: '의류와 패션 어휘 — 셔츠, 드레스, 구두, 소재',
+    difficulty: 2,
+    wordCount: 12,
+    corpusFilter: { minLevel: 1, maxLevel: 2, categories: ['clothing'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(2),
+  },
+
+  // ===== 감정/성격 Tier 3 (Emotion Theme Lv2) =====
+  {
+    id: 'kr_e_2',
+    language: 'kr',
+    tier: 3,
+    name: '감정·성격 Advanced',
+    description: '고급 감정 표현 — 부럽다, 감사하다, 설레다, 질투하다',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['emotion'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 음식/요리 Tier 3 (Food Theme Lv2) =====
+  {
+    id: 'kr_f_2',
+    language: 'kr',
+    tier: 3,
+    name: '음식 Advanced',
+    description: '고급 음식 어휘 — 재료, 조리법, 식문화',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['food'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 비즈니스 Tier 3 (Business Theme Lv2) =====
+  {
+    id: 'kr_b_2',
+    language: 'kr',
+    tier: 3,
+    name: '비즈니스 Advanced',
+    description: '고급 비즈니스 어휘 — 협상, 전략, 기업',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['business'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 자연/날씨 Tier 3 (Nature Theme Lv2) =====
+  {
+    id: 'kr_n_2',
+    language: 'kr',
+    tier: 3,
+    name: '자연 Advanced',
+    description: '고급 자연 어휘 — 생태계, 지리, 기후',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['nature'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 동물 Tier 3 (Animals Theme Lv2) =====
+  {
+    id: 'kr_a_2',
+    language: 'kr',
+    tier: 3,
+    name: '동물 Advanced',
+    description: '고급 동물 어휘 — 야생동물, 해양생물, 동물 행동',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['animals'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 의류/패션 Tier 3 (Clothing Theme Lv2) =====
+  {
+    id: 'kr_c_2',
+    language: 'kr',
+    tier: 3,
+    name: '의류 Advanced',
+    description: '고급 의류 어휘 — 디자이너 브랜드, 패션 트렌드, 재단',
+    difficulty: 3,
+    wordCount: 10,
+    corpusFilter: { minLevel: 2, maxLevel: 3, categories: ['clothing'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(3),
+  },
+
+  // ===== 감정/성격 Tier 4 (Emotion Theme Lv3) =====
+  {
+    id: 'kr_e_3',
+    language: 'kr',
+    tier: 4,
+    name: '감정 Expert',
+    description: '전문가 수준 감정 표현 — 복합 감정, 심리 상태',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['emotion'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 음식/요리 Tier 4 (Food Theme Lv3) =====
+  {
+    id: 'kr_f_3',
+    language: 'kr',
+    tier: 4,
+    name: '음식 Expert',
+    description: '전문 음식 어휘 — 미슐랭, 와인 pairing, 고급 레시피',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['food'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 비즈니스 Tier 4 (Business Theme Lv3) =====
+  {
+    id: 'kr_b_3',
+    language: 'kr',
+    tier: 4,
+    name: '비즈니스 Expert',
+    description: '전문 비즈니스 어휘 — 인수합병, IPO, 현지화',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['business'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 자연 Tier 4 (Nature Theme Lv3) =====
+  {
+    id: 'kr_n_3',
+    language: 'kr',
+    tier: 4,
+    name: '자연 Expert',
+    description: '전문 자연 어휘 — 생물다양성, 기후변화, 지질학',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['nature'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 동물 Tier 4 (Animals Theme Lv3) =====
+  {
+    id: 'kr_a_3',
+    language: 'kr',
+    tier: 4,
+    name: '동물 Expert',
+    description: '전문 동물 어휘 — 종 보전, 생태학, 동물학',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['animals'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 의류 Tier 4 (Clothing Theme Lv3) =====
+  {
+    id: 'kr_c_3',
+    language: 'kr',
+    tier: 4,
+    name: '의류 Expert',
+    description: '전문 의류 어휘 — Otteutu, 소재 공학, 패션 역사',
+    difficulty: 4,
+    wordCount: 8,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['clothing'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(4),
+  },
+
+  // ===== 감정 Tier 5 (Emotion Theme Lv4) =====
+  {
+    id: 'kr_e_4',
+    language: 'kr',
+    tier: 5,
+    name: '감정 Master',
+    description: '마스터 수준 감정 표현 — 철학, 문학, 복합 감정',
+    difficulty: 5,
+    wordCount: 6,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['emotion'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(5),
+  },
+
+  // ===== 음식 Tier 5 (Food Theme Lv4) =====
+  {
+    id: 'kr_f_4',
+    language: 'kr',
+    tier: 5,
+    name: '음식 Master',
+    description: '마스터 수준 음식 표현 — 미식가, food critic',
+    difficulty: 5,
+    wordCount: 6,
+    corpusFilter: { minLevel: 3, maxLevel: 3, categories: ['food'] },
+    romajiHint: true,
+    missions: defaultMissionsForTier(5),
   },
 ];
 

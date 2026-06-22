@@ -29,9 +29,12 @@ const LAYOUTS: Record<Language, string[][]> = {
     ['á', 'é', 'í', 'ó', 'ú', '¿', '¡'], // Accent row
   ],
   kr: [
-    ['ㅂ', 'ㅈ', 'ㄷ', 'ㄱ', 'ㅅ', 'ㅛ', 'ㅕ', 'ㅑ', 'ㅐ', 'ㅔ'],
-    ['ㅁ', 'ㄴ', 'ㅇ', 'ㄹ', 'ㅎ', 'ㅗ', 'ㅓ', 'ㅏ', 'ㅣ'],
-    ['ㅋ', 'ㅌ', 'ㅊ', 'ㅍ', 'ㅠ', 'ㅜ', 'ㅡ'],
+    // 2-beol (두벌식) 자음 배열
+    ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'],
+    // 2-beol 모음 배열
+    ['ㅏ', 'ㅑ', 'ㅓ', 'ㅕ', 'ㅗ', 'ㅛ', 'ㅜ', 'ㅠ', 'ㅡ', 'ㅣ'],
+    // 복합모음
+    ['ㅐ', 'ㅒ', 'ㅔ', 'ㅖ', 'ㅘ', 'ㅙ', 'ㅚ', 'ㅝ', 'ㅞ', 'ㅟ', 'ㅢ'],
   ],
 };
 
@@ -40,11 +43,11 @@ export function VirtualKeyboard({ language, onKeyPress, expectedChar }: VirtualK
   const layout = LAYOUTS[language] || LAYOUTS.en;
 
   const handleKeyClick = (key: string) => {
-    // Spanish: shift disabled (accent row handles accents directly)
-    // Other languages: apply shift
-    const finalKey = shift && language !== 'es' ? key.toUpperCase() : key;
+    // Korean/ES: no shift (Korean has no case, ES uses accent row)
+    // English/JP: apply shift for uppercase
+    const finalKey = shift && language !== 'es' && language !== 'kr' ? key.toUpperCase() : key;
     onKeyPress(finalKey);
-    if (shift && language !== 'es') setShift(false); // Auto-unshift after key press
+    if (shift && language !== 'es' && language !== 'kr') setShift(false);
   };
 
   const handleBackspace = () => {
@@ -59,18 +62,20 @@ export function VirtualKeyboard({ language, onKeyPress, expectedChar }: VirtualK
     onKeyPress(' ');
   };
 
+  const isKorean = language === 'kr';
+
   return (
     <div className="virtual-keyboard">
       {layout.map((row, rowIndex) => (
-        <div key={rowIndex} className="keyboard-row">
+        <div key={rowIndex} className={`keyboard-row ${isKorean && rowIndex === 2 ? 'keyboard-row-kr-vowels' : ''}`}>
           {row.map((key) => {
-            const displayKey = shift ? key.toUpperCase() : key;
+            const displayKey = shift && language !== 'es' && language !== 'kr' ? key.toUpperCase() : key;
             const isExpected = expectedChar && displayKey.toLowerCase() === expectedChar.toLowerCase();
-            
+
             return (
               <button
                 key={key}
-                className={`key ${isExpected ? 'key-expected' : ''}`}
+                className={`key ${isExpected ? 'key-expected' : ''} ${isKorean ? 'key-kr' : ''}`}
                 onClick={() => handleKeyClick(key)}
               >
                 {displayKey}
@@ -80,9 +85,11 @@ export function VirtualKeyboard({ language, onKeyPress, expectedChar }: VirtualK
         </div>
       ))}
       <div className="keyboard-row keyboard-controls">
-        <button className="key key-shift" onClick={() => setShift(!shift)}>
-          {shift ? '⬆' : '⇧'}
-        </button>
+        {!isKorean && (
+          <button className="key key-shift" onClick={() => setShift(!shift)}>
+            {shift ? '⬆' : '⇧'}
+          </button>
+        )}
         <button className="key key-space" onClick={handleSpace}>
           Space
         </button>

@@ -89,13 +89,16 @@ export const OSKeyboardInput = forwardRef<OSKeyboardInputHandle, OSKeyboardInput
       return;
     }
     // Focus the input to trigger OS keyboard on mobile
-    const focusInput = () => {
-      inputRef.current?.focus();
-    };
-    // Defer to next tick so the DOM is ready
-    const timer = setTimeout(focusInput, 50);
-    return () => clearTimeout(timer);
+    // Immediate focus when stage becomes active
+    inputRef.current?.focus();
   }, [enabled]);
+
+  // Also focus when component mounts (for LearnScreen and initial load)
+  useEffect(() => {
+    if (enabled && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
 
   // Re-focus when language changes (so OS picks the right keyboard)
   useEffect(() => {

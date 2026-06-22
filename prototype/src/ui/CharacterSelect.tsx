@@ -1,21 +1,21 @@
 /**
  * Character Selection Screen
- * 
+ *
  * Displays 3 characters for the current language
  * Allows player to choose their preferred character
  */
 
 import React, { useRef, useEffect, useState } from 'react';
 import type { GameAction } from '../state/gameReducer.js';
-import { 
-  LANGUAGE_CHARACTERS, 
-  CHARACTER_INFO, 
+import {
+  LANGUAGE_CHARACTERS,
+  CHARACTER_INFO,
+  CHARACTER_IMAGES,
   getCharacterForLanguage,
-  type CharacterInfo 
+  type CharacterInfo
 } from '../config/characterImages.js';
-import { renderCharacterPrimitive } from '../character/CharacterRenderer.js';
+import { ImageLoader } from '../sprites/ImageLoader.js';
 import { setCharacter } from '../character/CharacterSelector.js';
-import { createInitialCharacterState } from '../character/CharacterController.js';
 
 interface CharacterSelectProps {
   language: string;
@@ -23,13 +23,14 @@ interface CharacterSelectProps {
 }
 
 export function CharacterSelect({ language, dispatch }: CharacterSelectProps) {
-  const canvasRefs = [
-    useRef<HTMLCanvasElement>(null),
-    useRef<HTMLCanvasElement>(null),
-    useRef<HTMLCanvasElement>(null),
+  const imgRefs = [
+    useRef<HTMLImageElement>(null),
+    useRef<HTMLImageElement>(null),
+    useRef<HTMLImageElement>(null),
   ];
-  
+
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const characterIds = LANGUAGE_CHARACTERS[language] || LANGUAGE_CHARACTERS['en'];
   const characters: CharacterInfo[] = characterIds.map(id => CHARACTER_INFO[id]);
 
@@ -42,40 +43,27 @@ export function CharacterSelect({ language, dispatch }: CharacterSelectProps) {
     }
   }, [language, characterIds]);
 
-  // Render character previews
+  // Load character images
   useEffect(() => {
-    const renderPreviews = () => {
-      canvasRefs.forEach((ref, index) => {
-        const canvas = ref.current;
-        if (!canvas) return;
+    const loadImages = async () => {
+      const imagesToLoad = characterIds.map(id => {
+        const imageSet = CHARACTER_IMAGES[id];
+        return imageSet?.idle;
+      }).filter(Boolean);
 
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-
-        // Clear canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Draw character
-        const characterState = createInitialCharacterState();
-        characterState.language = language as any;
-
-        renderCharacterPrimitive(ctx, characterState, canvas.width / 2, canvas.height - 50, Date.now());
-
-        // Draw selection highlight
-        if (index === selectedIndex) {
-          ctx.strokeStyle = '#00ff00';
-          ctx.lineWidth = 3;
-          ctx.strokeRect(5, 5, canvas.width - 10, canvas.height - 10);
-        }
-      });
+      try {
+        await ImageLoader.preload(imagesToLoad as any[]);
+        setImagesLoaded(true);
+      } catch (err) {
+        console.error('Failed to load character images:', err);
+        setImagesLoaded(false);
+      }
     };
 
-    renderPreviews();
-    const interval = setInterval(renderPreviews, 100);
-    return () => clearInterval(interval);
-  }, [selectedIndex, language]);
+    loadImages();
+  }, [characterIds]);
 
-  // Keyboard input
+  // Handle keyboard input
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === '1') setSelectedIndex(0);
@@ -108,11 +96,16 @@ export function CharacterSelect({ language, dispatch }: CharacterSelectProps) {
     dispatch({ type: 'SELECT_CHARACTER', characterId: selectedCharacterId });
   };
 
+  const getCharacterImage = (characterId: string) => {
+    const imageSet = CHARACTER_IMAGES[characterId];
+    return imageSet?.idle?.src || '';
+  };
+
   return (
     <div className="character-select">
       <h1>Choose Your Character</h1>
       <p className="language-label">Language: {language.toUpperCase()}</p>
-      
+
       <div className="character-grid">
         {characters.map((char, index) => (
           <div
@@ -120,12 +113,20 @@ export function CharacterSelect({ language, dispatch }: CharacterSelectProps) {
             className={`character-card ${index === selectedIndex ? 'selected' : ''}`}
             onClick={() => handleCharacterClick(index)}
           >
-            <canvas
-              ref={canvasRefs[index]}
-              width={200}
-              height={200}
-              className="character-preview"
-            />
+            <div className="character-image-container">
+              <img
+                ref={imgRefs[index]}
+                src={getCharacterImage(char.id)}
+                alt={char.name}
+                className="character-preview"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+              />
+              {!imagesLoaded && (
+                <div className="character-loading">Loading...</div>
+              )}
+            </div>
             <h2>{char.name}</h2>
             <p className="character-description">{char.description}</p>
             <p className="character-style">Style: {char.style}</p>

@@ -1,10 +1,16 @@
 /**
  * Stage Selection Screen (단일 언어)
  *
- * 선택된 언어의 스테이지 카드들을 표시
+ * 선택된 언어의 스테이지 카드들를 표시
  * 캐릭터 선택 버튼 + 뒤로가기 버튼 포함
+ *
+ * 키보드 네비게이션:
+ * - ↑↓←→ : 스테이지 이동
+ * - Enter : 스테이지 시작
+ * - Escape : 뒤로 가기
  */
 
+import { useState, useEffect, useCallback } from 'react';
 import type { StageConfig, StageRecord, Language } from '../types.js';
 import { SAMPLE_STAGES, stagesByTier, type StageTier } from '../data/stages.js';
 import { CHARACTER_INFO } from '../config/characterImages.js';
@@ -45,11 +51,15 @@ function StageCard({
   onStart,
   record,
   lock,
+  selected,
+  dataStageId,
 }: {
   stage: StageConfig;
   onStart: (s: StageConfig) => void;
   record?: StageRecord;
   lock?: StageLockInfo;
+  selected?: boolean;
+  dataStageId?: string;
 }) {
   const stars = record?.stars || 0;
   const cleared = record?.cleared || false;
@@ -66,10 +76,11 @@ function StageCard({
 
   return (
     <button
-      className={`stage-card ${cleared ? 'stage-cleared' : ''} ${locked ? 'stage-locked' : ''}`}
+      className={`stage-card ${cleared ? 'stage-cleared' : ''} ${locked ? 'stage-locked' : ''} ${selected ? 'stage-selected' : ''}`}
       onClick={handleClick}
       disabled={locked}
       title={locked ? lockReason : stage.description}
+      data-stage-id={dataStageId}
     >
       <div className="stage-card-header">
         <h3>
@@ -134,6 +145,58 @@ export function Menu({
   // Phase J: daily streak display
   const streak = getStreakDisplay();
 
+  // 키보드 네비게이션
+  const GRID_COLS = 3;
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const allStageIds = allLanguageStages.map((s) => s.id);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onBackToLanguageSelect();
+        return;
+      }
+
+      if (selectedIndex < 0) return;
+
+      const currentStage = allLanguageStages[selectedIndex];
+      if (!currentStage) return;
+
+      if (e.key === 'Enter' || e.key === ' ') {
+        const lock = lockMap[currentStage.id];
+        const locked = lock ? !lock.unlocked : false;
+        if (!locked) {
+          onStartStage(currentStage);
+        }
+        return;
+      }
+
+      let newIndex = selectedIndex;
+      if (e.key === 'ArrowRight') {
+        newIndex = Math.min(selectedIndex + 1, allStageIds.length - 1);
+      } else if (e.key === 'ArrowLeft') {
+        newIndex = Math.max(selectedIndex - 1, 0);
+      } else if (e.key === 'ArrowDown') {
+        newIndex = Math.min(selectedIndex + GRID_COLS, allStageIds.length - 1);
+      } else if (e.key === 'ArrowUp') {
+        newIndex = Math.max(selectedIndex - GRID_COLS, 0);
+      }
+
+      if (newIndex !== selectedIndex) {
+        setSelectedIndex(newIndex);
+        // Scroll the selected card into view
+        const card = document.querySelector(`[data-stage-id="${allStageIds[newIndex]}"]`);
+        card?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    },
+    [selectedIndex, allLanguageStages, allStageIds, lockMap, onStartStage, onBackToLanguageSelect]
+  );
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
+
   const languageNames: Record<string, { native: string; en: string }> = {
     en: { native: 'English', en: '영어' },
     jp: { native: '日本語', en: '일본어' },
@@ -191,13 +254,15 @@ export function Menu({
         <section className="tier-group">
           <h3 className="tier-title">{TIER_LABELS[0]}</h3>
           <div className="stage-grid">
-            {byTier[0].map((s) => (
+            {byTier[0].map((s, i) => (
               <StageCard
                 key={s.id}
                 stage={s}
                 onStart={onStartStage}
                 record={stageRecords?.[s.id]}
                 lock={lockMap[s.id]}
+                selected={selectedIndex === i}
+                dataStageId={s.id}
               />
             ))}
           </div>
@@ -222,15 +287,20 @@ export function Menu({
               </p>
             )}
             <div className="stage-grid">
-              {tierStages.map((s) => (
-                <StageCard
-                  key={s.id}
-                  stage={s}
-                  onStart={onStartStage}
-                  record={stageRecords?.[s.id]}
-                  lock={lockMap[s.id]}
-                />
-              ))}
+              {tierStages.map((s) => {
+                const globalIndex = allLanguageStages.findIndex((st) => st.id === s.id);
+                return (
+                  <StageCard
+                    key={s.id}
+                    stage={s}
+                    onStart={onStartStage}
+                    record={stageRecords?.[s.id]}
+                    lock={lockMap[s.id]}
+                    selected={selectedIndex === globalIndex}
+                    dataStageId={s.id}
+                  />
+                );
+              })}
             </div>
           </section>
         );

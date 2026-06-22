@@ -41,6 +41,7 @@ export interface CharacterImageSet {
  *       ├── minho/
  *       └── jiwoo/
  */
+
 export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   // ===== 영어 캐릭터 (EN) =====
 

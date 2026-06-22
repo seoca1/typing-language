@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T17:39:20.794463",
+  "generatedAt": "2026-06-23T00:07:51.075616",
   "schemaVersion": "1.1",
   "lessonCount": 45,
   "byLanguage": {
@@ -1497,8 +1497,8 @@
   },
   "lessons": [
     {
-      "id": "en_first-travel-japan_20260621",
-      "date": "2026-06-21",
+      "id": "en_first-travel-japan_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "first-travel-japan.md",
       "raw": {
@@ -1528,8 +1528,8 @@
       }
     },
     {
-      "id": "en_technology-and-internet_20260621",
-      "date": "2026-06-21",
+      "id": "en_technology-and-internet_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "technology-and-internet.md",
       "raw": {
@@ -1563,8 +1563,8 @@
       }
     },
     {
-      "id": "en_health-and-body_20260621",
-      "date": "2026-06-21",
+      "id": "en_health-and-body_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "health-and-body.md",
       "raw": {
@@ -1598,8 +1598,8 @@
       }
     },
     {
-      "id": "en_travel-adventure_20260621",
-      "date": "2026-06-21",
+      "id": "en_travel-adventure_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "travel-adventure.md",
       "raw": {
@@ -1628,8 +1628,8 @@
       }
     },
     {
-      "id": "en_work-and-career_20260621",
-      "date": "2026-06-21",
+      "id": "en_work-and-career_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "work-and-career.md",
       "raw": {
@@ -1660,8 +1660,8 @@
       }
     },
     {
-      "id": "en_holidays-and-celebrations_20260621",
-      "date": "2026-06-21",
+      "id": "en_holidays-and-celebrations_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
@@ -1695,8 +1695,8 @@
       }
     },
     {
-      "id": "en_shopping-and-money_20260621",
-      "date": "2026-06-21",
+      "id": "en_shopping-and-money_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "shopping-and-money.md",
       "raw": {
@@ -1727,8 +1727,8 @@
       }
     },
     {
-      "id": "en_travel_20260621",
-      "date": "2026-06-21",
+      "id": "en_travel_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "travel.md",
       "raw": {
@@ -1757,8 +1757,8 @@
       }
     },
     {
-      "id": "en_food-and-dining_20260621",
-      "date": "2026-06-21",
+      "id": "en_food-and-dining_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "food-and-dining.md",
       "raw": {
@@ -1789,8 +1789,8 @@
       }
     },
     {
-      "id": "en_dating-romance_20260621",
-      "date": "2026-06-21",
+      "id": "en_dating-romance_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "dating-romance.md",
       "raw": {
@@ -1823,8 +1823,8 @@
       }
     },
     {
-      "id": "en_travel-basics_20260621",
-      "date": "2026-06-21",
+      "id": "en_travel-basics_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "travel-basics.md",
       "raw": {
@@ -1856,8 +1856,8 @@
       }
     },
     {
-      "id": "en_daily-life-basics_20260621",
-      "date": "2026-06-21",
+      "id": "en_daily-life-basics_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "daily-life-basics.md",
       "raw": {
@@ -1888,8 +1888,8 @@
       }
     },
     {
-      "id": "en_sports-and-hobbies_20260621",
-      "date": "2026-06-21",
+      "id": "en_sports-and-hobbies_20260623",
+      "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
@@ -1923,8 +1923,8 @@
       }
     },
     {
-      "id": "jp_technology-and-internet_20260621",
-      "date": "2026-06-21",
+      "id": "jp_technology-and-internet_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "technology-and-internet.md",
       "raw": {
@@ -1955,8 +1955,8 @@
       }
     },
     {
-      "id": "jp_health-and-body_20260621",
-      "date": "2026-06-21",
+      "id": "jp_health-and-body_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "health-and-body.md",
       "raw": {
@@ -1990,8 +1990,8 @@
       }
     },
     {
-      "id": "jp_travel-adventure_20260621",
-      "date": "2026-06-21",
+      "id": "jp_travel-adventure_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "travel-adventure.md",
       "raw": {
@@ -2023,8 +2023,8 @@
       }
     },
     {
-      "id": "jp_dating-romance-jp_20260621",
-      "date": "2026-06-21",
+      "id": "jp_dating-romance-jp_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "dating-romance-jp.md",
       "raw": {
@@ -2057,8 +2057,8 @@
       }
     },
     {
-      "id": "jp_holidays-and-celebrations_20260621",
-      "date": "2026-06-21",
+      "id": "jp_holidays-and-celebrations_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
@@ -2092,8 +2092,8 @@
       }
     },
     {
-      "id": "jp_shopping-and-money_20260621",
-      "date": "2026-06-21",
+      "id": "jp_shopping-and-money_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "shopping-and-money.md",
       "raw": {
@@ -2127,8 +2127,8 @@
       }
     },
     {
-      "id": "jp_food-and-dining_20260621",
-      "date": "2026-06-21",
+      "id": "jp_food-and-dining_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "food-and-dining.md",
       "raw": {
@@ -2162,8 +2162,8 @@
       }
     },
     {
-      "id": "jp_travel-basics_20260621",
-      "date": "2026-06-21",
+      "id": "jp_travel-basics_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "travel-basics.md",
       "raw": {
@@ -2192,8 +2192,8 @@
       }
     },
     {
-      "id": "jp_daily-life-basics_20260621",
-      "date": "2026-06-21",
+      "id": "jp_daily-life-basics_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "daily-life-basics.md",
       "raw": {
@@ -2224,8 +2224,8 @@
       }
     },
     {
-      "id": "jp_sports-and-hobbies_20260621",
-      "date": "2026-06-21",
+      "id": "jp_sports-and-hobbies_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
@@ -2259,8 +2259,8 @@
       }
     },
     {
-      "id": "jp_first-travel-korea_20260621",
-      "date": "2026-06-21",
+      "id": "jp_first-travel-korea_20260623",
+      "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "first-travel-korea.md",
       "raw": {
@@ -2289,8 +2289,8 @@
       }
     },
     {
-      "id": "es_fiestas-y-celebraciones_20260621",
-      "date": "2026-06-21",
+      "id": "es_fiestas-y-celebraciones_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "fiestas-y-celebraciones.md",
       "raw": {
@@ -2324,8 +2324,8 @@
       }
     },
     {
-      "id": "es_first-travel-spain_20260621",
-      "date": "2026-06-21",
+      "id": "es_first-travel-spain_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "first-travel-spain.md",
       "raw": {
@@ -2354,8 +2354,8 @@
       }
     },
     {
-      "id": "es_viaje-aventura_20260621",
-      "date": "2026-06-21",
+      "id": "es_viaje-aventura_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "viaje-aventura.md",
       "raw": {
@@ -2386,8 +2386,8 @@
       }
     },
     {
-      "id": "es_como-agua-para-chocolate-cap1_20260621",
-      "date": "2026-06-21",
+      "id": "es_como-agua-para-chocolate-cap1_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "como-agua-para-chocolate-cap1.md",
       "raw": {
@@ -2421,8 +2421,8 @@
       }
     },
     {
-      "id": "es_dating-romance-es_20260621",
-      "date": "2026-06-21",
+      "id": "es_dating-romance-es_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "dating-romance-es.md",
       "raw": {
@@ -2455,8 +2455,8 @@
       }
     },
     {
-      "id": "es_comida-y-restaurante_20260621",
-      "date": "2026-06-21",
+      "id": "es_comida-y-restaurante_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "comida-y-restaurante.md",
       "raw": {
@@ -2490,8 +2490,8 @@
       }
     },
     {
-      "id": "es_notes-in-spanish-listening-log_20260621",
-      "date": "2026-06-21",
+      "id": "es_notes-in-spanish-listening-log_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "notes-in-spanish-listening-log.md",
       "raw": {
@@ -2525,8 +2525,8 @@
       }
     },
     {
-      "id": "es_notes-in-spanish-planes-de-verano_20260621",
-      "date": "2026-06-21",
+      "id": "es_notes-in-spanish-planes-de-verano_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "notes-in-spanish-planes-de-verano.md",
       "raw": {
@@ -2560,8 +2560,8 @@
       }
     },
     {
-      "id": "es_el-ahogado-mas-hermoso-del-mundo_20260621",
-      "date": "2026-06-21",
+      "id": "es_el-ahogado-mas-hermoso-del-mundo_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "el-ahogado-mas-hermoso-del-mundo.md",
       "raw": {
@@ -2595,8 +2595,8 @@
       }
     },
     {
-      "id": "es_trabajo-y-carrera_20260621",
-      "date": "2026-06-21",
+      "id": "es_trabajo-y-carrera_20260623",
+      "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "trabajo-y-carrera.md",
       "raw": {
@@ -2630,8 +2630,8 @@
       }
     },
     {
-      "id": "kr_first-travel-japan_20260621",
-      "date": "2026-06-21",
+      "id": "kr_first-travel-japan_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "first-travel-japan.md",
       "raw": {
@@ -2660,8 +2660,8 @@
       }
     },
     {
-      "id": "kr_technology-and-internet_20260621",
-      "date": "2026-06-21",
+      "id": "kr_technology-and-internet_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "technology-and-internet.md",
       "raw": {
@@ -2695,8 +2695,8 @@
       }
     },
     {
-      "id": "kr_health-and-body_20260621",
-      "date": "2026-06-21",
+      "id": "kr_health-and-body_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "health-and-body.md",
       "raw": {
@@ -2730,8 +2730,8 @@
       }
     },
     {
-      "id": "kr_holidays-and-celebrations_20260621",
-      "date": "2026-06-21",
+      "id": "kr_holidays-and-celebrations_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "holidays-and-celebrations.md",
       "raw": {
@@ -2765,8 +2765,8 @@
       }
     },
     {
-      "id": "kr_shopping-and-money_20260621",
-      "date": "2026-06-21",
+      "id": "kr_shopping-and-money_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "shopping-and-money.md",
       "raw": {
@@ -2797,8 +2797,8 @@
       }
     },
     {
-      "id": "kr_food-and-dining_20260621",
-      "date": "2026-06-21",
+      "id": "kr_food-and-dining_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "food-and-dining.md",
       "raw": {
@@ -2829,8 +2829,8 @@
       }
     },
     {
-      "id": "kr_dating-romance-kr_20260621",
-      "date": "2026-06-21",
+      "id": "kr_dating-romance-kr_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "dating-romance-kr.md",
       "raw": {
@@ -2863,8 +2863,8 @@
       }
     },
     {
-      "id": "kr_travel-basics_20260621",
-      "date": "2026-06-21",
+      "id": "kr_travel-basics_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "travel-basics.md",
       "raw": {
@@ -2896,8 +2896,8 @@
       }
     },
     {
-      "id": "kr_daily-life-basics_20260621",
-      "date": "2026-06-21",
+      "id": "kr_daily-life-basics_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "daily-life-basics.md",
       "raw": {
@@ -2930,8 +2930,8 @@
       }
     },
     {
-      "id": "kr_sports-and-hobbies_20260621",
-      "date": "2026-06-21",
+      "id": "kr_sports-and-hobbies_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "sports-and-hobbies.md",
       "raw": {
@@ -2965,8 +2965,8 @@
       }
     },
     {
-      "id": "kr_travel-basics-kr_20260621",
-      "date": "2026-06-21",
+      "id": "kr_travel-basics-kr_20260623",
+      "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "travel-basics-kr.md",
       "raw": {

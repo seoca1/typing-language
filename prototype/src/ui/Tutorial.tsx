@@ -82,9 +82,9 @@ const TUTORIAL_STEPS: Record<Language, TutorialStep[]> = {
 
 const GAME_MECHANICS: TutorialStep[] = [
   {
-    title: '게임 방식: 단어 격파',
+    title: '게임 방식: 타이핑',
     content:
-      '화면에 나타나는 단어/문장을 정확히 입력하면 적을 격파할 수 있습니다. 빠르고 정확할수록 높은 점수를 획득합니다.',
+      '화면에 나타나는 단어/문장을 정확히 입력하세요. 빠르고 정확할수록 높은 점수를 획득합니다.',
   },
   {
     title: '콤보 시스템',
@@ -94,7 +94,7 @@ const GAME_MECHANICS: TutorialStep[] = [
   {
     title: '미션',
     content:
-      '각 스테이지마다 미션이 주어집니다. "10개 단어 격파", "정확도 90% 이상" 등의 조건을 달성하세요.',
+      '각 스테이지마다 미션이 주어집니다. "10개 단어 완료", "정확도 90% 이상" 등의 조건을 달성하세요.',
   },
   {
     title: '스테이지 시스템',
@@ -124,11 +124,11 @@ export function Tutorial({ onComplete, onStartTutorialStage }: TutorialProps) {
               <p>각 언어의 고유한 입력 방식 지원</p>
             </div>
             <div className="feature">
-              <h3>⚔️ 격파 시스템</h3>
-              <p>단어를 타이핑하여 적을 물리치세요</p>
+              <h3>⌨️ 타이핑 연습</h3>
+              <p>실제 입력 방식으로 타자 연습</p>
             </div>
             <div className="feature">
-              <h3>🎯 40+ 스테이지</h3>
+              <h3>🎯 140+ 스테이지</h3>
               <p>단어부터 단락까지 단계적 학습</p>
             </div>
             <div className="feature">

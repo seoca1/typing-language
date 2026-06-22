@@ -291,6 +291,7 @@ export function App() {
     if (!pendingStage) return;
     if (pendingStage.stage.language === 'kr') {
       setPendingKoreanWarning(pendingStage.stage);
+      setPendingStage(null);
       return;
     }
     actuallyStartStage(pendingStage.stage);
@@ -303,6 +304,7 @@ export function App() {
 
   const handleKoreanWarningDismiss = () => {
     setPendingKoreanWarning(null);
+    setPendingStage(null);
   };
 
   const handleKoreanWarningContinue = () => {
@@ -466,7 +468,6 @@ export function App() {
       <LanguageSelection
         onSelectLanguage={handleSelectLanguage}
         onShowTutorial={() => setShowTutorial(true)}
-        onStartCharTest={() => dispatch({ type: 'START_CHARTEST' })}
       />
     );
   }
@@ -474,14 +475,22 @@ export function App() {
   // 메뉴 화면 (선택된 언어의 스테이지만 표시)
   if (state.phase === 'menu') {
     return (
-      <Menu
-        language={selectedLanguage}
-        onStartStage={handleStartStage}
-        onShowCharacterSelect={handleShowCharacterSelect}
-        onBackToLanguageSelect={handleBackToLanguageSelect}
-        onShowSettings={() => setShowSettings(true)}
-        stageRecords={state.player.stageRecords}
-      />
+      <>
+        <Menu
+          language={selectedLanguage}
+          onStartStage={handleStartStage}
+          onShowCharacterSelect={handleShowCharacterSelect}
+          onBackToLanguageSelect={handleBackToLanguageSelect}
+          onShowSettings={() => setShowSettings(true)}
+          stageRecords={state.player.stageRecords}
+        />
+        {pendingKoreanWarning && (
+          <KoreanKeyboardWarning
+            onDismiss={handleKoreanWarningDismiss}
+            onContinue={handleKoreanWarningContinue}
+          />
+        )}
+      </>
     );
   }
 
@@ -837,12 +846,6 @@ export function App() {
         onEnter={handleOSEnter}
         onEscape={handleOSEscape}
       />
-      {pendingKoreanWarning && (
-        <KoreanKeyboardWarning
-          onDismiss={handleKoreanWarningDismiss}
-          onContinue={handleKoreanWarningContinue}
-        />
-      )}
       {showWrongKeyboardWarning && (
         <NonKoreanKeyboardWarning
           onDismiss={handleWrongKeyboardDismiss}
