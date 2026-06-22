@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T01:17:35.625506",
+  "generatedAt": "2026-06-23T01:26:31.693760",
   "schemaVersion": "1.1",
   "lessonCount": 45,
   "byLanguage": {
@@ -149,24 +149,69 @@
       "body": "# mountain\n\n**Part of Speech:** noun\n\n**Definition:** 산\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the mountain?** — mountain은(는) 어디인가요?\n- **mountain** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
+    "forest.md": {
+      "title": "Forest",
+      "body": "# Forest\n\n**Part of Speech:** noun\n\n**Definition:** forest\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "river.md": {
+      "title": "River",
+      "body": "# River\n\n**Part of Speech:** noun\n\n**Definition:** river\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "lake.md": {
+      "title": "Lake",
+      "body": "# Lake\n\n**Part of Speech:** noun\n\n**Definition:** lake\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "beach.md": {
+      "title": "Beach",
+      "body": "# Beach\n\n**Part of Speech:** noun\n\n**Definition:** beach\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
+      "category": "vocabulary"
+    },
     "map.md": {
       "title": "map",
       "body": "# map\n\n**Part of Speech:** noun\n\n**Definition:** 지도\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the map?** — map은(는) 어디인가요?\n- **map** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
-    "traffic-light.md": {
-      "title": "traffic light",
-      "body": "# traffic light\n\n**Part of Speech:** noun\n\n**Definition:** 신호등\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the traffic light?** — traffic light은(는) 어디인가요?\n- **traffic light** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+    "weather.md": {
+      "title": "Weather",
+      "body": "# Weather\n\n**Part of Speech:** noun\n\n**Definition:** weather\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
       "category": "vocabulary"
     },
-    "kiss.md": {
-      "title": "kiss",
-      "body": "# kiss\n\n**Part of Speech:** noun / verb\n**Level:** A2\n\n**Definition:** 키스 — Touch with the lips as a sign of love, greeting, or respect.\n\n## Examples (Noun)\n\n- \"First kiss\" — 첫 키스\n- \"Goodnight kiss\" — 작별 키스\n- \"Peck on the cheek\" — 가벼운 키스\n\n## Examples (Verb)\n\n- \"Can I kiss you?\" — 명시적 동의 요청 (중요)\n- \"They kissed at the airport.\" — 장면 묘사\n- \"Kiss me.\" — 직접적 요청\n\n## Related Terms\n\n- [[hold-your-hand]] — earlier progression\n- [[love]] — strong affection\n- [[be-my-girlfriend]] — commitment\n\n## Cultural Notes\n\n**Consent is essential**: Modern dating requires explicit verbal\npermission before physical affection. **\"Can I kiss you?\"** is now\nthe expected, respectful approach — not awkward, but considerate.\n\n**Public displays**: Common in US/Europe, varies by region/context.\n\n## Sources\n\n- [[dating-romance]] — Affection progression\n- Cambridge English Vocabulary in Use (Pre-Intermediate)\n",
+    "storm.md": {
+      "title": "Storm",
+      "body": "# Storm\n\n**Part of Speech:** noun\n\n**Definition:** storm\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
       "category": "vocabulary"
     },
-    "sweet.md": {
-      "title": "sweet",
-      "body": "# sweet\n\n**Part of Speech:** noun\n\n**Definition:** 달다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the sweet?** — sweet은(는) 어디인가요?\n- **sweet** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+    "work.md": {
+      "title": "Work",
+      "body": "# Work\n\n**Part of Speech:** noun\n\n**Definition:** work\n\n---\n\n## Sources\n\n- [[business-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "office.md": {
+      "title": "Office",
+      "body": "# Office\n\n**Part of Speech:** noun\n\n**Definition:** office\n\n---\n\n## Sources\n\n- [[business-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "meeting.md": {
+      "title": "Meeting",
+      "body": "# Meeting\n\n**Part of Speech:** noun\n\n**Definition:** meeting\n\n---\n\n## Sources\n\n- [[business-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "project.md": {
+      "title": "Project",
+      "body": "# Project\n\n**Part of Speech:** noun\n\n**Definition:** project\n\n---\n\n## Sources\n\n- [[business-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "colleague.md": {
+      "title": "Colleague",
+      "body": "# Colleague\n\n**Part of Speech:** noun\n\n**Definition:** colleague\n\n---\n\n## Sources\n\n- [[business-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "boss.md": {
+      "title": "Boss",
+      "body": "# Boss\n\n**Part of Speech:** noun\n\n**Definition:** boss\n\n---\n\n## Sources\n\n- [[business-vocabulary]]\n",
       "category": "vocabulary"
     },
     "holiday.md": {
@@ -219,14 +264,54 @@
       "body": "# expensive\n\n**Part of Speech:** noun\n\n**Definition:** 비싸다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the expensive?** — expensive은(는) 어디인가요?\n- **expensive** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
-    "medicine.md": {
-      "title": "medicine",
-      "body": "# medicine\n\n**Part of Speech:** noun\n\n**Level:** A2\n\n**Definition:** A substance used to treat illness.\n\n**Language of Origin:** Old English / Latin / Greek\n\n---\n\n## Examples\n\n- \"Take your medicine.\"\n- \"The medicine works.\"\n- \"Buy medicine.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+    "traffic-light.md": {
+      "title": "traffic light",
+      "body": "# traffic light\n\n**Part of Speech:** noun\n\n**Definition:** 신호등\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the traffic light?** — traffic light은(는) 어디인가요?\n- **traffic light** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
+    "kiss.md": {
+      "title": "kiss",
+      "body": "# kiss\n\n**Part of Speech:** noun / verb\n**Level:** A2\n\n**Definition:** 키스 — Touch with the lips as a sign of love, greeting, or respect.\n\n## Examples (Noun)\n\n- \"First kiss\" — 첫 키스\n- \"Goodnight kiss\" — 작별 키스\n- \"Peck on the cheek\" — 가벼운 키스\n\n## Examples (Verb)\n\n- \"Can I kiss you?\" — 명시적 동의 요청 (중요)\n- \"They kissed at the airport.\" — 장면 묘사\n- \"Kiss me.\" — 직접적 요청\n\n## Related Terms\n\n- [[hold-your-hand]] — earlier progression\n- [[love]] — strong affection\n- [[be-my-girlfriend]] — commitment\n\n## Cultural Notes\n\n**Consent is essential**: Modern dating requires explicit verbal\npermission before physical affection. **\"Can I kiss you?\"** is now\nthe expected, respectful approach — not awkward, but considerate.\n\n**Public displays**: Common in US/Europe, varies by region/context.\n\n## Sources\n\n- [[dating-romance]] — Affection progression\n- Cambridge English Vocabulary in Use (Pre-Intermediate)\n",
+      "category": "vocabulary"
+    },
+    "sweet.md": {
+      "title": "sweet",
+      "body": "# sweet\n\n**Part of Speech:** noun\n\n**Definition:** 달다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the sweet?** — sweet은(는) 어디인가요?\n- **sweet** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
+      "category": "vocabulary"
+    },
+    "wool.md": {
+      "title": "Wool",
+      "body": "# Wool\n\n**Part of Speech:** noun\n\n**Definition:** wool\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
       "category": "vocabulary"
     },
     "breakfast.md": {
       "title": "breakfast",
       "body": "# breakfast\n\n**Part of Speech:** noun\n**Level:** A1\n\n**Definition:** The first meal of the day, eaten in the morning (typically 6-10am).\n\n**Etymology:** \"Break\" (to interrupt) + \"fast\" (going without food). Literally \"the meal that breaks the fast of night.\" Coined ~15th century.\n\n**Pronunciation:**\n- IPA: /ˈbrekfəst/\n- Syllables: break-fast\n- Stress: 1st syllable (BREAK-fast)\n\n**Memory Tip:** \"You **BREAK** your **FAST** (no food since dinner). Two long words combined = morning meal!\"\n\n**Common Mistakes:**\n- ❌ \"I eat breakfast in the evening\" → breakfast is a morning meal; use \"dinner\"/\"supper\" for evening\n- ❌ \"I have a breakfast\" → NO article (\"I have breakfast\" / \"I have SOME breakfast\")\n- ❌ \"I am eating breakfast\" → awkward; use \"I'm having breakfast\" or \"I eat breakfast\"\n- ✅ \"What's for breakfast?\" (asking)\n- ✅ \"I had breakfast at 7.\" (specific time)\n- ✅ \"I skip breakfast.\" (don't eat it)\n- Note: \"Brunch\" = breakfast + lunch (combined late morning meal, ~10am-1pm)\n\n**Register:** neutral. Universally used.\n**Frequency:** ⭐⭐⭐⭐ (top 1000 English words)\n\n## Examples\n\n- \"What's for breakfast?\" — 아침 뭐 먹을까?\n- \"I had eggs for breakfast.\" — 아침에 계란 먹었어\n- \"We serve breakfast from 6 to 10.\" — 호텔/식당\n- \"Do you want to grab breakfast tomorrow?\" — 친구/연인 (casual)\n- \"I never skip breakfast.\" — 일상 루틴\n\n## Mini-Dialogue (Hotel)\n\n```\nA: Good morning! Breakfast is served from 6 to 10.   ← 좋은 아침! 조식은 6시부터 10시까지입니다.\nB: Great, thank you. Is coffee included?   ← 잘됐네요, 감사해요. 커피 포함인가요?\nA: Yes, all-you-can-eat buffet.   ← 네, 뷔페식입니다.\nB: Perfect! I'll be down in 10 minutes.   ← 완벽해요! 10분 후 내려갈게요.\n```\n\n## Related Terms\n\n- [[lunch]] — midday meal\n- [[dinner]] / [[supper]] — evening meal\n- [[brunch]] — late morning combo\n- [[meal]] — general term\n- [[restaurant]] — place to eat\n- [[coffee]] / [[tea]] — common drinks\n- [[hotel]] — place that serves breakfast\n- [[morning]] — time of breakfast\n\n## Cultural Notes\n\n- **\"Continental breakfast\"** = light European-style (bread, pastry, coffee, juice) — hotel term.\n- **\"American breakfast\"** = eggs, bacon, toast, hash browns — heavier.\n- **Korean breakfast** is often rice, soup, banchan — different from Western.\n- **Japanese breakfast** typically includes rice, miso soup, fish, egg — savory, not sweet.\n- **British breakfast** (\"fry-up\") = eggs, beans, sausage, bacon, toast — large, traditional.\n- **\"Breakfast in bed\"** — romantic gesture, often anniversary or special occasion.\n\n## Sources\n\n- [[travel-basics]] — first travel\n- [[hotel]] — accommodation\n- [[restaurant]] — dining out\n- [[first-travel-japan]]\n",
+      "category": "vocabulary"
+    },
+    "lunch.md": {
+      "title": "Lunch",
+      "body": "# Lunch\n\n**Part of Speech:** noun\n\n**Definition:** lunch\n\n---\n\n## Sources\n\n- [[food-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "dinner.md": {
+      "title": "Dinner",
+      "body": "# Dinner\n\n**Part of Speech:** noun\n\n**Definition:** dinner\n\n---\n\n## Sources\n\n- [[food-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "water.md": {
+      "title": "Water",
+      "body": "# Water\n\n**Part of Speech:** noun\n\n**Definition:** water\n\n---\n\n## Sources\n\n- [[food-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "coffee.md": {
+      "title": "Coffee",
+      "body": "# Coffee\n\n**Part of Speech:** noun\n\n**Definition:** coffee\n\n---\n\n## Sources\n\n- [[food-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "tea.md": {
+      "title": "Tea",
+      "body": "# Tea\n\n**Part of Speech:** noun\n\n**Definition:** tea\n\n---\n\n## Sources\n\n- [[food-vocabulary]]\n",
       "category": "vocabulary"
     },
     "delicious.md": {
@@ -237,11 +322,6 @@
     "spicy.md": {
       "title": "spicy",
       "body": "# spicy\n\n**Part of Speech:** noun\n\n**Definition:** 맵다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the spicy?** — spicy은(는) 어디인가요?\n- **spicy** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
-      "category": "vocabulary"
-    },
-    "hot.md": {
-      "title": "hot",
-      "body": "# hot\n\n**Part of Speech:** noun\n\n**Definition:** 뜨겁다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the hot?** — hot은(는) 어디인가요?\n- **hot** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
     "name.md": {
@@ -849,6 +929,21 @@
       "body": "# metro\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 지하철\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el metro?** — metro은(는) 어디인가요?\n- **metro** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
       "category": "vocabulary"
     },
+    "montana.md": {
+      "title": "Montana",
+      "body": "# Montana\n\n**Part of Speech:** noun\n\n**Definition:** montana\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    "bosque.md": {
+      "title": "Bosque",
+      "body": "# Bosque\n\n**Part of Speech:** noun\n\n**Definition:** bosque\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
+      "category": "vocabulary"
+    },
+    " rio.md": {
+      "title": "rio",
+      "body": "#  rio\n\n**Part of Speech:** noun\n\n**Definition:**  rio\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
+      "category": "vocabulary"
+    },
     "playa.md": {
       "title": "playa",
       "body": "# playa\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 해변\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el playa?** — playa은(는) 어디인가요?\n- **playa** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
@@ -859,19 +954,9 @@
       "body": "# mapa\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 지도\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el mapa?** — mapa은(는) 어디인가요?\n- **mapa** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
       "category": "vocabulary"
     },
-    "jefe.md": {
-      "title": "jefe",
-      "body": "# jefe\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Jefe — persona que dirige.\n\n---\n\n## Examples\n\n- \"Mi jefe es estricto.\"\n- \"Hablar con el jefe.\"\n- \"Buen jefe.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
-      "category": "vocabulary"
-    },
-    "inmigración.md": {
-      "title": "inmigración",
-      "body": "# inmigración\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 입국심사\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el inmigración?** — inmigración은(는) 어디인가요?\n- **inmigración** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
-      "category": "vocabulary"
-    },
-    "viajes.md": {
-      "title": "Viajes - Travel",
-      "body": "# Viajes - Travel\n\n**Source:** [[viajes-esenciales]]\n**Theme:** Travel & Tourism\n**Level:** A1-A2\n\nVocabulario esencial de viajes. Aeropuertos, hoteles, restaurantes, transporte y turismo — las palabras más útiles para cualquier viaje hispanohablante.\n\n---\n\n## Aeropuerto\n\n### Sustantivos\n\n- **pasaporte** — 여권\n- **billete / boleto** — 티켓, 표\n- **tarjeta de embarque** — 탑승권\n- **equipaje / maleta** — 수하물 / 여행가방\n- **maleta** — 여행가방\n- **puerta de embarque** — 탑승구\n- **terminal** — 터미널\n- **facturar** — 체크인하다\n- **mostrador** — 카운터\n- **vuelo** — 항공편\n\n### Verbos\n\n- **facturar** — 체크인하다\n- **embarcar** — 탑승하다\n- **aterrizar** — 착륙하다\n- **despegar** — 이륙하다\n- **llegar** — 도착하다\n- **salir** — 출발하다\n\n---\n\n## Hotel\n\n### Sustantivos\n\n- **reserva** — 예약\n- **recepción** — 프론트 데스크\n- **habitación** — 방\n- **habitación individual** — 1인실\n- **habitación doble** — 2인실\n- **suite** — 스위트룸\n- **llave / tarjeta** — 열쇠 / 카드\n- **ascensor** — 엘리베이터\n- **vestíbulo** — 로비\n\n### Verbos\n\n- **reservar** — 예약하다\n- **alojarse** — 묵다\n- **registrarse** — 체크인하다\n\n---\n\n## Restaurante\n\n### Sustantivos\n\n- **carta / menú** — 메뉴\n- **camarero / mesero** — 웨이터/여종업원\n- **cuenta** — 계산서\n- **propina** — 팁\n- **entrante** — 전채\n- **plato principal** — 메인 요리\n- **postre** — 디저트\n- **bebida** — 음료\n- **botella** — 병\n- **vaso** — 잔\n\n### Verbos\n\n- **pedir** — 주문하다\n- **recomendar** — 추천하다\n- **probar** — 맛보다\n- **pagar** — 지불하다\n- **invitar** — 쏘다\n\n---\n\n## Transporte\n\n### Sustantivos\n\n- **metro** — 지하철\n- **autobús** — 버스\n- **taxi** — 택시\n- **tren** — 기차\n- **estación** — 역\n- **parada** — 정류장\n- **billete / boleto** — 표\n- **andén** — 승강장\n- **transbordo** — 환승\n- **aeropuerto** — 공항\n\n### Verbos\n\n- **coger / tomar** — 타다\n- **bajar** — 내리다\n- **subir** — 타다\n- **conducir** — 운전하다\n- **caminar / andar** — 걷다\n\n---\n\n## Turismo\n\n### Sustantivos\n\n- **mapa** — 지도\n- **guía** — 가이드\n- **tour / excursión** — 투어 / 소풍\n- **museo** — 박물관\n- **catedral** — 대성당\n- **monumento** — 기념물\n- **playa** — 해변\n- **montaña** — 산\n- **parque** — 공원\n- **mirador** — 전망대\n\n### Verbos\n\n- **visitar** — 방문하다\n- **explorar** — 탐험하다\n- **fotografiar** — 사진 찍다\n- **conocer** — 알아보다\n\n---\n\n## Direcciones (방향)\n\n### Frases clave\n\n- **¿Dónde está...?** — ...는 어디에 있나요?\n- **¿Cómo llego a...?** — ...에 어떻게 가나요?\n- **Siga recto** — 직진하세요\n- **Gire a la izquierda / derecha** — 좌회전/우회전하세요\n- **a la izquierda / derecha** — 왼쪽/오른쪽에\n- **al lado de** — 옆에\n- **enfrente de** — 건너편에\n- **entre** — 사이에\n- **cerca de** — 가까이에\n- **lejos de** — 멀리\n\n---\n\n## Frases útiles (유용한 표현)\n\n- **Disculpe / Perdón** — 실례합니다\n- **¿Cuánto cuesta?** — 얼마예요?\n- **¿Dónde está el baño?** — 화장실 어디예요?\n- **No entiendo** — 이해가 안 돼요\n- **¿Puede ayudarme?** — 도와주실 수 있나요?\n- **Gracias** — 감사합니다\n- **Por favor** — 부디\n\n---\n\n## Sources\n\n- [[viajes-esenciales]]\n",
+    "clima.md": {
+      "title": "Clima",
+      "body": "# Clima\n\n**Part of Speech:** noun\n\n**Definition:** clima\n\n---\n\n## Sources\n\n- [[nature-vocabulary]]\n",
       "category": "vocabulary"
     },
     "cebolla.md": {
@@ -1157,6 +1242,11 @@
     "reunion.md": {
       "title": "reunion",
       "body": "# reunion\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Reunión — encuentro de personas.\n\n---\n\n## Examples\n\n- \"Reunión a las 10.\"\n- \"Tengo una reunión.\"\n- \"Reunión de equipo.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
+      "category": "vocabulary"
+    },
+    "jefe.md": {
+      "title": "jefe",
+      "body": "# jefe\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Jefe — persona que dirige.\n\n---\n\n## Examples\n\n- \"Mi jefe es estricto.\"\n- \"Hablar con el jefe.\"\n- \"Buen jefe.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
     "proyecto.md": {
@@ -1628,10 +1718,13 @@
       },
       "vocabulary": [
         "mountain.md",
+        "forest.md",
+        "river.md",
+        "lake.md",
+        "beach.md",
         "map.md",
-        "head.md",
-        "traffic-light.md",
-        "kiss.md"
+        "weather.md",
+        "storm.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1639,7 +1732,7 @@
       ],
       "culture": "english-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "en_t_1",
           "en_t_2",
@@ -1657,11 +1750,13 @@
         "excerpt": "## Summary\n\nEnglish vocabulary for the workplace — job titles, meetings, emails, business etiquette. Useful for professionals working in international environments."
       },
       "vocabulary": [
+        "work.md",
+        "office.md",
+        "meeting.md",
+        "project.md",
         "email.md",
-        "head.md",
-        "traffic-light.md",
-        "kiss.md",
-        "sweet.md"
+        "colleague.md",
+        "boss.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1669,7 +1764,7 @@
       ],
       "culture": "english-dating-culture.md",
       "meta": {
-        "estimatedReadMinutes": 6,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "en_1_1",
           "en_1_2",
@@ -1760,7 +1855,7 @@
         "traffic-light.md",
         "kiss.md",
         "sweet.md",
-        "medicine.md"
+        "wool.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1787,10 +1882,13 @@
       },
       "vocabulary": [
         "breakfast.md",
+        "lunch.md",
+        "dinner.md",
+        "water.md",
+        "coffee.md",
+        "tea.md",
         "delicious.md",
-        "spicy.md",
-        "sweet.md",
-        "hot.md"
+        "spicy.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -1889,7 +1987,7 @@
         "family.md",
         "friend.md",
         "love.md",
-        "head.md"
+        "work.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -2384,11 +2482,12 @@
         "excerpt": "## Summary\n\nEspañol para aventuras de viaje — senderismo, camping, actividades al aire libre, clima, emergencias."
       },
       "vocabulary": [
+        "montana.md",
+        "bosque.md",
+        " rio.md",
         "playa.md",
         "mapa.md",
-        "jefe.md",
-        "inmigración.md",
-        "viajes.md"
+        "clima.md"
       ],
       "expressions": [
         "estoy-enamorado.md",
@@ -2396,7 +2495,7 @@
       ],
       "culture": "pueblo-costero-funeral.md",
       "meta": {
-        "estimatedReadMinutes": 5,
+        "estimatedReadMinutes": 3,
         "relatedStages": [
           "es_1_1",
           "es_1_2",
