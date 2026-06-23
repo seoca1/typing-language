@@ -118,7 +118,7 @@ class ImageLoaderClass {
         // Relative path - detect base URL from current location
         // GitHub Pages: /typing-language/, Local dev: /
         const pathname = window.location.pathname;
-        const base = pathname.includes('/typing-language/') ? '/typing-language/' : '/';
+        const base = pathname.startsWith('/typing-language') ? '/typing-language/' : '/';
         
         // Remove leading slash from config.src if base already has trailing slash
         const cleanSrc = config.src.startsWith('/') ? config.src.slice(1) : config.src;
