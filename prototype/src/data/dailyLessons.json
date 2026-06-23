@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-23T16:51:34.063976",
-  "schemaVersion": "1.1",
+  "generatedAt": "2026-06-23T19:10:47.970052",
+  "schemaVersion": "1.2",
   "lessonCount": 45,
   "byLanguage": {
     "en": 13,
@@ -1636,9 +1636,33 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "first-travel-japan.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "en_t_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/En/first-travel-japan.md"
+      },
       "raw": {
         "sourceFile": "first-travel-japan.md",
         "excerpt": "영어 학습 관점에서, 한국인이 일본 여행 시 만나는 상황을 영어로 어떻게 표현하는지 정리한 자료. 한국어 원어민이 일본에 가서 영어로 소통하는 시나리오를 다룬다 (일본어는 영어 통역이 가능한 경우가 많음).\n\n일부 일본어 단어는 한자를 한국인이 읽을 수 있어 학습 효율이 높음."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/first-travel-japan.md",
+        "vocabularyPages": [
+          "kuukou.md",
+          "pasupooto.md",
+          "hoteru.md",
+          "nimotsu.md",
+          "chikatetsu.md",
+          "densha.md"
+        ],
+        "expressionPages": [
+          "where-is.md",
+          "how-much.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "kuukou.md",
@@ -1667,9 +1691,35 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "technology-and-internet.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "en_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEnglish vocabulary for technology, internet, computers, smartphones. Modern essential terms.\n\n\n## Key Takeaways\n\n- Computer hardware (keyboard, mouse, screen, laptop)\n- Internet terms (website, email, app, password, wifi)\n- Social media (post, like, share, follow, comment)\n- Common tech verbs (download, upload, search, click, scroll)\n- Tech problems (broken, slow, error, update, virus)\n\n\n## Vocabulary Extracted\n\n- [[computer]] — 컴퓨터\n- [[phone]] — 전화\n- [[screen]] — 화면\n- [[keyboard]] — 키보드\n- [[internet]] — 인터넷\n- [[email]] — 이메일\n- [[password]] — 비밀번호\n- [[app]] — 앱\n- [[website]] — 웹사이트"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/technology-and-internet.md",
+        "vocabularyPages": [
+          "business/computer.md",
+          "business/phone.md",
+          "business/screen.md",
+          "business/keyboard.md",
+          "business/internet.md",
+          "business/email.md",
+          "business/password.md",
+          "business/app.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "business/computer.md",
@@ -1702,9 +1752,35 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "health-and-body.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "en_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEnglish vocabulary for health, body parts, illness, doctor visits. Essential for emergencies and daily life."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/health-and-body.md",
+        "vocabularyPages": [
+          "business/head.md",
+          "business/hand.md",
+          "business/foot.md",
+          "business/stomach.md",
+          "business/cold.md",
+          "business/fever.md",
+          "business/doctor.md",
+          "business/hospital.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "business/head.md",
@@ -1737,9 +1813,35 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "travel-adventure.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "en_t_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEnglish for travel adventures — hiking, camping, outdoor activities, weather, emergencies. Intermediate vocabulary for active travelers."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/travel-adventure.md",
+        "vocabularyPages": [
+          "nature/mountain.md",
+          "nature/forest.md",
+          "nature/river.md",
+          "nature/lake.md",
+          "nature/beach.md",
+          "business/map.md",
+          "nature/weather.md",
+          "business/storm.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "nature/mountain.md",
@@ -1770,9 +1872,34 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "work-and-career.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "en_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEnglish vocabulary for the workplace — job titles, meetings, emails, business etiquette. Useful for professionals working in international environments."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/work-and-career.md",
+        "vocabularyPages": [
+          "business/work.md",
+          "business/office.md",
+          "business/meeting.md",
+          "business/project.md",
+          "business/email.md",
+          "business/colleague.md",
+          "business/boss.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "business/work.md",
@@ -1804,9 +1931,35 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "holidays-and-celebrations.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "en_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEnglish vocabulary for holidays, celebrations, festivals, special days. Cultural context for major Western holidays."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/holidays-and-celebrations.md",
+        "vocabularyPages": [
+          "business/holiday.md",
+          "emotions/birthday.md",
+          "emotions/christmas.md",
+          "business/halloween.md",
+          "business/thanksgiving.md",
+          "emotions/easter.md",
+          "emotions/wedding.md",
+          "emotions/party.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "business/holiday.md",
@@ -1839,9 +1992,32 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "shopping-and-money.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "en_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEnglish for shopping, money, prices, bargaining. Useful for travelers and daily life."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/shopping-and-money.md",
+        "vocabularyPages": [
+          "business/cheap.md",
+          "business/expensive.md",
+          "clothing/wool.md",
+          "clothing/socks.md",
+          "clothing/boots.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "business/cheap.md",
@@ -1871,9 +2047,32 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "travel.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "en_t_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Overview\n\n**Travel** (여행 / 旅行 / viaje) — the act of moving between geographic locations, often for leisure, business, or learning. Central theme across language learning.\n\nThis is a meta-page referenced from many vocabulary pages. For specific travel content per language:\n\n- **English travel**: [[travel-basics]], [[travel-adventure]]\n- **Japanese travel**: [[travel-basics]], [[travel-adventure]]\n- **Spanish travel**: [[first-travel-spain]], [[viaje-aventura]]\n- **Korean travel**: [[travel-basics]]"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/travel.md",
+        "vocabularyPages": [
+          "clothing/wool.md",
+          "clothing/socks.md",
+          "clothing/boots.md",
+          "clothing/leather.md",
+          "clothing/shirt.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "clothing/wool.md",
@@ -1901,9 +2100,35 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "food-and-dining.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "en_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEnglish vocabulary for restaurants, cooking, food types, dietary restrictions. Useful for travelers and food enthusiasts."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/food-and-dining.md",
+        "vocabularyPages": [
+          "food/breakfast.md",
+          "food/lunch.md",
+          "food/dinner.md",
+          "food/water.md",
+          "food/coffee.md",
+          "food/tea.md",
+          "food/delicious.md",
+          "food/spicy.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "food/breakfast.md",
@@ -1936,9 +2161,37 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "dating-romance.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "en_d_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/En/dating-romance.md"
+      },
       "raw": {
         "sourceFile": "dating-romance.md",
         "excerpt": "Curated reference for romantic/affectionate conversation in English. Sources include\nestablished teaching materials and well-known romantic film/TV dialogue for natural\nregister cues. The content is **PG-13**: flirtation, dating, mild affection\n(hand-holding, first kiss, confession), but no explicit content."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/dating-romance.md",
+        "vocabularyPages": [
+          "business/name.md",
+          "business/meet.md",
+          "emotions/friend.md",
+          "emotions/single.md",
+          "emotions/beautiful.md",
+          "emotions/handsome.md",
+          "emotions/cute.md",
+          "emotions/kind.md"
+        ],
+        "expressionPages": [
+          "nice-to-meet-you.md",
+          "want-coffee.md",
+          "be-my-girlfriend.md",
+          "hold-your-hand.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "business/name.md",
@@ -1970,9 +2223,35 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "travel-basics.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "en_t_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/En/travel-basics.md"
+      },
       "raw": {
         "sourceFile": "travel-basics.md",
         "excerpt": "This document is a curated reference of essential travel vocabulary for English-language learners. Sources include:\n\n- Oxford 3000 (CEFR A1-B2 word list)\n- Cambridge English Vocabulary in Use (Travel)\n- BBC Learning English — Travel section\n- EF Standard English Test travel prep"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/travel-basics.md",
+        "vocabularyPages": [
+          "business/airport.md",
+          "business/baggage.md",
+          "business/bus.md",
+          "business/hotel.md",
+          "food/restaurant.md",
+          "business/taxi.md",
+          "business/train.md",
+          "business/passport.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "business/airport.md",
@@ -2003,9 +2282,32 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "daily-life-basics.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "en_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEveryday English for daily routines — greetings, time, weather, family, hobbies, work. The most commonly used words in everyday conversation."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/daily-life-basics.md",
+        "vocabularyPages": [
+          "emotions/hello.md",
+          "emotions/family.md",
+          "emotions/friend.md",
+          "emotions/love.md",
+          "business/work.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "emotions/hello.md",
@@ -2035,9 +2337,35 @@
       "date": "2026-06-23",
       "language": "en",
       "sourceTopic": "sports-and-hobbies.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "en_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEnglish vocabulary for sports, hobbies, recreation, fitness. Useful for casual conversation and active lifestyle."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/En/sources/sports-and-hobbies.md",
+        "vocabularyPages": [
+          "business/sport.md",
+          "business/football.md",
+          "business/soccer.md",
+          "business/basketball.md",
+          "business/tennis.md",
+          "business/swimming.md",
+          "business/running.md",
+          "business/yoga.md"
+        ],
+        "expressionPages": [
+          "i-love-you.md",
+          "really-like-you.md"
+        ],
+        "culturePage": "english-dating-culture.md"
       },
       "vocabulary": [
         "business/sport.md",
@@ -2070,9 +2398,33 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "technology-and-internet.md",
+      "difficulty": {
+        "tier": 0,
+        "cefr": "A1",
+        "primaryStage": "jp_0_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n일본어 테크놀로지, 인터넷, 컴퓨터, 스마트폰 어휘. 현대 필수 단어."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/technology-and-internet.md",
+        "vocabularyPages": [
+          "business/コンピュータ.md",
+          "business/スマホ.md",
+          "business/画面.md",
+          "business/キーボード.md",
+          "business/インターネット.md",
+          "business/メール.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "business/コンピュータ.md",
@@ -2103,9 +2455,35 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "health-and-body.md",
+      "difficulty": {
+        "tier": 0,
+        "cefr": "A1",
+        "primaryStage": "jp_0_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n일본어 건강, 신체, 질병, 병원 어휘. 응급 상황과 일상 생활에 필수.\n\n\n## Key Takeaways\n\n- 体の部位 (신체 부위) — 頭, 手, 足, 目, 耳\n- 一般的な病気 (일반 질병) — 風邪, インフルエンザ, 熱\n- 医者/病院 (의사/병원) — 予約, 処方箋, 薬局\n- 健康動詞 — 痛い, 病気, 疲れた\n\n\n## Vocabulary Extracted\n\n- [[頭]] — 머리\n- [[手]] — 손\n- [[足]] — 발\n- [[お腹]] — 배\n- [[風邪]] — 감기\n- [[熱]] — 열\n- [[医者]] — 의사\n- [[病院]] — 병원\n- [[薬]] — 약\n- [[痛み]] — 통증\n\n\n## Expressions Extracted\n\n- 「気分が悪いです」 — 몸이 안 좋아요\n- 「頭が痛いです」 — 두통이 있어요\n- 「どこが痛いですか?」 — 어디가 아프세요?\n- 「医者が必要です」 — 의사가 필요해요\n- 「救急車を呼んでください」 — 구급차를 불러주세요"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/health-and-body.md",
+        "vocabularyPages": [
+          "business/頭.md",
+          "business/手.md",
+          "business/足.md",
+          "business/お腹.md",
+          "nature/風邪.md",
+          "business/熱.md",
+          "business/医者.md",
+          "business/病院.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "business/頭.md",
@@ -2138,9 +2516,35 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "travel-adventure.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "jp_t_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n일본어 모험 여행 어휘 — 하이킹, 캠핑, 야외 활동, 날씨, 긴급 상황.\n\n\n## Key Takeaways\n\n- アウトドア活動 (야외 활동) — ハイキング, 登山, スキー\n- キャンプ用品 (캠핑 용품) — テント, 寝袋, リュック\n- 天気 (날씨) — 晴れ, 曇り, 雨, 嵐\n- 緊急 (긴급) — 怪我, 道に迷った, 救助\n- 自然の方角 (자연 방향) — 北, 南, 東, 西\n\n\n## Vocabulary Extracted\n\n- [[山]] — 산\n- [[森]] — 숲\n- [[川]] — 강\n- [[湖]] — 호수\n- [[海]] — 바다\n- [[テント]] — 텐트\n- [[コンパス]] — 나침반\n- [[地図]] — 지도\n- [[天気]] — 날씨\n- [[嵐]] — 폭풍\n\n\n## Expressions Extracted\n\n- 「どのぐらい遠いですか?」 — 얼마나 먼가요?\n- 「道に迷いました」 — 길을 잃었어요\n- 「助けてください」 — 도와주세요\n- 「登山道はどちらですか?」 — 등산로는 어디인가요?\n- 「医者が必要です」 — 의사가 필요해요"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/travel-adventure.md",
+        "vocabularyPages": [
+          "nature/山.md",
+          "nature/森.md",
+          "nature/川.md",
+          "nature/湖.md",
+          "nature/海.md",
+          "business/テント.md",
+          "business/コンパス.md",
+          "business/地図.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "nature/山.md",
@@ -2171,9 +2575,37 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "dating-romance-jp.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "jp_d_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Jp/dating-romance-jp.md"
+      },
       "raw": {
         "sourceFile": "dating-romance-jp.md",
         "excerpt": "Curated reference for 恋愛 (renai, love/dating) conversation in Japanese.\n**注意 (Notes)**: All content is PG-13 — 告白 (confession), デート,\naffection progression, but no explicit content. **敬語 (keigo) levels**\nare critical: use ため口 (casual) with close friends/恋人, 丁寧語\nwith acquaintances, 敬語 with seniors/work contexts."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/dating-romance-jp.md",
+        "vocabularyPages": [
+          "business/名前.md",
+          "business/趣味.md",
+          "business/綺麗.md",
+          "emotions/可愛い.md",
+          "business/かっこいい.md",
+          "business/優しい.md",
+          "business/面白い.md",
+          "business/音楽.md"
+        ],
+        "expressionPages": [
+          "はじめまして.md",
+          "今度ご飯行かない.md",
+          "好きです付き合ってください.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "business/名前.md",
@@ -2205,9 +2637,35 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "holidays-and-celebrations.md",
+      "difficulty": {
+        "tier": 0,
+        "cefr": "A1",
+        "primaryStage": "jp_0_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n일본어 휴일, 축제, 기념일 어휘. 일본 주요 명절 문화 맥락.\n\n\n## Key Takeaways\n\n- 主な祝日 (주요 공휴일) — 元日, ゴールデンウィーク, お盆\n- お祝い (경사) — 結婚, 出産, 誕生日\n- クリスマス、バレンタイン — 서양 명절\n- 花火大会, 夏祭り — 여름 축제\n\n\n## Vocabulary Extracted\n\n- [[祝日]] — 공휴일\n- [[誕生日]] — 생일\n- [[クリスマス]] — 크리스마스\n- [[正月]] — 새해\n- [[結婚式]] — 결혼식\n- [[パーティー]] — 파티\n- [[プレゼント]] — 선물\n- [[ケーキ]] — 케이크\n- [[花火]] — 불꽃놀이\n- [[祭り]] — 축제\n\n\n## Expressions Extracted\n\n- 「お誕生日おめでとう!」 — 생일 축하해요!\n- 「メリークリスマス」 — 메리 크리스마스\n- 「プレゼントありがとう」 — 선물 고마워요\n- 「お正月大好き」 — 설날 정말 좋아해요\n- 「パーティー来ますか?」 — 파티 올 거예요?"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/holidays-and-celebrations.md",
+        "vocabularyPages": [
+          "business/祝日.md",
+          "business/誕生日.md",
+          "business/クリスマス.md",
+          "nature/正月.md",
+          "business/結婚式.md",
+          "business/ケーキ.md",
+          "business/花火.md",
+          "business/祭り.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "business/祝日.md",
@@ -2240,9 +2698,35 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "shopping-and-money.md",
+      "difficulty": {
+        "tier": 0,
+        "cefr": "A1",
+        "primaryStage": "jp_0_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n일본어 쇼핑, 돈, 가격 어휘. 여행자와 일상 생활에 유용.\n\n\n## Key Takeaways\n\n- 店の種類 (가게 종류) — コンビニ, スーパー, デパート, 市場\n- お金 (돈) — 現金, カード, お釣り\n- 価格 (가격) — 高い, 安い, 割引\n- 買い物 (쇼핑) — 買う, 売る, 返品, 試着\n\n\n## Vocabulary Extracted\n\n- [[店]] — 가게\n- [[お金]] — 돈\n- [[現金]] — 현금\n- [[カード]] — 카드\n- [[価格]] — 가격\n- [[安い]] — 싼\n- [[高い]] — 비싼\n- [[割引]] — 할인\n- [[レシート]] — 영수증\n- [[返品]] — 환불\n\n\n## Expressions Extracted\n\n- 「いくらですか?」 — 얼마예요?\n- 「カードは使えますか?」 — 카드 되나요?\n- 「割引できますか?」 — 할인 되나요?\n- 「試着してもいいですか?」 — 입어볼 수 있나요?\n- 「試着室はどこですか?」 — 탈의실 어디예요?"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/shopping-and-money.md",
+        "vocabularyPages": [
+          "business/店.md",
+          "business/お金.md",
+          "business/現金.md",
+          "business/カード.md",
+          "business/価格.md",
+          "business/安い.md",
+          "business/高い.md",
+          "business/割引.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "business/店.md",
@@ -2275,9 +2759,35 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "food-and-dining.md",
+      "difficulty": {
+        "tier": 0,
+        "cefr": "A1",
+        "primaryStage": "jp_0_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n일본 음식 문화 어휘 — 식당, 요리, 음식 종류, 식이 제한.\n\n\n## Key Takeaways\n\n- レストラン (식당) 어휘\n- 食べ物 (음식) — ご飯, 肉, 魚, 野菜, 果物\n- 飲み物 (음료) — 水, お茶, ビール\n- 調理法 (조리법) — 焼く, 煮る, 蒸す\n- 味 (맛) — 甘い, 酸っぱい, 塩辛い, 苦い, 辛い\n\n\n## Vocabulary Extracted\n\n- [[朝食]] — 아침 식사\n- [[昼食]] — 점심\n- [[夕食]] — 저녁\n- [[水]] — 물\n- [[お茶]] — 차\n- [[おいしい]] — 맛있는\n- [[辛い]] — 매운\n- [[甘い]] — 단\n- [[魚]] — 생선\n- [[肉]] — 고기\n\n\n## Expressions Extracted\n\n- 「お腹が空いた」 — 배고파요\n- 「メニューを見せてください」 — 메뉴판 보여주세요\n- 「お会計お願いします」 — 계산 부탁해요\n- 「おいしいです」 — 맛있어요\n- 「辛くしないでください」 — 맵게 하지 말아주세요"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/food-and-dining.md",
+        "vocabularyPages": [
+          "food/朝食.md",
+          "food/昼食.md",
+          "food/夕食.md",
+          "business/水.md",
+          "business/お茶.md",
+          "business/おいしい.md",
+          "business/辛い.md",
+          "business/甘い.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "food/朝食.md",
@@ -2310,9 +2820,32 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "travel-basics.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "jp_t_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n일본 여행을 위한 필수 어휘와 표현 — 공항, 호텔, 식당, 교통, 긴급 상황. 상위 50개 가장 자주 쓰이는 여행 단어.\n\n\n## Key Takeaways\n\n- 挨拶と礼儀 (인사/예의) — お願いします, ありがとう, すみません\n- 数字とお金 (숫자/돈) — 千, 万, 円\n- 方向 (방향) — 左, 右, 近く, 遠く\n- 交通 (교통) — 電車, バス, タクシー, 飛行機\n- 食べ物と飲み物 (음식/음료) — メニュー, 水, コーヒー\n- 緊急 (긴급) — 助けて, 警察, 病院\n\n\n## Vocabulary Extracted\n\n- [[空港]] — 공항\n- [[荷物]] — 짐\n- [[バス]] — 버스\n- [[ホテル]] — 호텔\n- [[レストラン]] — 식당\n- [[タクシー]] — 택시\n- [[電車]] — 전철\n- [[パスポート]] — 여권\n- [[切符]] — 표\n- [[地図]] — 지도\n\n\n## Expressions Extracted\n\n- 「いくらですか?」 — 얼마예요?\n- 「~はどこですか?」 — ~는 어디인가요?\n- 「助けてください」 — 도와주세요\n- 「わかりません」 — 모르겠습니다\n- 「英語を話せますか?」 — 영어 할 줄 아세요?"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/travel-basics.md",
+        "vocabularyPages": [
+          "business/パスポート.md",
+          "business/地図.md",
+          "clothing/ズボン.md",
+          "clothing/黒い靴.md",
+          "clothing/白いズボン.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "business/パスポート.md",
@@ -2340,9 +2873,32 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "daily-life-basics.md",
+      "difficulty": {
+        "tier": 0,
+        "cefr": "A1",
+        "primaryStage": "jp_0_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n일본어 일상 회화 어휘 — 인사, 시간, 날씨, 가족, 취미, 직장. 가장 자주 쓰이는 단어들.\n\n\n## Key Takeaways\n\n- 挨拶 (인사) — おはよう, こんにちは, こんばんは\n- 時間 (시간) — 今日, 明日, 昨日, 今\n- 家族 (가족) — お母さん, お父さん, 兄弟\n- 動詞 (동사) — 行く, 来る, 食べる, 飲む, 寝る, 働く\n- 形容詞 (형용사) — いい, 悪い, 大きい, 小さい\n\n\n## Vocabulary Extracted\n\n- [[こんにちは]] — 안녕\n- [[おはよう]] — 좋은 아침\n- [[こんばんは]] — 좋은 저녁\n- [[ありがとう]] — 감사\n- [[すみません]] — 미안/실례\n- [[お願いします]] — 부탁합니다\n- [[家族]] — 가족\n- [[友達]] — 친구\n- [[好き]] — 좋아함\n- [[仕事]] — 직장\n\n\n## Expressions Extracted\n\n- 「お元気ですか?」 — 잘 지내세요?\n- 「はじめまして」 — 처음 뵙겠습니다\n- 「また明日」 — 내일 또 봐\n- 「おやすみなさい」 — 잘 자\n- 「いってきます」 — 다녀오겠습니다"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/daily-life-basics.md",
+        "vocabularyPages": [
+          "emotions/好き.md",
+          "business/仕事.md",
+          "clothing/ズボン.md",
+          "clothing/黒い靴.md",
+          "clothing/白いズボン.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "emotions/好き.md",
@@ -2372,9 +2928,35 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "sports-and-hobbies.md",
+      "difficulty": {
+        "tier": 0,
+        "cefr": "A1",
+        "primaryStage": "jp_0_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n日本語のスポーツと趣味の語彙を集めた学習資料。アウトドア活動、屋内レジャー、文化活動など、日本でよく行われるスポーツ・趣味について学びます。野球、サッカー、テニス、ヨガ、読書、カラオケなど、多彩なトピックをカバー。\n\n\n## Key Takeaways\n\n- 一般的なスポーツ — 野球, サッカー, テニス, 水泳\n- 趣味の語彙 — 読書, 料理, 音楽\n- フィットネス — ジム, ヨガ, 運動\n- アウトドア — ハイキング, キャンプ\n\n\n## Vocabulary Extracted\n\n- [[スポーツ]] — 스포츠\n- [[野球]] — 야구\n- [[サッカー]] — 축구\n- [[テニス]] — 테니스\n- [[水泳]] — 수영\n- [[ジョギング]] — 조깅\n- [[ヨガ]] — 요가\n- [[音楽]] — 음악\n- [[読書]] — 독서\n- [[映画]] — 영화\n\n\n## Expressions Extracted\n\n- 「何かスポーツしますか?」 — 운동 하세요?\n- 「趣味は何ですか?」 — 취미가 뭐예요?\n- 「テニスが好きです」 — 테니스 좋아해요\n- 「一緒に走ろう」 — 같이 달리자\n- 「ファンです」 — 팬이에요"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/sports-and-hobbies.md",
+        "vocabularyPages": [
+          "business/スポーツ.md",
+          "business/野球.md",
+          "business/テニス.md",
+          "business/水泳.md",
+          "business/ジョギング.md",
+          "business/ヨガ.md",
+          "business/音楽.md",
+          "business/読書.md"
+        ],
+        "expressionPages": [
+          "今度ご飯行かない.md",
+          "俺の彼女になってよ.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "business/スポーツ.md",
@@ -2407,9 +2989,32 @@
       "date": "2026-06-23",
       "language": "jp",
       "sourceTopic": "first-travel-korea.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "jp_t_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Jp/first-travel-korea.md"
+      },
       "raw": {
         "sourceFile": "first-travel-korea.md",
         "excerpt": "## 原文 (Source)\n\n`raw/Japanese/first-travel-korea.md`\n\n\n## 重要な抽出事項 (Key Extractions)"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Jp/sources/first-travel-korea.md",
+        "vocabularyPages": [
+          "business/gonghang.md",
+          "business/yeogwon.md",
+          "business/hotel.md",
+          "clothing/ズボン.md",
+          "clothing/黒い靴.md"
+        ],
+        "expressionPages": [
+          "sumimasen.md",
+          "今度ご飯行かない.md"
+        ],
+        "culturePage": "japanese-dating-culture.md"
       },
       "vocabulary": [
         "business/gonghang.md",
@@ -2437,9 +3042,35 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "fiestas-y-celebraciones.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "es_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEspañol para fiestas, celebraciones, días especiales. Cultura hispana."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/fiestas-y-celebraciones.md",
+        "vocabularyPages": [
+          "business/fiesta.md",
+          "business/cumpleanos.md",
+          "business/navidad.md",
+          "business/ano-nuevo.md",
+          "business/boda.md",
+          "business/regalo.md",
+          "food/pastel.md",
+          "business/quinceanera.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "pueblo-costero-funeral.md"
       },
       "vocabulary": [
         "business/fiesta.md",
@@ -2472,9 +3103,32 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "first-travel-spain.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "es_t_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Es/first-travel-spain.md"
+      },
       "raw": {
         "sourceFile": "first-travel-spain.md",
         "excerpt": "Coreano aprendiendo español que viaja a España por primera vez. Situaciones reales que se encuentran al llegar al aeropuerto, alojarse en hotel, pedir comida, pedir direcciones y hacer turismo."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/first-travel-spain.md",
+        "vocabularyPages": [
+          "business/aeropuerto.md",
+          "business/estación.md",
+          "food/hotel.md",
+          "food/restaurante.md",
+          "business/metro.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "pueblo-costero-funeral.md"
       },
       "vocabulary": [
         "business/aeropuerto.md",
@@ -2502,9 +3156,33 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "viaje-aventura.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "es_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEspañol para aventuras de viaje — senderismo, camping, actividades al aire libre, clima, emergencias."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/viaje-aventura.md",
+        "vocabularyPages": [
+          "nature/montana.md",
+          "nature/bosque.md",
+          "nature/ rio.md",
+          "nature/playa.md",
+          "business/mapa.md",
+          "nature/clima.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "pueblo-costero-funeral.md"
       },
       "vocabulary": [
         "nature/montana.md",
@@ -2535,9 +3213,35 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "como-agua-para-chocolate-cap1.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "es_1_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Es/como-agua-para-chocolate-cap1.md"
+      },
       "raw": {
         "sourceFile": "como-agua-para-chocolate-cap1.md",
         "excerpt": "> Nota: este archivo contiene **pasajes representativos y resumen del Capítulo 1**, no la novela completa. Para la lectura completa se recomienda la edición impresa o digital oficial.\n\n\n\nLa novela tiene la **estructura de un recetario de cocina**: cada uno de los doce capítulos mensuales va encabezado por una receta, y los ingredientes de cada receta se van mezclando con la historia. El texto alterna entre la voz narrativa en tercera persona y las recetas en segunda persona (tú). El prólogo establece la **dinámica entre Tita y Pedro**, el conflicto central."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/como-agua-para-chocolate-cap1.md",
+        "vocabularyPages": [
+          "food/cebolla.md",
+          "business/matriarca.md",
+          "business/heredar.md",
+          "nature/sollozar.md",
+          "business/anhelar.md",
+          "business/desafiar.md",
+          "food/someterse.md",
+          "food/molcajete.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "recetario-como-estructura.md"
       },
       "vocabulary": [
         "food/cebolla.md",
@@ -2570,9 +3274,37 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "dating-romance-es.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "es_d_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Es/dating-romance-es.md"
+      },
       "raw": {
         "sourceFile": "dating-romance-es.md",
         "excerpt": "Curated reference for romantic/affectionate conversation in Spanish.\n**PG-13** content: coqueteo, citas, progresión romántica (beso, abrazo,\ndeclaración). Sin contenido explícito.\n\nCoqueteo en español es típicamente más explícito y físico que en inglés —\n**flirting in Spanish-speaking cultures** often includes:\n- cumplidos directos\n- contacto visual prolongado\n- proximidad física\n- apodos cariñosos desde temprano"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/dating-romance-es.md",
+        "vocabularyPages": [
+          "business/nombre.md",
+          "business/encantado.md",
+          "business/guapo.md",
+          "business/bonita.md",
+          "animals/precioso.md",
+          "emotions/sonrisa.md",
+          "business/hobby.md",
+          "business/café.md"
+        ],
+        "expressionPages": [
+          "encantado-de-conocerte.md",
+          "quieres-tomar-algo.md",
+          "me-gustas-mucho.md",
+          "estoy-enamorado.md"
+        ],
+        "culturePage": "espana-vs-latinoamerica-registro.md"
       },
       "vocabulary": [
         "business/nombre.md",
@@ -2604,9 +3336,35 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "comida-y-restaurante.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "es_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEspañol para comida, restaurantes, cocina, restricciones dietéticas. Útil para viajeros y entusiastas de la gastronomía."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/comida-y-restaurante.md",
+        "vocabularyPages": [
+          "food/desayuno.md",
+          "food/almuerzo.md",
+          "food/cena.md",
+          "food/agua.md",
+          "food/cafe.md",
+          "food/te.md",
+          "animals/delicioso.md",
+          "food/picante.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "pueblo-costero-funeral.md"
       },
       "vocabulary": [
         "food/desayuno.md",
@@ -2639,9 +3397,35 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "notes-in-spanish-listening-log.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "es_1_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Es/notes-in-spanish-listening-log.md"
+      },
       "raw": {
         "sourceFile": "notes-in-spanish-listening-log.md",
         "excerpt": "> Nota: este archivo es una **plantilla de listening log** (cuaderno de escucha). El audio original se escucha en el podcast; este documento captura los puntos gramaticales, léxicos y culturales típicos de los episodios avanzados para estudio autónomo."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/notes-in-spanish-listening-log.md",
+        "vocabularyPages": [
+          "business/siesta.md",
+          "food/tapas.md",
+          "business/currar.md",
+          "business/guapo.md",
+          "business/mola.md",
+          "food/botellon.md",
+          "animals/calor-pegajoso.md",
+          "business/ponerse-morado.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "spanish-dating-culture.md"
       },
       "vocabulary": [
         "business/siesta.md",
@@ -2674,9 +3458,35 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "notes-in-spanish-planes-de-verano.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "es_1_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Es/notes-in-spanish-planes-de-verano.md"
+      },
       "raw": {
         "sourceFile": "notes-in-spanish-planes-de-verano.md",
         "excerpt": "> Nota: archivo de **listening log** enfocado en subjuntivo adverbial. El audio real se escucha en el podcast; este documento captura los puntos gramaticales y léxicos que aparecen cuando nativos hablan de planes futuros en español peninsular.\n\n\n\nEn verano los hablantes nativos hacen **planes** con mucha frecuencia. Esto dispara el uso de **subjuntivo en cláusulas adverbiales** y de **futuro / ir a + infinitivo**. El episodio es una conversación entre Ben (londinense) y Marina (madrileña) sobre qué van a hacer en agosto."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/notes-in-spanish-planes-de-verano.md",
+        "vocabularyPages": [
+          "business/bochorno.md",
+          "business/chapparon.md",
+          "nature/solanera.md",
+          "clothing/escapada.md",
+          "business/pillar.md",
+          "business/apuntarse.md",
+          "nature/animarse.md",
+          "business/veranear.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "spanish-dating-culture.md"
       },
       "vocabulary": [
         "business/bochorno.md",
@@ -2709,9 +3519,35 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "el-ahogado-mas-hermoso-del-mundo.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "es_1_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Es/el-ahogado-mas-hermoso-del-mundo.md"
+      },
       "raw": {
         "sourceFile": "el-ahogado-mas-hermoso-del-mundo.md",
         "excerpt": "Los primeros niños que vieron el promontorio oscuro y sigiloso que se acercaba por el mar, se hicieron la ilusión de que era un barco enemigo. Después vieron que no llevaba banderas ni arboladura, y pensaron que fuera una ballena. Pero cuando quedó varado en la playa le quitaron los matorrales de sargazos, los filamentos de medusas y los restos de cardúmenes y naufragios que llevaba encima, y solo entonces descubrieron que era un ahogado.\n\nHabían jugado con él toda la tarde, enterrándolo y desenterrándolo en la arena, cuando alguien los vio por casualidad y dio la voz de alarma en el pueblo."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/el-ahogado-mas-hermoso-del-mundo.md",
+        "vocabularyPages": [
+          "nature/promontorio.md",
+          "business/sargazo.md",
+          "business/acantilado.md",
+          "business/altivez.md",
+          "business/desvalido.md",
+          "business/angarillas.md",
+          "animals/minucioso.md",
+          "business/bobo.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "realismo-magico-esquivel.md"
       },
       "vocabulary": [
         "nature/promontorio.md",
@@ -2744,9 +3580,35 @@
       "date": "2026-06-23",
       "language": "es",
       "sourceTopic": "trabajo-y-carrera.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "es_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\nEspañol para el lugar de trabajo — títulos de trabajo, reuniones, correos, etiqueta empresarial."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Es/sources/trabajo-y-carrera.md",
+        "vocabularyPages": [
+          "business/trabajo.md",
+          "business/oficina.md",
+          "business/reunion.md",
+          "business/jefe.md",
+          "business/proyecto.md",
+          "business/plazo.md",
+          "business/correo-electronico.md",
+          "food/salario.md"
+        ],
+        "expressionPages": [
+          "estoy-enamorado.md",
+          "subirse-al-higado.md"
+        ],
+        "culturePage": "pueblo-costero-funeral.md"
       },
       "vocabulary": [
         "business/trabajo.md",
@@ -2779,9 +3641,32 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "first-travel-japan.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "kr_t_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Kr/first-travel-japan.md"
+      },
       "raw": {
         "sourceFile": "first-travel-japan.md",
         "excerpt": "한국인 학습자가 처음으로 일본을 여행하면서 겪는 실전 상황을 정리한 자료. 공항 도착부터 호텔 체크인, 식당 주문, 길 묻기, 관광 등 실제 여행 시나리오에서 필요한 표현과 어휘를 다룬다.\n\n대부분의 한국인 학습자는 한자를 어느 정도 읽을 수 있으므로, 일본어 단어의 한자 표기를 병기하면 학습 효율이 높아진다."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/first-travel-japan.md",
+        "vocabularyPages": [
+          "kuukou.md",
+          "pasupooto.md",
+          "nimotsu.md",
+          "clothing/index.md",
+          "business/키보드.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "kuukou.md",
@@ -2809,9 +3694,35 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "technology-and-internet.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "kr_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n한국어 테크놀로지, 인터넷, 컴퓨터, 스마트폰 어휘. 현대 필수 단어."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/technology-and-internet.md",
+        "vocabularyPages": [
+          "business/컴퓨터.md",
+          "business/스마트폰.md",
+          "food/화면.md",
+          "business/키보드.md",
+          "social/인터넷.md",
+          "business/이메일.md",
+          "nature/비밀번호.md",
+          "business/앱.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "business/컴퓨터.md",
@@ -2844,9 +3755,35 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "health-and-body.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "kr_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n한국어 건강, 신체, 질병, 병원 어휘. 응급 상황과 일상 생활에 필수.\n\n\n## Key Takeaways\n\n- 신체 부위 — 머리, 손, 발, 눈, 귀\n- 일반 질병 — 감기, 독감, 열\n- 의사/병원 — 예약, 처방전, 약국\n- 건강 동사 — 아프다, 아프다, 피곤하다\n\n\n## Vocabulary Extracted\n\n- [[머리]] — 머리\n- [[손]] — 손\n- [[발]] — 발\n- [[배]] — 배\n- [[감기]] — 감기\n- [[열]] — 열\n- [[의사]] — 의사\n- [[병원]] — 병원\n- [[약]] — 약\n- [[통증]] — 통증\n\n\n## Expressions Extracted\n\n- \"몸이 안 좋아요\" — I don't feel well\n- \"두통이 있어요\" — I have a headache\n- \"어디가 아파요?\" — Where does it hurt?\n- \"의사가 필요해요\" — I need a doctor\n- \"구급차를 불러주세요\" — Call an ambulance"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/health-and-body.md",
+        "vocabularyPages": [
+          "social/머리.md",
+          "social/손.md",
+          "social/발.md",
+          "social/배.md",
+          "social/감기.md",
+          "social/열.md",
+          "social/의사.md",
+          "social/병원.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "social/머리.md",
@@ -2879,9 +3816,35 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "holidays-and-celebrations.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "kr_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n한국어 명절, 기념일, 축제 어휘. 한국 주요 명절 문화.\n\n\n## Key Takeaways\n\n- 한국 명절 — 설날, 추석\n- 서양 명절 — 크리스마스, 발렌타인, 화이트데이\n- 기념일 — 생일, 결혼기념일\n- 한국 전통 행사 — 제기, 세배, 차례\n\n\n## Vocabulary Extracted\n\n- [[명절]] — 명절\n- [[생일]] — 생일\n- [[크리스마스]] — 크리스마스\n- [[설날]] — 설날\n- [[추석]] — 추석\n- [[결혼식]] — 결혼식\n- [[파티]] — 파티\n- [[선물]] — 선물\n- [[케이크]] — 케이크\n- [[세배]] — 세배\n\n\n## Expressions Extracted\n\n- \"생일 축하해요!\" — Happy birthday!\n- \"메리 크리스마스\" — Merry Christmas\n- \"선물 고마워요\" — Thank you for the gift\n- \"새해 복 많이 받으세요\" — Happy new year\n- \"파티 올 거예요?\" — Are you coming to the party?"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/holidays-and-celebrations.md",
+        "vocabularyPages": [
+          "nature/명절.md",
+          "social/생일.md",
+          "social/크리스마스.md",
+          "social/설날.md",
+          "social/추석.md",
+          "social/결혼식.md",
+          "social/파티.md",
+          "social/선물.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "nature/명절.md",
@@ -2914,9 +3877,32 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "shopping-and-money.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "kr_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n한국 쇼핑, 돈, 가격 어휘. 여행자와 일상 생활에 유용.\n\n\n## Key Takeaways\n\n- 가게 종류 — 편의점, 마트, 백화점, 시장\n- 돈 — 현금, 카드, 거스름돈\n- 가격 — 비싸다, 싸다, 할인\n- 쇼핑 행동 — 사다, 팔다, 환불, 입어보다\n\n\n## Vocabulary Extracted\n\n- [[가게]] — 가게\n- [[돈]] — 돈\n- [[현금]] — 현금\n- [[카드]] — 카드\n- [[가격]] — 가격\n- [[싸다]] — 싸다\n- [[비싸다]] — 비싸다\n- [[할인]] — 할인\n- [[영수증]] — 영수증\n- [[환불]] — 환불\n\n\n## Expressions Extracted\n\n- \"얼마예요?\" — How much is it?\n- \"카드 돼요?\" — Do you take card?\n- \"할인 돼요?\" — Can I get a discount?\n- \"입어볼 수 있어요?\" — Can I try it on?\n- \"탈의실 어디예요?\" — Where is the fitting room?"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/shopping-and-money.md",
+        "vocabularyPages": [
+          "social/gagyeok.md",
+          "social/ssada.md",
+          "social/bissada.md",
+          "clothing/index.md",
+          "business/키보드.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "social/gagyeok.md",
@@ -2946,9 +3932,32 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "food-and-dining.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "kr_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n한국 음식 문화 어휘 — 식당, 요리, 음식 종류, 식이 제한. 한국 여행자가 알아야 할 핵심.\n\n\n## Key Takeaways\n\n- 식당 어휘 — 메뉴, 주문, 계산\n- 한국 음식 — 김치, 비빔밥, 불고기, 떡볶이\n- 음료 — 물, 차, 커피, 소주, 맥주\n- 조리법 — 굽다, 볶다, 끓이다, 찌다\n- 맛 — 달다, 짜다, 맵다, 신맛\n\n\n## Vocabulary Extracted\n\n- [[아침]] — 아침\n- [[점심]] — 점심\n- [[저녁]] — 저녁\n- [[물]] — 물\n- [[커피]] — 커피\n- [[맛있다]] — 맛있다\n- [[맵다]] — 맵다\n- [[짜다]] — 짜다\n- [[달다]] — 달다\n- [[김치]] — 김치\n\n\n## Expressions Extracted\n\n- \"배고파요\" — I'm hungry\n- \"메뉴판 주세요\" — Menu, please\n- \"계산해 주세요\" — Check, please\n- \"맛있어요!\" — Delicious!\n- \"맵지 않게 해주세요\" — Not spicy, please"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/food-and-dining.md",
+        "vocabularyPages": [
+          "social/mul.md",
+          "social/masissda.md",
+          "social/maepda.md",
+          "social/dalda.md",
+          "clothing/index.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "social/mul.md",
@@ -2978,9 +3987,37 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "dating-romance-kr.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "kr_d_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Kr/dating-romance-kr.md"
+      },
       "raw": {
         "sourceFile": "dating-romance-kr.md",
         "excerpt": "Curated reference for 恋愛(연애) conversation in Korean.\n**15세 이상 권장** (15+ 권장) 콘텐츠: 썸(설렘), 고백, 연인 사이의\n친밀한 대화. Explicit한 표현은 제외.\n\n한국 연애 문화의 특징:\n- **썸 (ssum, \"some\")**: 교제 전 설렘 단계. \"우리 지금 뭐야?\"가 흔한 질문.\n- **고백 (告白)**: 公式(공식) 행사로 문화적 중요성.\n- **존댓말 → 반말 전환**: 연인 사이의 중요한 시점.\n- **커뮤케이션 스타일**: 직접적 표현, 애칭(호칭) 사용, 질투/관심 표현."
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/dating-romance-kr.md",
+        "vocabularyPages": [
+          "social/이름.md",
+          "social/취미.md",
+          "social/예쁘다.md",
+          "social/이쁘다.md",
+          "social/잘생겼다.md",
+          "social/멋있다.md",
+          "social/귀엽다.md",
+          "social/착하다.md"
+        ],
+        "expressionPages": [
+          "만나서-반가워요.md",
+          "같이-밥-먹을래.md",
+          "너-자꾸-생각나.md",
+          "나-너-좋아해.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "social/이름.md",
@@ -3012,9 +4049,35 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "travel-basics.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "kr_t_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n한국 여행을 위한 필수 어휘 — 공항, 호텔, 식당, 교통, 긴급 상황. 한국인이 외국인에게 알려주고 싶은 핵심 단어.\n\n\n## Key Takeaways\n\n- 인사/예의 — 안녕하세요, 감사합니다, 죄송합니다\n- 숫자/돈 — 천, 만, 원\n- 방향 — 왼쪽, 오른쪽, 가깝다, 멀다\n- 교통 — 버스, 지하철, 택시, 기차\n- 음식/음료 — 메뉴, 물, 커피\n- 긴급 — 도와주세요, 경찰, 병원\n\n\n## Vocabulary Extracted\n\n- [[공항]] — 공항\n- [[짐]] — 수하물\n- [[버스]] — 버스\n- [[호텔]] — 호텔\n- [[식당]] — 식당\n- [[택시]] — 택시\n- [[지하철]] — 지하철\n- [[여권]] — 여권\n- [[표]] — 표\n- [[지도]] — 지도\n\n\n## Expressions Extracted\n\n- \"얼마예요?\" — How much?\n- \"~는 어디예요?\" — Where is ~?\n- \"도와주세요\" — Please help\n- \"모르겠어요\" — I don't know\n- \"한국어 할 줄 아세요?\" — Do you speak Korean?"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/travel-basics.md",
+        "vocabularyPages": [
+          "social/gonghang.md",
+          "social/jim.md",
+          "social/beoseu.md",
+          "social/hotel.md",
+          "social/taeksi.md",
+          "social/jihacheol.md",
+          "social/여권.md",
+          "social/pyo.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "social/gonghang.md",
@@ -3045,9 +4108,34 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "daily-life-basics.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "kr_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n한국어 일상 회화 어휘 — 인사, 시간, 가족, 취미, 직장.\n\n\n## Key Takeaways\n\n- 인사 — 안녕하세요, 안녕, 처음 뵙겠습니다\n- 시간 — 오늘, 내일, 어제, 지금\n- 가족 — 어머니, 아버지, 형제\n- 동사 — 가다, 오다, 먹다, 마시다, 자다, 일하다\n- 형용사 — 좋다, 나쁘다, 크다, 작다\n\n\n## Vocabulary Extracted\n\n- [[안녕하세요]] — Hello\n- [[감사합니다]] — Thank you\n- [[죄송합니다]] — I'm sorry\n- [[가족]] — Family\n- [[친구]] — Friend\n- [[사랑]] — Love\n- [[일]] — Work\n- [[학교]] — School\n- [[집]] — Home\n- [[시간]] — Time\n\n\n## Expressions Extracted\n\n- \"잘 지내세요?\" — How are you?\n- \"만나서 반갑습니다\" — Nice to meet you\n- \"또 만나요\" — See you again\n- \"안녕히 가세요\" — Goodbye\n- \"잘 자요\" — Good night"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/daily-life-basics.md",
+        "vocabularyPages": [
+          "social/annyeonghaseyo.md",
+          "social/gamsahamnida.md",
+          "social/joesonghamnida.md",
+          "social/gajok.md",
+          "social/chingu.md",
+          "social/sarang.md",
+          "social/haggyo.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "social/annyeonghaseyo.md",
@@ -3079,9 +4167,35 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "sports-and-hobbies.md",
+      "difficulty": {
+        "tier": 1,
+        "cefr": "A1-A2",
+        "primaryStage": "kr_1_1"
+      },
+      "source": {
+        "rawFile": ""
+      },
       "raw": {
         "sourceFile": "",
         "excerpt": "## Summary\n\n한국 스포츠와 취미 어휘를 모은 학습 자료. 야외 활동, 실내 레저, 문화 활동 등 한국에서 자주 하는 스포츠와 취미에 대해 배웁니다. 야구, 축구, 농구, 수영, 요가, 독서, K-pop 댄스 등 다양한 주제를 다룹니다.\n\n\n## Key Takeaways\n\n- 일반 스포츠 — 축구, 야구, 농구, 수영\n- 취미 어휘 — 독서, 요리, 음악\n- 피트니스 — 헬스장, 요가, 운동\n- 야외 활동 — 하이킹, 캠핑\n\n\n## Vocabulary Extracted\n\n- [[스포츠]] — 스포츠\n- [[축구]] — 축구\n- [[야구]] — 야구\n- [[농구]] — 농구\n- [[수영]] — 수영\n- [[조깅]] — 조깅\n- [[요가]] — 요가\n- [[음악]] — 음악\n- [[독서]] — 독서\n- [[영화]] — 영화\n\n\n## Expressions Extracted\n\n- \"운동 하세요?\" — Do you exercise?\n- \"취미가 뭐예요?\" — What's your hobby?\n- \"축구 좋아해요\" — I like soccer\n- \"같이 운동하자\" — Let's exercise together\n- \"팬이에요\" — I'm a fan"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/sports-and-hobbies.md",
+        "vocabularyPages": [
+          "social/스포츠.md",
+          "social/축구.md",
+          "social/야구.md",
+          "social/농구.md",
+          "social/수영.md",
+          "social/조깅.md",
+          "social/요가.md",
+          "social/음악.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "social/스포츠.md",
@@ -3114,9 +4228,35 @@
       "date": "2026-06-23",
       "language": "kr",
       "sourceTopic": "travel-basics-kr.md",
+      "difficulty": {
+        "tier": 2,
+        "cefr": "A2-B1",
+        "primaryStage": "kr_t_1"
+      },
+      "source": {
+        "rawFile": "Language/raw/Kr/travel-basics-kr.md"
+      },
       "raw": {
         "sourceFile": "travel-basics-kr.md",
         "excerpt": "한국어 학습자를 위한 여행 기본 어휘 레퍼런스. 다음 출처 기반:\n\n- TOPIK 1급 어휘 목록\n- Yonsei Korean 1·2 (여행 단원)\n- 경희대학교 한국어 교재\n- Visit Korea 공식 여행 가이드"
+      },
+      "wikiOutput": {
+        "hubPage": "Language/wiki/Kr/sources/travel-basics-kr.md",
+        "vocabularyPages": [
+          "social/annyeonghaseyo.md",
+          "social/gamsahamnida.md",
+          "social/gonghang.md",
+          "social/hotel.md",
+          "social/beoseu.md",
+          "social/jihacheol.md",
+          "social/taeksi.md",
+          "social/여권.md"
+        ],
+        "expressionPages": [
+          "sumimasen-wa-doko-desuka.md",
+          "나중에-또-보자.md"
+        ],
+        "culturePage": "korean-dating-culture.md"
       },
       "vocabulary": [
         "social/annyeonghaseyo.md",

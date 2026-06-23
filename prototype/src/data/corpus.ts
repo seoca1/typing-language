@@ -280,7 +280,7 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_t_059', display: 'cheap', meanings: { en: 'cheap', es: 'barato', ja: '安い (やすい)', ko: '싸다' }, meaningLang: 'ko', level: 2, category: 'travel' },
   { id: 'en_t_060', display: 'expensive', meanings: { en: 'expensive', es: 'caro', ja: '高い (たかい)', ko: '비싸다' }, meaningLang: 'ko', level: 2, category: 'travel' },
 
-  // ===== Romance theme (source: [[dating-romance]]) =====
+  // ===== Romance theme (source: 'dating-romance') =====
   // Tier 2: Self-introduction & basic compliments
   { id: 'en_r_001', display: 'name', meanings: { ko: '이름' }, meaningLang: 'ko', level: 2, category: 'romance' },
   { id: 'en_r_002', display: 'meet', meanings: { ko: '만나다' }, meaningLang: 'ko', level: 2, category: 'romance' },
@@ -303,7 +303,7 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_r_019', display: 'girlfriend', meanings: { en: 'girlfriend', es: 'novia', ja: '彼女 (かのじょ)', ko: '여자친구' }, meaningLang: 'ko', level: 2, category: 'romance' },
   { id: 'en_r_020', display: 'love', meanings: { en: 'love', es: 'amor', ja: '愛 (あい)', ko: '사랑하다' }, meaningLang: 'ko', level: 3, category: 'romance' },
 
-  // ===== 음식/요리 (Food & Cooking) — source: [[food-vocabulary]] =====
+  // ===== 음식/요리 (Food & Cooking) — source: 'food-vocabulary' =====
   // Level 1: 기본 음식 (Basic Food)
   { id: 'en_f_001', display: 'meat', meanings: { en: 'meat', es: 'carne', ja: '肉 (にく)', ko: '고기' }, meaningLang: 'ko', level: 1, category: 'food', source: 'food-vocabulary' },
   { id: 'en_f_002', display: 'chicken', meanings: { en: 'chicken', es: 'pollo', ja: '鶏肉 (とりにく)', ko: '닭고기' }, meaningLang: 'ko', level: 1, category: 'food' , source: 'chicken' },
@@ -361,7 +361,7 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_f_058', display: 'takeout', meanings: { en: 'takeout', es: 'para llevar', ja: '持ち帰り (もちかえり)', ko: '포장' }, meaningLang: 'ko', level: 2, category: 'food' , source: 'takeout' },
   { id: 'en_f_059', display: 'delivery', meanings: { en: 'delivery', es: 'reparto', ja: '配達 (はいたつ)', ko: '배달' }, meaningLang: 'ko', level: 2, category: 'food' , source: 'delivery' },
 
-  // ===== 비즈니스 (Business) — source: [[business-vocabulary]] =====
+  // ===== 비즈니스 (Business) — source: 'business-vocabulary' =====
   // Level 1-2: 이메일/서신 (Email/Correspondence)
   { id: 'en_b_001', display: 'email', meanings: { en: 'email', es: 'correo electrónico', ja: 'メール', ko: '이메일' }, meaningLang: 'ko', level: 1, category: 'business' , source: 'email' },
   { id: 'en_b_002', display: 'address', meanings: { en: 'address', es: 'dirección', ja: '住所 (じゅうしょ)', ko: '주소' }, meaningLang: 'ko', level: 1, category: 'business' , source: 'address' },
@@ -415,7 +415,7 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_b_062', display: 'please review', meanings: { en: 'please review', es: 'por favor revise', ja: ' 검토 부탁드립니다', ko: '검토 부탁드립니다' }, meaningLang: 'ko', level: 2, category: 'business' , source: 'please review' },
   { id: 'en_b_063', display: 'thank you', meanings: { en: 'thank you', es: 'gracias', ja: 'ありがとう', ko: '감사합니다' }, meaningLang: 'ko', level: 1, category: 'business' , source: 'thank you' },
 
-  // ===== 감정/성격 (Emotions & Personality) — source: [[emotions-personality-vocabulary]] =====
+  // ===== 감정/성격 (Emotions & Personality) — source: 'emotions-personality-vocabulary' =====
   // Level 1-2: 기본 감정 (Basic Emotions)
   { id: 'en_e_001', display: 'happy', meanings: { en: 'happy', es: 'feliz', ja: '嬉しい (うれしい)', ko: '기쁜' }, meaningLang: 'ko', level: 1, category: 'emotion' , source: 'happy' },
   { id: 'en_e_002', display: 'sad', meanings: { en: 'sad', es: 'triste', ja: '悲しい (かなしい)', ko: '슬픈' }, meaningLang: 'ko', level: 1, category: 'emotion' , source: 'sad' },
@@ -466,7 +466,7 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_e_059', display: 'to be comfortable', meanings: { en: 'to be comfortable', es: 'estar cómodo', ja: '快適だ', ko: '편안하다' }, meaningLang: 'ko', level: 2, category: 'emotion' , source: 'emotions-personality-vocabulary' },
   { id: 'en_e_060', display: 'to be worried', meanings: { en: 'to be worried', es: 'preocuparse', ja: '心配する', ko: '걱정하다' }, meaningLang: 'ko', level: 2, category: 'emotion' , source: 'emotions-personality-vocabulary' },
 
-  // ===== 자연/날씨 (Nature & Weather) — source: [[nature-vocabulary]] =====
+  // ===== 자연/날씨 (Nature & Weather) — source: 'nature-vocabulary' =====
   // Level 1: 기본 자연 현상 (Basic Natural Phenomena)
   { id: 'en_n_001', display: 'sun', meanings: { en: 'sun', es: 'sol', ja: '太陽 (たいよう)', ko: '태양' }, meaningLang: 'ko', level: 1, category: 'nature' , source: 'sun' },
   { id: 'en_n_002', display: 'moon', meanings: { en: 'moon', es: 'luna', ja: '月 (つき)', ko: '달' }, meaningLang: 'ko', level: 1, category: 'nature' , source: 'moon' },
@@ -514,7 +514,7 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_n_059', display: 'cold', meanings: { en: 'cold', es: 'frío', ja: '寒い (さむい)', ko: '추운' }, meaningLang: 'ko', level: 1, category: 'nature' , source: 'cold' },
   { id: 'en_n_060', display: 'warm', meanings: { en: 'warm', es: 'cálido', ja: '温かい (あたたかい)', ko: '따뜻한' }, meaningLang: 'ko', level: 1, category: 'nature' , source: 'warm' },
 
-  // ===== 동물 (Animals) — source: [[animals-vocabulary]] =====
+  // ===== 동물 (Animals) — source: 'animals-vocabulary' =====
   // Level 1: 반려동물/가축 (Pets & Farm Animals)
   { id: 'en_a_001', display: 'dog', meanings: { en: 'dog', es: 'perro', ja: '犬 (いぬ)', ko: '개' }, meaningLang: 'ko', level: 1, category: 'animals' , source: 'dog' },
   { id: 'en_a_002', display: 'cat', meanings: { en: 'cat', es: 'gato', ja: '猫 (ねこ)', ko: '고양이' }, meaningLang: 'ko', level: 1, category: 'animals' , source: 'cat' },
@@ -561,7 +561,7 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_a_059', display: 'fast', meanings: { en: 'fast', es: 'rápido', ja: '速い (はやい)', ko: '빠른' }, meaningLang: 'ko', level: 1, category: 'animals' , source: 'animals-vocabulary' },
   { id: 'en_a_060', display: 'slow', meanings: { en: 'slow', es: 'lento', ja: '遅い (おそい)', ko: '느린' }, meaningLang: 'ko', level: 1, category: 'animals' , source: 'animals-vocabulary' },
 
-  // ===== 의류/패션 (Clothing & Fashion) — source: [[clothing-vocabulary]] =====
+  // ===== 의류/패션 (Clothing & Fashion) — source: 'clothing-vocabulary' =====
   // Level 1: 기본 의류 (Basic Clothing)
   { id: 'en_c_001', display: 'shirt', meanings: { en: 'shirt', es: 'camisa', ja: 'シャツ', ko: '셔츠' }, meaningLang: 'ko', level: 1, category: 'clothing' , source: 'shirt' },
   { id: 'en_c_002', display: 'pants', meanings: { en: 'pants', es: 'pantalones', ja: 'ズボン', ko: '바지' }, meaningLang: 'ko', level: 1, category: 'clothing' , source: 'pants' },
@@ -609,21 +609,21 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_p_008', display: 'When in Rome, do as the Romans do', meanings: { en: 'Adapt to the customs and practices of the place you are in', ja: '郷に応', ko: '로마에 있으면 로마인처럼하라' }, meaningLang: 'ko', level: 4, category: 'proverb' },
 
   // Quotes (Movie Quotes) — Tier 4
-  { id: 'en_q_001', display: 'There is no spoon.', meanings: { en: 'A illusion can be bent but not broken', ja: ' spoonなどない', ko: '숟가락은 없다' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_002', display: 'Wake up, Neo.', meanings: { en: 'Time to face reality', ja: '目が覚めろ、ネオ', ko: '일어나, 네오' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_003', display: 'May the Force be with you.', meanings: { en: 'Goodbye and good luck', ja: 'フォースと共にあるように', ko: '포스가 함께하길' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_004', display: 'I have a bad feeling about this.', meanings: { en: 'Sense of impending danger', ja: '嫌な予感がする', ko: '不好的 느낌이 든다' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_005', display: 'Here is looking at you, kid.', meanings: { en: 'Farewell and affection', ja: 'さらばだ、我が子よ', ko: '이별의 인사' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_006', display: 'You had me at hello.', meanings: { en: 'Love at first sight', ja: 'こんにちはで心臓を射抜いた', ko: '인사だけで 마음 을 훔쳤다' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_007', display: 'You are about to die, Mr. Chen.', meanings: { en: 'Threat or warning', ja: '死ぬぞ、陈さん', ko: '죽을 것이다, 천씨' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_008', display: 'I will be back.', meanings: { en: 'Promise to return', ja: '必ず戻る', ko: '꼭 돌아오겠다' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_009', display: 'All those moments will be lost in time.', meanings: { en: 'Regret about fleeting experiences', ja: 'あの瞬間たちは失われる', ko: '그 순간들은 다 사라질 것이다' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'en_q_010', display: 'With great power comes great responsibility.', meanings: { en: 'Spider-Man principle', ja: '大きな力には大きな責任が伴う', ko: '큰 힘에는 큰 책임이 따른다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_001', display: 'There is no spoon.', meanings: { en: 'A illusion can be bent but not broken', ja: ' spoonなどない', ko: '숟가락은 없다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_002', display: 'Wake up, Neo.', meanings: { en: 'Time to face reality', ja: '目が覚めろ、ネオ', ko: '일어나, 네오' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_003', display: 'May the Force be with you.', meanings: { en: 'Goodbye and good luck', ja: 'フォースと共にあるように', ko: '포스가 함께하길' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_004', display: 'I have a bad feeling about this.', meanings: { en: 'Sense of impending danger', ja: '嫌な予感がする', ko: '不好的 느낌이 든다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_005', display: 'Here is looking at you, kid.', meanings: { en: 'Farewell and affection', ja: 'さらばだ、我が子よ', ko: '이별의 인사' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_006', display: 'You had me at hello.', meanings: { en: 'Love at first sight', ja: 'こんにちはで心臓を射抜いた', ko: '인사只需要 마음 을 훔쳤다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_007', display: 'You are about to die, Mr. Chen.', meanings: { en: 'Threat or warning', ja: '死ぬぞ、陈さん', ko: '죽을 것이다, 천씨' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_008', display: 'I will be back.', meanings: { en: 'Promise to return', ja: '必ず戻る', ko: '꼭 돌아오겠다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_009', display: 'All those moments will be lost in time.', meanings: { en: 'Regret about fleeting experiences', ja: 'あの瞬間たちは失われる', ko: '그 순간들은 다 사라질 것이다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
+  { id: 'en_q_010', display: 'With great power comes great responsibility.', meanings: { en: 'Spider-Man principle', ja: '大きな力には大きな責任が伴う', ko: '큰 힘에는 큰 책임이 따른다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'movie-quotes' },
 
   // Passages (Literature) — Tier 5
-  { id: 'en_pa_001', display: 'The sky above the port was the color of television, tuned to a dead channel.', meanings: { en: 'Opening line of Neuromancer', ja: '港の上の空はテレビの色をしていた', ko: '항구 위의 하늘은 텔레비전 색이었다' }, meaningLang: 'ko', level: 5, category: 'passage' },
-  { id: 'en_pa_002', display: 'It is a truth universally acknowledged, that a single man in possession of a good fortune.', meanings: { en: 'Opening line of Pride and Prejudice', ja: '부유한 남자는 반드시 아내가 필요한 것은 보편적 진리다', ko: '부유한 남성은 반드시 아내가 필요한 것은 보편적 진리다' }, meaningLang: 'ko', level: 5, category: 'passage' },
-  { id: 'en_pa_003', display: 'He was an old man who fished alone in a skiff in the Gulf Stream.', meanings: { en: 'Opening of The Old Man and the Sea', ja: '그는 걸프 스트림에서 혼자 보트를 타고 낚시하는 노인이었다', ko: '그는 걸프 스트림에서 혼자 배를 타고 낚시하는 노인이었다' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'en_pa_001', display: 'The sky above the port was the color of television, tuned to a dead channel.', meanings: { en: 'Opening line of Neuromancer', ja: '港の上の空はテレビの色をしていた', ko: '항구 위의 하늘은 텔레비전 색이었다' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
+  { id: 'en_pa_002', display: 'It is a truth universally acknowledged, that a single man in possession of a good fortune.', meanings: { en: 'Opening line of Pride and Prejudice', ja: '부유한 남자는 반드시 아내가 필요한 것은 보편적 진리다', ko: '부유한 남성은 반드시 아내가 필요한 것은 보편적 진리다' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
+  { id: 'en_pa_003', display: 'He was an old man who fished alone in a skiff in the Gulf Stream.', meanings: { en: 'Opening of The Old Man and the Sea', ja: '그는 걸프 스트림에서 혼자 보트를 타고 낚시하는 노인이었다', ko: '그는 걸프 스트림에서 혼자 배를 타고 낚시하는 노인이었다' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
 ];
 
 // ===== JP (Japanese) =====
@@ -719,7 +719,7 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_t_030', display: '左', romaji: 'hidari', meanings: { ko: '왼쪽' }, meaningLang: 'ko', level: 5, category: 'travel' },
   { id: 'jp_t_031', display: '右', romaji: 'migi', meanings: { ko: '오른쪽' }, meaningLang: 'ko', level: 5, category: 'travel' },
 
-  // ===== Romance theme (source: [[dating-romance-jp]]) =====
+  // ===== Romance theme (source: 'dating-romance-jp') =====
   // Tier 2-3: 자기소개, 칭찬, 데이트, 고백
   { id: 'jp_r_001', display: '名前', romaji: 'namae', meanings: { ko: '이름' }, meaningLang: 'ko', level: 2, category: 'romance' },
   { id: 'jp_r_002', display: '綺麗', romaji: 'kirei', meanings: { ko: '아름다운' }, meaningLang: 'ko', level: 2, category: 'romance' },
@@ -738,7 +738,7 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_r_015', display: '彼女', romaji: 'kanojo', meanings: { ko: '여자친구' }, meaningLang: 'ko', level: 2, category: 'romance' },
   { id: 'jp_r_016', display: '愛する', romaji: 'aisuru', meanings: { ko: '사랑하다' }, meaningLang: 'ko', level: 3, category: 'romance' },
 
-  // ===== 음식/요리 (Food & Cooking) — source: [[food-vocabulary]] =====
+  // ===== 음식/요리 (Food & Cooking) — source: 'food-vocabulary' =====
   // Level 1: 기본 음식 (Basic Food)
   { id: 'jp_f_001', display: '肉', romaji: 'niku', meanings: { en: 'meat', es: 'carne', ko: '고기' }, meaningLang: 'ko', level: 1, category: 'food' , source: '肉' },
   { id: 'jp_f_002', display: '鶏肉', romaji: 'toriniku', meanings: { en: 'chicken', es: 'pollo', ko: '닭고기' }, meaningLang: 'ko', level: 1, category: 'food' , source: '鶏肉' },
@@ -796,7 +796,7 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_f_058', display: '食堂', romaji: 'shokudou', meanings: { en: 'cafeteria', es: 'comedor', ko: '식당/식당' }, meaningLang: 'ko', level: 1, category: 'food' , source: 'food-vocabulary' },
   { id: 'jp_f_059', display: '料理', romaji: 'ryouri', meanings: { en: 'cooking/cuisine', es: 'cocina', ko: '요리' }, meaningLang: 'ko', level: 2, category: 'food' , source: 'food-vocabulary' },
 
-  // ===== ビジネス (Business) — source: [[business-vocabulary]] =====
+  // ===== ビジネス (Business) — source: 'business-vocabulary' =====
   // Level 1-2: メール/通信 (Email/Correspondence)
   { id: 'jp_b_001', display: 'メール', romaji: 'meeru', meanings: { en: 'email', es: 'correo electrónico', ko: '이메일' }, meaningLang: 'ko', level: 1, category: 'business' , source: 'メール' },
   { id: 'jp_b_002', display: '住所', romaji: 'juusho', meanings: { en: 'address', es: 'dirección', ko: '주소' }, meaningLang: 'ko', level: 1, category: 'business' , source: '住所' },
@@ -851,7 +851,7 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_b_062', display: '検討 부탁드립니다', romaji: 'kentou butaku itashimasu', meanings: { en: 'please review', es: 'por favor revise', ko: '검토 부탁드립니다' }, meaningLang: 'ko', level: 2, category: 'business' , source: 'business-vocabulary' },
   { id: 'jp_b_063', display: 'ありがとう', romaji: 'arigatou', meanings: { en: 'thank you', es: 'gracias', ko: '감사합니다' }, meaningLang: 'ko', level: 1, category: 'business' , source: 'business-vocabulary' },
 
-  // ===== 感情/性格 (Emotions & Personality) — source: [[emotions-personality-vocabulary]] =====
+  // ===== 感情/性格 (Emotions & Personality) — source: 'emotions-personality-vocabulary' =====
   // Level 1-2: 基本感情 (Basic Emotions)
   { id: 'jp_e_001', display: '嬉しい', romaji: 'ureshii', meanings: { en: 'happy', es: 'feliz', ko: '기쁜' }, meaningLang: 'ko', level: 1, category: 'emotion' , source: '嬉しい' },
   { id: 'jp_e_002', display: '悲しい', romaji: 'kanashii', meanings: { en: 'sad', es: 'triste', ko: '슬픈' }, meaningLang: 'ko', level: 1, category: 'emotion' , source: '悲しい' },
@@ -900,7 +900,7 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_e_059', display: '快適だ', romaji: 'kaiteki da', meanings: { en: 'to be comfortable', es: 'estar cómodo', ko: '편안하다' }, meaningLang: 'ko', level: 2, category: 'emotion' , source: '快適だ' },
   { id: 'jp_e_060', display: '心配する', romaji: 'shinpai suru', meanings: { en: 'to be worried', es: 'preocuparse', ko: '걱정하다' }, meaningLang: 'ko', level: 2, category: 'emotion' , source: '心配する' },
 
-  // ===== 自然/天気 (Nature & Weather) — source: [[nature-vocabulary]] =====
+  // ===== 自然/天気 (Nature & Weather) — source: 'nature-vocabulary' =====
   // Level 1: 基本自然現象 (Basic Natural Phenomena)
   { id: 'jp_n_001', display: '太陽', romaji: 'taiyou', meanings: { en: 'sun', es: 'sol', ko: '태양' }, meaningLang: 'ko', level: 1, category: 'nature' , source: '太陽' },
   { id: 'jp_n_002', display: '月', romaji: 'tsuki', meanings: { en: 'moon', es: 'luna', ko: '달' }, meaningLang: 'ko', level: 1, category: 'nature' , source: '月' },
@@ -948,7 +948,7 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_n_059', display: '寒い', romaji: 'samui', meanings: { en: 'cold', es: 'frío', ko: '추운' }, meaningLang: 'ko', level: 1, category: 'nature' , source: '寒い' },
   { id: 'jp_n_060', display: '温かい', romaji: 'atatakai', meanings: { en: 'warm', es: 'cálido', ko: '따뜻한' }, meaningLang: 'ko', level: 1, category: 'nature' , source: '温かい' },
 
-  // ===== 動物 (Animals) — source: [[animals-vocabulary]] =====
+  // ===== 動物 (Animals) — source: 'animals-vocabulary' =====
   // Level 1: ペット/家畜 (Pets & Farm Animals)
   { id: 'jp_a_001', display: '犬', romaji: 'inu', meanings: { en: 'dog', es: 'perro', ko: '개' }, meaningLang: 'ko', level: 1, category: 'animals' , source: '犬' },
   { id: 'jp_a_002', display: '猫', romaji: 'neko', meanings: { en: 'cat', es: 'gato', ko: '고양이' }, meaningLang: 'ko', level: 1, category: 'animals' , source: '猫' },
@@ -994,7 +994,7 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_a_058', display: '速い', romaji: 'hayai', meanings: { en: 'fast', es: 'rápido', ko: '빠른' }, meaningLang: 'ko', level: 1, category: 'animals' , source: '速い' },
   { id: 'jp_a_059', display: '遅い', romaji: 'osoi', meanings: { en: 'slow', es: 'lento', ko: '느린' }, meaningLang: 'ko', level: 1, category: 'animals' , source: '遅い' },
 
-  // ===== 衣服/ファッション (Clothing & Fashion) — source: [[clothing-vocabulary]] =====
+  // ===== 衣服/ファッション (Clothing & Fashion) — source: 'clothing-vocabulary' =====
   // Level 1: 基本衣服 (Basic Clothing)
   { id: 'jp_c_001', display: 'シャツ', romaji: 'shatsu', meanings: { en: 'shirt', es: 'camisa', ko: '셔츠' }, meaningLang: 'ko', level: 1, category: 'clothing' , source: 'シャツ' },
   { id: 'jp_c_002', display: 'ズボン', romaji: 'zubon', meanings: { en: 'pants', es: 'pantalones', ko: '바지' }, meaningLang: 'ko', level: 1, category: 'clothing' , source: 'ズボン' },
@@ -1040,28 +1040,28 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_p_006', display: '痘痕も笑窪', romaji: 'abata mo ekubo', meanings: { en: 'Even a pockmark laughs at dimples', ko: '먹물도 아홉 색이다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
 
   // Quotes (アニメ・ドラマ) — Tier 4
-  { id: 'jp_q_001', display: '俺は調子に乗るタイプだからな', romaji: 'ore wa chō ni noru taipu dakara na', meanings: { en: 'I am the type to get carried away', ko: '나는 흥분하는 타입이거든' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'jp_q_002', display: '心が燃えている限り、人は強い', romaji: 'kokoro ga moeteiru kagiri, hito wa tsuyoi', meanings: { en: 'As long as your heart is burning, you are strong', ko: '마음이 타오르는 한 사람은 강하다' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'jp_q_003', display: '弱い者、助けるのが強ぇって事だ', romaji: 'yowai mono, tasukeru no ga tsuyoe tte koto da', meanings: { en: 'Helping the weak is what makes you strong', ko: '약한 자를 돕는 것이 강함이다' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'jp_q_004', display: '一は全、全は一', romaji: 'ichi wa zen, zen wa ichi', meanings: { en: 'One is all, all is one', ko: '일은 전, 전은 일' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'jp_q_005', display: '取返す。全部取り返してやる', romaji: 'torikaesu. zenbu torikaeshite yaru', meanings: { en: 'I will take it all back', ko: '다시 되찾겠다. 전부 다' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'jp_q_006', display: 'Plus Ultra', romaji: 'purasu urutora', meanings: { en: 'Go beyond limits', ko: '한계를超えて' }, meaningLang: 'ko', level: 4, category: 'quote' },
-  { id: 'jp_q_007', display: 'やられたら、やり返す。加倍にだ', romaji: 'yarareta ra, yarikaesu. baika ni da', meanings: { en: 'If you get hit, hit back. Double', ko: '때렸으면 되받아쳐. 배로' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'jp_q_001', display: '俺は調子に乗るタイプだからな', romaji: 'ore wa chō ni noru taipu dakara na', meanings: { en: 'I am the type to get carried away', ko: '나는 흥분하는 타입이거든' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'anime-drama-quotes' },
+  { id: 'jp_q_002', display: '心が燃えている限り、人は強い', romaji: 'kokoro ga moeteiru kagiri, hito wa tsuyoi', meanings: { en: 'As long as your heart is burning, you are strong', ko: '마음이 타오르는 한 사람은 강하다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'anime-drama-quotes' },
+  { id: 'jp_q_003', display: '弱い者、助けるのが強ぇって事だ', romaji: 'yowai mono, tasukeru no ga tsuyoe tte koto da', meanings: { en: 'Helping the weak is what makes you strong', ko: '약한 자를 돕는 것이 강함이다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'anime-drama-quotes' },
+  { id: 'jp_q_004', display: '一は全、全は一', romaji: 'ichi wa zen, zen wa ichi', meanings: { en: 'One is all, all is one', ko: '일은 전, 전은 일' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'anime-drama-quotes' },
+  { id: 'jp_q_005', display: '取返す。全部取り返してやる', romaji: 'torikaesu. zenbu torikaeshite yaru', meanings: { en: 'I will take it all back', ko: '다시 되찾겠다. 전부 다' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'anime-drama-quotes' },
+  { id: 'jp_q_006', display: 'Plus Ultra', romaji: 'purasu urutora', meanings: { en: 'Go beyond limits', ko: '한계를超えて' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'anime-drama-quotes' },
+  { id: 'jp_q_007', display: 'やられたら、やり返す。加倍にだ', romaji: 'yarareta ra, yarikaesu. baika ni da', meanings: { en: 'If you get hit, hit back. Double', ko: '때렸으면 되받아쳐. 배로' }, meaningLang: 'ko', level: 4, category: 'quote', source: 'anime-drama-quotes' },
 
   // Business Email — Tier 4
-  { id: 'jp_b_001', display: 'お世話になっております', romaji: 'osewa ni natte orimasu', meanings: { en: 'Thank you for your continued support', ko: '늘 도움을 받고 있습니다' }, meaningLang: 'ko', level: 4, category: 'business' },
-  { id: 'jp_b_002', display: '突然のご連絡失礼いたします', romaji: 'totsuzen no renraku shitsurei itashimasu', meanings: { en: 'I apologize for contacting you without notice', ko: '갑자기 연락 드려 죄송합니다' }, meaningLang: 'ko', level: 4, category: 'business' },
-  { id: 'jp_b_003', display: 'お時間いただけますでしょうか', romaji: 'ojikan wo itadakemasu deshō ka', meanings: { en: 'Would you have time for me?', ko: '시간 가능하신가요' }, meaningLang: 'ko', level: 4, category: 'business' },
-  { id: 'jp_b_004', display: 'ご確認いただけますでしょうか', romaji: 'gokakunin itadakemasu deshō ka', meanings: { en: 'Could you please confirm?', ko: '확인해 주시겠어요?' }, meaningLang: 'ko', level: 4, category: 'business' },
-  { id: 'jp_b_005', display: 'お忙しいところ恐れ入りますが', romaji: 'oisogii tokoro orei irimasu ga', meanings: { en: 'I apologize for disturbing you while you are busy', ko: '바쁘신 중에 죄송합니다만' }, meaningLang: 'ko', level: 4, category: 'business' },
-  { id: 'jp_b_006', display: 'ご確認のほどよろしくお願いいたします', romaji: 'gokakunin no hodo yoroshiku onegaishimasu', meanings: { en: 'Please confirm at your convenience', ko: '확인 부탁드립니다' }, meaningLang: 'ko', level: 4, category: 'business' },
-  { id: 'jp_b_007', display: 'ご迷惑をおかけし申し訳ございません', romaji: 'gowmeiwaku wo okakeshi moushiwake arimasen', meanings: { en: 'I sincerely apologize for the inconvenience', ko: '불편을 드려 정말 죄송합니다' }, meaningLang: 'ko', level: 4, category: 'business' },
-  { id: 'jp_b_008', display: 'ご承認いただけましたら幸甚です', romaji: 'gosyōnin itadakemashitara kōjin desu', meanings: { en: 'I would be honored if you could approve', ko: '승인하시면 영광입니다' }, meaningLang: 'ko', level: 4, category: 'business' },
+  { id: 'jp_b_001', display: 'お世話になっております', romaji: 'osewa ni natte orimasu', meanings: { en: 'Thank you for your continued support', ko: '늘 도움을 받고 있습니다' }, meaningLang: 'ko', level: 4, category: 'business', source: 'business-email' },
+  { id: 'jp_b_002', display: '突然のご連絡失礼いたします', romaji: 'totsuzen no renraku shirtsurei itashimasu', meanings: { en: 'I apologize for contacting you without notice', ko: '갑자기 연락 드려 죄송합니다' }, meaningLang: 'ko', level: 4, category: 'business', source: 'business-email' },
+  { id: 'jp_b_003', display: 'お時間いただけますでしょうか', romaji: 'ojikan wo itadakemasu deshō ka', meanings: { en: 'Would you have time for me?', ko: '시간 가능하신가요' }, meaningLang: 'ko', level: 4, category: 'business', source: 'business-email' },
+  { id: 'jp_b_004', display: 'ご確認いただけますでしょうか', romaji: 'gokakunin itadakemasu deshō ka', meanings: { en: 'Could you please confirm?', ko: '확인해 주시겠어요?' }, meaningLang: 'ko', level: 4, category: 'business', source: 'business-email' },
+  { id: 'jp_b_005', display: 'お忙しいところ恐れ入りますが', romaji: 'oisogii tokoro orei irimasu ga', meanings: { en: 'I apologize for disturbing you while you are busy', ko: '바쁘신 중에 죄송합니다만' }, meaningLang: 'ko', level: 4, category: 'business', source: 'business-email' },
+  { id: 'jp_b_006', display: 'ご確認のほどよろしくお願いいたします', romaji: 'gokakunin no hodo yoroshiku onegaishimasu', meanings: { en: 'Please confirm at your convenience', ko: '확인 부탁드립니다' }, meaningLang: 'ko', level: 4, category: 'business', source: 'business-email' },
+  { id: 'jp_b_007', display: 'ご迷惑をおかけし申し訳ございません', romaji: 'gowmeiwaku wo okakeshi moushiwake arimasen', meanings: { en: 'I sincerely apologize for the inconvenience', ko: '불편을 드려 정말 죄송합니다' }, meaningLang: 'ko', level: 4, category: 'business', source: 'business-email' },
+  { id: 'jp_b_008', display: 'ご承認いただけましたら幸甚です', romaji: 'gosyōnin itadakemashitara kōjin desu', meanings: { en: 'I would be honored if you could approve', ko: '승인하시면 영광입니다' }, meaningLang: 'ko', level: 4, category: 'business', source: 'business-email' },
 
   // Passages (Literature) — Tier 5
-  { id: 'jp_pa_001', display: '気分はわるかった。下を向いて腹が立った。友達が五人いた。', romaji: 'kibun wa warukatta. shita wo muite hara ga tatta. tomodachi ga gonin ita.', meanings: { en: 'I felt bad. I looked down and got angry. There were five friends.', ko: '기분이 나빴다. 아래를 보고 화가 났다. 친구가 다섯 명 있었다.' }, meaningLang: 'ko', level: 5, category: 'passage' },
-  { id: 'jp_pa_002', display: 'メロスは激怒した。必ずかの邪智暴虐の王を除かなければならぬと決意した。', romaji: 'merosu wa gekido shita. kanarazu ka no jachi bōgyaku no ō wo noinakereba naranu to ketsui shita.', meanings: { en: 'Meros was furious. He was determined to overthrow the wicked tyrant king.', ko: '메로스는 분노했다. 반드시 포악한 왕을 물리치겠다고 결심했다.' }, meaningLang: 'ko', level: 5, category: 'passage' },
-  { id: 'jp_pa_003', display: '国境の長いトンネルを抜けると雪国であった。夜の底が白くなった。', romaji: 'kokkyō no nagai tonneru wo nukeru to yukiguni de atta. yoru no soko ga shiroku natta.', meanings: { en: 'Passing through the long tunnel, we reached the snow country. The bottom of the night turned white.', ko: '긴 터널을 지나니 눈 나라였다. 밤의 바닥이 하얗게 됐다.' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'jp_pa_001', display: '気分はわるかった。下を向いて腹が立った。友達が五人いた。', romaji: 'kibun wa warukatta. shita wo muite hara ga tatta. tomodachi ga gonin ita.', meanings: { en: 'I felt bad. I looked down and got angry. There were five friends.', ko: '기분이 나빴다. 아래를 보고 화가 났다. 친구가 다섯 명 있었다.' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
+  { id: 'jp_pa_002', display: 'メロスは激怒した。必ずかの邪智暴虐の王を除かなければならぬと決意した。', romaji: 'merosu wa gekido shita. kanarazu ka no jachi bōgyaku no ō wo noinakereba naranu to ketsui shita.', meanings: { en: 'Meros was furious. He was determined to overthrow the wicked tyrant king.', ko: '메로스는 분노했다. 반드시 포악한 왕을 물리치겠다고 결심했다.' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
+  { id: 'jp_pa_003', display: '国境の長いトンネルを抜けると雪国であった。夜の底が白くなった。', romaji: 'kokkyō no nagai tonneru wo nukeru to yukiguni de atta. yoru no soko ga shiroku natta.', meanings: { en: 'Passing through the long tunnel, we reached the snow country. The bottom of the night turned white.', ko: '긴 터널을 지나니 눈 나라였다. 밤의 바닥이 하얗게 됐다.' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
 ];
 
 // ===== ES (Spanish) =====
@@ -1169,7 +1169,7 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_t_058', display: 'barato', meanings: { ko: '싸다' }, meaningLang: 'ko', level: 2, category: 'travel', accentMode: 'any' },
   { id: 'es_t_059', display: 'caro', meanings: { ko: '비싸다' }, meaningLang: 'ko', level: 2, category: 'travel', accentMode: 'any' },
 
-  // ===== Romance theme (source: [[dating-romance-es]]) =====
+  // ===== Romance theme (source: 'dating-romance-es') =====
   // Tier 2-3: Presentación, piropos, cita, declaración
   { id: 'es_r_001', display: 'nombre', meanings: { ko: '이름' }, meaningLang: 'ko', level: 2, category: 'romance', accentMode: 'any' },
   { id: 'es_r_002', display: 'guapo', meanings: { en: 'handsome', es: 'guapo', ja: 'ハンサム', ko: '잘생긴 (m)' }, meaningLang: 'ko', level: 2, category: 'romance', accentMode: 'any' },
@@ -1192,7 +1192,7 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_r_019', display: 'encantado', meanings: { ko: '반가운 (m)' }, meaningLang: 'ko', level: 2, category: 'romance', accentMode: 'any' },
   { id: 'es_r_020', display: 'encantada', meanings: { ko: '반가운 (f)' }, meaningLang: 'ko', level: 2, category: 'romance', accentMode: 'any' },
 
-  // ===== 음식/요리 (Food & Cooking) — source: [[food-vocabulary]] =====
+  // ===== 음식/요리 (Food & Cooking) — source: 'food-vocabulary' =====
   // Level 1: 기본 음식 (Basic Food)
   { id: 'es_f_001', display: 'carne', meanings: { en: 'meat', es: 'carne', ja: '肉 (にく)', ko: '고기' }, meaningLang: 'ko', level: 1, category: 'food', accentMode: 'any' , source: 'carne' },
   { id: 'es_f_002', display: 'pollo', meanings: { en: 'chicken', es: 'pollo', ja: '鶏肉 (とりにく)', ko: '닭고기' }, meaningLang: 'ko', level: 1, category: 'food', accentMode: 'any' , source: 'pollo' },
@@ -1249,7 +1249,7 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_f_058', display: 'camarero', meanings: { en: 'waiter', es: 'camarero', ja: 'ウェイター', ko: '웨이터' }, meaningLang: 'ko', level: 2, category: 'food', accentMode: 'any' , source: 'food-vocabulary' },
   { id: 'es_f_059', display: 'cocinero', meanings: { en: 'cook/chef', es: 'cocinero', ja: '料理人 (りにょうりにん)', ko: '요리사' }, meaningLang: 'ko', level: 2, category: 'food', accentMode: 'any' , source: 'food-vocabulary' },
 
-  // ===== Negocios (Business) — source: [[business-vocabulary]] =====
+  // ===== Negocios (Business) — source: 'business-vocabulary' =====
   // Level 1-2: Correo electrónico (Email/Correspondence)
   { id: 'es_b_001', display: 'correo electrónico', meanings: { en: 'email', es: 'correo electrónico', ja: 'メール', ko: '이메일' }, meaningLang: 'ko', level: 1, category: 'business', accentMode: 'any' , source: 'business-vocabulary' },
   { id: 'es_b_002', display: 'dirección', meanings: { en: 'address', es: 'dirección', ja: '住所', ko: '주소' }, meaningLang: 'ko', level: 1, category: 'business', accentMode: 'any' , source: 'business-vocabulary' },
@@ -1303,7 +1303,7 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_b_062', display: 'por favor revise', meanings: { en: 'please review', es: 'por favor revise', ja: ' 검토 부탁드립니다', ko: '검토 부탁드립니다' }, meaningLang: 'ko', level: 2, category: 'business', accentMode: 'any' , source: 'business-vocabulary' },
   { id: 'es_b_063', display: 'gracias', meanings: { en: 'thank you', es: 'gracias', ja: 'ありがとう', ko: '감사합니다' }, meaningLang: 'ko', level: 1, category: 'business', accentMode: 'any' , source: 'business-vocabulary' },
 
-  // ===== Emociones y Personalidad (Emotions & Personality) — source: [[emotions-personality-vocabulary]] =====
+  // ===== Emociones y Personalidad (Emotions & Personality) — source: 'emotions-personality-vocabulary' =====
   // Level 1-2: Emociones Básicas (Basic Emotions)
   { id: 'es_e_001', display: 'feliz', meanings: { en: 'happy', ja: '嬉しい', ko: '기쁜' }, meaningLang: 'ko', level: 1, category: 'emotion', accentMode: 'any' , source: 'feliz' },
   { id: 'es_e_002', display: 'triste', meanings: { en: 'sad', ja: '悲しい', ko: '슬픈' }, meaningLang: 'ko', level: 1, category: 'emotion', accentMode: 'any' , source: 'triste' },
@@ -1353,7 +1353,7 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_e_059', display: 'estar cómodo', meanings: { en: 'to be comfortable', ja: '快適だ', ko: '편안하다' }, meaningLang: 'ko', level: 2, category: 'emotion', accentMode: 'any' , source: 'emotions-personality-vocabulary' },
   { id: 'es_e_060', display: 'preocuparse', meanings: { en: 'to be worried', ja: '心配する', ko: '걱정하다' }, meaningLang: 'ko', level: 2, category: 'emotion', accentMode: 'any' , source: 'emotions-personality-vocabulary' },
 
-  // ===== Naturaleza y Clima (Nature & Weather) — source: [[nature-vocabulary]] =====
+  // ===== Naturaleza y Clima (Nature & Weather) — source: 'nature-vocabulary' =====
   // Level 1: Fenómenos Naturales Básicos (Basic Natural Phenomena)
   { id: 'es_n_001', display: 'sol', meanings: { en: 'sun', ja: '太陽', ko: '태양' }, meaningLang: 'ko', level: 1, category: 'nature', accentMode: 'any' , source: 'nature-vocabulary' },
   { id: 'es_n_002', display: 'luna', meanings: { en: 'moon', ja: '月', ko: '달' }, meaningLang: 'ko', level: 1, category: 'nature', accentMode: 'any' , source: 'nature-vocabulary' },
@@ -1401,7 +1401,7 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_n_059', display: 'frío', meanings: { en: 'cold', ja: '寒い', ko: '추운' }, meaningLang: 'ko', level: 1, category: 'nature', accentMode: 'any' , source: 'frío' },
   { id: 'es_n_060', display: 'cálido', meanings: { en: 'warm', ja: '温かい', ko: '따뜻한' }, meaningLang: 'ko', level: 1, category: 'nature', accentMode: 'any' , source: 'nature-vocabulary' },
 
-  // ===== Animales (Animals) — source: [[animals-vocabulary]] =====
+  // ===== Animales (Animals) — source: 'animals-vocabulary' =====
   // Level 1: Mascotas/Granja (Pets & Farm Animals)
   { id: 'es_a_001', display: 'perro', meanings: { en: 'dog', ja: '犬', ko: '개' }, meaningLang: 'ko', level: 1, category: 'animals', accentMode: 'any' , source: 'perro' },
   { id: 'es_a_002', display: 'gato', meanings: { en: 'cat', ja: '猫', ko: '고양이' }, meaningLang: 'ko', level: 1, category: 'animals', accentMode: 'any' , source: 'gato' },
@@ -1447,7 +1447,7 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_a_058', display: 'rápido', meanings: { en: 'fast', ja: '速い', ko: '빠른' }, meaningLang: 'ko', level: 1, category: 'animals', accentMode: 'any' , source: 'animals-vocabulary' },
   { id: 'es_a_059', display: 'lento', meanings: { en: 'slow', ja: '遅い', ko: '느린' }, meaningLang: 'ko', level: 1, category: 'animals', accentMode: 'any' , source: 'animals-vocabulary' },
 
-  // ===== Ropa y Moda (Clothing & Fashion) — source: [[clothing-vocabulary]] =====
+  // ===== Ropa y Moda (Clothing & Fashion) — source: 'clothing-vocabulary' =====
   // Level 1: Ropa Básica (Basic Clothing)
   { id: 'es_c_001', display: 'camisa', meanings: { en: 'shirt', ja: 'シャツ', ko: '셔츠' }, meaningLang: 'ko', level: 1, category: 'clothing', accentMode: 'any' , source: 'camisa' },
   { id: 'es_c_002', display: 'pantalones', meanings: { en: 'pants', ja: 'ズボン', ko: '바지' }, meaningLang: 'ko', level: 1, category: 'clothing', accentMode: 'any' , source: 'clothing-vocabulary' },
@@ -1495,10 +1495,10 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_p_008', display: 'Zapatero a tus zapatos', meanings: { en: 'Stick to your last', ja: '分장에専念', ko: '성형외과 의사는 자기 일에 집중해라' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
 
   // Passages (Literature) — Tier 5
-  { id: 'es_pa_001', display: 'En un lugar de la mancha, de cuyo nombre no quiero acordarme', meanings: { en: 'In a village of La Mancha, whose name I do not wish to recall', ja: 'ラ・マンチャの、ある村のことで、そこは思い出したくない', ko: '라 만차의 어느 마을에서, 그 이름은思い出したくない' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any' },
-  { id: 'es_pa_002', display: 'Muchos años después, frente al pelotón de fusilamiento', meanings: { en: 'Many years later, facing the firing squad', ja: '何年も後、銃殺隊の前で', ko: '수년 후, 총살대 앞에 서서' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any' },
-  { id: 'es_pa_003', display: 'La familia es como el fuego. Escalar o fría, pero siempre te quema', meanings: { en: 'Family is like fire. Whether warming or cold, it always burns you', ja: '家は火のようなもの。温かくても冷たくても、常に燃やす', ko: '가정은 화약과 같다. 뜨겁든 차갑든 항상 데운다' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any' },
-  { id: 'es_pa_004', display: 'El amor es el fuego más intenso que arde sin piedad', meanings: { en: 'Love is the most intense fire that burns mercilessly', ja: '愛は容赦なく燃える最も激しい火だ', ko: '사랑은 깨끗하게 타오르는 가장 격렬한 불꽃이다' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any' },
+  { id: 'es_pa_001', display: 'En un lugar de la mancha, de cuyo nombre no quiero acordarme', meanings: { en: 'In a village of La Mancha, whose name I do not wish to recall', ja: 'ラ・マンチャの、ある村のことで、そこは思い出したくない', ko: '라 만차의 어느 마을에서, 그 이름은思い出したくない' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any', source: 'literature-passages' },
+  { id: 'es_pa_002', display: 'Muchos años después, frente al pelotón de fusilamiento', meanings: { en: 'Many years later, facing the firing squad', ja: '何年も後、銃殺隊の前で', ko: '수년 후, 총살대 앞에 서서' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any', source: 'literature-passages' },
+  { id: 'es_pa_003', display: 'La familia es como el fuego. Escalar o fría, pero siempre te quema', meanings: { en: 'Family is like fire. Whether warming or cold, it always burns you', ja: '家は火のようなもの。温かくても冷たくても、常に燃やす', ko: '가정은 화약과 같다. 뜨겁든 차갑든 항상 데운다' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any', source: 'literature-passages' },
+  { id: 'es_pa_004', display: 'El amor es el fuego más intenso que arde sin piedad', meanings: { en: 'Love is the most intense fire that burns mercilessly', ja: '愛は容赦なく燃える最も激しい火だ', ko: '사랑은 깨끗하게 타오르는 가장 격렬한 불꽃이다' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any', source: 'literature-passages' },
 ];
 
 export const KR_WORDS: WordEntry[] = [
@@ -1533,7 +1533,7 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_031', display: '밥', jamo: 'ㅂㅏㅂ', meanings: { en: 'rice/meal' }, meaningLang: 'en', level: 1, category: 'food' , source: 'food-vocabulary' },
   { id: 'kr_032', display: '책', jamo: 'ㅊㅐㄱ', meanings: { en: 'book' }, meaningLang: 'en', level: 1, category: 'object' },
 
-  // ===== 음식/요리 (Food & Cooking) — source: [[food-vocabulary]] =====
+  // ===== 음식/요리 (Food & Cooking) — source: 'food-vocabulary' =====
   // Level 1: 기본 음식
   { id: 'kr_f_001', display: '고기', jamo: 'ㄱㅗㄱㅣ', meanings: { ko: '고기' }, meaningLang: 'ko', level: 1, category: 'food' , source: 'food-vocabulary' },
   { id: 'kr_f_002', display: '생선', jamo: 'ㅅㅐㅇㅅㅓㄴ', meanings: { ko: '생선' }, meaningLang: 'ko', level: 1, category: 'food' , source: 'food-vocabulary' },
@@ -1641,7 +1641,7 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_t_046', display: '사진', jamo: 'ㅅㅏㅈㅣㄴ', meanings: { ko: '사진' }, meaningLang: 'ko', level: 1, category: 'travel' },
   { id: 'kr_t_047', display: '지도', jamo: 'ㅈㅣㄷㅗ', meanings: { ko: '지도' }, meaningLang: 'ko', level: 1, category: 'travel' },
 
-  // ===== Romance theme (source: [[dating-romance-kr]]) =====
+  // ===== Romance theme (source: 'dating-romance-kr') =====
   // Tier 1-3: 자기소개, 칭찬, 썸, 고백
   { id: 'kr_r_001', display: '이름', jamo: 'ㅇㅣㄹㅡㅁ', meanings: { ko: '이름' }, meaningLang: 'ko', level: 1, category: 'romance' },
   { id: 'kr_r_002', display: '예쁘다', jamo: 'ㅇㅖ쁘다', meanings: { ko: '예쁘다' }, meaningLang: 'ko', level: 2, category: 'romance' },
@@ -1664,7 +1664,7 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_r_019', display: '남자친구', jamo: 'ㄴㅏㅁㅈㅏㅊㅣㄴㄱㅜ', meanings: { ko: '남자친구' }, meaningLang: 'ko', level: 2, category: 'romance' },
   { id: 'kr_r_020', display: '여자친구', jamo: 'ㅇㅕㅈㅏㅊㅣㄴㄱㅜ', meanings: { ko: '여자친구' }, meaningLang: 'ko', level: 2, category: 'romance' },
 
-  // ===== 비즈니스 (Business) — source: [[business-vocabulary]] =====
+  // ===== 비즈니스 (Business) — source: 'business-vocabulary' =====
   // Level 1-2: 이메일/서신
   { id: 'kr_b_001', display: '이메일', jamo: 'ㅇㅣㅁㅔㅇㅣㄹ', meanings: { ko: '이메일' }, meaningLang: 'ko', level: 1, category: 'business' , source: '이메일' },
   { id: 'kr_b_002', display: '주소', jamo: 'ㅈㅜㅅㅗ', meanings: { ko: '주소' }, meaningLang: 'ko', level: 1, category: 'business' , source: 'business-vocabulary' },
@@ -1720,7 +1720,7 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_b_062', display: '검토 부탁드립니다', jamo: 'ㄱㅓㅁㅌㅗ ㅂㅜㅌㅏㄱㄷㅡㄹㅣㅂㄴㅣㄷㅏ', meanings: { ko: '검토 부탁드립니다' }, meaningLang: 'ko', level: 2, category: 'business' , source: 'business-vocabulary' },
   { id: 'kr_b_063', display: '감사합니다', jamo: 'ㄱㅏㅁㅅㅏㅎㅏㅁㄴㅣㄷㅏ', meanings: { ko: '감사합니다' }, meaningLang: 'ko', level: 1, category: 'business' , source: 'business-vocabulary' },
 
-  // ===== 감정/성격 (Emotions & Personality) — source: [[emotions-personality-vocabulary]] =====
+  // ===== 감정/성격 (Emotions & Personality) — source: 'emotions-personality-vocabulary' =====
   // Level 1: 기본 감정
   { id: 'kr_e_001', display: '기쁨', jamo: 'ㄱㅣㅃㅡㅁ', meanings: { ko: '기쁨' }, meaningLang: 'ko', level: 1, category: 'emotion' , source: 'emotions-personality-vocabulary' },
   { id: 'kr_e_002', display: '슬픔', jamo: 'ㅅㅡㄹㅍㅡㅁ', meanings: { ko: '슬픔' }, meaningLang: 'ko', level: 1, category: 'emotion' , source: 'emotions-personality-vocabulary' },
@@ -1770,7 +1770,7 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_e_059', display: '편안하다', jamo: 'ㅍㅕㄴㅇㅏㄴㅎㅏㄷㅏ', meanings: { ko: '편안하다' }, meaningLang: 'ko', level: 2, category: 'emotion' , source: 'emotions-personality-vocabulary' },
   { id: 'kr_e_060', display: '편안하다', jamo: 'ㅍㅕㄴㅇㅏㄴㅎㅏㄷㅏ', meanings: { ko: '편안하다' }, meaningLang: 'ko', level: 2, category: 'emotion' , source: 'emotions-personality-vocabulary' },
 
-  // ===== 자연/날씨 (Nature & Weather) — source: [[nature-vocabulary]] =====
+  // ===== 자연/날씨 (Nature & Weather) — source: 'nature-vocabulary' =====
   // Level 1: 기본 자연 현상 (Basic Natural Phenomena)
   { id: 'kr_n_001', display: '태양', jamo: 'ㅌㅐㅇㅑㅇ', meanings: { en: 'sun', es: 'sol', ja: '太陽' }, meaningLang: 'ko', level: 1, category: 'nature' , source: 'nature-vocabulary' },
   { id: 'kr_n_002', display: '달', jamo: 'ㄷㅏㄹ', meanings: { en: 'moon', es: 'luna', ja: '月' }, meaningLang: 'ko', level: 1, category: 'nature' , source: 'nature-vocabulary' },
@@ -1818,7 +1818,7 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_n_059', display: '추운', jamo: 'ㅊㅜㅇㅜㄴ', meanings: { en: 'cold', es: 'frío', ja: '寒い' }, meaningLang: 'ko', level: 1, category: 'nature' , source: 'nature-vocabulary' },
   { id: 'kr_n_060', display: '따뜻한', jamo: 'ㄸㅏㄸㅡㄷㅏㄴ', meanings: { en: 'warm', es: 'cálido', ja: '温かい' }, meaningLang: 'ko', level: 1, category: 'nature' , source: 'nature-vocabulary' },
 
-  // ===== 동물 (Animals) — source: [[animals-vocabulary]] =====
+  // ===== 동물 (Animals) — source: 'animals-vocabulary' =====
   // Level 1: 반려동물/가축 (Pets & Farm Animals)
   { id: 'kr_a_001', display: '개', jamo: 'ㄱㅐ', meanings: { en: 'dog', es: 'perro', ja: '犬' }, meaningLang: 'ko', level: 1, category: 'animals' , source: 'animals-vocabulary' },
   { id: 'kr_a_002', display: '고양이', jamo: 'ㄱㅗㅇㅑㅇㅣ', meanings: { en: 'cat', es: 'gato', ja: '猫' }, meaningLang: 'ko', level: 1, category: 'animals' , source: 'animals-vocabulary' },
@@ -1864,7 +1864,7 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_a_058', display: '빠른', jamo: 'ㅃㅏㄹㅡㄴ', meanings: { en: 'fast', es: 'rápido', ja: '速い' }, meaningLang: 'ko', level: 1, category: 'animals' , source: 'animals-vocabulary' },
   { id: 'kr_a_059', display: '느린', jamo: 'ㄴㅡㄹㅣㄴ', meanings: { en: 'slow', es: 'lento', ja: '遅い' }, meaningLang: 'ko', level: 1, category: 'animals' , source: 'animals-vocabulary' },
 
-  // ===== 의류/패션 (Clothing & Fashion) — source: [[clothing-vocabulary]] =====
+  // ===== 의류/패션 (Clothing & Fashion) — source: 'clothing-vocabulary' =====
   // Level 1: 기본 의류 (Basic Clothing)
   { id: 'kr_c_001', display: '셔츠', jamo: 'ㅅㅕㅇㅅㅡ', meanings: { en: 'shirt', es: 'camisa', ja: 'シャツ' }, meaningLang: 'ko', level: 1, category: 'clothing' , source: 'clothing-vocabulary' },
   { id: 'kr_c_002', display: '바지', jamo: 'ㅂㅏㅈㅣ', meanings: { en: 'pants', es: 'pantalones', ja: 'ズボン' }, meaningLang: 'ko', level: 1, category: 'clothing' , source: 'clothing-vocabulary' },
@@ -1909,9 +1909,9 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_p_005', display: '배고프면 투자름도能找到', jamo: 'ㅂㅐㄱㅗㅍㅜㅁㅕㄴ ㄱㅜ ㄷㅜㅇㅏ ㄹㅡㅁ ㄷㅗ ㅈㅜㅓㄹ ㄷㅐ', meanings: { en: 'When hungry enough, you\'ll find food even in grandma\'s sleeve', ja: '好きこそものの上手なれ' }, meaningLang: 'ko', level: 4, category: 'proverb' },
 
   // Passages (Literature) — Tier 5
-  { id: 'kr_pa_001', display: '옛날 옛날에 한 사랑스런 처녀가 있었으니', jamo: 'ㅇㅕㄷㄴㅏㄹ ㅇㅕㄷㄴㅏㄹㅔ ㅎㅏㄴ ㅅㅏㄹㅏㅇㅅㅡㄹㄴ ㅊㅓㄴㅕㄱㅏ ㅇㅣㅅㅜㅇㅡㄴㄷㅏ', meanings: { en: 'Long ago, there was a lovely maiden', ja: '昔々、美しい娘がいました', ko: '옛날 옛날에 아름다운 처녀가 있었으니' }, meaningLang: 'ko', level: 5, category: 'passage' },
-  { id: 'kr_pa_002', display: '오늘도 평범한 하루였다', jamo: 'ㅇㅛㄹ ㅈㅗ ㅍㅖㅂㅏㄴㅎㅏㄴ ㅎㅏㄹㅜㅇㅓㄷㅏ', meanings: { en: 'Today was also an ordinary day', ja: '今日も平凡な一日だった', ko: '오늘도 평범한 하루였다' }, meaningLang: 'ko', level: 5, category: 'passage' },
-  { id: 'kr_pa_003', display: '봄날이 따뜻하고 꽃이 활짝 핀 때', jamo: 'ㅂㅗㅁㄴㅏㄹㅇㅣ ㄸㅏㅆㅡㄷㅎㅏㄴㄷㅗ ㄲㅗㅊㅣ ㅎㅘㄹㅉㅣㄱ ㅍㅣㄴ ㄸㅡ', meanings: { en: 'When spring days are warm and flowers are in full bloom', ja: '春の日は暖かく、花が満開のとき', ko: '봄날이 따뜻하고 꽃이 활짝 핀 때' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'kr_pa_001', display: '옛날 옛날에 한 사랑스런 처녀가 있었으니', jamo: 'ㅇㅕㄷㄴㅏㄹ ㅇㅕㄷㄴㅏㄹㅔ ㅎㅏㄴ ㅅㅏㄹㅏㅇㅅㅡㄹㄴ ㅊㅓㄴㅕㄱㅏ ㅇㅣㅅㅜㅇㅡㄴㄷㅏ', meanings: { en: 'Long ago, there was a lovely maiden', ja: '昔々、美しい娘がいました', ko: '옛날 옛날에 아름다운 처녀가 있었으니' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
+  { id: 'kr_pa_002', display: '오늘도 평범한 하루였다', jamo: 'ㅇㅛㄹ ㅈㅗ ㅍㅖㅂㅏㄴㅎㅏㄴ ㅎㅏㄹㅜㅇㅓㄷㅏ', meanings: { en: 'Today was also an ordinary day', ja: '今日も平凡な一日だった', ko: '오늘도 평범한 하루였다' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
+  { id: 'kr_pa_003', display: '봄날이 따뜻하고 꽃이 활짝 핀 때', jamo: 'ㅂㅗㅁㄴㅏㄹㅇㅣ ㄸㅏㅆㅡㄷㅎㅏㄴㄷㅗ ㄲㅗㅊㅣ ㅎㅘㄹㅉㅣㄱ ㅍㅣㄴ ㄸㅡ', meanings: { en: 'When spring days are warm and flowers are in full bloom', ja: '春の日は暖かく、花が満開のとき', ko: '봄날이 따뜻하고 꽃이 활짝 핀 때' }, meaningLang: 'ko', level: 5, category: 'passage', source: 'literature-passages' },
 ];
 
 export const KR_SENTENCES: WordEntry[] = [

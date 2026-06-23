@@ -276,6 +276,82 @@ def slugify(text: str) -> str:
 
 
 # ============================================================================
+# Difficulty / Stage Helpers
+# ============================================================================
+
+CEFR_BY_TIER = {
+    0: "A1",
+    1: "A1-A2",
+    2: "A2-B1",
+    3: "B1-B2",
+    4: "B2-C1",
+    5: "C1-C2",
+}
+
+
+def compute_difficulty(related_stages: list[str], lang: str) -> dict:
+    """Compute difficulty metadata from related stage IDs.
+
+    Returns {tier, cefr, primaryStage} or empty dict if no stages found.
+    """
+    if not related_stages:
+        return {}
+
+    stages_path = GAME_ROOT / "prototype" / "src" / "data" / "stages.ts"
+    if not stages_path.exists():
+        return {}
+
+    text = stages_path.read_text(encoding="utf-8")
+
+    primary_stage = related_stages[0]
+    stage_pattern = re.escape(primary_stage)
+    tier_match = re.search(
+        "id:\\s*'" + stage_pattern + "'[^}]+?tier:\\s*(\\d+)",
+        text,
+        re.DOTALL,
+    )
+    if not tier_match:
+        # Try alternate pattern
+        tier_match = re.search(
+            "'" + stage_pattern + "'[^}]+?tier:\\s*(\\d+)",
+            text,
+        )
+    if not tier_match:
+        return {"primaryStage": primary_stage}
+
+    tier = int(tier_match.group(1))
+    return {
+        "tier": tier,
+        "cefr": CEFR_BY_TIER.get(tier, "B1"),
+        "primaryStage": primary_stage,
+    }
+
+
+def find_raw_entry_ids(source_stem: str, lang: str) -> list[str]:
+    """Find corpus entry IDs that reference a given source wikilink.
+
+    Scans the corpus.ts file for entries whose `source:` field matches
+    the source_stem (e.g., 'movie-quotes', 'literature-passages').
+    """
+    corpus_path = GAME_ROOT / "prototype" / "src" / "data" / "corpus.ts"
+    if not corpus_path.exists():
+        return []
+
+    text = corpus_path.read_text(encoding="utf-8")
+    entry_ids = []
+    lang_prefix = lang + "_"
+
+    # Match entries with source: [[source_stem]]
+    # Pattern: id: 'en_xxx' ... source: [[movie-quotes]]
+    escaped_stem = re.escape(source_stem)
+    pattern = "(id:\\s*'(" + lang_prefix + "[^']+)')[^\\n]*source:\\s*\\[\\[" + escaped_stem + "\\]\\]"
+    for m in re.finditer(pattern, text):
+        entry_ids.append(m.group(2))
+
+    return list(set(entry_ids))[:20]  # Limit to 20 IDs
+
+
+# ============================================================================
 # Wiki Scanner
 # ============================================================================
 
@@ -563,14 +639,32 @@ def build_lesson_from_source(
     # Find related game stages (by category match)
     related_stages = find_related_stages(lang, source_page["stem"])
 
+    # Compute difficulty metadata from related stages
+    difficulty = compute_difficulty(related_stages, lang)
+
+    # Build wiki output paths (for reporting which wiki pages were linked)
+    wiki_vocab_pages = [p["filename"] for p in vocab_pages]
+    wiki_expr_pages = [p["filename"] for p in expr_pages]
+    wiki_culture_page = culture_page["filename"] if culture_page else None
+
     return {
         "id": f"{lang}_{source_page['stem']}_{datetime.now().strftime('%Y%m%d')}",
         "date": datetime.now().strftime("%Y-%m-%d"),
         "language": lang,
         "sourceTopic": source_page["filename"],
+        "difficulty": difficulty,
+        "source": {
+            "rawFile": f"Language/raw/{lang.capitalize()}/{raw_page['filename']}" if raw_page else "",
+        },
         "raw": {
             "sourceFile": raw_page["filename"] if raw_page else "",
             "excerpt": raw_excerpt,
+        },
+        "wikiOutput": {
+            "hubPage": f"Language/wiki/{lang.capitalize()}/sources/{source_page['filename']}",
+            "vocabularyPages": wiki_vocab_pages,
+            "expressionPages": wiki_expr_pages,
+            "culturePage": wiki_culture_page,
         },
         "wiki": {
             "vocabulary": [
@@ -786,7 +880,10 @@ def main():
             "date": lesson["date"],
             "language": lesson["language"],
             "sourceTopic": lesson["sourceTopic"],
+            "difficulty": lesson.get("difficulty", {}),
+            "source": lesson.get("source", {}),
             "raw": lesson["raw"],
+            "wikiOutput": lesson.get("wikiOutput", {}),
             "vocabulary": vocab_filenames,
             "expressions": expr_filenames,
             "culture": culture_filename,
@@ -795,7 +892,7 @@ def main():
 
     output = {
         "generatedAt": datetime.now().isoformat(),
-        "schemaVersion": "1.1",
+        "schemaVersion": "1.2",
         "lessonCount": len(compact_lessons),
         "byLanguage": {
             code: sum(1 for l in compact_lessons if l["language"] == code)
