@@ -9,6 +9,14 @@
   "wiki": {
     "sources": [
       {
+        "name": "daily-life-basics",
+        "filename": "daily-life-basics.md",
+        "title": "일상 회화 (Daily Life) — Korean (Source Hub)",
+        "size_kb": 1.4,
+        "modified": "2026-06-20T01:59:22.671372",
+        "path": "wiki/Korean/sources/daily-life-basics.md"
+      },
+      {
         "name": "dating-romance-kr",
         "filename": "dating-romance-kr.md",
         "title": "dating-romance-kr",
@@ -23,682 +31,73 @@
         "size_kb": 1.7,
         "modified": "2026-06-18T18:54:48.722248",
         "path": "wiki/Korean/sources/first-travel-japan.md"
+      },
+      {
+        "name": "food-and-dining",
+        "filename": "food-and-dining.md",
+        "title": "음식 문화 (Food and Dining) — Korean (Source Hub)",
+        "size_kb": 1.4,
+        "modified": "2026-06-20T01:59:32.628526",
+        "path": "wiki/Korean/sources/food-and-dining.md"
+      },
+      {
+        "name": "health-and-body",
+        "filename": "health-and-body.md",
+        "title": "건강과 몸 (Health and Body) — Korean (Source Hub)",
+        "size_kb": 1.4,
+        "modified": "2026-06-20T02:01:42.527479",
+        "path": "wiki/Korean/sources/health-and-body.md"
+      },
+      {
+        "name": "holidays-and-celebrations",
+        "filename": "holidays-and-celebrations.md",
+        "title": "명절과 기념일 (Holidays) — Korean (Source Hub)",
+        "size_kb": 1.5,
+        "modified": "2026-06-20T02:03:19.180369",
+        "path": "wiki/Korean/sources/holidays-and-celebrations.md"
+      },
+      {
+        "name": "shopping-and-money",
+        "filename": "shopping-and-money.md",
+        "title": "쇼핑과 돈 (Shopping and Money) — Korean (Source Hub)",
+        "size_kb": 1.5,
+        "modified": "2026-06-20T02:00:23.971699",
+        "path": "wiki/Korean/sources/shopping-and-money.md"
+      },
+      {
+        "name": "sports-and-hobbies",
+        "filename": "sports-and-hobbies.md",
+        "title": "스포츠와 취미 (Sports and Hobbies) — Korean (Source Hub)",
+        "size_kb": 1.6,
+        "modified": "2026-06-20T02:11:12.655949",
+        "path": "wiki/Korean/sources/sports-and-hobbies.md"
+      },
+      {
+        "name": "technology-and-internet",
+        "filename": "technology-and-internet.md",
+        "title": "기술과 인터넷 (Technology and Internet) — Korean (Source Hub)",
+        "size_kb": 1.7,
+        "modified": "2026-06-20T02:01:34.340675",
+        "path": "wiki/Korean/sources/technology-and-internet.md"
+      },
+      {
+        "name": "travel-basics",
+        "filename": "travel-basics.md",
+        "title": "여행 기초 (Travel Basics) — Korean (Source Hub)",
+        "size_kb": 1.5,
+        "modified": "2026-06-20T01:59:14.141334",
+        "path": "wiki/Korean/sources/travel-basics.md"
+      },
+      {
+        "name": "travel-basics-kr",
+        "filename": "travel-basics-kr.md",
+        "title": "travel-basics-kr (Source Hub)",
+        "size_kb": 1.6,
+        "modified": "2026-06-21T04:15:25.375858",
+        "path": "wiki/Korean/sources/travel-basics-kr.md"
       }
     ],
-    "vocabulary": [
-      {
-        "name": "amai",
-        "filename": "amai.md",
-        "title": "amai (甘い)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.780029",
-        "path": "wiki/Korean/vocabulary/amai.md"
-      },
-      {
-        "name": "annyeonghaseyo",
-        "filename": "annyeonghaseyo.md",
-        "title": "안녕하세요",
-        "size_kb": 1.1,
-        "modified": "2026-06-18T01:47:21.705772",
-        "path": "wiki/Korean/vocabulary/annyeonghaseyo.md"
-      },
-      {
-        "name": "atsui",
-        "filename": "atsui.md",
-        "title": "atsui (熱い)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.780151",
-        "path": "wiki/Korean/vocabulary/atsui.md"
-      },
-      {
-        "name": "bap",
-        "filename": "bap.md",
-        "title": "밥",
-        "size_kb": 0.5,
-        "modified": "2026-06-18T01:48:16.860912",
-        "path": "wiki/Korean/vocabulary/bap.md"
-      },
-      {
-        "name": "basu",
-        "filename": "basu.md",
-        "title": "basu (バス)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778571",
-        "path": "wiki/Korean/vocabulary/basu.md"
-      },
-      {
-        "name": "chaeg",
-        "filename": "chaeg.md",
-        "title": "책",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T01:48:23.363028",
-        "path": "wiki/Korean/vocabulary/chaeg.md"
-      },
-      {
-        "name": "chikaku",
-        "filename": "chikaku.md",
-        "title": "chikaku (近く)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779109",
-        "path": "wiki/Korean/vocabulary/chikaku.md"
-      },
-      {
-        "name": "chikatetsu",
-        "filename": "chikatetsu.md",
-        "title": "chikatetsu (地下鉄)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778462",
-        "path": "wiki/Korean/vocabulary/chikatetsu.md"
-      },
-      {
-        "name": "chingu",
-        "filename": "chingu.md",
-        "title": "친구",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T01:48:29.184915",
-        "path": "wiki/Korean/vocabulary/chingu.md"
-      },
-      {
-        "name": "chizu",
-        "filename": "chizu.md",
-        "title": "chizu (地図)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779650",
-        "path": "wiki/Korean/vocabulary/chizu.md"
-      },
-      {
-        "name": "choushoku",
-        "filename": "choushoku.md",
-        "title": "choushoku (朝食)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778183",
-        "path": "wiki/Korean/vocabulary/choushoku.md"
-      },
-      {
-        "name": "chuumon",
-        "filename": "chuumon.md",
-        "title": "chuumon (注文)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778245",
-        "path": "wiki/Korean/vocabulary/chuumon.md"
-      },
-      {
-        "name": "daseot",
-        "filename": "daseot.md",
-        "title": "다섯",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T01:49:34.345133",
-        "path": "wiki/Korean/vocabulary/daseot.md"
-      },
-      {
-        "name": "deguchi",
-        "filename": "deguchi.md",
-        "title": "deguchi (出口)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.777911",
-        "path": "wiki/Korean/vocabulary/deguchi.md"
-      },
-      {
-        "name": "densha",
-        "filename": "densha.md",
-        "title": "densha (電車)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778518",
-        "path": "wiki/Korean/vocabulary/densha.md"
-      },
-      {
-        "name": "dul",
-        "filename": "dul.md",
-        "title": "둘",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T01:49:09.969826",
-        "path": "wiki/Korean/vocabulary/dul.md"
-      },
-      {
-        "name": "eki",
-        "filename": "eki.md",
-        "title": "eki (駅)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778395",
-        "path": "wiki/Korean/vocabulary/eki.md"
-      },
-      {
-        "name": "gajog",
-        "filename": "gajog.md",
-        "title": "가족",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T01:48:33.869352",
-        "path": "wiki/Korean/vocabulary/gajog.md"
-      },
-      {
-        "name": "gamsahamnida",
-        "filename": "gamsahamnida.md",
-        "title": "감사합니다",
-        "size_kb": 0.8,
-        "modified": "2026-06-18T01:47:29.463354",
-        "path": "wiki/Korean/vocabulary/gamsahamnida.md"
-      },
-      {
-        "name": "gongbu",
-        "filename": "gongbu.md",
-        "title": "공부",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T01:49:44.118454",
-        "path": "wiki/Korean/vocabulary/gongbu.md"
-      },
-      {
-        "name": "haggyo",
-        "filename": "haggyo.md",
-        "title": "학교",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T01:48:39.141060",
-        "path": "wiki/Korean/vocabulary/haggyo.md"
-      },
-      {
-        "name": "hakubutsukan",
-        "filename": "hakubutsukan.md",
-        "title": "hakubutsukan (博物館)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779399",
-        "path": "wiki/Korean/vocabulary/hakubutsukan.md"
-      },
-      {
-        "name": "hana",
-        "filename": "hana.md",
-        "title": "하나",
-        "size_kb": 0.6,
-        "modified": "2026-06-18T01:49:01.966015",
-        "path": "wiki/Korean/vocabulary/hana.md"
-      },
-      {
-        "name": "hangug",
-        "filename": "hangug.md",
-        "title": "한국",
-        "size_kb": 0.7,
-        "modified": "2026-06-18T01:47:48.851999",
-        "path": "wiki/Korean/vocabulary/hangug.md"
-      },
-      {
-        "name": "heya",
-        "filename": "heya.md",
-        "title": "heya (部屋)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778133",
-        "path": "wiki/Korean/vocabulary/heya.md"
-      },
-      {
-        "name": "hidari",
-        "filename": "hidari.md",
-        "title": "hidari (左)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778786",
-        "path": "wiki/Korean/vocabulary/hidari.md"
-      },
-      {
-        "name": "hoteru",
-        "filename": "hoteru.md",
-        "title": "hoteru (ホテル)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778079",
-        "path": "wiki/Korean/vocabulary/hoteru.md"
-      },
-      {
-        "name": "iriguchi",
-        "filename": "iriguchi.md",
-        "title": "iriguchi (入口)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.777975",
-        "path": "wiki/Korean/vocabulary/iriguchi.md"
-      },
-      {
-        "name": "jinja",
-        "filename": "jinja.md",
-        "title": "jinja (神社)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779349",
-        "path": "wiki/Korean/vocabulary/jinja.md"
-      },
-      {
-        "name": "joesonghamnida",
-        "filename": "joesonghamnida.md",
-        "title": "죄송합니다",
-        "size_kb": 0.7,
-        "modified": "2026-06-18T01:47:40.539398",
-        "path": "wiki/Korean/vocabulary/joesonghamnida.md"
-      },
-      {
-        "name": "kaikei",
-        "filename": "kaikei.md",
-        "title": "kaikei (会計)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778321",
-        "path": "wiki/Korean/vocabulary/kaikei.md"
-      },
-      {
-        "name": "karai",
-        "filename": "karai.md",
-        "title": "karai (辛い)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779966",
-        "path": "wiki/Korean/vocabulary/karai.md"
-      },
-      {
-        "name": "kippu",
-        "filename": "kippu.md",
-        "title": "kippu (切符)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778734",
-        "path": "wiki/Korean/vocabulary/kippu.md"
-      },
-      {
-        "name": "kouen",
-        "filename": "kouen.md",
-        "title": "kouen (公園)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779454",
-        "path": "wiki/Korean/vocabulary/kouen.md"
-      },
-      {
-        "name": "kousaten",
-        "filename": "kousaten.md",
-        "title": "kousaten (交差点)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778956",
-        "path": "wiki/Korean/vocabulary/kousaten.md"
-      },
-      {
-        "name": "kuukou",
-        "filename": "kuukou.md",
-        "title": "kuukou (空港)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.777444",
-        "path": "wiki/Korean/vocabulary/kuukou.md"
-      },
-      {
-        "name": "mannaseo-bangapseumnida",
-        "filename": "mannaseo-bangapseumnida.md",
-        "title": "만나서 반갑습니다",
-        "size_kb": 0.9,
-        "modified": "2026-06-18T01:49:55.009425",
-        "path": "wiki/Korean/vocabulary/mannaseo-bangapseumnida.md"
-      },
-      {
-        "name": "massugu",
-        "filename": "massugu.md",
-        "title": "massugu (まっすぐ)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778897",
-        "path": "wiki/Korean/vocabulary/massugu.md"
-      },
-      {
-        "name": "migi",
-        "filename": "migi.md",
-        "title": "migi (右)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778837",
-        "path": "wiki/Korean/vocabulary/migi.md"
-      },
-      {
-        "name": "mul",
-        "filename": "mul.md",
-        "title": "물",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T01:48:04.929300",
-        "path": "wiki/Korean/vocabulary/mul.md"
-      },
-      {
-        "name": "naeil",
-        "filename": "naeil.md",
-        "title": "내일",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T01:48:51.899356",
-        "path": "wiki/Korean/vocabulary/naeil.md"
-      },
-      {
-        "name": "net",
-        "filename": "net.md",
-        "title": "넷",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T01:49:27.976691",
-        "path": "wiki/Korean/vocabulary/net.md"
-      },
-      {
-        "name": "nimotsu",
-        "filename": "nimotsu.md",
-        "title": "nimotsu (荷物)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.777860",
-        "path": "wiki/Korean/vocabulary/nimotsu.md"
-      },
-      {
-        "name": "nyuukoku",
-        "filename": "nyuukoku.md",
-        "title": "nyuukoku shinsa (入国審査)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.777622",
-        "path": "wiki/Korean/vocabulary/nyuukoku.md"
-      },
-      {
-        "name": "oishii",
-        "filename": "oishii.md",
-        "title": "oishii (おいしい)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779902",
-        "path": "wiki/Korean/vocabulary/oishii.md"
-      },
-      {
-        "name": "oneul",
-        "filename": "oneul.md",
-        "title": "오늘",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T01:48:46.506748",
-        "path": "wiki/Korean/vocabulary/oneul.md"
-      },
-      {
-        "name": "oneul-nalssiga-joayo",
-        "filename": "oneul-nalssiga-joayo.md",
-        "title": "오늘 날씨가 좋아요",
-        "size_kb": 0.6,
-        "modified": "2026-06-18T01:50:02.484816",
-        "path": "wiki/Korean/vocabulary/oneul-nalssiga-joayo.md"
-      },
-      {
-        "name": "pasupooto",
-        "filename": "pasupooto.md",
-        "title": "pasupooto (パスポート)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.777559",
-        "path": "wiki/Korean/vocabulary/pasupooto.md"
-      },
-      {
-        "name": "ryougae",
-        "filename": "ryougae.md",
-        "title": "ryougae (両替)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779701",
-        "path": "wiki/Korean/vocabulary/ryougae.md"
-      },
-      {
-        "name": "sarang",
-        "filename": "sarang.md",
-        "title": "사랑",
-        "size_kb": 0.5,
-        "modified": "2026-06-18T01:47:57.170162",
-        "path": "wiki/Korean/vocabulary/sarang.md"
-      },
-      {
-        "name": "set",
-        "filename": "set.md",
-        "title": "셋",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T01:49:19.580223",
-        "path": "wiki/Korean/vocabulary/set.md"
-      },
-      {
-        "name": "shashin",
-        "filename": "shashin.md",
-        "title": "shashin (写真)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779600",
-        "path": "wiki/Korean/vocabulary/shashin.md"
-      },
-      {
-        "name": "shingou",
-        "filename": "shingou.md",
-        "title": "shingou (信号)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779040",
-        "path": "wiki/Korean/vocabulary/shingou.md"
-      },
-      {
-        "name": "shinkansen",
-        "filename": "shinkansen.md",
-        "title": "shinkansen (新幹線)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778685",
-        "path": "wiki/Korean/vocabulary/shinkansen.md"
-      },
-      {
-        "name": "takai",
-        "filename": "takai.md",
-        "title": "takai (高い)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779827",
-        "path": "wiki/Korean/vocabulary/takai.md"
-      },
-      {
-        "name": "takushii",
-        "filename": "takushii.md",
-        "title": "takushii (タクシー)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778624",
-        "path": "wiki/Korean/vocabulary/takushii.md"
-      },
-      {
-        "name": "tera",
-        "filename": "tera.md",
-        "title": "tera (寺)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779298",
-        "path": "wiki/Korean/vocabulary/tera.md"
-      },
-      {
-        "name": "tooku",
-        "filename": "tooku.md",
-        "title": "tooku (遠く)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779243",
-        "path": "wiki/Korean/vocabulary/tooku.md"
-      },
-      {
-        "name": "travel",
-        "filename": "travel.md",
-        "title": "여행 (Travel)",
-        "size_kb": 3.2,
-        "modified": "2026-06-18T18:45:13.709884",
-        "path": "wiki/Korean/vocabulary/travel.md"
-      },
-      {
-        "name": "tsumetai",
-        "filename": "tsumetai.md",
-        "title": "tsumetai (冷たい)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.780091",
-        "path": "wiki/Korean/vocabulary/tsumetai.md"
-      },
-      {
-        "name": "umi",
-        "filename": "umi.md",
-        "title": "umi (海)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779555",
-        "path": "wiki/Korean/vocabulary/umi.md"
-      },
-      {
-        "name": "yama",
-        "filename": "yama.md",
-        "title": "yama (山)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779508",
-        "path": "wiki/Korean/vocabulary/yama.md"
-      },
-      {
-        "name": "yasui",
-        "filename": "yasui.md",
-        "title": "yasui (安い)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.779762",
-        "path": "wiki/Korean/vocabulary/yasui.md"
-      },
-      {
-        "name": "yeol",
-        "filename": "yeol.md",
-        "title": "열",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T01:49:38.522578",
-        "path": "wiki/Korean/vocabulary/yeol.md"
-      },
-      {
-        "name": "yoyaku",
-        "filename": "yoyaku.md",
-        "title": "yoyaku (予約)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.778025",
-        "path": "wiki/Korean/vocabulary/yoyaku.md"
-      },
-      {
-        "name": "zeikan",
-        "filename": "zeikan.md",
-        "title": "zeikan (税関)",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.777798",
-        "path": "wiki/Korean/vocabulary/zeikan.md"
-      },
-      {
-        "name": "고백",
-        "filename": "고백.md",
-        "title": "고백",
-        "size_kb": 1.1,
-        "modified": "2026-06-19T03:03:44.280441",
-        "path": "wiki/Korean/vocabulary/고백.md"
-      },
-      {
-        "name": "귀엽다",
-        "filename": "귀엽다.md",
-        "title": "귀엽다",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T03:02:21.507586",
-        "path": "wiki/Korean/vocabulary/귀엽다.md"
-      },
-      {
-        "name": "그리다",
-        "filename": "그리다.md",
-        "title": "그리다",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T03:03:21.675189",
-        "path": "wiki/Korean/vocabulary/그리다.md"
-      },
-      {
-        "name": "멋있다",
-        "filename": "멋있다.md",
-        "title": "멋있다",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T03:02:14.250380",
-        "path": "wiki/Korean/vocabulary/멋있다.md"
-      },
-      {
-        "name": "사귀다",
-        "filename": "사귀다.md",
-        "title": "사귀다",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T03:03:53.080245",
-        "path": "wiki/Korean/vocabulary/사귀다.md"
-      },
-      {
-        "name": "사랑하다",
-        "filename": "사랑하다.md",
-        "title": "사랑하다",
-        "size_kb": 1.0,
-        "modified": "2026-06-19T03:03:13.195618",
-        "path": "wiki/Korean/vocabulary/사랑하다.md"
-      },
-      {
-        "name": "썸",
-        "filename": "썸.md",
-        "title": "썸",
-        "size_kb": 1.0,
-        "modified": "2026-06-19T03:03:30.583718",
-        "path": "wiki/Korean/vocabulary/썸.md"
-      },
-      {
-        "name": "연인",
-        "filename": "연인.md",
-        "title": "연인",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T03:04:00.479624",
-        "path": "wiki/Korean/vocabulary/연인.md"
-      },
-      {
-        "name": "영화",
-        "filename": "영화.md",
-        "title": "영화",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T03:02:55.974039",
-        "path": "wiki/Korean/vocabulary/영화.md"
-      },
-      {
-        "name": "예쁘다",
-        "filename": "예쁘다.md",
-        "title": "예쁘다",
-        "size_kb": 1.0,
-        "modified": "2026-06-19T03:01:50.867282",
-        "path": "wiki/Korean/vocabulary/예쁘다.md"
-      },
-      {
-        "name": "이름",
-        "filename": "이름.md",
-        "title": "이름",
-        "size_kb": 1.0,
-        "modified": "2026-06-19T03:01:38.750606",
-        "path": "wiki/Korean/vocabulary/이름.md"
-      },
-      {
-        "name": "이쁘다",
-        "filename": "이쁘다.md",
-        "title": "이쁘다",
-        "size_kb": 0.6,
-        "modified": "2026-06-19T03:01:58.275313",
-        "path": "wiki/Korean/vocabulary/이쁘다.md"
-      },
-      {
-        "name": "잘생겼다",
-        "filename": "잘생겼다.md",
-        "title": "잘생겼다",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T03:02:05.804573",
-        "path": "wiki/Korean/vocabulary/잘생겼다.md"
-      },
-      {
-        "name": "재미있다",
-        "filename": "재미있다.md",
-        "title": "재미있다",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T03:02:34.470091",
-        "path": "wiki/Korean/vocabulary/재미있다.md"
-      },
-      {
-        "name": "좋아하다",
-        "filename": "좋아하다.md",
-        "title": "좋아하다",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T03:03:05.246233",
-        "path": "wiki/Korean/vocabulary/좋아하다.md"
-      },
-      {
-        "name": "착하다",
-        "filename": "착하다.md",
-        "title": "착하다",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T03:02:28.087393",
-        "path": "wiki/Korean/vocabulary/착하다.md"
-      },
-      {
-        "name": "취미",
-        "filename": "취미.md",
-        "title": "취미",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T03:02:42.237695",
-        "path": "wiki/Korean/vocabulary/취미.md"
-      },
-      {
-        "name": "카페",
-        "filename": "카페.md",
-        "title": "카페",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T03:02:49.974725",
-        "path": "wiki/Korean/vocabulary/카페.md"
-      }
-    ],
+    "vocabulary": [],
     "expressions": [
       {
         "name": "arigatou",
@@ -793,15 +192,39 @@
       {
         "name": "korean-dating-culture",
         "filename": "korean-dating-culture.md",
-        "title": "korean-dating-culture",
-        "size_kb": 2.9,
-        "modified": "2026-06-19T03:05:24.715345",
+        "title": "Korean Dating Culture",
+        "size_kb": 5.9,
+        "modified": "2026-06-20T01:25:52.218930",
         "path": "wiki/Korean/culture/korean-dating-culture.md"
       }
     ],
     "study_plan": []
   },
   "raw_sources": [
+    {
+      "name": "animals-vocabulary",
+      "filename": "animals-vocabulary.md",
+      "title": "Korean Animals Vocabulary",
+      "size_kb": 1.6,
+      "modified": "2026-06-23T01:16:53.775844",
+      "path": "raw/Korean/animals-vocabulary.md"
+    },
+    {
+      "name": "business-vocabulary",
+      "filename": "business-vocabulary.md",
+      "title": "Korean Business Vocabulary",
+      "size_kb": 5.1,
+      "modified": "2026-06-22T22:36:07.416882",
+      "path": "raw/Korean/business-vocabulary.md"
+    },
+    {
+      "name": "clothing-vocabulary",
+      "filename": "clothing-vocabulary.md",
+      "title": "Korean Clothing & Fashion Vocabulary",
+      "size_kb": 2.3,
+      "modified": "2026-06-23T01:17:08.521726",
+      "path": "raw/Korean/clothing-vocabulary.md"
+    },
     {
       "name": "dating-romance-kr",
       "filename": "dating-romance-kr.md",
@@ -811,12 +234,36 @@
       "path": "raw/Korean/dating-romance-kr.md"
     },
     {
+      "name": "emotions-personality-vocabulary",
+      "filename": "emotions-personality-vocabulary.md",
+      "title": "Korean Emotions & Personality Vocabulary",
+      "size_kb": 4.7,
+      "modified": "2026-06-22T22:37:47.802011",
+      "path": "raw/Korean/emotions-personality-vocabulary.md"
+    },
+    {
       "name": "first-travel-japan",
       "filename": "first-travel-japan.md",
       "title": "첫 여행 경험 — 일본 (First Travel Experience: Japan)",
       "size_kb": 7.3,
       "modified": "2026-06-18T18:53:13.856302",
       "path": "raw/Korean/first-travel-japan.md"
+    },
+    {
+      "name": "food-vocabulary",
+      "filename": "food-vocabulary.md",
+      "title": "Korean Food & Restaurant Vocabulary",
+      "size_kb": 4.4,
+      "modified": "2026-06-22T22:34:09.248157",
+      "path": "raw/Korean/food-vocabulary.md"
+    },
+    {
+      "name": "nature-vocabulary",
+      "filename": "nature-vocabulary.md",
+      "title": "Korean Nature & Weather Vocabulary",
+      "size_kb": 1.9,
+      "modified": "2026-06-23T01:16:34.261598",
+      "path": "raw/Korean/nature-vocabulary.md"
     },
     {
       "name": "topik1-starter",
@@ -835,7 +282,7 @@
       "path": "raw/Korean/travel-basics-kr.md"
     }
   ],
-  "raw_sources_count": 4,
+  "raw_sources_count": 10,
   "corpus": {
     "total": 78,
     "by_level": {
@@ -1203,9 +650,9 @@
   "coverage": {
     "total_stages": 12,
     "total_corpus": 78,
-    "wiki_materials": 98,
-    "sources": 2,
-    "raw_sources": 4,
+    "wiki_materials": 23,
+    "sources": 11,
+    "raw_sources": 10,
     "stages_by_tier": {
       "1": 3,
       "2": 5,
@@ -1433,5 +880,5 @@
     ],
     "coverage_percent": 69.0
   },
-  "generated_at": "2026-06-19T03:09:17.238578"
+  "generated_at": "2026-06-23T15:21:27.042354"
 }

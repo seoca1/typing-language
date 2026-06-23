@@ -9,6 +9,14 @@
   "wiki": {
     "sources": [
       {
+        "name": "daily-life-basics",
+        "filename": "daily-life-basics.md",
+        "title": "日常会話 (Daily Life) — Japanese (Source Hub)",
+        "size_kb": 1.7,
+        "modified": "2026-06-20T01:58:51.376424",
+        "path": "wiki/Japanese/sources/daily-life-basics.md"
+      },
+      {
         "name": "dating-romance-jp",
         "filename": "dating-romance-jp.md",
         "title": "dating-romance-jp",
@@ -23,474 +31,73 @@
         "size_kb": 1.3,
         "modified": "2026-06-18T19:00:12.327935",
         "path": "wiki/Japanese/sources/first-travel-korea.md"
+      },
+      {
+        "name": "food-and-dining",
+        "filename": "food-and-dining.md",
+        "title": "食文化 (Food and Dining) — Japanese (Source Hub)",
+        "size_kb": 1.6,
+        "modified": "2026-06-20T01:59:03.357537",
+        "path": "wiki/Japanese/sources/food-and-dining.md"
+      },
+      {
+        "name": "health-and-body",
+        "filename": "health-and-body.md",
+        "title": "健康と体 (Health and Body) — Japanese (Source Hub)",
+        "size_kb": 1.5,
+        "modified": "2026-06-20T02:01:24.092961",
+        "path": "wiki/Japanese/sources/health-and-body.md"
+      },
+      {
+        "name": "holidays-and-celebrations",
+        "filename": "holidays-and-celebrations.md",
+        "title": "祝日 (Holidays) — Japanese (Source Hub)",
+        "size_kb": 1.6,
+        "modified": "2026-06-20T02:03:00.342449",
+        "path": "wiki/Japanese/sources/holidays-and-celebrations.md"
+      },
+      {
+        "name": "shopping-and-money",
+        "filename": "shopping-and-money.md",
+        "title": "Shopping and Money — Japanese (Source Hub)",
+        "size_kb": 1.5,
+        "modified": "2026-06-20T02:00:14.118702",
+        "path": "wiki/Japanese/sources/shopping-and-money.md"
+      },
+      {
+        "name": "sports-and-hobbies",
+        "filename": "sports-and-hobbies.md",
+        "title": "スポーツと趣味 (Sports and Hobbies) — Japanese (Source Hub)",
+        "size_kb": 1.8,
+        "modified": "2026-06-20T02:11:07.058141",
+        "path": "wiki/Japanese/sources/sports-and-hobbies.md"
+      },
+      {
+        "name": "technology-and-internet",
+        "filename": "technology-and-internet.md",
+        "title": "テクノロジー (Technology) — Japanese (Source Hub)",
+        "size_kb": 1.9,
+        "modified": "2026-06-20T02:01:12.069126",
+        "path": "wiki/Japanese/sources/technology-and-internet.md"
+      },
+      {
+        "name": "travel-adventure",
+        "filename": "travel-adventure.md",
+        "title": "Travel Adventure — Japanese (Source Hub)",
+        "size_kb": 1.5,
+        "modified": "2026-06-20T02:00:04.614607",
+        "path": "wiki/Japanese/sources/travel-adventure.md"
+      },
+      {
+        "name": "travel-basics",
+        "filename": "travel-basics.md",
+        "title": "旅行基礎 (Travel Basics) — Japanese (Source Hub)",
+        "size_kb": 1.8,
+        "modified": "2026-06-20T01:58:41.261526",
+        "path": "wiki/Japanese/sources/travel-basics.md"
       }
     ],
-    "vocabulary": [
-      {
-        "name": "achim",
-        "filename": "achim.md",
-        "title": "아침",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785968",
-        "path": "wiki/Japanese/vocabulary/achim.md"
-      },
-      {
-        "name": "bada",
-        "filename": "bada.md",
-        "title": "바다",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.787009",
-        "path": "wiki/Japanese/vocabulary/bada.md"
-      },
-      {
-        "name": "bang",
-        "filename": "bang.md",
-        "title": "방",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785918",
-        "path": "wiki/Japanese/vocabulary/bang.md"
-      },
-      {
-        "name": "bangmulgwan",
-        "filename": "bangmulgwan.md",
-        "title": "박물관",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.786862",
-        "path": "wiki/Japanese/vocabulary/bangmulgwan.md"
-      },
-      {
-        "name": "beoseu",
-        "filename": "beoseu.md",
-        "title": "버스",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786330",
-        "path": "wiki/Japanese/vocabulary/beoseu.md"
-      },
-      {
-        "name": "bissada",
-        "filename": "bissada.md",
-        "title": "비싸다",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.787232",
-        "path": "wiki/Japanese/vocabulary/bissada.md"
-      },
-      {
-        "name": "chagapda",
-        "filename": "chagapda.md",
-        "title": "차갑다",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.787417",
-        "path": "wiki/Japanese/vocabulary/chagapda.md"
-      },
-      {
-        "name": "chulgu",
-        "filename": "chulgu.md",
-        "title": "출구",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785709",
-        "path": "wiki/Japanese/vocabulary/chulgu.md"
-      },
-      {
-        "name": "dalda",
-        "filename": "dalda.md",
-        "title": "달다",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.787374",
-        "path": "wiki/Japanese/vocabulary/dalda.md"
-      },
-      {
-        "name": "gakkai",
-        "filename": "gakkai.md",
-        "title": "가까이",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786713",
-        "path": "wiki/Japanese/vocabulary/gakkai.md"
-      },
-      {
-        "name": "gicha",
-        "filename": "gicha.md",
-        "title": "기차",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786276",
-        "path": "wiki/Japanese/vocabulary/gicha.md"
-      },
-      {
-        "name": "gonghang",
-        "filename": "gonghang.md",
-        "title": "공항",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785462",
-        "path": "wiki/Japanese/vocabulary/gonghang.md"
-      },
-      {
-        "name": "gongwon",
-        "filename": "gongwon.md",
-        "title": "공원",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786904",
-        "path": "wiki/Japanese/vocabulary/gongwon.md"
-      },
-      {
-        "name": "gyesan",
-        "filename": "gyesan.md",
-        "title": "계산",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786117",
-        "path": "wiki/Japanese/vocabulary/gyesan.md"
-      },
-      {
-        "name": "gyocharo",
-        "filename": "gyocharo.md",
-        "title": "교차로",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.786618",
-        "path": "wiki/Japanese/vocabulary/gyocharo.md"
-      },
-      {
-        "name": "hotel",
-        "filename": "hotel.md",
-        "title": "호텔",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785872",
-        "path": "wiki/Japanese/vocabulary/hotel.md"
-      },
-      {
-        "name": "hwanjeon",
-        "filename": "hwanjeon.md",
-        "title": "환전",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.787146",
-        "path": "wiki/Japanese/vocabulary/hwanjeon.md"
-      },
-      {
-        "name": "ibguksimsa",
-        "filename": "ibguksimsa.md",
-        "title": "입국심사",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.785563",
-        "path": "wiki/Japanese/vocabulary/ibguksimsa.md"
-      },
-      {
-        "name": "ipgu",
-        "filename": "ipgu.md",
-        "title": "입구",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785762",
-        "path": "wiki/Japanese/vocabulary/ipgu.md"
-      },
-      {
-        "name": "jeol",
-        "filename": "jeol.md",
-        "title": "절",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786813",
-        "path": "wiki/Japanese/vocabulary/jeol.md"
-      },
-      {
-        "name": "jido",
-        "filename": "jido.md",
-        "title": "지도",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.787097",
-        "path": "wiki/Japanese/vocabulary/jido.md"
-      },
-      {
-        "name": "jigjin",
-        "filename": "jigjin.md",
-        "title": "직진",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786571",
-        "path": "wiki/Japanese/vocabulary/jigjin.md"
-      },
-      {
-        "name": "jihacheol",
-        "filename": "jihacheol.md",
-        "title": "지하철",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.786231",
-        "path": "wiki/Japanese/vocabulary/jihacheol.md"
-      },
-      {
-        "name": "jim",
-        "filename": "jim.md",
-        "title": "짐",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785661",
-        "path": "wiki/Japanese/vocabulary/jim.md"
-      },
-      {
-        "name": "jumun",
-        "filename": "jumun.md",
-        "title": "주문",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786064",
-        "path": "wiki/Japanese/vocabulary/jumun.md"
-      },
-      {
-        "name": "maepda",
-        "filename": "maepda.md",
-        "title": "맵다",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.787330",
-        "path": "wiki/Japanese/vocabulary/maepda.md"
-      },
-      {
-        "name": "masitda",
-        "filename": "masitda.md",
-        "title": "맛있다",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.787282",
-        "path": "wiki/Japanese/vocabulary/masitda.md"
-      },
-      {
-        "name": "meolli",
-        "filename": "meolli.md",
-        "title": "멀리",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786764",
-        "path": "wiki/Japanese/vocabulary/meolli.md"
-      },
-      {
-        "name": "oenjjog",
-        "filename": "oenjjog.md",
-        "title": "왼쪽",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786479",
-        "path": "wiki/Japanese/vocabulary/oenjjog.md"
-      },
-      {
-        "name": "oreunjjog",
-        "filename": "oreunjjog.md",
-        "title": "오른쪽",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786527",
-        "path": "wiki/Japanese/vocabulary/oreunjjog.md"
-      },
-      {
-        "name": "pyo",
-        "filename": "pyo.md",
-        "title": "표",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786433",
-        "path": "wiki/Japanese/vocabulary/pyo.md"
-      },
-      {
-        "name": "sajin",
-        "filename": "sajin.md",
-        "title": "사진",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.787054",
-        "path": "wiki/Japanese/vocabulary/sajin.md"
-      },
-      {
-        "name": "san",
-        "filename": "san.md",
-        "title": "산",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786958",
-        "path": "wiki/Japanese/vocabulary/san.md"
-      },
-      {
-        "name": "segwan",
-        "filename": "segwan.md",
-        "title": "세관",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785613",
-        "path": "wiki/Japanese/vocabulary/segwan.md"
-      },
-      {
-        "name": "sikdang",
-        "filename": "sikdang.md",
-        "title": "식당",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786013",
-        "path": "wiki/Japanese/vocabulary/sikdang.md"
-      },
-      {
-        "name": "sinhodeung",
-        "filename": "sinhodeung.md",
-        "title": "신호등",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.786664",
-        "path": "wiki/Japanese/vocabulary/sinhodeung.md"
-      },
-      {
-        "name": "ssada",
-        "filename": "ssada.md",
-        "title": "싸다",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.787188",
-        "path": "wiki/Japanese/vocabulary/ssada.md"
-      },
-      {
-        "name": "taegsi",
-        "filename": "taegsi.md",
-        "title": "택시",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786385",
-        "path": "wiki/Japanese/vocabulary/taegsi.md"
-      },
-      {
-        "name": "travel",
-        "filename": "travel.md",
-        "title": "旅行 (りょこう) - Travel",
-        "size_kb": 4.1,
-        "modified": "2026-06-18T18:44:48.984832",
-        "path": "wiki/Japanese/vocabulary/travel.md"
-      },
-      {
-        "name": "tteugeopda",
-        "filename": "tteugeopda.md",
-        "title": "뜨겁다",
-        "size_kb": 0.4,
-        "modified": "2026-06-18T18:55:33.787461",
-        "path": "wiki/Japanese/vocabulary/tteugeopda.md"
-      },
-      {
-        "name": "yeog",
-        "filename": "yeog.md",
-        "title": "역",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.786178",
-        "path": "wiki/Japanese/vocabulary/yeog.md"
-      },
-      {
-        "name": "yeogwon",
-        "filename": "yeogwon.md",
-        "title": "여권",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785516",
-        "path": "wiki/Japanese/vocabulary/yeogwon.md"
-      },
-      {
-        "name": "yeyak",
-        "filename": "yeyak.md",
-        "title": "예약",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785818",
-        "path": "wiki/Japanese/vocabulary/yeyak.md"
-      },
-      {
-        "name": "かっこいい",
-        "filename": "かっこいい.md",
-        "title": "かっこいい",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:55:44.322980",
-        "path": "wiki/Japanese/vocabulary/かっこいい.md"
-      },
-      {
-        "name": "カフェ",
-        "filename": "カフェ.md",
-        "title": "カフェ",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:56:11.809427",
-        "path": "wiki/Japanese/vocabulary/カフェ.md"
-      },
-      {
-        "name": "デート",
-        "filename": "デート.md",
-        "title": "デート",
-        "size_kb": 1.0,
-        "modified": "2026-06-19T02:56:19.646238",
-        "path": "wiki/Japanese/vocabulary/デート.md"
-      },
-      {
-        "name": "付き合う",
-        "filename": "付き合う.md",
-        "title": "付き合う",
-        "size_kb": 1.0,
-        "modified": "2026-06-19T02:56:41.070248",
-        "path": "wiki/Japanese/vocabulary/付き合う.md"
-      },
-      {
-        "name": "優しい",
-        "filename": "優しい.md",
-        "title": "優しい",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:55:51.457621",
-        "path": "wiki/Japanese/vocabulary/優しい.md"
-      },
-      {
-        "name": "可愛い",
-        "filename": "可愛い.md",
-        "title": "可愛い",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T02:55:37.315182",
-        "path": "wiki/Japanese/vocabulary/可愛い.md"
-      },
-      {
-        "name": "名前",
-        "filename": "名前.md",
-        "title": "名前",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:55:20.944754",
-        "path": "wiki/Japanese/vocabulary/名前.md"
-      },
-      {
-        "name": "告白",
-        "filename": "告白.md",
-        "title": "告白",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T02:56:34.160642",
-        "path": "wiki/Japanese/vocabulary/告白.md"
-      },
-      {
-        "name": "好き",
-        "filename": "好き.md",
-        "title": "好き",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:56:26.157136",
-        "path": "wiki/Japanese/vocabulary/好き.md"
-      },
-      {
-        "name": "彼女",
-        "filename": "彼女.md",
-        "title": "彼女",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T02:57:02.438870",
-        "path": "wiki/Japanese/vocabulary/彼女.md"
-      },
-      {
-        "name": "彼氏",
-        "filename": "彼氏.md",
-        "title": "彼氏",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:56:54.091641",
-        "path": "wiki/Japanese/vocabulary/彼氏.md"
-      },
-      {
-        "name": "恋人",
-        "filename": "恋人.md",
-        "title": "恋人",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:56:47.431187",
-        "path": "wiki/Japanese/vocabulary/恋人.md"
-      },
-      {
-        "name": "綺麗",
-        "filename": "綺麗.md",
-        "title": "綺麗",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T02:55:29.197053",
-        "path": "wiki/Japanese/vocabulary/綺麗.md"
-      },
-      {
-        "name": "趣味",
-        "filename": "趣味.md",
-        "title": "趣味",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:56:03.455883",
-        "path": "wiki/Japanese/vocabulary/趣味.md"
-      },
-      {
-        "name": "面白い",
-        "filename": "面白い.md",
-        "title": "面白い",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:55:57.566856",
-        "path": "wiki/Japanese/vocabulary/面白い.md"
-      }
-    ],
+    "vocabulary": [],
     "expressions": [
       {
         "name": "sumimasen",
@@ -553,9 +160,9 @@
       {
         "name": "japanese-dating-culture",
         "filename": "japanese-dating-culture.md",
-        "title": "japanese-dating-culture",
-        "size_kb": 2.5,
-        "modified": "2026-06-19T02:58:10.459295",
+        "title": "Japanese Dating Culture",
+        "size_kb": 5.3,
+        "modified": "2026-06-20T01:24:39.363320",
         "path": "wiki/Japanese/culture/japanese-dating-culture.md"
       }
     ],
@@ -563,12 +170,44 @@
   },
   "raw_sources": [
     {
+      "name": "animals-vocabulary-jp",
+      "filename": "animals-vocabulary-jp.md",
+      "title": "Japanese Animals Vocabulary",
+      "size_kb": 2.1,
+      "modified": "2026-06-23T00:23:33.783453",
+      "path": "raw/Japanese/animals-vocabulary-jp.md"
+    },
+    {
+      "name": "business-vocabulary-jp",
+      "filename": "business-vocabulary-jp.md",
+      "title": "Japanese Business Vocabulary",
+      "size_kb": 3.0,
+      "modified": "2026-06-23T00:21:15.990829",
+      "path": "raw/Japanese/business-vocabulary-jp.md"
+    },
+    {
+      "name": "clothing-vocabulary-jp",
+      "filename": "clothing-vocabulary-jp.md",
+      "title": "Japanese Clothing & Fashion Vocabulary",
+      "size_kb": 2.0,
+      "modified": "2026-06-23T00:23:44.780901",
+      "path": "raw/Japanese/clothing-vocabulary-jp.md"
+    },
+    {
       "name": "dating-romance-jp",
       "filename": "dating-romance-jp.md",
       "title": "Dating & Romance — Source Material (Japanese)",
       "size_kb": 5.8,
       "modified": "2026-06-19T02:49:14.443268",
       "path": "raw/Japanese/dating-romance-jp.md"
+    },
+    {
+      "name": "emotions-personality-vocabulary-jp",
+      "filename": "emotions-personality-vocabulary-jp.md",
+      "title": "Japanese Emotions & Personality Vocabulary",
+      "size_kb": 2.8,
+      "modified": "2026-06-23T00:23:08.531739",
+      "path": "raw/Japanese/emotions-personality-vocabulary-jp.md"
     },
     {
       "name": "first-travel-korea",
@@ -579,6 +218,22 @@
       "path": "raw/Japanese/first-travel-korea.md"
     },
     {
+      "name": "food-vocabulary-jp",
+      "filename": "food-vocabulary-jp.md",
+      "title": "Japanese Food & Restaurant Vocabulary",
+      "size_kb": 2.7,
+      "modified": "2026-06-23T00:19:13.336632",
+      "path": "raw/Japanese/food-vocabulary-jp.md"
+    },
+    {
+      "name": "nature-vocabulary-jp",
+      "filename": "nature-vocabulary-jp.md",
+      "title": "Japanese Nature & Weather Vocabulary",
+      "size_kb": 2.2,
+      "modified": "2026-06-23T00:23:20.615368",
+      "path": "raw/Japanese/nature-vocabulary-jp.md"
+    },
+    {
       "name": "travel-basics-jp",
       "filename": "travel-basics-jp.md",
       "title": "旅行基礎語彙 - Source Material",
@@ -587,7 +242,7 @@
       "path": "raw/Japanese/travel-basics-jp.md"
     }
   ],
-  "raw_sources_count": 3,
+  "raw_sources_count": 9,
   "corpus": {
     "total": 182,
     "by_level": {
@@ -986,9 +641,9 @@
   "coverage": {
     "total_stages": 15,
     "total_corpus": 182,
-    "wiki_materials": 68,
-    "sources": 2,
-    "raw_sources": 3,
+    "wiki_materials": 19,
+    "sources": 11,
+    "raw_sources": 9,
     "stages_by_tier": {
       "0": 3,
       "1": 2,
@@ -1230,5 +885,5 @@
     ],
     "coverage_percent": 107.7
   },
-  "generated_at": "2026-06-19T03:09:17.166828"
+  "generated_at": "2026-06-23T15:21:26.987492"
 }

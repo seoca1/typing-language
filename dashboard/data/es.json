@@ -9,6 +9,14 @@
   "wiki": {
     "sources": [
       {
+        "name": "comida-y-restaurante",
+        "filename": "comida-y-restaurante.md",
+        "title": "Comida y Restaurante (Food and Restaurant) — Spanish (Source Hub)",
+        "size_kb": 1.6,
+        "modified": "2026-06-20T02:01:53.163936",
+        "path": "wiki/Spanish/sources/comida-y-restaurante.md"
+      },
+      {
         "name": "como-agua-para-chocolate-cap1",
         "filename": "como-agua-para-chocolate-cap1.md",
         "title": "Como agua para chocolate - Capítulo 1 (Enero)",
@@ -33,6 +41,22 @@
         "path": "wiki/Spanish/sources/el-ahogado-mas-hermoso-del-mundo.md"
       },
       {
+        "name": "fiestas-y-celebraciones",
+        "filename": "fiestas-y-celebraciones.md",
+        "title": "Fiestas y Celebraciones (Holidays) — Spanish (Source Hub)",
+        "size_kb": 1.6,
+        "modified": "2026-06-20T02:03:38.625088",
+        "path": "wiki/Spanish/sources/fiestas-y-celebraciones.md"
+      },
+      {
+        "name": "first-travel-spain",
+        "filename": "first-travel-spain.md",
+        "title": "first-travel-spain (Source Hub)",
+        "size_kb": 1.9,
+        "modified": "2026-06-21T04:11:15.434808",
+        "path": "wiki/Spanish/sources/first-travel-spain.md"
+      },
+      {
         "name": "notes-in-spanish-listening-log",
         "filename": "notes-in-spanish-listening-log.md",
         "title": "Notes in Spanish - Listening Log",
@@ -47,786 +71,25 @@
         "size_kb": 1.9,
         "modified": "2026-06-16T18:21:03.229955",
         "path": "wiki/Spanish/sources/notes-in-spanish-planes-de-verano.md"
+      },
+      {
+        "name": "trabajo-y-carrera",
+        "filename": "trabajo-y-carrera.md",
+        "title": "Trabajo y Carrera (Work and Career) — Spanish (Source Hub)",
+        "size_kb": 1.6,
+        "modified": "2026-06-20T02:02:04.329837",
+        "path": "wiki/Spanish/sources/trabajo-y-carrera.md"
+      },
+      {
+        "name": "viaje-aventura",
+        "filename": "viaje-aventura.md",
+        "title": "Viaje de Aventura (Travel Adventure) — Spanish (Source Hub)",
+        "size_kb": 1.7,
+        "modified": "2026-06-20T02:00:34.863679",
+        "path": "wiki/Spanish/sources/viaje-aventura.md"
       }
     ],
-    "vocabulary": [
-      {
-        "name": "acantilado",
-        "filename": "acantilado.md",
-        "title": "acantilado",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T15:01:58.394590",
-        "path": "wiki/Spanish/vocabulary/acantilado.md"
-      },
-      {
-        "name": "aduana",
-        "filename": "aduana.md",
-        "title": "aduana",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783096",
-        "path": "wiki/Spanish/vocabulary/aduana.md"
-      },
-      {
-        "name": "aeropuerto",
-        "filename": "aeropuerto.md",
-        "title": "aeropuerto",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.782940",
-        "path": "wiki/Spanish/vocabulary/aeropuerto.md"
-      },
-      {
-        "name": "altivez",
-        "filename": "altivez.md",
-        "title": "altivez",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T15:02:03.933400",
-        "path": "wiki/Spanish/vocabulary/altivez.md"
-      },
-      {
-        "name": "amar",
-        "filename": "amar.md",
-        "title": "amar",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T02:59:32.536151",
-        "path": "wiki/Spanish/vocabulary/amar.md"
-      },
-      {
-        "name": "angarillas",
-        "filename": "angarillas.md",
-        "title": "angarillas",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T15:02:14.485206",
-        "path": "wiki/Spanish/vocabulary/angarillas.md"
-      },
-      {
-        "name": "anhelar",
-        "filename": "anhelar.md",
-        "title": "anhelar",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:21:11.858254",
-        "path": "wiki/Spanish/vocabulary/anhelar.md"
-      },
-      {
-        "name": "animarse",
-        "filename": "animarse.md",
-        "title": "animarse",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T18:22:46.370056",
-        "path": "wiki/Spanish/vocabulary/animarse.md"
-      },
-      {
-        "name": "apuntarse",
-        "filename": "apuntarse.md",
-        "title": "apuntarse",
-        "size_kb": 0.8,
-        "modified": "2026-06-16T18:22:40.577873",
-        "path": "wiki/Spanish/vocabulary/apuntarse.md"
-      },
-      {
-        "name": "autobús",
-        "filename": "autobús.md",
-        "title": "autobús",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783942",
-        "path": "wiki/Spanish/vocabulary/autobús.md"
-      },
-      {
-        "name": "barato",
-        "filename": "barato.md",
-        "title": "barato",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784962",
-        "path": "wiki/Spanish/vocabulary/barato.md"
-      },
-      {
-        "name": "beso",
-        "filename": "beso.md",
-        "title": "beso",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T02:59:59.426422",
-        "path": "wiki/Spanish/vocabulary/beso.md"
-      },
-      {
-        "name": "billete",
-        "filename": "billete.md",
-        "title": "billete",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784057",
-        "path": "wiki/Spanish/vocabulary/billete.md"
-      },
-      {
-        "name": "bobo",
-        "filename": "bobo.md",
-        "title": "bobo",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T15:02:26.447042",
-        "path": "wiki/Spanish/vocabulary/bobo.md"
-      },
-      {
-        "name": "bochorno",
-        "filename": "bochorno.md",
-        "title": "bochorno",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:22:06.649889",
-        "path": "wiki/Spanish/vocabulary/bochorno.md"
-      },
-      {
-        "name": "bonita",
-        "filename": "bonita.md",
-        "title": "bonita",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T02:58:31.262281",
-        "path": "wiki/Spanish/vocabulary/bonita.md"
-      },
-      {
-        "name": "botellon",
-        "filename": "botellon.md",
-        "title": "botellón",
-        "size_kb": 1.1,
-        "modified": "2026-06-16T15:03:09.696604",
-        "path": "wiki/Spanish/vocabulary/botellon.md"
-      },
-      {
-        "name": "café",
-        "filename": "café.md",
-        "title": "café",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:58:56.425831",
-        "path": "wiki/Spanish/vocabulary/café.md"
-      },
-      {
-        "name": "caliente",
-        "filename": "caliente.md",
-        "title": "caliente",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785263",
-        "path": "wiki/Spanish/vocabulary/caliente.md"
-      },
-      {
-        "name": "calor-pegajoso",
-        "filename": "calor-pegajoso.md",
-        "title": "calor pegajoso",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T15:03:16.325119",
-        "path": "wiki/Spanish/vocabulary/calor-pegajoso.md"
-      },
-      {
-        "name": "caro",
-        "filename": "caro.md",
-        "title": "caro",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785012",
-        "path": "wiki/Spanish/vocabulary/caro.md"
-      },
-      {
-        "name": "catedral",
-        "filename": "catedral.md",
-        "title": "catedral",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784543",
-        "path": "wiki/Spanish/vocabulary/catedral.md"
-      },
-      {
-        "name": "cebolla",
-        "filename": "cebolla.md",
-        "title": "cebolla",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:21:03.263859",
-        "path": "wiki/Spanish/vocabulary/cebolla.md"
-      },
-      {
-        "name": "cerca",
-        "filename": "cerca.md",
-        "title": "cerca",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784360",
-        "path": "wiki/Spanish/vocabulary/cerca.md"
-      },
-      {
-        "name": "chapparon",
-        "filename": "chapparon.md",
-        "title": "chaparrón",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:22:13.818225",
-        "path": "wiki/Spanish/vocabulary/chapparon.md"
-      },
-      {
-        "name": "cita",
-        "filename": "cita.md",
-        "title": "cita",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T02:59:04.031139",
-        "path": "wiki/Spanish/vocabulary/cita.md"
-      },
-      {
-        "name": "cuenta",
-        "filename": "cuenta.md",
-        "title": "cuenta",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783689",
-        "path": "wiki/Spanish/vocabulary/cuenta.md"
-      },
-      {
-        "name": "currar",
-        "filename": "currar.md",
-        "title": "currar",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T15:02:47.549612",
-        "path": "wiki/Spanish/vocabulary/currar.md"
-      },
-      {
-        "name": "delicioso",
-        "filename": "delicioso.md",
-        "title": "delicioso",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785063",
-        "path": "wiki/Spanish/vocabulary/delicioso.md"
-      },
-      {
-        "name": "derecha",
-        "filename": "derecha.md",
-        "title": "derecha",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784159",
-        "path": "wiki/Spanish/vocabulary/derecha.md"
-      },
-      {
-        "name": "desafiar",
-        "filename": "desafiar.md",
-        "title": "desafiar",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:21:18.517318",
-        "path": "wiki/Spanish/vocabulary/desafiar.md"
-      },
-      {
-        "name": "desayuno",
-        "filename": "desayuno.md",
-        "title": "desayuno",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783495",
-        "path": "wiki/Spanish/vocabulary/desayuno.md"
-      },
-      {
-        "name": "desvalido",
-        "filename": "desvalido.md",
-        "title": "desvalido",
-        "size_kb": 0.8,
-        "modified": "2026-06-16T15:02:08.946910",
-        "path": "wiki/Spanish/vocabulary/desvalido.md"
-      },
-      {
-        "name": "dulce",
-        "filename": "dulce.md",
-        "title": "dulce",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785164",
-        "path": "wiki/Spanish/vocabulary/dulce.md"
-      },
-      {
-        "name": "enamorado",
-        "filename": "enamorado.md",
-        "title": "enamorado",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:59:39.872323",
-        "path": "wiki/Spanish/vocabulary/enamorado.md"
-      },
-      {
-        "name": "encantado",
-        "filename": "encantado.md",
-        "title": "encantado",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T03:00:08.543046",
-        "path": "wiki/Spanish/vocabulary/encantado.md"
-      },
-      {
-        "name": "entrada",
-        "filename": "entrada.md",
-        "title": "entrada",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783293",
-        "path": "wiki/Spanish/vocabulary/entrada.md"
-      },
-      {
-        "name": "equipaje",
-        "filename": "equipaje.md",
-        "title": "equipaje",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783146",
-        "path": "wiki/Spanish/vocabulary/equipaje.md"
-      },
-      {
-        "name": "escapada",
-        "filename": "escapada.md",
-        "title": "escapada",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:22:28.035602",
-        "path": "wiki/Spanish/vocabulary/escapada.md"
-      },
-      {
-        "name": "estación",
-        "filename": "estación.md",
-        "title": "estación",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783798",
-        "path": "wiki/Spanish/vocabulary/estación.md"
-      },
-      {
-        "name": "foto",
-        "filename": "foto.md",
-        "title": "foto",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784792",
-        "path": "wiki/Spanish/vocabulary/foto.md"
-      },
-      {
-        "name": "frío",
-        "filename": "frío.md",
-        "title": "frío",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785211",
-        "path": "wiki/Spanish/vocabulary/frío.md"
-      },
-      {
-        "name": "guapo",
-        "filename": "guapo.md",
-        "title": "guapo",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:58:25.023453",
-        "path": "wiki/Spanish/vocabulary/guapo.md"
-      },
-      {
-        "name": "gustar",
-        "filename": "gustar.md",
-        "title": "gustar",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:59:16.322187",
-        "path": "wiki/Spanish/vocabulary/gustar.md"
-      },
-      {
-        "name": "guía",
-        "filename": "guía.md",
-        "title": "guía",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784909",
-        "path": "wiki/Spanish/vocabulary/guía.md"
-      },
-      {
-        "name": "habitación",
-        "filename": "habitación.md",
-        "title": "habitación",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783445",
-        "path": "wiki/Spanish/vocabulary/habitación.md"
-      },
-      {
-        "name": "heredar",
-        "filename": "heredar.md",
-        "title": "heredar",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T18:21:03.263876",
-        "path": "wiki/Spanish/vocabulary/heredar.md"
-      },
-      {
-        "name": "hobby",
-        "filename": "hobby.md",
-        "title": "hobby",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:58:48.729015",
-        "path": "wiki/Spanish/vocabulary/hobby.md"
-      },
-      {
-        "name": "hotel",
-        "filename": "hotel.md",
-        "title": "hotel",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783391",
-        "path": "wiki/Spanish/vocabulary/hotel.md"
-      },
-      {
-        "name": "inmigración",
-        "filename": "inmigración.md",
-        "title": "inmigración",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783043",
-        "path": "wiki/Spanish/vocabulary/inmigración.md"
-      },
-      {
-        "name": "intersección",
-        "filename": "intersección.md",
-        "title": "intersección",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784251",
-        "path": "wiki/Spanish/vocabulary/intersección.md"
-      },
-      {
-        "name": "izquierda",
-        "filename": "izquierda.md",
-        "title": "izquierda",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784109",
-        "path": "wiki/Spanish/vocabulary/izquierda.md"
-      },
-      {
-        "name": "lejos",
-        "filename": "lejos.md",
-        "title": "lejos",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784492",
-        "path": "wiki/Spanish/vocabulary/lejos.md"
-      },
-      {
-        "name": "maleta",
-        "filename": "maleta.md",
-        "title": "maleta",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783197",
-        "path": "wiki/Spanish/vocabulary/maleta.md"
-      },
-      {
-        "name": "mandato",
-        "filename": "mandato.md",
-        "title": "mandato",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:21:58.919999",
-        "path": "wiki/Spanish/vocabulary/mandato.md"
-      },
-      {
-        "name": "mapa",
-        "filename": "mapa.md",
-        "title": "mapa",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784846",
-        "path": "wiki/Spanish/vocabulary/mapa.md"
-      },
-      {
-        "name": "masa",
-        "filename": "masa.md",
-        "title": "masa",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:21:41.975939",
-        "path": "wiki/Spanish/vocabulary/masa.md"
-      },
-      {
-        "name": "matriarca",
-        "filename": "matriarca.md",
-        "title": "matriarca",
-        "size_kb": 1.1,
-        "modified": "2026-06-16T18:21:03.263868",
-        "path": "wiki/Spanish/vocabulary/matriarca.md"
-      },
-      {
-        "name": "menú",
-        "filename": "menú.md",
-        "title": "menú",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783589",
-        "path": "wiki/Spanish/vocabulary/menú.md"
-      },
-      {
-        "name": "metro",
-        "filename": "metro.md",
-        "title": "metro",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783849",
-        "path": "wiki/Spanish/vocabulary/metro.md"
-      },
-      {
-        "name": "minucioso",
-        "filename": "minucioso.md",
-        "title": "minucioso",
-        "size_kb": 0.8,
-        "modified": "2026-06-16T15:02:18.834616",
-        "path": "wiki/Spanish/vocabulary/minucioso.md"
-      },
-      {
-        "name": "mola",
-        "filename": "mola.md",
-        "title": "mola",
-        "size_kb": 0.8,
-        "modified": "2026-06-16T15:03:01.341283",
-        "path": "wiki/Spanish/vocabulary/mola.md"
-      },
-      {
-        "name": "molcajete",
-        "filename": "molcajete.md",
-        "title": "molcajete",
-        "size_kb": 1.1,
-        "modified": "2026-06-16T18:21:35.671927",
-        "path": "wiki/Spanish/vocabulary/molcajete.md"
-      },
-      {
-        "name": "montaña",
-        "filename": "montaña.md",
-        "title": "montaña",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784745",
-        "path": "wiki/Spanish/vocabulary/montaña.md"
-      },
-      {
-        "name": "museo",
-        "filename": "museo.md",
-        "title": "museo",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784601",
-        "path": "wiki/Spanish/vocabulary/museo.md"
-      },
-      {
-        "name": "nombre",
-        "filename": "nombre.md",
-        "title": "nombre",
-        "size_kb": 0.9,
-        "modified": "2026-06-19T02:58:18.010630",
-        "path": "wiki/Spanish/vocabulary/nombre.md"
-      },
-      {
-        "name": "novia",
-        "filename": "novia.md",
-        "title": "novia",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T02:59:50.619393",
-        "path": "wiki/Spanish/vocabulary/novia.md"
-      },
-      {
-        "name": "novio",
-        "filename": "novio.md",
-        "title": "novio",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:59:45.481112",
-        "path": "wiki/Spanish/vocabulary/novio.md"
-      },
-      {
-        "name": "parque",
-        "filename": "parque.md",
-        "title": "parque",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784654",
-        "path": "wiki/Spanish/vocabulary/parque.md"
-      },
-      {
-        "name": "pasaporte",
-        "filename": "pasaporte.md",
-        "title": "pasaporte",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.782987",
-        "path": "wiki/Spanish/vocabulary/pasaporte.md"
-      },
-      {
-        "name": "pedido",
-        "filename": "pedido.md",
-        "title": "pedido",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783633",
-        "path": "wiki/Spanish/vocabulary/pedido.md"
-      },
-      {
-        "name": "picante",
-        "filename": "picante.md",
-        "title": "picante",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.785111",
-        "path": "wiki/Spanish/vocabulary/picante.md"
-      },
-      {
-        "name": "pillar",
-        "filename": "pillar.md",
-        "title": "pillar",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:22:33.733047",
-        "path": "wiki/Spanish/vocabulary/pillar.md"
-      },
-      {
-        "name": "playa",
-        "filename": "playa.md",
-        "title": "playa",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784698",
-        "path": "wiki/Spanish/vocabulary/playa.md"
-      },
-      {
-        "name": "ponerse-morado",
-        "filename": "ponerse-morado.md",
-        "title": "ponerse morado",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T15:03:23.226493",
-        "path": "wiki/Spanish/vocabulary/ponerse-morado.md"
-      },
-      {
-        "name": "precioso",
-        "filename": "precioso.md",
-        "title": "precioso",
-        "size_kb": 0.8,
-        "modified": "2026-06-19T02:58:36.908534",
-        "path": "wiki/Spanish/vocabulary/precioso.md"
-      },
-      {
-        "name": "promontorio",
-        "filename": "promontorio.md",
-        "title": "promontorio",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T15:01:45.090415",
-        "path": "wiki/Spanish/vocabulary/promontorio.md"
-      },
-      {
-        "name": "propina",
-        "filename": "propina.md",
-        "title": "propina",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783743",
-        "path": "wiki/Spanish/vocabulary/propina.md"
-      },
-      {
-        "name": "querer",
-        "filename": "querer.md",
-        "title": "querer",
-        "size_kb": 1.1,
-        "modified": "2026-06-19T02:59:24.723540",
-        "path": "wiki/Spanish/vocabulary/querer.md"
-      },
-      {
-        "name": "receta",
-        "filename": "receta.md",
-        "title": "receta",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:21:48.312267",
-        "path": "wiki/Spanish/vocabulary/receta.md"
-      },
-      {
-        "name": "recto",
-        "filename": "recto.md",
-        "title": "recto",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784205",
-        "path": "wiki/Spanish/vocabulary/recto.md"
-      },
-      {
-        "name": "reserva",
-        "filename": "reserva.md",
-        "title": "reserva",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783339",
-        "path": "wiki/Spanish/vocabulary/reserva.md"
-      },
-      {
-        "name": "restaurante",
-        "filename": "restaurante.md",
-        "title": "restaurante",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783542",
-        "path": "wiki/Spanish/vocabulary/restaurante.md"
-      },
-      {
-        "name": "salida",
-        "filename": "salida.md",
-        "title": "salida",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783246",
-        "path": "wiki/Spanish/vocabulary/salida.md"
-      },
-      {
-        "name": "sargazo",
-        "filename": "sargazo.md",
-        "title": "sargazo",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T15:01:52.357645",
-        "path": "wiki/Spanish/vocabulary/sargazo.md"
-      },
-      {
-        "name": "semáforo",
-        "filename": "semáforo.md",
-        "title": "semáforo",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784306",
-        "path": "wiki/Spanish/vocabulary/semáforo.md"
-      },
-      {
-        "name": "siesta",
-        "filename": "siesta.md",
-        "title": "siesta",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T15:02:32.598915",
-        "path": "wiki/Spanish/vocabulary/siesta.md"
-      },
-      {
-        "name": "solanera",
-        "filename": "solanera.md",
-        "title": "solanera",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:22:20.890341",
-        "path": "wiki/Spanish/vocabulary/solanera.md"
-      },
-      {
-        "name": "sollozar",
-        "filename": "sollozar.md",
-        "title": "sollozar",
-        "size_kb": 0.9,
-        "modified": "2026-06-16T18:21:04.616789",
-        "path": "wiki/Spanish/vocabulary/sollozar.md"
-      },
-      {
-        "name": "someterse",
-        "filename": "someterse.md",
-        "title": "someterse",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:21:26.808371",
-        "path": "wiki/Spanish/vocabulary/someterse.md"
-      },
-      {
-        "name": "sonrisa",
-        "filename": "sonrisa.md",
-        "title": "sonrisa",
-        "size_kb": 0.7,
-        "modified": "2026-06-19T02:58:42.803383",
-        "path": "wiki/Spanish/vocabulary/sonrisa.md"
-      },
-      {
-        "name": "tapas",
-        "filename": "tapas.md",
-        "title": "tapas",
-        "size_kb": 1.1,
-        "modified": "2026-06-16T15:02:40.279833",
-        "path": "wiki/Spanish/vocabulary/tapas.md"
-      },
-      {
-        "name": "taxi",
-        "filename": "taxi.md",
-        "title": "taxi",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.784000",
-        "path": "wiki/Spanish/vocabulary/taxi.md"
-      },
-      {
-        "name": "tradicion",
-        "filename": "tradicion.md",
-        "title": "tradición",
-        "size_kb": 1.1,
-        "modified": "2026-06-16T18:21:53.431055",
-        "path": "wiki/Spanish/vocabulary/tradicion.md"
-      },
-      {
-        "name": "tren",
-        "filename": "tren.md",
-        "title": "tren",
-        "size_kb": 0.3,
-        "modified": "2026-06-18T18:55:33.783894",
-        "path": "wiki/Spanish/vocabulary/tren.md"
-      },
-      {
-        "name": "veranear",
-        "filename": "veranear.md",
-        "title": "veranear",
-        "size_kb": 1.0,
-        "modified": "2026-06-16T18:22:53.543371",
-        "path": "wiki/Spanish/vocabulary/veranear.md"
-      },
-      {
-        "name": "viajes",
-        "filename": "viajes.md",
-        "title": "Viajes - Travel",
-        "size_kb": 3.5,
-        "modified": "2026-06-18T18:45:03.556563",
-        "path": "wiki/Spanish/vocabulary/viajes.md"
-      }
-    ],
+    "vocabulary": [],
     "expressions": [
       {
         "name": "a-fuego-lento",
@@ -1153,9 +416,9 @@
       {
         "name": "spanish-dating-culture",
         "filename": "spanish-dating-culture.md",
-        "title": "spanish-dating-culture",
-        "size_kb": 2.5,
-        "modified": "2026-06-19T03:01:30.551116",
+        "title": "Spanish Dating Culture",
+        "size_kb": 5.5,
+        "modified": "2026-06-20T01:25:13.003639",
         "path": "wiki/Spanish/culture/spanish-dating-culture.md"
       },
       {
@@ -1196,6 +459,30 @@
   },
   "raw_sources": [
     {
+      "name": "animals-vocabulary-es",
+      "filename": "animals-vocabulary-es.md",
+      "title": "Spanish Animals Vocabulary",
+      "size_kb": 1.9,
+      "modified": "2026-06-23T00:42:01.284820",
+      "path": "raw/Spanish/animals-vocabulary-es.md"
+    },
+    {
+      "name": "business-vocabulary-es",
+      "filename": "business-vocabulary-es.md",
+      "title": "Spanish Business Vocabulary",
+      "size_kb": 2.8,
+      "modified": "2026-06-23T00:41:30.994420",
+      "path": "raw/Spanish/business-vocabulary-es.md"
+    },
+    {
+      "name": "clothing-vocabulary-es",
+      "filename": "clothing-vocabulary-es.md",
+      "title": "Spanish Clothing & Fashion Vocabulary",
+      "size_kb": 1.7,
+      "modified": "2026-06-23T00:42:11.247642",
+      "path": "raw/Spanish/clothing-vocabulary-es.md"
+    },
+    {
       "name": "como-agua-para-chocolate-cap1",
       "filename": "como-agua-para-chocolate-cap1.md",
       "title": "Como agua para chocolate - Capítulo 1 (Enero)",
@@ -1220,12 +507,36 @@
       "path": "raw/Spanish/el-ahogado-mas-hermoso-del-mundo.md"
     },
     {
+      "name": "emotions-personality-vocabulary-es",
+      "filename": "emotions-personality-vocabulary-es.md",
+      "title": "Spanish Emotions & Personality Vocabulary",
+      "size_kb": 2.3,
+      "modified": "2026-06-23T00:41:41.427105",
+      "path": "raw/Spanish/emotions-personality-vocabulary-es.md"
+    },
+    {
       "name": "first-travel-spain",
       "filename": "first-travel-spain.md",
       "title": "Primera Experiencia de Viaje — España",
       "size_kb": 6.7,
       "modified": "2026-06-18T18:53:54.293765",
       "path": "raw/Spanish/first-travel-spain.md"
+    },
+    {
+      "name": "food-vocabulary-es",
+      "filename": "food-vocabulary-es.md",
+      "title": "Spanish Food & Restaurant Vocabulary",
+      "size_kb": 2.2,
+      "modified": "2026-06-23T00:41:18.642084",
+      "path": "raw/Spanish/food-vocabulary-es.md"
+    },
+    {
+      "name": "nature-vocabulary-es",
+      "filename": "nature-vocabulary-es.md",
+      "title": "Spanish Nature & Weather Vocabulary",
+      "size_kb": 1.9,
+      "modified": "2026-06-23T00:41:50.735928",
+      "path": "raw/Spanish/nature-vocabulary-es.md"
     },
     {
       "name": "notes-in-spanish-listening-log",
@@ -1244,7 +555,7 @@
       "path": "raw/Spanish/notes-in-spanish-planes-de-verano.md"
     }
   ],
-  "raw_sources_count": 6,
+  "raw_sources_count": 12,
   "corpus": {
     "total": 155,
     "by_level": {
@@ -1585,9 +896,9 @@
   "coverage": {
     "total_stages": 12,
     "total_corpus": 155,
-    "wiki_materials": 147,
-    "sources": 5,
-    "raw_sources": 6,
+    "wiki_materials": 55,
+    "sources": 10,
+    "raw_sources": 12,
     "stages_by_tier": {
       "1": 2,
       "2": 5,
@@ -1787,5 +1098,5 @@
     ],
     "coverage_percent": 139.6
   },
-  "generated_at": "2026-06-19T03:09:17.209370"
+  "generated_at": "2026-06-23T15:21:27.020053"
 }

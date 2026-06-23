@@ -597,6 +597,16 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_c_039', display: 'loose', meanings: { en: 'loose', es: 'suelto', ja: '緩い (ゆるい)', ko: '넓은' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: 'clothing-vocabulary' },
   { id: 'en_c_040', display: 'long sleeve', meanings: { en: 'long sleeve', es: 'manga larga', ja: '長袖 (ながそで)', ko: '긴소매' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: 'clothing-vocabulary' },
   { id: 'en_c_041', display: 'short sleeve', meanings: { en: 'short sleeve', es: 'manga corta', ja: '半袖 (はんそで)', ko: '반소매' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: 'clothing-vocabulary' },
+
+  // Proverbs — Tier 4
+  { id: 'en_p_001', display: 'The early bird catches the worm', meanings: { en: 'Success comes to those who prepare well and put in effort ahead of time', ja: '早起きは三文の徳', ko: '아침늦은 새가 벌레를 잡는다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'en_p_002', display: 'Actions speak louder than words', meanings: { en: 'What you do matters more than what you say', ja: '石の上にも三年', ko: '말보다 행동' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'en_p_003', display: 'Practice makes perfect', meanings: { en: 'Repeated practice improves skill and leads to mastery', ja: '練習熟', ko: '반복 연습이 완성을 만든다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'en_p_004', display: 'Where there is a will, there is a way', meanings: { en: 'Determination overcomes obstacles', ja: '精神和', ko: '뜻이 있으면 길이 있다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'en_p_005', display: 'Don\'t count your chickens before they hatch', meanings: { en: 'Don\'t assume success before it actually happens', ja: '鳥名', ko: '닭이 알을 까다 전에 세지 마라' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'en_p_006', display: 'Look before you leap', meanings: { en: 'Think carefully before taking action', ja: '七度転びて八度起き上がれ', ko: '뛰기 전에 두 번 보라' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'en_p_007', display: 'Better late than never', meanings: { en: 'Doing something late is better than not doing it at all', ja: '遅れても总比不做好', ko: '늦더라도 않는 것보다는 낫다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'en_p_008', display: 'When in Rome, do as the Romans do', meanings: { en: 'Adapt to the customs and practices of the place you are in', ja: '郷に応', ko: '로마에 있으면 로마인처럼하라' }, meaningLang: 'ko', level: 4, category: 'proverb' },
 ];
 
 // ===== JP (Japanese) =====
@@ -1003,6 +1013,14 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_c_039', display: '緩い', romaji: 'yurui', meanings: { en: 'loose', es: 'suelto', ko: '넓은' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: '緩い' },
   { id: 'jp_c_040', display: '長袖', romaji: 'nagisode', meanings: { en: 'long sleeve', es: 'manga larga', ko: '긴소매' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: '長袖' },
   { id: 'jp_c_041', display: '半袖', romaji: 'handode', meanings: { en: 'short sleeve', es: 'manga corta', ko: '반소매' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: '半袖' },
+
+  // Proverbs (ことわざ) — Tier 4
+  { id: 'jp_p_001', display: '七転び八起き', romaji: 'nanakorobi yaoki', meanings: { en: 'Fall seven times, stand up eight', ko: '일곱 번 넘어져도 여덟 번 일어나라' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'jp_p_002', display: '石の上にも三年', romaji: 'ishi no ue ni mo sannen', meanings: { en: 'Patience on a cold stone for three years eventually warms it', ko: '돌 위에서도 삼 년이면 따뜻해진다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'jp_p_003', display: '継続は力なり', romaji: 'keizoku wa chikara nari', meanings: { en: 'Continuation is power', ko: '지속은 힘이다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'jp_p_004', display: '花より団子', romaji: 'hana yori dango', meanings: { en: 'Dumplings over flowers', ko: '꽃보다 떡' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'jp_p_005', display: '雨降って地固まる', romaji: 'ame futte chi ga katamaru', meanings: { en: 'After the rain, the ground becomes firm', ko: '비가 오고 나면 땅이 단단해진다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'jp_p_006', display: '痘痕も笑窪', romaji: 'abata mo ekubo', meanings: { en: 'Even a pockmark laughs at dimples', ko: '먹물도 아홉 색이다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
 ];
 
 // ===== ES (Spanish) =====
@@ -1424,6 +1442,16 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_c_039', display: 'suelto', meanings: { en: 'loose', ja: '緩い', ko: '넓은' }, meaningLang: 'ko', level: 2, category: 'clothing', accentMode: 'any' , source: 'clothing-vocabulary' },
   { id: 'es_c_040', display: 'manga larga', meanings: { en: 'long sleeve', ja: '長袖', ko: '긴소매' }, meaningLang: 'ko', level: 2, category: 'clothing', accentMode: 'any' , source: 'clothing-vocabulary' },
   { id: 'es_c_041', display: 'manga corta', meanings: { en: 'short sleeve', ja: '半袖', ko: '반소매' }, meaningLang: 'ko', level: 2, category: 'clothing', accentMode: 'any' , source: 'clothing-vocabulary' },
+
+  // Proverbs (Refranes) — Tier 4
+  { id: 'es_p_001', display: 'No hay mal que por bien no venga', meanings: { en: 'Every cloud has a silver lining', ja: '雨降って地固まる', ko: '모든 어려움에는 좋은 면이 있다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
+  { id: 'es_p_002', display: 'El que madruga, cacbios', meanings: { en: 'The early bird catches the worm', ja: '早起きは三文の徳', ko: '아침늦은 새가 벌레를 잡는다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
+  { id: 'es_p_003', display: 'Del dicho al hecho hay mucho trecho', meanings: { en: 'Easier said than done', ja: '言易く行難', ko: '말하기는 쉬운데 하기 어렵다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
+  { id: 'es_p_004', display: 'Camarón que se duerme, se lo lleva la corriente', meanings: { en: 'If you snooze, you lose', ja: '油断大敵', ko: '자는 새는 벌레를 못 잡는다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
+  { id: 'es_p_005', display: 'Más vale tarde que nunca', meanings: { en: 'Better late than never', ja: '遅れても总比不做好', ko: '늦더라도 않는 것보다는 낫다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
+  { id: 'es_p_006', display: 'El que mucho abarca, poco aprieta', meanings: { en: 'Don\'t bite off more than you can chew', ja: '欲張り', ko: '욕심이 많으면 다 잡지 못한다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
+  { id: 'es_p_007', display: 'A quien madruga, Dios le ayuda', meanings: { en: 'God helps those who help themselves', ja: '自助努力', ko: '일찍 일어나는 사람에게 신이 도움준다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
+  { id: 'es_p_008', display: 'Zapatero a tus zapatos', meanings: { en: 'Stick to your last', ja: '分장에専念', ko: '성형외과 의사는 자기 일에 집중해라' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
 ];
 
 export const KR_WORDS: WordEntry[] = [
@@ -1825,6 +1853,13 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_c_039', display: '넓은', jamo: 'ㄴㅓㄹㅇㅡㄴ', meanings: { en: 'loose', es: 'suelto', ja: '緩い' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: 'clothing-vocabulary' },
   { id: 'kr_c_040', display: '긴소매', jamo: 'ㄱㅣㄴㅅㅗㅁㅐ', meanings: { en: 'long sleeve', es: 'manga larga', ja: '長袖' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: 'clothing-vocabulary' },
   { id: 'kr_c_041', display: '반소매', jamo: 'ㅂㅏㄴㅅㅗㅁㅐ', meanings: { en: 'short sleeve', es: 'manga corta', ja: '半袖' }, meaningLang: 'ko', level: 2, category: 'clothing' , source: 'clothing-vocabulary' },
+
+  // Proverbs (속담) — Tier 4
+  { id: 'kr_p_001', display: '천 리 길도 한 걸음부터', jamo: 'ㅊㅓㄴ ㄹㅣ ㄱㅣㄹ ㄷㅗ ㅎㅏㄴ ㄱㅓㄹㅡㅁ ㅂㅜㅌㅗ', meanings: { en: 'A journey of a thousand miles begins with a single step', ja: '千里の道も一歩から' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'kr_p_002', display: '칠전팔기', jamo: 'ㅊㅣㄹㅈㅓㄴ ㅂㅏㄹㄱㅣ', meanings: { en: 'Fall seven times, stand up eight', ja: '七転び八起き' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'kr_p_003', display: '물은源头부터 흐른다', jamo: 'ㅁㅜㄹ ㅇㅡㄴ ㅇㅝㄴㅌㅐ ㅂㅜㅌㅗ ㄱㅡㄹㅡㄴㄷㅏ', meanings: { en: 'Water flows from its source', ja: '雨降って地固まる' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'kr_p_004', display: '소와 돼지도 사이좋게 살다', jamo: 'ㅅㅗ ㅇㅘ ㄷㅚㅈㅣ ㄷㅗ ㅅㅏㅇㅣ ㅈㅗㅇㅔ ㄷㅏ ㄴㅏㄹㄷㅏ', meanings: { en: 'Even cows and pigs live in harmony', ja: '犬猿の仲も一年' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+  { id: 'kr_p_005', display: '배고프면 투자름도能找到', jamo: 'ㅂㅐㄱㅗㅍㅜㅁㅕㄴ ㄱㅜ ㄷㅜㅇㅏ ㄹㅡㅁ ㄷㅗ ㅈㅜㅓㄹ ㄷㅐ', meanings: { en: 'When hungry enough, you\'ll find food even in grandma\'s sleeve', ja: '好きこそものの上手なれ' }, meaningLang: 'ko', level: 4, category: 'proverb' },
 ];
 
 export const KR_SENTENCES: WordEntry[] = [

@@ -1943,3 +1943,36 @@ Phase H는 Phase G에서 발견된 5개 unresolved wikilinks 해결.
 - EN/ES/KR 모든 tier 정상 진행 가능
 - 잠금 메시지가 실제 잠긴 stage만 표시
 - JP만 Tier 0 → Tier 1 잠금 체인 적용
+
+---
+
+## 2026-06-23
+
+### [2026-06-23] polish | Phase 7 — Dashboard 스테이지 구조 시각화 추가
+
+**Dashboard Enhancement:**
+- Overview 탭에 🗺️ **Cross-Language Stage Map** 추가 — EN/JP/ES/KR × Tier 0-5 그리드
+- 언어 Detail 탭에 **"구조"** 서브탭 추가 — Tier별 풀그리드로 스테이지详情
+- 변경 파일: `dashboard/index.html` (~120줄 CSS), `dashboard/dashboard.js` (2개 렌더러 함수)
+
+**Proverb Corpus 추가:**
+- EN: 8개 관용구/속담 (en_p_001–en_p_008) — early-bird, actions-speak-louder, practice-makes-perfect 등
+- JP: 6개 ことわざ (jp_p_001–jp_p_006) — 七転び八起き, 石の上にも三年, 継続は力なり 등
+- KR: 5개 속담 (kr_p_001–kr_p_005) — 천 리 길도 한 걸음부터, 칠전팔기 등
+- corpus.ts 에 category: 'proverb', level: 4 로 추가
+
+**Dashboard 데이터 생성:**
+- `python3 dashboard/generate_data.py` 실행
+- Total: 52 stages, 577 corpus entries, 123 wiki materials, 40 raw sources
+
+**Build/Test:**
+- Build: 901 KB (gzip 267 KB)
+- Tests: 667 passed, 1 skipped
+- SAMPLE_STAGES: 133
+
+**대시보드 실행:**
+```bash
+cd Game/typing_language
+python3 -m http.server 8766
+# http://localhost:8766/dashboard/index.html
+```

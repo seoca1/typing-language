@@ -167,6 +167,8 @@ function renderOverview() {
       ${o.languages.map((lang) => renderLangTile(lang)).join('')}
     </div>
 
+    ${renderCrossLangStageMap()}
+
     <div class="section-title">
       <span class="icon">🎮</span>
       티어별 스테이지 분포
@@ -308,6 +310,9 @@ function renderLangDetail(code) {
 
       <!-- Detail sub-tabs -->
       <div class="detail-tabs" id="detailTabs">
+        <button class="detail-tab ${STATE.detailTab === 'structure' ? 'active' : ''}" data-dtab="structure">
+          🗺️ 구조
+        </button>
         <button class="detail-tab ${STATE.detailTab === 'corpus' ? 'active' : ''}" data-dtab="corpus">
           📖 코퍼스 vs 학습자료
         </button>
@@ -354,6 +359,8 @@ function renderGapsWarning(data) {
 
 function renderDetailTab(data) {
   switch (STATE.detailTab) {
+    case 'structure':
+      return renderStageStructure(data);
     case 'corpus':
       return renderCorpusCompare(data);
     case 'stages':
@@ -483,6 +490,132 @@ function renderCorpusCompare(data) {
           </div>
           ${renderFileList(wiki.culture, 'wiki')}
         </div>
+      </div>
+    </div>
+  `;
+}
+
+/* ----- Stage Structure view ----- */
+
+function renderStageStructure(data) {
+  const stages = data.stages;
+  const tiers = [0, 1, 2, 3, 4, 5];
+
+  // Group stages by tier
+  const byTier = {};
+  for (const t of tiers) {
+    byTier[t] = stages.filter((s) => s.tier === t);
+  }
+
+  const tierLabels = {
+    0: 'T0 · 문자 (Kana)',
+    1: 'T1 · 단어 (Basic)',
+    2: 'T2 · 확장 (Extended)',
+    3: 'T3 · 문장 (Sentences)',
+    4: 'T4 · 긴 문장 (Long)',
+    5: 'T5 · 단락 (Passages)',
+  };
+
+  return `
+    <div class="stage-structure-grid">
+      ${tiers
+        .map((tier) => {
+          const tierStages = byTier[tier] || [];
+          return `
+          <div class="stage-structure-tier tier-${tier}">
+            <div class="stage-structure-tier-label">
+              <span class="tier-dot"></span>
+              ${tierLabels[tier] || `Tier ${tier}`}
+              <span style="margin-left:auto;font-size:10px;color:var(--text-3)">${tierStages.length}개</span>
+            </div>
+            <div class="stage-structure-slots">
+              ${tierStages.length === 0 ? `
+                <div class="stage-structure-slot empty-slot">
+                  <div class="slot-name">— 미정의 —</div>
+                  <div class="slot-meta">이 티어에 스테이지가 없습니다</div>
+                </div>
+              ` : ''}
+              ${tierStages
+                .map((s) => `
+                <div class="stage-structure-slot">
+                  <div class="slot-name" title="${escapeHtml(s.name)}">${escapeHtml(s.name)}</div>
+                  <div class="slot-meta">${s.id} · ${s.corpus_type}</div>
+                  <div class="slot-cats">
+                    ${(s.corpus_filter.categories || []).map(
+                      (c) => `<span class="slot-cat">${c}</span>`
+                    ).join('')}
+                    ${s.corpus_filter.minLevel ? `<span class="slot-cat">Lv${s.corpus_filter.minLevel}</span>` : ''}
+                  </div>
+                </div>
+              `)
+                .join('')}
+            </div>
+          </div>
+        `;
+        })
+        .join('')}
+    </div>
+  `;
+}
+
+/* ----- Cross-language stage map for overview ----- */
+
+function renderCrossLangStageMap() {
+  const langs = ['en', 'jp', 'es', 'kr'];
+  const tiers = [0, 1, 2, 3, 4, 5];
+  const tierLabels = ['T0', 'T1', 'T2', 'T3', 'T4', 'T5'];
+  const tierColors = {
+    0: '#818cf8',
+    1: '#34d399',
+    2: '#fbbf24',
+    3: '#f472b6',
+    4: '#60a5fa',
+    5: '#c084fc',
+  };
+
+  return `
+    <div class="cross-lang-stage-map">
+      <div class="cross-lang-stage-map-title">🗺️ 언어별 스테이지 구조 (한눈에)</div>
+      <div class="cross-lang-grid">
+        <!-- Header row -->
+        <div class="cross-lang-header"></div>
+        ${tiers.map((t) => `
+          <div class="cross-lang-header" style="color:${tierColors[t]}">
+            ${tierLabels[t]}
+          </div>
+        `).join('')}
+
+        <!-- Language rows -->
+        ${langs.map((code) => {
+          const langData = DATA.langs[code];
+          if (!langData) return '';
+          const meta = langData.meta;
+          const byTier = {};
+          for (const t of tiers) {
+            byTier[t] = langData.stages.filter((s) => s.tier === t);
+          }
+          return `
+            <div class="cross-lang-lang-cell">
+              <span>${meta.flag}</span>
+            </div>
+            ${tiers.map((t) => {
+              const tierStages = byTier[t] || [];
+              if (tierStages.length === 0) {
+                return `<div class="cross-lang-cell empty tier-${t}"><span class="cell-name">—</span></div>`;
+              }
+              // Show first stage name in cell
+              const first = tierStages[0];
+              const cats = (first.corpus_filter.categories || []).join(', ');
+              return `
+                <div class="cross-lang-cell tier-${t}" title="${tierStages.map((s) => `${s.id}: ${s.name}`).join('\n')}">
+                  <div class="cell-name">${escapeHtml(first.name)}</div>
+                  ${cats ? `<div class="cell-cats">${cats}</div>` : ''}
+                  ${tierStages.length > 1 ? `<div class="cell-cats" style="color:var(--accent)">+${tierStages.length - 1}</div>` : ''}
+                </div>
+              `;
+            }).join('')}
+          `;
+        }).join('')}
       </div>
     </div>
   `;

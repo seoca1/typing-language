@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T03:09:17.239502",
+  "generated_at": "2026-06-23T15:21:27.043177",
   "languages": [
     {
       "code": "en",
@@ -10,12 +10,12 @@
       "stats": {
         "stages": 13,
         "corpus_total": 162,
-        "vocab_wiki": 67,
+        "vocab_wiki": 0,
         "expressions_wiki": 12,
         "culture_wiki": 1,
-        "sources_wiki": 2,
+        "sources_wiki": 13,
         "study_plan_wiki": 0,
-        "raw_sources": 3,
+        "raw_sources": 9,
         "coverage_percent": 128.6,
         "gaps": 2
       }
@@ -29,12 +29,12 @@
       "stats": {
         "stages": 15,
         "corpus_total": 182,
-        "vocab_wiki": 58,
+        "vocab_wiki": 0,
         "expressions_wiki": 7,
         "culture_wiki": 1,
-        "sources_wiki": 2,
+        "sources_wiki": 11,
         "study_plan_wiki": 0,
-        "raw_sources": 3,
+        "raw_sources": 9,
         "coverage_percent": 107.7,
         "gaps": 3
       }
@@ -48,12 +48,12 @@
       "stats": {
         "stages": 12,
         "corpus_total": 155,
-        "vocab_wiki": 97,
+        "vocab_wiki": 0,
         "expressions_wiki": 32,
         "culture_wiki": 11,
-        "sources_wiki": 5,
+        "sources_wiki": 10,
         "study_plan_wiki": 2,
-        "raw_sources": 6,
+        "raw_sources": 12,
         "coverage_percent": 139.6,
         "gaps": 3
       }
@@ -67,12 +67,12 @@
       "stats": {
         "stages": 12,
         "corpus_total": 78,
-        "vocab_wiki": 84,
+        "vocab_wiki": 0,
         "expressions_wiki": 11,
         "culture_wiki": 1,
-        "sources_wiki": 2,
+        "sources_wiki": 11,
         "study_plan_wiki": 0,
-        "raw_sources": 4,
+        "raw_sources": 10,
         "coverage_percent": 69.0,
         "gaps": 5
       }
@@ -81,9 +81,9 @@
   "totals": {
     "stages": 52,
     "corpus": 577,
-    "wiki_materials": 395,
-    "raw_sources": 16,
-    "vocab_words": 306,
+    "wiki_materials": 123,
+    "raw_sources": 40,
+    "vocab_words": 0,
     "expressions": 62,
     "culture": 14
   },
