@@ -2087,11 +2087,14 @@ d8709cd — fix: ImageLoader path detection for GitHub Pages without trailing sl
 
 **커밋:**
 ```
-(tbd) — fix: ADR 0004-0008 Draft→Accepted, 0010→0011, README/ROADMAP sync
-(tbd) — fix: blank screen guard — canvas validity check + Renderer recreation
+470f74b — maintain: ADR 정리, README 동기화, 빈 화면 버그 방어 코드
+d47ef13 — fix: ADR-0010→0011 인용 stale reference 수정
+95bd1de — fix: PROJECT_STATUS, ROADMAP, prototype/README 통계 동기화
+ae13c1e — fix: lint 설정 + 실제 버그 수정
 ```
 
 **결과:**
-- Build: 929 KB (gzip 274 KB) — 신규 변경으로 +17KB
-- Tests: 674 passed, 1 skipped ( EffectsSystem flakiness 해결됨)
+- Build: 929 KB (gzip 274 KB)
+- Tests: 674 passed, 1 skipped
+- Lint: ✅ 0 errors
 
