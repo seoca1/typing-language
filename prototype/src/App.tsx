@@ -171,8 +171,8 @@ export function App() {
   useEffect(() => {
     if (state.phase !== 'stage' || !state.currentStage) return;
     const canvas = canvasRef.current;
-    if (!canvas) return;
-    
+    if (!canvas || !canvas.getContext) return;
+
     // Always create a fresh renderer when entering stage phase
     // This prevents state corruption from multiple menu ↔ game transitions
     console.log('[App] Creating new Renderer for stage phase');
@@ -228,22 +228,26 @@ export function App() {
         }
       }
 
-      renderer.render({
-        currentEnemy: enemy,
-        buffer: s.buffer,
-        score: s.score,
-        combo: s.combo,
-        wpm: s.wpm,
-        accuracy: s.accuracy,
-        language: s.currentStage?.language ?? 'en',
-        romajiHint: s.romajiHint,
-        effects: effectsRef.current,
-        lastHitCorrect: s.lastHitCorrect,
-        lastHitCharIndex: s.lastHitCharIndex,
-        lastHitTime: s.lastHitTime,
-        character: ch,
-        currentEntry,
-      });
+      try {
+        renderer.render({
+          currentEnemy: enemy,
+          buffer: s.buffer,
+          score: s.score,
+          combo: s.combo,
+          wpm: s.wpm,
+          accuracy: s.accuracy,
+          language: s.currentStage?.language ?? 'en',
+          romajiHint: s.romajiHint,
+          effects: effectsRef.current,
+          lastHitCorrect: s.lastHitCorrect,
+          lastHitCharIndex: s.lastHitCharIndex,
+          lastHitTime: s.lastHitTime,
+          character: ch,
+          currentEntry,
+        });
+      } catch (err) {
+        console.error('[App] Render error:', err);
+      }
       rafId = requestAnimationFrame(tick);
     };
     lastTickRef.current = 0;

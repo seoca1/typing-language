@@ -10,7 +10,7 @@
 
 ### Issue #1: 게임 중단 후 재시작 시 빈 화면
 
-**상태:** 🔴 Open (미확인)  
+**상태:** 🔴 Open (조사 중)  
 **우선순위:** Critical  
 **발견일:** 2026-06-18  
 **마지막 확인:** 2026-06-23
@@ -18,14 +18,20 @@
 #### **증상:**
 게임 여러 번 왕복 후 새 스테이지 시작 시 빈 화면 표시
 
-#### **예상 원인 (미확인):**
-- 게임 상태는 정상 전환되지만 화면 렌더링 안 됨
-- useEffect cleanup 문제로 추정
+#### **조사 내용:**
+- GameScreen.tsx가 실제로 존재하지 않음 (StageScreen.tsx로 대체됨)
+- Renderer는 stage phase 진입 시 매번 새로 생성됨
+- Canvas는 StageScreen이 관리하고 App.tsx에 ref로 전달
+- render() 호출을 try-catch로 감싸 오류 시 콘솔 로그 추가
+
+#### **가능한 원인:**
+- Canvas element가 DOM에서 분리 후 재연결 시 context 무효화
+- StageScreen mount/unmount 주기에 따른 ref 불일치
 
 #### **관련 파일:**
-- `src/ui/GameScreen.tsx` - 렌더링 컴포넌트
+- `src/ui/StageScreen.tsx` - Canvas 렌더링 컴포넌트
 - `src/engine/Renderer.ts` - 렌더링 루프
-- `src/App.tsx` - 컴포넌트 마운팅
+- `src/App.tsx` - 컴포넌트 마운팅, render 호출
 
 ---
 
