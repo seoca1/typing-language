@@ -394,7 +394,7 @@ export class Renderer {
       }
 
       // Render each character
-      let lineWidth = this.ctx.measureText(line).width;
+      const lineWidth = this.ctx.measureText(line).width;
       let xCursor = -lineWidth / 2;
 
       for (let col = 0; col < line.length; col++) {
@@ -472,7 +472,7 @@ export class Renderer {
 
         // Color the input characters based on correctness
         const targetLine = targetLines[lineIdx];
-        let lineWidth = this.ctx.measureText(lineBuf).width;
+        const lineWidth = this.ctx.measureText(lineBuf).width;
         let xCursor = -lineWidth / 2;
 
         for (let col = 0; col < lineBuf.length; col++) {

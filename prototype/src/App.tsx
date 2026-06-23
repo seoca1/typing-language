@@ -317,7 +317,7 @@ export function App() {
 
     // Phase B-2: Build preview enemies first, then show LearnScreen
     const langConfig = getLanguage(stage.language);
-    let corpus: WordEntry[] = stage.corpusFilter.minLevel && stage.corpusFilter.minLevel >= 3
+    const corpus: WordEntry[] = stage.corpusFilter.minLevel && stage.corpusFilter.minLevel >= 3
       ? [...langConfig.corpus.sentences, ...langConfig.corpus.words]
       : langConfig.corpus.words;
     const previewStage = createStageState(stage, [...corpus]);

@@ -59,8 +59,8 @@ export function renderCharacter(
   let bodyRotation = 0;
   let armLeftAngle = 0;
   let armRightAngle = 0;
-  let armLeftLength = 1;
-  let armRightLength = 1;
+  const armLeftLength = 1;
+  const armRightLength = 1;
   let legSpread = 0;
 
   switch (state.pose) {
@@ -1225,7 +1225,7 @@ function renderCharacterImage(
 
   // Get image config for current pose
   const imageConfig = characterSet[state.pose] || characterSet.idle;
-  let loadedImage = ImageLoader.get(imageConfig.src);
+  const loadedImage = ImageLoader.get(imageConfig.src);
 
   // On-demand load if not yet preloaded (Phase E fix: random selection
   // may pick characters that weren't in the initial preload batch)
@@ -1244,7 +1244,7 @@ function renderCharacterImage(
   // Calculate position with pose animations
   let offsetY = 0;
   let offsetX = 0;
-  let rotation = 0;
+  const rotation = 0;
   let scale = imageConfig.scale || 1.0;
   let scaleX = 1.0; // Horizontal scale for flip effects
 
@@ -1253,23 +1253,26 @@ function renderCharacterImage(
       // Gentle breathing animation
       offsetY = Math.sin(now / 600) * 3;
       break;
-    case 'wave':
+    case 'wave': {
       // Slight bounce while waving
       const waveT = (now - state.poseStart) / 900;
       offsetY = Math.sin(waveT * Math.PI) * -5;
       break;
-    case 'jump':
+    }
+    case 'jump': {
       // Jump arc
       const jumpT = (now - state.poseStart) / 700;
       const arc = Math.sin(jumpT * Math.PI);
       offsetY = -arc * 40;
       break;
-    case 'clap':
+    }
+    case 'clap': {
       // Small bounce
       const clapT = (now - state.poseStart) / 600;
       offsetY = Math.sin(clapT * Math.PI * 2) * -5;
       break;
-    case 'spin':
+    }
+    case 'spin': {
       // Horizontal flip animation (left-right spin effect)
       // Use linear interpolation to avoid image disappearing at midpoint
       // scaleX goes 1 → -1 → 1 without hitting zero
@@ -1279,12 +1282,14 @@ function renderCharacterImage(
       if (Math.abs(scaleX) < 0.15) scaleX = scaleX >= 0 ? 0.15 : -0.15; // prevent zero
       offsetY = Math.abs(Math.sin(spinT * Math.PI * 2)) * -15; // bounce up at extremes
       break;
-    case 'dance':
+    }
+    case 'dance': {
       // Dancing motion
       const danceT = (now - state.poseStart) / 1200;
       offsetY = Math.sin(danceT * Math.PI * 4) * -8;
       offsetX = Math.cos(danceT * Math.PI * 2) * 5;
       break;
+    }
     case 'pose':
       // Triumphant pose with slight scale up
       scale *= 1.05;
@@ -1444,8 +1449,8 @@ export function renderCharacterPrimitive(
   let bodyRotation = 0;
   let armLeftAngle = 0;
   let armRightAngle = 0;
-  let armLeftLength = 1;
-  let armRightLength = 1;
+  const armLeftLength = 1;
+  const armRightLength = 1;
   let legSpread = 0;
 
   switch (state.pose) {

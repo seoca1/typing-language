@@ -1974,7 +1974,7 @@ const AVAILABLE_CORPUS = new Set([
 
 export const SAMPLE_STAGES: StageConfig[] = ALL_STAGE_SPECS
   .filter((s) => !s.requiresCorpus || AVAILABLE_CORPUS.has(s.requiresCorpus))
-  .map(({ tier, requiresCorpus: _ignored, ...stage }) => stage);
+  .map(({ tier: _tier, requiresCorpus: _ignored, ...stage }) => stage);
 
 /**
  * 모든 정의된 스테이지 (코퍼스 미비한 것 포함, 디버그/개발용)
