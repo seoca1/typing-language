@@ -1,14 +1,14 @@
 # Typing Language — 프로젝트 상태 리포트
 
-> **최종 업데이트**: 2026-06-23
-> **최종 커밋**: 구조적 재점검 + 리팩토링
-> **버전**: Phase 7 완료 직전 — 140 스테이지, 666 테스트
+> **최종 업데이트**: 2026-06-24
+> **최종 커밋**: ADR 정리 + 빈 화면 버그 방어 코드
+> **버전**: Phase 7 완료 직전 — 140 스테이지, 674 테스트
 
 ---
 
 ## 1. 한 줄 요약
 
-4개국어(EN/JP/ES/KR) 타이핑 학습 게임, **GitHub Pages 자동 배포**. **666 tests passing** (1 skipped), **891 KB / gzip 264 KB**, **45 daily lessons**, **12명 캐릭터 (84 PNG)**, **477+ wiki 페이지**. Phase 7 완성 직전.
+4개국어(EN/JP/ES/KR) 타이핑 학습 게임, **GitHub Pages 자동 배포**. **674 tests passing** (1 skipped), **929 KB / gzip 274 KB**, **45 daily lessons**, **12명 캐릭터 (84 PNG)**, **410+ wiki 페이지**. Phase 7 완성 직전.
 
 ---
 
@@ -16,13 +16,13 @@
 
 | 항목 | 초기값 (Phase A 시작) | 최종값 (현재) | 변화 |
 |---|---|---|---|
-| **테스트** | 313 passed | **666 passed** | +353 (+113%) |
+| **테스트** | 313 passed | **674 passed** | +361 (+115%) |
 | 테스트 파일 | 14 | **23** | +9 |
-| **번들 크기** | 463 KB | **891 KB** | +92% |
-| gzip 크기 | 137 KB | **264 KB** | +93% |
+| **번들 크기** | 463 KB | **929 KB** | +101% |
+| gzip 크기 | 137 KB | **274 KB** | +100% |
 | CSS | 21 KB | 27 KB | +29% |
 | **daily lessons** | 11 | **45** | +309% |
-| Wiki 페이지 | 385 | **477+** | +24% |
+| Wiki 페이지 | 385 | **410+** | +6.5% |
 | **스테이지** | 30+ | **140** | +367% |
 | 신규 파일 | – | 7개 신규 + 5개 강화 | – |
 | 커밋 | – | **약 30개** (Phase A-J + refactor) | – |
@@ -380,8 +380,8 @@ Game/typing_language/
 ```bash
 # 개발
 npm run dev          # Vite dev server
-npm test             # 666 tests (1 skipped)
-npm run build        # 프로덕션 빌드 (891 KB)
+npm test             # 674 tests (1 skipped)
+npm run build        # 프로덕션 빌드 (929 KB)
 
 # 콘텐츠 파이프라인
 uv run --with pyyaml python3 scripts/build-daily-lessons.py

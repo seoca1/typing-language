@@ -70,7 +70,7 @@ prototype/
 │   │   ├── SpanishHandler.ts
 │   │   └── KoreanHandler.ts
 │   ├── data/                 # 코퍼스 & 스테이지
-│   │   ├── corpus.ts         # 203 words, 83 sentences
+│   │   ├── corpus.ts         # 577 entries (words, sentences, etc.)
 │   │   └── stages.ts         # 40 stages
 │   ├── combat/               # 격파 시스템
 │   ├── mission/              # 미션 시스템
@@ -96,7 +96,7 @@ prototype/
 | **Spanish** | `es` | Accent input | 50 | 21 | - |
 | **Korean** | `kr` | 2-beol Jamo | 32 | 20 | - |
 
-**총:** 203 words, 83 sentences, 132 characters
+**총:** 577 corpus entries, 140 stages
 
 ---
 
@@ -111,7 +111,7 @@ npm run preview      # 빌드 미리보기
 
 ### 테스트
 ```bash
-npm test             # 유닛 테스트 (99/100 + 1 skip)
+npm test             # 유닛 테스트 (674 passed, 1 skipped)
 npm run test:watch   # Watch 모드
 npm run cli:test     # CLI 자동 검증 (30 tests)
 ```
@@ -176,7 +176,7 @@ npm test
 ```
 
 **결과:**
-- ✅ 99/100 tests passed
+- ✅ 674/674 tests passed
 - ⏭️ 1 test skipped (Korean accuracy - 설계상 의도)
 - 📊 Coverage: EnglishHandler (22), JapaneseHandler (24), SpanishHandler (26), KoreanHandler (27)
 
@@ -357,13 +357,12 @@ npm run dev -- --port 3000
 |------|-----|
 | **언어** | TypeScript 5.5 |
 | **프레임워크** | React 18.3 + Vite 5.3 |
-| **코드 라인** | ~5,000 lines |
-| **유닛 테스트** | 99/100 passed |
-| **CLI 테스트** | 30/30 passed |
-| **빌드 크기** | 253 KB (gzip 77 KB) |
+| **코드 라인** | ~15,000 lines |
+| **유닛 테스트** | 674 passed, 1 skipped |
+| **빌드 크기** | 929 KB (gzip 274 KB) |
 | **지원 언어** | 4개 (EN/JP/ES/KR) |
-| **코퍼스** | 203 words, 83 sentences |
-| **스테이지** | 40개 (24개 활성화) |
+| **코퍼스** | 577개 항목 |
+| **스테이지** | 140개 (Tier 0-5) |
 
 ---
 

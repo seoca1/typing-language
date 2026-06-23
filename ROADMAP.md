@@ -223,7 +223,7 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 - ✅ 게임 코어 완성 (입력/격파/미션/스테이지/캐릭터)
 - ✅ 4개 언어 지원 (EN/JP/ES/KR)
 - ✅ 140 스테이지 (Tier 0-5, Romance/Travel 테마)
-- ✅ 666개 테스트 통과 (1 skipped)
+- ✅ 674개 테스트 통과 (1 skipped)
 - ✅ 프로덕션 빌드 가능 (891KB gzip 264KB)
 - ✅ GitHub Pages 자동 배포
 
