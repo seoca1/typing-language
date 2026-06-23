@@ -119,10 +119,10 @@ class ImageLoaderClass {
         // GitHub Pages: /typing-language/, Local dev: /
         const pathname = window.location.pathname;
         const base = pathname.startsWith('/typing-language') ? '/typing-language/' : '/';
-        
-        // Remove leading slash from config.src if base already has trailing slash
-        const cleanSrc = config.src.startsWith('/') ? config.src.slice(1) : config.src;
-        finalUrl = base + cleanSrc;
+
+        // If config.src already starts with base (e.g., '/typing-language/characters/...'),
+        // it's already an absolute path from domain root — use as-is
+        finalUrl = config.src.startsWith(base) ? config.src : base + config.src;
       }
       
       console.log(`[ImageLoader] Loading: ${config.src} → ${finalUrl}`);
