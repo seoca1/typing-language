@@ -45,6 +45,7 @@ import {
   spawnHitBurst,
   spawnKeystrokeSpark,
   spawnComboMilestone,
+  maybeSpawnAmbient,
   spawnRing,
   spawnPopup,
   triggerShake,
@@ -202,6 +203,10 @@ export function App() {
       lastTickRef.current = now;
 
       updateEffects(effectsRef.current, dt);
+
+      if (rendererRef.current) {
+        maybeSpawnAmbient(effectsRef.current, rendererRef.current.width, rendererRef.current.height);
+      }
 
       const s = stateRef.current;
       const enemy = s.currentEnemy;

@@ -48,8 +48,8 @@ export interface RenderState {
 
 export class Renderer {
   private ctx: CanvasRenderingContext2D;
-  private width: number;
-  private height: number;
+  width: number;
+  height: number;
   private keyboard: Keyboard | null = null;
 
   constructor(canvas: HTMLCanvasElement) {
@@ -75,6 +75,7 @@ export class Renderer {
 
     this.drawBackground();
     renderBackground(this.ctx, state.character, this.width, this.height, performance.now());
+    this.drawAmbient(state.effects);
     this.drawCharacter(state.character);
     this.drawHud(state);
     this.drawEnemy(state);
@@ -589,6 +590,20 @@ export class Renderer {
       } else {
         this.drawStar(0, 0, p.size * 1.6, p.size * 0.7, 5);
       }
+      this.ctx.restore();
+    }
+  }
+
+  private drawAmbient(effects: EffectsState): void {
+    for (const p of effects.ambient) {
+      this.ctx.save();
+      this.ctx.globalAlpha = p.alpha;
+      this.ctx.fillStyle = p.color;
+      this.ctx.shadowColor = p.color;
+      this.ctx.shadowBlur = 8;
+      this.ctx.beginPath();
+      this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      this.ctx.fill();
       this.ctx.restore();
     }
   }

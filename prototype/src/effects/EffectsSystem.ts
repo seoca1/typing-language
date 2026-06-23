@@ -79,6 +79,18 @@ export interface ScreenShake {
   offsetY: number;
 }
 
+export interface AmbientParticle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  life: number;
+  maxLife: number;
+  color: string;
+  size: number;
+  alpha: number;
+}
+
 export interface EffectsState {
   particles: Particle[];
   floatingTexts: FloatingText[];
@@ -86,6 +98,7 @@ export interface EffectsState {
   sentencePreview: SentencePreview | null;
   flash: Flash | null;
   shake: ScreenShake | null;
+  ambient: AmbientParticle[];
 }
 
 export function createEffectsState(): EffectsState {
@@ -96,6 +109,7 @@ export function createEffectsState(): EffectsState {
     sentencePreview: null,
     flash: null,
     shake: null,
+    ambient: [],
   };
 }
 
@@ -384,6 +398,47 @@ export function spawnComboMilestone(state: EffectsState, x: number, y: number, c
   }
 }
 
+const AMBIENT_COLOR_SET = ['rgba(233,69,96,0.5)', 'rgba(0,217,255,0.5)', 'rgba(123,47,247,0.5)', 'rgba(255,107,53,0.5)'];
+
+export function spawnAmbientBurst(state: EffectsState, x: number, y: number, count = 8): void {
+  for (let i = 0; i < count; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 20 + Math.random() * 40;
+    state.ambient.push({
+      x,
+      y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 15,
+      life: 3000 + Math.random() * 2000,
+      maxLife: 3000 + Math.random() * 2000,
+      color: AMBIENT_COLOR_SET[Math.floor(Math.random() * AMBIENT_COLOR_SET.length)],
+      size: 2 + Math.random() * 4,
+      alpha: 0.6,
+    });
+  }
+}
+
+export function maybeSpawnAmbient(state: EffectsState, width: number, height: number): void {
+  if (state.ambient.length >= 40) return;
+  if (Math.random() < 0.08) {
+    const x = Math.random() * width;
+    const y = height + 20;
+    const vx = (Math.random() - 0.5) * 15;
+    const vy = -(25 + Math.random() * 35);
+    state.ambient.push({
+      x,
+      y,
+      vx,
+      vy,
+      life: 4000 + Math.random() * 3000,
+      maxLife: 4000 + Math.random() * 3000,
+      color: AMBIENT_COLOR_SET[Math.floor(Math.random() * AMBIENT_COLOR_SET.length)],
+      size: 1.5 + Math.random() * 3,
+      alpha: 0.5,
+    });
+  }
+}
+
 /**
  * Expanding ring effect - used for combo milestones and stage clear
  */
@@ -467,6 +522,15 @@ export function updateEffects(state: EffectsState, dt: number): void {
       state.shake.offsetX = (Math.random() - 0.5) * current * 2;
       state.shake.offsetY = (Math.random() - 0.5) * current * 2;
     }
+  }
+
+  for (let i = state.ambient.length - 1; i >= 0; i--) {
+    const p = state.ambient[i];
+    p.x += p.vx * dtSec;
+    p.y += p.vy * dtSec;
+    p.life -= dt;
+    p.alpha = Math.max(0, p.life / p.maxLife) * 0.6;
+    if (p.life <= 0) state.ambient.splice(i, 1);
   }
 
   const rings: Ring[] = (state as any).rings || [];
