@@ -477,7 +477,7 @@ CLI 도구 사용에 익숙해졌다면:
 - **CLI_TOOLS.md** - 상세 사용법 및 트러블슈팅
 - **prototype/README.md** - 프로젝트 전체 가이드
 - **wiki/extensible-languages.md** - 언어 시스템 아키텍처
-- **decisions/0010-extensible-languages.md** - 설계 결정 기록
+- **decisions/0011-extensible-languages.md** - 설계 결정 기록
 
 ---
 
