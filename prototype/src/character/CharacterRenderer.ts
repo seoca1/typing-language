@@ -1271,12 +1271,13 @@ function renderCharacterImage(
       break;
     case 'spin':
       // Horizontal flip animation (left-right spin effect)
-      // Instead of rotating the image, we scale X from 1 → -1 → 1
-      // This creates a natural "character spinning" effect
-      const spinT = (now - state.poseStart) / 800;
-      const spinCycle = Math.sin(spinT * Math.PI * 2); // -1 to 1
-      scaleX = spinCycle; // Flip horizontally as we go
-      offsetY = Math.sin(spinT * Math.PI) * -10; // Keep bounce
+      // Use linear interpolation to avoid image disappearing at midpoint
+      // scaleX goes 1 → -1 → 1 without hitting zero
+      const spinT = (now - state.poseStart) / 1400;
+      const spinCycle = Math.sin(spinT * Math.PI * 2); // -1 to 1 but smooth
+      scaleX = spinCycle;
+      if (Math.abs(scaleX) < 0.15) scaleX = scaleX >= 0 ? 0.15 : -0.15; // prevent zero
+      offsetY = Math.abs(Math.sin(spinT * Math.PI * 2)) * -15; // bounce up at extremes
       break;
     case 'dance':
       // Dancing motion
