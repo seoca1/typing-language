@@ -2,7 +2,7 @@
 
 ## 상태
 
-Draft
+**Accepted** (2026-06-24)
 
 ## 컨텍스트
 
@@ -25,9 +25,9 @@ Draft
 | TOML | 명시적, 단순 | 표현력 제한 | |
 | Markdown table | 사람이 가장 읽기 쉬움 | 파싱 복잡 | |
 
-## 결정 (제안)
+## 결정
 
-**JSON + JSON Schema**
+**TypeScript const** (동적 import)
 
 - 데이터: `.json` 파일
 - 스키마: `JSON Schema` (선택적 검증)
@@ -67,6 +67,4 @@ Draft
 
 ## 다음 단계
 
-- 사용자 결정 대기
-- 결정 후 `prototype/src/data/` 구조화
-- `raw/{lang}_words.md` → JSON 변환 도구 (Phase 4+)
+- ✅ `prototype/src/data/` (TypeScript const, 동적 import) 구현 완료

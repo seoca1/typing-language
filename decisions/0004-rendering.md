@@ -2,7 +2,7 @@
 
 ## 상태
 
-Draft
+**Accepted** (2026-06-24)
 
 ## 컨텍스트
 
@@ -23,7 +23,7 @@ Draft
 | WebGL (PixiJS) | 고성능, 화려한 효과 | 텍스트 렌더링 추가 작업, 격파 게임엔 과함 | |
 | WebGL (Three.js) | 3D 가능 | 격파 게임엔 과함, 학습 곡선 | |
 
-## 결정 (제안)
+## 결정
 
 **Canvas 2D** (메인 렌더링) + React (UI)
 
@@ -61,5 +61,4 @@ Draft
 
 ## 다음 단계
 
-- 사용자 결정 대기
-- 결정 후 `prototype/src/engine/Renderer.ts` 구현
+- ✅ `prototype/src/engine/Renderer.ts` 구현 완료

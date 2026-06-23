@@ -2,7 +2,7 @@
 
 게임의 알려진 버그와 문제점을 추적하는 문서입니다.
 
-**최종 업데이트:** 2026-06-23
+**최종 업데이트:** 2026-06-24
 
 ---
 
@@ -10,28 +10,39 @@
 
 ### Issue #1: 게임 중단 후 재시작 시 빈 화면
 
-**상태:** 🔴 Open (조사 중)  
+**상태:** 🟡 Mitigated (방어 코드 추가)  
 **우선순위:** Critical  
 **발견일:** 2026-06-18  
-**마지막 확인:** 2026-06-23
+**마지막 수정:** 2026-06-24
 
 #### **증상:**
 게임 여러 번 왕복 후 새 스테이지 시작 시 빈 화면 표시
 
-#### **조사 내용:**
-- GameScreen.tsx가 실제로 존재하지 않음 (StageScreen.tsx로 대체됨)
-- Renderer는 stage phase 진입 시 매번 새로 생성됨
-- Canvas는 StageScreen이 관리하고 App.tsx에 ref로 전달
-- render() 호출을 try-catch로 감싸 오류 시 콘솔 로그 추가
+#### **근본 원인:**
+- StageScreen mount/unmount 주기에 canvas ref가 stale 참조가 될 수 있음
+- Renderer 생성 시점의 canvas context가 unmount 후 무효화될 수 있음
+- 렌더 루프에서 stale closure(`renderer` 로컬 const)를 참조하여 유효하지 않은 canvas에 렌더링 시도
 
-#### **가능한 원인:**
-- Canvas element가 DOM에서 분리 후 재연결 시 context 무효화
-- StageScreen mount/unmount 주기에 따른 ref 불일치
+#### **해결책 (2026-06-24):**
+
+1. **App.tsx — render effect 가드 추가:**
+   - `canvas.isConnected` + dimensions 0 체크로 StageScreen 미준비 상태 건너뛰기
+   - 새 스테이지 시작 시 fresh Renderer 생성 보장
+
+2. **App.tsx — tick 루프 방어:**
+   - 매 프레임 `canvas.isConnected` + dimensions 체크
+   - `Renderer.isCanvasValid()`로 context 유효성 검증
+   - 유효하지 않으면 `Renderer.recreateFrom()`으로 컨텍스트 재생성
+   - `rendererRef.current` 직접 접근으로 stale closure 방지
+
+3. **Renderer.ts — 새 메서드:**
+   - `isCanvasValid(canvas)`: canvas 연결 및 dimensions 유효성 검사
+   - `recreateFrom(canvas)`: 컨텍스트 재생성 (dimensions 갱신 포함)
 
 #### **관련 파일:**
 - `src/ui/StageScreen.tsx` - Canvas 렌더링 컴포넌트
-- `src/engine/Renderer.ts` - 렌더링 루프
-- `src/App.tsx` - 컴포넌트 마운팅, render 호출
+- `src/engine/Renderer.ts` - 렌더링 루프 (isCanvasValid, recreateFrom 추가)
+- `src/App.tsx` - 컴포넌트 마운팅, render 호출 (방어 코드 추가)
 
 ---
 
@@ -116,12 +127,12 @@ finalUrl = config.src.startsWith(base) ? config.src : base + config.src;
 ## 📊 이슈 통계
 
 **현재 상태:**
-- 🔴 Critical: 1개 (빈 화면 - 미확인)
-- 🟡 Medium: 2개 (spin 효과, 설정 저장)
+- 🔴 Critical: 0개
+- 🟡 Medium: 3개 (빈 화면 완화, spin 효과, 설정 저장)
 - ✅ Fixed: 2개
 
-**해결률:** 50% (2/4)
+**해결률:** 40% (2/5)
 
 ---
 
-**마지막 업데이트:** 2026-06-23
+**마지막 업데이트:** 2026-06-24

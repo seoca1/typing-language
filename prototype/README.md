@@ -5,7 +5,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.3-646cff)](https://vitejs.dev/)
-[![Tests](https://img.shields.io/badge/Tests-106%20passed-success)](#testing)
+[![Tests](https://img.shields.io/badge/Tests-673%20passed-success)](#testing)
 
 **🎮 [Play Live Demo](https://seoca1.github.io/typing-language/)**
 

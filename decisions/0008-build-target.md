@@ -2,7 +2,7 @@
 
 ## 상태
 
-Draft
+**Accepted** (2026-06-24)
 
 ## 컨텍스트
 
@@ -23,9 +23,9 @@ Draft
 | Tauri | Electron보다 가벼움 | Rust 의존성 | |
 | 모바일 앱 (Capacitor) | iOS/Android | 키보드 입력 한계 | 비추천 |
 
-## 결정 (제안)
+## 결정
 
-**SPA (1차) → PWA (Phase 7)**
+**SPA** (GitHub Pages)
 
 - 1차: Vite build → 정적 호스팅 (Vercel/Netlify/GitHub Pages)
 - Phase 7: PWA 추가 (서비스 워커, manifest)
@@ -61,6 +61,5 @@ Draft
 
 ## 다음 단계
 
-- 사용자 결정 대기
-- 결정 후 `prototype/` 에 빌드 설정
-- Phase 6: 배포 자동화 (GitHub Actions)
+- ✅ Vite build + GitHub Pages 배포 자동화 완료
+- ✅ GitHub Actions CI/CD 파이프라인 운영 중

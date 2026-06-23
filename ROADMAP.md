@@ -76,11 +76,12 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 - [x] `0001-tech-stack.md` - **TypeScript + React + Canvas + Vite** (웹)
 - [x] `0002-jp-input.md` - **로마자→한자 직접 매핑**
 - [x] `0003-es-accents.md` - **액센트 직접 입력 + ASCII 폴백**
-- [x] `0009-kr-input.md` - **로마자→한글 직접 매핑 (2-beol)**
+- [x] `0010-kr-input.md` - **한글 키보드 자모 직접 입력 + 클라이언트 합성**
+- [x] `0011-extensible-languages.md` - **확장 가능한 언어 레지스트리 시스템**
 - [x] Rendering: **Canvas 2D** (implemented)
 - [x] State Management: **React useState + Reducer** (implemented)
 - [x] Data Format: **TypeScript const** (implemented)
-- [x] Testing: **Vitest** (implemented)
+- [x] Testing: **Vitest + Playwright** (implemented)
 - [x] Build Target: **SPA** (implemented)
 
 **완료 조건**:
@@ -133,7 +134,7 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 **완료 조건**:
 - [x] "Type a word in each language" 가능
 - [x] 언어 전환 가능
-- [x] 모든 핸들러에 단위 테스트 (106 tests)
+- [x] 모든 핸들러에 단위 테스트 (673개)
 
 **추가 구현**:
 - [x] 확장 가능한 언어 레지스트리 시스템
@@ -153,7 +154,7 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 - [x] 타이핑 진행도 → 적 HP
 - [x] 정확도/속도 → 데미지/점수
 - [x] 미션 정의 (예: "EN 단어 10개 격파", "JP 문장 3개 정확히 입력")
-- [x] 스테이지 30+ (4개 언어, Tier 1-3)
+- [x] 스테이지 140개 (4개 언어, Tier 0-5)
 - [x] 결과 화면 (WPM, 정확도, 미션 클리어)
 
 **완료 조건**:
@@ -187,14 +188,14 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 - [x] ES 문장 (21개 - 회화/질문/설명)
 - [x] KR 단어장 (28개 - 인사/숫자/가족/음식/시간/학교)
 - [x] KR 문장 (3개 - 기본 회화)
-- [x] 스테이지 템플릿 30+ (언어별 Tier 1-3)
+- [x] 스테이지 템플릿 140개 (언어별 Tier 0-5)
 - [x] 미션 시스템 (단어 수, 정확도, 시간 제한)
 - [x] Language 위키 파이프라인 (업스트림 콘텐츠 소스)
 
 **완료 조건**:
 - [x] 한 세션이 15~30분 분량 (Tier 1-3 완주 기준)
-- [x] 언어별 다양한 스테이지 (30+)
-- [x] 총 단어: 197개 / 문장: 66개
+- [x] 언어별 다양한 스테이지 (140개)
+- [x] 총 코퍼스: 577개 항목 (EN 155 / JP 117 / ES 137 / KR 105 / Daily Lessons 63)
 
 **확장 가능 (Tier 4-5)**:
 - [ ] 추가 단어장 (각 언어 100+)
@@ -256,7 +257,7 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 
 **프로젝트 현황**:
 - **코드베이스**: 15,000+ LOC
-- **테스트**: 666 tests (666 passed + 1 skipped)
+- **테스트**: 673 tests
 - **번들 크기**: 891KB (gzip 264KB)
 - **언어**: 4개 (EN/JP/ES/KR)
 - **스테이지**: 140

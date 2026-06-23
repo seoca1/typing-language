@@ -2052,3 +2052,46 @@ d8709cd — fix: ImageLoader path detection for GitHub Pages without trailing sl
 - Tests: 673 passed, 1 failed (pre-existing EffectsSystem), 1 skipped
 - GitHub Pages 배포 진행 중 (push 후 GitHub Actions 자동 빌드)
 
+## 2026-06-24
+
+### [2026-06-24] maintain | 프로젝트 정리 + 빈 화면 버그 방어 코드
+
+**작업 내용:**
+
+1. **ADR 정리 (5개 파일)**
+   - `0004-rendering.md` → Draft → Accepted
+   - `0005-state-management.md` → Draft → Accepted
+   - `0006-data-format.md` → Draft → Accepted
+   - `0007-testing-strategy.md` → Draft → Accepted
+   - `0008-build-target.md` → Draft → Accepted
+   - `0010-extensible-languages.md` → `0011-extensible-languages.md` (0010 중복 해결)
+   - `decisions/README.md` 갱신 (테이블 + "다음 결정" 제거)
+
+2. **README/ROADMAP 동기화**
+   - Tests: 106 → 673
+   - Bundle: 253KB → 891KB (gzip 264KB)
+   - Stages: 30+ → 140
+   - Corpus: 197단어+66문장 → 577개 항목
+   - 한국어 입력 방식 코멘트 갱신 (romaji→hangul → jamo 직접 입력)
+
+3. **EffectsSystem 테스트** → 현재 모두 통과 (674 passed, 1 skipped) — 이전 실패는 flakiness
+
+4. **빈 화면 버그 방어 코드**
+   - `App.tsx` render effect: `canvas.isConnected` + dimensions 체크
+   - `App.tsx` tick 루프: 매 프레임 canvas 유효성 검증 + `Renderer.isCanvasValid()`
+   - `App.tsx` tick 루프: stale closure 방지 위해 `rendererRef.current` 직접 접근 + `recreateFrom()`
+   - `Renderer.ts`: `isCanvasValid()`, `recreateFrom()` 메서드 추가
+   - `KNOWN_ISSUES.md`: Issue #1 상태 "Open" → "Mitigated"
+
+5. **lint 오류**: `typescript-eslint` 패키지 누락 (pre-existing, 수정 안 함)
+
+**커밋:**
+```
+(tbd) — fix: ADR 0004-0008 Draft→Accepted, 0010→0011, README/ROADMAP sync
+(tbd) — fix: blank screen guard — canvas validity check + Renderer recreation
+```
+
+**결과:**
+- Build: 929 KB (gzip 274 KB) — 신규 변경으로 +17KB
+- Tests: 674 passed, 1 skipped ( EffectsSystem flakiness 해결됨)
+

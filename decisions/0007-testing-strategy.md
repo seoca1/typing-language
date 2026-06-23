@@ -2,7 +2,7 @@
 
 ## 상태
 
-Draft
+**Accepted** (2026-06-24)
 
 ## 컨텍스트
 
@@ -22,9 +22,9 @@ Draft
 | Jest | 표준, 풍부한 도구 | Vite와 별도 설정 | |
 | Vitest + Testing Library | React 컴포넌트 테스트 | 게임 캔버스 한계 | |
 
-## 결정 (제안)
+## 결정
 
-**Vitest** (Phase 4~6)
+**Vitest + Playwright** (Phase 4~7)
 
 - 단위 테스트: 입력 핸들러, 격파 로직, 미션 평가
 - 통합 테스트: 스테이지 진행 (헤드리스)
@@ -59,6 +59,5 @@ Draft
 
 ## 다음 단계
 
-- 사용자 결정 대기
-- 결정 후 `prototype/tests/` 셋업
-- 핵심 핸들러 테스트 우선 작성
+- ✅ `prototype/tests/` Vitest 셋업 완료
+- ✅ 673개 테스트 작성 및 통과

@@ -1,7 +1,7 @@
 /**
  * Canvas Renderer
  *
- * ADR-0004 (Draft): Canvas 2D 렌더링.
+ * ADR-0004: Canvas 2D 렌더링.
  * 자세한 내용: ../../../decisions/0004-rendering.md
  */
 
@@ -53,6 +53,18 @@ export class Renderer {
   private keyboard: Keyboard | null = null;
 
   constructor(canvas: HTMLCanvasElement) {
+    const ctx = canvas.getContext('2d');
+    if (!ctx) throw new Error('Failed to get 2D context');
+    this.ctx = ctx;
+    this.width = canvas.width;
+    this.height = canvas.height;
+  }
+
+  isCanvasValid(canvas: HTMLCanvasElement): boolean {
+    return this.ctx.canvas === canvas && canvas.isConnected && canvas.width > 0 && canvas.height > 0;
+  }
+
+  recreateFrom(canvas: HTMLCanvasElement): void {
     const ctx = canvas.getContext('2d');
     if (!ctx) throw new Error('Failed to get 2D context');
     this.ctx = ctx;

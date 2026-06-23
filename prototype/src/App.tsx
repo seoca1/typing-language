@@ -173,6 +173,13 @@ export function App() {
     const canvas = canvasRef.current;
     if (!canvas || !canvas.getContext) return;
 
+    // Guard: ensure canvas is still in the DOM and has valid dimensions
+    // Prevents blank screen after StageScreen remounts from menu→stage transitions
+    if (!canvas.isConnected || canvas.width === 0 || canvas.height === 0) {
+      console.warn('[App] Canvas not ready yet, skipping renderer init');
+      return;
+    }
+
     // Always create a fresh renderer when entering stage phase
     // This prevents state corruption from multiple menu ↔ game transitions
     console.log('[App] Creating new Renderer for stage phase');
@@ -203,15 +210,30 @@ export function App() {
         return;
       }
 
+      const canvas = canvasRef.current;
+      if (!canvas || !canvas.isConnected || canvas.width === 0 || canvas.height === 0) {
+        return;
+      }
+
+      const r = rendererRef.current;
+      if (!r.isCanvasValid(canvas)) {
+        console.warn('[App] Renderer context invalid, recreating');
+        try {
+          r.recreateFrom(canvas);
+        } catch (err) {
+          console.error('[App] Failed to recreate renderer:', err);
+          rendererRef.current = null;
+          return;
+        }
+      }
+
       const now = performance.now();
       const dt = lastTickRef.current === 0 ? 16 : now - lastTickRef.current;
       lastTickRef.current = now;
 
       updateEffects(effectsRef.current, dt);
 
-      if (rendererRef.current) {
-        maybeSpawnAmbient(effectsRef.current, rendererRef.current.width, rendererRef.current.height);
-      }
+      maybeSpawnAmbient(effectsRef.current, r.width, r.height);
 
       const enemy = s.currentEnemy;
       const ch = characterRef.current;
@@ -233,7 +255,7 @@ export function App() {
       }
 
       try {
-        renderer.render({
+        r.render({
           currentEnemy: enemy,
           buffer: s.buffer,
           score: s.score,

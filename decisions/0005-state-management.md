@@ -2,7 +2,7 @@
 
 ## 상태
 
-Draft
+**Accepted** (2026-06-24)
 
 ## 컨텍스트
 
@@ -24,7 +24,7 @@ Draft
 | Jotai / Recoil | atomic state, React 친화 | 작은 프로젝트엔 과함 | |
 | XState | 상태 머신, FSM | 격파 게임엔 과함 | |
 
-## 결정 (제안)
+## 결정
 
 **React state (useReducer) + Context (필요시)**
 
@@ -61,5 +61,4 @@ Draft
 
 ## 다음 단계
 
-- 사용자 결정 대기
-- 결정 후 `prototype/src/state/` 구현
+- ✅ `prototype/src/state/gameReducer.ts` 구현 완료
