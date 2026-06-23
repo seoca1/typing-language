@@ -43,6 +43,9 @@ import {
   spawnColorShower,
   spawnFlash,
   spawnHitBurst,
+  spawnKeystrokeSpark,
+  spawnComboMilestone,
+  spawnRing,
   spawnPopup,
   triggerShake,
   updateEffects,
@@ -618,7 +621,9 @@ export function App() {
         setTimeout(() => spawnPopup(fx, cx, cy + 20, 'PERFECT!', '#00ff88', 38), 80);
       } else if (newCombo >= 5) {
         audio.play('combo');
-        setTimeout(() => spawnPopup(fx, cx, cy + 20, 'COMBO!', '#ff6b9d', 32), 80);
+        spawnComboMilestone(fx, cx, cy, newCombo, accents);
+        spawnRing(fx, cx, cy, accents[0], newCombo >= 10 ? 250 : 180);
+        setTimeout(() => spawnPopup(fx, cx, cy + 20, newCombo >= 15 ? `${newCombo} MEGA COMBO!` : newCombo >= 10 ? `${newCombo} SUPER COMBO!` : 'COMBO!', '#ff6b9d', 32), 80);
       } else {
         audio.play('enemy-defeat');
       }
@@ -682,6 +687,8 @@ export function App() {
 
         spawnPopup(fx, cx, cy + 60, `STAGE CLEAR!`, '#00d9ff', 56);
         spawnColorShower(fx, cx, cy + 60, accents, 80);
+        spawnRing(fx, cx, cy + 60, '#00d9ff', 300);
+        triggerShake(fx, 12, 250);
 
         applyStageCleared(characterRef.current, performance.now());
       }
@@ -737,6 +744,9 @@ export function App() {
     const enemy = state.currentEnemy;
     if (enemy && result.buffer.length > 0) {
       applyCorrectKeystroke(characterRef.current, performance.now());
+      const langColors = getLanguageAccent(stage.language);
+      const sparkColor = langColors[Math.floor(Math.random() * langColors.length)];
+      spawnKeystrokeSpark(effectsRef.current, CANVAS_W / 2, 290, sparkColor);
     }
     if (result.completed) {
       handleWordComplete(char, mockEvent);

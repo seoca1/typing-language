@@ -99,64 +99,6 @@ export function createEffectsState(): EffectsState {
   };
 }
 
-export function updateEffects(state: EffectsState, dt: number): void {
-  const dtSec = dt / 1000;
-
-  for (let i = state.particles.length - 1; i >= 0; i--) {
-    const p = state.particles[i];
-    p.x += p.vx * dtSec;
-    p.y += p.vy * dtSec;
-    p.vy += 600 * dtSec;
-    p.rotation += p.rotationSpeed * dtSec;
-    p.life -= dt;
-    if (p.life <= 0) state.particles.splice(i, 1);
-  }
-
-  for (let i = state.floatingTexts.length - 1; i >= 0; i--) {
-    const t = state.floatingTexts[i];
-    t.x += t.vx * dtSec;
-    t.y += t.vy * dtSec;
-    t.vy *= 0.96;
-    t.life -= dt;
-    if (t.life <= 0) state.floatingTexts.splice(i, 1);
-  }
-
-  for (let i = state.floatingWords.length - 1; i >= 0; i--) {
-    const w = state.floatingWords[i];
-    w.x += w.vx * dtSec;
-    w.y += w.vy * dtSec;
-    w.vy *= 0.92;
-    w.vx *= 0.96;
-    w.rotation += 60 * dtSec;
-    w.life -= dt;
-    if (w.life <= 0) state.floatingWords.splice(i, 1);
-  }
-
-  if (state.sentencePreview) {
-    state.sentencePreview.life -= dt;
-    if (state.sentencePreview.life <= 0) {
-      state.sentencePreview = null;
-    }
-  }
-
-  if (state.flash) {
-    state.flash.life -= dt;
-    if (state.flash.life <= 0) state.flash = null;
-  }
-
-  if (state.shake) {
-    state.shake.elapsed += dt;
-    const decay = 1 - state.shake.elapsed / state.shake.duration;
-    if (decay <= 0) {
-      state.shake = null;
-    } else {
-      const current = state.shake.intensity * decay;
-      state.shake.offsetX = (Math.random() - 0.5) * current * 2;
-      state.shake.offsetY = (Math.random() - 0.5) * current * 2;
-    }
-  }
-}
-
 export function spawnHitBurst(state: EffectsState, x: number, y: number, color: string, count = 24): void {
   for (let i = 0; i < count; i++) {
     const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.3;
@@ -380,5 +322,159 @@ export function getLanguageAccent(language: Language): string[] {
       return ['#ffb6c1', '#5b9bd5', '#ffd700'];
     default:
       return ['#ffffff'];
+  }
+}
+
+/**
+ * Small spark effect on each correct keystroke
+ * Creates a tiny burst of particles at the input position
+ */
+export function spawnKeystrokeSpark(state: EffectsState, x: number, y: number, color: string): void {
+  const count = 6;
+  for (let i = 0; i < count; i++) {
+    const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
+    const speed = 60 + Math.random() * 80;
+    state.particles.push({
+      x,
+      y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 30,
+      life: 300 + Math.random() * 200,
+      maxLife: 500,
+      color,
+      size: 2 + Math.random() * 2,
+      rotation: 0,
+      rotationSpeed: (Math.random() - 0.5) * 8,
+      shape: 'circle',
+    });
+  }
+}
+
+/**
+ * Combo milestone effect - special burst for 5, 10, 15+ combos
+ */
+export function spawnComboMilestone(state: EffectsState, x: number, y: number, combo: number, colors: string[]): void {
+  const isHighCombo = combo >= 10;
+  const isMegaCombo = combo >= 15;
+  const count = isMegaCombo ? 60 : isHighCombo ? 40 : 25;
+  const baseSpeed = isMegaCombo ? 350 : isHighCombo ? 280 : 200;
+
+  for (let i = 0; i < count; i++) {
+    const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.2;
+    const speed = baseSpeed + Math.random() * 150;
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    state.particles.push({
+      x,
+      y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - (isHighCombo ? 150 : 80),
+      life: 800 + Math.random() * 600,
+      maxLife: 1400,
+      color,
+      size: isMegaCombo ? 6 + Math.random() * 4 : 4 + Math.random() * 3,
+      rotation: 0,
+      rotationSpeed: (Math.random() - 0.5) * 12,
+      shape: isHighCombo ? 'star' : (i % 3 === 0 ? 'star' : 'circle'),
+    });
+  }
+
+  if (isHighCombo) {
+    triggerShake(state, isMegaCombo ? 15 : 10, isMegaCombo ? 300 : 220);
+    spawnFlash(state, colors[0], isMegaCombo ? 0.5 : 0.35, isMegaCombo ? 200 : 150);
+  }
+}
+
+/**
+ * Expanding ring effect - used for combo milestones and stage clear
+ */
+export interface Ring {
+  x: number;
+  y: number;
+  radius: number;
+  maxRadius: number;
+  color: string;
+  life: number;
+  maxLife: number;
+  lineWidth: number;
+}
+
+export function spawnRing(state: EffectsState, x: number, y: number, color: string, maxRadius = 200): void {
+  (state as any).rings = (state as any).rings || [];
+  (state as any).rings.push({
+    x,
+    y,
+    radius: 10,
+    maxRadius,
+    color,
+    life: 500,
+    maxLife: 500,
+    lineWidth: 3,
+  });
+}
+
+export function updateEffects(state: EffectsState, dt: number): void {
+  const dtSec = dt / 1000;
+
+  for (let i = state.particles.length - 1; i >= 0; i--) {
+    const p = state.particles[i];
+    p.x += p.vx * dtSec;
+    p.y += p.vy * dtSec;
+    p.vy += 600 * dtSec;
+    p.rotation += p.rotationSpeed * dtSec;
+    p.life -= dt;
+    if (p.life <= 0) state.particles.splice(i, 1);
+  }
+
+  for (let i = state.floatingTexts.length - 1; i >= 0; i--) {
+    const t = state.floatingTexts[i];
+    t.x += t.vx * dtSec;
+    t.y += t.vy * dtSec;
+    t.vy *= 0.96;
+    t.life -= dt;
+    if (t.life <= 0) state.floatingTexts.splice(i, 1);
+  }
+
+  for (let i = state.floatingWords.length - 1; i >= 0; i--) {
+    const w = state.floatingWords[i];
+    w.x += w.vx * dtSec;
+    w.y += w.vy * dtSec;
+    w.vy *= 0.92;
+    w.vx *= 0.96;
+    w.rotation += 60 * dtSec;
+    w.life -= dt;
+    if (w.life <= 0) state.floatingWords.splice(i, 1);
+  }
+
+  if (state.sentencePreview) {
+    state.sentencePreview.life -= dt;
+    if (state.sentencePreview.life <= 0) {
+      state.sentencePreview = null;
+    }
+  }
+
+  if (state.flash) {
+    state.flash.life -= dt;
+    if (state.flash.life <= 0) state.flash = null;
+  }
+
+  if (state.shake) {
+    state.shake.elapsed += dt;
+    const decay = 1 - state.shake.elapsed / state.shake.duration;
+    if (decay <= 0) {
+      state.shake = null;
+    } else {
+      const current = state.shake.intensity * decay;
+      state.shake.offsetX = (Math.random() - 0.5) * current * 2;
+      state.shake.offsetY = (Math.random() - 0.5) * current * 2;
+    }
+  }
+
+  const rings: Ring[] = (state as any).rings || [];
+  for (let i = rings.length - 1; i >= 0; i--) {
+    const ring = rings[i];
+    ring.life -= dt;
+    ring.radius += (ring.maxRadius - ring.radius) * 0.15;
+    ring.lineWidth *= 0.97;
+    if (ring.life <= 0) rings.splice(i, 1);
   }
 }

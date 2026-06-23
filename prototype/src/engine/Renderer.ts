@@ -82,6 +82,7 @@ export class Renderer {
     this.drawComboMeter(state);
     this.drawKeyboardSection(state);
     this.drawParticles(state.effects);
+    this.drawRings(state.effects);
     this.drawFloatingTexts(state.effects);
     this.drawSentencePreview(state.effects);
     this.drawFloatingWords(state.effects);
@@ -588,6 +589,26 @@ export class Renderer {
       } else {
         this.drawStar(0, 0, p.size * 1.6, p.size * 0.7, 5);
       }
+      this.ctx.restore();
+    }
+  }
+
+  private drawRings(effects: EffectsState): void {
+    const rings: Array<{
+      x: number; y: number; radius: number; color: string;
+      life: number; maxLife: number; lineWidth: number;
+    }> = (effects as any).rings || [];
+    for (const ring of rings) {
+      const alpha = Math.max(0, ring.life / ring.maxLife) * 0.8;
+      this.ctx.save();
+      this.ctx.globalAlpha = alpha;
+      this.ctx.strokeStyle = ring.color;
+      this.ctx.lineWidth = ring.lineWidth;
+      this.ctx.shadowColor = ring.color;
+      this.ctx.shadowBlur = 15;
+      this.ctx.beginPath();
+      this.ctx.arc(ring.x, ring.y, ring.radius, 0, Math.PI * 2);
+      this.ctx.stroke();
       this.ctx.restore();
     }
   }
