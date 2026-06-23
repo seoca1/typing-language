@@ -198,6 +198,11 @@ export function App() {
 
     let rafId: number;
     const tick = () => {
+      const s = stateRef.current;
+      if (s.phase !== 'stage' || !rendererRef.current) {
+        return;
+      }
+
       const now = performance.now();
       const dt = lastTickRef.current === 0 ? 16 : now - lastTickRef.current;
       lastTickRef.current = now;
@@ -208,7 +213,6 @@ export function App() {
         maybeSpawnAmbient(effectsRef.current, rendererRef.current.width, rendererRef.current.height);
       }
 
-      const s = stateRef.current;
       const enemy = s.currentEnemy;
       const ch = characterRef.current;
       tickPose(ch, now);
