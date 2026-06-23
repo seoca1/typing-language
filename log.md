@@ -2016,3 +2016,39 @@ python3 -m http.server 8766
 - Build: 909 KB (gzip 272 KB)
 - Tests: 674 passed, 1 skipped (1 test updated to reflect corpus fix)
 - dashboard data regenerated: 47 raw sources (was 40)
+
+### [2026-06-23] fix | ImageLoader — 캐릭터 이미지 게임 화면에서 안보이는 문제修正
+
+**문제:**
+- 캐릭터 선택화면에서는 이미지가 정상 표시
+- 게임 화면(StageScreen Canvas)에서는 이미지가 안보임
+- Console 오류: `GET /typing-language/typing-language/characters/... 404`
+
+**근본 원인:**
+1. `pathname.startsWith('/typing-language/')` — GitHub Pages 경로가 `/typing-language` (trailing slash 없음)일 때 실패 → base를 `/`로 잘못 판단
+2. `config.src`가 이미 `/typing-language/` prefix를 포함하는데 ImageLoader가 base를 다시 앞에 붙임 → `/typing-language/typing-language/...`
+
+**수정 파일:** `prototype/src/sprites/ImageLoader.ts`
+
+```typescript
+// Before: base doubling when config.src already has /typing-language/
+const base = pathname.startsWith('/typing-language/') ? '/typing-language/' : '/';
+const cleanSrc = config.src.startsWith('/') ? config.src.slice(1) : config.src;
+finalUrl = base + cleanSrc;
+
+// After: detect base correctly + avoid double prefix
+const base = pathname.startsWith('/typing-language') ? '/typing-language/' : '/';
+finalUrl = config.src.startsWith(base) ? config.src : base + config.src;
+```
+
+**커밋:**
+```
+7e517ad — fix: prevent double base path prefix in ImageLoader URL construction
+d8709cd — fix: ImageLoader path detection for GitHub Pages without trailing slash
+```
+
+**결과:**
+- Build: 909 KB (gzip 272 KB) — index-UsbrxN5A.js
+- Tests: 673 passed, 1 failed (pre-existing EffectsSystem), 1 skipped
+- GitHub Pages 배포 진행 중 (push 후 GitHub Actions 자동 빌드)
+

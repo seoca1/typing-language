@@ -78,19 +78,38 @@ localStorage 자체의 문제는 없음 (테스트 통과 확인). 다만 localS
 
 ---
 
-## ✅ Fixed Issues (해결됨)
+### Issue #5: 캐릭터 이미지 — 선택화면可见但游戏画面不可见
 
-### Issue #2: 캐릭터 테스트 화면 - 이미지 위치 문제
+**상태:** ✅ Fixed (pending GitHub Pages deploy verification)
+**우선순위:** Critical
+**발견일:** 2026-06-23
+**수정일:** 2026-06-23
+**커밋:** 7e517ad, d8709cd
 
-**상태:** ✅ Fixed  
-**발견일:** 2026-06-18  
-**해결일:** 2026-06-18
+#### **증상:**
+- 캐릭터 선택화면: 이미지 정상 표시
+- 게임 화면(Canvas): 이미지가 안보임
+- Console 오류: `GET /typing-language/typing-language/characters/... 404`
+
+#### **근본 원인:**
+`ImageLoader.ts` URL construction 중복 prefix 문제:
+1. `pathname.startsWith('/typing-language/')` — trailing slash 없을 때 실패
+2. `config.src`가 이미 `/typing-language/` prefix 포함 → base 재부여로 이중 prefix
 
 #### **해결책:**
-캐릭터 위치를 65%로 조정
 ```typescript
-cy = canvas.height * 0.65
+// Before: base doubling
+const base = pathname.startsWith('/typing-language/') ? '/typing-language/' : '/';
+const cleanSrc = config.src.startsWith('/') ? config.src.slice(1) : config.src;
+finalUrl = base + cleanSrc;  // → /typing-language/typing-language/...
+
+// After: prevent double prefix
+const base = pathname.startsWith('/typing-language') ? '/typing-language/' : '/';
+finalUrl = config.src.startsWith(base) ? config.src : base + config.src;
 ```
+
+#### **관련 파일:**
+- `prototype/src/sprites/ImageLoader.ts`
 
 ---
 
@@ -99,9 +118,9 @@ cy = canvas.height * 0.65
 **현재 상태:**
 - 🔴 Critical: 1개 (빈 화면 - 미확인)
 - 🟡 Medium: 2개 (spin 효과, 설정 저장)
-- ✅ Fixed: 1개
+- ✅ Fixed: 2개
 
-**해결률:** 25% (1/4)
+**해결률:** 50% (2/4)
 
 ---
 

@@ -1,6 +1,6 @@
 /**
  * Image Loader - External image loading system
- * 
+ *
  * Loads external images (anime characters, photos, etc.) for use as character sprites.
  * Supports PNG, JPG, WebP with transparent backgrounds.
  */
