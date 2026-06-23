@@ -258,6 +258,14 @@
       "path": "raw/Korean/food-vocabulary.md"
     },
     {
+      "name": "literature-passages",
+      "filename": "literature-passages.md",
+      "title": "문학 작품 발췌 모음 (Korean Literature Passages)",
+      "size_kb": 1.2,
+      "modified": "2026-06-23T16:01:06.554445",
+      "path": "raw/Korean/literature-passages.md"
+    },
+    {
       "name": "nature-vocabulary",
       "filename": "nature-vocabulary.md",
       "title": "Korean Nature & Weather Vocabulary",
@@ -282,7 +290,7 @@
       "path": "raw/Korean/travel-basics-kr.md"
     }
   ],
-  "raw_sources_count": 10,
+  "raw_sources_count": 11,
   "corpus": {
     "total": 78,
     "by_level": {
@@ -652,7 +660,7 @@
     "total_corpus": 78,
     "wiki_materials": 23,
     "sources": 11,
-    "raw_sources": 10,
+    "raw_sources": 11,
     "stages_by_tier": {
       "1": 3,
       "2": 5,
@@ -880,5 +888,5 @@
     ],
     "coverage_percent": 69.0
   },
-  "generated_at": "2026-06-23T15:21:27.042354"
+  "generated_at": "2026-06-23T16:06:03.106297"
 }

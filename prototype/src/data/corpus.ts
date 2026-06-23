@@ -607,6 +607,23 @@ export const EN_WORDS: WordEntry[] = [
   { id: 'en_p_006', display: 'Look before you leap', meanings: { en: 'Think carefully before taking action', ja: '七度転びて八度起き上がれ', ko: '뛰기 전에 두 번 보라' }, meaningLang: 'ko', level: 4, category: 'proverb' },
   { id: 'en_p_007', display: 'Better late than never', meanings: { en: 'Doing something late is better than not doing it at all', ja: '遅れても总比不做好', ko: '늦더라도 않는 것보다는 낫다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
   { id: 'en_p_008', display: 'When in Rome, do as the Romans do', meanings: { en: 'Adapt to the customs and practices of the place you are in', ja: '郷に応', ko: '로마에 있으면 로마인처럼하라' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+
+  // Quotes (Movie Quotes) — Tier 4
+  { id: 'en_q_001', display: 'There is no spoon.', meanings: { en: 'A illusion can be bent but not broken', ja: ' spoonなどない', ko: '숟가락은 없다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_002', display: 'Wake up, Neo.', meanings: { en: 'Time to face reality', ja: '目が覚めろ、ネオ', ko: '일어나, 네오' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_003', display: 'May the Force be with you.', meanings: { en: 'Goodbye and good luck', ja: 'フォースと共にあるように', ko: '포스가 함께하길' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_004', display: 'I have a bad feeling about this.', meanings: { en: 'Sense of impending danger', ja: '嫌な予感がする', ko: '不好的 느낌이 든다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_005', display: 'Here is looking at you, kid.', meanings: { en: 'Farewell and affection', ja: 'さらばだ、我が子よ', ko: '이별의 인사' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_006', display: 'You had me at hello.', meanings: { en: 'Love at first sight', ja: 'こんにちはで心臓を射抜いた', ko: '인사だけで 마음 을 훔쳤다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_007', display: 'You are about to die, Mr. Chen.', meanings: { en: 'Threat or warning', ja: '死ぬぞ、陈さん', ko: '죽을 것이다, 천씨' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_008', display: 'I will be back.', meanings: { en: 'Promise to return', ja: '必ず戻る', ko: '꼭 돌아오겠다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_009', display: 'All those moments will be lost in time.', meanings: { en: 'Regret about fleeting experiences', ja: 'あの瞬間たちは失われる', ko: '그 순간들은 다 사라질 것이다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'en_q_010', display: 'With great power comes great responsibility.', meanings: { en: 'Spider-Man principle', ja: '大きな力には大きな責任が伴う', ko: '큰 힘에는 큰 책임이 따른다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+
+  // Passages (Literature) — Tier 5
+  { id: 'en_pa_001', display: 'The sky above the port was the color of television, tuned to a dead channel.', meanings: { en: 'Opening line of Neuromancer', ja: '港の上の空はテレビの色をしていた', ko: '항구 위의 하늘은 텔레비전 색이었다' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'en_pa_002', display: 'It is a truth universally acknowledged, that a single man in possession of a good fortune.', meanings: { en: 'Opening line of Pride and Prejudice', ja: '부유한 남자는 반드시 아내가 필요한 것은 보편적 진리다', ko: '부유한 남성은 반드시 아내가 필요한 것은 보편적 진리다' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'en_pa_003', display: 'He was an old man who fished alone in a skiff in the Gulf Stream.', meanings: { en: 'Opening of The Old Man and the Sea', ja: '그는 걸프 스트림에서 혼자 보트를 타고 낚시하는 노인이었다', ko: '그는 걸프 스트림에서 혼자 배를 타고 낚시하는 노인이었다' }, meaningLang: 'ko', level: 5, category: 'passage' },
 ];
 
 // ===== JP (Japanese) =====
@@ -1021,6 +1038,30 @@ export const JP_WORDS: WordEntry[] = [
   { id: 'jp_p_004', display: '花より団子', romaji: 'hana yori dango', meanings: { en: 'Dumplings over flowers', ko: '꽃보다 떡' }, meaningLang: 'ko', level: 4, category: 'proverb' },
   { id: 'jp_p_005', display: '雨降って地固まる', romaji: 'ame futte chi ga katamaru', meanings: { en: 'After the rain, the ground becomes firm', ko: '비가 오고 나면 땅이 단단해진다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
   { id: 'jp_p_006', display: '痘痕も笑窪', romaji: 'abata mo ekubo', meanings: { en: 'Even a pockmark laughs at dimples', ko: '먹물도 아홉 색이다' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+
+  // Quotes (アニメ・ドラマ) — Tier 4
+  { id: 'jp_q_001', display: '俺は調子に乗るタイプだからな', romaji: 'ore wa chō ni noru taipu dakara na', meanings: { en: 'I am the type to get carried away', ko: '나는 흥분하는 타입이거든' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'jp_q_002', display: '心が燃えている限り、人は強い', romaji: 'kokoro ga moeteiru kagiri, hito wa tsuyoi', meanings: { en: 'As long as your heart is burning, you are strong', ko: '마음이 타오르는 한 사람은 강하다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'jp_q_003', display: '弱い者、助けるのが強ぇって事だ', romaji: 'yowai mono, tasukeru no ga tsuyoe tte koto da', meanings: { en: 'Helping the weak is what makes you strong', ko: '약한 자를 돕는 것이 강함이다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'jp_q_004', display: '一は全、全は一', romaji: 'ichi wa zen, zen wa ichi', meanings: { en: 'One is all, all is one', ko: '일은 전, 전은 일' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'jp_q_005', display: '取返す。全部取り返してやる', romaji: 'torikaesu. zenbu torikaeshite yaru', meanings: { en: 'I will take it all back', ko: '다시 되찾겠다. 전부 다' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'jp_q_006', display: 'Plus Ultra', romaji: 'purasu urutora', meanings: { en: 'Go beyond limits', ko: '한계를超えて' }, meaningLang: 'ko', level: 4, category: 'quote' },
+  { id: 'jp_q_007', display: 'やられたら、やり返す。加倍にだ', romaji: 'yarareta ra, yarikaesu. baika ni da', meanings: { en: 'If you get hit, hit back. Double', ko: '때렸으면 되받아쳐. 배로' }, meaningLang: 'ko', level: 4, category: 'quote' },
+
+  // Business Email — Tier 4
+  { id: 'jp_b_001', display: 'お世話になっております', romaji: 'osewa ni natte orimasu', meanings: { en: 'Thank you for your continued support', ko: '늘 도움을 받고 있습니다' }, meaningLang: 'ko', level: 4, category: 'business' },
+  { id: 'jp_b_002', display: '突然のご連絡失礼いたします', romaji: 'totsuzen no renraku shitsurei itashimasu', meanings: { en: 'I apologize for contacting you without notice', ko: '갑자기 연락 드려 죄송합니다' }, meaningLang: 'ko', level: 4, category: 'business' },
+  { id: 'jp_b_003', display: 'お時間いただけますでしょうか', romaji: 'ojikan wo itadakemasu deshō ka', meanings: { en: 'Would you have time for me?', ko: '시간 가능하신가요' }, meaningLang: 'ko', level: 4, category: 'business' },
+  { id: 'jp_b_004', display: 'ご確認いただけますでしょうか', romaji: 'gokakunin itadakemasu deshō ka', meanings: { en: 'Could you please confirm?', ko: '확인해 주시겠어요?' }, meaningLang: 'ko', level: 4, category: 'business' },
+  { id: 'jp_b_005', display: 'お忙しいところ恐れ入りますが', romaji: 'oisogii tokoro orei irimasu ga', meanings: { en: 'I apologize for disturbing you while you are busy', ko: '바쁘신 중에 죄송합니다만' }, meaningLang: 'ko', level: 4, category: 'business' },
+  { id: 'jp_b_006', display: 'ご確認のほどよろしくお願いいたします', romaji: 'gokakunin no hodo yoroshiku onegaishimasu', meanings: { en: 'Please confirm at your convenience', ko: '확인 부탁드립니다' }, meaningLang: 'ko', level: 4, category: 'business' },
+  { id: 'jp_b_007', display: 'ご迷惑をおかけし申し訳ございません', romaji: 'gowmeiwaku wo okakeshi moushiwake arimasen', meanings: { en: 'I sincerely apologize for the inconvenience', ko: '불편을 드려 정말 죄송합니다' }, meaningLang: 'ko', level: 4, category: 'business' },
+  { id: 'jp_b_008', display: 'ご承認いただけましたら幸甚です', romaji: 'gosyōnin itadakemashitara kōjin desu', meanings: { en: 'I would be honored if you could approve', ko: '승인하시면 영광입니다' }, meaningLang: 'ko', level: 4, category: 'business' },
+
+  // Passages (Literature) — Tier 5
+  { id: 'jp_pa_001', display: '気分はわるかった。下を向いて腹が立った。友達が五人いた。', romaji: 'kibun wa warukatta. shita wo muite hara ga tatta. tomodachi ga gonin ita.', meanings: { en: 'I felt bad. I looked down and got angry. There were five friends.', ko: '기분이 나빴다. 아래를 보고 화가 났다. 친구가 다섯 명 있었다.' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'jp_pa_002', display: 'メロスは激怒した。必ずかの邪智暴虐の王を除かなければならぬと決意した。', romaji: 'merosu wa gekido shita. kanarazu ka no jachi bōgyaku no ō wo noinakereba naranu to ketsui shita.', meanings: { en: 'Meros was furious. He was determined to overthrow the wicked tyrant king.', ko: '메로스는 분노했다. 반드시 포악한 왕을 물리치겠다고 결심했다.' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'jp_pa_003', display: '国境の長いトンネルを抜けると雪国であった。夜の底が白くなった。', romaji: 'kokkyō no nagai tonneru wo nukeru to yukiguni de atta. yoru no soko ga shiroku natta.', meanings: { en: 'Passing through the long tunnel, we reached the snow country. The bottom of the night turned white.', ko: '긴 터널을 지나니 눈 나라였다. 밤의 바닥이 하얗게 됐다.' }, meaningLang: 'ko', level: 5, category: 'passage' },
 ];
 
 // ===== ES (Spanish) =====
@@ -1452,6 +1493,12 @@ export const ES_WORDS: WordEntry[] = [
   { id: 'es_p_006', display: 'El que mucho abarca, poco aprieta', meanings: { en: 'Don\'t bite off more than you can chew', ja: '欲張り', ko: '욕심이 많으면 다 잡지 못한다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
   { id: 'es_p_007', display: 'A quien madruga, Dios le ayuda', meanings: { en: 'God helps those who help themselves', ja: '自助努力', ko: '일찍 일어나는 사람에게 신이 도움준다' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
   { id: 'es_p_008', display: 'Zapatero a tus zapatos', meanings: { en: 'Stick to your last', ja: '分장에専念', ko: '성형외과 의사는 자기 일에 집중해라' }, meaningLang: 'ko', level: 4, category: 'proverb', accentMode: 'any' },
+
+  // Passages (Literature) — Tier 5
+  { id: 'es_pa_001', display: 'En un lugar de la mancha, de cuyo nombre no quiero acordarme', meanings: { en: 'In a village of La Mancha, whose name I do not wish to recall', ja: 'ラ・マンチャの、ある村のことで、そこは思い出したくない', ko: '라 만차의 어느 마을에서, 그 이름은思い出したくない' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any' },
+  { id: 'es_pa_002', display: 'Muchos años después, frente al pelotón de fusilamiento', meanings: { en: 'Many years later, facing the firing squad', ja: '何年も後、銃殺隊の前で', ko: '수년 후, 총살대 앞에 서서' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any' },
+  { id: 'es_pa_003', display: 'La familia es como el fuego. Escalar o fría, pero siempre te quema', meanings: { en: 'Family is like fire. Whether warming or cold, it always burns you', ja: '家は火のようなもの。温かくても冷たくても、常に燃やす', ko: '가정은 화약과 같다. 뜨겁든 차갑든 항상 데운다' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any' },
+  { id: 'es_pa_004', display: 'El amor es el fuego más intenso que arde sin piedad', meanings: { en: 'Love is the most intense fire that burns mercilessly', ja: '愛は容赦なく燃える最も激しい火だ', ko: '사랑은 깨끗하게 타오르는 가장 격렬한 불꽃이다' }, meaningLang: 'ko', level: 5, category: 'passage', accentMode: 'any' },
 ];
 
 export const KR_WORDS: WordEntry[] = [
@@ -1860,6 +1907,11 @@ export const KR_WORDS: WordEntry[] = [
   { id: 'kr_p_003', display: '물은源头부터 흐른다', jamo: 'ㅁㅜㄹ ㅇㅡㄴ ㅇㅝㄴㅌㅐ ㅂㅜㅌㅗ ㄱㅡㄹㅡㄴㄷㅏ', meanings: { en: 'Water flows from its source', ja: '雨降って地固まる' }, meaningLang: 'ko', level: 4, category: 'proverb' },
   { id: 'kr_p_004', display: '소와 돼지도 사이좋게 살다', jamo: 'ㅅㅗ ㅇㅘ ㄷㅚㅈㅣ ㄷㅗ ㅅㅏㅇㅣ ㅈㅗㅇㅔ ㄷㅏ ㄴㅏㄹㄷㅏ', meanings: { en: 'Even cows and pigs live in harmony', ja: '犬猿の仲も一年' }, meaningLang: 'ko', level: 4, category: 'proverb' },
   { id: 'kr_p_005', display: '배고프면 투자름도能找到', jamo: 'ㅂㅐㄱㅗㅍㅜㅁㅕㄴ ㄱㅜ ㄷㅜㅇㅏ ㄹㅡㅁ ㄷㅗ ㅈㅜㅓㄹ ㄷㅐ', meanings: { en: 'When hungry enough, you\'ll find food even in grandma\'s sleeve', ja: '好きこそものの上手なれ' }, meaningLang: 'ko', level: 4, category: 'proverb' },
+
+  // Passages (Literature) — Tier 5
+  { id: 'kr_pa_001', display: '옛날 옛날에 한 사랑스런 처녀가 있었으니', jamo: 'ㅇㅕㄷㄴㅏㄹ ㅇㅕㄷㄴㅏㄹㅔ ㅎㅏㄴ ㅅㅏㄹㅏㅇㅅㅡㄹㄴ ㅊㅓㄴㅕㄱㅏ ㅇㅣㅅㅜㅇㅡㄴㄷㅏ', meanings: { en: 'Long ago, there was a lovely maiden', ja: '昔々、美しい娘がいました', ko: '옛날 옛날에 아름다운 처녀가 있었으니' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'kr_pa_002', display: '오늘도 평범한 하루였다', jamo: 'ㅇㅛㄹ ㅈㅗ ㅍㅖㅂㅏㄴㅎㅏㄴ ㅎㅏㄹㅜㅇㅓㄷㅏ', meanings: { en: 'Today was also an ordinary day', ja: '今日も平凡な一日だった', ko: '오늘도 평범한 하루였다' }, meaningLang: 'ko', level: 5, category: 'passage' },
+  { id: 'kr_pa_003', display: '봄날이 따뜻하고 꽃이 활짝 핀 때', jamo: 'ㅂㅗㅁㄴㅏㄹㅇㅣ ㄸㅏㅆㅡㄷㅎㅏㄴㄷㅗ ㄲㅗㅊㅣ ㅎㅘㄹㅉㅣㄱ ㅍㅣㄴ ㄸㅡ', meanings: { en: 'When spring days are warm and flowers are in full bloom', ja: '春の日は暖かく、花が満開のとき', ko: '봄날이 따뜻하고 꽃이 활짝 핀 때' }, meaningLang: 'ko', level: 5, category: 'passage' },
 ];
 
 export const KR_SENTENCES: WordEntry[] = [

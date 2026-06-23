@@ -1966,6 +1966,10 @@ const AVAILABLE_CORPUS = new Set([
   'hiragana_yoon',
   'sentences',  // Tier 3: Short sentences (EN/JP/ES/KR 각 8+ 문장 추가됨)
   'news',       // Tier 4: News headlines (Phase K — 12 entries per language)
+  'proverbs',   // Tier 4: Refranes / ことわざ / 속담 / proverbs
+  'quotes',     // Tier 4: Movie quotes / Anime & drama quotes
+  'business',   // Tier 4: Business email phrases (JP)
+  'passages',   // Tier 5: Literature excerpts
 ]);
 
 export const SAMPLE_STAGES: StageConfig[] = ALL_STAGE_SPECS

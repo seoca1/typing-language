@@ -1976,3 +1976,43 @@ cd Game/typing_language
 python3 -m http.server 8766
 # http://localhost:8766/dashboard/index.html
 ```
+
+---
+
+### [2026-06-23] corpus-expand | quotes/business/passages 코퍼스 추가 — 잠긴 스테이지 全解除
+
+**코퍼스 확장:**
+- `AVAILABLE_CORPUS`에 `quotes`, `business`, `passages` 추가
+- EN quotes: 10개 영화 명언 (en_q_001–en_q_010)
+- JP quotes: 7개 애니메이션/드라마 명언 (jp_q_001–jp_q_007)
+- JP business: 8개 비즈니스 이메일 표현 (jp_b_001–jp_b_008)
+- EN passages: 3개 문학 발췌 (en_pa_001–en_pa_003)
+- JP passages: 3개 문학 발췌 (jp_pa_001–jp_pa_003)
+- ES passages: 4개 문학 발췌 (es_pa_001–es_pa_004)
+- KR passages: 3개 문학 발췌 (kr_pa_001–kr_pa_003)
+
+**Raw 소스 추가:**
+- `Language/raw/English/movie-quotes.md` — 영화 명언 소스
+- `Language/raw/Japanese/anime-drama-quotes.md` — 애니메이션/드라마 명언 소스
+- `Language/raw/Japanese/business-email.md` — 비즈니스 이메일 표현 소스
+- `Language/raw/English/literature-passages.md` — 영어 문학 발췌 소스
+- `Language/raw/Japanese/literature-passages.md` — 일본어 문학 발췌 소스
+- `Language/raw/Spanish/literature-passages.md` — 스페인어 문학 발췌 소스
+- `Language/raw/Korean/literature-passages.md` — 한국어 문학 발췌 소스
+
+**스테이지解锁:**
+| Stage | 이전 | 이후 |
+|-------|------|------|
+| en_4_2 Movie Quotes | locked | ✓ unlocked |
+| jp_3_2 アニメ・ドラマ | locked | ✓ unlocked |
+| jp_4_2 ビジネスメール | locked | ✓ unlocked |
+| en_5_1 Literature Excerpts | locked | ✓ unlocked |
+| jp_5_1 文学作品 | locked | ✓ unlocked |
+| es_5_1 Literatura | locked | ✓ unlocked |
+| kr_5_1 한국 문화 단락 | locked | ✓ unlocked |
+
+**결과:**
+- SAMPLE_STAGES: 133 → 140 (+7)
+- Build: 909 KB (gzip 272 KB)
+- Tests: 674 passed, 1 skipped (1 test updated to reflect corpus fix)
+- dashboard data regenerated: 47 raw sources (was 40)

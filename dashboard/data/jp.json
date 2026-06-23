@@ -178,6 +178,22 @@
       "path": "raw/Japanese/animals-vocabulary-jp.md"
     },
     {
+      "name": "anime-drama-quotes",
+      "filename": "anime-drama-quotes.md",
+      "title": "アニメ・ドラマ名言集 (Anime & Drama Quotes)",
+      "size_kb": 2.9,
+      "modified": "2026-06-23T15:57:49.862478",
+      "path": "raw/Japanese/anime-drama-quotes.md"
+    },
+    {
+      "name": "business-email",
+      "filename": "business-email.md",
+      "title": "ビジネスメール文例集 (Business Email Phrases)",
+      "size_kb": 47.2,
+      "modified": "2026-06-23T16:00:09.475413",
+      "path": "raw/Japanese/business-email.md"
+    },
+    {
       "name": "business-vocabulary-jp",
       "filename": "business-vocabulary-jp.md",
       "title": "Japanese Business Vocabulary",
@@ -226,6 +242,14 @@
       "path": "raw/Japanese/food-vocabulary-jp.md"
     },
     {
+      "name": "literature-passages",
+      "filename": "literature-passages.md",
+      "title": "文学作品段落集 (Japanese Literature Passages)",
+      "size_kb": 1.6,
+      "modified": "2026-06-23T16:01:17.718570",
+      "path": "raw/Japanese/literature-passages.md"
+    },
+    {
       "name": "nature-vocabulary-jp",
       "filename": "nature-vocabulary-jp.md",
       "title": "Japanese Nature & Weather Vocabulary",
@@ -242,7 +266,7 @@
       "path": "raw/Japanese/travel-basics-jp.md"
     }
   ],
-  "raw_sources_count": 9,
+  "raw_sources_count": 12,
   "corpus": {
     "total": 182,
     "by_level": {
@@ -643,7 +667,7 @@
     "total_corpus": 182,
     "wiki_materials": 19,
     "sources": 11,
-    "raw_sources": 9,
+    "raw_sources": 12,
     "stages_by_tier": {
       "0": 3,
       "1": 2,
@@ -885,5 +909,5 @@
     ],
     "coverage_percent": 107.7
   },
-  "generated_at": "2026-06-23T15:21:26.987492"
+  "generated_at": "2026-06-23T16:06:03.056333"
 }

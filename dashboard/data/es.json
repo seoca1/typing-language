@@ -531,6 +531,14 @@
       "path": "raw/Spanish/food-vocabulary-es.md"
     },
     {
+      "name": "literature-passages",
+      "filename": "literature-passages.md",
+      "title": "Pasajes Literarios — Español (Spanish Literature Passages)",
+      "size_kb": 2.2,
+      "modified": "2026-06-23T16:01:32.874101",
+      "path": "raw/Spanish/literature-passages.md"
+    },
+    {
       "name": "nature-vocabulary-es",
       "filename": "nature-vocabulary-es.md",
       "title": "Spanish Nature & Weather Vocabulary",
@@ -555,7 +563,7 @@
       "path": "raw/Spanish/notes-in-spanish-planes-de-verano.md"
     }
   ],
-  "raw_sources_count": 12,
+  "raw_sources_count": 13,
   "corpus": {
     "total": 155,
     "by_level": {
@@ -898,7 +906,7 @@
     "total_corpus": 155,
     "wiki_materials": 55,
     "sources": 10,
-    "raw_sources": 12,
+    "raw_sources": 13,
     "stages_by_tier": {
       "1": 2,
       "2": 5,
@@ -1098,5 +1106,5 @@
     ],
     "coverage_percent": 139.6
   },
-  "generated_at": "2026-06-23T15:21:27.020053"
+  "generated_at": "2026-06-23T16:06:03.087115"
 }

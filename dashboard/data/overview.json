@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T15:21:27.043177",
+  "generated_at": "2026-06-23T16:06:03.106959",
   "languages": [
     {
       "code": "en",
@@ -15,7 +15,7 @@
         "culture_wiki": 1,
         "sources_wiki": 13,
         "study_plan_wiki": 0,
-        "raw_sources": 9,
+        "raw_sources": 11,
         "coverage_percent": 128.6,
         "gaps": 2
       }
@@ -34,7 +34,7 @@
         "culture_wiki": 1,
         "sources_wiki": 11,
         "study_plan_wiki": 0,
-        "raw_sources": 9,
+        "raw_sources": 12,
         "coverage_percent": 107.7,
         "gaps": 3
       }
@@ -53,7 +53,7 @@
         "culture_wiki": 11,
         "sources_wiki": 10,
         "study_plan_wiki": 2,
-        "raw_sources": 12,
+        "raw_sources": 13,
         "coverage_percent": 139.6,
         "gaps": 3
       }
@@ -72,7 +72,7 @@
         "culture_wiki": 1,
         "sources_wiki": 11,
         "study_plan_wiki": 0,
-        "raw_sources": 10,
+        "raw_sources": 11,
         "coverage_percent": 69.0,
         "gaps": 5
       }
@@ -82,7 +82,7 @@
     "stages": 52,
     "corpus": 577,
     "wiki_materials": 123,
-    "raw_sources": 40,
+    "raw_sources": 47,
     "vocab_words": 0,
     "expressions": 62,
     "culture": 14

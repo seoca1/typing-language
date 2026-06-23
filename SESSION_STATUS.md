@@ -8,9 +8,9 @@
 ## 1. Build & Test Status
 
 ```
-Build:     ✓ 897 KB (gzip 265 KB)
-Tests:     ✓ 667 passed, 1 skipped
-SAMPLE_STAGES: 133 stages
+Build:     ✓ 909 KB (gzip 272 KB)
+Tests:     ✓ 674 passed, 1 skipped
+SAMPLE_STAGES: 140 stages (was 133, +7 newly unlocked)
 ```
 
 **Key commands:**
@@ -114,19 +114,21 @@ KR (12 stages):
 
 ---
 
-## 5. Locked Stages (Corpus Missing)
+## 5. Locked Stages — ALL UNLOCKED ✓
 
-| Stage | Language | Missing Corpus |
-|-------|----------|---------------|
-| en_4_2 | EN | `quotes` (Movie Quotes) |
-| jp_4_2 | JP | `business` (ビジネスメール) |
-| kr_4_2 | KR | None listed (only 1 T4 stage) |
-| en_5_1 | EN | `passages` (Literature Excerpts) |
-| jp_5_1 | JP | `passages` (文学作品) |
-| kr_5_1 | KR | `passages` (한국 문화 단락) |
-| es_5_1 | ES | `passages` (Literatura) |
+All previously locked stages are now unlocked by adding missing corpus types:
 
-**Note:** `en_4_2` shows "Movie Quotes" but requires `quotes` corpus which doesn't exist in `AVAILABLE_CORPUS`. The same for `passages` — all Tier 5 stages are locked until `passages` corpus is added.
+| Stage | Language | Corpus Added | Status |
+|-------|----------|-------------|--------|
+| en_4_2 | EN | `quotes` (10 movie quotes) | ✓ Unlocked |
+| jp_3_2 | JP | `quotes` (7 anime/drama quotes) | ✓ Unlocked |
+| jp_4_2 | JP | `business` (8 business email phrases) | ✓ Unlocked |
+| en_5_1 | EN | `passages` (3 literature excerpts) | ✓ Unlocked |
+| jp_5_1 | JP | `passages` (3 literature excerpts) | ✓ Unlocked |
+| es_5_1 | ES | `passages` (4 literature excerpts) | ✓ Unlocked |
+| kr_5_1 | KR | `passages` (3 literature excerpts) | ✓ Unlocked |
+
+**Result:** SAMPLE_STAGES increased from 133 → 140 stages
 
 ---
 
@@ -134,21 +136,16 @@ KR (12 stages):
 
 ```typescript
 AVAILABLE_CORPUS = new Set([
-  'chars',     // hiragana/katakana (T0)
-  'words',     // basic vocabulary (T1-T2)
-  'sentences', // short sentences (T3)
-  'news',      // news headlines (T4)
-  'travel',    // travel theme (T2-T3)
-  'food',      // food theme
-  'romance',   // dating/romance theme
-  'business',  // business email (jp_4_2 locked)
-  'quotes',    // movie quotes (en_4_2 locked)
-  'proverbs',  // ことわざ/속담/Refranes/proverbs (only es_4_2 unlocked)
-  'passages',  // literature excerpts (all T5 locked)
-  'clothing',  // clothing vocabulary
-  'emotion',   // emotion words
-  'animals',   // animal vocabulary
-  'nature',    // nature vocabulary
+  'hiragana_basic',
+  'katakana_basic',
+  'hiragana_dakuten',
+  'hiragana_yoon',
+  'sentences',   // Tier 3: Short sentences
+  'news',         // Tier 4: News headlines
+  'proverbs',     // Tier 4: Refranes / ことわざ / 속담
+  'quotes',       // Tier 4: Movie quotes / Anime & drama quotes (NEW)
+  'business',     // Tier 4: Business email phrases (JP) (NEW)
+  'passages',     // Tier 5: Literature excerpts (NEW)
 ])
 ```
 
@@ -200,6 +197,6 @@ python3 dashboard/generate_data.py
 ## 10. Next Steps
 
 1. **Issue #1 investigation** — Need live browser testing with DevTools to find root cause of blank screen
-2. **Unlock remaining proverb stages** — Add `quotes` corpus for en_4_2 (EN Movie Quotes)
-3. **Unlock Tier 5 stages** — Add `passages` corpus (Literature Excerpts) for all 4 languages
+2. **Wiki ingestion** — Create wiki pages for new corpus sources (movie-quotes, anime-drama-quotes, business-email, literature-passages)
+3. **Dashboard regeneration** — Run `generate_data.py` after wiki ingestion
 4. **Continue polish** — Any remaining visual bugs from known issues list
