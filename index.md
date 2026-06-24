@@ -17,7 +17,7 @@
 - [English (EN)](wiki/languages/english.md) - 입력 방식, 단어/문장 코퍼스
 - [Japanese (JP)](wiki/languages/japanese.md) - **로마자→한자 매핑** (ADR-0002)
 - [Spanish (ES)](wiki/languages/spanish.md) - **액센트 직접 입력 + ASCII 폴백** (ADR-0003)
-- [Korean (KR)](wiki/languages/korean.md) - **로마자→한글 매핑** (ADR-0009 Accepted)
+- [Korean (KR)](wiki/languages/korean.md) - **한글 키보드 자모 직접 입력** (ADR-0010 Accepted)
 - [Input Method Comparison](wiki/input-method-comparison.md) - 언어별 입력 방식 비교
 
 ## 코퍼스 (Corpus)
