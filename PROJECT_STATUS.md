@@ -1,14 +1,14 @@
 # Typing Language — 프로젝트 상태 리포트
 
 > **최종 업데이트**: 2026-06-24
-> **최종 커밋**: ADR 정리 + 빈 화면 버그 방어 코드
-> **버전**: Phase 7 완료 직전 — 140 스테이지, 674 테스트
+> **최종 커밋**: daily lesson culture pages + meta tags + SVG favicon
+> **버전**: Phase 7 — 140 스테이지, 674 테스트, daily lessons 45/45 culture 100%
 
 ---
 
 ## 1. 한 줄 요약
 
-4개국어(EN/JP/ES/KR) 타이핑 학습 게임, **GitHub Pages 자동 배포**. **674 tests passing** (1 skipped), **929 KB / gzip 274 KB**, **45 daily lessons**, **12명 캐릭터 (84 PNG)**, **410+ wiki 페이지**. Phase 7 완성 직전.
+4개국어(EN/JP/ES/KR) 타이핑 학습 게임, **GitHub Pages 자동 배포**. **674 tests passing** (1 skipped), **971 KB / gzip 298 KB**, **45 daily lessons (100% topic-appropriate culture)**, **12명 캐릭터 (84 PNG)**, **440+ wiki 페이지**. Phase 7 완성.
 
 ---
 
@@ -18,8 +18,8 @@
 |---|---|---|---|
 | **테스트** | 313 passed | **674 passed** | +361 (+115%) |
 | 테스트 파일 | 14 | **23** | +9 |
-| **번들 크기** | 463 KB | **929 KB** | +101% |
-| gzip 크기 | 137 KB | **274 KB** | +100% |
+| **번들 크기** | 463 KB | **971 KB** | +110% |
+| gzip 크기 | 137 KB | **298 KB** | +118% |
 | CSS | 21 KB | 27 KB | +29% |
 | **daily lessons** | 11 | **45** | +309% |
 | Wiki 페이지 | 385 | **410+** | +6.5% |

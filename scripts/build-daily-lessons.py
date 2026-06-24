@@ -55,6 +55,69 @@ RAW_EXCERPT_MIN = 80
 RAW_EXCERPT_MAX = 600  # Multi-paragraph target length
 MAX_LESSONS_PER_LANG = 30  # 30일 rotation 가능
 
+# Cross-language keyword map for culture page matching
+# Maps non-English (Korean/Japanese) source topic keywords → English culture stem keywords
+TOPIC_KEYWORD_MAP: dict[str, list[str]] = {
+    # Korean source topics → English culture keywords
+    "korean": ["korean"],
+    "기술": ["technology", "tech", "internet", "digital"],
+    "건강": ["health", "medical", "body"],
+    "몸": ["health", "body"],
+    "명절": ["holidays", "celebrations", "festival"],
+    "기념일": ["holidays", "celebrations"],
+    "쇼핑": ["shopping", "money"],
+    "돈": ["shopping", "money"],
+    "일상": ["daily", "life"],
+    "회화": ["daily", "life"],
+    "스포츠": ["sports", "hobbies"],
+    "취미": ["sports", "hobbies"],
+    "여행": ["travel"],
+    "식사": ["food", "dining"],
+    "음식": ["food", "dining"],
+    "연애": ["dating"],
+    "일본": ["japanese"],
+    "어학": ["language"],
+    "비즈니스": ["business"],
+    "일": ["business", "work"],
+    "직장": ["business", "work"],
+    "소통": ["communication"],
+    "표현": ["communication", "expression"],
+    "의사소통": ["communication"],
+    # Japanese source topic tokens → culture stem keywords
+    # (EN tokens map directly; these help cross-match JP mixed stems)
+    "basics": ["daily", "life"],
+    "hobbies": ["sports", "hobbies"],
+    "work": ["business", "work"],
+    # Spanish source topic tokens → culture stem keywords
+    "fiestas": ["holidays", "celebrations", "festival"],
+    "celebraciones": ["holidays", "celebrations", "festival"],
+    "fiesta": ["holidays", "celebrations", "festival"],
+    "viaje": ["travel"],
+    "aventura": ["travel", "adventure"],
+    "comida": ["food", "dining"],
+    "restaurante": ["food", "dining"],
+    "trabajo": ["business", "work"],
+    "carrera": ["business", "work"],
+    "trabajo-y-carrera": ["business", "work"],
+    "el": [],  # noise word, skip
+    "ahogado": [],  # noise word, skip
+    "mas": [],  # noise word, skip
+    "hermoso": [],  # noise word, skip
+    "del": [],  # noise word, skip
+    "mundo": [],  # noise word, skip
+    "realismo": ["literature", "realism"],
+    "magico": ["literature", "magic", "realism"],
+    "marquez": ["literature", "magic"],
+    "esquivel": ["literature"],
+    "literatura": ["literature"],
+    # Spanish source stems → culture keywords
+    "el-ahogado-mas-hermoso-del-mundo": ["literature", "magic"],
+    "viaje-aventura": ["travel"],
+    "fiestas-y-celebraciones": ["holidays", "celebrations"],
+    "comida-y-restaurante": ["food"],
+    "trabajo-y-carrera": ["business", "work"],
+}
+
 
 # ============================================================================
 # Markdown Parsing
@@ -93,9 +156,11 @@ def extract_source_excerpt(md_text: str, max_chars: int = 600) -> str:
         # Korean
         "개요", "요약", "핵심 추출 사항", "어휘 카테고리", "어휘",
         "표현", "인용",
-        # Japanese
+        # Japanese (also accepts English headers since some JP source pages use English)
         "概要", "文脈", "重要な抽出事項", "語彙カテゴリー",
         "語彙", "表現", "原文", "重要な抽出",
+        "Summary", "Overview", "Key Takeaways", "Vocabulary Extracted",
+        "Vocabulary", "Expressions Extracted",
         # Spanish
         "Resumen", "Conclusiones Clave", "Vocabulario Extraído",
         "Vocabulario", "Expresiones Extraídas",
@@ -585,21 +650,65 @@ def build_lesson_from_source(
             culture_page = wiki["culture"][target]
             break
 
-    # Fallback: if no culture page found via wikilinks, use any available
-    # culture page (e.g., the language's main culture note like
-    # "english-dating-culture"). Round-robin through available ones.
+    # Fallback: if no culture page found via wikilinks, use topic-keyword matching.
+    # Pick the culture page whose stem has the most overlapping keywords with
+    # the source stem. Only fall back to "dating" culture when nothing else
+    # matches (dating is the most generic topic).
     if not culture_page and wiki["culture"]:
-        # Use a stable selection: pick the first culture page whose stem
-        # contains a keyword from the source stem, else just the first
-        source_keywords = source_page["stem"].lower().replace("-", " ").split()
+        source_stem = source_page["stem"].lower()
+        source_keywords = set(source_stem.replace("-", " ").replace("_", " ").split())
+
+        # Expand source keywords with cross-language mappings
+        expanded_keywords: set[str] = set(source_keywords)
+        # First check full stem (for compound Spanish stems like el-ahogado-...)
+        if source_stem in TOPIC_KEYWORD_MAP:
+            expanded_keywords.update(TOPIC_KEYWORD_MAP[source_stem])
+        for kw in source_keywords:
+            if kw in TOPIC_KEYWORD_MAP:
+                expanded_keywords.update(TOPIC_KEYWORD_MAP[kw])
+
+        # Score each culture page: count keyword overlaps between source and culture stem
+        # Weight: exact token match > substring match
         best_match = None
-        best_score = 0
+        best_score = -1  # must have score >= 0 to be accepted
+        dating_match = None
+
         for stem, page in wiki["culture"].items():
-            score = sum(1 for kw in source_keywords if kw in stem.lower())
+            culture_stem = stem.lower()
+            culture_keywords = set(culture_stem.replace("-", " ").replace("_", " ").split())
+
+            # Direct token overlap (use expanded keywords for cross-language match)
+            overlap = len(expanded_keywords & culture_keywords)
+
+            # Substring bonus: if a source keyword is contained in culture stem (or vice versa)
+            substring_bonus = 0
+            for kw in expanded_keywords:
+                if len(kw) >= 3 and (kw in culture_stem or culture_stem in kw):
+                    substring_bonus += 1
+            for kw in culture_keywords:
+                if len(kw) >= 3 and (kw in source_stem or source_stem in kw):
+                    substring_bonus += 1
+
+            score = overlap + substring_bonus * 0.5
+
+            # Track dating culture separately — it's the fallback of last resort
+            is_dating = "dating" in culture_stem or "恋愛" in culture_stem
+
             if score > best_score:
                 best_score = score
                 best_match = page
-        culture_page = best_match or next(iter(wiki["culture"].values()))
+                if is_dating:
+                    dating_match = page
+
+        # Accept best match only if it has at least one meaningful keyword overlap.
+        # Otherwise fall back to dating culture (lowest common denominator).
+        if best_match and best_score >= 0.5:
+            culture_page = best_match
+        elif dating_match:
+            culture_page = dating_match
+            # Log only when non-dating topic gets forced to dating culture
+            source_topic = source_page.get("title", source_page["stem"])
+            print(f"  [culture fallback] '{source_topic}' → dating culture (no keyword match)")
 
     # Fallback: if vocab is too small, add from same-language vocabulary
     if len(vocab_pages) < TARGET_VOCAB_MIN:

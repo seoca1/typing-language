@@ -172,9 +172,7 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           ...p,
           body: filterMarkdownByTier(p.body, 'quick'),
         })),
-        culture: lesson.wiki.culture
-          ? { ...lesson.wiki.culture, body: filterMarkdownByTier(lesson.wiki.culture.body, 'quick') }
-          : null,
+        culture: null, // Quick tier hides culture — only vocab/expressions shown
       };
     } else if (tier === 'standard') {
       base = {
@@ -246,7 +244,7 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
             <div className="daily-lesson-modal__meta">
               {content.vocab.length} {t('words', getNativeLanguage())} ·{' '}
               {content.expressions.length} {t('expressions', getNativeLanguage())}
-              {content.culture && ` · 1 ${t('culture', getNativeLanguage())}`} ·{' '}
+              {tier !== 'quick' && content.culture && ` · 1 ${t('culture', getNativeLanguage())}`} ·{' '}
               {TIER_META[tier].minutes}
               {t('minutes', getNativeLanguage())}
             </div>

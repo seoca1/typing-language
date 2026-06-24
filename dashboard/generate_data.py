@@ -51,6 +51,14 @@ TIER_LABELS = {
     3: "Tier 3 · 짧은 문장",
     4: "Tier 4 · 긴 문장",
     5: "Tier 5 · 단락",
+    "t": "Travel · 여행",
+    "d": "Romance · 연애",
+    "f": "Food · 음식",
+    "b": "Business · 비즈니스",
+    "e": "Emotion · 감정",
+    "n": "Nature · 자연",
+    "a": "Animals · 동물",
+    "c": "Clothing · 의류",
 }
 
 
@@ -233,8 +241,8 @@ def parse_game_stages(lang_code: str) -> list:
         content = f.read()
 
     # Find stage blocks for this language
-    # Match both standard (xx_N_M) and travel (xx_t_N) IDs
-    pattern = rf"id:\s*'{lang_code}_(\d+|t)_(\d+)'.*?(?=id:\s*'|^\]\;|\]\,)"
+    # Match all stage IDs: standard (xx_N_M), travel (xx_t_N), and theme stages (xx_d/f/b/e/n/a/c_N)
+    pattern = rf"id:\s*'{lang_code}_([0-5]|t|d|f|b|e|n|a|c)_(\d+)'.*?(?=id:\s*'|^\]\;|\]\,)"
     matches = re.finditer(pattern, content, re.DOTALL)
 
     stages = []
@@ -243,9 +251,9 @@ def parse_game_stages(lang_code: str) -> list:
         tier_raw = match.group(1)
         stage_num = int(match.group(2))
 
-        # Tier mapping: 't' = special theme tier (treat as 2 for grouping)
-        if tier_raw == 't':
-            tier = 2  # Place travel stages in tier 2 for visual grouping
+        # Special theme tiers (t/d/f/b/e/n/a/c) keep their own label; numeric tiers map directly
+        if tier_raw in ('t', 'd', 'f', 'b', 'e', 'n', 'a', 'c'):
+            tier = tier_raw  # Keep letter prefix as-is for special stages
         else:
             tier = int(tier_raw)
 
@@ -292,7 +300,14 @@ def parse_game_stages(lang_code: str) -> list:
             }
         )
 
-    return sorted(stages, key=lambda s: (s["tier"], s["stage_num"]))
+    # Sort: numeric tiers first (0-5), then special themes alphabetically
+    def stage_sort_key(s):
+        tier = s["tier"]
+        if isinstance(tier, int):
+            return (0, tier, s["stage_num"])
+        return (1, tier, s["stage_num"])
+
+    return sorted(stages, key=stage_sort_key)
 
 
 def compute_coverage(lang_code: str, wiki_data: dict, corpus_data: dict, stages_data: list) -> dict:
@@ -355,7 +370,7 @@ def compute_coverage(lang_code: str, wiki_data: dict, corpus_data: dict, stages_
         "wiki_materials": wiki_total,
         "sources": sources_count,
         "raw_sources": 0,  # filled by caller
-        "stages_by_tier": Counter(s["tier"] for s in stages_data),
+        "stages_by_tier": dict(Counter(str(s["tier"]) for s in stages_data)),
         "stage_requirements": stage_requirements,
         "gaps": gaps,
         "coverage_percent": (

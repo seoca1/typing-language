@@ -158,12 +158,76 @@
     ],
     "culture": [
       {
+        "name": "japanese-daily-life-culture",
+        "filename": "japanese-daily-life-culture.md",
+        "title": "日本の日常文化 (Japanese Daily Life Culture)",
+        "size_kb": 1.8,
+        "modified": "2026-06-24T16:08:10.627854",
+        "path": "wiki/Japanese/culture/japanese-daily-life-culture.md"
+      },
+      {
         "name": "japanese-dating-culture",
         "filename": "japanese-dating-culture.md",
         "title": "Japanese Dating Culture",
         "size_kb": 5.3,
         "modified": "2026-06-20T01:24:39.363320",
         "path": "wiki/Japanese/culture/japanese-dating-culture.md"
+      },
+      {
+        "name": "japanese-food-culture",
+        "filename": "japanese-food-culture.md",
+        "title": "日本食文化 (Japanese Food Culture)",
+        "size_kb": 1.6,
+        "modified": "2026-06-24T15:16:46.420903",
+        "path": "wiki/Japanese/culture/japanese-food-culture.md"
+      },
+      {
+        "name": "japanese-health-culture",
+        "filename": "japanese-health-culture.md",
+        "title": "日本健康·医療文化 (Japanese Health & Medical Culture)",
+        "size_kb": 1.5,
+        "modified": "2026-06-24T15:16:56.313226",
+        "path": "wiki/Japanese/culture/japanese-health-culture.md"
+      },
+      {
+        "name": "japanese-holidays-culture",
+        "filename": "japanese-holidays-culture.md",
+        "title": "日本の祝日·祭日文化 (Japanese Holidays & Celebrations Culture)",
+        "size_kb": 1.7,
+        "modified": "2026-06-24T15:17:07.721586",
+        "path": "wiki/Japanese/culture/japanese-holidays-culture.md"
+      },
+      {
+        "name": "japanese-shopping-culture",
+        "filename": "japanese-shopping-culture.md",
+        "title": "日本の買い物·お金の文化 (Japanese Shopping & Money Culture)",
+        "size_kb": 1.7,
+        "modified": "2026-06-24T16:07:57.805936",
+        "path": "wiki/Japanese/culture/japanese-shopping-culture.md"
+      },
+      {
+        "name": "japanese-sports-culture",
+        "filename": "japanese-sports-culture.md",
+        "title": "日本のスポーツ·趣味文化 (Japanese Sports & Hobbies Culture)",
+        "size_kb": 1.8,
+        "modified": "2026-06-24T16:08:24.911536",
+        "path": "wiki/Japanese/culture/japanese-sports-culture.md"
+      },
+      {
+        "name": "japanese-technology-culture",
+        "filename": "japanese-technology-culture.md",
+        "title": "日本のテクノロジー文化 (Japanese Technology Culture)",
+        "size_kb": 1.7,
+        "modified": "2026-06-24T15:16:35.774489",
+        "path": "wiki/Japanese/culture/japanese-technology-culture.md"
+      },
+      {
+        "name": "japanese-travel-culture",
+        "filename": "japanese-travel-culture.md",
+        "title": "日本旅行文化 (Japanese Travel Culture)",
+        "size_kb": 2.1,
+        "modified": "2026-06-24T15:16:26.026633",
+        "path": "wiki/Japanese/culture/japanese-travel-culture.md"
       }
     ],
     "study_plan": []
@@ -509,24 +573,6 @@
       }
     },
     {
-      "id": "jp_t_1",
-      "tier": 2,
-      "stage_num": 1,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "旅行の基礎",
-      "description": "여행 필수 단어 (공항·역·호텔)",
-      "word_count": 12,
-      "difficulty": 2,
-      "corpus_type": "words",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 5,
-        "maxLevel": 5
-      }
-    },
-    {
       "id": "jp_2_2",
       "tier": 2,
       "stage_num": 2,
@@ -542,42 +588,6 @@
         ],
         "minLevel": 2,
         "maxLevel": 2
-      }
-    },
-    {
-      "id": "jp_t_2",
-      "tier": 2,
-      "stage_num": 2,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "空港・駅",
-      "description": "공항·역에서 쓰는 표현",
-      "word_count": 10,
-      "difficulty": 3,
-      "corpus_type": "words",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 5,
-        "maxLevel": 5
-      }
-    },
-    {
-      "id": "jp_t_3",
-      "tier": 2,
-      "stage_num": 3,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "旅行フレーズ",
-      "description": "여행 회화 표현 (길묻기·주문)",
-      "word_count": 8,
-      "difficulty": 3,
-      "corpus_type": "sentences",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 5,
-        "maxLevel": 5
       }
     },
     {
@@ -660,21 +670,479 @@
         "minLevel": 5,
         "maxLevel": 5
       }
+    },
+    {
+      "id": "jp_a_1",
+      "tier": "a",
+      "stage_num": 1,
+      "tier_label": "Animals · 동물",
+      "name": "動物",
+      "description": "動物語彙 — ペット、野生动物、昆虫、海の生き物",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_a_2",
+      "tier": "a",
+      "stage_num": 2,
+      "tier_label": "Animals · 동물",
+      "name": "動物 Advanced",
+      "description": "上級動物語彙 — 野生生物、海洋生物、動物の行動",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_a_3",
+      "tier": "a",
+      "stage_num": 3,
+      "tier_label": "Animals · 동물",
+      "name": "動物 Expert",
+      "description": "전문 동물 어휘 — 種の保全、生態学、動物学",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_b_1",
+      "tier": "b",
+      "stage_num": 1,
+      "tier_label": "Business · 비즈니스",
+      "name": "ビジネス基本",
+      "description": "ビジネス基本語彙 — メール、会议、仕事表現",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_b_2",
+      "tier": "b",
+      "stage_num": 2,
+      "tier_label": "Business · 비즈니스",
+      "name": "ビジネス Advanced",
+      "description": "上級ビジネス語彙 — 交渉、戦略、企業",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_b_3",
+      "tier": "b",
+      "stage_num": 3,
+      "tier_label": "Business · 비즈니스",
+      "name": "ビジネス Expert",
+      "description": "전문 비즈니스 어휘 — M&A、IPO、ローカライゼーション",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_c_1",
+      "tier": "c",
+      "stage_num": 1,
+      "tier_label": "Clothing · 의류",
+      "name": "衣服・ファッション",
+      "description": "衣服とファッション語彙 — シャツ、ドレス、靴、素材",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_c_2",
+      "tier": "c",
+      "stage_num": 2,
+      "tier_label": "Clothing · 의류",
+      "name": "衣服 Advanced",
+      "description": "上級衣服語彙 — デザイナーブランド、ファッション趋势、仕立て",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_c_3",
+      "tier": "c",
+      "stage_num": 3,
+      "tier_label": "Clothing · 의류",
+      "name": "衣服 Expert",
+      "description": "전문 의류 어휘 — Otteutu、素材工学、ファッション歴史",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_d_1",
+      "tier": "d",
+      "stage_num": 1,
+      "tier_label": "Romance · 연애",
+      "name": "デート言葉",
+      "description": "デートの基本語彙 — 紹介、褒め言葉、好意",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "romance"
+        ],
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_d_2",
+      "tier": "d",
+      "stage_num": 2,
+      "tier_label": "Romance · 연애",
+      "name": "告白と進展",
+      "description": "告白・恋人関係 — 好き、告白、付き合う",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "romance"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_e_1",
+      "tier": "e",
+      "stage_num": 1,
+      "tier_label": "Emotion · 감정",
+      "name": "感情・性格",
+      "description": "感情と性格表現 — 嬉しい、悲しい、性格描写",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_e_2",
+      "tier": "e",
+      "stage_num": 2,
+      "tier_label": "Emotion · 감정",
+      "name": "感情・性格 Advanced",
+      "description": "上級感情表現 — 羨ましい、緊張する、心配する",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_e_3",
+      "tier": "e",
+      "stage_num": 3,
+      "tier_label": "Emotion · 감정",
+      "name": "感情・性格 Expert",
+      "description": "전문 수준 감정 표현 — 복합 감정, 심리 상태",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_e_4",
+      "tier": "e",
+      "stage_num": 4,
+      "tier_label": "Emotion · 감정",
+      "name": "感情 Master",
+      "description": "マスター 수준 감정 표현 — 철학, 문학, 복합 감정",
+      "word_count": 6,
+      "difficulty": 5,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_f_1",
+      "tier": "f",
+      "stage_num": 1,
+      "tier_label": "Food · 음식",
+      "name": "食べ物基本",
+      "description": "基本的な食べ物語彙 — 肉、野菜、果物、飲み物",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_f_2",
+      "tier": "f",
+      "stage_num": 2,
+      "tier_label": "Food · 음식",
+      "name": "食物 Advanced",
+      "description": "上級食物語彙 — 食材、調理法、食文化",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_f_3",
+      "tier": "f",
+      "stage_num": 3,
+      "tier_label": "Food · 음식",
+      "name": "食物 Expert",
+      "description": "전문 음식 어휘 — ミシュuran、ワイン pairing、高給レシピ",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_f_4",
+      "tier": "f",
+      "stage_num": 4,
+      "tier_label": "Food · 음식",
+      "name": "食物 Master",
+      "description": "マスター 수준 음식 표현 — 미식가, food critic",
+      "word_count": 6,
+      "difficulty": 5,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_n_1",
+      "tier": "n",
+      "stage_num": 1,
+      "tier_label": "Nature · 자연",
+      "name": "自然・天気",
+      "description": "自然と天気語彙 — 太陽、雨、山、森、季節",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "jp_n_2",
+      "tier": "n",
+      "stage_num": 2,
+      "tier_label": "Nature · 자연",
+      "name": "自然 Advanced",
+      "description": "上級自然語彙 — 生態系、地理、気候",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_n_3",
+      "tier": "n",
+      "stage_num": 3,
+      "tier_label": "Nature · 자연",
+      "name": "自然 Expert",
+      "description": "전문 자연 어휘 — 生物多様性、気候変動、地質学",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "jp_t_1",
+      "tier": "t",
+      "stage_num": 1,
+      "tier_label": "Travel · 여행",
+      "name": "旅行の基礎",
+      "description": "여행 필수 단어 (공항·역·호텔)",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "id": "jp_t_2",
+      "tier": "t",
+      "stage_num": 2,
+      "tier_label": "Travel · 여행",
+      "name": "空港・駅",
+      "description": "공항·역에서 쓰는 표현",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "id": "jp_t_3",
+      "tier": "t",
+      "stage_num": 3,
+      "tier_label": "Travel · 여행",
+      "name": "旅行フレーズ",
+      "description": "여행 회화 표현 (길묻기·주문)",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 5,
+        "maxLevel": 5
+      }
     }
   ],
   "coverage": {
-    "total_stages": 15,
+    "total_stages": 37,
     "total_corpus": 182,
-    "wiki_materials": 19,
+    "wiki_materials": 27,
     "sources": 11,
     "raw_sources": 12,
     "stages_by_tier": {
       "0": 3,
       "1": 2,
-      "2": 5,
+      "2": 2,
       "3": 2,
       "4": 2,
-      "5": 1
+      "5": 1,
+      "a": 3,
+      "b": 3,
+      "c": 3,
+      "d": 2,
+      "e": 4,
+      "f": 4,
+      "n": 3,
+      "t": 3
     },
     "stage_requirements": [
       {
@@ -759,20 +1227,6 @@
         "corpus_type": "words"
       },
       {
-        "stage_id": "jp_t_1",
-        "stage_name": "旅行の基礎",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          5,
-          5
-        ],
-        "word_count": 12,
-        "corpus_type": "words"
-      },
-      {
         "stage_id": "jp_2_2",
         "stage_name": "カタカナ語",
         "tier": 2,
@@ -785,34 +1239,6 @@
         ],
         "word_count": 10,
         "corpus_type": "words"
-      },
-      {
-        "stage_id": "jp_t_2",
-        "stage_name": "空港・駅",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          5,
-          5
-        ],
-        "word_count": 10,
-        "corpus_type": "words"
-      },
-      {
-        "stage_id": "jp_t_3",
-        "stage_name": "旅行フレーズ",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          5,
-          5
-        ],
-        "word_count": 8,
-        "corpus_type": "sentences"
       },
       {
         "stage_id": "jp_3_1",
@@ -877,6 +1303,356 @@
         ],
         "word_count": 5,
         "corpus_type": "passages"
+      },
+      {
+        "stage_id": "jp_a_1",
+        "stage_name": "動物",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_a_2",
+        "stage_name": "動物 Advanced",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_a_3",
+        "stage_name": "動物 Expert",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_b_1",
+        "stage_name": "ビジネス基本",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_b_2",
+        "stage_name": "ビジネス Advanced",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_b_3",
+        "stage_name": "ビジネス Expert",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_c_1",
+        "stage_name": "衣服・ファッション",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_c_2",
+        "stage_name": "衣服 Advanced",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_c_3",
+        "stage_name": "衣服 Expert",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_d_1",
+        "stage_name": "デート言葉",
+        "tier": "d",
+        "categories": [
+          "romance"
+        ],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_d_2",
+        "stage_name": "告白と進展",
+        "tier": "d",
+        "categories": [
+          "romance"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_e_1",
+        "stage_name": "感情・性格",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_e_2",
+        "stage_name": "感情・性格 Advanced",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_e_3",
+        "stage_name": "感情・性格 Expert",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_e_4",
+        "stage_name": "感情 Master",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 6,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_f_1",
+        "stage_name": "食べ物基本",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_f_2",
+        "stage_name": "食物 Advanced",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_f_3",
+        "stage_name": "食物 Expert",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_f_4",
+        "stage_name": "食物 Master",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 6,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_n_1",
+        "stage_name": "自然・天気",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_n_2",
+        "stage_name": "自然 Advanced",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_n_3",
+        "stage_name": "自然 Expert",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_t_1",
+        "stage_name": "旅行の基礎",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_t_2",
+        "stage_name": "空港・駅",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "jp_t_3",
+        "stage_name": "旅行フレーズ",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          5,
+          5
+        ],
+        "word_count": 8,
+        "corpus_type": "sentences"
       }
     ],
     "gaps": [
@@ -905,9 +1681,219 @@
         "categories": [
           "katakana_words"
         ]
+      },
+      {
+        "stage_id": "jp_a_1",
+        "stage_name": "動物",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "jp_a_2",
+        "stage_name": "動物 Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "jp_a_3",
+        "stage_name": "動物 Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "jp_b_1",
+        "stage_name": "ビジネス基本",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "jp_b_2",
+        "stage_name": "ビジネス Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "jp_b_3",
+        "stage_name": "ビジネス Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "jp_c_1",
+        "stage_name": "衣服・ファッション",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "jp_c_2",
+        "stage_name": "衣服 Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "jp_c_3",
+        "stage_name": "衣服 Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "jp_d_1",
+        "stage_name": "デート言葉",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "romance"
+        ]
+      },
+      {
+        "stage_id": "jp_d_2",
+        "stage_name": "告白と進展",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "romance"
+        ]
+      },
+      {
+        "stage_id": "jp_e_1",
+        "stage_name": "感情・性格",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "jp_e_2",
+        "stage_name": "感情・性格 Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "jp_e_3",
+        "stage_name": "感情・性格 Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "jp_e_4",
+        "stage_name": "感情 Master",
+        "needed": 6,
+        "available": 0,
+        "shortfall": 6,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "jp_f_1",
+        "stage_name": "食べ物基本",
+        "needed": 12,
+        "available": 6,
+        "shortfall": 6,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "jp_f_2",
+        "stage_name": "食物 Advanced",
+        "needed": 10,
+        "available": 6,
+        "shortfall": 4,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "jp_f_3",
+        "stage_name": "食物 Expert",
+        "needed": 8,
+        "available": 6,
+        "shortfall": 2,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "jp_n_1",
+        "stage_name": "自然・天気",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "nature"
+        ]
+      },
+      {
+        "stage_id": "jp_n_2",
+        "stage_name": "自然 Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "nature"
+        ]
+      },
+      {
+        "stage_id": "jp_n_3",
+        "stage_name": "自然 Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "nature"
+        ]
       }
     ],
-    "coverage_percent": 107.7
+    "coverage_percent": 47.5
   },
-  "generated_at": "2026-06-23T16:06:03.056333"
+  "generated_at": "2026-06-24T18:32:09.356576"
 }

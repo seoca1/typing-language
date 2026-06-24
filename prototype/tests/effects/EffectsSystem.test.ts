@@ -65,14 +65,29 @@ describe('EffectsSystem — spawnFloatingWords (perimeter positioning)', () => {
 
     expect(state.floatingWords).toHaveLength(6);
 
-    const positions: string[] = [];
+    // Verify words are NOT in the center zone (they should be at perimeter)
+    const centerXMin = 350;
+    const centerXMax = 674;
+    const centerYMin = 200;
+    const centerYMax = 580;
+
     for (const w of state.floatingWords) {
-      const key = `${Math.round(w.x / 50) * 50},${Math.round(w.y / 50) * 50}`;
-      if (!positions.includes(key)) {
-        positions.push(key);
-      }
+      const inCenter = w.x >= centerXMin && w.x <= centerXMax &&
+                       w.y >= centerYMin && w.y <= centerYMax;
+      expect(inCenter).toBe(false);
     }
-    expect(positions.length).toBeGreaterThanOrEqual(4);
+
+    // Verify horizontal spread: max X - min X > 200 (words are spread across canvas width)
+    const xs = state.floatingWords.map(w => w.x);
+    const minX = Math.min(...xs);
+    const maxX = Math.max(...xs);
+    expect(maxX - minX).toBeGreaterThan(200);
+
+    // Verify vertical spread: max Y - min Y > 100
+    const ys = state.floatingWords.map(w => w.y);
+    const minY = Math.min(...ys);
+    const maxY = Math.max(...ys);
+    expect(maxY - minY).toBeGreaterThan(100);
   });
 
   it('caps concurrent floating words at 6', () => {

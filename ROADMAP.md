@@ -206,7 +206,7 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 
 ---
 
-## Phase 7: 알파 빌드
+## Phase 7: 알파 빌드 ✅
 
 **목표**: 외부 테스트 가능한 빌드.
 
@@ -214,31 +214,33 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 - [x] 튜토리얼/온보딩 (3단계 튜토리얼 + Skip 기능)
 - [x] 비주얼 폴리시 (컴패니언 캐릭터, 파티클, 키보드 UI, 언어별 색상)
 - [x] 세이브/로드 (localStorage - 진행도/스탯 저장)
+- [x] 빌드/배포 파이프라인 (GitHub Pages)
+- [x] SVG favicon + OG/Twitter meta tags
 - [ ] 사운드 (BGM, SFX) - optional
-- [ ] 옵션 메뉴 (키맵, 액센트 모드, 색맹 모드)
+- [ ] 옵션 메뉴 (키맵, 색맹 모드)
 - [ ] 크래시 리포팅
-- [ ] 빌드/배포 파이프라인 (GitHub Pages / Vercel / Netlify)
 
 **현재 상태**:
 - ✅ 게임 코어 완성 (입력/격파/미션/스테이지/캐릭터)
 - ✅ 4개 언어 지원 (EN/JP/ES/KR)
 - ✅ 140 스테이지 (Tier 0-5, Romance/Travel 테마)
 - ✅ 674개 테스트 통과 (1 skipped)
-- ✅ 프로덕션 빌드 가능 (891KB gzip 264KB)
+- ✅ 프로덕션 빌드 가능 (971KB gzip 298KB)
 - ✅ GitHub Pages 자동 배포
+- ✅ Daily lessons 45/45 (100% topic-appropriate culture)
+- ✅ SVG favicon + OG/Twitter Card meta tags
 
 **남은 작업**:
-1. ⚠️ 이슈 #4 Fix: Settings Native Language persistence
-2. ⚠️ 이슈 #1 Fix: Blank screen after multiple restarts
-3. 옵션 메뉴 구현 (키맵, 색맹 모드)
-4. 사운드 (BGM, SFX) - optional
-5. 추가 콘텐츠 (Tier 4-5)
+1. ⚠️ 이슈 #1 Fix: Blank screen after multiple restarts (mitigated)
+2. ⚠️ 이슈 #4 Fix: Settings Native Language persistence (partial)
+3. 사운드 (BGM, SFX) - optional
+4. 옵션 메뉴 (키맵, 색맹 모드)
 
 ---
 
 ## 현재 위치
 
-**현재 Phase**: **Phase 7 - 알파 빌드 폴리시** 🔄
+**현재 Phase**: **Phase 7 — 알파 빌드 완료** ✅
 
 **완료된 Phase**:
 - ✅ Phase 0: 문서 시스템 기반
@@ -250,16 +252,17 @@ Phase 7: 알파 빌드              [🔄 현재 진행]
 - ✅ Phase 6: 콘텐츠 파이프라인 (197 단어 + 66 문장)
 
 **다음 작업**:
-1. 🔄 GitHub Pages 배포 설정
-2. 프로덕션 빌드 최적화
-3. 메타 태그/OG 이미지 추가
-4. README 업데이트 (라이브 데모 링크)
+1. ✅ GitHub Pages 배포 설정 (완료)
+2. ✅ 메타 태그/OG 이미지 추가 (완료 — SVG favicon + OG/Twitter Card)
+3. README 업데이트 (라이브 데모 링크)
+4. 사운드 (BGM, SFX) — optional
 
 **프로젝트 현황**:
 - **코드베이스**: 15,000+ LOC
-- **테스트**: 673 tests
-- **번들 크기**: 891KB (gzip 264KB)
+- **테스트**: 674 tests
+- **번들 크기**: 971KB (gzip 298KB)
 - **언어**: 4개 (EN/JP/ES/KR)
 - **스테이지**: 140
+- **Daily Lessons**: 45 (100% culture coverage)
 - **Daily Lessons**: 45
 - **총 코퍼스**: EN 155 / JP 117 / ES 137 / KR 105

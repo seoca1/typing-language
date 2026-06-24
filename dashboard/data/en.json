@@ -214,12 +214,84 @@
     ],
     "culture": [
       {
+        "name": "english-business-culture",
+        "filename": "english-business-culture.md",
+        "title": "English Business & Work Culture",
+        "size_kb": 1.7,
+        "modified": "2026-06-24T16:06:54.626143",
+        "path": "wiki/English/culture/english-business-culture.md"
+      },
+      {
+        "name": "english-daily-life-culture",
+        "filename": "english-daily-life-culture.md",
+        "title": "English Daily Life Culture",
+        "size_kb": 1.5,
+        "modified": "2026-06-24T16:07:14.209899",
+        "path": "wiki/English/culture/english-daily-life-culture.md"
+      },
+      {
         "name": "english-dating-culture",
         "filename": "english-dating-culture.md",
         "title": "English Dating Culture",
         "size_kb": 5.0,
         "modified": "2026-06-20T01:24:07.107590",
         "path": "wiki/English/culture/english-dating-culture.md"
+      },
+      {
+        "name": "english-food-culture",
+        "filename": "english-food-culture.md",
+        "title": "English Food & Dining Culture",
+        "size_kb": 2.2,
+        "modified": "2026-06-24T15:14:32.360128",
+        "path": "wiki/English/culture/english-food-culture.md"
+      },
+      {
+        "name": "english-health-culture",
+        "filename": "english-health-culture.md",
+        "title": "English Health & Body Culture",
+        "size_kb": 2.0,
+        "modified": "2026-06-24T15:14:58.385478",
+        "path": "wiki/English/culture/english-health-culture.md"
+      },
+      {
+        "name": "english-holidays-culture",
+        "filename": "english-holidays-culture.md",
+        "title": "English Holidays & Celebrations Culture",
+        "size_kb": 1.9,
+        "modified": "2026-06-24T15:15:06.474409",
+        "path": "wiki/English/culture/english-holidays-culture.md"
+      },
+      {
+        "name": "english-shopping-culture",
+        "filename": "english-shopping-culture.md",
+        "title": "English Shopping & Money Culture",
+        "size_kb": 1.8,
+        "modified": "2026-06-24T16:07:05.894581",
+        "path": "wiki/English/culture/english-shopping-culture.md"
+      },
+      {
+        "name": "english-sports-culture",
+        "filename": "english-sports-culture.md",
+        "title": "English Sports & Hobbies Culture",
+        "size_kb": 1.6,
+        "modified": "2026-06-24T15:15:15.429867",
+        "path": "wiki/English/culture/english-sports-culture.md"
+      },
+      {
+        "name": "english-technology-culture",
+        "filename": "english-technology-culture.md",
+        "title": "English Technology & Digital Culture",
+        "size_kb": 2.1,
+        "modified": "2026-06-24T15:14:48.240521",
+        "path": "wiki/English/culture/english-technology-culture.md"
+      },
+      {
+        "name": "english-travel-culture",
+        "filename": "english-travel-culture.md",
+        "title": "English Travel Culture",
+        "size_kb": 2.7,
+        "modified": "2026-06-24T15:14:05.546677",
+        "path": "wiki/English/culture/english-travel-culture.md"
       }
     ],
     "study_plan": []
@@ -514,24 +586,6 @@
       }
     },
     {
-      "id": "en_t_1",
-      "tier": 2,
-      "stage_num": 1,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "Travel Essentials",
-      "description": "여행 필수 단어 (공항·호텔·식당)",
-      "word_count": 12,
-      "difficulty": 2,
-      "corpus_type": "words",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 1,
-        "maxLevel": 2
-      }
-    },
-    {
       "id": "en_2_2",
       "tier": 2,
       "stage_num": 2,
@@ -549,42 +603,6 @@
         ],
         "minLevel": 1,
         "maxLevel": 2
-      }
-    },
-    {
-      "id": "en_t_2",
-      "tier": 2,
-      "stage_num": 2,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "At the Airport",
-      "description": "공항에서 쓰는 표현과 단어",
-      "word_count": 10,
-      "difficulty": 3,
-      "corpus_type": "words",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 1,
-        "maxLevel": 3
-      }
-    },
-    {
-      "id": "en_t_3",
-      "tier": 2,
-      "stage_num": 3,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "Travel Phrases",
-      "description": "여행 회화 표현 (길묻기·주문·체크인)",
-      "word_count": 8,
-      "difficulty": 3,
-      "corpus_type": "sentences",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 3,
-        "maxLevel": 3
       }
     },
     {
@@ -668,20 +686,478 @@
         "minLevel": 5,
         "maxLevel": 5
       }
+    },
+    {
+      "id": "en_a_1",
+      "tier": "a",
+      "stage_num": 1,
+      "tier_label": "Animals · 동물",
+      "name": "Animals",
+      "description": "동물 어휘 — pets, wild animals, insects, sea creatures",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_a_2",
+      "tier": "a",
+      "stage_num": 2,
+      "tier_label": "Animals · 동물",
+      "name": "Animals Advanced",
+      "description": "고급 동물 어휘 — wildlife, marine life, animal behavior",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_a_3",
+      "tier": "a",
+      "stage_num": 3,
+      "tier_label": "Animals · 동물",
+      "name": "Animals Expert",
+      "description": "전문 동물 어휘 — 종 보전, 생태학, 동물학",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_b_1",
+      "tier": "b",
+      "stage_num": 1,
+      "tier_label": "Business · 비즈니스",
+      "name": "Business English",
+      "description": "비즈니스 기본 어휘 — email, meeting, work expressions",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_b_2",
+      "tier": "b",
+      "stage_num": 2,
+      "tier_label": "Business · 비즈니스",
+      "name": "Business Advanced",
+      "description": "고급 비즈니스 어휘 — negotiation, strategy, corporate",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_b_3",
+      "tier": "b",
+      "stage_num": 3,
+      "tier_label": "Business · 비즈니스",
+      "name": "Business Expert",
+      "description": "전문 비즈니스 어휘 — 인수합병, IPO, 현지화",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_c_1",
+      "tier": "c",
+      "stage_num": 1,
+      "tier_label": "Clothing · 의류",
+      "name": "Clothing & Fashion",
+      "description": "의류와 패션 어휘 — shirt, dress, shoes, materials",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_c_2",
+      "tier": "c",
+      "stage_num": 2,
+      "tier_label": "Clothing · 의류",
+      "name": "Clothing Advanced",
+      "description": "고급 의류 어휘 — designer brands, fashion trends, tailoring",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_c_3",
+      "tier": "c",
+      "stage_num": 3,
+      "tier_label": "Clothing · 의류",
+      "name": "Clothing Expert",
+      "description": "전문 의류 어휘 — Haute couture, 소재 공학, 패션 역사",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_d_1",
+      "tier": "d",
+      "stage_num": 1,
+      "tier_label": "Romance · 연애",
+      "name": "First Date Words",
+      "description": "첫 데이트 어휘 — 자기소개, 칭찬, 데이트 기본",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "romance"
+        ],
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_d_2",
+      "tier": "d",
+      "stage_num": 2,
+      "tier_label": "Romance · 연애",
+      "name": "Confession & Affection",
+      "description": "고백과 호감 표현 — like, miss, love, kiss",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "romance"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_e_1",
+      "tier": "e",
+      "stage_num": 1,
+      "tier_label": "Emotion · 감정",
+      "name": "Emotions & Personality",
+      "description": "감정과 성격 표현 — happy, sad, kind, rude, personality traits",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_e_2",
+      "tier": "e",
+      "stage_num": 2,
+      "tier_label": "Emotion · 감정",
+      "name": "Emotions Advanced",
+      "description": "고급 감정 표현 — to envy, to be grateful, flutter, jealous",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_e_3",
+      "tier": "e",
+      "stage_num": 3,
+      "tier_label": "Emotion · 감정",
+      "name": "Emotions Expert",
+      "description": "전문가 수준 감정 표현 — 복합 감정, 심리 상태",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_e_4",
+      "tier": "e",
+      "stage_num": 4,
+      "tier_label": "Emotion · 감정",
+      "name": "Emotions Master",
+      "description": "마스터 수준 감정 표현 — 철학, 문학, 복합 감정",
+      "word_count": 6,
+      "difficulty": 5,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_f_1",
+      "tier": "f",
+      "stage_num": 1,
+      "tier_label": "Food · 음식",
+      "name": "Food & Cooking",
+      "description": "기본 음식 어휘 — meat, vegetable, fruits, beverages",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_f_2",
+      "tier": "f",
+      "stage_num": 2,
+      "tier_label": "Food · 음식",
+      "name": "Food Advanced",
+      "description": "고급 음식 어휘 — ingredients, cooking methods, dining",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_f_3",
+      "tier": "f",
+      "stage_num": 3,
+      "tier_label": "Food · 음식",
+      "name": "Food Expert",
+      "description": "전문 음식 어휘 — 미슐랭, 와인 pairing, 고급 레시피",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_f_4",
+      "tier": "f",
+      "stage_num": 4,
+      "tier_label": "Food · 음식",
+      "name": "Food Master",
+      "description": "마스터 수준 음식 표현 — 미식가, food critic",
+      "word_count": 6,
+      "difficulty": 5,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_n_1",
+      "tier": "n",
+      "stage_num": 1,
+      "tier_label": "Nature · 자연",
+      "name": "Nature & Weather",
+      "description": "자연과 날씨 어휘 — sun, rain, mountain, forest, seasons",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_n_2",
+      "tier": "n",
+      "stage_num": 2,
+      "tier_label": "Nature · 자연",
+      "name": "Nature Advanced",
+      "description": "고급 자연 어휘 — ecosystem, geography, climate",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_n_3",
+      "tier": "n",
+      "stage_num": 3,
+      "tier_label": "Nature · 자연",
+      "name": "Nature Expert",
+      "description": "전문 자연 어휘 — 생물다양성, 기후변화, 지질학",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_t_1",
+      "tier": "t",
+      "stage_num": 1,
+      "tier_label": "Travel · 여행",
+      "name": "Travel Essentials",
+      "description": "여행 필수 단어 (공항·호텔·식당)",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "en_t_2",
+      "tier": "t",
+      "stage_num": 2,
+      "tier_label": "Travel · 여행",
+      "name": "At the Airport",
+      "description": "공항에서 쓰는 표현과 단어",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "en_t_3",
+      "tier": "t",
+      "stage_num": 3,
+      "tier_label": "Travel · 여행",
+      "name": "Travel Phrases",
+      "description": "여행 회화 표현 (길묻기·주문·체크인)",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
     }
   ],
   "coverage": {
-    "total_stages": 13,
+    "total_stages": 35,
     "total_corpus": 162,
-    "wiki_materials": 26,
+    "wiki_materials": 35,
     "sources": 13,
     "raw_sources": 11,
     "stages_by_tier": {
       "1": 3,
-      "2": 5,
+      "2": 2,
       "3": 2,
       "4": 2,
-      "5": 1
+      "5": 1,
+      "a": 3,
+      "b": 3,
+      "c": 3,
+      "d": 2,
+      "e": 4,
+      "f": 4,
+      "n": 3,
+      "t": 3
     },
     "stage_requirements": [
       {
@@ -743,20 +1219,6 @@
         "corpus_type": "words"
       },
       {
-        "stage_id": "en_t_1",
-        "stage_name": "Travel Essentials",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          1,
-          2
-        ],
-        "word_count": 12,
-        "corpus_type": "words"
-      },
-      {
         "stage_id": "en_2_2",
         "stage_name": "Daily Life",
         "tier": 2,
@@ -771,34 +1233,6 @@
         ],
         "word_count": 15,
         "corpus_type": "words"
-      },
-      {
-        "stage_id": "en_t_2",
-        "stage_name": "At the Airport",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          1,
-          3
-        ],
-        "word_count": 10,
-        "corpus_type": "words"
-      },
-      {
-        "stage_id": "en_t_3",
-        "stage_name": "Travel Phrases",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          3,
-          3
-        ],
-        "word_count": 8,
-        "corpus_type": "sentences"
       },
       {
         "stage_id": "en_3_1",
@@ -864,6 +1298,356 @@
         ],
         "word_count": 5,
         "corpus_type": "passages"
+      },
+      {
+        "stage_id": "en_a_1",
+        "stage_name": "Animals",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_a_2",
+        "stage_name": "Animals Advanced",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_a_3",
+        "stage_name": "Animals Expert",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_b_1",
+        "stage_name": "Business English",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_b_2",
+        "stage_name": "Business Advanced",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_b_3",
+        "stage_name": "Business Expert",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_c_1",
+        "stage_name": "Clothing & Fashion",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_c_2",
+        "stage_name": "Clothing Advanced",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_c_3",
+        "stage_name": "Clothing Expert",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_d_1",
+        "stage_name": "First Date Words",
+        "tier": "d",
+        "categories": [
+          "romance"
+        ],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_d_2",
+        "stage_name": "Confession & Affection",
+        "tier": "d",
+        "categories": [
+          "romance"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_e_1",
+        "stage_name": "Emotions & Personality",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_e_2",
+        "stage_name": "Emotions Advanced",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_e_3",
+        "stage_name": "Emotions Expert",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_e_4",
+        "stage_name": "Emotions Master",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 6,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_f_1",
+        "stage_name": "Food & Cooking",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_f_2",
+        "stage_name": "Food Advanced",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_f_3",
+        "stage_name": "Food Expert",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_f_4",
+        "stage_name": "Food Master",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 6,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_n_1",
+        "stage_name": "Nature & Weather",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_n_2",
+        "stage_name": "Nature Advanced",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_n_3",
+        "stage_name": "Nature Expert",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_t_1",
+        "stage_name": "Travel Essentials",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_t_2",
+        "stage_name": "At the Airport",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "en_t_3",
+        "stage_name": "Travel Phrases",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "sentences"
       }
     ],
     "gaps": [
@@ -886,9 +1670,229 @@
           "person",
           "place"
         ]
+      },
+      {
+        "stage_id": "en_a_1",
+        "stage_name": "Animals",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "en_a_2",
+        "stage_name": "Animals Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "en_a_3",
+        "stage_name": "Animals Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "en_b_1",
+        "stage_name": "Business English",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "en_b_2",
+        "stage_name": "Business Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "en_b_3",
+        "stage_name": "Business Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "en_c_1",
+        "stage_name": "Clothing & Fashion",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "en_c_2",
+        "stage_name": "Clothing Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "en_c_3",
+        "stage_name": "Clothing Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "en_d_1",
+        "stage_name": "First Date Words",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "romance"
+        ]
+      },
+      {
+        "stage_id": "en_d_2",
+        "stage_name": "Confession & Affection",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "romance"
+        ]
+      },
+      {
+        "stage_id": "en_e_1",
+        "stage_name": "Emotions & Personality",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "en_e_2",
+        "stage_name": "Emotions Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "en_e_3",
+        "stage_name": "Emotions Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "en_e_4",
+        "stage_name": "Emotions Master",
+        "needed": 6,
+        "available": 0,
+        "shortfall": 6,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "en_f_1",
+        "stage_name": "Food & Cooking",
+        "needed": 12,
+        "available": 4,
+        "shortfall": 8,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "en_f_2",
+        "stage_name": "Food Advanced",
+        "needed": 10,
+        "available": 4,
+        "shortfall": 6,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "en_f_3",
+        "stage_name": "Food Expert",
+        "needed": 8,
+        "available": 4,
+        "shortfall": 4,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "en_f_4",
+        "stage_name": "Food Master",
+        "needed": 6,
+        "available": 4,
+        "shortfall": 2,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "en_n_1",
+        "stage_name": "Nature & Weather",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "nature"
+        ]
+      },
+      {
+        "stage_id": "en_n_2",
+        "stage_name": "Nature Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "nature"
+        ]
+      },
+      {
+        "stage_id": "en_n_3",
+        "stage_name": "Nature Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "nature"
+        ]
       }
     ],
-    "coverage_percent": 128.6
+    "coverage_percent": 47.6
   },
-  "generated_at": "2026-06-23T16:06:03.028467"
+  "generated_at": "2026-06-24T18:32:09.327502"
 }

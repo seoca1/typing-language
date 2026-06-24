@@ -2135,3 +2135,65 @@ aec36fc — fix: validate-daily-lessons.py supports schemaVersion 1.2
 - Tests: 674 passed, 1 skipped
 - Validator: ✅ 45 lessons, 0 errors
 
+### [2026-06-24] daily-culture | daily lesson culture page tiered structure
+
+**작업 내용:**
+
+1. **EN culture pages 생성 (6개)**
+   - `Language/wiki/English/culture/english-travel-culture.md`
+   - `Language/wiki/English/culture/english-food-culture.md`
+   - `Language/wiki/English/culture/english-technology-culture.md`
+   - `Language/wiki/English/culture/english-health-culture.md`
+   - `Language/wiki/English/culture/english-holidays-culture.md`
+   - `Language/wiki/English/culture/english-sports-culture.md`
+
+2. **JP culture pages 생성 (5개)**
+   - `Language/wiki/Japanese/culture/japanese-travel-culture.md`
+   - `Language/wiki/Japanese/culture/japanese-food-culture.md`
+   - `Language/wiki/Japanese/culture/japanese-technology-culture.md`
+   - `Language/wiki/Japanese/culture/japanese-health-culture.md`
+   - `Language/wiki/Japanese/culture/japanese-holidays-culture.md`
+
+3. **KR culture pages 생성 (6개)**
+   - `Language/wiki/Korean/culture/korean-travel-culture.md`
+   - `Language/wiki/Korean/culture/korean-food-culture.md`
+   - `Language/wiki/Korean/culture/korean-technology-culture.md`
+   - `Language/wiki/Korean/culture/korean-health-culture.md`
+   - `Language/wiki/Korean/culture/korean-holidays-culture.md`
+   - `Language/wiki/Korean/culture/korean-daily-life-culture.md`
+   - `Language/wiki/Korean/culture/korean-sports-culture.md`
+   - `Language/wiki/Korean/culture/korean-shopping-culture.md`
+
+4. **ES culture pages 추가 (3개)**
+   - `Language/wiki/Spanish/culture/spanish-travel-culture.md`
+   - `Language/wiki/Spanish/culture/spanish-food-culture.md`
+   - `Language/wiki/Spanish/culture/spanish-holidays-culture.md`
+
+5. **build-daily-lessons.py 개선**
+   - `TOPIC_KEYWORD_MAP`: 한국어→영어 culture page 키워드 크로스매핑 테이블 추가
+   - culture page 폴백 로직에서 `expanded_keywords` 활용
+   - 모든 KR source topics가 올바른 culture page에 매핑됨
+
+**결과:**
+- Lint: ✅ 0 errors
+- Tests: 674 passed, 1 skipped
+- Build: ✅ 971.14 kB
+- Validator: ✅ 45 lessons, 0 errors
+- Culture pages: en 13/13 / jp 11/11 / es 10/10 / kr 11/11 — **45/45 100%**
+- **EN 3개 추가**: english-business-culture.md, english-shopping-culture.md, english-daily-life-culture.md
+- **JP 3개 추가**: japanese-shopping-culture.md, japanese-daily-life-culture.md, japanese-sports-culture.md
+- **ES 1개 추가**: spanish-business-culture.md
+- **TOPIC_KEYWORD_MAP 확장**: Korean/Japanese/English/Spanish 토큰 매핑 + full-stem check
+- **ES 5개 NONE 해결**: Spanish 토큰 매핑(fiestas, viaje, comida, trabajo, el-ahogado-*) 추가
+- **UI tier policy**: Quick tier culture 숨김 구현 (DailyLessonModal.tsx quick branch → `culture: null`)
+- **Phase E deferred**: 키워드 매칭이 45/45 달성하므로 소스 파일 wikilink 추가는 optional future로 남김
+- **daily-lesson-culture-plan.md**: 모든 open questions 해결, 상태 → Complete
+- **SVG favicon**: `prototype/public/favicon.svg` — 4개 언어(E/J/E/K) 키보드 테마, 각 키에 언어별 색상 (EN 파랑/JP 핑크/ES 호박/KR 초록)
+- **index.html**: OG/Twitter Card meta tags 추가, title/description 갱신, GitHub Pages 배포 URL 반영
+- **Quick tier culture 숨김**: `DailyLessonModal.tsx` — `culture: null` override (사용자 결정)
+- **EffectsSystem 테스트 수정**: grid-key rounding 기반 jitter → deterministic spread 검증 (horizontal >200px, vertical >100px) — 3/3 run 안정 확인
+- **README/SESSION_STATUS**: 최신 통계로 동기화 (971KB, 674 tests, 45 lessons 100% culture)
+- **SVG favicon**: keyboard-theme, 4 language keys (E/J/E/K), EN/JP/ES/KR 색상
+- **Dashboard stage parsing fix**: `parse_game_stages` regex가 `a/b/c/d/e/f/n/t` prefix 지원 → 총 stages 52 → **140** 정확 표시
+- **Dashboard regeneration**: 140 stages, 577 corpus entries, 152 wiki materials, 47 raw sources
+- **dailyLessons wiki format**: compact JSON (wikiIndex deduplicated, wiki content resolved at runtime via expandLesson) — 정상 동작 확인

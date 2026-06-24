@@ -414,12 +414,44 @@
         "path": "wiki/Spanish/culture/siesta-tradicion-verano.md"
       },
       {
+        "name": "spanish-business-culture",
+        "filename": "spanish-business-culture.md",
+        "title": "Spanish Business & Work Culture",
+        "size_kb": 2.1,
+        "modified": "2026-06-24T16:09:36.211949",
+        "path": "wiki/Spanish/culture/spanish-business-culture.md"
+      },
+      {
         "name": "spanish-dating-culture",
         "filename": "spanish-dating-culture.md",
         "title": "Spanish Dating Culture",
         "size_kb": 5.5,
         "modified": "2026-06-20T01:25:13.003639",
         "path": "wiki/Spanish/culture/spanish-dating-culture.md"
+      },
+      {
+        "name": "spanish-food-culture",
+        "filename": "spanish-food-culture.md",
+        "title": "Spanish Food & Dining Culture",
+        "size_kb": 1.9,
+        "modified": "2026-06-24T15:30:16.116308",
+        "path": "wiki/Spanish/culture/spanish-food-culture.md"
+      },
+      {
+        "name": "spanish-holidays-culture",
+        "filename": "spanish-holidays-culture.md",
+        "title": "Spanish Holidays & Celebrations Culture",
+        "size_kb": 2.3,
+        "modified": "2026-06-24T15:30:33.722415",
+        "path": "wiki/Spanish/culture/spanish-holidays-culture.md"
+      },
+      {
+        "name": "spanish-travel-culture",
+        "filename": "spanish-travel-culture.md",
+        "title": "Spanish Travel Culture",
+        "size_kb": 2.0,
+        "modified": "2026-06-24T15:30:01.876828",
+        "path": "wiki/Spanish/culture/spanish-travel-culture.md"
       },
       {
         "name": "subjuntivo-conversacional",
@@ -746,24 +778,6 @@
       }
     },
     {
-      "id": "es_t_1",
-      "tier": 2,
-      "stage_num": 1,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "Viajes Esenciales",
-      "description": "여행 필수 어휘 (공항·호텔·식당)",
-      "word_count": 12,
-      "difficulty": 2,
-      "corpus_type": "words",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 1,
-        "maxLevel": 2
-      }
-    },
-    {
       "id": "es_2_2",
       "tier": 2,
       "stage_num": 2,
@@ -780,42 +794,6 @@
           "place"
         ],
         "minLevel": 1,
-        "maxLevel": 2
-      }
-    },
-    {
-      "id": "es_t_2",
-      "tier": 2,
-      "stage_num": 2,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "En el Aeropuerto",
-      "description": "공항에서 쓰는 어휘",
-      "word_count": 10,
-      "difficulty": 3,
-      "corpus_type": "words",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 1,
-        "maxLevel": 3
-      }
-    },
-    {
-      "id": "es_t_3",
-      "tier": 2,
-      "stage_num": 3,
-      "tier_label": "Tier 2 · 단어 확장",
-      "name": "Frases de Viaje",
-      "description": "여행 회화 표현 (길묻기·주문·체크인)",
-      "word_count": 8,
-      "difficulty": 3,
-      "corpus_type": "sentences",
-      "corpus_filter": {
-        "categories": [
-          "travel"
-        ],
-        "minLevel": 2,
         "maxLevel": 2
       }
     },
@@ -899,20 +877,478 @@
         "minLevel": 5,
         "maxLevel": 5
       }
+    },
+    {
+      "id": "es_a_1",
+      "tier": "a",
+      "stage_num": 1,
+      "tier_label": "Animals · 동물",
+      "name": "Animales",
+      "description": "Animalés — mascotas, animales salvajes, insectos, criaturas marinas",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_a_2",
+      "tier": "a",
+      "stage_num": 2,
+      "tier_label": "Animals · 동물",
+      "name": "Animales Advanced",
+      "description": "Animales avanzados — fauna salvaje, vida marina, comportamiento",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_a_3",
+      "tier": "a",
+      "stage_num": 3,
+      "tier_label": "Animals · 동물",
+      "name": "Animales Expert",
+      "description": "experto 동물 어휘 — 종 보전, 생태학, 동물학",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "animals"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_b_1",
+      "tier": "b",
+      "stage_num": 1,
+      "tier_label": "Business · 비즈니스",
+      "name": "Negocios Básico",
+      "description": "、基本 business vocabulary — correo, reunión, trabajo",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_b_2",
+      "tier": "b",
+      "stage_num": 2,
+      "tier_label": "Business · 비즈니스",
+      "name": "Negocios Advanced",
+      "description": "Negocio avanzado — negociación, estrategia, corporativa",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_b_3",
+      "tier": "b",
+      "stage_num": 3,
+      "tier_label": "Business · 비즈니스",
+      "name": "Negocios Expert",
+      "description": "experto 비즈니스 어휘 — 인수합병, IPO, 현지화",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "business"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_c_1",
+      "tier": "c",
+      "stage_num": 1,
+      "tier_label": "Clothing · 의류",
+      "name": "Ropa y Moda",
+      "description": "Ropa y moda — camisa, vestido, zapatos, materiales",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_c_2",
+      "tier": "c",
+      "stage_num": 2,
+      "tier_label": "Clothing · 의류",
+      "name": "Ropa Advanced",
+      "description": "Ropa avanzada — marcas de diseñador, tendencias, sastrería",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_c_3",
+      "tier": "c",
+      "stage_num": 3,
+      "tier_label": "Clothing · 의류",
+      "name": "Ropa Expert",
+      "description": "experto 의류 어휘 — Otteutu, 소재 공학, 패션 역사",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "clothing"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_d_1",
+      "tier": "d",
+      "stage_num": 1,
+      "tier_label": "Romance · 연애",
+      "name": "Citas y Piropos",
+      "description": "Citas y cumplidos — 자기소개, 칭찬, 데이트",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "romance"
+        ],
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_d_2",
+      "tier": "d",
+      "stage_num": 2,
+      "tier_label": "Romance · 연애",
+      "name": "Declaración",
+      "description": "Declaración de amor — gustar, querer, amar, enamorado",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "romance"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_e_1",
+      "tier": "e",
+      "stage_num": 1,
+      "tier_label": "Emotion · 감정",
+      "name": "Emociones y Personalidad",
+      "description": "Emoción y personalidad — feliz, triste, amable, grosero",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_e_2",
+      "tier": "e",
+      "stage_num": 2,
+      "tier_label": "Emotion · 감정",
+      "name": "Emociones Advanced",
+      "description": "Emoción avanzada — envidiar, agradecer, aletear, celoso",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_e_3",
+      "tier": "e",
+      "stage_num": 3,
+      "tier_label": "Emotion · 감정",
+      "name": "Emociones Expert",
+      "description": "experto 감정 표현 — 복합 감정, 심리 상태",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_e_4",
+      "tier": "e",
+      "stage_num": 4,
+      "tier_label": "Emotion · 감정",
+      "name": "Emociones Master",
+      "description": "master 수준 감정 표현 — 철학, 문학, 복합 감정",
+      "word_count": 6,
+      "difficulty": 5,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "emotion"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_f_1",
+      "tier": "f",
+      "stage_num": 1,
+      "tier_label": "Food · 음식",
+      "name": "Comida y Bebida",
+      "description": "基本的食べ物 vocabulary — carne, verduras, frutas",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_f_2",
+      "tier": "f",
+      "stage_num": 2,
+      "tier_label": "Food · 음식",
+      "name": "Comida Advanced",
+      "description": "Comida avanzada — ingredientes, métodos de cocción, dining",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_f_3",
+      "tier": "f",
+      "stage_num": 3,
+      "tier_label": "Food · 음식",
+      "name": "Comida Expert",
+      "description": "experto 음식 어휘 — 미슐랭, 와인 pairing, 고급 레시피",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_f_4",
+      "tier": "f",
+      "stage_num": 4,
+      "tier_label": "Food · 음식",
+      "name": "Comida Master",
+      "description": "master 수준 음식 표현 — 미식가, food critic",
+      "word_count": 6,
+      "difficulty": 5,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "food"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_n_1",
+      "tier": "n",
+      "stage_num": 1,
+      "tier_label": "Nature · 자연",
+      "name": "Naturaleza y Clima",
+      "description": "Naturaleza y tiempo — sol, lluvia, montaña, bosque, estaciones",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_n_2",
+      "tier": "n",
+      "stage_num": 2,
+      "tier_label": "Nature · 자연",
+      "name": "Naturaleza Advanced",
+      "description": "Naturaleza avanzada — ecosistema, geografía, clima",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_n_3",
+      "tier": "n",
+      "stage_num": 3,
+      "tier_label": "Nature · 자연",
+      "name": "Naturaleza Expert",
+      "description": "experto 자연 어휘 — 생물다양성, 기후변화, 지질학",
+      "word_count": 8,
+      "difficulty": 4,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "nature"
+        ],
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_t_1",
+      "tier": "t",
+      "stage_num": 1,
+      "tier_label": "Travel · 여행",
+      "name": "Viajes Esenciales",
+      "description": "여행 필수 어휘 (공항·호텔·식당)",
+      "word_count": 12,
+      "difficulty": 2,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "id": "es_t_2",
+      "tier": "t",
+      "stage_num": 2,
+      "tier_label": "Travel · 여행",
+      "name": "En el Aeropuerto",
+      "description": "공항에서 쓰는 어휘",
+      "word_count": 10,
+      "difficulty": 3,
+      "corpus_type": "words",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 1,
+        "maxLevel": 3
+      }
+    },
+    {
+      "id": "es_t_3",
+      "tier": "t",
+      "stage_num": 3,
+      "tier_label": "Travel · 여행",
+      "name": "Frases de Viaje",
+      "description": "여행 회화 표현 (길묻기·주문·체크인)",
+      "word_count": 8,
+      "difficulty": 3,
+      "corpus_type": "sentences",
+      "corpus_filter": {
+        "categories": [
+          "travel"
+        ],
+        "minLevel": 2,
+        "maxLevel": 2
+      }
     }
   ],
   "coverage": {
-    "total_stages": 12,
+    "total_stages": 34,
     "total_corpus": 155,
-    "wiki_materials": 55,
+    "wiki_materials": 59,
     "sources": 10,
     "raw_sources": 13,
     "stages_by_tier": {
       "1": 2,
-      "2": 5,
+      "2": 2,
       "3": 2,
       "4": 2,
-      "5": 1
+      "5": 1,
+      "a": 3,
+      "b": 3,
+      "c": 3,
+      "d": 2,
+      "e": 4,
+      "f": 4,
+      "n": 3,
+      "t": 3
     },
     "stage_requirements": [
       {
@@ -954,20 +1390,6 @@
         "corpus_type": "words"
       },
       {
-        "stage_id": "es_t_1",
-        "stage_name": "Viajes Esenciales",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          1,
-          2
-        ],
-        "word_count": 12,
-        "corpus_type": "words"
-      },
-      {
         "stage_id": "es_2_2",
         "stage_name": "Cotidiano",
         "tier": 2,
@@ -982,34 +1404,6 @@
         ],
         "word_count": 12,
         "corpus_type": "words"
-      },
-      {
-        "stage_id": "es_t_2",
-        "stage_name": "En el Aeropuerto",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          1,
-          3
-        ],
-        "word_count": 10,
-        "corpus_type": "words"
-      },
-      {
-        "stage_id": "es_t_3",
-        "stage_name": "Frases de Viaje",
-        "tier": 2,
-        "categories": [
-          "travel"
-        ],
-        "level_range": [
-          2,
-          2
-        ],
-        "word_count": 8,
-        "corpus_type": "sentences"
       },
       {
         "stage_id": "es_3_1",
@@ -1074,6 +1468,356 @@
         ],
         "word_count": 5,
         "corpus_type": "passages"
+      },
+      {
+        "stage_id": "es_a_1",
+        "stage_name": "Animales",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_a_2",
+        "stage_name": "Animales Advanced",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_a_3",
+        "stage_name": "Animales Expert",
+        "tier": "a",
+        "categories": [
+          "animals"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_b_1",
+        "stage_name": "Negocios Básico",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_b_2",
+        "stage_name": "Negocios Advanced",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_b_3",
+        "stage_name": "Negocios Expert",
+        "tier": "b",
+        "categories": [
+          "business"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_c_1",
+        "stage_name": "Ropa y Moda",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_c_2",
+        "stage_name": "Ropa Advanced",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_c_3",
+        "stage_name": "Ropa Expert",
+        "tier": "c",
+        "categories": [
+          "clothing"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_d_1",
+        "stage_name": "Citas y Piropos",
+        "tier": "d",
+        "categories": [
+          "romance"
+        ],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_d_2",
+        "stage_name": "Declaración",
+        "tier": "d",
+        "categories": [
+          "romance"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_e_1",
+        "stage_name": "Emociones y Personalidad",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_e_2",
+        "stage_name": "Emociones Advanced",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_e_3",
+        "stage_name": "Emociones Expert",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_e_4",
+        "stage_name": "Emociones Master",
+        "tier": "e",
+        "categories": [
+          "emotion"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 6,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_f_1",
+        "stage_name": "Comida y Bebida",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_f_2",
+        "stage_name": "Comida Advanced",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_f_3",
+        "stage_name": "Comida Expert",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_f_4",
+        "stage_name": "Comida Master",
+        "tier": "f",
+        "categories": [
+          "food"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 6,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_n_1",
+        "stage_name": "Naturaleza y Clima",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_n_2",
+        "stage_name": "Naturaleza Advanced",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          2,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_n_3",
+        "stage_name": "Naturaleza Expert",
+        "tier": "n",
+        "categories": [
+          "nature"
+        ],
+        "level_range": [
+          3,
+          3
+        ],
+        "word_count": 8,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_t_1",
+        "stage_name": "Viajes Esenciales",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          2
+        ],
+        "word_count": 12,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_t_2",
+        "stage_name": "En el Aeropuerto",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          1,
+          3
+        ],
+        "word_count": 10,
+        "corpus_type": "words"
+      },
+      {
+        "stage_id": "es_t_3",
+        "stage_name": "Frases de Viaje",
+        "tier": "t",
+        "categories": [
+          "travel"
+        ],
+        "level_range": [
+          2,
+          2
+        ],
+        "word_count": 8,
+        "corpus_type": "sentences"
       }
     ],
     "gaps": [
@@ -1102,9 +1846,229 @@
         "available": 0,
         "shortfall": 10,
         "categories": []
+      },
+      {
+        "stage_id": "es_a_1",
+        "stage_name": "Animales",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "es_a_2",
+        "stage_name": "Animales Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "es_a_3",
+        "stage_name": "Animales Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "animals"
+        ]
+      },
+      {
+        "stage_id": "es_b_1",
+        "stage_name": "Negocios Básico",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "es_b_2",
+        "stage_name": "Negocios Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "es_b_3",
+        "stage_name": "Negocios Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "business"
+        ]
+      },
+      {
+        "stage_id": "es_c_1",
+        "stage_name": "Ropa y Moda",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "es_c_2",
+        "stage_name": "Ropa Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "es_c_3",
+        "stage_name": "Ropa Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "clothing"
+        ]
+      },
+      {
+        "stage_id": "es_d_1",
+        "stage_name": "Citas y Piropos",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "romance"
+        ]
+      },
+      {
+        "stage_id": "es_d_2",
+        "stage_name": "Declaración",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "romance"
+        ]
+      },
+      {
+        "stage_id": "es_e_1",
+        "stage_name": "Emociones y Personalidad",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "es_e_2",
+        "stage_name": "Emociones Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "es_e_3",
+        "stage_name": "Emociones Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "es_e_4",
+        "stage_name": "Emociones Master",
+        "needed": 6,
+        "available": 0,
+        "shortfall": 6,
+        "categories": [
+          "emotion"
+        ]
+      },
+      {
+        "stage_id": "es_f_1",
+        "stage_name": "Comida y Bebida",
+        "needed": 12,
+        "available": 4,
+        "shortfall": 8,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "es_f_2",
+        "stage_name": "Comida Advanced",
+        "needed": 10,
+        "available": 4,
+        "shortfall": 6,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "es_f_3",
+        "stage_name": "Comida Expert",
+        "needed": 8,
+        "available": 4,
+        "shortfall": 4,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "es_f_4",
+        "stage_name": "Comida Master",
+        "needed": 6,
+        "available": 4,
+        "shortfall": 2,
+        "categories": [
+          "food"
+        ]
+      },
+      {
+        "stage_id": "es_n_1",
+        "stage_name": "Naturaleza y Clima",
+        "needed": 12,
+        "available": 0,
+        "shortfall": 12,
+        "categories": [
+          "nature"
+        ]
+      },
+      {
+        "stage_id": "es_n_2",
+        "stage_name": "Naturaleza Advanced",
+        "needed": 10,
+        "available": 0,
+        "shortfall": 10,
+        "categories": [
+          "nature"
+        ]
+      },
+      {
+        "stage_id": "es_n_3",
+        "stage_name": "Naturaleza Expert",
+        "needed": 8,
+        "available": 0,
+        "shortfall": 8,
+        "categories": [
+          "nature"
+        ]
       }
     ],
-    "coverage_percent": 139.6
+    "coverage_percent": 47.7
   },
-  "generated_at": "2026-06-23T16:06:03.087115"
+  "generated_at": "2026-06-24T18:32:09.387957"
 }
