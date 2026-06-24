@@ -2098,3 +2098,40 @@ ae13c1e — fix: lint 설정 + 실제 버그 수정
 - Tests: 674 passed, 1 skipped
 - Lint: ✅ 0 errors
 
+### [2026-06-24] continue | project maintenance — wiki sync + daily lesson validator
+
+**작업 내용:**
+
+1. **ESLint 완전 수정**
+   - `typescript-eslint` flat config 패키지 설치 (node_modules 갱신)
+   - `eslint.config.js`: `no-explicit-any` 비활성화, `no-case-declarations` → error, unused vars 허용 (`_` prefix)
+   - lint 스크립트: `--ext` 플래그 제거 (flat config 미지원)
+   - CharacterRenderer.ts: 5개 case 블록 `const` → 블록 스코프 `{...}` (no-case-declarations 실제 버그)
+   - gameReducer.ts: `BACK_TO_MENU` case 블록 스코프
+   - stages.ts: `tier` → `_tier`
+
+2. **Korean wiki 갱신**
+   - `wiki/languages/korean.md`: ADR-0009(old) → ADR-0010(jamo direct input) 완전 재작성
+   - `index.md`: Korean ADR 참조 갱신
+
+3. **daily lessons validator 수정**
+   - `scripts/validate-daily-lessons.py`: schemaVersion 1.2 지원 추가
+   - Validator 결과: 45 lessons, 0 errors
+
+4. **CI retrigger**
+   - ae13c1e/lint fix 실패 → 새 empty commit(ceeee97)으로 retrigger → ✅ 성공
+   - 원인은 CI 캐시 불일치 (node_modules vs package-lock.json)
+
+**커밋:**
+```
+ae13c1e — fix: lint 설정 + 실제 버그 수정
+ceeee97 — ci: retrigger deploy
+b937d44 — docs: Korean wiki + index.md ADR 참조 갱신
+aec36fc — fix: validate-daily-lessons.py supports schemaVersion 1.2
+```
+
+**결과:**
+- Lint: ✅ 0 errors
+- Tests: 674 passed, 1 skipped
+- Validator: ✅ 45 lessons, 0 errors
+
