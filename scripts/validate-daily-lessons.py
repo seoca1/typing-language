@@ -68,7 +68,7 @@ def validate_schema(data: dict) -> list[str]:
         if key not in data:
             errors.append(f"Missing top-level key: {key}")
 
-    if data.get("schemaVersion") not in ("1.0", "1.1"):
+    if data.get("schemaVersion") not in ("1.0", "1.1", "1.2"):
         errors.append(f"Invalid schemaVersion: {data.get('schemaVersion')}")
 
     if not isinstance(data.get("lessons"), list):
