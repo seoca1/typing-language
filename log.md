@@ -2197,3 +2197,11 @@ aec36fc — fix: validate-daily-lessons.py supports schemaVersion 1.2
 - **Dashboard stage parsing fix**: `parse_game_stages` regex가 `a/b/c/d/e/f/n/t` prefix 지원 → 총 stages 52 → **140** 정확 표시
 - **Dashboard regeneration**: 140 stages, 577 corpus entries, 152 wiki materials, 47 raw sources
 - **dailyLessons wiki format**: compact JSON (wikiIndex deduplicated, wiki content resolved at runtime via expandLesson) — 정상 동작 확인
+
+### [2026-06-25] blank-screen-fix | Issue #1 빈 화면 수정
+
+- **근본 원인 분석**: RAF tick 루프의 `canvas.isConnected` 검사가 RAF 시작 시점에만 수행. 그 사이에 React의 DOM 업데이트(phase transition)로 canvas가 unmount 되면 → 다음 tick에서 `r.render()` → `clear()` on detached context → 예외 throw → RAF 취소 → 빈 화면
+- **수정**: `App.tsx` tick()의 `r.render()` 직전에 `canvasRef.current` 재검사 (`isConnected` + `isCanvasValid`) — 매 프레임 fresh canvas context 보장
+- **수정**: recreateFrom/예외 발생 시에도 명시적으로 `rafId = requestAnimationFrame(tick)` 실행 — RAF loop가 죽지 않도록
+- **KNOWN_ISSUES.md**: Issue #1 상태 🟡 Mitigated → ✅ Fixed, 해결률 40% → 60%
+- **테스트**: 674 passed ✅, 빌드 ✅

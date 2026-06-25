@@ -57,9 +57,9 @@ cd .. && uv run --with pyyaml python3 scripts/validate-daily-lessons.py
 ## 3. Git Commits (Recent)
 
 ```
+fd16268 — fix: blank screen race condition — pre-render canvas validation + RAF resilience
 f253da3 — feat: Phase 7 complete — culture pages, SVG favicon, meta tags, flaky test fix, dashboard fix
 1fd2c4c — docs: log.md — 이어서 작업 기록 갱신
-aec36fc — fix: validate-daily-lessons.py supports schemaVersion 1.2
 ```
 
 ---
@@ -90,4 +90,4 @@ aec36fc — fix: validate-daily-lessons.py supports schemaVersion 1.2
 
 **Deploy method:** Push to `main` → GitHub Actions auto-build + deploy
 
-**Last deploy:** `f253da3` (2026-06-25)
+**Last deploy:** `fd16268` (2026-06-25)
