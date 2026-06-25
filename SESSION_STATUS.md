@@ -1,7 +1,7 @@
 # Phase 7 Progress — Typing Language
 
-**Last Updated:** 2026-06-24
-**Status:** Phase 7 Complete
+**Last Updated:** 2026-06-25
+**Status:** Phase 7 Complete — Deployed ✅
 
 ---
 
@@ -57,10 +57,9 @@ cd .. && uv run --with pyyaml python3 scripts/validate-daily-lessons.py
 ## 3. Git Commits (Recent)
 
 ```
+f253da3 — feat: Phase 7 complete — culture pages, SVG favicon, meta tags, flaky test fix, dashboard fix
 1fd2c4c — docs: log.md — 이어서 작업 기록 갱신
 aec36fc — fix: validate-daily-lessons.py supports schemaVersion 1.2
-b937d44 — docs: Korean wiki + index.md ADR 참조 갱신
-ceeee97 — ci: retrigger deploy
 ```
 
 ---
@@ -72,7 +71,7 @@ ceeee97 — ci: retrigger deploy
 | 1 | Blank/Black screen on restart | MITIGATED — guard code added |
 | 2 | JP Wiki Proverb Pages missing | FIXED |
 | 3 | Character images not showing in game screen | FIXED |
-| 5 | EffectsSystem flaky test (spawnFloatingWords) | FLAKY — pre-existing, non-deterministic |
+| 5 | EffectsSystem flaky test (spawnFloatingWords) | FIXED — deterministic spread |
 
 ---
 
@@ -91,4 +90,4 @@ ceeee97 — ci: retrigger deploy
 
 **Deploy method:** Push to `main` → GitHub Actions auto-build + deploy
 
-**Last deploy:** `aec36fc` (2026-06-24) — newer changes pending push (`1fd2c4c`)
+**Last deploy:** `f253da3` (2026-06-25)

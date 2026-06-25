@@ -223,6 +223,7 @@ export function App() {
         } catch (err) {
           console.error('[App] Failed to recreate renderer:', err);
           rendererRef.current = null;
+          rafId = requestAnimationFrame(tick);
           return;
         }
       }
@@ -254,6 +255,24 @@ export function App() {
         }
       }
 
+      // Re-validate canvas RIGHT BEFORE render (after async DOM changes)
+      const canvasNow = canvasRef.current;
+      if (!canvasNow || !canvasNow.isConnected || canvasNow.width === 0 || canvasNow.height === 0) {
+        rafId = requestAnimationFrame(tick);
+        return;
+      }
+      if (!r.isCanvasValid(canvasNow)) {
+        console.warn('[App] Canvas context lost before render, recreating');
+        try {
+          r.recreateFrom(canvasNow);
+        } catch (err) {
+          console.error('[App] Failed to recreate renderer before render:', err);
+          rendererRef.current = null;
+          rafId = requestAnimationFrame(tick);
+          return;
+        }
+      }
+
       try {
         r.render({
           currentEnemy: enemy,
@@ -273,6 +292,7 @@ export function App() {
         });
       } catch (err) {
         console.error('[App] Render error:', err);
+        // Keep RAF alive even after render error — don't cancel
       }
       rafId = requestAnimationFrame(tick);
     };
