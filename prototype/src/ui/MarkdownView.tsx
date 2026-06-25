@@ -20,21 +20,6 @@
 import { type ReactNode, useState } from 'react';
 
 // ============================================================================
-// HTML Escaping (defense-in-depth)
-// ============================================================================
-
-function escapeHtml(text: string): string {
-  const map: Record<string, string> = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;',
-  };
-  return text.replace(/[&<>"']/g, (c) => map[c]);
-}
-
-// ============================================================================
 // Text-to-Speech Hook
 // ============================================================================
 
@@ -130,14 +115,14 @@ function parseInline(
 
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > lastIdx) {
-      nodes.push(escapeHtml(text.slice(lastIdx, match.index)));
+      nodes.push(text.slice(lastIdx, match.index));
     }
 
     const fullMatch = match[0];
 
     if (match[1]) {
       const codeContent = fullMatch.slice(1, -1);
-      nodes.push(<code key={key++}>{escapeHtml(codeContent)}</code>);
+      nodes.push(<code key={key++}>{codeContent}</code>);
     } else if (match[2]) {
       const boldContent = fullMatch.slice(2, -2);
       nodes.push(<strong key={key++}>{parseInline(boldContent, linkResolver)}</strong>);
@@ -151,13 +136,13 @@ function parseInline(
       if (resolved) {
         nodes.push(
           <a key={key++} href={resolved} className="wikilink">
-            {escapeHtml(displayText)}
+            {displayText}
           </a>
         );
       } else {
         nodes.push(
           <span key={key++} className="wikilink wikilink--broken">
-            {escapeHtml(displayText)}
+            {displayText}
           </span>
         );
       }
@@ -176,7 +161,7 @@ function parseInline(
               ? { target: '_blank', rel: 'noopener noreferrer' }
               : {})}
           >
-            {escapeHtml(linkText)}
+            {linkText}
           </a>
         );
       }
@@ -186,7 +171,7 @@ function parseInline(
   }
 
   if (lastIdx < text.length) {
-    nodes.push(escapeHtml(text.slice(lastIdx)));
+    nodes.push(text.slice(lastIdx));
   }
 
   return nodes;
@@ -404,7 +389,6 @@ function renderBlock(
         </ul>
       );
     case 'code':
-      // Special: dialogue block
       if (block.lang === 'dialogue') {
         return (
           <div key={key} className="md-dialogue">
@@ -414,12 +398,12 @@ function renderBlock(
               if (m) {
                 return (
                   <div key={i} className="md-dialogue__line">
-                    <strong className="md-dialogue__speaker">{escapeHtml(m[1])}:</strong>
-                    <span className="md-dialogue__text">{escapeHtml(m[2])}</span>
+                    <strong className="md-dialogue__speaker">{m[1]}:</strong>
+                    <span className="md-dialogue__text">{m[2]}</span>
                   </div>
                 );
               }
-              return <div key={i} className="md-dialogue__line">{escapeHtml(line)}</div>;
+              return <div key={i} className="md-dialogue__line">{line}</div>;
             })}
           </div>
         );
