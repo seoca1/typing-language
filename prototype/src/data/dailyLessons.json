@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T16:27:40.107687",
+  "generatedAt": "2026-06-25T17:45:31.381957",
   "schemaVersion": "1.2",
   "lessonCount": 52,
   "byLanguage": {
@@ -284,19 +284,14 @@
       "body": "# expensive\n\n**Part of Speech:** noun\n\n**Definition:** 비싸다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the expensive?** — expensive은(는) 어디인가요?\n- **expensive** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
-    "clothing/wool.md": {
-      "title": "Wool",
-      "body": "# Wool\n\n**Part of Speech:** noun\n\n**Definition:** wool\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "business/traffic-light.md": {
+      "title": "traffic light",
+      "body": "# traffic light\n\n**Part of Speech:** noun\n\n**Definition:** 신호등\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the traffic light?** — traffic light은(는) 어디인가요?\n- **traffic light** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
-    "clothing/socks.md": {
-      "title": "Socks",
-      "body": "# Socks\n\n**Part of Speech:** noun\n\n**Definition:** socks\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
-      "category": "vocabulary"
-    },
-    "clothing/boots.md": {
-      "title": "Boots",
-      "body": "# Boots\n\n**Part of Speech:** noun\n\n**Definition:** boots\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "emotions/kiss.md": {
+      "title": "kiss",
+      "body": "# kiss\n\n**Part of Speech:** noun / verb\n**Level:** A2\n\n**Definition:** 키스 — Touch with the lips as a sign of love, greeting, or respect.\n\n## Examples (Noun)\n\n- \"First kiss\" — 첫 키스\n- \"Goodnight kiss\" — 작별 키스\n- \"Peck on the cheek\" — 가벼운 키스\n\n## Examples (Verb)\n\n- \"Can I kiss you?\" — 명시적 동의 요청 (중요)\n- \"They kissed at the airport.\" — 장면 묘사\n- \"Kiss me.\" — 직접적 요청\n\n## Related Terms\n\n- [[hold-your-hand]] — earlier progression\n- [[love]] — strong affection\n- [[be-my-girlfriend]] — commitment\n\n## Cultural Notes\n\n**Consent is essential**: Modern dating requires explicit verbal\npermission before physical affection. **\"Can I kiss you?\"** is now\nthe expected, respectful approach — not awkward, but considerate.\n\n**Public displays**: Common in US/Europe, varies by region/context.\n\n## Sources\n\n- [[dating-romance]] — Affection progression\n- Cambridge English Vocabulary in Use (Pre-Intermediate)\n",
       "category": "vocabulary"
     },
     "english-shopping-culture.md": {
@@ -304,14 +299,14 @@
       "body": "# English Shopping & Money Culture\n\n**Type:** Culture Note, Shopping, Consumer, Prices\n**Region:** United States / United Kingdom / Australia\n\n## Overview\n\nEnglish-speaking countries have distinct shopping cultures: US has large malls and e-commerce; UK has high streets; Australia has Sunday markets. **Tipping**, **taxes not included**, and **return policies** are key differences from Korean/Japanese shopping.\n\n## Overview (Korean)\n\n영어권 쇼핑 문화: 미국은 대형 몰과 이커머스, 영국은 하이 스트리트, 호주는 선데이 마켓. **팁**, **별도 세금**, **반품 정책**이 한국/일본과 주요 차이.\n\n## Key Cultural Traits\n\n### Price Display\n\nUS: Prices shown **without tax** — you pay more at checkout.\nUK/Australia: Prices include VAT/tax.\n\n> US: \"This shirt is $20\"\n> Checkout: $20 + tax = ~$22\n\n### Tipping Culture\n\n| Country | Restaurant | Taxi | Hotel |\n|---------|-----------|------|-------|\n| **US** | 15-20% mandatory-feeling | 15-20% | $1-2/bag |\n| **UK** | 10% optional (service often included) | Round up | Optional |\n| **Australia** | Not expected | Not expected | Not expected |\n\n> \"Tipping in the US isn't optional — servers earn $2.13/hr base.\"\n\n### Shopping Venues\n\n| Venue | US | UK |\n|-------|----|----|\n| Grocery | Walmart, Kroger, Whole Foods | Tesco, Sainsbury's, Waitrose |\n| Department | Macy's, Nordstrom | Harrods, Selfridges |\n| Fast fashion | Target, H&M | Primark, Topshop |\n| Online | Amazon dominates | Amazon + local brands |\n\n## Phrases\n\n| Situation | Phrase | Context |\n|-----------|--------|---------|\n| Asking price | \"How much is this?\" | |\n| Discount | \"Is this on sale?\" | US: \"sale\" / UK: \"sale\" |\n| Returns | \"Can I return this?\" | US: 30-90 days |\n| Size | \"Do you have this in a different size?\" | |\n\n## Sources\n\n- [[shopping-and-money]] — shopping vocabulary\n",
       "category": "culture"
     },
-    "clothing/leather.md": {
-      "title": "Leather",
-      "body": "# Leather\n\n**Part of Speech:** noun\n\n**Definition:** leather\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "food/sweet.md": {
+      "title": "sweet",
+      "body": "# sweet\n\n**Part of Speech:** noun\n\n**Definition:** 달다\n\n**Language of Origin:** English\n\n## Examples\n\n- **Where is the sweet?** — sweet은(는) 어디인가요?\n- **sweet** is essential for travel.\n\n## Related Terms\n\n- [[passport]]\n- [[travel]]\n\n## Sources\n\n- [[first-travel-japan]]\n- [[travel-basics]]\n",
       "category": "vocabulary"
     },
-    "clothing/shirt.md": {
-      "title": "Shirt",
-      "body": "# Shirt\n\n**Part of Speech:** noun\n\n**Definition:** shirt\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "clothing/wool.md": {
+      "title": "Wool",
+      "body": "# Wool\n\n**Part of Speech:** noun\n\n**Definition:** wool\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
       "category": "vocabulary"
     },
     "food/breakfast.md": {
@@ -759,24 +754,19 @@
       "body": "# ズボン\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** ずぼん (zubon) — pants/trousers.\n\n**Romaji:** zubon\n\n---\n\n## Examples\n\n- **ズボンを穿きます。** — I wear pants.\n- **白いズボン** — white pants\n\n---\n\n## Related Terms\n\n- [[シャツ]]\n- [[スカート]]\n\n---\n\n## Sources\n\n- [[clothing-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
-    "clothing/黒い靴.md": {
-      "title": "黒い靴",
-      "body": "# 黒い靴\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** くろいくつ (kuroi kutsu) — black shoes.\n\n**Romaji:** kuroi kutsu\n\n---\n\n## Examples\n\n- **黒い靴を履きます。** — I wear black shoes.\n- **本当に黒い靴** — really black shoes\n\n---\n\n## Related Terms\n\n- [[靴]]\n- [[白いズボン]]\n\n---\n\n## Sources\n\n- [[clothing-vocabulary-jp]]\n",
+    "animals/和牛.md": {
+      "title": "和牛",
+      "body": "# 和牛\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** B1\n\n**Definition:** わぎゅう (wagyuu) — Wagyu beef.\n\n**Romaji:** wagyuu\n\n---\n\n## Examples\n\n- **和牛を食べます。** — I eat Wagyu beef.\n- **和牛の輸出** — Wagyu beef export\n\n---\n\n## Related Terms\n\n- [[牛肉]]\n- [[肉]]\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
-    "clothing/白いズボン.md": {
-      "title": "白いズボン",
-      "body": "# 白いズボン\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** しろいずぼん (shiroi zubon) — white pants.\n\n**Romaji:** shiroi zubon\n\n---\n\n## Examples\n\n- **白いズボンを穿きます。** — I wear white pants.\n- **本当に白いズボン** — really white pants\n\n---\n\n## Related Terms\n\n- [[ズボン]]\n- [[黒い靴]]\n\n---\n\n## Sources\n\n- [[clothing-vocabulary-jp]]\n",
+    "business/トラ.md": {
+      "title": "トラ",
+      "body": "# トラ\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** とら (tora) — tiger.\n\n**Romaji:** tora\n\n---\n\n## Examples\n\n- **トラがいます。** — There is a tiger.\n- **我真的喜歡トラ** — I really like tigers\n\n---\n\n## Related Terms\n\n- [[ライオン]]\n- [[熊]]\n\n---\n\n## Sources\n\n- [[animals-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
-    "clothing/青いシャツ.md": {
-      "title": "青いシャツ",
-      "body": "# 青いシャツ\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** あおいシャツ (aoi shatsu) — blue shirt.\n\n**Romaji:** aoi shatsu\n\n---\n\n## Examples\n\n- **青いシャツを着ます。** — I wear a blue shirt.\n- **本当に青いシャツ** — really a blue shirt\n\n---\n\n## Related Terms\n\n- [[シャツ]]\n- [[白いズボン]]\n\n---\n\n## Sources\n\n- [[clothing-vocabulary-jp]]\n",
-      "category": "vocabulary"
-    },
-    "clothing/靴下.md": {
-      "title": "靴下",
-      "body": "# 靴下\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A2\n\n**Definition:** くつした (kutsushita) — socks.\n\n**Romaji:** kutsushita\n\n---\n\n## Examples\n\n- **靴下を穿きます。** — I wear socks.\n- **白い靴下** — white socks\n\n---\n\n## Related Terms\n\n- [[靴]]\n- [[手袋]]\n\n---\n\n## Sources\n\n- [[clothing-vocabulary-jp]]\n",
+    "food/弁当.md": {
+      "title": "弁当",
+      "body": "# 弁当\n\n**Part of Speech:** 名詞 (noun)\n\n**Level:** A1\n\n**Definition:** べんとう (bento) — lunch box.\n\n**Romaji:** bento\n\n---\n\n## Examples\n\n- **弁当を買います。** — I buy a lunch box.\n- **お弁当** — packed lunch\n- **幕の内弁当** — makunouchi bento\n\n---\n\n## Sources\n\n- [[food-vocabulary-jp]]\n",
       "category": "vocabulary"
     },
     "business/祝日.md": {
@@ -1334,24 +1324,24 @@
       "body": "# veranear\n\n**Part of Speech:** verbo intransitivo\n\n**Definition:** Pasar las vacaciones de verano en un lugar distinto al de residencia habitual. Ir de verano.\n\n**Etymology:** De *verano* (del latín *veranum tempus*, tiempo primaveral) + *-ear* (verbo de acción).\n\n## Examples\n\n- *Este año **veraneamos** en la costa.*\n- *En mi familia siempre **veraneábamos** en el mismo pueblo.*\n- *¿Dónde vas a **veranear** este agosto?*\n\n## Related Terms\n\n- [[verano]] - la estación\n- [[veraniego]] - adjetivo\n- [[vacaciones]] - general\n- [[estiaje]] - caudal bajo de ríos en verano\n\n## Cultural Notes\n\n**Veranear** en España implica históricamente un cambio de ritmo social: las ciudades se vacían en agosto, los pueblos costeros se llenan. La **cultura del veraneo** incluye playa, chiringuitos, heladerías, terracitas. En la **España de los años 60-80**, veranear era un derecho social conquistado por la clase trabajadora. Hoy se mantiene el rito aunque los destinos hayan cambiado.\n\n## Sources\n\n- [[notes-in-spanish-planes-de-verano]]\n- [[verano-espana-tradiciones]]\n",
       "category": "vocabulary"
     },
-    "clothing/chaqueta.md": {
-      "title": "Chaqueta",
-      "body": "# Chaqueta\n\n**Part of Speech:** noun\n\n**Definition:** chaqueta\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "business/jefe.md": {
+      "title": "jefe",
+      "body": "# jefe\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Jefe — persona que dirige.\n\n---\n\n## Examples\n\n- \"Mi jefe es estricto.\"\n- \"Hablar con el jefe.\"\n- \"Buen jefe.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "clothing/bufanda.md": {
-      "title": "Bufanda",
-      "body": "# Bufanda\n\n**Part of Speech:** noun\n\n**Definition:** bufanda\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "business/inmigración.md": {
+      "title": "inmigración",
+      "body": "# inmigración\n\n**Part of Speech:** sustantivo masculino\n\n**Definition:** 입국심사\n\n**Language of Origin:** Español\n\n## Examples\n\n- **¿Dónde está el inmigración?** — inmigración은(는) 어디인가요?\n- **inmigración** es esencial para viajar.\n\n## Related Terms\n\n- [[pasaporte]]\n- [[viajes]]\n\n## Sources\n\n- [[first-travel-spain]]\n",
       "category": "vocabulary"
     },
-    "clothing/camisa.md": {
-      "title": "Camisa",
-      "body": "# Camisa\n\n**Part of Speech:** noun\n\n**Definition:** camisa\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "business/telefono.md": {
+      "title": "Telefono",
+      "body": "# Telefono\n\n**Part of Speech:** noun\n\n**Definition:** telefono\n\n---\n\n## Sources\n\n- [[business-vocabulary]]\n",
       "category": "vocabulary"
     },
-    "clothing/falda.md": {
-      "title": "Falda",
-      "body": "# Falda\n\n**Part of Speech:** noun\n\n**Definition:** falda\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "business/viajes.md": {
+      "title": "Viajes - Travel",
+      "body": "# Viajes - Travel\n\n**Source:** [[viajes-esenciales]]\n**Theme:** Travel & Tourism\n**Level:** A1-A2\n\nVocabulario esencial de viajes. Aeropuertos, hoteles, restaurantes, transporte y turismo — las palabras más útiles para cualquier viaje hispanohablante.\n\n---\n\n## Aeropuerto\n\n### Sustantivos\n\n- **pasaporte** — 여권\n- **billete / boleto** — 티켓, 표\n- **tarjeta de embarque** — 탑승권\n- **equipaje / maleta** — 수하물 / 여행가방\n- **maleta** — 여행가방\n- **puerta de embarque** — 탑승구\n- **terminal** — 터미널\n- **facturar** — 체크인하다\n- **mostrador** — 카운터\n- **vuelo** — 항공편\n\n### Verbos\n\n- **facturar** — 체크인하다\n- **embarcar** — 탑승하다\n- **aterrizar** — 착륙하다\n- **despegar** — 이륙하다\n- **llegar** — 도착하다\n- **salir** — 출발하다\n\n---\n\n## Hotel\n\n### Sustantivos\n\n- **reserva** — 예약\n- **recepción** — 프론트 데스크\n- **habitación** — 방\n- **habitación individual** — 1인실\n- **habitación doble** — 2인실\n- **suite** — 스위트룸\n- **llave / tarjeta** — 열쇠 / 카드\n- **ascensor** — 엘리베이터\n- **vestíbulo** — 로비\n\n### Verbos\n\n- **reservar** — 예약하다\n- **alojarse** — 묵다\n- **registrarse** — 체크인하다\n\n---\n\n## Restaurante\n\n### Sustantivos\n\n- **carta / menú** — 메뉴\n- **camarero / mesero** — 웨이터/여종업원\n- **cuenta** — 계산서\n- **propina** — 팁\n- **entrante** — 전채\n- **plato principal** — 메인 요리\n- **postre** — 디저트\n- **bebida** — 음료\n- **botella** — 병\n- **vaso** — 잔\n\n### Verbos\n\n- **pedir** — 주문하다\n- **recomendar** — 추천하다\n- **probar** — 맛보다\n- **pagar** — 지불하다\n- **invitar** — 쏘다\n\n---\n\n## Transporte\n\n### Sustantivos\n\n- **metro** — 지하철\n- **autobús** — 버스\n- **taxi** — 택시\n- **tren** — 기차\n- **estación** — 역\n- **parada** — 정류장\n- **billete / boleto** — 표\n- **andén** — 승강장\n- **transbordo** — 환승\n- **aeropuerto** — 공항\n\n### Verbos\n\n- **coger / tomar** — 타다\n- **bajar** — 내리다\n- **subir** — 타다\n- **conducir** — 운전하다\n- **caminar / andar** — 걷다\n\n---\n\n## Turismo\n\n### Sustantivos\n\n- **mapa** — 지도\n- **guía** — 가이드\n- **tour / excursión** — 투어 / 소풍\n- **museo** — 박물관\n- **catedral** — 대성당\n- **monumento** — 기념물\n- **playa** — 해변\n- **montaña** — 산\n- **parque** — 공원\n- **mirador** — 전망대\n\n### Verbos\n\n- **visitar** — 방문하다\n- **explorar** — 탐험하다\n- **fotografiar** — 사진 찍다\n- **conocer** — 알아보다\n\n---\n\n## Direcciones (방향)\n\n### Frases clave\n\n- **¿Dónde está...?** — ...는 어디에 있나요?\n- **¿Cómo llego a...?** — ...에 어떻게 가나요?\n- **Siga recto** — 직진하세요\n- **Gire a la izquierda / derecha** — 좌회전/우회전하세요\n- **a la izquierda / derecha** — 왼쪽/오른쪽에\n- **al lado de** — 옆에\n- **enfrente de** — 건너편에\n- **entre** — 사이에\n- **cerca de** — 가까이에\n- **lejos de** — 멀리\n\n---\n\n## Frases útiles (유용한 표현)\n\n- **Disculpe / Perdón** — 실례합니다\n- **¿Cuánto cuesta?** — 얼마예요?\n- **¿Dónde está el baño?** — 화장실 어디예요?\n- **No entiendo** — 이해가 안 돼요\n- **¿Puede ayudarme?** — 도와주실 수 있나요?\n- **Gracias** — 감사합니다\n- **Por favor** — 부디\n\n---\n\n## Sources\n\n- [[viajes-esenciales]]\n",
       "category": "vocabulary"
     },
     "nature/promontorio.md": {
@@ -1414,11 +1404,6 @@
       "body": "# reunion\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Reunión — encuentro de personas.\n\n---\n\n## Examples\n\n- \"Reunión a las 10.\"\n- \"Tengo una reunión.\"\n- \"Reunión de equipo.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "business/jefe.md": {
-      "title": "jefe",
-      "body": "# jefe\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Jefe — persona que dirige.\n\n---\n\n## Examples\n\n- \"Mi jefe es estricto.\"\n- \"Hablar con el jefe.\"\n- \"Buen jefe.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
-      "category": "vocabulary"
-    },
     "business/proyecto.md": {
       "title": "proyecto",
       "body": "# proyecto\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Proyecto — trabajo planificado.\n\n---\n\n## Examples\n\n- \"Nuevo proyecto.\"\n- \"Trabajar en un proyecto.\"\n- \"Proyecto terminado.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
@@ -1439,14 +1424,14 @@
       "body": "# salario\n\n**Part of Speech:** sustantivo (noun)\n\n**Level:** A2\n\n**Definition:** Salario — pago por trabajo.\n\n---\n\n## Examples\n\n- \"Buen salario.\"\n- \"Recibir el salario.\"\n- \"Aumento de salario.\"\n\n---\n\n## Sources\n\n- [[daily-life-basics]]\n",
       "category": "vocabulary"
     },
-    "clothing/index.md": {
-      "title": "의류・패션 어휘 (Clothing & Fashion Vocabulary)",
-      "body": "# 의류・패션 어휘 (Clothing & Fashion Vocabulary)\n\n> **Source:** [[clothing-vocabulary]]\n> **Category:** clothing\n> **Level:** TOPIK N4-N5\n\n이 페이지는 한국어 의류・패션 어휘를 통합합니다.\n\n---\n\n## 상의 (Tops)\n\n| 단어 | 로마자 | 의미 | Wiki Page |\n|------|---------|--------|-----------|\n| 셔츠 | syoseo | shirt | [[셔츠]] |\n| 드레스 | deureseu | dress | [[드레스]] |\n| 코트 | koteu | coat | [[코트]] |\n| 스커트 | seukeo | skirt | [[스커트]] |\n\n## 하의 (Bottoms)\n\n| 단어 | 로마자 | 의미 | Wiki Page |\n|------|---------|--------|-----------|\n| 바지 | baji | pants | [[바지]] |\n\n## 신발/액세서리 (Footwear/Accessories)\n\n| 단어 | 로마자 | 의미 | Wiki Page |\n|------|---------|--------|-----------|\n| 구두 | gudu | shoes | [[구두]] |\n| 운동화 | undonghwa | sneakers | [[운동화]] |\n| 모자 | moja | hat | [[모자]] |\n| 양말 | yangmal | socks | [[양말]] |\n| 장갑 | jangap | gloves | [[장갑]] |\n| 목도리 | mokdoli | scarf | [[목도리]] |\n\n## 소재 (Materials)\n\n| 단어 | 로마자 | 의미 | Wiki Page |\n|------|---------|--------|-----------|\n| 면 | myeon | cotton | [[면]] |\n| 명주 | myeongju | silk | [[명주]] |\n\n## 색상 의류 (Colored Clothing)\n\n| 단어 | 로마자 | 의미 | Wiki Page |\n|------|---------|--------|-----------|\n| 빨간 드레스 | ppalggan deureseu | red dress | [[빨간 드레스]] |\n| 파란 셔츠 | palan syoseo | blue shirt | [[파란 셔츠]] |\n| 하얀 바지 | hayan baji | white pants | [[하얀 바지]] |\n| 검은 구두 | geomeun gudu | black shoes | [[검은 구두]] |\n\n---\n\n## Sources\n\n- [[clothing-vocabulary]]\n",
+    "social/dalda.md": {
+      "title": "달다",
+      "body": "# 달다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Sweet.\n\n**Etymology:** 순 우리말\n\n**Romaja:** dalda\n\n---\n\n## Examples\n\n- **너무 달아요.** — Too sweet.\n- **달고 맛있어요.** — Sweet and delicious.\n- **덜 달게 해주세요.** — Make it less sweet, please.\n\n---\n\n## Related Terms\n\n- [[맵다]] — spicy\n- [[시다]] — sour\n- [[쓰다]] — bitter\n- [[맛있다]] — delicious\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
       "category": "vocabulary"
     },
-    "business/키보드.md": {
-      "title": "키보드",
-      "body": "# 키보드\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Keyboard — 타이핑하는 입력 장치.\n\n**Etymology:** 외래어 (keyboard, 영어에서 차용)\n\n**Romaja:** kibodeu\n\n---\n\n## Examples\n\n- **키보드로 타이핑해요.** — I type with the keyboard.\n- **키보드가 깨졌어요.** — The keyboard is broken.\n- **새 키보드를 샀어요.** — I bought a new keyboard.\n\n---\n\n## Related Terms\n\n- [[컴퓨터]] — computer\n- [[화면]] — screen\n- [[타이핑]] — typing\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
+    "social/beoseu.md": {
+      "title": "버스",
+      "body": "# 버스\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Bus — 다수의 승객을 수송하는 대형 차량.\n\n**Etymology:** 외래어 (bus, 영어에서 차용)\n\n**Romaja:** beoseu\n\n---\n\n## Examples\n\n- **버스는 어디서 타요?** — Where do I take the bus?\n- **버스 정류장이에요.** — It's a bus stop.\n- **다음 버스가 언제예요?** — When is the next bus?\n\n---\n\n## Related Terms\n\n- [[지하철]] — subway\n- [[택시]] — taxi\n- [[기차]] — train\n- [[정류장]] — stop\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
       "category": "vocabulary"
     },
     "sumimasen-wa-doko-desuka.md": {
@@ -1477,6 +1462,11 @@
     "food/화면.md": {
       "title": "화면",
       "body": "# 화면\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Screen — 디스플레이 장치.\n\n**Etymology:** 한자 (畫面) 기반\n\n**Romaja:** hwamyeon\n\n---\n\n## Examples\n\n- **화면이 커요.** — The screen is big.\n- **화면을 봐 주세요.** — Please look at the screen.\n- **화면이 깨졌어요.** — The screen is broken.\n\n---\n\n## Related Terms\n\n- [[컴퓨터]] — computer\n- [[키보드]] — keyboard\n- [[스마트폰]] — smartphone\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
+      "category": "vocabulary"
+    },
+    "business/키보드.md": {
+      "title": "키보드",
+      "body": "# 키보드\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Keyboard — 타이핑하는 입력 장치.\n\n**Etymology:** 외래어 (keyboard, 영어에서 차용)\n\n**Romaja:** kibodeu\n\n---\n\n## Examples\n\n- **키보드로 타이핑해요.** — I type with the keyboard.\n- **키보드가 깨졌어요.** — The keyboard is broken.\n- **새 키보드를 샀어요.** — I bought a new keyboard.\n\n---\n\n## Related Terms\n\n- [[컴퓨터]] — computer\n- [[화면]] — screen\n- [[타이핑]] — typing\n\n---\n\n## Sources\n\n- [[technology-and-internet]]",
       "category": "vocabulary"
     },
     "social/인터넷.md": {
@@ -1629,11 +1619,6 @@
       "body": "# 맵다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Spicy / hot (in flavor).\n\n**Etymology:** 순 우리말\n\n**Romaja:** maepda\n\n---\n\n## Examples\n\n- **너무 매워요.** — Too spicy.\n- **매운 거 좋아해요.** — I like spicy food.\n- **안 매운 거 주세요.** — Not spicy, please.\n\n---\n\n## Related Terms\n\n- [[달다]] — sweet\n- [[음식]] — food\n- [[맛있다]] — delicious\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
       "category": "vocabulary"
     },
-    "social/dalda.md": {
-      "title": "달다",
-      "body": "# 달다\n\n**Part of Speech:** 형용사 (adjective)\n\n**Definition:** Sweet.\n\n**Etymology:** 순 우리말\n\n**Romaja:** dalda\n\n---\n\n## Examples\n\n- **너무 달아요.** — Too sweet.\n- **달고 맛있어요.** — Sweet and delicious.\n- **덜 달게 해주세요.** — Make it less sweet, please.\n\n---\n\n## Related Terms\n\n- [[맵다]] — spicy\n- [[시다]] — sour\n- [[쓰다]] — bitter\n- [[맛있다]] — delicious\n\n---\n\n## Sources\n\n- [[food-and-dining-kr]]",
-      "category": "vocabulary"
-    },
     "korean-food-culture.md": {
       "title": "한국 음식 문화 (Korean Food Culture)",
       "body": "# 한국 음식 문화 (Korean Food Culture)\n\n**Type:** 문화 노트, 음식, 식사 예절\n**지역:** 한국 (대한민국)\n\n## Overview\n\n한국 음식 문화는 **'음식물이 곧 마음'**이라는 관념. 함께 나누는 음식이 관계의 핵심. **집밥** 문화, **후식 ( dessert)** 문화, **음주 문화**가 뚜렷.\n\n## Overview (English)\n\nKorean food culture believes **\"food is heart\"** — sharing food is the core of relationships. Distinct **home-cooking** culture, **dessert** culture, and **drinking** culture are prominent.\n\n## 핵심 음식 용어\n\n| 음식 | 설명 | 핵심 표현 |\n|------|------|-----------|\n| **김치** | 한국 대표 발효음식 | \"김치찌개 끓여주세요\" |\n| **비빔밥** | 나물을 밥 위에 올려 치킨 가루+양념 | \"비빔밥 맛있어요!\" |\n| **불고기** | 달콤짭쪼름한 양념 소고기 | \"불고기 구워요\" |\n| **떡볶이** | 매운 떡, 어묵, 라면 | \"핵꺼이\" (매운 것) |\n| **삼겹살** | 돼지肚살 그릴 구이 | \"삼겹살 시켰어요\" |\n\n## 식사 예절\n\n### 술桌上的 예절\n\n한국의 술文化는 **'한잔干杯'**에서 시작:\n\n1. **나이 차이**: 먼저 Year-old가 술을 따름\n2. **손등으로 술받기**: 상대방의 손등에 술잔을 받쳐줌\n3. **마지막 잔**: 술을 다 마시면 상대방이 다시 따름\n\n> \"네, 감사합니다. 잘 먹겠습니다.\" (받기ながら)\n> \"네, 잘 먹겠습니다.\" (밥 앞)\n\n### 후식 (Dessert)\n\n한국의 **후식** 문화は急速に 성장中:\n\n- **베이커리**: 巴黎? (巴黎) 式 빵이유행\n- **카페 디저트**: 크로플, 타르트, 딸기 케이크\n- **인스타**：카페文化が爆発\n\n## Sources\n\n- [[food-and-dining-kr]] — 한국 음식 어휘\n",
@@ -1704,6 +1689,11 @@
       "body": "# Korean Dating Culture\n\n**Type:** 문화 노트, 恋愛\n**지역:** 한국 (대한민국)\n\n## Overview\n\n한국 데이팅 문화는 **단계(段階)·계열(階級)·K-content 영향** 중심. 썸(좁은曖昧함)이라는 독특한 단계, 존댓말→반말 전환의 결정성, 100일 기념일 의례가 특징. K-drama/K-pop이 роман틱 표현에 큰 영향.\n\n## Setting\n\nA first date in Korea: **카페, 식당, 영화, 전시회, 공원**. Daytime preferred for first dates (낮 데이트); evening for established couples. 둘만의 시간(2人だけの時間)을 점점 늘려가는 패턴.\n\n## Roles\n\n- **썸 상대 (some sangdae)** — Person you're in \"some\" stage with\n- **고백하는 사람 (go-baeng-ha-neun sa-ram)** — Confessor\n- **사귀는 사람 (sa-gwi-neun sa-ram)** — Person you're dating\n- **연인 (yeon-in)** — Lover/partner\n- **남자친구 / 여자친구 (nam-ja-chin-gu / yeo-ja-chin-gu)** — Boyfriend/girlfriend (literal: \"male friend\"/\"female friend\" but means romantic partner)\n\n## Scenario: Korean Dating Stages\n\n1. **관심 (관심 단계)** — Interest developing, often through mutual friends/work\n2. **썸 (Some stage)** — Mutual interest, ambiguous, 1-3 months\n3. **고백 (Confession)** — Explicit declaration, often with question\n4. **사귀다 (Dating)** — Official couple\n5. **연인 (Established couple)** — Long-term, possibly moving toward marriage\n6. **동거 / 결혼** — Cohabitation / marriage\n\n## Cultural Insight\n\n### 썸 (Some) 문화\n\n한국만의 독특한 연애 단계. 영어/일본어에 직접 번역 없음.\n\n**단계**:\n1. 관심 (interest) — 눈치\n2. 썸 (some) — 서로 관심, 모호함\n3. 고백 (confession) — 명시\n4. 사귀다 (dating) — 공식 연인\n5. 연인 (couple)\n\n**썸의 핵심 질문**: \"우리 지금 뭐야?\" (What are we right now?)\n\n**썸의 특징**:\n- 1-3개월 지속\n- 양쪽 모두 관심 있지만 명시 안 함\n- \"관심 있어 보이는데 확인이 안 됨\"\n\n### 존댓말 → 반말 전환\n\n**가장 중요한 관계 신호 중 하나**. 연인 사이의 핵심 전환점.\n\n- 전: \"○○씨, 오늘 뭐 했어요?\" (격식)\n- 후: \"○○아, 오늘 뭐 했어?\" (반말)\n\n**이 전환을 자연스럽게**: 보통 고백 → 사귀기 후 며칠 내.\n\n**주의**: 영원히 존댓말 = \"친구로 남고 싶다\"의 신호.\n\n### 호칭 (Titles)\n\n**호칭이 관계를 정의**:\n- 여자친구 → \"오빠\" (남자친구) / \"자기야\"\n- 남자친구 → \"여보\" / \"자기\" / \"이름+아\"\n- 친한 남자 친구 → \"형\" / \"오빠\" (주의: 연인 ❌)\n- 친한 여자 친구 → \"언니\" / \"누나\"\n\n**애칭 (endearments)**: 자기야, 여보, 내사랑, 왕자님, 공주님, 꿀님\n\n### 100일 (100 Days) 기념일\n\n**한국만의 독특한 문화**: 100일 단위로 기념.\n\n**주요 100일**:\n- 100일 — 첫 번째 큰 기념일\n- 200일, 300일, 500일\n- 1000일 — 매우 큰 milestone\n\n**선물**: 꽃, 케이크, 작은 선물, 손편지.\n\n### 결제 문화\n\n**전통**: 남자친구가 계산.\n**Z세대 변화**:\n- 더치페이 (Dutch pay) 흔함\n- \"내가 낼게\" / \"다음에 네가 내\"\n- 각자 다른 문화 존중\n\n### 계절 / 기념일\n\n- **발렌타인 (2/14)**: 여자가 남자에게 초콜릿\n- **화이트데이 (3/14)**: 남자가 여자에게 사탕\n- **빼빼로데이 (11/11)**: 빼빼로 교환\n- **기념일**: 100일 단위 + 1주년\n\n### K-Drama / K-Pop 영향\n\n**한국 데이트 문화는 K-content에 영향**:\n- \"오빠\" 호칭 (드라마 영향)\n- 썸 문화 (드라마 묘사)\n- 100일 기념일\n- 이상형 (ideal type) 개념\n\n### Consent\n\n**현대 한국에서도 명시적 동의가 표준**:\n- \"손 잡아도 돼?\" (Can I hold your hand?)\n- \"키스해도 돼?\" (Can I kiss you?)\n\n**질투 표현**: \"이 사람 누구야?\" \"왜 그 사람이랑?\" — 한국 연애의 일부로 받아들여짐 (단, 폭언/통제는 NO).\n\n## Useful Phrases\n\n- [[안녕하세요]] — hello\n- [[감사합니다]] — thank you\n- [[죄송합니다]] — I'm sorry\n- [[sarang]] — love\n- [[chingu]] — friend (also boyfriend/girlfriend as 남자친구/여자친구)\n- 좋아해요 — I like you\n- 사랑해 — I love you\n- 보고 싶어 — I miss you\n- 자기야 — honey/baby\n- 여보 — honey (married)\n- 고백할게 — I'll confess\n- 사귀자 — Let's date\n\n## What NOT to Do\n\n- ❌ **너무 일찍 반말** (친구로 인식될 위험)\n- ❌ **너무 일찍 신체 접촉** (불편)\n- ❌ **지나친 소유욕/질투** (독)\n- ❌ **연락 안 하기** (관심 없는 신호)\n- ❌ **100일 / 기념일 무시** (큰 매너 위반)\n- ❌ **\"우리 사귀자\" 너무 일찍** (1-2주 내) — 부담\n- ❌ **공개적인 애정 표현 (PDA) 과도** — 부끄럽게 느낄 수 있음\n- ❌ **전 애인 비교** — 절대 금기\n\n## Body Language\n\n| Gesture | Meaning |\n|---|---|\n| 손 잡기 (holding hands) | 관심, 사귀는 중 |\n| 팔짱 끼기 (linked arms) | 친밀 |\n| 어깨 기대기 (leaning on shoulder) | 편안함 |\n| 머리 쓰다듬기 (patting head) | 애정 (남→여) |\n| 손등 쓰다듬기 | 부드러운 애정 |\n| 눈 마주침 + 미소 | 관심 표현 |\n| 시선 회피 | 부담, 쑥스러움 |\n| 스마트폰 확인 | 관심 없음 (예의 위반) |\n\n## Cross-Reference\n\n- Compare with: [[english-dating-culture]], [[japanese-dating-culture]], [[spanish-dating-culture]]\n- See also: [[sarang]], [[chingu]], [[annyeonghaseyo]]\n\n## 100일 / 기념일 문화 상세\n\n- **100일**: 첫 기념일. 꽃, 케이크, 작은 선물\n- **200일**: 100일보다 덜 중요하지만 챙김\n- **300일**: 관계 안정화 시점\n- **500일**: 중요한 milestone\n- **1000일**: 거의 결혼 수준, 큰 선물\n- **1주년**: 365일, 더 중요한 milestone\n- **기념일 무시는 큰 매너 위반**\n\n## Sources\n\n- [[dating-romance-kr]] — 메인 소스\n- 별에서 온 그대, 사랑의 불시착, 응답하라 1988\n- TalkToMeInKorean Level 7-9\n- 국립국어원 표준국어대사전\n- KBS 한국어\n- 한국 연애 트렌드 보고서 (2023)\n",
       "category": "culture"
     },
+    "social/약.md": {
+      "title": "약",
+      "body": "# 약\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Medicine / drug — 질병 치료 물질.\n\n**Etymology:** 한자 (藥) 기반\n\n**Romaja:** yak\n\n---\n\n## Examples\n\n- **약을 먹어요.** — I take medicine.\n- **약이 써요.** — The medicine is bitter.\n- **약국에서 사요.** — I buy at a pharmacy.\n\n---\n\n## Related Terms\n\n- [[의사]] — doctor\n- [[병원]] — hospital\n- [[감기]] — cold\n\n---\n\n## Sources\n\n- [[health-and-body]]",
+      "category": "vocabulary"
+    },
     "social/gonghang.md": {
       "title": "공항",
       "body": "# 공항\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Airport — 항공기 이착륙 및 여객 처리 시설.\n\n**Etymology:** 순 우리말 + 한자 (空港)\n\n**Romaja:** gonghang\n\n---\n\n## Examples\n\n- **공항은 어디예요?** — Where is the airport?\n- **공항까지 어떻게 가요?** — How do I get to the airport?\n- **공항에서 만나요.** — Let's meet at the airport.\n\n---\n\n## Related Terms\n\n- [[여권]] — passport\n- [[입국심사]] — immigration\n- [[비행기]] — airplane\n- [[탑승]] — boarding\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]\n- [[first-travel-japan]]",
@@ -1712,11 +1702,6 @@
     "social/jim.md": {
       "title": "짐",
       "body": "# 짐\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Luggage / baggage.\n\n**Etymology:** 한자 (짐) 기반\n\n**Romaja:** jim\n\n---\n\n## Examples\n\n- **짐이 많아요.** — I have a lot of luggage.\n- **짐 봐주세요.** — Please watch my luggage.\n- **짐 찾으러 가요.** — I'm going to pick up my luggage.\n\n---\n\n## Related Terms\n\n- [[여행]] — travel\n- [[비행기]] — airplane\n- [[호텔]] — hotel\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
-      "category": "vocabulary"
-    },
-    "social/beoseu.md": {
-      "title": "버스",
-      "body": "# 버스\n\n**Part of Speech:** 명사 (noun)\n\n**Definition:** Bus — 다수의 승객을 수송하는 대형 차량.\n\n**Etymology:** 외래어 (bus, 영어에서 차용)\n\n**Romaja:** beoseu\n\n---\n\n## Examples\n\n- **버스는 어디서 타요?** — Where do I take the bus?\n- **버스 정류장이에요.** — It's a bus stop.\n- **다음 버스가 언제예요?** — When is the next bus?\n\n---\n\n## Related Terms\n\n- [[지하철]] — subway\n- [[택시]] — taxi\n- [[기차]] — train\n- [[정류장]] — stop\n- [[travel]]\n\n---\n\n## Sources\n\n- [[travel-basics-kr]]",
       "category": "vocabulary"
     },
     "social/hotel.md": {
@@ -2209,9 +2194,9 @@
         "vocabularyPages": [
           "business/cheap.md",
           "business/expensive.md",
-          "clothing/wool.md",
-          "clothing/socks.md",
-          "clothing/boots.md"
+          "business/head.md",
+          "business/traffic-light.md",
+          "emotions/kiss.md"
         ],
         "expressionPages": [
           "i-love-you.md",
@@ -2222,9 +2207,9 @@
       "vocabulary": [
         "business/cheap.md",
         "business/expensive.md",
-        "clothing/wool.md",
-        "clothing/socks.md",
-        "clothing/boots.md"
+        "business/head.md",
+        "business/traffic-light.md",
+        "emotions/kiss.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -2232,7 +2217,7 @@
       ],
       "culture": "english-shopping-culture.md",
       "meta": {
-        "estimatedReadMinutes": 3,
+        "estimatedReadMinutes": 4,
         "relatedStages": [
           "en_1_1",
           "en_1_2",
@@ -2262,11 +2247,11 @@
       "wikiOutput": {
         "hubPage": "Language/wiki/En/sources/travel.md",
         "vocabularyPages": [
-          "clothing/wool.md",
-          "clothing/socks.md",
-          "clothing/boots.md",
-          "clothing/leather.md",
-          "clothing/shirt.md"
+          "business/head.md",
+          "business/traffic-light.md",
+          "emotions/kiss.md",
+          "food/sweet.md",
+          "clothing/wool.md"
         ],
         "expressionPages": [
           "i-love-you.md",
@@ -2275,11 +2260,11 @@
         "culturePage": "english-travel-culture.md"
       },
       "vocabulary": [
-        "clothing/wool.md",
-        "clothing/socks.md",
-        "clothing/boots.md",
-        "clothing/leather.md",
-        "clothing/shirt.md"
+        "business/head.md",
+        "business/traffic-light.md",
+        "emotions/kiss.md",
+        "food/sweet.md",
+        "clothing/wool.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -2287,7 +2272,7 @@
       ],
       "culture": "english-travel-culture.md",
       "meta": {
-        "estimatedReadMinutes": 4,
+        "estimatedReadMinutes": 5,
         "relatedStages": [
           "en_t_1",
           "en_t_2",
@@ -2438,11 +2423,11 @@
       "wikiOutput": {
         "hubPage": "Language/wiki/En/sources/literature-passages.md",
         "vocabularyPages": [
-          "clothing/wool.md",
-          "clothing/socks.md",
-          "clothing/boots.md",
-          "clothing/leather.md",
-          "clothing/shirt.md"
+          "business/head.md",
+          "business/traffic-light.md",
+          "emotions/kiss.md",
+          "food/sweet.md",
+          "clothing/wool.md"
         ],
         "expressionPages": [
           "i-love-you.md",
@@ -2451,11 +2436,11 @@
         "culturePage": null
       },
       "vocabulary": [
-        "clothing/wool.md",
-        "clothing/socks.md",
-        "clothing/boots.md",
-        "clothing/leather.md",
-        "clothing/shirt.md"
+        "business/head.md",
+        "business/traffic-light.md",
+        "emotions/kiss.md",
+        "food/sweet.md",
+        "clothing/wool.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -2463,7 +2448,7 @@
       ],
       "culture": null,
       "meta": {
-        "estimatedReadMinutes": 2,
+        "estimatedReadMinutes": 3,
         "relatedStages": [
           "en_1_1",
           "en_1_2",
@@ -2495,9 +2480,9 @@
         "vocabularyPages": [
           "emotions/love.md",
           "emotions/friend.md",
-          "clothing/wool.md",
-          "clothing/socks.md",
-          "clothing/boots.md"
+          "business/head.md",
+          "business/traffic-light.md",
+          "emotions/kiss.md"
         ],
         "expressionPages": [
           "i-love-you.md",
@@ -2508,9 +2493,9 @@
       "vocabulary": [
         "emotions/love.md",
         "emotions/friend.md",
-        "clothing/wool.md",
-        "clothing/socks.md",
-        "clothing/boots.md"
+        "business/head.md",
+        "business/traffic-light.md",
+        "emotions/kiss.md"
       ],
       "expressions": [
         "i-love-you.md",
@@ -2957,7 +2942,7 @@
       },
       "raw": {
         "sourceFile": "business-email.md",
-        "excerpt": "- お世話になっております。\n- 突然のご連絡失礼いたします。\n- ○日止您的faxを受け取りました。\n- 先日はありがとうごいました。\n- ○月○日の会議についてお詢ねします。"
+        "excerpt": "- お世話になっております。\n- 突然のご連絡失礼いたします。\n- ○日止のfaxを受け取りました。\n- 先日はありがとうございます。\n- ○月○日の会議についてお尋ねします。"
       },
       "wikiOutput": {
         "hubPage": "Language/wiki/Jp/sources/business-email.md",
@@ -3022,10 +3007,10 @@
         "hubPage": "Language/wiki/Jp/sources/anime-drama-quotes.md",
         "vocabularyPages": [
           "clothing/ズボン.md",
-          "clothing/黒い靴.md",
-          "clothing/白いズボン.md",
-          "clothing/青いシャツ.md",
-          "clothing/靴下.md"
+          "animals/和牛.md",
+          "business/トラ.md",
+          "business/インターネット.md",
+          "food/弁当.md"
         ],
         "expressionPages": [
           "今度ご飯行かない.md",
@@ -3035,10 +3020,10 @@
       },
       "vocabulary": [
         "clothing/ズボン.md",
-        "clothing/黒い靴.md",
-        "clothing/白いズボン.md",
-        "clothing/青いシャツ.md",
-        "clothing/靴下.md"
+        "animals/和牛.md",
+        "business/トラ.md",
+        "business/インターネット.md",
+        "food/弁当.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -3260,10 +3245,10 @@
         "hubPage": "Language/wiki/Jp/sources/literature-passages.md",
         "vocabularyPages": [
           "clothing/ズボン.md",
-          "clothing/黒い靴.md",
-          "clothing/白いズボン.md",
-          "clothing/青いシャツ.md",
-          "clothing/靴下.md"
+          "animals/和牛.md",
+          "business/トラ.md",
+          "business/インターネット.md",
+          "food/弁当.md"
         ],
         "expressionPages": [
           "今度ご飯行かない.md",
@@ -3273,10 +3258,10 @@
       },
       "vocabulary": [
         "clothing/ズボン.md",
-        "clothing/黒い靴.md",
-        "clothing/白いズボン.md",
-        "clothing/青いシャツ.md",
-        "clothing/靴下.md"
+        "animals/和牛.md",
+        "business/トラ.md",
+        "business/インターネット.md",
+        "food/弁当.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -3317,8 +3302,8 @@
           "business/パスポート.md",
           "business/地図.md",
           "clothing/ズボン.md",
-          "clothing/黒い靴.md",
-          "clothing/白いズボン.md"
+          "animals/和牛.md",
+          "business/トラ.md"
         ],
         "expressionPages": [
           "今度ご飯行かない.md",
@@ -3330,8 +3315,8 @@
         "business/パスポート.md",
         "business/地図.md",
         "clothing/ズボン.md",
-        "clothing/黒い靴.md",
-        "clothing/白いズボン.md"
+        "animals/和牛.md",
+        "business/トラ.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -3370,8 +3355,8 @@
           "emotions/好き.md",
           "business/仕事.md",
           "clothing/ズボン.md",
-          "clothing/黒い靴.md",
-          "clothing/白いズボン.md"
+          "animals/和牛.md",
+          "business/トラ.md"
         ],
         "expressionPages": [
           "今度ご飯行かない.md",
@@ -3383,8 +3368,8 @@
         "emotions/好き.md",
         "business/仕事.md",
         "clothing/ズボン.md",
-        "clothing/黒い靴.md",
-        "clothing/白いズボン.md"
+        "animals/和牛.md",
+        "business/トラ.md"
       ],
       "expressions": [
         "今度ご飯行かない.md",
@@ -3487,7 +3472,7 @@
           "business/yeogwon.md",
           "business/hotel.md",
           "clothing/ズボン.md",
-          "clothing/黒い靴.md"
+          "animals/和牛.md"
         ],
         "expressionPages": [
           "sumimasen.md",
@@ -3500,7 +3485,7 @@
         "business/yeogwon.md",
         "business/hotel.md",
         "clothing/ズボン.md",
-        "clothing/黒い靴.md"
+        "animals/和牛.md"
       ],
       "expressions": [
         "sumimasen.md",
@@ -4013,11 +3998,11 @@
       "wikiOutput": {
         "hubPage": "Language/wiki/Es/sources/literature-passages.md",
         "vocabularyPages": [
-          "clothing/chaqueta.md",
-          "clothing/escapada.md",
-          "clothing/bufanda.md",
-          "clothing/camisa.md",
-          "clothing/falda.md"
+          "nature/clima.md",
+          "business/jefe.md",
+          "business/inmigración.md",
+          "business/telefono.md",
+          "business/viajes.md"
         ],
         "expressionPages": [
           "estoy-enamorado.md",
@@ -4026,11 +4011,11 @@
         "culturePage": null
       },
       "vocabulary": [
-        "clothing/chaqueta.md",
-        "clothing/escapada.md",
-        "clothing/bufanda.md",
-        "clothing/camisa.md",
-        "clothing/falda.md"
+        "nature/clima.md",
+        "business/jefe.md",
+        "business/inmigración.md",
+        "business/telefono.md",
+        "business/viajes.md"
       ],
       "expressions": [
         "estoy-enamorado.md",
@@ -4038,7 +4023,7 @@
       ],
       "culture": null,
       "meta": {
-        "estimatedReadMinutes": 2,
+        "estimatedReadMinutes": 4,
         "relatedStages": [
           "es_1_1",
           "es_1_2",
@@ -4193,8 +4178,8 @@
           "kuukou.md",
           "pasupooto.md",
           "nimotsu.md",
-          "clothing/index.md",
-          "business/키보드.md"
+          "social/dalda.md",
+          "social/beoseu.md"
         ],
         "expressionPages": [
           "sumimasen-wa-doko-desuka.md",
@@ -4206,8 +4191,8 @@
         "kuukou.md",
         "pasupooto.md",
         "nimotsu.md",
-        "clothing/index.md",
-        "business/키보드.md"
+        "social/dalda.md",
+        "social/beoseu.md"
       ],
       "expressions": [
         "sumimasen-wa-doko-desuka.md",
@@ -4215,7 +4200,7 @@
       ],
       "culture": "korean-travel-culture.md",
       "meta": {
-        "estimatedReadMinutes": 4,
+        "estimatedReadMinutes": 3,
         "relatedStages": [
           "kr_t_1",
           "kr_t_2",
@@ -4429,8 +4414,8 @@
           "social/gagyeok.md",
           "social/ssada.md",
           "social/bissada.md",
-          "clothing/index.md",
-          "business/키보드.md"
+          "social/dalda.md",
+          "social/beoseu.md"
         ],
         "expressionPages": [
           "sumimasen-wa-doko-desuka.md",
@@ -4442,8 +4427,8 @@
         "social/gagyeok.md",
         "social/ssada.md",
         "social/bissada.md",
-        "clothing/index.md",
-        "business/키보드.md"
+        "social/dalda.md",
+        "social/beoseu.md"
       ],
       "expressions": [
         "sumimasen-wa-doko-desuka.md",
@@ -4451,7 +4436,7 @@
       ],
       "culture": "korean-shopping-culture.md",
       "meta": {
-        "estimatedReadMinutes": 4,
+        "estimatedReadMinutes": 3,
         "relatedStages": [
           "kr_1_1",
           "kr_1_2",
@@ -4485,7 +4470,7 @@
           "social/masissda.md",
           "social/maepda.md",
           "social/dalda.md",
-          "clothing/index.md"
+          "social/beoseu.md"
         ],
         "expressionPages": [
           "sumimasen-wa-doko-desuka.md",
@@ -4498,7 +4483,7 @@
         "social/masissda.md",
         "social/maepda.md",
         "social/dalda.md",
-        "clothing/index.md"
+        "social/beoseu.md"
       ],
       "expressions": [
         "sumimasen-wa-doko-desuka.md",
@@ -4506,7 +4491,7 @@
       ],
       "culture": "korean-food-culture.md",
       "meta": {
-        "estimatedReadMinutes": 4,
+        "estimatedReadMinutes": 3,
         "relatedStages": [
           "kr_1_1",
           "kr_1_2",
@@ -4598,11 +4583,11 @@
       "wikiOutput": {
         "hubPage": "Language/wiki/Kr/sources/literature-passages.md",
         "vocabularyPages": [
-          "clothing/index.md",
-          "business/키보드.md",
-          "business/앱.md",
-          "business/이메일.md",
-          "business/스마트폰.md"
+          "social/dalda.md",
+          "social/beoseu.md",
+          "social/결혼식.md",
+          "social/ssada.md",
+          "social/약.md"
         ],
         "expressionPages": [
           "sumimasen-wa-doko-desuka.md",
@@ -4611,11 +4596,11 @@
         "culturePage": null
       },
       "vocabulary": [
-        "clothing/index.md",
-        "business/키보드.md",
-        "business/앱.md",
-        "business/이메일.md",
-        "business/스마트폰.md"
+        "social/dalda.md",
+        "social/beoseu.md",
+        "social/결혼식.md",
+        "social/ssada.md",
+        "social/약.md"
       ],
       "expressions": [
         "sumimasen-wa-doko-desuka.md",
