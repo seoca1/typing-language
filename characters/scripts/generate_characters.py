@@ -148,6 +148,471 @@ cherry blossom petals falling
             negative_prompt=NEGATIVE_PROMPT,
         ),
     },
+    "en-oliver": {
+        "idle": CharacterPrompt(
+            character_id="en-oliver",
+            name="Oliver",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+brown hair, short neat hair, green eyes,
+calm smile, gentle expression,
+formal outfit, vest, dress shirt, tie, slacks, dress shoes,
+white background, simple background,
+anime style, clean lines, sophisticated colors,
+elegant posture, refined appearance
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="en-oliver",
+            name="Oliver",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+brown hair, short neat hair, green eyes,
+polite wave, friendly smile,
+formal outfit, vest, dress shirt, tie, slacks, dress shoes,
+white background, simple background,
+anime style, clean lines, sophisticated colors,
+courteous gesture, gentleman pose
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "jump": CharacterPrompt(
+            character_id="en-oliver",
+            name="Oliver",
+            pose="jump",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, jumping in air,
+brown hair, short neat hair, green eyes,
+surprised expression, both arms slightly raised,
+formal outfit, vest, dress shirt, tie, slacks, dress shoes,
+white background, simple background,
+anime style, clean lines, sophisticated colors,
+dynamic mid-air pose
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "pose": CharacterPrompt(
+            character_id="en-oliver",
+            name="Oliver",
+            pose="pose",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+brown hair, short neat hair, green eyes,
+confident smile, hands in pockets,
+formal outfit, vest, dress shirt, tie, slacks, dress shoes,
+white background, simple background,
+anime style, clean lines, sophisticated colors,
+stylish relaxed pose
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
+    "en-sophia": {
+        "idle": CharacterPrompt(
+            character_id="en-sophia",
+            name="Sophia",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+purple hair, short bob cut, gray eyes, glasses,
+neutral expression, cool and calm,
+modern outfit, tech jacket, t-shirt, cargo pants, boots,
+white background, simple background,
+anime style, clean lines, tech-inspired colors,
+professional pose, modern aesthetic
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="en-sophia",
+            name="Sophia",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+purple hair, short bob cut, gray eyes, glasses,
+friendly wave, slight smile,
+modern outfit, tech jacket, t-shirt, cargo pants, boots,
+white background, simple background,
+anime style, clean lines, tech-inspired colors,
+tech-savvy pose
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "jump": CharacterPrompt(
+            character_id="en-sophia",
+            name="Sophia",
+            pose="jump",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, jumping,
+purple hair, short bob cut flying, gray eyes, glasses,
+excited expression, victorious pose,
+modern outfit, tech jacket, t-shirt, cargo pants, boots,
+white background, simple background,
+anime style, clean lines, tech-inspired colors,
+dynamic jump, energetic movement
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "pose": CharacterPrompt(
+            character_id="en-sophia",
+            name="Sophia",
+            pose="pose",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+purple hair, short bob cut, gray eyes, glasses,
+confident smile, thumbs up,
+modern outfit, tech jacket, t-shirt, cargo pants, boots,
+white background, simple background,
+anime style, clean lines, tech-inspired colors,
+victory pose, tech aesthetic
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
+    "jp-yuki": {
+        "idle": CharacterPrompt(
+            character_id="jp-yuki",
+            name="Yuki",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+brown hair, twin tails with ribbons, bright eyes,
+cheerful smile, energetic expression,
+school uniform, sailor uniform, pleated skirt, knee socks, loafers,
+white background, simple background,
+anime style, clean lines, vibrant colors,
+cute pose, youthful appearance
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="jp-yuki",
+            name="Yuki",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+brown hair, twin tails with ribbons, bright eyes,
+big smile, enthusiastic wave,
+school uniform, sailor uniform, pleated skirt, knee socks, loafers,
+white background, simple background,
+anime style, clean lines, vibrant colors,
+energetic gesture, kawaii style
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "jump": CharacterPrompt(
+            character_id="jp-yuki",
+            name="Yuki",
+            pose="jump",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, jumping high,
+brown hair, twin tails flying up, bright eyes,
+excited expression, arms raised,
+school uniform, sailor uniform, pleated skirt, knee socks, loafers,
+white background, simple background,
+anime style, clean lines, vibrant colors,
+dynamic jump pose, playful movement
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "dance": CharacterPrompt(
+            character_id="jp-yuki",
+            name="Yuki",
+            pose="dance",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, dancing pose,
+brown hair, twin tails flowing, bright eyes,
+happy expression, arms in dance position,
+school uniform, sailor uniform, pleated skirt, knee socks, loafers,
+white background, simple background,
+anime style, clean lines, vibrant colors,
+cheerful dance movement
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
+    "jp-kaito": {
+        "idle": CharacterPrompt(
+            character_id="jp-kaito",
+            name="Kaito",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+black hair, messy short hair, dark eyes,
+cool expression, slight smirk,
+casual Japanese style, hoodie, jeans, sneakers,
+white background, simple background,
+anime style, clean lines, cool colors,
+confident posture, modern Japanese youth
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="jp-kaito",
+            name="Kaito",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+black hair, messy short hair, dark eyes,
+friendly wave, confident smile,
+casual Japanese style, hoodie, jeans, sneakers,
+white background, simple background,
+anime style, clean lines, cool colors,
+casual pose, charming gesture
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "jump": CharacterPrompt(
+            character_id="jp-kaito",
+            name="Kaito",
+            pose="jump",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, jumping,
+black hair, messy short hair flying, dark eyes,
+excited expression, arms raised,
+casual Japanese style, hoodie, jeans, sneakers,
+white background, simple background,
+anime style, clean lines, cool colors,
+dynamic action pose
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "pose": CharacterPrompt(
+            character_id="jp-kaito",
+            name="Kaito",
+            pose="pose",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, victory pose,
+black hair, messy short hair, dark eyes,
+confident smile, peace sign gesture,
+casual Japanese style, hoodie, jeans, sneakers,
+white background, simple background,
+anime style, clean lines, cool colors,
+stylish pose, charismatic appearance
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
+    "es-isabella": {
+        "idle": CharacterPrompt(
+            character_id="es-isabella",
+            name="Isabella",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+dark brown hair, long wavy hair with red rose, brown eyes,
+passionate expression, confident smile,
+traditional flamenco dress, red ruffled dress, Spanish style,
+white background, simple background,
+anime style, clean lines, warm vibrant colors,
+elegant posture, Spanish beauty,
+flamenco theme
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="es-isabella",
+            name="Isabella",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+dark brown hair, long wavy hair with red rose, brown eyes,
+graceful wave, elegant smile,
+traditional flamenco dress, red ruffled dress, Spanish style,
+white background, simple background,
+anime style, clean lines, warm vibrant colors,
+flamenco gesture, Spanish elegance
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "dance": CharacterPrompt(
+            character_id="es-isabella",
+            name="Isabella",
+            pose="dance",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, flamenco dance pose,
+dark brown hair, long wavy hair flowing with red rose, brown eyes,
+intense expression, passionate eyes,
+traditional flamenco dress, red ruffled dress flowing, Spanish style,
+white background, simple background,
+anime style, clean lines, warm vibrant colors,
+dynamic flamenco pose, arms raised gracefully,
+dress swirling, traditional Spanish dance
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "clap": CharacterPrompt(
+            character_id="es-isabella",
+            name="Isabella",
+            pose="clap",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+dark brown hair, long wavy hair with red rose, brown eyes,
+excited expression, clapping hands above head,
+traditional flamenco dress, red ruffled dress, Spanish style,
+white background, simple background,
+anime style, clean lines, warm vibrant colors,
+celebratory pose, rhythmic gesture
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
+    "es-carlos": {
+        "idle": CharacterPrompt(
+            character_id="es-carlos",
+            name="Carlos",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+dark hair, short curly hair, brown eyes,
+friendly smile, warm expression,
+casual sporty outfit, soccer jersey, shorts, athletic shoes,
+white background, simple background,
+anime style, clean lines, energetic colors,
+athletic build, relaxed posture
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="es-carlos",
+            name="Carlos",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+dark hair, short curly hair, brown eyes,
+bright smile, enthusiastic wave,
+casual sporty outfit, soccer jersey, shorts, athletic shoes,
+white background, simple background,
+anime style, clean lines, energetic colors,
+friendly gesture, sporty appearance
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "jump": CharacterPrompt(
+            character_id="es-carlos",
+            name="Carlos",
+            pose="jump",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, jumping celebration,
+dark hair, short curly hair, brown eyes,
+victorious expression, fist pump,
+casual sporty outfit, soccer jersey, shorts, athletic shoes,
+white background, simple background,
+anime style, clean lines, energetic colors,
+athletic jump, celebrating pose
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "pose": CharacterPrompt(
+            character_id="es-carlos",
+            name="Carlos",
+            pose="pose",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, victory pose,
+dark hair, short curly hair, brown eyes,
+proud smile, arms crossed confidently,
+casual sporty outfit, soccer jersey, shorts, athletic shoes,
+white background, simple background,
+anime style, clean lines, energetic colors,
+confident athletic pose
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
+    "es-luna": {
+        "idle": CharacterPrompt(
+            character_id="es-luna",
+            name="Luna",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+auburn hair, messy bun with paintbrush, hazel eyes,
+thoughtful expression, artistic vibe,
+bohemian outfit, beret, painter's smock, casual pants, boots,
+white background, simple background,
+anime style, clean lines, artistic colors,
+creative posture, painter aesthetic,
+colorful paint splashes accent
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="es-luna",
+            name="Luna",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+auburn hair, messy bun with paintbrush, hazel eyes,
+bright smile, friendly wave,
+bohemian outfit, beret, painter's smock, casual pants, boots,
+white background, simple background,
+anime style, clean lines, artistic colors,
+artistic gesture, creative pose
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "jump": CharacterPrompt(
+            character_id="es-luna",
+            name="Luna",
+            pose="jump",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, jumping,
+auburn hair, messy bun with paintbrush flying, hazel eyes,
+excited expression, arms raised,
+bohemian outfit, beret, painter's smock, casual pants, boots,
+white background, simple background,
+anime style, clean lines, artistic colors,
+artistic celebration, creative energy
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "pose": CharacterPrompt(
+            character_id="es-luna",
+            name="Luna",
+            pose="pose",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, artistic pose,
+auburn hair, messy bun with paintbrush, hazel eyes,
+inspired expression, holding palette,
+bohemian outfit, beret, painter's smock, casual pants, boots,
+white background, simple background,
+anime style, clean lines, artistic colors,
+creative gesture, artistic flair
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
     "kr-hana": {
         "idle": CharacterPrompt(
             character_id="kr-hana",
@@ -163,6 +628,195 @@ white background, simple background,
 anime style, clean lines, elegant pastel colors,
 refined posture, traditional Korean beauty,
 Korean traditional motifs
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="kr-hana",
+            name="Hana",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+black hair, long straight hair with traditional Korean hair pin (binyeo),
+shy smile, gentle wave with both hands,
+traditional Korean hanbok, pink and white jeogori, flowing chima,
+white background, simple background,
+anime style, clean lines, elegant pastel colors,
+modest gesture, traditional Korean etiquette,
+flowing hanbok sleeves
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "dance": CharacterPrompt(
+            character_id="kr-hana",
+            name="Hana",
+            pose="dance",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, traditional Korean dance pose,
+black hair, long straight hair flowing with traditional Korean hair pin (binyeo),
+serene expression, graceful smile,
+traditional Korean hanbok, pink and white jeogori, flowing chima,
+white background, simple background,
+anime style, clean lines, elegant pastel colors,
+elegant dance movement, traditional Korean fan dance,
+flowing hanbok, traditional Korean choreography
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "clap": CharacterPrompt(
+            character_id="kr-hana",
+            name="Hana",
+            pose="clap",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+black hair, long straight hair with traditional Korean hair pin (binyeo),
+joyful expression, clapping hands gently,
+traditional Korean hanbok, pink and white jeogori, flowing chima,
+white background, simple background,
+anime style, clean lines, elegant pastel colors,
+celebratory pose, refined gesture
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
+    "kr-minho": {
+        "idle": CharacterPrompt(
+            character_id="kr-minho",
+            name="Minho",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+dyed hair, stylish short hair with highlights, sharp eyes,
+cool expression, charismatic gaze,
+K-pop idol outfit, stylish jacket, skinny jeans, designer sneakers,
+white background, simple background,
+anime style, clean lines, trendy colors,
+confident posture, idol aesthetic,
+modern Korean fashion
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="kr-minho",
+            name="Minho",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, standing,
+dyed hair, stylish short hair with highlights, sharp eyes,
+charming smile, finger heart gesture (Korean),
+K-pop idol outfit, stylish jacket, skinny jeans, designer sneakers,
+white background, simple background,
+anime style, clean lines, trendy colors,
+idol pose, fan service gesture,
+sparkle effects
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "dance": CharacterPrompt(
+            character_id="kr-minho",
+            name="Minho",
+            pose="dance",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, dynamic dance pose,
+dyed hair, stylish short hair moving with highlights, sharp eyes,
+intense expression, focused eyes,
+K-pop idol outfit, stylish jacket, skinny jeans, designer sneakers,
+white background, simple background,
+anime style, clean lines, trendy colors,
+powerful dance move, K-pop choreography,
+dynamic motion
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "pose": CharacterPrompt(
+            character_id="kr-minho",
+            name="Minho",
+            pose="pose",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1boy, solo, full body, victory pose,
+dyed hair, stylish short hair with highlights, sharp eyes,
+confident smile, peace sign,
+K-pop idol outfit, stylish jacket, skinny jeans, designer sneakers,
+white background, simple background,
+anime style, clean lines, trendy colors,
+stylish pose, idol charm
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+    },
+    "kr-jiwoo": {
+        "idle": CharacterPrompt(
+            character_id="kr-jiwoo",
+            name="Jiwoo",
+            pose="idle",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+dyed pastel pink hair, short bob cut, cute eyes,
+cheerful expression, gamer aesthetic,
+casual Korean fashion, oversized hoodie, shorts, thigh-high socks, sneakers,
+white background, simple background,
+anime style, clean lines, cute pastel colors,
+relaxed posture, modern Korean youth,
+gaming headphones around neck
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "wave": CharacterPrompt(
+            character_id="kr-jiwoo",
+            name="Jiwoo",
+            pose="wave",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, standing,
+dyed pastel pink hair, short bob cut, cute eyes,
+bright smile, enthusiastic wave,
+casual Korean fashion, oversized hoodie, shorts, thigh-high socks, sneakers,
+white background, simple background,
+anime style, clean lines, cute pastel colors,
+energetic gesture, kawaii Korean style,
+gaming headphones around neck
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "jump": CharacterPrompt(
+            character_id="kr-jiwoo",
+            name="Jiwoo",
+            pose="jump",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, jumping excitedly,
+dyed pastel pink hair, short bob cut flying, cute eyes,
+excited expression, victory gesture,
+casual Korean fashion, oversized hoodie, shorts, thigh-high socks, sneakers,
+white background, simple background,
+anime style, clean lines, cute pastel colors,
+playful jump, gamer celebration,
+gaming headphones around neck
+""".strip(),
+            negative_prompt=NEGATIVE_PROMPT,
+        ),
+        "pose": CharacterPrompt(
+            character_id="kr-jiwoo",
+            name="Jiwoo",
+            pose="pose",
+            prompt="""
+masterpiece, best quality, highly detailed,
+1girl, solo, full body, victory pose,
+dyed pastel pink hair, short bob cut, cute eyes,
+proud smile, double peace sign,
+casual Korean fashion, oversized hoodie, shorts, thigh-high socks, sneakers,
+white background, simple background,
+anime style, clean lines, cute pastel colors,
+cute pose, modern Korean gamer aesthetic,
+            gaming headphones around neck
 """.strip(),
             negative_prompt=NEGATIVE_PROMPT,
         ),
@@ -350,7 +1004,136 @@ class HuggingFaceAPI:
                 error = response.json()
                 print(f"  ✗ 생성 실패: {error}")
                 return None
-                
+
+        except Exception as e:
+            print(f"  ✗ 에러: {e}")
+            return None
+
+
+class OpenAIAPI:
+    """OpenAI DALL-E / GPT Image Generation API 백엔드"""
+
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+        self.api_url = "https://api.openai.com/v1/images/generations"
+        self.headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        }
+
+    def check_connection(self) -> bool:
+        """API 연결 확인"""
+        try:
+            response = requests.get(
+                "https://api.openai.com/v1/models",
+                headers=self.headers,
+                timeout=10
+            )
+            return response.status_code == 200
+        except:
+            return False
+
+    def generate(self, prompt: CharacterPrompt) -> Optional[bytes]:
+        """이미지 생성"""
+        payload = {
+            "model": "gpt-image-1",
+            "prompt": prompt.prompt,
+            "n": 1,
+            "size": "1024x1024",
+            "quality": "medium",
+        }
+
+        try:
+            print(f"  생성 중: {prompt.name} - {prompt.pose}...")
+
+            response = requests.post(
+                self.api_url,
+                headers=self.headers,
+                json=payload,
+                timeout=120
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                if result.get("data") and result["data"][0].get("b64_json"):
+                    image_data = base64.b64decode(
+                        result["data"][0]["b64_json"]
+                    )
+                    print(f"  ✓ 생성 완료: {len(image_data)} bytes")
+                    return image_data
+                elif result.get("data") and result["data"][0].get("url"):
+                    image_resp = requests.get(result["data"][0]["url"])
+                    print(f"  ✓ 생성 완료: {len(image_resp.content)} bytes")
+                    return image_resp.content
+                else:
+                    print(f"  ✗ 생성 실패: 이미지 데이터 없음")
+                    return None
+            else:
+                error = response.json()
+                print(f"  ✗ 생성 실패: {error}")
+                return None
+
+        except Exception as e:
+            print(f"  ✗ 에러: {e}")
+            return None
+
+
+class MiniMaxAPI:
+    """MiniMax Image Generation API 백엔드"""
+
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+        self.api_url = "https://api.minimaxi.com/v1/image_generation"
+        self.headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        }
+
+    def check_connection(self) -> bool:
+        """API 연결 확인"""
+        return bool(self.api_key) and len(self.api_key) > 10
+
+    def generate(self, prompt: CharacterPrompt) -> Optional[bytes]:
+        """이미지 생성"""
+        payload = {
+            "model": "image-01-live",
+            "prompt": prompt.prompt,
+            "style": {
+                "style_type": "漫画",
+                "style_weight": 0.8
+            },
+            "aspect_ratio": "2:3",
+            "n": 1,
+            "response_format": "base64",
+            "prompt_optimizer": True,
+        }
+
+        try:
+            print(f"  생성 중: {prompt.name} - {prompt.pose}...")
+
+            response = requests.post(
+                self.api_url,
+                headers=self.headers,
+                json=payload,
+                timeout=60
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                if result.get("data", {}).get("image_base64"):
+                    image_data = base64.b64decode(
+                        result["data"]["image_base64"][0]
+                    )
+                    print(f"  ✓ 생성 완료: {len(image_data)} bytes")
+                    return image_data
+                else:
+                    print(f"  ✗ 생성 실패: 이미지 데이터 없음")
+                    return None
+            else:
+                error = response.json()
+                print(f"  ✗ 생성 실패: {error}")
+                return None
+
         except Exception as e:
             print(f"  ✗ 에러: {e}")
             return None
@@ -396,6 +1179,18 @@ def generate_character_images(
             return
         client = HuggingFaceAPI(api_token)
         print("Hugging Face API 연결 중...")
+    elif backend == "minimax":
+        if not api_token:
+            print("✗ MiniMax API 토큰이 필요합니다: --token 옵션 사용")
+            return
+        client = MiniMaxAPI(api_token)
+        print("MiniMax API 연결 중...")
+    elif backend == "openai":
+        if not api_token:
+            print("✗ OpenAI API 토큰이 필요합니다: --token 옵션 사용")
+            return
+        client = OpenAIAPI(api_token)
+        print("OpenAI API 연결 중...")
     else:
         print(f"✗ 지원하지 않는 백엔드: {backend}")
         return
@@ -469,7 +1264,7 @@ def main():
     
     parser.add_argument(
         "--backend",
-        choices=["webui", "replicate", "huggingface"],
+        choices=["webui", "replicate", "huggingface", "minimax", "openai"],
         default="webui",
         help="AI 백엔드 선택 (기본: webui)",
     )
