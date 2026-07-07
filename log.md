@@ -2346,3 +2346,28 @@ Language Wiki XL mesh 확장 세션(2026-07-06)에서 추가된 항목을 Game T
   - ES: 97/97 = 100%
   - JP: 527/527 = 100%
   - KR: 1137/1137 = 100%
+
+### [2026-07-08] characters | 12캐릭터 × 7포즈 이미지 전액 재생성
+
+**작업 내용:**
+- OpenAI gpt-image-1 API로 84개 이미지 생성 (1024×1536)
+- `generate_characters.py` 포즈 정의: 46개 → 84개 확장 (clap/spin/pose/dance 누락 보강)
+- Config 경로: `1-idle.png` → `idle.png` 등 pose-named로統一
+- OpenAI 백엔드 파라미터修正: `response_format`, `quality`, `size` 제거 (gpt-image-1非対応)
+- 旧番号ファイル (1-idle.png 등 84개) 删除
+
+**생성 이미지:**
+- 12캐릭터: emily, oliver, sophia, sakura, yuki, kaito, isabella, carlos, luna, hana, minho, jiwoo
+- 7포즈: idle, wave, jump, clap, spin, dance, pose
+- 전부 2026-07-08 새벽 생성
+
+**커밋:**
+- `b4f666d` feat(characters): 12 chars × 7 poses via gpt-image-1
+- `7448f55` chore: remove legacy 1-7 numbered pose files
+- `d9bfe8f` chore: add __pycache__, *.pyc, .env to .gitignore
+- `7ebb640` chore: stop tracking __pycache__ files
+
+**검증:**
+- 누락 이미지: 0/84 ✅
+- git working tree: clean ✅
+- http://localhost:3000/typing-language/: 실행 중 ✅
