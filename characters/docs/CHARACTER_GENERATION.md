@@ -47,7 +47,7 @@ cd characters/scripts
 # 환경변수 설정
 export OPENAI_API_KEY="sk-proj-..."
 
-# 전체 캐릭터 생성 (12명 × 4포즈 = 48장)
+# 전체 캐릭터 생성 (12명 × 7포즈 = 84장)
 python3 generate_characters.py --backend openai --token "$OPENAI_API_KEY" --all
 
 # 특정 언어만
@@ -116,14 +116,13 @@ blurry, artist name, multiple views, multiple angles, split screen
 prototype/public/characters/
 ├── en/
 │   ├── emily/
-│   │   ├── 1-idle.png  (AI 생성, 1024×1024)
-│   │   ├── 2-wave.png
-│   │   ├── 3-jump.png
-│   │   ├── 4-clap.png
-│   │   ├── 5-spin.png
-│   │   ├── 6-dance.png
-│   │   ├── 7-pose.png
-│   │   └── idle.png    (변형)
+│   │   ├── idle.png    (AI 생성, 1024×1536)
+│   │   ├── wave.png
+│   │   ├── jump.png
+│   │   ├── clap.png
+│   │   ├── spin.png
+│   │   ├── dance.png
+│   │   └── pose.png
 │   ├── oliver/
 │   └── sophia/
 ├── jp/
@@ -150,9 +149,9 @@ prototype/public/characters/
 export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   'en-emily': {
     idle: {
-      src: '/typing-language/characters/en/emily/1-idle.png',
-      width: 300,
-      height: 450,
+      src: '/typing-language/characters/en/emily/idle.png',
+      width: 1024,
+      height: 1536,
       scale: 0.85,
       offsetY: -60,
     },
