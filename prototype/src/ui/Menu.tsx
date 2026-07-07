@@ -149,6 +149,11 @@ export function Menu({
   // Phase J: daily streak display
   const streak = getStreakDisplay();
 
+  // Stats for this language
+  const languageRecords = allLanguageStages.map((s) => records[s.id]).filter(Boolean);
+  const totalStars = languageRecords.reduce((sum, r) => sum + (r?.stars || 0), 0);
+  const clearedCount = languageRecords.filter((r) => r?.cleared).length;
+
   // 키보드 네비게이션
   const GRID_COLS = 3;
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -243,7 +248,7 @@ export function Menu({
           {flag} {langInfo.native}
           <small> · {langInfo.en}</small>
         </h1>
-        <p>{languageStages.length} {t('stages', nativeLanguage)}</p>
+        <p>{languageStages.length} {t('stages', nativeLanguage)} · ⭐{totalStars} · ✅{clearedCount}</p>
         <div className="menu-header-buttons">
           <button
             className="character-select-btn"

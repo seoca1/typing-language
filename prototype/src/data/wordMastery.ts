@@ -18,6 +18,7 @@ const STORAGE_KEY = 'typing-language-word-mastery';
 export interface WordStats {
   attemptCount: number;
   correctCount: number;
+  completeCount: number;
   mistakeCount: number;
   lastSeen: number; // timestamp ms
   lastMistake: number; // timestamp ms, 0 if none
@@ -50,6 +51,7 @@ function ensureStats(store: MasteryStore, wordId: string): WordStats {
     store[wordId] = {
       attemptCount: 0,
       correctCount: 0,
+      completeCount: 0,
       mistakeCount: 0,
       lastSeen: 0,
       lastMistake: 0,
@@ -91,6 +93,17 @@ export function recordMistake(wordId: string): void {
 }
 
 /**
+ * Record that a word was completed (typed fully, with or without prior mistakes).
+ * This is used to calculate completion rate (completeCount / attemptCount).
+ */
+export function recordComplete(wordId: string): void {
+  const store = loadStore();
+  const stats = ensureStats(store, wordId);
+  stats.completeCount++;
+  saveStore(store);
+}
+
+/**
  * Get stats for a specific word.
  */
 export function getWordStats(wordId: string): WordStats | null {
@@ -126,19 +139,20 @@ export function getStrongWords(limit: number = 5): Array<{ wordId: string; stats
 /**
  * Calculate overall mastery percentage (0-100).
  *
- * Mastery = correctCount / attemptCount across all words.
+ * Mastery = completeCount / attemptCount across all words.
+ * This represents the rate of successfully completing words (regardless of prior mistakes).
  * Returns 0 if no attempts.
  */
 export function getOverallMastery(): number {
   const store = loadStore();
   let totalAttempts = 0;
-  let totalCorrect = 0;
+  let totalComplete = 0;
   for (const stats of Object.values(store)) {
     totalAttempts += stats.attemptCount;
-    totalCorrect += stats.correctCount;
+    totalComplete += stats.completeCount;
   }
   if (totalAttempts === 0) return 0;
-  return Math.round((totalCorrect / totalAttempts) * 100);
+  return Math.round((totalComplete / totalAttempts) * 100);
 }
 
 /**

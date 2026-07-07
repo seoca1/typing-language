@@ -14,6 +14,7 @@ import {
 import { evaluateAllMissions, type StageRunStats } from './mission/MissionSystem.js';
 import {
   recordAttempt,
+  recordComplete,
   recordCorrect,
   recordMistake,
   trackSessionMistake,
@@ -101,6 +102,7 @@ export function App() {
   // Keyboard warning states
   const [pendingKoreanWarning, setPendingKoreanWarning] = useState<StageConfig | null>(null);
   const [showWrongKeyboardWarning, setShowWrongKeyboardWarning] = useState(false);
+  const [capsLockWarning, setCapsLockWarning] = useState(false);
   const recentCharsRef = useRef<string[]>([]);
 
   // Log device info and preload sprites/images on mount
@@ -289,6 +291,7 @@ export function App() {
           lastHitTime: s.lastHitTime,
           character: ch,
           currentEntry,
+          capsLockWarning,
         });
       } catch (err) {
         console.error('[App] Render error:', err);
@@ -530,6 +533,16 @@ export function App() {
     );
   }
 
+  // Phase G: Settings overlay (highest priority — accessible from menu)
+  if (showSettings) {
+    return (
+      <SettingsScreen
+        language={selectedLanguage ?? undefined}
+        onClose={() => setShowSettings(false)}
+      />
+    );
+  }
+
   // 메뉴 화면 (선택된 언어의 스테이지만 표시)
   if (state.phase === 'menu') {
     return (
@@ -549,16 +562,6 @@ export function App() {
           />
         )}
       </>
-    );
-  }
-
-  // Phase G: Settings overlay (highest priority — accessible from menu)
-  if (showSettings) {
-    return (
-      <SettingsScreen
-        language={selectedLanguage ?? undefined}
-        onClose={() => setShowSettings(false)}
-      />
     );
   }
 
@@ -665,7 +668,8 @@ export function App() {
       const newCombo = stateRef.current.combo + 1;
       applyEnemyDefeated(characterRef.current, newCombo, isPerfect, performance.now());
 
-      // Phase B-4: Track word mastery
+      // Phase B-4: Track word mastery - completeCount for completion rate
+      recordComplete(enemy.id);
       if (isPerfect) {
         recordCorrect(enemy.id);
       }
@@ -737,6 +741,7 @@ export function App() {
             score: stateRef.current.score + scoreBreakdown.total,
             wpm,
             accuracy: currentAccuracy,
+            language: stage.language,
           });
         }
 
@@ -786,6 +791,7 @@ export function App() {
     if (result.errors > 0 && state.currentEnemy) {
       recordMistake(state.currentEnemy.id);
       trackSessionMistake(state.currentEnemy.id);
+      triggerShake(effectsRef.current, 4, 80);
     }
     dispatch({ type: 'KEY_INPUT', result, romajiHint });
     const audio = getAudioManager();
@@ -910,6 +916,7 @@ export function App() {
         onBackspace={handleOSBackspace}
         onEnter={handleOSEnter}
         onEscape={handleOSEscape}
+        onCapsLock={(isOn) => setCapsLockWarning(isOn)}
       />
       {showWrongKeyboardWarning && (
         <NonKoreanKeyboardWarning

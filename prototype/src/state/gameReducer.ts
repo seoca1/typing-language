@@ -49,7 +49,7 @@ export type GameAction =
   | { type: 'SHOW_CHARACTER_SELECT'; language: string }
   | { type: 'SELECT_CHARACTER'; characterId: string }
   | { type: 'UPDATE_STATS'; accuracy: number; wpm: number }
-  | { type: 'UPDATE_STAGE_RECORD'; stageId: string; score: number; wpm: number; accuracy: number };
+  | { type: 'UPDATE_STAGE_RECORD'; stageId: string; score: number; wpm: number; accuracy: number; language?: string };
 
 export const initialState: GameState = {
   phase: 'menu',
@@ -192,12 +192,19 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       const stageRecords = state.player.stageRecords || {};
       const existing = stageRecords[action.stageId];
       const isNewBest = !existing || action.score > existing.bestScore;
-      
+
+      // Language-specific WPM thresholds
+      // JP/KR use romanized input which is longer to type, so lower thresholds apply
+      const isNonLatin = action.language === 'jp' || action.language === 'kr';
+      const wpm3 = isNonLatin ? 30 : 60;
+      const wpm2 = isNonLatin ? 20 : 40;
+      const wpm1 = isNonLatin ? 10 : 20;
+
       // Calculate stars based on accuracy and WPM
       let stars = 0;
-      if (action.accuracy >= 95 && action.wpm >= 60) stars = 3;
-      else if (action.accuracy >= 90 && action.wpm >= 40) stars = 2;
-      else if (action.accuracy >= 80 && action.wpm >= 20) stars = 1;
+      if (action.accuracy >= 95 && action.wpm >= wpm3) stars = 3;
+      else if (action.accuracy >= 90 && action.wpm >= wpm2) stars = 2;
+      else if (action.accuracy >= 80 && action.wpm >= wpm1) stars = 1;
       
       const newRecord = {
         stageId: action.stageId,

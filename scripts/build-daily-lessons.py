@@ -423,8 +423,11 @@ def find_raw_entry_ids(source_stem: str, lang: str) -> list[str]:
 def scan_wiki_pages(lang_dir: Path) -> dict:
     """Scan all wiki pages for a language.
 
-    Supports nested topic directories (e.g., vocabulary/food/meat.md).
-    Topic aggregator pages (index.md) use their parent directory as stem.
+    Pages are read directly from each category directory (vocabulary/, expressions/,
+    culture/, sources/, jp-travel-vocab/). Vocabulary pages are stored flatly
+    (e.g., vocabulary/meat.md) with category metadata handled via frontmatter or
+    index pages. Topic aggregator pages (index.md) use their parent directory as
+    stem.
 
     Returns:
     {

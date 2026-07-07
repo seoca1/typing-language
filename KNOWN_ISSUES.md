@@ -2,7 +2,7 @@
 
 게임의 알려진 버그와 문제점을 추적하는 문서입니다.
 
-**최종 업데이트:** 2026-06-25
+**최종 업데이트:** 2026-06-26
 
 ---
 
@@ -10,9 +10,9 @@
 
 ### Issue #1: 게임 중단 후 재시작 시 빈 화면
 
-**상태:** ✅ Fixed (pre-render validation + RAF resilience)  
-**우선순위:** Critical  
-**발견일:** 2026-06-18  
+**상태:** ✅ Fixed (pre-render validation + RAF resilience)
+**우선순위:** Critical
+**발견일:** 2026-06-18
 **마지막 수정:** 2026-06-25
 
 #### **증상:**
@@ -56,15 +56,15 @@
 
 ### Issue #3: Spin 효과 부자연스러움
 
-**상태:** ✅ Improved  
-**우선순위:** Medium  
-**발견일:** 2026-06-18  
+**상태:** ✅ Improved
+**우선순위:** Medium
+**발견일:** 2026-06-18
 **수정일:** 2026-06-23
 
 #### **수정 내용:**
 기존 sin 기반 scaleX에서 0이 되는 지점에서 이미지가 사라지는 문제 수정:
 - scaleX가 0에 가까워지면 최소값(±0.15) 유지하여 이미지가 사라지지 않도록
-- bounce 효과 개선: 이미지 좌우 뒤집림과 동시에上下 movement 추가
+- bounce 효과 개선: 이미지 좌우 뒤집힘과 동시에上下 movement 추가
 
 #### **미해결 부분:**
 아직 여러 프레임 이미지 미지원 (향후 이미지 생성 시 대응 가능)
@@ -73,9 +73,9 @@
 
 ### Issue #4: 설정 버튼 - Native Language 저장 안됨
 
-**상태:** ✅ Partial Fix (Menu.tsx 다국어화 완료)  
-**우선순위:** Medium  
-**발견일:** 2026-06-23  
+**상태:** ✅ Partial Fix (Menu.tsx 다국어화 완료)
+**우선순위:** Medium
+**발견일:** 2026-06-23
 **수정일:** 2026-06-23
 
 #### **수정 내용:**
@@ -141,4 +141,38 @@ finalUrl = config.src.startsWith(base) ? config.src : base + config.src;
 
 ---
 
-**마지막 업데이트:** 2026-06-24
+## 🎯 진행 중인 작업 (2026-06-26)
+
+### 완료된 작업
+
+1. **한글 입력 모드 선택** — jamo/romanized 토글
+   - `koreanInputMode.ts`, `KoreanHandler.ts`, `SettingsScreen.tsx`
+   - ADR-0010 업데이트
+
+2. **성취도 시스템 개선 (Option A)**
+   - Word mastery: `completeCount/attemptCount` 기반
+   - Stars WPM: 언어별 차등 (JP/KR 30/20/10, EN/ES 60/40/20)
+   - Menu에 언어별 stats 추가
+
+3. **Daily Lesson 개선**
+   - 난이도 표시 (★~★★★★★)
+   - 진행도 바 + viewed/total
+
+### 남은 작업
+
+1. **Daily lesson display improvements (Today tab or modal)**
+   - Menu에서 일일 학습 접근성 개선 가능
+
+2. **Daily lesson progress persistence**
+   - `getLessonProgress`에 total 파라미터 추가됨
+
+3. **KR corpus 로마자 추가**
+   - 현재 인사, 숫자, 음식만 로마자 포함
+   - 나머지 entries에 로마자 추가 필요
+
+4. **ADR-0010 로마자 매핑 테이블 문서화**
+   - `decisions/0010-kr-input.md`에 로마자 매핑 표 추가 필요
+
+---
+
+**마지막 업데이트:** 2026-06-26

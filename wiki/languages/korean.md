@@ -1,16 +1,24 @@
 # Korean (KR) - 입력 방식과 코퍼스
 
-> **상태**: 구현 완료. ADR-0010 (한국어 입력 방식) Accepted — 한글 키보드 자모 직접 입력.
+> **상태**: 구현 완료. ADR-0010 (한국어 입력 방식) Accepted — **하이브리드 모드** (자모 입력 + 로마자 입력).
 > **업스트림 소스**: `Language/wiki/Korean/` (코퍼스는 Language 위키에서 인용)
 
 ## 입력 방식 (ADR-0010 Accepted)
 
-**전략**: 화면에는 한글(완성형)로 표시, 사용자는 **한글 2벌식 키보드**로 자모를 직접 타이핑.
-클라이언트 사이드에서 자모 composition 후 완성형 음절로 변환.
+**전략**: 화면에는 한글(완성형)로 표시. 사용자는 두 가지 입력 방식 중 선택:
+1. **자모 모드 (jamo, 기본)**: 한글 2벌식 키보드로 자모 직접 입력
+2. **로마자 모드 (romanized)**: QWERTY 키보드로 로마자 입력 (외국인용)
 
 자세한 옵션 비교 및 결정: `decisions/0010-kr-input.md`
 
-### 표시 → 입력 예시
+### 두 입력 방식 비교
+
+| 모드 | 필수 키보드 | 입력 예시 | 대상 사용자 |
+| --- | --- | --- | --- |
+| **jamo (기본)** | 한글 2벌식 | ㅏㄴㄴㅕㅇㅎㅏㅅㅔㅇㅛ | 한국인, 한글 키보드 보유자 |
+| **romanized** | QWERTY | annyeonghaseyo | 외국인, 한글 키보드 미보유자 |
+
+### 표시 → 입력 예시 (자모 모드)
 
 | 표시 (Display) | 입력 (Input, Jamo) | 의미 |
 | --- | --- | --- |
@@ -20,21 +28,38 @@
 | 사랑 | ㅅㅏㄹㅏㅇ | love |
 | 아름답다 | ㅇㅏㄹㅡㅁㄷㅏㅂㄷㅏ | to be beautiful |
 
-### 자모 매핑 규칙 (한글 2벌식, 브라우저 event.key 기준)
+### 표시 → 입력 예시 (로마자 모드)
+
+| 표시 (Display) | 입력 (Input, Romanized) | 의미 |
+| --- | --- | --- |
+| 안녕하세요 | annyeonghaseyo | hello (polite) |
+| 감사합니다 | gamsahamnida | thank you |
+| 한국 | hangug | Korea |
+| 사랑 | sarang | love |
+| 아름답다 | aleumdapda | to be beautiful |
+
+### 가상 키보드 레이아웃
+
+게임 화면의 가상 키보드 표시:
+
+| 입력 모드 | 표시되는 키보드 | 설명 |
+| --- | --- | --- |
+| **jamo** | 두벌식 (ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ) | 실제 한글 물리 키보드와 동일 |
+| **romanized** | QWERTY (QWERTY...) | 영어 키보드 배열 |
+
+### 자모 매핑 규칙 (자모 모드, 한글 2벌식, 브라우저 event.key 기준)
 
 #### 기본 자음 (14음) / 모음 (10음)
 
-| 자음 | Q | W | E | R | T | A | S | D | F | G | Z | X | C | V |
-| --- |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 키보드 | ㅂ | ㅈ | ㄷ | ㄱ | ㅅ | ㅁ | ㄴ | ㅇ | ㄹ | ㅎ | ㅋ | ㅌ | ㅊ | ㅍ |
-| 설명 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 물리 키 | Q | W | E | R | T | A | S | D | F | G | Z | X | C | V |
+| --- |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| event.key | ㅂ | ㅈ | ㄷ | ㄱ | ㅅ | ㅁ | ㄴ | ㅇ | ㄹ | ㅎ | ㅋ | ㅌ | ㅊ | ㅍ |
 
-| 모음 | H | J | K | L | Y | U | I | O | P |
+| 물리 키 | H | J | K | L | Y | U | I | O | P |
 | --- |---|---|---|---|---|---|---|---|---|
-| 키보드 | ㅗ | ㅓ | ㅏ | ㅣ | ㅛ | ㅜ | ㅣ | ㅗ | ㅛ |
-| 설명 |  |  |  |  |  |  |  |  |  |
+| event.key | ㅗ | ㅓ | ㅏ | ㅣ | ㅛ | ㅜ | ㅣ | ㅗ | ㅛ |
 
-> **중요**: macOS에서 Caps Lock이 ON이면 영문 출력 → 한글 입력이 안 됨.
+> **중요**: macOS에서 Caps Lock이 ON이면 영문 출력 → 한글 입력이 안 됨 (자모 모드).
 
 #### 격음 (된소리) — 앞에 쌍 받침
 
@@ -149,9 +174,10 @@
 
 ### 핸들러
 
-- **클래스명**: `KoreanHandler` (예정)
-- **로직**: `display`(한글) → `input`(로마자) prefix 매칭
+- **클래스명**: `KoreanHandler` (`src/input/KoreanHandler.ts`)
+- **로직**: 자모 composition (jamo 모드) + 로마자 prefix 매칭 (romanized 모드)
 - **받침 처리**: 단어별 매핑 테이블 + 발음 변동 룰
+- **하이브리드**: `getKoreanInputMode()`로 현재 모드 확인
 - **조사·어미**: 단어와 함께 입력 (한 유닛 단위)
 
 자세한 내용: `design/systems/input-handler.md` > KoreanHandler 섹션 (구현 시 추가)
@@ -167,28 +193,29 @@
 
 ## 미해결 질문
 
-- [ ] **ADR-0009** 입력 방식 (로마자 / 직접 한글 / 둘 다) — 사용자 결정 대기
+- [x] **ADR-0010** 입력 방식 (하이브리드 자모 + 로마자) — 2026-06-25 채택
 - [ ] 발음 변동(연음·비음화·구개음화·경음화) 매핑 깊이 (전부 / 자주 쓰는 것만)
 - [ ] 받침 표기 통일 (표준어 vs. 실제 발음)
 - [ ] 로마자 표기법 (국립국어원 / Revised Romanization vs. Yale / McCune-Reischauer)
 - [ ] 한국어 인용 규칙 (영어 정의 vs. 한국어 뜻 vs. 둘 다)
 - [ ] 코퍼스 라이선스 (교재 인용 가능 범위)
 - [ ] 한자어 병기 (예: 韓國 → 한국 → 한국)
+- [ ] macOS Caps Lock 경고 UI (jamo 모드용)
 
 ## 다음 단계
 
-1. `decisions/0009-kr-input.md` 사용자 결정
-2. 결정에 따라 입력 매핑 정식 문서화
-3. `Language/raw/Korean/` 에 첫 출처 (예: TOPIK 1 단어장) 추가
-4. `Language/wiki/Korean/` 인제스트 → vocabulary 페이지 생성
-5. `Game/typing_language/raw/kr_words.md` 에 인용과 함께 큐레이션
-6. 핸들러 구현: `prototype/src/input/KoreanHandler.ts`
-7. 단위 테스트: `testcases/input-handler.md` > Korean Tests
+1. ✅ `decisions/0010-kr-input.md` 하이브리드 모드 채택 (2026-06-25)
+2. ✅ KoreanHandler 자모 composition 엔진 작성
+3. ✅ 로마자 corpus 채우기 (`romaji` 필드) — 2026-06-26 완료
+4. ✅ 입력 모드 선택 UI (SettingsScreen)
+5. ⏳ Language 위키 한국어 페이지 입력 방식 갱신 (현재 문서)
+6. ⏳ 단위 테스트 (받침/복합 모음 경계 케이스)
+7. ⏳ macOS Caps Lock 경고 UI
 
 ## 관련 문서
 
 - 업스트림: `Language/wiki/pipeline-to-game.md`
 - 파이프라인: `wiki/corpus-pipeline.md`
-- 결정: `decisions/0009-kr-input.md`
+- 결정: `decisions/0010-kr-input.md`
 - 일본어 참고 (유사 패턴): `wiki/languages/japanese.md`
 - 스페인어 참고 (액센트 직접 입력 패턴): `wiki/languages/spanish.md`

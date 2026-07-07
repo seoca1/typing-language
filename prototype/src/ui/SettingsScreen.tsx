@@ -19,6 +19,11 @@ import {
   NATIVE_LANGUAGE_SHORT,
   type NativeLanguage,
 } from '../data/nativeLanguage.js';
+import {
+  getKoreanInputMode,
+  setKoreanInputMode,
+  type KoreanInputMode,
+} from '../data/koreanInputMode.js';
 import { t } from '../data/uiTranslations.js';
 import { getAudioManager } from '../audio/AudioManager.js';
 import { LANGUAGE_LABEL, type Language } from '../types.js';
@@ -36,6 +41,7 @@ export function SettingsScreen({ language, onClose }: SettingsScreenProps) {
   const [native, setNative] = useState<NativeLanguage>(getNativeLanguage());
   const [volume, setVolume] = useState(audio.getVolume());
   const [soundEnabled, setSoundEnabled] = useState(audio.isEnabled());
+  const [krInputMode, setKrInputMode] = useState<KoreanInputMode>(getKoreanInputMode());
 
   const handleNativeChange = (lang: NativeLanguage) => {
     setNative(lang);
@@ -67,6 +73,11 @@ export function SettingsScreen({ language, onClose }: SettingsScreenProps) {
     const newEnabled = !soundEnabled;
     setSoundEnabled(newEnabled);
     audio.setEnabled(newEnabled);
+  };
+
+  const handleKrInputModeChange = (mode: KoreanInputMode) => {
+    setKoreanInputMode(mode);
+    setKrInputMode(mode);
   };
 
   return (
@@ -168,6 +179,57 @@ export function SettingsScreen({ language, onClose }: SettingsScreenProps) {
           </section>
         )}
 
+        {/* Korean Input Mode */}
+        {language === 'kr' && (
+          <section className="settings-section">
+            <h2 className="settings-section__title">⌨️ 한국어 입력 방식</h2>
+            <p className="settings-section__desc">
+              {native === 'ko' && '타이핑 방식을 선택하세요:'}
+              {native === 'ja' && 'タイピング方式を選択してください:'}
+              {native === 'es' && 'Selecciona el método de escritura:'}
+              {native === 'en' && 'Choose your typing method:'}
+            </p>
+            <div className="settings-kr-input-grid">
+              <button
+                className={`settings-lang-btn ${
+                  krInputMode === 'jamo' ? 'settings-lang-btn--active' : ''
+                }`}
+                onClick={() => handleKrInputModeChange('jamo')}
+              >
+                <span className="settings-lang-btn__short">ㄱ</span>
+                <span className="settings-lang-btn__full">
+                  {native === 'ko' && '자모 입력'}
+                  {native === 'ja' && '자모入力'}
+                  {native === 'es' && 'Jamo'}
+                  {native === 'en' && 'Jamo (Korean keyboard)'}
+                </span>
+                {krInputMode === 'jamo' && <span className="settings-lang-btn__check">✓</span>}
+              </button>
+              <button
+                className={`settings-lang-btn ${
+                  krInputMode === 'romanized' ? 'settings-lang-btn--active' : ''
+                }`}
+                onClick={() => handleKrInputModeChange('romanized')}
+              >
+                <span className="settings-lang-btn__short">a</span>
+                <span className="settings-lang-btn__full">
+                  {native === 'ko' && '로마자 입력'}
+                  {native === 'ja' && 'ローマ字入力'}
+                  {native === 'es' && 'Romanizado'}
+                  {native === 'en' && 'Romanized (QWERTY)'}
+                </span>
+                {krInputMode === 'romanized' && <span className="settings-lang-btn__check">✓</span>}
+              </button>
+            </div>
+            <p className="settings-section__hint">
+              {native === 'ko' && '※ 로마자 입력은 한글 키보드가 없어도 됩니다'}
+              {native === 'ja' && '※ ローマ字入力は韓国語キーボード不要'}
+              {native === 'es' && '※ El modo romanizado no requiere teclado coreano'}
+              {native === 'en' && '※ Romanized mode works without a Korean keyboard'}
+            </p>
+          </section>
+        )}
+
         {/* Version info */}
         <section className="settings-section settings-section--footer">
           <p className="settings-version">
@@ -209,6 +271,10 @@ export function SettingsScreen({ language, onClose }: SettingsScreenProps) {
           border-radius: 50%;
           font-size: 18px;
           cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
         }
         .settings-screen__close:hover {
           background: rgba(255, 255, 255, 0.2);

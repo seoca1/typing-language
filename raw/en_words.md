@@ -27,46 +27,53 @@
 ## 단어 (Words) — Level 1 (A1, 가장 흔함)
 
 ```yaml
-- { id: en_001, display: hello, meaning: 안녕, level: 1, category: greeting }
-- { id: en_002, display: hi, meaning: 안녕, level: 1, category: greeting }
-- { id: en_003, display: goodbye, meaning: 안녕히, level: 1, category: greeting }
-- { id: en_004, display: thanks, meaning: 고마워, level: 1, category: greeting }
-- { id: en_005, display: please, meaning: 부디, level: 1, category: greeting }
-- { id: en_006, display: yes, meaning: 네, level: 1, category: basic }
-- { id: en_007, display: no, meaning: 아니오, level: 1, category: basic }
-- { id: en_008, display: sorry, meaning: 미안, level: 1, category: basic }
-- { id: en_009, display: one, meaning: 하나, level: 1, category: number }
-- { id: en_010, display: two, meaning: 둘, level: 1, category: number }
-- { id: en_011, display: three, meaning: 셋, level: 1, category: number }
-- { id: en_012, display: ten, meaning: 열, level: 1, category: number }
-- { id: en_013, display: red, meaning: 빨강, level: 1, category: color }
-- { id: en_014, display: blue, meaning: 파랑, level: 1, category: color }
-- { id: en_015, display: green, meaning: 초록, level: 1, category: color }
-- { id: en_016, display: cat, meaning: 고양이, level: 1, category: animal }
-- { id: en_017, display: dog, meaning: 개, level: 1, category: animal }
-- { id: en_018, display: book, meaning: 책, level: 1, category: object }
-- { id: en_019, display: water, meaning: 물, level: 1, category: food }
-- { id: en_020, display: bread, meaning: 빵, level: 1, category: food }
-- { id: en_021, display: today, meaning: 오늘, level: 1, category: time }
-- { id: en_022, display: tomorrow, meaning: 내일, level: 1, category: time }
-- { id: en_023, display: morning, meaning: 아침, level: 1, category: time }
-- { id: en_024, display: mother, meaning: 어머니, level: 1, category: family }
-- { id: en_025, display: father, meaning: 아버지, level: 1, category: family }
+- { id: en_001, display: hello, meaning: 안녕, level: 1, category: greeting, source: [[hello]] }
+- { id: en_002, display: hi, meaning: 안녕, level: 1, category: greeting, source: [[hi]] }
+- { id: en_003, display: goodbye, meaning: 안녕히, level: 1, category: greeting, source: [[goodbye]] }
+- { id: en_004, display: thanks, meaning: 고마워, level: 1, category: greeting, source: [[thanks]] }
+- { id: en_005, display: please, meaning: 부디, level: 1, category: greeting, source: [[please]] }
+- { id: en_006, display: yes, meaning: 네, level: 1, category: basic, source: [[yes]] }
+- { id: en_007, display: no, meaning: 아니오, level: 1, category: basic, source: [[no]] }
+- { id: en_008, display: sorry, meaning: 미안, level: 1, category: basic, source: [[sorry]] }
+- { id: en_009, display: one, meaning: 하나, level: 1, category: number, source: [[one]] }
+- { id: en_010, display: two, meaning: 둘, level: 1, category: number, source: [[two]] }
+- { id: en_011, display: three, meaning: 셋, level: 1, category: number, source: [[three]] }
+- { id: en_012, display: ten, meaning: 열, level: 1, category: number, source: [[ten]] }
+- { id: en_013, display: red, meaning: 빨강, level: 1, category: color, source: [[red]] }
+- { id: en_014, display: blue, meaning: 파랑, level: 1, category: color, source: [[blue]] }
+- { id: en_015, display: green, meaning: 초록, level: 1, category: color, source: [[green]] }
+- { id: en_016, display: cat, meaning: 고양이, level: 1, category: animal, source: [[cat]] }
+- { id: en_017, display: dog, meaning: 개, level: 1, category: animal, source: [[dog]] }
+- { id: en_018, display: book, meaning: 책, level: 1, category: object, source: [[book]] }
+- { id: en_019, display: water, meaning: 물, level: 1, category: food, source: [[water]] }
+- { id: en_020, display: bread, meaning: 빵, level: 1, category: food, source: [[bread]] }
+- { id: en_021, display: today, meaning: 오늘, level: 1, category: time, source: [[today]] }
+- { id: en_022, display: tomorrow, meaning: 내일, level: 1, category: time, source: [[tomorrow]] }
+- { id: en_023, display: morning, meaning: 아침, level: 1, category: time, source: [[morning]] }
+- { id: en_024, display: mother, meaning: 어머니, level: 1, category: family, source: [[mother]] }
+- { id: en_025, display: father, meaning: 아버지, level: 1, category: family, source: [[father]] }
+- { id: en_036, display: face, meaning: 얼굴, level: 1, category: body, source: [[face]] }
+- { id: en_037, display: chest, meaning: 가슴, level: 1, category: body, source: [[chest]] }
+- { id: en_038, display: aunt, meaning: 이모, level: 1, category: family, source: [[aunt]] }
+- { id: en_039, display: baby, meaning: 아기, level: 1, category: family, source: [[baby]] }
+- { id: en_040, display: cola, meaning: 콜라, level: 1, category: food, source: [[cola]] }
+- { id: en_041, display: pepper, meaning: 후추, level: 1, category: food, source: [[pepper]] }
+- { id: en_042, display: vinegar, meaning: 식초, level: 1, category: food, source: [[vinegar]] }
 ```
 
 ## 단어 — Level 2 (A2)
 
 ```yaml
-- { id: en_026, display: morning, meaning: 아침, level: 2, category: time }
-- { id: en_027, display: hungry, meaning: 배고픈, level: 2, category: feeling }
-- { id: en_028, display: together, meaning: 함께, level: 2, category: basic }
-- { id: en_029, display: beautiful, meaning: 아름다운, level: 2, category: adjective }
-- { id: en_030, display: restaurant, meaning: 식당, level: 2, category: place }
-- { id: en_031, display: hospital, meaning: 병원, level: 2, category: place }
-- { id: en_032, display: expensive, meaning: 비싼, level: 2, category: adjective }
-- { id: en_033, display: important, meaning: 중요한, level: 2, category: adjective }
-- { id: en_034, display: difficult, meaning: 어려운, level: 2, category: adjective }
-- { id: en_035, display: favorite, meaning: 좋아하는, level: 2, category: adjective }
+- { id: en_026, display: morning, meaning: 아침, level: 2, category: time, source: [[morning]] }
+- { id: en_027, display: hungry, meaning: 배고픈, level: 2, category: feeling, source: [[hungry]] }
+- { id: en_028, display: together, meaning: 함께, level: 2, category: basic, source: [[together]] }
+- { id: en_029, display: beautiful, meaning: 아름다운, level: 2, category: adjective, source: [[beautiful]] }
+- { id: en_030, display: restaurant, meaning: 식당, level: 2, category: place, source: [[restaurant]] }
+- { id: en_031, display: hospital, meaning: 병원, level: 2, category: place, source: [[hospital]] }
+- { id: en_032, display: expensive, meaning: 비싼, level: 2, category: adjective, source: [[expensive]] }
+- { id: en_033, display: important, meaning: 중요한, level: 2, category: adjective, source: [[important]] }
+- { id: en_034, display: difficult, meaning: 어려운, level: 2, category: adjective, source: [[difficult]] }
+- { id: en_035, display: favorite, meaning: 좋아하는, level: 2, category: adjective, source: [[favorite]] }
 ```
 
 ## 단어 — Level 3~5
@@ -76,11 +83,11 @@
 ## 문장 (Sentences) — Level 1~2
 
 ```yaml
-- { id: ens_001, display: Hello, how are you?, level: 1, category: greeting, source: "Basic English" }
-- { id: ens_002, display: I am happy today., level: 1, category: basic, source: "Basic English" }
-- { id: ens_003, display: Where is the bathroom?, level: 2, category: question, source: "Travel phrases" }
-- { id: ens_004, display: I would like some water., level: 2, category: restaurant, source: "Restaurant phrases" }
-- { id: ens_005, display: Thank you very much., level: 1, category: greeting, source: "Basic English" }
+- { id: ens_001, display: Hello, how are you?, level: 1, category: greeting, source: [[hello-how-are-you]] }
+- { id: ens_002, display: I am happy today., level: 1, category: basic, source: [[i-am-happy-today]] }
+- { id: ens_003, display: Where is the bathroom?, level: 2, category: question, source: [[where-is-the-bathroom]] }
+- { id: ens_004, display: I would like some water., level: 2, category: restaurant, source: [[i-would-like-some-water]] }
+- { id: ens_005, display: Thank you very much., level: 1, category: greeting, source: [[thank-you-very-much]] }
 ```
 
 ## 문장 — Level 3~5

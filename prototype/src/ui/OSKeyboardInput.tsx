@@ -38,6 +38,8 @@ interface OSKeyboardInputProps {
   onEnter: () => void;
   /** Called when user presses Escape */
   onEscape?: () => void;
+  /** Called when Caps Lock is detected during Korean jamo input */
+  onCapsLock?: (isOn: boolean) => void;
 }
 
 export interface OSKeyboardInputHandle {
@@ -68,6 +70,7 @@ export const OSKeyboardInput = forwardRef<OSKeyboardInputHandle, OSKeyboardInput
   onBackspace,
   onEnter,
   onEscape,
+  onCapsLock,
 }, ref) {
   const inputRef = useRef<HTMLInputElement>(null);
   const valueResetTimeoutRef = useRef<number | null>(null);
@@ -126,6 +129,12 @@ export const OSKeyboardInput = forwardRef<OSKeyboardInputHandle, OSKeyboardInput
         onEscape();
       }
       return;
+    }
+
+    // Detect Caps Lock for Korean jamo input mode
+    if (language === 'kr' && onCapsLock) {
+      const capsLockOn = e.getModifierState('CapsLock');
+      onCapsLock(capsLockOn);
     }
 
     if (e.key === 'Backspace') {

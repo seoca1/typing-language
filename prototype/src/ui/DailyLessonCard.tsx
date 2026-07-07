@@ -11,6 +11,7 @@ import type { DailyLesson } from '../data/dailyLessons.js';
 import { LANGUAGE_LABEL, type Language } from '../types.js';
 import { getNativeLanguage } from '../data/nativeLanguage.js';
 import { t } from '../data/uiTranslations.js';
+import { getLessonProgress } from '../data/lessonProgress.js';
 
 interface DailyLessonCardProps {
   lesson: DailyLesson;
@@ -26,11 +27,20 @@ const LANG_COLORS: Record<Language, string> = {
   kr: '#10b981',
 };
 
+const DIFFICULTY_COLORS = ['#10b981', '#22c55e', '#eab308', '#f97316', '#ef4444'];
+const DIFFICULTY_LABELS = ['★', '★★', '★★★', '★★★★', '★★★★★'];
+
 export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLessonCardProps) {
   const color = LANG_COLORS[lesson.language];
   const langLabel = LANGUAGE_LABEL[lesson.language];
   const cultureCount = lesson.wiki.culture ? 1 : 0;
   const nativeLanguage = getNativeLanguage();
+  const tier = lesson.difficulty.tier;
+  const difficultyColor = DIFFICULTY_COLORS[Math.min(tier - 1, 4)];
+  const difficultyLabel = DIFFICULTY_LABELS[Math.min(tier - 1, 4)];
+
+  const totalPages = lesson.wiki.vocabulary.length + lesson.wiki.expressions.length + cultureCount;
+  const progress = getLessonProgress(lesson.id, totalPages);
 
   return (
     <div
@@ -44,6 +54,13 @@ export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLes
           <div className="daily-lesson-card__subtitle">
             {langLabel} · {lesson.meta.estimatedReadMinutes}
             {t('minutes', nativeLanguage)}
+            <span
+              className="daily-lesson-card__difficulty"
+              style={{ color: difficultyColor }}
+              title={`${t('difficulty', nativeLanguage)}: ${lesson.difficulty}`}
+            >
+              {' '}({difficultyLabel})
+            </span>
           </div>
         </div>
       </div>
@@ -60,7 +77,23 @@ export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLes
           </span>
           <span>💬 {lesson.wiki.expressions.length}</span>
           {cultureCount > 0 && <span>🌏 1</span>}
+          {progress.viewed > 0 && (
+            <span className="daily-lesson-card__progress">
+              📖 {progress.viewed}/{progress.total}
+            </span>
+          )}
         </div>
+        {progress.viewed > 0 && (
+          <div className="daily-lesson-card__progress-bar">
+            <div
+              className="daily-lesson-card__progress-fill"
+              style={{
+                width: `${(progress.viewed / progress.total) * 100}%`,
+                background: color,
+              }}
+            />
+          </div>
+        )}
       </div>
 
       <div className="daily-lesson-card__actions">
@@ -112,6 +145,9 @@ export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLes
           font-size: 12px;
           opacity: 0.85;
         }
+        .daily-lesson-card__difficulty {
+          font-size: 11px;
+        }
         .daily-lesson-card__body {
           padding: 12px 16px;
         }
@@ -126,6 +162,22 @@ export function DailyLessonCard({ lesson, onOpen, onSkip, onPractice }: DailyLes
           gap: 12px;
           font-size: 12px;
           color: #6a7888;
+          flex-wrap: wrap;
+        }
+        .daily-lesson-card__progress {
+          color: #66dd66;
+        }
+        .daily-lesson-card__progress-bar {
+          height: 4px;
+          background: #1a2530;
+          border-radius: 2px;
+          margin-top: 8px;
+          overflow: hidden;
+        }
+        .daily-lesson-card__progress-fill {
+          height: 100%;
+          border-radius: 2px;
+          transition: width 0.3s ease;
         }
         .daily-lesson-card__actions {
           display: flex;

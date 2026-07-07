@@ -44,6 +44,7 @@ export type TranslationKey =
   | 'input' // 입력
   | 'category' // 카테고리
   | 'level' // 레벨
+  | 'difficulty' // 난이도
   | 'listening'
   | 'tipHoverForMeaning' // 적 위에 마우스... (existing)
   // Daily lesson
@@ -135,6 +136,7 @@ export const UI_STRINGS: Record<TranslationKey, Record<NativeLanguage, string>> 
   input: { en: 'Input', ko: '입력', ja: '入力', es: 'Entrada' },
   category: { en: 'Category', ko: '카테고리', ja: 'カテゴリ', es: 'Categoría' },
   level: { en: 'Level', ko: '난이도', ja: 'レベル', es: 'Nivel' },
+  difficulty: { en: 'Difficulty', ko: '난이도', ja: '難易度', es: 'Dificultad' },
   listening: { en: 'Listening...', ko: '재생 중...', ja: '再生中...', es: 'Reproduciendo...' },
   tipHoverForMeaning: {
     en: '💡 Hover over an enemy to see meaning/pronunciation',

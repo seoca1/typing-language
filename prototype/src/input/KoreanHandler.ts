@@ -1,20 +1,23 @@
 /**
- * Korean Input Handler — 한글 자모 직접 입력 + 클라이언트 합성
+ * Korean Input Handler — 한글 자모 직접 입력 + 로마자 입력 모드
  *
  * ADR-0010: 한글 2벌식 키보드의 자모를 직접 타이핑, 클라이언트 사이드에서
  * 완성형 한글 음절로 합성. IME 비의존.
  *
+ * 두 입력 모드 지원:
+ * - 'jamo': 자모 직접 입력 (2벌식 키보드) — 기본값
+ * - 'romanized': 로마자 입력 (QWERTY) —外国人 친화적
+ *
  * 자세한 내용: ../../../decisions/0010-kr-input.md, ../../../wiki/languages/korean.md
  *
- * 작동:
- * - 사용자가 한글 2벌식 키보드 활성화 (Caps Lock OFF)
- * - event.key = 자모 (ㄱ, ㄴ, ㅏ, ...)
- * - 자모를 초성/중성/종성으로 조합해 완성형 음절 생성
- * - 완성형 syllable가 target.display 와 일치하면 격파
+ * romanized 모드 작동 (JapaneseHandler와 동일):
+ * - target.acceptedInputs[0]을 로마자 정답으로 사용
+ * - 예: "안녕하세요" → acceptedInputs: ["annyeonghaseyo"]
  */
 
 import { BaseInputHandler } from './InputHandler.js';
 import type { MatchResult, Target } from '../types.js';
+import { getKoreanInputMode } from '../data/koreanInputMode.js';
 
 // ===== Jamo sets =====
 
@@ -139,6 +142,15 @@ export class KoreanHandler extends BaseInputHandler {
   private syllables: string[] = [];
   private pending: JamoState = { lead: null, vowel: null, trail: null };
 
+  private get isRomanized(): boolean {
+    return getKoreanInputMode() === 'romanized';
+  }
+
+  private get romanizedTarget(): string {
+    if (!this.target) return '';
+    return this.target.acceptedInputs?.[0] ?? '';
+  }
+
   setTarget(target: Target): void {
     super.setTarget(target);
     this.syllables = [];
@@ -151,31 +163,53 @@ export class KoreanHandler extends BaseInputHandler {
     this.pending = { lead: null, vowel: null, trail: null };
   }
 
-  /** 현재까지 합성된 완성형 한글 버퍼 */
-  getComposedDisplay(): string {
-    let result = this.syllables.join('');
+  /** Flush pending syllable to syllables array */
+  private flushPending(): void {
     const p = this.pending;
     if (p.lead) {
       if (p.vowel) {
-        result += composeSyllable(p.lead, p.vowel, p.trail);
+        this.syllables.push(composeSyllable(p.lead, p.vowel, p.trail));
       } else {
-        result += p.lead;
+        // Vowelless consonant at end - shouldn't happen in normal input
+        // but handle gracefully by treating as separate syllable
+        this.syllables.push(p.lead);
       }
     }
-    return result;
+    this.pending = { lead: null, vowel: null, trail: null };
+  }
+
+  /** 현재까지 합성된 완성형 한글 버퍼 (space 포함) */
+  getComposedDisplay(): string {
+    return this.syllables.join('') + this.getPendingDisplay();
+  }
+
+  /** 현재 pending 상태의 표시 */
+  private getPendingDisplay(): string {
+    const p = this.pending;
+    if (p.lead) {
+      if (p.vowel) {
+        return composeSyllable(p.lead, p.vowel, p.trail);
+      } else {
+        return p.lead;
+      }
+    }
+    return '';
   }
 
   /** 다음에 입력해야 할 자모 (가상 키보드 힌트용) */
   getNextJamo(): string | null {
     if (!this.target) return null;
     const target = this.target.text;
-    const composed = this.getComposedDisplay();
-    if (composed.length >= target.length) return null;
+    const display = this.getComposedDisplay();
+    if (display.length >= target.length) return null;
 
-    const nextSyllable = target[composed.length];
-    if (!nextSyllable) return null;
+    const nextChar = target[display.length];
+    if (!nextChar) return null;
 
-    const decomposed = decomposeSyllable(nextSyllable);
+    // Space: return null since space is not a jamo (handled separately)
+    if (nextChar === ' ') return null;
+
+    const decomposed = decomposeSyllable(nextChar);
     const p = this.pending;
 
     if (p.lead && !p.vowel) return decomposed[1] ?? null;
@@ -189,7 +223,23 @@ export class KoreanHandler extends BaseInputHandler {
     if (event.key === 'Backspace') return this.handleBackspace();
     if (event.key.length !== 1) return this.currentResult();
 
+    // Romanized mode: pass through to buffer directly (like JapaneseHandler)
+    if (this.isRomanized) {
+      this.buffer += event.key;
+      this.totalKeystrokes += 1;
+      return this.match();
+    }
+
     const key = event.key;
+
+    // Space handling: flush pending syllable and add space marker
+    if (key === ' ') {
+      this.flushPending();
+      this.syllables.push(' ');
+      this.totalKeystrokes += 1;
+      return this.match();
+    }
+
     if (CONSONANTS.has(key)) {
       this.inputConsonant(key);
     } else if (VOWELS.has(key)) {
@@ -425,6 +475,15 @@ export class KoreanHandler extends BaseInputHandler {
   }
 
   protected handleBackspace(): MatchResult {
+    // Romanized mode: simple buffer truncation
+    if (this.isRomanized) {
+      if (this.buffer.length > 0) {
+        this.buffer = this.buffer.slice(0, -1);
+      }
+      return this.currentResult();
+    }
+
+    // Jamo mode: jamo-level backspace
     const p = this.pending;
     if (p.trail) p.trail = null;
     else if (p.vowel) p.vowel = null;
@@ -435,6 +494,27 @@ export class KoreanHandler extends BaseInputHandler {
 
   protected match(): MatchResult {
     if (!this.target) return this.emptyResult();
+
+    // Romanized mode: compare buffer to romanized target (like JapaneseHandler)
+    if (this.isRomanized) {
+      const romanized = this.romanizedTarget;
+      if (this.buffer === romanized) {
+        return {
+          completed: true,
+          accuracy: this.getAccuracy(),
+          errors: this.errors,
+          buffer: this.buffer,
+        };
+      }
+      return {
+        completed: false,
+        accuracy: this.getAccuracy(),
+        errors: this.errors,
+        buffer: this.buffer,
+      };
+    }
+
+    // Jamo mode: compare composed Hangul to target display
     const display = this.getComposedDisplay();
     const target = this.target.text;
 
@@ -457,15 +537,36 @@ export class KoreanHandler extends BaseInputHandler {
 
   protected expectedChar(): string {
     if (!this.target) return '';
+
+    // Romanized mode
+    if (this.isRomanized) {
+      const romanized = this.romanizedTarget;
+      return romanized[this.buffer.length] ?? '';
+    }
+
+    // Jamo mode
     return this.target.text[this.getComposedDisplay().length] ?? '';
   }
 
   getBuffer(): string {
+    // Romanized mode: return buffer directly
+    if (this.isRomanized) {
+      return this.buffer;
+    }
     return this.getComposedDisplay();
   }
 
   getHint(): string | undefined {
     if (!this.target) return undefined;
+
+    // Romanized mode: return next romanized characters
+    if (this.isRomanized) {
+      const romanized = this.romanizedTarget;
+      if (this.buffer.length >= romanized.length) return undefined;
+      return romanized.slice(this.buffer.length, this.buffer.length + 2);
+    }
+
+    // Jamo mode: return next Hangul characters
     const display = this.getComposedDisplay();
     const target = this.target.text;
     if (display.length >= target.length) return undefined;

@@ -49,6 +49,14 @@ export interface DailyLessonCompact {
   date: string;
   language: 'en' | 'jp' | 'es' | 'kr';
   sourceTopic: string;
+  difficulty: {
+    tier: number;
+    cefr: string;
+    primaryStage: string;
+  };
+  source: {
+    rawFile: string;
+  };
   raw: {
     sourceFile: string;
     excerpt: string;
@@ -83,6 +91,14 @@ export interface DailyLesson {
   date: string;
   language: 'en' | 'jp' | 'es' | 'kr';
   sourceTopic: string;
+  difficulty: {
+    tier: number;
+    cefr: string;
+    primaryStage: string;
+  };
+  source: {
+    rawFile: string;
+  };
   raw: {
     sourceFile: string;
     excerpt: string;
@@ -119,6 +135,8 @@ function expandLesson(compact: DailyLessonCompact): DailyLesson {
     date: compact.date,
     language: compact.language,
     sourceTopic: compact.sourceTopic,
+    difficulty: compact.difficulty,
+    source: compact.source,
     raw: compact.raw,
     wiki: {
       vocabulary: compact.vocabulary

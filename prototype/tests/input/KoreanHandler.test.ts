@@ -146,6 +146,54 @@ describe('KoreanHandler', () => {
       expect(handler.getBuffer()).toBe('과');
       expect(result.completed).toBe(true);
     });
+
+    it('should compose "계" with compound vowel ㅖ (ㅕ+ㅣ)', () => {
+      const target: Target = {
+        text: '계',
+        acceptedInputs: ['gye'],
+        level: 1,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      handler.handleKey(mockEvent('ㄱ'));
+      handler.handleKey(mockEvent('ㅕ'));
+      expect(handler.getBuffer()).toBe('겨');
+
+      const result = handler.handleKey(mockEvent('ㅣ')); // ㅕ+ㅣ → ㅖ
+      expect(handler.getBuffer()).toBe('계');
+      expect(result.completed).toBe(true);
+    });
+
+    it('should compose "원" with compound vowel ㅝ (ㅜ+ㅓ)', () => {
+      const target: Target = {
+        text: '원',
+        acceptedInputs: ['won'],
+        level: 1,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      handler.handleKey(mockEvent('ㅇ'));
+      handler.handleKey(mockEvent('ㅜ'));
+      expect(handler.getBuffer()).toBe('우');
+
+      handler.handleKey(mockEvent('ㅓ')); // ㅜ+ㅓ → ㅝ
+      expect(handler.getBuffer()).toBe('워');
+
+      handler.handleKey(mockEvent('ㄴ')); // 종성
+      expect(handler.getBuffer()).toBe('원');
+    });
   });
 
   describe('Jamo Composition - Compound Leading Consonants', () => {
@@ -225,6 +273,75 @@ describe('KoreanHandler', () => {
       expect(handler.getBuffer()).toBe('닭');
       expect(result.completed).toBe(true);
     });
+
+    it('should compose "삶" with compound trailing ㄻ (ㄹ+ㅁ)', () => {
+      const target: Target = {
+        text: '삶',
+        acceptedInputs: ['salm'],
+        level: 2,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      handler.handleKey(mockEvent('ㅅ'));
+      handler.handleKey(mockEvent('ㅏ'));
+      handler.handleKey(mockEvent('ㄹ'));
+      expect(handler.getBuffer()).toBe('살');
+
+      handler.handleKey(mockEvent('ㅁ')); // ㄹ+ㅁ → ㄻ
+      expect(handler.getBuffer()).toBe('삶');
+    });
+
+    it('should compose "넓" with compound trailing ㄼ (ㄹ+ㅂ)', () => {
+      const target: Target = {
+        text: '넓',
+        acceptedInputs: ['neolb'],
+        level: 2,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      handler.handleKey(mockEvent('ㄴ'));
+      handler.handleKey(mockEvent('ㅓ'));
+      handler.handleKey(mockEvent('ㄹ'));
+      expect(handler.getBuffer()).toBe('널');
+
+      handler.handleKey(mockEvent('ㅂ')); // ㄹ+ㅂ → ㄼ
+      expect(handler.getBuffer()).toBe('넓');
+    });
+
+    it('should compose "없" with compound trailing ㅄ (ㅂ+ㅅ)', () => {
+      const target: Target = {
+        text: '없',
+        acceptedInputs: ['eops'],
+        level: 1,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      handler.handleKey(mockEvent('ㅇ'));
+      handler.handleKey(mockEvent('ㅓ'));
+      handler.handleKey(mockEvent('ㅂ'));
+      expect(handler.getBuffer()).toBe('업');
+
+      handler.handleKey(mockEvent('ㅅ')); // ㅂ+ㅅ → ㅄ
+      expect(handler.getBuffer()).toBe('없');
+    });
   });
 
   describe('Multi-syllable Words', () => {
@@ -293,6 +410,37 @@ describe('KoreanHandler', () => {
       // 요
       'ㅇㅛ'.split('').forEach((jamo) => handler.handleKey(mockEvent(jamo)));
       expect(handler.getBuffer()).toBe('안녕하세요');
+    });
+
+    it('should handle spaces in Korean sentences', () => {
+      const target: Target = {
+        text: '안녕 하세요',
+        acceptedInputs: ['annyeong haseyo'],
+        level: 2,
+      };
+      handler.setTarget(target);
+
+      const mockEvent = (key: string) => ({
+        key,
+        isComposing: false,
+        preventDefault: () => {},
+      } as KeyboardEvent);
+
+      // 안
+      'ㅇㅏㄴ'.split('').forEach((jamo) => handler.handleKey(mockEvent(jamo)));
+      expect(handler.getBuffer()).toBe('안');
+
+      // 녕
+      'ㄴㅕㅇ'.split('').forEach((jamo) => handler.handleKey(mockEvent(jamo)));
+      expect(handler.getBuffer()).toBe('안녕');
+
+      // space
+      handler.handleKey(mockEvent(' '));
+      expect(handler.getBuffer()).toBe('안녕 ');
+
+      // 하세요
+      'ㅎㅏㅅㅔㅇㅛ'.split('').forEach((jamo) => handler.handleKey(mockEvent(jamo)));
+      expect(handler.getBuffer()).toBe('안녕 하세요');
     });
   });
 

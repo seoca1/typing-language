@@ -511,6 +511,9 @@ export function DailyLessonModal({ lesson, onClose, onPractice }: DailyLessonMod
           font-size: 18px;
           cursor: pointer;
           flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         .daily-lesson-modal__close:hover { background: rgba(255, 255, 255, 0.3); }
 

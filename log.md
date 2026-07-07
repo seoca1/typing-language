@@ -2205,3 +2205,144 @@ aec36fc — fix: validate-daily-lessons.py supports schemaVersion 1.2
 - **수정**: recreateFrom/예외 발생 시에도 명시적으로 `rafId = requestAnimationFrame(tick)` 실행 — RAF loop가 죽지 않도록
 - **KNOWN_ISSUES.md**: Issue #1 상태 🟡 Mitigated → ✅ Fixed, 해결률 40% → 60%
 - **테스트**: 674 passed ✅, 빌드 ✅
+
+### [2026-06-26] kr-input-mode, mastery-fix, daily-improvements | 한글 입력 모드 + 성취도 시스템 + 일일 학습 개선
+
+**범위:**
+1. **한글 입력 모드 선택** — jamo(자모)/romanized(로마자) 토글
+2. **SettingsScreen 닫기 버튼 정렬 수정**
+3. **타이핑 오류 screen shake** — triggerShake(effectsRef.current, 4, 80)
+4. **DailyLessonCard 난이도 표시** — tier 기반 ★~★★★★★
+5. **DailyLessonCard 진행도 표시** — progress bar + viewed/total
+6. **성취도 시스템 개선 (Option A)**
+   - Word mastery: completeCount/attemptCount 기반 (이전: correctCount/attemptCount)
+   - Stars WPM threshold 언어별 차등 적용 (JP/KR: 30/20/10, EN/ES: 60/40/20)
+   - Menu에 언어별 stats 표시 (⭐stars · ✅cleared)
+   - getLessonProgress에 total 파라미터 추가
+
+**변경 파일:**
+- `src/data/koreanInputMode.ts` — 신규 (jamo/romanized 설정)
+- `src/input/KoreanHandler.ts` — hybrid 모드 지원
+- `src/ui/SettingsScreen.tsx` — 한국어 입력 모드 선택 UI
+- `src/combat/CombatSystem.ts` — KR romanized acceptedInputs
+- `src/data/corpus.ts` — KR entry romaji 필드 추가 (인사, 숫자, 음식)
+- `decisions/0010-kr-input.md` — 하이브리드 모드 문서화
+- `src/data/wordMastery.ts` — completeCount 필드 추가
+- `src/App.tsx` — recordComplete 호출, triggerShake 오류 시
+- `src/state/gameReducer.ts` — 언어별 WPM threshold
+- `src/ui/Menu.tsx` — 언어별 stats 표시
+- `src/ui/DailyLessonCard.tsx` — 난이도 + 진행도 표시
+- `src/data/dailyLessons.ts` — DailyLesson 타입 difficulty/source 구조
+- `src/data/lessonProgress.ts` — getLessonProgress total 파라미터
+- `src/data/uiTranslations.ts` — difficulty 번역 추가
+- `tests/data/wordMastery.test.ts` — 완료율 기반 테스트
+
+**결과:**
+- Build: ✅ 995KB
+- Tests: 674 passed, 1 skipped
+
+### [2026-06-26] kr-corpus-complete | KR corpus romaji 필드 완료
+
+**범위:**
+- KR corpus 모든 entry에 `romaji` 필드 추가 완료 (greetings, numbers, food, travel, romance, business, emotions, nature, animals, clothing, proverbs, passages)
+
+**변경 파일:**
+- `src/data/corpus.ts` — KR entries romaji 필드 추가 (112개 → 0개 남음)
+
+**결과:**
+- Build: ✅ 995KB
+- Tests: 674 passed, 1 skipped
+
+### [2026-06-26] kr-keyboard-romanized-fix | 한글 키보드 두벌식 + 로마자 모드 QWERTY 수정
+
+**수정 내용:**
+- Keyboard.ts: KR romanized 모드에서 QWERTY 레이아웃 사용 (setLanguage 수정)
+- jamo 모드: 두벌식 키보드 (자모 개별 키)
+- romanized 모드: QWERTY 키보드 (로마자 입력)
+
+**변경 파일:**
+- `src/engine/Keyboard.ts` — setLanguage에서 getKoreanInputMode() 확인, romanized시 qwerty 레이아웃 사용
+- 헤더 코멘트 업데이트 (ADR-0010 반영)
+
+**결과:**
+- Build: ✅ 995KB
+- Tests: 674 passed, 1 skipped
+
+---
+
+## 2026-07-04
+
+### [2026-07-04] pipeline | Game corpus source citation fix
+
+**문제 발견:**
+- Language wiki는 4,651 pages / 0% stub / 0 broken wikilinks 완료 상태
+- 게임 corpus는 8일치 (2026-06-26) 후 업데이트 없음
+- 게임 corpus 4개 파일 (en/es/jp/kr_words.md) 중 3개가 **source 인용 0건**
+- 파이프라인 규약 (AGENTS.md §1.5) 위반: 모든 corpus entry는 `source: [[...]]` wikilink 필수
+
+**조치:**
+- Python 스크립트로 4개 언어 corpus에 source citation 일괄 추가:
+  - EN: +35 citations (82/88 entries, 93%)
+  - ES: +74 citations (80/85 entries, 94%)
+  - JP: +591 citations (596/597 entries, 99.8%)
+  - KR: +1,235 citations (1,277/1,277 entries, 100%)
+- 총: 2,035/2,047 entries (99.4%)가 source wikilink 보유
+
+**regen_game_corpus.py 업데이트:**
+- 4개 언어 모두 지원 (en/es/jp/kr)
+- 생성 시 `source: [[{stem}]]` 자동 포함
+- 향후 wiki 기반 corpus regeneration 시 source 인용 자동 포함
+
+**검증:**
+- `python3 Language/scripts/game-sync-check.py`: **4/4 PASS** ✅
+  - EN: 74/74 = 100%
+  - ES: 74/74 = 100%
+  - JP: 527/527 = 100%
+  - KR: 1,137/1,137 = 100%
+
+### [2026-07-04] pipeline | Sentence expression pages + corpus 100% source
+
+**추가 조치:**
+- EN: 5 sentence expression pages 생성 (`hello-how-are-you`, `i-am-happy-today`, `where-is-the-bathroom`, `i-would-like-some-water`, `thank-you-very-much`)
+- ES: 4 sentence expression pages 생성 (`buenos-dias`, `donde-esta-el-bano`, `me-gustaria-un-cafe`, `muchisimas-gracias`)
+- EN corpus: 87/88 entries with source (98.9%)
+- ES corpus: 84/85 entries with source (98.8%)
+- Total: 2,044/2,047 entries (99.9%)
+
+**검증:**
+- `python3 Language/scripts/audit-wikilinks.py --root Language`: 0 broken links ✅
+- `python3 Language/scripts/game-sync-check.py`: 4/4 PASS ✅
+
+### [2026-07-07] pipeline | Language Wiki → Game Corpus Sync
+
+**개요:**
+Language Wiki XL mesh 확장 세션(2026-07-06)에서 추가된 항목을 Game Typing Language corpus에 동기화.
+
+**변경 사항:**
+
+| Corpus | Before | After | Δ |
+|---------|--------|-------|---|
+| EN | 74 | 81 | +7 |
+| ES | 74 | 97 | +23 |
+| JP | 527 | 527 | +0 |
+| KR | 1137 | 1137 | +0 |
+
+**EN 추가 (7):**
+- face, chest (body)
+- aunt, baby (family)
+- cola, pepper, vinegar (food)
+
+**ES 추가 (23):**
+- Animals (6): pajaro, vaca, pez, rana, leon, conejo
+- Nature (17): rio, lago, montana, bosque, cielo, tierra, fuego, flor, hoja, luna, lluvia, nieve, estrella, sol, viento, tormenta, trueno
+- SKIPPED: mar, playa (already in corpus), arbol, arcoiris (wiki page missing)
+
+**KR 변경 없음:**
+- 입술은 wiki page가 없어서 추가 불가
+
+**검증:**
+- `python3 Language/scripts/game-sync-check.py`: 4/4 PASS ✅
+  - EN: 81/81 = 100%
+  - ES: 97/97 = 100%
+  - JP: 527/527 = 100%
+  - KR: 1137/1137 = 100%

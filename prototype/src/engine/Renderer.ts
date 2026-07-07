@@ -44,6 +44,8 @@ export interface RenderState {
   character: CharacterState;
   /** Word entry for the current enemy (for translation lookup) */
   currentEntry?: { id: string; display: string; meaning?: string; category?: string };
+  /** Caps Lock warning for Korean jamo mode */
+  capsLockWarning?: boolean;
 }
 
 export class Renderer {
@@ -511,11 +513,12 @@ export class Renderer {
     this.ctx.fillStyle = '#666';
     this.ctx.font = '11px -apple-system, sans-serif';
     this.ctx.textAlign = 'left';
-    this.ctx.fillText(
-      `⌨  ${state.language.toUpperCase()} keyboard · 노란색 = 다음 키`,
-      32,
-      596,
-    );
+    let keyboardLabel = `⌨  ${state.language.toUpperCase()} keyboard · 노란색 = 다음 키`;
+    if (state.capsLockWarning) {
+      this.ctx.fillStyle = '#ff6b6b';
+      keyboardLabel = '⌨  Caps Lock이 켜져 있습니다! Korean keyboard를 확인하세요.';
+    }
+    this.ctx.fillText(keyboardLabel, 32, 596);
 
     if (this.keyboard) {
       this.keyboard.update();

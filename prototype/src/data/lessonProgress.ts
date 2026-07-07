@@ -64,12 +64,12 @@ export function isPageMastered(lessonId: string, filename: string): boolean {
   return store[lessonId]?.mastered.includes(filename) ?? false;
 }
 
-export function getLessonProgress(lessonId: string): { viewed: number; mastered: number; total: number } {
+export function getLessonProgress(lessonId: string, total = 0): { viewed: number; mastered: number; total: number } {
   const store = readStore();
   const lesson = store[lessonId];
   return {
     viewed: lesson?.viewed.length ?? 0,
     mastered: lesson?.mastered.length ?? 0,
-    total: 0,
+    total,
   };
 }

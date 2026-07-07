@@ -22,6 +22,7 @@ if (typeof globalThis.localStorage === 'undefined' || typeof globalThis.localSto
 }
 import {
   recordAttempt,
+  recordComplete,
   recordCorrect,
   recordMistake,
   getWordStats,
@@ -167,28 +168,36 @@ describe('wordMastery — overall mastery', () => {
     expect(getOverallMastery()).toBe(0);
   });
 
-  it('returns 100% with all correct', () => {
+  it('returns 100% with all completed', () => {
     recordAttempt('a');
+    recordComplete('a');
     recordCorrect('a');
     recordAttempt('b');
+    recordComplete('b');
     recordCorrect('b');
     expect(getOverallMastery()).toBe(100);
   });
 
-  it('returns 50% with half correct', () => {
+  it('returns 50% with half completed', () => {
     recordAttempt('a');
+    recordComplete('a');
     recordCorrect('a');
     recordAttempt('b');
+    // 'b' is attempted but never completed
     recordMistake('b');
     expect(getOverallMastery()).toBe(50);
   });
 
   it('aggregates across many words', () => {
-    // 8 correct out of 10 attempts = 80%
+    // 8 completed out of 10 attempts = 80%
     for (let i = 0; i < 10; i++) {
       recordAttempt(`w${i}`);
-      if (i < 8) recordCorrect(`w${i}`);
-      else recordMistake(`w${i}`);
+      if (i < 8) {
+        recordComplete(`w${i}`);
+        recordCorrect(`w${i}`);
+      } else {
+        recordMistake(`w${i}`);
+      }
     }
     expect(getOverallMastery()).toBe(80);
   });

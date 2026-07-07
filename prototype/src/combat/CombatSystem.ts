@@ -15,7 +15,9 @@ export function createEnemy(
     acceptedInputs:
       language === 'jp' && word.romaji
         ? [word.romaji]
-        : [word.display, word.display.toLowerCase()],
+        : language === 'kr' && word.romaji
+          ? [word.romaji]
+          : [word.display, word.display.toLowerCase()],
     meaning: word.meaning,
     category: word.category,
     level: word.level,

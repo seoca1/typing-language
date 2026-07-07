@@ -4,10 +4,13 @@
  * 화면에 가상 키보드를 그리고, 사용자가 누른 키를 짧게 강조.
  * 다음에 눌러야 할 키(힌트)를 부드럽게 펄스 표시.
  *
- * ADR-0010: 한글 입력 시 korean2set 레이아웃으로 전환.
+ * ADR-0010: 한글 입력 방식:
+ * - jamo 모드: korean2set 레이아웃 (자모 직접 입력)
+ * - romanized 모드: QWERTY 레이아웃 (로마자 입력)
  */
 
 import type { Language } from '../types.js';
+import { getKoreanInputMode } from '../data/koreanInputMode.js';
 
 interface KeyDef {
   label: string;
@@ -53,7 +56,13 @@ export class Keyboard {
     maxHeight = 260,
   ) {
     this.lang = lang;
-    this.layout = lang === 'kr' ? 'korean2set' : 'qwerty';
+    let layout: KeyboardLayout;
+    if (lang === 'kr') {
+      layout = getKoreanInputMode() === 'romanized' ? 'qwerty' : 'korean2set';
+    } else {
+      layout = 'qwerty';
+    }
+    this.layout = layout;
     this.originX = originX;
     this.originY = originY;
     this.unitW = unitW;
@@ -66,7 +75,12 @@ export class Keyboard {
   setLanguage(lang: Language): void {
     if (this.lang === lang) return;
     this.lang = lang;
-    const newLayout: KeyboardLayout = lang === 'kr' ? 'korean2set' : 'qwerty';
+    let newLayout: KeyboardLayout;
+    if (lang === 'kr') {
+      newLayout = getKoreanInputMode() === 'romanized' ? 'qwerty' : 'korean2set';
+    } else {
+      newLayout = 'qwerty';
+    }
     if (newLayout !== this.layout) {
       this.layout = newLayout;
       this.keys = [];
