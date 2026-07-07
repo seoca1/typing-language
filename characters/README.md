@@ -9,16 +9,19 @@
 ```
 characters/
 ├── README.md                         # 이 파일
-├── QUICKSTART.md                     # 30분 빠른 시작 가이드 (NEW!)
+├── QUICKSTART.md                     # 30분 빠른 시작 가이드
 ├── docs/                             # 문서
-│   ├── AI_CHARACTER_PROMPTS.md      # AI 프롬프트 (600+ 줄)
+│   ├── AI_CHARACTER_PROMPTS.md      # AI 프롬프트 (932줄)
 │   ├── CHARACTER_IMAGE_GUIDE.md     # 이미지 사용 가이드
-│   └── STABLE_DIFFUSION_SETUP.md    # SD WebUI 설치 가이드 (NEW!)
+│   ├── CHARACTER_GENERATION.md       # 생성 자동화 가이드 (NEW!)
+│   ├── STABLE_DIFFUSION_SETUP.md    # SD WebUI 설치 가이드
+│   ├── GEMINI_IMAGE_GENERATION.md   # Gemini 사용 가이드
+│   └── CHATGPT_IMAGE_GENERATION.md  # ChatGPT/DALL-E 가이드
 └── scripts/                          # 자동화 스크립트
-    ├── README.md                     # 스크립트 사용법
-    ├── generate_characters.py        # 이미지 자동 생성
-    ├── test_api.py                  # API 연결 테스트
-    └── requirements.txt              # Python 의존성
+    ├── README.md                    # 스크립트 사용법
+    ├── generate_characters.py       # 이미지 자동 생성 (5개 백엔드)
+    ├── test_api.py                 # API 연결 테스트
+    └── requirements.txt             # Python 의존성
 ```
 
 ---
@@ -51,52 +54,63 @@ characters/
 
 ## 🚀 빠른 시작
 
-### ⚡ 초급: 30분 안에 끝내기
+### ⚡ OpenAI 사용 (권장 — 5분)
 
 ```bash
-# 1. 빠른 시작 가이드 읽기
-cat QUICKSTART.md
+# 1. API 키 발급
+# https://platform.openai.com/api-keys
 
-# 2. Stable Diffusion WebUI 설치 (10-15분)
-# Windows: 가이드 참조
-# macOS/Linux: 가이드 참조
-
-# 3. 이미지 생성 (15-30분)
+# 2. 이미지 생성 (5분)
 cd scripts
-python3 generate_characters.py --backend webui --all
+python3 generate_characters.py --backend openai --token 'sk-proj-...' --all
 
-# 4. 게임 활성화
-# prototype/src/config/characterImages.ts
-# USE_EXTERNAL_IMAGES = true
+# 3. 완료! (자동으로 public/characters/에 저장)
 ```
 
-**→ `QUICKSTART.md` 참조!**
+**→ `docs/CHARACTER_GENERATION.md` 참조!**
 
 ---
 
-### 📖 중급: 상세 설정
+### 📖 지원 백엔드
 
-**1. Stable Diffusion WebUI 설치:**
+| 백엔드 | 비용 | 속도 | 설정 |
+|--------|------|------|------|
+| **OpenAI** | 유료 | 빠름 | API 키만 |
+| HuggingFace | 무료 | 보통 | API 키 + DNS 문제 |
+| Stable Diffusion WebUI | 무료 | 매우 빠름 | 로컬 GPU 필요 |
+| Replicate | 유료 | 보통 | API 키만 |
+
+---
+
+### 📖 상세 설정
+
+**1. OpenAI API:**
+```bash
+# 발급: https://platform.openai.com/api-keys
+export OPENAI_API_KEY="sk-proj-..."
+```
+
+**2. HuggingFace API (무료):**
+```bash
+# 발급: https://huggingface.co/settings/tokens
+export HF_TOKEN="hf_..."
+```
+
+**3. Stable Diffusion WebUI:**
 ```bash
 # 전체 설치 가이드
 cat docs/STABLE_DIFFUSION_SETUP.md
 ```
 
-- Windows/macOS/Linux 전용 가이드
-- GPU 설정
-- 모델 다운로드
-- API 활성화
-- 트러블슈팅
-
-**2. 이미지 생성:**
+**4. 이미지 생성:**
 ```bash
 cd scripts
 
 # 연결 테스트
-python3 test_api.py --backend webui
+python3 test_api.py --backend openai --token "$OPENAI_API_KEY"
 
 # 모든 캐릭터 생성
-python3 generate_characters.py --backend webui --all
+python3 generate_characters.py --backend openai --token "$OPENAI_API_KEY" --all
 ```
 
 **3. 게임 적용:**
