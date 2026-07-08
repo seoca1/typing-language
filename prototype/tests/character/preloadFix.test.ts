@@ -40,7 +40,7 @@ describe('Phase E fix — all characters have valid image sets', () => {
   it('every image src ends in .png with valid path format', () => {
     for (const charSet of Object.values(CHARACTER_IMAGES)) {
       for (const imageConfig of Object.values(charSet)) {
-        expect(imageConfig.src).toMatch(/^\/typing-language\/characters\/[a-z]{2}\/[a-z-]+\/\d+-[a-z]+\.png$$/);
+        expect(imageConfig.src).toMatch(/^\/typing-language\/characters\/[a-z]{2}\/[a-z-]+\/[a-z]+\.png$$/);
       }
     }
   });

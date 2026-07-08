@@ -83,7 +83,7 @@ describe('Character Configuration — All 12 PNG Files', () => {
       });
 
       for (const pose of ALL_POSES) {
-        const filename = `${ALL_POSES.indexOf(pose) + 1}-${pose}.png`;
+        const filename = `${pose}.png`;
         it(`has ${filename} (valid PNG)`, () => {
           const filepath = path.join(charDir, filename);
           expect(fs.existsSync(filepath)).toBe(true);
