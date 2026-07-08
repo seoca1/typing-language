@@ -54,6 +54,12 @@ const COMPOUND_TRAILING: Record<string, string> = {
 
 // ===== Unicode Hangul composition tables =====
 
+/** 완성형 한글 범위 체크 (AC00 ~ D7A3) */
+function isCompleteHangul(char: string): boolean {
+  const code = char.charCodeAt(0);
+  return code >= 0xAC00 && code <= 0xD7A3;
+}
+
 const LEADINGS = [
   'ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ',
   'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ',
@@ -244,6 +250,11 @@ export class KoreanHandler extends BaseInputHandler {
       this.inputConsonant(key);
     } else if (VOWELS.has(key)) {
       this.inputVowel(key);
+    } else if (isCompleteHangul(key)) {
+      this.flushPending();
+      this.syllables.push(key);
+      this.totalKeystrokes += 1;
+      return this.match();
     } else {
       return this.currentResult();
     }
