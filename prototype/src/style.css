@@ -1388,6 +1388,9 @@ button:hover {
   font-size: 20px;
   cursor: pointer;
   transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .settings-btn:hover {
   background: rgba(0, 217, 255, 0.2);
