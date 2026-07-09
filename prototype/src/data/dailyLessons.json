@@ -266,12 +266,12 @@
       "wikiOutput": {
         "hubPage": "Language/wiki/En/sources/first-travel-japan.md",
         "vocabularyPages": [
-          "kuukou.md",
-          "pasupooto.md",
-          "hoteru.md",
-          "nimotsu.md",
-          "chikatetsu.md",
-          "densha.md"
+          "travel.md",
+          "travel.md",
+          "travel.md",
+          "travel.md",
+          "travel.md",
+          "travel.md"
         ],
         "expressionPages": [
           "where-is.md",
@@ -2455,9 +2455,9 @@
       "wikiOutput": {
         "hubPage": "Language/wiki/Kr/sources/first-travel-japan.md",
         "vocabularyPages": [
-          "kuukou.md",
-          "pasupooto.md",
-          "nimotsu.md",
+          "여행.md",
+          "여행.md",
+          "여행.md",
           "동물 어휘.md",
           "의류・패션 어휘.md"
         ],
