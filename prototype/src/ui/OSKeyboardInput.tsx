@@ -48,19 +48,31 @@ export interface OSKeyboardInputHandle {
 }
 
 /**
- * Map game language to inputMode for mobile keyboards
+ * Map game language to inputMode for mobile keyboards.
+ * 'text' is appropriate for all supported languages since the typing game
+ * uses a hidden input with keydown interception — the OS keyboard layout
+ * is selected by the physical/IME input, not inputMode.
  */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getInputMode(_lang: Language): 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search' | undefined {
   return 'text';
 }
 
 /**
- * Map game language to OS language code (BCP 47)
+ * Map game language to BCP 47 language tag for the OS keyboard.
+ * Used as the HTML `lang` attribute to hint which OS keyboard layout to show.
  */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function getLangCode(_lang: Language): string {
-  return 'en';
+function getLangCode(lang: Language): string {
+  switch (lang) {
+    case 'jp':
+      return 'ja';
+    case 'kr':
+      return 'ko';
+    case 'es':
+      return 'es';
+    case 'en':
+    default:
+      return 'en';
+  }
 }
 
 export const OSKeyboardInput = forwardRef<OSKeyboardInputHandle, OSKeyboardInputProps>(function OSKeyboardInput({
