@@ -36,36 +36,36 @@ Language Wiki XL mesh 확장 세션(2026-07-06)에서 추가된 항목을 Game T
 #### ES (25개)
 | Word | Category | CEFR Level | Accent | Source Wiki |
 |------|----------|------------|--------|-------------|
-| pajaro | animal | A1 | loose (pájaro) | [[pajaro]] |
-| vaca | animal | A1 | strict | [[vaca]] |
-| pez | animal | A1 | strict | [[pez]] |
-| rana | animal | A1 | strict | [[rana]] |
-| leon | animal | A1 | strict (león) | [[leon]] |
-| conejo | animal | A1 | strict | [[conejo]] |
-| rio | nature | A1 | strict (río) | [[rio]] |
-| lago | nature | A1 | strict | [[lago]] |
-| montana | nature | A1 | strict (montaña) | [[montana]] |
-| bosque | nature | A1 | strict | [[bosque]] |
-| cielo | nature | A1 | strict | [[cielo]] |
-| tierra | nature | A1 | strict | [[tierra]] |
-| fuego | nature | A1 | strict | [[fuego]] |
-| flor | nature | A1 | strict | [[flor]] |
-| hoja | nature | A1 | strict | [[hoja]] |
-| luna | nature | A1 | strict | [[luna]] |
-| lluvia | nature | A1 | strict | [[lluvia]] |
-| arcoiris | nature | A1 | strict (arcoíris) | [[arcoiris]] |
-| nieve | nature | A1 | strict | [[nieve]] |
-| estrella | nature | A1 | strict | [[estrella]] |
-| tormenta | nature | A1 | strict | [[tormenta]] |
-| sol | nature | A1 | strict | [[sol]] |
-| trueno | nature | A1 | strict | [[trueno]] |
-| arbol | nature | A1 | strict (árbol) | [[arbol]] |
-| viento | nature | A1 | strict | [[viento]] |
+| pajaro | animal | A1 | loose (pájaro) | [[animals-vocabulary]] |
+| vaca | animal | A1 | strict | [[animals-vocabulary]] |
+| pez | animal | A1 | strict | [[animals-vocabulary]] |
+| rana | animal | A1 | strict | [[animals-vocabulary]] |
+| leon | animal | A1 | strict (león) | [[animals-vocabulary]] |
+| conejo | animal | A1 | strict | [[animals-vocabulary]] |
+| rio | nature | A1 | strict (río) | [[nature-vocabulary]] |
+| lago | nature | A1 | strict | [[nature-vocabulary]] |
+| montana | nature | A1 | strict (montaña) | [[nature-vocabulary]] |
+| bosque | nature | A1 | strict | [[nature-vocabulary]] |
+| cielo | nature | A1 | strict | [[nature-vocabulary]] |
+| tierra | nature | A1 | strict | [[nature-vocabulary]] |
+| fuego | nature | A1 | strict | [[nature-vocabulary]] |
+| flor | nature | A1 | strict | [[nature-vocabulary]] |
+| hoja | nature | A1 | strict | [[nature-vocabulary]] |
+| luna | nature | A1 | strict | [[nature-vocabulary]] |
+| lluvia | nature | A1 | strict | [[nature-vocabulary]] |
+| arcoiris | nature | A1 | strict (arcoíris) | [[nature-vocabulary]] |
+| nieve | nature | A1 | strict | [[nature-vocabulary]] |
+| estrella | nature | A1 | strict | [[nature-vocabulary]] |
+| tormenta | nature | A1 | strict | [[nature-vocabulary]] |
+| sol | nature | A1 | strict | [[nature-vocabulary]] |
+| trueno | nature | A1 | strict | [[nature-vocabulary]] |
+| arbol | nature | A1 | strict (árbol) | [[nature-vocabulary]] |
+| viento | nature | A1 | strict | [[nature-vocabulary]] |
 
 #### KR (1개)
 | Word | Category | TOPIK Level | Source Wiki |
 |------|----------|-------------|-------------|
-| 입술 | body | 1 | [[입술]] |
+| 입술 | body | 1 | [[emotions-personality-vocabulary]] |
 
 ---
 
@@ -85,7 +85,7 @@ Language Wiki XL mesh 확장 세션(2026-07-06)에서 추가된 항목을 Game T
 
 ### Phase 3: KR corpus 업데이트 (1개)
 1. `raw/kr_words.md`에 1개 항목 추가
-2. `source: [[입술]]` citation 추가
+2. `source: [[emotions-personality-vocabulary]]` citation 추가
 3. game-sync-check.py 실행确认
 
 ### Phase 4: Final Verification

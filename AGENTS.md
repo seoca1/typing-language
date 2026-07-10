@@ -11,18 +11,22 @@
 이 게임의 **모든 콘텐츠(코퍼스, 문화 컨텍스트, 미션 대사)는 `Language/` 위키에서 가져온다**. 게임 자체에서 콘텐츠를 새로 만들지 않는다.
 
 ```
-Language/wiki/{Lang}/vocabulary/   ──(cite: [[wikilink]])──▶  Game/raw/{lang}_words.md
-Language/wiki/{Lang}/expressions/  ──(cite: [[wikilink]])──▶  Game/raw/{lang}_words.md
-Language/wiki/{Lang}/culture/      ──(cite: [[wikilink]])──▶  Game/wiki/languages/{lang}.md
+Language/wiki/{Lang}/vocabulary/{theme}.md    ──(cite: [[{theme}]])──▶  Game/raw/{lang}_words.md
+Language/wiki/{Lang}/expressions/{theme}.md   ──(cite: [[{theme}]])──▶  Game/raw/{lang}_words.md
+Language/wiki/{Lang}/culture/{topic}.md       ──(cite: [[wikilink]])──▶  Game/wiki/languages/{lang}.md
 ```
+
+> **컨벤션 정렬 (2026-07-10)**: 사용자 원칙 "단어나 문장 하나를 .md 로 만들지 않음"이
+> Language/ 측에 적용됨. 게임 측 인용도 동일 컨벤션: vocabulary 와 expressions 모두
+> **theme-file** 단위 (`source: [[{theme}]]`). per-word 페이지 없음.
 
 ### 규칙
 
 1. **게임에 필요한 콘텐츠가 Language 위키에 없으면, Language에 먼저 추가한다.**
    - `Language/raw/{Lang}/` 에 출처 추가
-   - `Language/wiki/{Lang}/` 인제스트 (vocabulary/expression/culture 페이지 생성)
+   - `Language/wiki/{Lang}/` 인제스트 (vocabulary 는 `{theme}.md` 안 `### {word}` 섹션 / expressions 는 `{theme}.md` 안 `## {expression}` 섹션)
    - 이후 게임 코퍼스에 인용과 함께 큐레이션
-2. **`raw/{lang}_words.md` 의 모든 항목은 `source: [[...]]` 필드로 Language 위키 페이지를 인용해야 한다.** 인용 없는 항목은 lint 결함.
+2. **`raw/{lang}_words.md` 의 모든 항목은 `source: [[{theme}]]` 필드로 Language 위키 vocabulary theme-file 을 인용해야 한다.** 인용 없는 항목은 lint 결함. wikilink target 은 theme-file stem 이어야 함 (per-word 페이지 없음).
 3. **Language 위키는 게임 없이도 독립 성장 가능** — 게임은 다운스트림 컨슈머일 뿐.
 
 자세한 내용: `wiki/corpus-pipeline.md`, `wiki/pipeline-to-game.md` (Language 측)
@@ -43,7 +47,7 @@ Language/wiki/{Lang}/culture/      ──(cite: [[wikilink]])──▶  Game/wik
 
 ### 3.1 새 언어/코퍼스 추가
 1. **Language 위키 확인**: `Language/wiki/{Lang}/` 가 존재하고 콘텐츠가 충분한지 확인. 부족하면 §3.1.1 먼저 수행.
-2. `raw/{lang}_words.md` 에 Language 위키 인용과 함께 항목 추가 — `source: [[vocabulary-page]]` 형식 필수
+2. `raw/{lang}_words.md` 에 Language 위키 인용과 함께 항목 추가 — `source: [[{theme}]]` 형식 필수 (theme-file anchor; per-word 페이지 미사용)
 3. `wiki/languages/{lang}.md` 작성 — 입력 방식, 로마자 매핑 표, 액센트 표기, 코퍼스 출처 (Language 위키 링크 포함)
 4. 필요시 새 ADR 작성 (입력 방식 결정)
 5. `wiki/` index 갱신, `log.md` 에 `[YYYY-MM-DD] ingest | 언어/주제` 형식으로 기록
@@ -54,7 +58,7 @@ Language/wiki/{Lang}/culture/      ──(cite: [[wikilink]])──▶  Game/wik
 게임 측에서 신규 언어/단어를 요구받았는데 Language 위키가 비어 있으면:
 
 1. `Language/raw/{Lang}/` 에 출처(교재·기사·원서) 추가
-2. `Language/wiki/{Lang}/` 인제스트 (vocabulary/expression/culture 페이지 생성)
+2. `Language/wiki/{Lang}/` 인제스트 — vocabulary 는 `{theme}.md` 안 `### {word}` 섹션으로, expressions 는 `{theme}.md` 안 `## {expression}` 섹션으로 (per-word .md 생성 금지)
 3. 이후 §3.1 의 2~6 단계 진행
 
 **Language 위키에 시드하기 전에는 게임 코퍼스에 신규 항목을 만들지 않는다.**

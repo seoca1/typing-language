@@ -2496,3 +2496,21 @@ Expand Japanese katakana input validation test coverage.
 **참고:**
 - jp_200~ entries는 kr_words.md에 이미 kr_t_001~ duplicates로 존재
 - jp_215 (가까이), jp_230 (호텔), jp_231 (환전), jp_701 (여권) 추가 발견분도 suppression
+
+## 2026-07-10
+
+### [2026-07-10] contract sync | Game 측 corpus-pipeline.md + korean.md 정합 Language 측 컨벤션과 동기화
+
+- **트리거**: Language/ 측의 "단어나 문장 하나를 .md 로 만들지 않음" 원칙 적용에 따라, 게임 측 `source` citation 명세도 theme-file 컨벤션으로 정규화 필요.
+- **조치**:
+  - `wiki/corpus-pipeline.md`:
+    - 필드 schema 표 갱신: `display`/`input`/`meaning` 출처를 `vocabulary/{theme}.md` 안 `### {word}` 섹션으로 명시
+    - `source` 필드 명세: `[[{theme-filename}]]` 단일 anchor (per-word 페이지 없음)
+    - YAML 예시: `source: "[[travel]]"` (이전 per-word `[[konnichiwa]]` 형태 폐기)
+    - 데이터 흐름도 + 위치 매핑 표 갱신
+    - 시나리오 A 에 expressions/{theme}.md 도 게임 코퍼스 큐레이션 가능 명시
+  - `AGENTS.md`: §1.5 + §3.1 + §3.1.1 의 per-word → theme-file 컨벤션 갱신
+  - `wiki/languages/korean.md`: source 예시 per-word → theme anchor, 코퍼스 상태 갱신
+  - `corpus-sync-plan.md`: per-word [[stem]] 26건 → [[theme]] 매핑 (animal/nature)
+- **제한**: `raw/kr_words.md` L9 의 per-word 명세는 raw/ read-only 규약으로 미수정 (데이터 영향 없음, contract doc만 stale)
+- **결과**: 양 프로젝트가 vocabulary/expressions 모두 theme-file 컨벤션으로 정렬.

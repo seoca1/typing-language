@@ -119,7 +119,7 @@
 ### 업스트림 소스
 
 - **Language 위키**: `Language/wiki/Korean/` (단일 진실 공급원)
-- **현재 상태**: `Language/wiki/Korean/` 비어 있음. 인제스트 필요.
+- **현재 상태**: `Language/wiki/Korean/` 에 7 theme 파일 보유 (여행, 동물 어휘, 자연・날씨 어휘, 의류・패션 어휘, business-vocabulary, food-vocabulary, emotions-personality-vocabulary). 인제스트 진행 중.
 
 ### 출처 후보 (Language `raw/Korean/` 에 추가 예정)
 
@@ -139,7 +139,7 @@
   meaning: hello (polite)  # 영어 정의 (또는 한국어 뜻)
   level: 1                 # TOPIK 1=1, 2=2, ..., 6=6 (낮을수록 어려움)
   category: greeting
-  source: "[[annyeonghaseyo]]"   # Language/wiki/Korean/vocabulary/ 페이지 인용 (필수)
+  source: "[[travel]]"   # Language/wiki/Korean/vocabulary/{theme}.md 인용 (theme-file 컨벤션, 2026-07-10)
 ```
 
 > **인용 규칙**: 모든 항목은 `source: [[...]]` 필드로 Language 위키 페이지를 가리켜야 한다. 자세한 내용: `wiki/corpus-pipeline.md`

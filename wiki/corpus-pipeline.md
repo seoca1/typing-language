@@ -14,24 +14,25 @@
 ```
 ┌────────────────────────┐                ┌─────────────────────────────────┐
 │ Language/raw/{Lang}/   │  ─ ingest ──▶  │ Language/wiki/{Lang}/           │
-│ (소스 자료, immutable)  │                │  ├─ vocabulary/                │
-└────────────────────────┘                │  ├─ expressions/               │
-                                          │  ├─ culture/                   │
-                                          │  └─ sources/                   │
-                                          └──────────────┬──────────────────┘
-                                                         │ curate
-                                                         ▼
-                                          ┌─────────────────────────────────┐
-                                          │ Game/typing_language/raw/       │
-                                          │  └─ {lang}_words.md             │
-                                          │      (source: [[wikilink]])     │
-                                          └──────────────┬──────────────────┘
-                                                         │ build
-                                                         ▼
-                                          ┌─────────────────────────────────┐
-                                          │ Game/typing_language/prototype/ │
-                                          │  └─ src/data/{lang}_words.json  │
-                                          └─────────────────────────────────┘
+│ (소스 자료, immutable)  │                │  ├─ vocabulary/{theme}.md       │
+└────────────────────────┘                │  │   (예: travel.md, food.md)    │
+                                           │  ├─ expressions/{theme}.md      │
+                                           │  ├─ culture/{topic}.md          │
+                                           │  └─ sources/{source}.md         │
+                                           └──────────────┬──────────────────┘
+                                                          │ curate
+                                                          ▼
+                                           ┌─────────────────────────────────┐
+                                           │ Game/typing_language/raw/       │
+                                           │  └─ {lang}_words.md             │
+                                           │      (source: [[{theme}]])      │
+                                           └──────────────┬──────────────────┘
+                                                          │ build
+                                                          ▼
+                                           ┌─────────────────────────────────┐
+                                           │ Game/typing_language/prototype/ │
+                                           │  └─ src/data/{lang}_words.json  │
+                                           └─────────────────────────────────┘
 ```
 
 ## 게임 측 위치 매핑
@@ -43,11 +44,11 @@
 | `wiki/languages/japanese.md` | JP | `Language/wiki/Japanese/` |
 | `wiki/languages/korean.md` | KR | `Language/wiki/Korean/` |
 
-| 게임 코퍼스 | Language 출처 |
+| 게임 코퍼스 | Language 출처 (theme-file 컨벤션) |
 | --- | --- |
-| `raw/en_words.md` | `Language/wiki/English/vocabulary/` |
-| `raw/es_words.md` | `Language/wiki/Spanish/vocabulary/` |
-| `raw/jp_words.md` | `Language/wiki/Japanese/vocabulary/` |
+| `raw/en_words.md` | `Language/wiki/English/vocabulary/{theme}.md` (예: `travel.md`, `food-vocabulary.md`) |
+| `raw/es_words.md` | `Language/wiki/Spanish/vocabulary/{theme}.md` (예: `viajes.md`, `food-vocabulary.md`) |
+| `raw/jp_words.md` | `Language/wiki/Japanese/vocabulary/{theme}.md` (예: `travel.md`, `food-vocabulary.md`) |
 | `raw/kr_words.md` | `Language/wiki/Korean/vocabulary/` |
 
 ## 작업 흐름 (게임 콘텐츠가 필요할 때)
@@ -64,9 +65,11 @@
 4. 케이스 A2 — 부족하면:
      → Language/raw/Korean/ 에 출처 추가 (사용자에게 권고)
      → 사용자가 출처 추가 후 인제스트 지시
-     → Language/wiki/Korean/vocabulary/ 페이지 생성
+     → Language/wiki/Korean/vocabulary/ 페이지 생성 (또는 신규 단어를 기존 `{theme}.md` 안 `### {word}` 섹션으로 추가)
      → Game/typing_language/raw/kr_words.md 에 큐레이션
      → 양쪽 log 기록
+
+> 게임 측 코퍼스는 vocabulary 만이 아니라 `expressions/{theme}.md` (관용구) 도 동일한 5필드 + source anchor 패턴으로 큐레이션 가능하다 (2026-07-10 갱신). 예: `raw/jp_idioms.md`, `raw/es_idioms.md` 등을 별도 게임 코퍼스로 운영 가능.
 ```
 
 ### 시나리오 B: 게임 신규 언어 추가
@@ -101,25 +104,34 @@
 | 필드 | 필수 | 출처 (Language 위키) | 비고 |
 | --- | --- | --- | --- |
 | `id` | 필수 | 에이전트 부여 | `{lang}_{NNN}` |
-| `display` | 필수 | `vocabulary/{word}.md` 의 단어 | 화면 표시용 |
+| `display` | 필수 | `wiki/{Lang}/vocabulary/{theme}.md` 안 `### {word}` 섹션의 단어 (theme-file 컨벤션, 2026-07-10 갱신) | 화면 표시용 |
 | `input` | 필수 | 동일 (또는 언어별 변환) | 사용자가 타이핑할 키 시퀀스 |
-| `meaning` | 필수 | 동일 페이지의 정의 | 한국어 번역 또는 영어 |
-| `level` | 필수 | 출처 메타 또는 vocabulary 태그 | CEFR/JLPT/TOPIK 등 |
-| `category` | 필수 | vocabulary 태그 | 인사/숫자/색상 등 |
-| `source` | **필수** | `[[vocabulary-page-name]]` | Language 위키 페이지 인용 (없으면 lint 결함) |
+| `meaning` | 필수 | 동일 섹션의 정의 | 한국어 번역 또는 영어 |
+| `level` | 필수 | vocabulary theme-file 머리 메타 (page-level `**Level:**` 필드) | CEFR/JLPT/TOPIK 등 |
+| `category` | 필수 | vocabulary theme-file 머리 메타 (page-level `**Category:**` 필드) | 인사/숫자/색상 등 |
+| `source` | **필수** | `[[{theme-filename}]]` (단일 theme anchor) | Language 위키 vocabulary theme-file 인용. per-word 페이지 없음. (없으면 lint 결함) |
 | `note` | 선택 | 자유 | 게임 메카닉에 필요한 비고 (예: irregular, polysemy) |
+
+> **컨벤션 정렬 (2026-07-10)**: 사용자 원칙 "단어나 문장 하나를 .md 로 만들지 않음"이
+> Language/ 측 vocabulary 와 expressions 양쪽에 적용됨. 게임 코퍼스도 동일 컨벤션:
+> vocabulary 와 expressions 모두 **theme-file** 단위로 인용 (`source: [[{theme}]]`).
+> 단어/표현 한 개당 .md 페이지를 만들지 않으므로, source 도 그에 맞춰 정규화.
 
 ## cite 규칙
 
 ```yaml
-# GOOD — source 필드에 Language 위키 링크
-- { id: jp_001, display: こんにちは, input: konnichiwa, meaning: hello, level: 5, category: greeting, source: "[[konnichiwa]]" }
+# GOOD — source 필드에 Language 위키 theme-file 링크
+- { id: jp_001, display: こんにちは, input: konnichiwa, meaning: hello, level: 5, category: greeting, source: "[[travel]]" }
 
 # BAD — source 없음 또는 일반 텍스트만
 - { id: jp_001, display: こんにちは, input: konnichiwa, meaning: hello, level: 5, category: greeting }
+
+# BAD — per-word stem 인용 (per-word 페이지 없으므로 깨짐)
+- { id: jp_001, display: こんにちは, input: konnichiwa, meaning: hello, level: 5, category: greeting, source: "[[konnichiwa]]" }
 ```
 
-`source` 가 `[[wikilink]]` 형식이 아니면 lint에서 경고한다.
+`source` 가 `[[wikilink]]` 형식이 아니면 lint에서 경고한다. wikilink target 은
+반드시 `wiki/{Lang}/{vocabulary,expressions}/{theme}.md` 의 stem 이어야 한다.
 
 ## 절대 규칙
 
