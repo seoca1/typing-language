@@ -2300,7 +2300,7 @@ aec36fc — fix: validate-daily-lessons.py supports schemaVersion 1.2
 
 **regen_game_corpus.py 업데이트:**
 - 4개 언어 모두 지원 (en/es/jp/kr)
-- 생성 시 `source: [[{stem}]]` 자동 포함
+- 생성 시 `source: [단어 stem]` 자동 포함
 - 향후 wiki 기반 corpus regeneration 시 source 인용 자동 포함
 
 **검증:**
@@ -2511,6 +2511,24 @@ Expand Japanese katakana input validation test coverage.
     - 시나리오 A 에 expressions/{theme}.md 도 게임 코퍼스 큐레이션 가능 명시
   - `AGENTS.md`: §1.5 + §3.1 + §3.1.1 의 per-word → theme-file 컨벤션 갱신
   - `wiki/languages/korean.md`: source 예시 per-word → theme anchor, 코퍼스 상태 갱신
-  - `corpus-sync-plan.md`: per-word [[stem]] 26건 → [[theme]] 매핑 (animal/nature)
+  - `corpus-sync-plan.md`: per-word [단어 stem] 26건 → [테마 stem] 매핑 (animal/nature)
 - **제한**: `raw/kr_words.md` L9 의 per-word 명세는 raw/ read-only 규약으로 미수정 (데이터 영향 없음, contract doc만 stale)
 - **결과**: 양 프로젝트가 vocabulary/expressions 모두 theme-file 컨벤션으로 정렬.
+
+## 2026-07-12
+
+### 헬스 체크 (cross-project — roguelike_sprawl 헬스 체크 패턴 적용)
+
+사용자 요청: roguelike_sprawl 다음 작업으로 typing_language 헬스 체크.
+
+**검증 결과**:
+- `npm run typecheck` ✅ clean (tsc strict)
+- `npm run lint` ✅ clean (ESLint)
+- `npm run test` ✅ **680 passed / 1 skipped (681)**, 23 test files, 1.26s
+
+**발견 사항 (낮은 우선순위, 조치 불필요)**:
+1. StageSystem fallback 경고 (stderr noise): 통합 테스트에서 다수 stderr 출력. 의도된 fallback 동작 (`relaxed-level`) — DEBUG 레벨로 강등 검토 가능.
+2. 1 skipped test: `tests/input/KoreanHandler.test.ts` (한국어 입력 핸들러) — 의도된 skip.
+3. type-coverage 미설치: roguelike_sprawl의 ADR-0120 (interrogate) 와 유사한 TypeScript용 도구. JSDoc 강제 가능하나 미적용 상태.
+
+**결론**: typing_language는 매우 건강한 상태. 별도 작업 불필요. 추후 헬스 체크 (3-6개월 주기) 권장.
