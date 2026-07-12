@@ -20,6 +20,269 @@
 기대: completed=true
 ```
 
+## 카타카나 매핑
+
+### TC-JP-060: 카타카나 기본
+
+```
+전제: Target = "アニメ" (display), 정답 romaji = "anime"
+실행: 'a' 'n' 'i' 'm' 'e'
+기대: completed=true
+```
+
+### TC-JP-061: 카타카나 장음 (ー)
+
+```
+전제: Target = "コーヒー" (display), 정답 romaji = "koohii"
+실행: 'k' 'o' 'o' 'h' 'i' 'i'
+기대: completed=true
+설명: 'oo' → ー
+```
+
+### TC-JP-062: 카타카나 장음 (ou)
+
+```
+전제: Target = "ゲーム" (display), 정답 romaji = "geemu"
+실행: 'g' 'e' 'e' 'm' 'u'
+기대: completed=true
+설명: 'ee' → ー
+```
+
+### TC-JP-063: 카타카나 촉음 (ッ)
+
+```
+전제: Target = "酒店" (display), 정답 romaji = "osake"
+실행: 'o' 's' 'a' 'k' 'e'
+기대: completed=true
+```
+
+### TC-JP-064: 카타카나 합성어
+
+```
+전제: Target = "インターネット" (display), 정답 romaji = "inta-netto"
+실행: 'i' 'n' 't' 'a' '-' 'a' 'n' 'e' 't' 't' 'o'
+기대: completed=true
+```
+
+### TC-JP-065: 카타카나 + 히라가나 혼합
+
+```
+전제: Target = "ノートパソコン" (display), 정답 romaji = "nootopasokon"
+실행: 'n' 'o' 'o' 't' 'o' 'p' 'a' 's' 'o' 'k' 'o' 'n'
+기대: completed=true
+```
+
+### TC-JP-066: 카타카나外来어
+
+```
+전제: Target = "ラーメン" (display), 정답 romaji = "raamen"
+실행: 'r' 'a' 'a' 'm' 'e' 'n'
+기대: completed=true
+```
+
+### TC-JP-067: 카타카나外来어
+
+```
+전제: Target = "パン" (display), 정답 romaji = "pan"
+실행: 'p' 'a' 'n'
+기대: completed=true
+```
+
+### TC-JP-068: 카타카나 복합어
+
+```
+전제: Target = "ジャーナリズム" (display), 정답 romaji = "jaanarizumu"
+실행: 'j' 'a' 'a' 'n' 'a' 'r' 'i' 'z' 'u' 'm' 'u'
+기대: completed=true
+```
+
+### TC-JP-069: 카타카나 促음
+
+```
+전제: Target = "サッカー" (display), 정답 romaji = "sakkaa"
+실행: 's' 'a' 'k' 'k' 'a' 'a'
+기대: completed=true
+설명: 'kk' → ッ, 'aa' → ー
+```
+
+### TC-JP-070: 카타카나 外来어
+
+```
+전제: Target = "パスワード" (display), 정답 romaji = "pasuwaado"
+실행: 'p' 'a' 's' 'u' 'w' 'a' 'a' 'd' 'o'
+기대: completed=true
+```
+
+### TC-JP-071: 카타카나 システム
+
+```
+전제: Target = "コンピュータ" (display), 정답 romaji = "konpyu-ta"
+실행: 'k' 'o' 'n' 'p' 'y' 'u' '-' 't' 'a'
+기대: completed=true
+```
+
+### TC-JP-072: 카타카나 コーヒー
+
+```
+전제: Target = "コーヒー" (display), 정답 romaji = "koohii"
+실행: 'k' 'o' 'o' 'h' 'i' 'i'
+기대: completed=true
+```
+
+### TC-JP-073: 카타카나 タクシー
+
+```
+전제: Target = "タクシー" (display), 정답 romaji = "takushii"
+실행: 't' 'a' 'k' 'u' 's' 'h' 'i' 'i'
+기대: completed=true
+```
+
+### TC-JP-074: 카타카나 ジャケット
+
+```
+전제: Target = "ジャケット" (display), 정답 romaji = "jaketto"
+실행: 'j' 'a' 'k' 'e' 't' 't' 'o'
+기대: completed=true
+```
+
+### TC-JP-075: 카타카나 スケジュール
+
+```
+전제: Target = "スケジュール" (display), 정답 romaji = "sukejuuru"
+실행: 's' 'u' 'k' 'e' 'j' 'u' 'u' 'r' 'u'
+기대: completed=true
+```
+
+## 한자 매핑
+
+### TC-JP-080: 한자 기본 (数字)
+
+```
+전제: Target = "一" (display), 정답 romaji = "ichi"
+실행: 'i' 'c' 'h' 'i'
+기대: completed=true
+```
+
+### TC-JP-081: 한자 基本 (日本)
+
+```
+전제: Target = "日" (display), 정답 romaji = "hi"
+실행: 'n' 'i' 'h' 'o' 'n'
+기대: completed=true
+```
+
+### TC-JP-082: 한자 火水
+
+```
+전제: Target = "火" (display), 정답 romaji = "ka"
+실행: 'h' 'i'
+기대: completed=true
+```
+
+### TC-JP-083: 한자 山川
+
+```
+전제: Target = "川" (display), 정답 romaji = "kawa"
+실행: 'k' 'a' 'w' 'a'
+기대: completed=true
+```
+
+### TC-JP-084: 한자 大中小
+
+```
+전제: Target = "体" (display), 정답 romaji = "karada"
+실행: 'd' 'a' 'i'
+기대: completed=true
+```
+
+### TC-JP-085: 한자 複数読み
+
+```
+전제: Target = "人" (display), 정답 romaji = "hito"
+실행: 'h' 'i' 't' 'o'
+기대: completed=true
+```
+
+### TC-JP-086: 한자複合語 (日本)
+
+```
+전제: Target = "日" (display), 정답 romaji = "hi"
+실행: 'n' 'i' 'h' 'o' 'n'
+기대: completed=true
+```
+
+### TC-JP-087: 한자 時間 (今日)
+
+```
+전제: Target = "今日" (display), 정답 romaji = "kyou"
+실행: 'k' 'y' 'o' 'u'
+기대: completed=true
+```
+
+### TC-JP-088: 한자 自然 (山)
+
+```
+전제: Target = "山" (display), 정답 romaji = "yama"
+실행: 'y' 'a' 'm' 'a'
+기대: completed=true
+```
+
+### TC-JP-089: 한자 仕事
+
+```
+전제: Target = "仕事" (display), 정답 romaji = "shigoto"
+실행: 's' 'h' 'i' 'g' 'o' 't' 'o'
+기대: completed=true
+```
+
+### TC-JP-090: 한자 学校
+
+```
+전제: Target = "学校" (display), 정답 romaji = "gakkou"
+실행: 'g' 'a' 'k' 'k' 'o' 'u'
+기대: completed=true
+```
+
+### TC-JP-091: 한자 先生
+
+```
+전제: Target = "先生" (display), 정답 romaji = "sensei"
+실행: 's' 'e' 'n' 's' 'e' 'i'
+기대: completed=true
+```
+
+### TC-JP-092: 한자 曜日 (水曜日)
+
+```
+전제: Target = "水" (display), 정답 romaji = "mizu"
+실행: 'm' 'i' 'z' 'u'
+기대: completed=true
+```
+
+### TC-JP-093: 한자 金銭 (金)
+
+```
+전제: Target = "金" (display), 정답 romaji = "kin"
+실행: 'k' 'a' 'n' 'e'
+기대: completed=true
+```
+
+### TC-JP-094: 한자 복합어 (電話)
+
+```
+전제: Target = "電話" (display), 정답 romaji = "denwa"
+실행: 'd' 'e' 'n' 'w' 'a'
+기대: completed=true
+```
+
+### TC-JP-095: 한자 복합어 (電気)
+
+```
+전제: Target = "駅" (display), 정답 romaji = "eki"
+실행: 'e' 'k' 'i'
+기대: completed=true
+```
+
 ## 특수 매핑
 
 ### TC-JP-010: 촉음 (っ)
