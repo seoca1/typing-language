@@ -25,7 +25,7 @@
                                            ┌─────────────────────────────────┐
                                            │ Game/typing_language/raw/       │
                                            │  └─ {lang}_words.md             │
-                                           │      (source: [[{theme}]])      │
+                                           │      (source: [테마 stem])      │
                                            └──────────────┬──────────────────┘
                                                           │ build
                                                           ▼
@@ -114,7 +114,7 @@
 
 > **컨벤션 정렬 (2026-07-10)**: 사용자 원칙 "단어나 문장 하나를 .md 로 만들지 않음"이
 > Language/ 측 vocabulary 와 expressions 양쪽에 적용됨. 게임 코퍼스도 동일 컨벤션:
-> vocabulary 와 expressions 모두 **theme-file** 단위로 인용 (`source: [[{theme}]]`).
+> vocabulary 와 expressions 모두 **theme-file** 단위로 인용 (`source: [테마 stem]`).
 > 단어/표현 한 개당 .md 페이지를 만들지 않으므로, source 도 그에 맞춰 정규화.
 
 ## cite 규칙

@@ -73,14 +73,14 @@ Language Wiki XL mesh 확장 세션(2026-07-06)에서 추가된 항목을 Game T
 
 ### Phase 1: EN corpus 업데이트 (7개)
 1. `raw/en_words.md`에 7개 항목 추가
-2. `source: [[word]]` citations 추가
+2. `source: [corpus 단어 stem]` citations 추가
 3. game-sync-check.py 실행确认
 
 ### Phase 2: ES corpus 업데이트 (25개)
 1. `raw/es_words.md`에 25개 항목 추가
 2. ES animal entries: category=animal, accentMode=strict/loose
 3. ES nature entries: category=nature, accentMode=strict
-4. `source: [[word]]` citations 추가
+4. `source: [corpus 단어 stem]` citations 추가
 5. game-sync-check.py 실행确认
 
 ### Phase 3: KR corpus 업데이트 (1개)
@@ -98,7 +98,7 @@ Language Wiki XL mesh 확장 세션(2026-07-06)에서 추가된 항목을 Game T
 
 ### EN 형식
 ```yaml
-- { id: en_XXX, display: word, meaning: 뜻, level: 1, category: category, source: [[word]] }
+- { id: en_XXX, display: word, meaning: 뜻, level: 1, category: category, source: [corpus 단어 stem] }
 ```
 
 ### ES 형식
