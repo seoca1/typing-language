@@ -2532,3 +2532,81 @@ Expand Japanese katakana input validation test coverage.
 3. type-coverage 미설치: roguelike_sprawl의 ADR-0120 (interrogate) 와 유사한 TypeScript용 도구. JSDoc 강제 가능하나 미적용 상태.
 
 **결론**: typing_language는 매우 건강한 상태. 별도 작업 불필요. 추후 헬스 체크 (3-6개월 주기) 권장.
+
+## [2026-07-13] sync | es_words.md +33 entries from Language/wiki Spanish (ADR-0062)
+
+- **Trigger**: Language/wiki Spanish 신규 33 어휘 (이번 세션 card-extraction 결과 — ADR-0062) 가 Game corpus 에 미반영
+- **Action**: `Game/typing_language/raw/es_words.md` 에 신규 섹션 `### Card-Extraction 신규 동기화 (2026-07-13, ADR-0062)` 추가
+- **New entries** (35 total):
+  - body-vocabulary (10): cabeza/ojo/boca/brazo/mano/espalda/estómago/pierna/pie/corazón → `es_b_*`
+  - family-vocabulary (4): hijo/hija/hermano/hermana → `es_f_*`
+  - transportation-vocabulary (7): estación/metro/autobús/taxi/billete/tren/avión → `es_t_016-022`
+  - weather-vocabulary (4): frío/llueve/despejado/soleado → `es_w_*`
+  - restaurant-vocabulary (4): mesa/carta/plato/cubiertos → `es_r_*`
+  - tango-vocabulary (5): abrazo/milonga/lunfardo/cabeceo/mina → `es_g_*`
+  - gustar-verb-grammar (1): encantar → `es_gg_*`
+- **Format**: AGENTS.md §1.5 theme-anchor source (`source: [[body-vocabulary]]` 등)
+- **Level mapping**: A1=1, A2=2, B1=3, B2=4, C1/C2=5 (Language A1-A2 → game level 1-2)
+- **Category mapping**: body/family/transport(travel)/weather/restaurant/culture(emotion)
+- **accentMode**: strict (acentos: estación, autobús, avión, estómago, frío), any (no acentos)
+- **Policy**: raw/ read-only 정책 (AGENTS.md §2) 과 충돌 — 사용자 명시 허가 받음. 기존 es_t_* / ess_* entries 도 동일 정책 하에 추가되어 있어 일관성 유지.
+- **남은 gap**: 317 - 35 = 282 entries (다른 theme). 이번 세션에서 sync 안 한 부분은 다음 세션 후보.
+
+## [2026-07-13] migrate | per-word citation → theme-anchor (4 언어 전체)
+
+- **Trigger**: AGENTS.md §1.5 (2026-07-10 컨벤션) — 게임 코퍼스 source citation 은 theme-anchor (`[[{theme-file}]]`) 여야 함. 기존 per-word citations 은 위키 페이지 부재로 broken wikilinks.
+- **Scope**: 4 언어 전체 (es/en/jp/kr)
+- **Migrated**: 662 citations (33% of 2017 per-word)
+  - es_words.md: 50 → polite-expressions-vocabulary / daily-life-vocabulary / etc.
+  - en_words.md: 24 → greetings-vocabulary / numbers-vocabulary / etc.
+  - jp_words.md: 217 → jp-travel-vocab / food-vocabulary / etc.
+  - kr_words.md: 371 → 동물 어휘 / 의류・패션 어휘 / etc.
+- **Kept as per-word**: 1,355 citations (Language wiki 에 해당 단어 entry 없음, legacy words)
+  - 대부분 게임 코퍼스의 초기 seed vocabulary (per-word .md 시절)
+  - Language wiki 에 신규 추가 후 마이그레이션 가능
+- **남은 broken wiki links**: 
+  - 게임 코퍼스 50+ (phrase-name 패턴: `hello-how-are-you`, `같이 먹어요` 등 — 진짜 wiki page 부재)
+  - 다른 프로젝트 (Fiction, _publish 등) — 본 작업과 무관, pre-existing
+- **순 효과**: 662 broken → valid + 50 phrase-name → still broken (net +662 fixed vs +50 newly-formatted broken, 순 +612 fixed)
+- **Policy**: `Game/typing_language/AGENTS.md` §1.5 와 일치 — 모든 vocabulary citation 이 theme-anchor 사용
+
+
+## [2026-07-13] fix | phrase-name broken citations → expressions theme-anchor
+
+- **Trigger**: per-word → theme-anchor 1차 마이그레이션 (이전 작업) 후 남은 broken theme-anchor 50+ (phrase-name 패턴: `hello-how-are-you`, `같이 먹어요` 등)
+- **Mapping strategy**:
+  - `expressions/` 폴더의 `## {section}` heading 자동 매칭 (예: `where-is` → `daily-basics`)
+  - hand-curated fallback 매핑 (37 cases: 일상 표현, 감정 표현 등)
+- **Migrated**: 37 citations
+  - es_words.md: 5 (buenos-dias/donde-esta-el-bano/me-gustaria-un-cafe/muchisimas-gracias/por_favor)
+  - en_words.md: 7 (hello-how-are-you/i-am-happy-today/i-would-like-some-water/thank-you-very-much/where-is-the-bathroom)
+  - jp_words.md: 1 (konnichiwa-genki)
+  - kr_words.md: 24 (같이 먹어요/만나서 반갑습니다/목이 말라요 등 일상 + 가슴이 벅차다/눈물이 나다/마음이 아프다/보고 싶다 등 감정 + 검은 구두/하얀 바지/콘택트 렌즈 등 의류)
+- **Final broken theme-anchor**: 15 (es 1 + jp 2 + kr 12, 영어 0)
+- **남은 per-word broken**: 1,343 (대부분 Language wiki 에 entry 부재, legacy seed vocabulary)
+
+## [2026-07-13] fix | 14 → 2 remaining broken wikilinks (final cleanup)
+
+- **Trigger**: phrase-name fix 후 14개 broken theme-anchor 남음
+- **Direct mapping fix**: 12 entries
+  - `[[Korean food culture]]` → `[[food-vocabulary]]`
+  - `[[Korean-dating-culture]]` → `[[dating-romance]]`
+  - `[[한국 사람입니다]]` → `[[food-vocabulary]]`
+  - `[[호칭 관계]]` → `[[family-vocabulary]]`
+  - `[[콘택트 렌즈]]` → `[[의류・패션 어휘]]`
+  - `[[안_1]]`, `[[안_2]]`, `[[위_0]]` → `[[daily-life-vocabulary]]` (disambiguation redirect)
+  - `[[nyuukoku-shinsa]]`, `[[ipguk-simsa]]` → `[[viajes]]`
+  - `[[achim-bap]]` → `[[food-vocabulary]]`
+- **Final remaining**: 2 (`[[kippu-uriba]]` × 2 in jp_words.md, 일본어 ticket seller, wiki page 부재)
+- **Game corpus broken theme-anchor 진화**: 50 → 2 (96% 감소)
+
+## [2026-07-14] curation | Game corpus raw/ per-word → theme-anchor (EN+ES, basic-vocab batch)
+
+- **Trigger**: Language wiki 에 basic-vocabulary theme 신규 (7/14, EN 25 + ES 22 entries) → Game raw/ 의 per-word entry 자동 변환 가능.
+- **실행**: python3 /tmp/curate-basic.py --apply (Language basic-vocabulary Pipeline Form YAML 과 exact match 기반)
+- **변경**:
+  - `raw/en_words.md`: 25 entries per-word → [[basic-vocabulary]] (greeting 5 + basic 3 + number 4 + color 3 + family 4 + adjective 6)
+  - `raw/es_words.md`: 22 entries per-word → [[basic-vocabulary]] (greeting 4 + basic 2 + number 5 + color 3 + family 3 + adjective 4)
+- **Safety**: dry-run 으로 0 false positive 확인 후 apply. 미매핑 entry (animal/place/body/travel 등) 는 unchanged — Language wiki 확장 후 별도 batch.
+- **범위 외 (deferred)**: KR/JP curation 미실행. KR 의 경우 카테고리 분류가 매우 messy (animal 카테고리에 친구/사랑/역 등 non-animal 단어 다수) — 별도 검증 필요. JP 의 경우 12 per-word 만 존재, 효율 낮음.
+- **다음 단계 (deferred)**: travel/food/etc. 다른 카테고리도 Language wiki 확장 후 curation. KR categorization 정리 후 KR curation.

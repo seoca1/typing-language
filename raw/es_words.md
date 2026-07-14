@@ -22,21 +22,21 @@
 ## Level 1 (A1, 액센트 없거나 일부)
 
 ```yaml
-- { id: es_001, display: hola, meaning: 안녕, level: 1, category: greeting, accentMode: any, source: [[hola]] }
-- { id: es_002, display: adios, meaning: 안녕히, level: 1, category: greeting, accentMode: any, source: [[adios]] }
-- { id: es_003, display: gracias, meaning: 고마워, level: 1, category: greeting, accentMode: any, source: [[gracias]] }
-- { id: es_004, display: por_favor, meaning: 부디, level: 1, category: greeting, accentMode: any, source: [[por_favor]] }
-- { id: es_005, display: si, meaning: 네, level: 1, category: basic, accentMode: any, source: [[si]] }
-- { id: es_006, display: no, meaning: 아니오, level: 1, category: basic, accentMode: any, source: [[no]] }
-- { id: es_007, display: uno, meaning: 하나, level: 1, category: number, accentMode: any, source: [[uno]] }
-- { id: es_008, display: dos, meaning: 둘, level: 1, category: number, accentMode: any, source: [[dos]] }
-- { id: es_009, display: tres, meaning: 셋, level: 1, category: number, accentMode: any, source: [[tres]] }
-- { id: es_010, display: cuatro, meaning: 넷, level: 1, category: number, accentMode: any, source: [[cuatro]] }
-- { id: es_011, display: cinco, meaning: 다섯, level: 1, category: number, accentMode: any, source: [[cinco]] }
+- { id: es_001, display: hola, meaning: 안녕, level: 1, category: greeting, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_002, display: adios, meaning: 안녕히, level: 1, category: greeting, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_003, display: gracias, meaning: 고마워, level: 1, category: greeting, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_004, display: por_favor, meaning: 부디, level: 1, category: greeting, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_005, display: si, meaning: 네, level: 1, category: basic, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_006, display: no, meaning: 아니오, level: 1, category: basic, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_007, display: uno, meaning: 하나, level: 1, category: number, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_008, display: dos, meaning: 둘, level: 1, category: number, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_009, display: tres, meaning: 셋, level: 1, category: number, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_010, display: cuatro, meaning: 넷, level: 1, category: number, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_011, display: cinco, meaning: 다섯, level: 1, category: number, accentMode: any, source: [[basic-vocabulary]] }
 - { id: es_012, display: diez, meaning: 열, level: 1, category: number, accentMode: any, source: [[diez]] }
-- { id: es_013, display: rojo, meaning: 빨강, level: 1, category: color, accentMode: any, source: [[rojo]] }
-- { id: es_014, display: azul, meaning: 파랑, level: 1, category: color, accentMode: any, source: [[azul]] }
-- { id: es_015, display: verde, meaning: 초록, level: 1, category: color, accentMode: any, source: [[verde]] }
+- { id: es_013, display: rojo, meaning: 빨강, level: 1, category: color, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_014, display: azul, meaning: 파랑, level: 1, category: color, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_015, display: verde, meaning: 초록, level: 1, category: color, accentMode: any, source: [[basic-vocabulary]] }
 - { id: es_016, display: gato, meaning: 고양이, level: 1, category: animal, accentMode: any, source: [[gato]] }
 - { id: es_017, display: perro, meaning: 개, level: 1, category: animal, accentMode: any, source: [[perro]] }
 - { id: es_049, display: pajaro, meaning: 새, level: 1, category: animal, accentMode: any, source: [[pajaro]] }
@@ -51,8 +51,8 @@
 - { id: es_021, display: hoy, meaning: 오늘, level: 1, category: time, accentMode: any, source: [[hoy]] }
 - { id: es_022, display: manana, meaning: 내일/아침, level: 1, category: time, accentMode: any, source: [[manana]] }
   # 주의: mañana (mañana) — 두 의미 모두 있음
-- { id: es_023, display: madre, meaning: 어머니, level: 1, category: family, accentMode: any, source: [[madre]] }
-- { id: es_024, display: padre, meaning: 아버지, level: 1, category: family, accentMode: any, source: [[padre]] }
+- { id: es_023, display: madre, meaning: 어머니, level: 1, category: family, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_024, display: padre, meaning: 아버지, level: 1, category: family, accentMode: any, source: [[basic-vocabulary]] }
 ```
 
 ## Level 1 — 자연 (Nature)
@@ -80,7 +80,7 @@
 ## Level 1 — 액센트 단어 (기본)
 
 ```yaml
-- { id: es_030, display: nino, meaning: 아이 (남아), level: 1, category: family, accentMode: loose, source: [[nino]] }
+- { id: es_030, display: nino, meaning: 아이 (남아), level: 1, category: family, accentMode: loose, source: [[basic-vocabulary]] }
   # ñ 직접 또는 n 폴백
 - { id: es_031, display: senor, meaning: 신사, level: 1, category: person, accentMode: loose, source: [[senor]] }
   # ñ 직접 또는 n 폴백
@@ -93,16 +93,16 @@
 ## Level 2 (A2) — 액센트 단어 증가
 
 ```yaml
-- { id: es_040, display: rapido, meaning: 빠른, level: 2, category: adjective, accentMode: any, source: [[rapido]] }
-- { id: es_041, display: facil, meaning: 쉬운, level: 2, category: adjective, accentMode: any, source: [[facil]] }
-- { id: es_042, display: dificil, meaning: 어려운, level: 2, category: adjective, accentMode: any, source: [[dificil]] }
+- { id: es_040, display: rapido, meaning: 빠른, level: 2, category: adjective, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_041, display: facil, meaning: 쉬운, level: 2, category: adjective, accentMode: any, source: [[basic-vocabulary]] }
+- { id: es_042, display: dificil, meaning: 어려운, level: 2, category: adjective, accentMode: any, source: [[basic-vocabulary]] }
 - { id: es_043, display: telefono, meaning: 전화, level: 2, category: object, accentMode: any, source: [[telefono]] }
 - { id: es_044, display: restaurante, meaning: 식당, level: 2, category: place, accentMode: any, source: [[restaurante]] }
 - { id: es_045, display: hospital, meaning: 병원, level: 2, category: place, accentMode: any, source: [[hospital]] }
-- { id: es_046, display: importante, meaning: 중요한, level: 2, category: adjective, accentMode: any, source: [[importante]] }
+- { id: es_046, display: importante, meaning: 중요한, level: 2, category: adjective, accentMode: any, source: [[basic-vocabulary]] }
 - { id: es_047, display: despues, meaning: 그 후, level: 2, category: time, accentMode: any, source: [[despues]] }
   # 부사형: después — é
-- { id: es_048, display: ademas, meaning: 게다가, level: 2, category: basic, accentMode: any, source: [[ademas]] }
+- { id: es_048, display: ademas, meaning: 게다가, level: 2, category: basic, accentMode: any, source: [[basic-vocabulary]] }
   # además — á
 ```
 
